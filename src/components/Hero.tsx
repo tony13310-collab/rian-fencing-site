@@ -137,7 +137,7 @@ export default function Hero() {
             href="#results"
             className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold text-base hover:shadow-[0_0_30px_rgba(0,212,255,0.4)] transition-all duration-300 hover:scale-105 min-w-[140px] text-center"
           >
-            View Results
+            Results
           </a>
           <a
             href="#opponents"
