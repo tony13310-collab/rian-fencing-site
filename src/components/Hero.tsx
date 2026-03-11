@@ -54,17 +54,6 @@ export default function Hero() {
       </motion.div>
 
       <div className="relative z-10 text-center px-6 max-w-4xl">
-        {/* Weapon badge */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6 }}
-          className="inline-flex items-center gap-2 px-4 py-2 rounded-full border border-cyan-500/30 bg-cyan-500/5 text-cyan-400 text-sm font-medium mb-8 backdrop-blur-sm"
-        >
-          <span className="w-2 h-2 rounded-full bg-cyan-400 animate-pulse" />
-          {profile.weapon} • {profile.club}
-        </motion.div>
-
         {/* Name with seal */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
