@@ -20,7 +20,7 @@ interface SeasonTimelineProps {
 }
 
 function getPlaceDisplay(place: number | null, total: number | null) {
-  if (!place || !total) return { text: "—", color: "text-white/20" };
+  if (!place || !total) return { text: "—", color: "text-white/40" };
   const pct = place / total;
   let color = "text-white/50";
   if (place <= 3) color = "text-amber-400 font-black";
@@ -158,10 +158,10 @@ export default function SeasonTimeline({
                       <h3 className="text-2xl md:text-3xl font-black gradient-text">
                         {getSeasonLabel(season)}
                       </h3>
-                      <span className="text-white/30 text-sm font-medium">
+                      <span className="text-white/50 text-sm font-medium">
                         {getSeasonAge(season)}
                       </span>
-                      <span className="text-white/20 text-sm">
+                      <span className="text-white/45 text-sm">
                         {seasonEvents.length} events
                       </span>
 
@@ -246,7 +246,7 @@ export default function SeasonTimeline({
                               {tourName}
                             </h4>
                           </div>
-                          <span className="text-white/20 text-xs">
+                          <span className="text-white/50 text-xs">
                             {new Date(tourEvents[0].date).toLocaleDateString(
                               "en-US",
                               { month: "short", year: "numeric" }
@@ -291,7 +291,7 @@ export default function SeasonTimeline({
                                       {pd.text}
                                     </span>
                                     {event.total && (
-                                      <span className="text-white/15 text-sm">
+                                      <span className="text-white/45 text-sm">
                                         /{event.total}
                                       </span>
                                     )}
