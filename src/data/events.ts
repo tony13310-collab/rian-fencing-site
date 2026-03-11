@@ -122,6 +122,34 @@ export const allEvents: CompEvent[] = [
   ]),
 ];
 
+// Season-level metadata (rankings, rating, etc.)
+export interface SeasonMeta {
+  season: string;
+  rating?: string; // Highest rating earned this season
+  rankings?: Record<string, number>; // Category → national rank
+}
+
+export const seasonMeta: SeasonMeta[] = [
+  {
+    season: "2025-2026",
+    rating: "A26",
+    rankings: { "Y-14": 2, "Cadet": 6, "Junior": 50 },
+  },
+  {
+    season: "2024-2025",
+    rating: "C25",
+    rankings: { "Y-14": 29 },
+  },
+  {
+    season: "2023-2024",
+    rating: "E24",
+  },
+  {
+    season: "2022-2023",
+    rankings: { "Y-12": 11 },
+  },
+];
+
 // Season order (newest first)
 export const seasonOrder = [
   "2025-2026",

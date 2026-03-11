@@ -8,6 +8,7 @@ import {
   seasonOrder,
   levelColors,
   categoryColors,
+  seasonMeta,
 } from "@/data/events";
 
 interface SeasonTimelineProps {
@@ -109,31 +110,116 @@ export default function SeasonTimeline({
               </div>
 
               {/* Season header */}
-              <div className="mb-6">
-                <div className="flex items-baseline gap-4 flex-wrap">
-                  <h3 className="text-2xl md:text-3xl font-black gradient-text">
-                    {getSeasonLabel(season)}
-                  </h3>
-                  <span className="text-white/30 text-sm font-medium">
-                    {getSeasonAge(season)}
-                  </span>
-                  <span className="text-white/20 text-sm">
-                    {seasonEvents.length} events
-                  </span>
-                </div>
-                {/* Quick stats */}
-                <div className="flex gap-4 mt-2 text-sm">
-                  {medals > 0 && (
-                    <span className="text-amber-400">🏆 {medals} medals</span>
-                  )}
-                  {bestPlace.pct && (
-                    <span className="text-cyan-400/60">
-                      Best: {bestPlace.place}/{bestPlace.total} (
-                      {(bestPlace.pct * 100).toFixed(0)}%)
-                    </span>
-                  )}
-                </div>
-              </div>
+              {(() => {
+                const meta = seasonMeta.find((m) => m.season === season);
+                const rankingOrder = [
+                  "Y-10",
+                  "Y-12",
+                  "Y-14",
+                  "Cadet",
+                  "Junior",
+                  "Div I",
+                ] as const;
+                const rankStyles: Record<
+                  string,
+                  { bg: string; text: string; border: string }
+                > = {
+                  "Y-10": {
+                    bg: "bg-slate-500/10",
+                    text: "text-slate-400",
+                    border: "border-slate-500/20",
+                  },
+                  "Y-12": {
+                    bg: "bg-emerald-500/10",
+                    text: "text-emerald-400",
+                    border: "border-emerald-500/20",
+                  },
+                  "Y-14": {
+                    bg: "bg-green-500/10",
+                    text: "text-green-400",
+                    border: "border-green-500/20",
+                  },
+                  Cadet: {
+                    bg: "bg-blue-500/10",
+                    text: "text-blue-400",
+                    border: "border-blue-500/20",
+                  },
+                  Junior: {
+                    bg: "bg-purple-500/10",
+                    text: "text-purple-400",
+                    border: "border-purple-500/20",
+                  },
+                  "Div I": {
+                    bg: "bg-red-500/10",
+                    text: "text-red-400",
+                    border: "border-red-500/20",
+                  },
+                };
+                return (
+                  <div className="mb-6">
+                    <div className="flex items-center gap-4 flex-wrap">
+                      <h3 className="text-2xl md:text-3xl font-black gradient-text">
+                        {getSeasonLabel(season)}
+                      </h3>
+                      <span className="text-white/30 text-sm font-medium">
+                        {getSeasonAge(season)}
+                      </span>
+                      <span className="text-white/20 text-sm">
+                        {seasonEvents.length} events
+                      </span>
+
+                      {/* Rating badge */}
+                      {meta?.rating && (
+                        <span className="px-3 py-1.5 rounded-xl bg-gradient-to-r from-amber-500/20 to-orange-600/20 border border-amber-500/30 text-amber-400 text-sm font-black tracking-wider">
+                          ⚔️ {meta.rating}
+                        </span>
+                      )}
+
+                      {/* Ranking badges */}
+                      {meta?.rankings &&
+                        rankingOrder.map((cat) => {
+                          const rank = meta.rankings?.[cat];
+                          if (!rank) return null;
+                          const style =
+                            rankStyles[cat] || {
+                              bg: "bg-gray-500/10",
+                              text: "text-gray-400",
+                              border: "border-gray-500/20",
+                            };
+                          return (
+                            <span
+                              key={cat}
+                              className={`px-3 py-1.5 rounded-xl ${style.bg} border ${style.border} text-sm font-bold flex items-center gap-1.5`}
+                            >
+                              <span className="text-white/40 text-xs uppercase tracking-wider">
+                                {cat}
+                              </span>
+                              <span
+                                className={`${style.text} font-black text-base`}
+                              >
+                                #{rank}
+                              </span>
+                            </span>
+                          );
+                        })}
+                    </div>
+                    {/* Quick stats */}
+                    <div className="flex gap-4 mt-2 text-sm">
+                      {medals > 0 && (
+                        <span className="text-amber-400">
+                          🏆 {medals} medals
+                        </span>
+                      )}
+                      {bestPlace.pct && (
+                        <span className="text-cyan-400/60">
+                          Best: {bestPlace.place}/{bestPlace.total} (
+                          {(bestPlace.pct * 100).toFixed(0)}%)
+                        </span>
+                      )}
+                    </div>
+                  </div>
+                );
+              })()}
 
               {/* Tournament cards */}
               <div className="space-y-4">
