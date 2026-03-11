@@ -75,8 +75,7 @@ export default function SeasonTimeline({
   return (
     <section id="results" className="py-12 px-6 max-w-6xl mx-auto">
       <div className="relative">
-        {/* Vertical timeline line (left side) */}
-        <div className="absolute left-0 md:left-8 top-0 bottom-0 w-px bg-gradient-to-b from-cyan-500/50 via-purple-500/30 to-transparent" />
+        {/* Timeline line removed per design */}
 
         {seasonOrder.map((season, sidx) => {
           const seasonEvents = bySeason[season];
@@ -104,12 +103,8 @@ export default function SeasonTimeline({
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-50px" }}
               transition={{ delay: sidx * 0.1 }}
-              className="relative pl-10 md:pl-24 mb-16 last:mb-0"
+              className="relative mb-16 last:mb-0"
             >
-              {/* Timeline dot */}
-              <div className="absolute left-0 md:left-8 -translate-x-1/2 top-2">
-                <div className="w-4 h-4 rounded-full bg-gradient-to-r from-cyan-400 to-purple-500 shadow-[0_0_12px_rgba(0,212,255,0.5)]" />
-              </div>
 
               {/* Season header */}
               {(() => {
