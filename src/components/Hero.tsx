@@ -68,8 +68,7 @@ export default function Hero() {
               letterSpacing: "-0.02em",
             }}
           >
-            <span className="gradient-text" style={{ fontStyle: "italic" }}>Rian</span>
-            <span className="gradient-text" style={{ fontStyle: "italic" }}> Wei</span>
+            <span className="gradient-text" style={{ fontStyle: "italic" }}>Rian Wei</span>
           </h1>
 
           {/* Chinese seal stamp - 楷书印章 */}
