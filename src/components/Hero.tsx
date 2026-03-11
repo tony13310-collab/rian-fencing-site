@@ -72,34 +72,19 @@ export default function Hero() {
             <span className="text-white/90" style={{ fontStyle: "italic" }}> Wei</span>
           </h1>
 
-          {/* Chinese seal stamp - 隶书印章 */}
+          {/* Chinese seal stamp image */}
           <motion.div
             initial={{ opacity: 0, rotate: -15, scale: 0.5 }}
-            animate={{ opacity: 1, rotate: -8, scale: 1 }}
+            animate={{ opacity: 1, rotate: -6, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.6, type: "spring", stiffness: 200 }}
-            className="relative -mb-1 ml-1"
+            className="relative -mb-1 ml-2"
           >
-            <div
-              className="w-14 h-14 md:w-16 md:h-16 rounded-md flex items-center justify-center"
-              style={{
-                border: "2.5px solid #dc2626",
-                boxShadow: "inset 0 0 0 1px rgba(220,38,38,0.3), 0 0 15px rgba(220,38,38,0.2)",
-                background: "rgba(220,38,38,0.05)",
-              }}
-            >
-              <span
-                className="text-red-600 font-black leading-none text-center"
-                style={{
-                  fontSize: "clamp(14px, 2vw, 18px)",
-                  fontFamily: "'Noto Serif SC', 'SimSun', serif",
-                  letterSpacing: "0.15em",
-                  writingMode: "vertical-rl",
-                  textOrientation: "upright",
-                }}
-              >
-                魏瑞安
-              </span>
-            </div>
+            <img
+              src="/seal.jpg"
+              alt="魏瑞安 seal"
+              className="w-16 h-auto md:w-20 drop-shadow-[0_0_15px_rgba(220,38,38,0.4)]"
+              style={{ mixBlendMode: "lighten" }}
+            />
           </motion.div>
         </motion.div>
 
