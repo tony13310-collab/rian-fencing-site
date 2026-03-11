@@ -142,26 +142,7 @@ export default function Hero() {
           {profile.bio}
         </motion.p>
 
-        {/* CTA */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.0 }}
-          className="flex gap-4 justify-center"
-        >
-          <a
-            href="#results"
-            className="px-8 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold text-lg hover:shadow-[0_0_30px_rgba(0,212,255,0.4)] transition-all duration-300 hover:scale-105"
-          >
-            View Results
-          </a>
-          <a
-            href="#highlights"
-            className="px-8 py-3 rounded-xl border border-white/45 text-white/70 font-medium text-lg hover:bg-white/5 transition-all duration-300"
-          >
-            Highlights
-          </a>
-        </motion.div>
+        {/* CTA buttons removed */}
       </div>
 
     </section>
