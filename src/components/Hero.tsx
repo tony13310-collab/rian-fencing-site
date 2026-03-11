@@ -85,7 +85,7 @@ export default function Hero() {
           {profile.chineseName}
         </motion.p>
 
-        {/* Rating & Ranking badges */}
+        {/* Rating & Ranking badges - reads from profile.currentRankings */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
@@ -94,21 +94,24 @@ export default function Hero() {
         >
           <div className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-500/20 to-orange-600/20 border border-amber-500/30 backdrop-blur-sm">
             <span className="text-amber-400 font-black text-lg tracking-wide">
-              ⚔️ A26
+              ⚔️ {profile.rating}
             </span>
           </div>
-          <div className="px-5 py-2.5 rounded-xl bg-green-500/10 border border-green-500/20 backdrop-blur-sm">
-            <span className="text-white/40 text-xs font-medium mr-1.5">Y-14</span>
-            <span className="text-green-400 font-black text-lg">#2</span>
-          </div>
-          <div className="px-5 py-2.5 rounded-xl bg-blue-500/10 border border-blue-500/20 backdrop-blur-sm">
-            <span className="text-white/40 text-xs font-medium mr-1.5">Cadet</span>
-            <span className="text-blue-400 font-black text-lg">#6</span>
-          </div>
-          <div className="px-5 py-2.5 rounded-xl bg-purple-500/10 border border-purple-500/20 backdrop-blur-sm">
-            <span className="text-white/40 text-xs font-medium mr-1.5">Junior</span>
-            <span className="text-purple-400 font-black text-lg">#50</span>
-          </div>
+          {profile.currentRankings.map((r) => {
+            const colors: Record<string, { bg: string; border: string; text: string }> = {
+              green: { bg: "bg-green-500/10", border: "border-green-500/20", text: "text-green-400" },
+              blue: { bg: "bg-blue-500/10", border: "border-blue-500/20", text: "text-blue-400" },
+              purple: { bg: "bg-purple-500/10", border: "border-purple-500/20", text: "text-purple-400" },
+              red: { bg: "bg-red-500/10", border: "border-red-500/20", text: "text-red-400" },
+            };
+            const c = colors[r.color] || colors.blue;
+            return (
+              <div key={r.category} className={`px-5 py-2.5 rounded-xl ${c.bg} border ${c.border} backdrop-blur-sm`}>
+                <span className="text-white/40 text-xs font-medium mr-1.5">{r.category}</span>
+                <span className={`${c.text} font-black text-lg`}>#{r.rank}</span>
+              </div>
+            );
+          })}
         </motion.div>
 
         {/* Bio */}

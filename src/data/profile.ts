@@ -7,6 +7,12 @@ export const profile = {
   club: "Capital Fencing Academy",
   division: "Capitol Division",
   rating: "A26",
+  currentSeason: "2025-2026",
+  currentRankings: [
+    { category: "Y-14", rank: 2, color: "green" },
+    { category: "Cadet", rank: 6, color: "blue" },
+    { category: "Junior", rank: 50, color: "purple" },
+  ] as { category: string; rank: number; color: string }[],
   ratingHistory: [
     { date: "2023-07", rating: "E23" },
     { date: "2024-01", rating: "D24" },
