@@ -1,6 +1,8 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
+import { makeEventId } from "@/data/eventDetails";
 import {
   CompEvent,
   TournamentLevel,
@@ -268,9 +270,10 @@ export default function SeasonTimeline({
                               categoryColors[event.category] || "bg-gray-600";
 
                             return (
-                              <div
+                              <Link
+                                href={`/event/${makeEventId(event.date, event.event)}`}
                                 key={event.date + event.event}
-                                className="px-5 py-3 flex items-center justify-between hover:bg-white/[0.02] transition-colors"
+                                className="block px-5 py-3 flex items-center justify-between hover:bg-white/[0.04] transition-colors cursor-pointer"
                               >
                                 <div className="flex items-center gap-3">
                                   <span
@@ -304,7 +307,7 @@ export default function SeasonTimeline({
                                     </span>
                                   )}
                                 </div>
-                              </div>
+                              </Link>
                             );
                           })}
                         </div>
