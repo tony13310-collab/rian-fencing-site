@@ -51,7 +51,7 @@ export default function StatsBar() {
   ];
 
   return (
-    <section className="relative -mt-20 z-20 px-6 max-w-6xl mx-auto">
+    <section className="relative z-20 px-6 max-w-6xl mx-auto pt-12 pb-8">
       <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
         {stats.map((stat, i) => (
           <motion.div

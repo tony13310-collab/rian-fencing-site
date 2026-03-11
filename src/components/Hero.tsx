@@ -5,7 +5,7 @@ import { profile } from "@/data/profile";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden grid-bg">
+    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden grid-bg pb-16">
       {/* Animated background orbs */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
@@ -104,7 +104,7 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-lg text-white/50 max-w-2xl mx-auto leading-relaxed mb-12"
+          className="text-lg text-white/50 max-w-2xl mx-auto leading-relaxed mb-8"
         >
           {profile.bio}
         </motion.p>
