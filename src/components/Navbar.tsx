@@ -30,9 +30,35 @@ export default function Navbar() {
       }`}
     >
       <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
-        <a href="#" className="flex items-center gap-2">
-          <span className="text-xl font-black gradient-text">RW</span>
-          <span className="text-white/40 text-sm font-medium hidden sm:block">
+        <a href="#" className="flex items-center gap-2.5">
+          {/* Seal logo */}
+          <div
+            className="flex flex-col items-center justify-center"
+            style={{
+              width: 28,
+              height: 48,
+              background: "#1a0a08",
+              borderRadius: "1.5px",
+              border: "1.5px solid #C83C23",
+              boxShadow: "0 0 8px rgba(200,60,35,0.2)",
+            }}
+          >
+            {["魏", "瑞", "安"].map((c) => (
+              <span
+                key={c}
+                style={{
+                  fontFamily: "'Noto Serif SC', serif",
+                  fontSize: 11,
+                  fontWeight: 900,
+                  color: "#C83C23",
+                  lineHeight: 1.15,
+                }}
+              >
+                {c}
+              </span>
+            ))}
+          </div>
+          <span className="text-white/50 text-sm font-medium hidden sm:block">
             Rian Wei
           </span>
         </a>
