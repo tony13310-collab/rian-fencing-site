@@ -69,7 +69,7 @@ export default function Hero() {
             }}
           >
             <span className="gradient-text" style={{ fontStyle: "italic" }}>Rian</span>
-            <span className="text-white/90" style={{ fontStyle: "italic" }}> Wei</span>
+            <span className="gradient-text" style={{ fontStyle: "italic" }}> Wei</span>
           </h1>
 
           {/* Chinese seal stamp - 楷书印章 */}
