@@ -1,10 +1,11 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useRef } from "react";
 
 export default function Contact() {
   const [status, setStatus] = useState<"idle" | "sending" | "sent" | "error">("idle");
+  const formRef = useRef<HTMLFormElement>(null);
 
   const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
@@ -14,19 +15,17 @@ export default function Contact() {
     const data = new FormData(form);
 
     try {
-      const res = await fetch("https://formsubmit.co/ajax/4a8e7d2f1b3c5e9d0a6f8b4c2e7d1a3f", {
+      const res = await fetch(form.action, {
         method: "POST",
         body: data,
+        headers: { Accept: "application/json" },
       });
 
       if (res.ok) {
         setStatus("sent");
         form.reset();
       } else {
-        // Fallback: direct submission
-        form.action = "https://formsubmit.co/tony13310@gmail.com";
-        form.method = "POST";
-        form.submit();
+        setStatus("error");
       }
     } catch {
       setStatus("error");
@@ -68,11 +67,20 @@ export default function Contact() {
             </button>
           </div>
         ) : (
-          <form onSubmit={handleSubmit} className="space-y-6">
+          <form
+            ref={formRef}
+            action="https://formsubmit.co/tony13310@gmail.com"
+            method="POST"
+            onSubmit={handleSubmit}
+            className="space-y-6"
+          >
             {/* Hidden fields for FormSubmit */}
             <input type="hidden" name="_subject" value="New message from rianwei.com" />
             <input type="hidden" name="_captcha" value="false" />
             <input type="hidden" name="_template" value="box" />
+            <input type="hidden" name="_next" value="https://rianwei.com/#contact" />
+            {/* Honeypot anti-spam */}
+            <input type="text" name="_honey" style={{ display: "none" }} />
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
               <div>
@@ -130,7 +138,7 @@ export default function Contact() {
 
             {status === "error" && (
               <p className="text-red-400 text-sm text-center">
-                Something went wrong. Please try again or email us directly.
+                Something went wrong. Please try again.
               </p>
             )}
           </form>
