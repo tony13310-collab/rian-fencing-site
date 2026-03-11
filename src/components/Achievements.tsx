@@ -15,7 +15,7 @@ export default function Achievements() {
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-3">
           <span className="gradient-text">Highlights</span>
         </h2>
-        <p className="text-white/40 text-sm sm:text-lg">Key achievements this season</p>
+
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
