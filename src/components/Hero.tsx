@@ -73,8 +73,8 @@ export default function Hero() {
 
           {/* Chinese seal stamp image */}
           <motion.div
-            initial={{ opacity: 0, rotate: -15, scale: 0.5 }}
-            animate={{ opacity: 1, rotate: -6, scale: 1 }}
+            initial={{ opacity: 0, scale: 0.5 }}
+            animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.6, type: "spring", stiffness: 200 }}
             className="relative -mb-1 ml-2"
             style={{ filter: "drop-shadow(0 0 15px rgba(196, 53, 37, 0.35))" }}
