@@ -30,10 +30,30 @@ export default function FilterBar({
       className="relative z-30 bg-[#0a0a0f]/95 backdrop-blur-xl border-b border-white/5 py-3 sm:py-4 px-4 sm:px-6"
     >
       <div className="max-w-6xl mx-auto">
+        {/* Level filters */}
+        <div className="flex flex-wrap items-center gap-2 mb-2">
+          {levels.map((level) => {
+            const active = selectedLevels.has(level);
+            const colors = levelColors[level];
+            const label = level === "International" ? "INTL" : level === "National" ? "NAT'L" : level;
+            return (
+              <button
+                key={level}
+                onClick={() => onToggleLevel(level)}
+                className={`px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-200 border ${
+                  active
+                    ? `bg-gradient-to-r ${colors.bg} ${colors.border} ${colors.text} shadow-lg`
+                    : "border-white/10 text-white/50 hover:text-white/50 hover:border-white/20"
+                }`}
+              >
+                {label}
+              </button>
+            );
+          })}
+        </div>
+
         {/* Category filters */}
         <div className="flex flex-wrap items-center gap-2">
-          <span className="text-white/50 text-xs font-medium uppercase tracking-wider mr-2">
-          </span>
           {categories.map((cat) => {
             const active = selectedCategories.has(cat);
             const bgClass = categoryColors[cat] || "bg-gray-600";
