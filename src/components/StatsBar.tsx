@@ -1,68 +1,51 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { seasons } from "@/data/profile";
+import { allEvents } from "@/data/events";
 
 export default function StatsBar() {
-  const currentSeason = seasons[0];
-  const events = currentSeason.events;
+  const totalEvents = allEvents.length;
+  const totalSeasons = new Set(allEvents.map((e) => e.season)).size;
 
-  const totalEvents = events.length;
-  const bestResult = events.reduce(
-    (best, e) => {
-      if (!e.result.place || !e.result.total) return best;
-      const pct = e.result.place / e.result.total;
-      if (!best.pct || pct < best.pct) {
-        return { pct, event: e };
-      }
-      return best;
-    },
-    { pct: null as number | null, event: null as (typeof events)[0] | null }
-  );
-
-  const medals = events.filter(
-    (e) => e.result.place && e.result.place <= 3
+  const medals = allEvents.filter(
+    (e) => e.place && e.place <= 3
   ).length;
-  const top8 = events.filter(
-    (e) => e.result.place && e.result.place <= 8
+  const top8 = allEvents.filter(
+    (e) => e.place && e.place <= 8
   ).length;
-  const top32 = events.filter(
-    (e) => e.result.place && e.result.place <= 32
+  const golds = allEvents.filter(
+    (e) => e.place === 1
   ).length;
 
   const stats = [
     {
-      label: "Events",
-      value: totalEvents.toString(),
-      sub: "2025-26 Season",
+      label: "Seasons",
+      value: totalSeasons.toString(),
+      sub: "Since 2018",
       color: "from-cyan-400 to-blue-500",
     },
     {
-      label: "Best Finish",
-      value: bestResult.event
-        ? `${bestResult.event.result.place}${bestResult.event.result.place === 2 ? "nd" : bestResult.event.result.place === 1 ? "st" : "th"}`
-        : "—",
-      sub: bestResult.event
-        ? `${bestResult.event.tournament} ${bestResult.event.category}`
-        : "",
-      color: "from-amber-400 to-orange-500",
+      label: "Competitions",
+      value: totalEvents.toString(),
+      sub: "All time",
+      color: "from-purple-400 to-violet-500",
+    },
+    {
+      label: "Gold Medals",
+      value: golds.toString(),
+      sub: "1st place",
+      color: "from-yellow-400 to-amber-500",
     },
     {
       label: "Medals",
       value: medals.toString(),
       sub: "Top 3 finishes",
-      color: "from-yellow-400 to-amber-500",
+      color: "from-amber-400 to-orange-500",
     },
     {
       label: "Top 8",
       value: top8.toString(),
-      sub: "National events",
-      color: "from-purple-400 to-violet-500",
-    },
-    {
-      label: "Top 32",
-      value: top32.toString(),
-      sub: "National events",
+      sub: "All events",
       color: "from-green-400 to-emerald-500",
     },
   ];
