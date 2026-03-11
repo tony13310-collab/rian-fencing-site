@@ -104,12 +104,12 @@ export default function OpponentDetailClient() {
           {/* Big record display */}
           <div className="flex items-center justify-center gap-6 mb-4">
             <div className="text-center">
-              <div className="text-4xl font-black text-green-400">{data.wins}</div>
+              <div className="text-3xl sm:text-4xl font-black text-green-400">{data.wins}</div>
               <div className="text-[10px] text-white/50 uppercase tracking-widest">Wins</div>
             </div>
             <div className="text-white/10 text-3xl font-light">—</div>
             <div className="text-center">
-              <div className="text-4xl font-black text-red-400">{data.losses}</div>
+              <div className="text-3xl sm:text-4xl font-black text-red-400">{data.losses}</div>
               <div className="text-[10px] text-white/50 uppercase tracking-widest">Losses</div>
             </div>
           </div>

@@ -33,17 +33,17 @@ export default function Contact() {
   };
 
   return (
-    <section id="contact" className="py-24 px-6 max-w-4xl mx-auto">
+    <section id="contact" className="py-16 sm:py-24 px-4 sm:px-6 max-w-4xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
         className="mb-12 text-center"
       >
-        <h2 className="text-4xl md:text-5xl font-black mb-3">
+        <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-3">
           <span className="gradient-text">Contact</span>
         </h2>
-        <p className="text-white/40 text-lg">
+        <p className="text-white/40 text-sm sm:text-lg">
           Interested in recruiting or have questions? Get in touch.
         </p>
       </motion.div>
@@ -52,7 +52,7 @@ export default function Contact() {
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true }}
-        className="gradient-border bg-[#12121a] rounded-2xl p-8"
+        className="gradient-border bg-[#12121a] rounded-2xl p-4 sm:p-8"
       >
         {status === "sent" ? (
           <div className="text-center py-8">

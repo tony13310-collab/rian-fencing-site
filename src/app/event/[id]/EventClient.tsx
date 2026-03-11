@@ -235,7 +235,7 @@ export default function EventClient() {
               {category}
             </span>
           </div>
-          <h1 className="text-2xl font-black text-white/90 mb-1">
+          <h1 className="text-xl sm:text-2xl font-black text-white/90 mb-1">
             {d.tournament}
           </h1>
           {"location" in d && (d as EventDetail).location && (
@@ -261,7 +261,7 @@ export default function EventClient() {
                 Final Result
               </div>
               <div className="flex items-baseline justify-center gap-1">
-                <span className="text-3xl font-black gradient-text">
+                <span className="text-2xl sm:text-3xl font-black gradient-text">
                   {d.place}
                 </span>
                 <span className="text-white/45 text-lg font-light">
@@ -280,7 +280,7 @@ export default function EventClient() {
                   Pool Result
                 </div>
                 <div className="flex items-baseline justify-center gap-1">
-                  <span className="text-3xl font-black text-white/80">
+                  <span className="text-2xl sm:text-3xl font-black text-white/80">
                     {detail.pool.wins}-{detail.pool.losses}
                   </span>
                 </div>

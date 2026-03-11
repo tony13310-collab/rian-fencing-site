@@ -27,7 +27,7 @@ export default function FilterBar({
     <motion.div
       initial={{ opacity: 0, y: -20 }}
       animate={{ opacity: 1, y: 0 }}
-      className="relative z-30 bg-[#0a0a0f]/95 backdrop-blur-xl border-b border-white/5 py-4 px-6"
+      className="relative z-30 bg-[#0a0a0f]/95 backdrop-blur-xl border-b border-white/5 py-3 sm:py-4 px-4 sm:px-6"
     >
       <div className="max-w-6xl mx-auto">
         {/* Level filters */}

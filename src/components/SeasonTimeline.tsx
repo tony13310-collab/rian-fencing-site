@@ -73,7 +73,7 @@ export default function SeasonTimeline({
   }
 
   return (
-    <section id="results" className="py-12 px-6 max-w-6xl mx-auto">
+    <section id="results" className="py-12 px-3 sm:px-6 max-w-6xl mx-auto">
       <div className="relative">
         {/* Timeline line removed per design */}
 
@@ -235,18 +235,18 @@ export default function SeasonTimeline({
                         className={`rounded-2xl border ${colors.border} bg-gradient-to-r ${colors.bg} overflow-hidden backdrop-blur-sm`}
                       >
                         {/* Tournament header */}
-                        <div className="px-5 py-3 flex items-center justify-between border-b border-white/5">
-                          <div className="flex items-center gap-3">
+                        <div className="px-3 sm:px-5 py-3 flex items-center justify-between border-b border-white/5 gap-2">
+                          <div className="flex items-center gap-2 sm:gap-3 min-w-0">
                             <span
-                              className={`text-[10px] w-[72px] py-1 rounded-md ${colors.text} border ${colors.border} uppercase tracking-wider font-bold text-center inline-block`}
+                              className={`text-[10px] w-[60px] sm:w-[72px] py-1 rounded-md ${colors.text} border ${colors.border} uppercase tracking-wider font-bold text-center inline-block shrink-0`}
                             >
                               {level}
                             </span>
-                            <h4 className="text-white/90 font-bold text-sm md:text-base">
+                            <h4 className="text-white/90 font-bold text-xs sm:text-sm md:text-base truncate">
                               {tourName}
                             </h4>
                           </div>
-                          <span className="text-white/50 text-xs">
+                          <span className="text-white/50 text-[10px] sm:text-xs shrink-0">
                             {new Date(tourEvents[0].date).toLocaleDateString(
                               "en-US",
                               { month: "short", year: "numeric" }
@@ -268,36 +268,36 @@ export default function SeasonTimeline({
                               <Link
                                 href={`/event/${makeEventId(event.date, event.event)}`}
                                 key={event.date + event.event}
-                                className="block px-5 py-3 flex items-center justify-between hover:bg-white/[0.04] transition-colors cursor-pointer"
+                                className="block px-3 sm:px-5 py-3 flex items-center justify-between hover:bg-white/[0.04] transition-colors cursor-pointer gap-2"
                               >
-                                <div className="flex items-center gap-3">
+                                <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1">
                                   <span
-                                    className={`${catBg} w-[72px] py-1 rounded-md text-[10px] font-bold text-white uppercase tracking-wider text-center inline-block shrink-0`}
+                                    className={`${catBg} w-[60px] sm:w-[72px] py-1 rounded-md text-[10px] font-bold text-white uppercase tracking-wider text-center inline-block shrink-0`}
                                   >
                                     {event.category}
                                   </span>
-                                  <span className="text-white/60 text-sm">
+                                  <span className="text-white/60 text-xs sm:text-sm truncate">
                                     {event.event}
                                   </span>
                                 </div>
-                                <div className="flex items-center gap-3">
+                                <div className="flex items-center gap-2 sm:gap-3 shrink-0">
                                   {event.medal && (
-                                    <span className="text-xl">
+                                    <span className="text-base sm:text-xl">
                                       {event.medal}
                                     </span>
                                   )}
-                                  <div className="text-right min-w-[80px]">
-                                    <span className={`text-lg ${pd.color}`}>
+                                  <div className="text-right min-w-[55px] sm:min-w-[80px]">
+                                    <span className={`text-sm sm:text-lg ${pd.color}`}>
                                       {pd.text}
                                     </span>
                                     {event.total && (
-                                      <span className="text-white/45 text-sm">
+                                      <span className="text-white/45 text-[10px] sm:text-sm">
                                         /{event.total}
                                       </span>
                                     )}
                                   </div>
                                   {event.rating && (
-                                    <span className="text-[10px] px-2 py-0.5 rounded-md bg-amber-500/15 text-amber-400 border border-amber-500/20 font-bold">
+                                    <span className="text-[10px] px-1.5 sm:px-2 py-0.5 rounded-md bg-amber-500/15 text-amber-400 border border-amber-500/20 font-bold hidden sm:inline">
                                       {event.rating}
                                     </span>
                                   )}
