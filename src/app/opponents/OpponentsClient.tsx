@@ -69,23 +69,23 @@ export default function OpponentsClient() {
           {/* Stats bar */}
           <div className="flex gap-4 mb-3 text-xs">
             <div>
-              <span className="text-white/30">Opponents</span>{" "}
+              <span className="text-white/50">Opponents</span>{" "}
               <span className="text-white/70 font-bold">{totalOpponents}</span>
             </div>
             <div>
-              <span className="text-white/30">Total Bouts</span>{" "}
+              <span className="text-white/50">Total Bouts</span>{" "}
               <span className="text-white/70 font-bold">{totalBouts}</span>
             </div>
             <div>
-              <span className="text-white/30">Overall</span>{" "}
+              <span className="text-white/50">Overall</span>{" "}
               <span className="text-green-400 font-bold">
                 {totalWins}W
               </span>
-              <span className="text-white/20"> - </span>
+              <span className="text-white/45"> - </span>
               <span className="text-red-400 font-bold">
                 {totalBouts - totalWins}L
               </span>
-              <span className="text-white/30">
+              <span className="text-white/50">
                 {" "}({Math.round((totalWins / totalBouts) * 100)}%)
               </span>
             </div>
@@ -98,12 +98,12 @@ export default function OpponentsClient() {
               placeholder="🔍 Search opponent..."
               value={search}
               onChange={(e) => setSearch(e.target.value)}
-              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white placeholder-white/30 focus:outline-none focus:border-cyan-500/50 transition-colors"
+              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-2.5 text-sm text-white placeholder-white/50 focus:outline-none focus:border-cyan-500/50 transition-colors"
             />
             {search && (
               <button
                 onClick={() => setSearch("")}
-                className="absolute right-3 top-1/2 -translate-y-1/2 text-white/30 hover:text-white/60 text-xs"
+                className="absolute right-3 top-1/2 -translate-y-1/2 text-white/50 hover:text-white/60 text-xs"
               >
                 ✕
               </button>
@@ -128,7 +128,7 @@ export default function OpponentsClient() {
                 }`}
               >
                 {f.label}
-                <span className="ml-1 text-white/20">{f.count}</span>
+                <span className="ml-1 text-white/45">{f.count}</span>
               </button>
             ))}
           </div>
@@ -147,7 +147,7 @@ export default function OpponentsClient() {
                 className={`px-2.5 py-1 rounded-md text-[10px] font-medium uppercase tracking-wider transition-all ${
                   sort === s.key
                     ? "bg-white/10 text-white/70"
-                    : "text-white/25 hover:text-white/40"
+                    : "text-white/50 hover:text-white/40"
                 }`}
               >
                 {s.label}
@@ -159,7 +159,7 @@ export default function OpponentsClient() {
 
       {/* Results count */}
       <div className="max-w-2xl mx-auto px-4 py-3">
-        <p className="text-white/20 text-xs">
+        <p className="text-white/45 text-xs">
           {entries.length} opponent{entries.length !== 1 ? "s" : ""}
           {search && ` matching "${search}"`}
         </p>
@@ -200,7 +200,7 @@ export default function OpponentsClient() {
                         <span className="text-green-400 font-bold text-sm">
                           {opp.wins}
                         </span>
-                        <span className="text-white/15 text-sm"> - </span>
+                        <span className="text-white/45 text-sm"> - </span>
                         <span className="text-red-400 font-bold text-sm">
                           {opp.losses}
                         </span>
@@ -227,13 +227,13 @@ export default function OpponentsClient() {
                         style={{ width: `${winPct}%` }}
                       />
                     </div>
-                    <span className="text-[10px] text-white/20 shrink-0">
+                    <span className="text-[10px] text-white/45 shrink-0">
                       {opp.total} bout{opp.total !== 1 ? "s" : ""}
                     </span>
                   </div>
 
                   {/* Last met */}
-                  <div className="text-[10px] text-white/15 mt-1">
+                  <div className="text-[10px] text-white/45 mt-1">
                     Last: {opp.lastDate} · {opp.bouts[0]?.tournament}
                   </div>
                 </Link>
@@ -243,7 +243,7 @@ export default function OpponentsClient() {
         </AnimatePresence>
 
         {entries.length === 0 && (
-          <div className="text-center py-16 text-white/20">
+          <div className="text-center py-16 text-white/45">
             <p className="text-4xl mb-4">🤺</p>
             <p className="text-sm">No opponents found</p>
           </div>

@@ -32,14 +32,14 @@ export default function OpponentsPreview() {
           <h2 className="text-2xl font-black text-white/80 mb-1">
             ⚔️ Head-to-Head Database
           </h2>
-          <p className="text-white/30 text-sm">
+          <p className="text-white/50 text-sm">
             {totalOpponents} opponents · {totalBouts} bouts · {Math.round((totalWins / totalBouts) * 100)}% overall win rate
           </p>
         </motion.div>
 
         {/* Top Rivals */}
         <div className="mb-6">
-          <h3 className="text-xs font-bold text-white/30 uppercase tracking-widest mb-3">
+          <h3 className="text-xs font-bold text-white/50 uppercase tracking-widest mb-3">
             🔥 Most Faced Opponents
           </h3>
           <div className="space-y-1.5">
@@ -59,7 +59,7 @@ export default function OpponentsPreview() {
                     className="flex items-center justify-between px-4 py-2.5 rounded-xl bg-white/[0.02] hover:bg-white/[0.05] transition-colors border border-white/[0.03]"
                   >
                     <div className="flex items-center gap-3">
-                      <span className="text-white/15 text-xs font-mono w-5">
+                      <span className="text-white/45 text-xs font-mono w-5">
                         {i + 1}
                       </span>
                       <span className="text-white/70 font-medium text-sm">
@@ -69,7 +69,7 @@ export default function OpponentsPreview() {
                     <div className="flex items-center gap-3">
                       <span className="text-white/40 text-xs">
                         <span className="text-green-400">{data.wins}W</span>
-                        <span className="text-white/15"> - </span>
+                        <span className="text-white/45"> - </span>
                         <span className="text-red-400">{data.losses}L</span>
                       </span>
                       <span

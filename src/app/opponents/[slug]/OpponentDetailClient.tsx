@@ -105,12 +105,12 @@ export default function OpponentDetailClient() {
           <div className="flex items-center justify-center gap-6 mb-4">
             <div className="text-center">
               <div className="text-4xl font-black text-green-400">{data.wins}</div>
-              <div className="text-[10px] text-white/30 uppercase tracking-widest">Wins</div>
+              <div className="text-[10px] text-white/50 uppercase tracking-widest">Wins</div>
             </div>
             <div className="text-white/10 text-3xl font-light">—</div>
             <div className="text-center">
               <div className="text-4xl font-black text-red-400">{data.losses}</div>
-              <div className="text-[10px] text-white/30 uppercase tracking-widest">Losses</div>
+              <div className="text-[10px] text-white/50 uppercase tracking-widest">Losses</div>
             </div>
           </div>
 
@@ -177,7 +177,7 @@ export default function OpponentDetailClient() {
               {poolWins}-{poolBouts.length - poolWins}
             </div>
             {poolBouts.length > 0 && (
-              <div className="text-white/30 text-xs mt-1">
+              <div className="text-white/50 text-xs mt-1">
                 {Math.round((poolWins / poolBouts.length) * 100)}% win rate
               </div>
             )}
@@ -190,7 +190,7 @@ export default function OpponentDetailClient() {
               {deWins}-{deBouts.length - deWins}
             </div>
             {deBouts.length > 0 && (
-              <div className="text-white/30 text-xs mt-1">
+              <div className="text-white/50 text-xs mt-1">
                 {Math.round((deWins / deBouts.length) * 100)}% win rate
               </div>
             )}
@@ -323,7 +323,7 @@ export default function OpponentDetailClient() {
               </svg>
 
               {/* Legend */}
-              <div className="flex justify-center gap-6 mt-3 text-[10px] text-white/30">
+              <div className="flex justify-center gap-6 mt-3 text-[10px] text-white/50">
                 <span className="flex items-center gap-1">
                   <span className="w-2 h-2 rounded-full bg-green-400 inline-block" /> Win
                 </span>
@@ -358,9 +358,9 @@ export default function OpponentDetailClient() {
                     {group.tournament}
                   </div>
                   <div className="flex items-center gap-2 mt-0.5">
-                    <span className="text-white/25 text-xs">{group.event}</span>
+                    <span className="text-white/50 text-xs">{group.event}</span>
                     <span className="text-white/10">·</span>
-                    <span className="text-white/25 text-xs">{group.date}</span>
+                    <span className="text-white/50 text-xs">{group.date}</span>
                   </div>
                 </div>
 

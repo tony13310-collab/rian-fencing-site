@@ -13,7 +13,7 @@ function PoolSection({ pool }: { pool: NonNullable<EventDetail["pool"]> }) {
         <span className="w-8 h-8 rounded-lg bg-cyan-500/15 flex items-center justify-center text-cyan-400 text-sm font-black">P</span>
         Pool #{pool.poolNumber}
         {pool.seed && (
-          <span className="text-white/30 text-sm font-normal ml-2">
+          <span className="text-white/50 text-sm font-normal ml-2">
             Seeded #{pool.seed}
           </span>
         )}
@@ -44,7 +44,7 @@ function PoolSection({ pool }: { pool: NonNullable<EventDetail["pool"]> }) {
                 <div className="text-white/80 font-medium text-sm">
                   {bout.opponent}
                 </div>
-                <div className="text-white/30 text-xs">{bout.club}</div>
+                <div className="text-white/50 text-xs">{bout.club}</div>
               </div>
             </div>
             <span
@@ -64,7 +64,7 @@ function PoolSection({ pool }: { pool: NonNullable<EventDetail["pool"]> }) {
           <div className="text-xl font-black text-white/80">
             {pool.wins}-{pool.losses}
           </div>
-          <div className="text-[10px] text-white/30 uppercase tracking-wider">
+          <div className="text-[10px] text-white/50 uppercase tracking-wider">
             Record
           </div>
         </div>
@@ -72,7 +72,7 @@ function PoolSection({ pool }: { pool: NonNullable<EventDetail["pool"]> }) {
           <div className="text-xl font-black text-white/80">
             {pool.touchesScored}
           </div>
-          <div className="text-[10px] text-white/30 uppercase tracking-wider">
+          <div className="text-[10px] text-white/50 uppercase tracking-wider">
             Scored
           </div>
         </div>
@@ -80,7 +80,7 @@ function PoolSection({ pool }: { pool: NonNullable<EventDetail["pool"]> }) {
           <div className="text-xl font-black text-white/80">
             {pool.touchesReceived}
           </div>
-          <div className="text-[10px] text-white/30 uppercase tracking-wider">
+          <div className="text-[10px] text-white/50 uppercase tracking-wider">
             Received
           </div>
         </div>
@@ -97,7 +97,7 @@ function PoolSection({ pool }: { pool: NonNullable<EventDetail["pool"]> }) {
             {pool.indicator > 0 ? "+" : ""}
             {pool.indicator}
           </div>
-          <div className="text-[10px] text-white/30 uppercase tracking-wider">
+          <div className="text-[10px] text-white/50 uppercase tracking-wider">
             Indicator
           </div>
         </div>
@@ -144,7 +144,7 @@ function DESection({ bouts }: { bouts: NonNullable<EventDetail["de"]> }) {
                   <div className="text-white/80 font-medium text-sm">
                     {bout.opponent}
                   </div>
-                  <div className="text-white/30 text-xs">{bout.club}</div>
+                  <div className="text-white/50 text-xs">{bout.club}</div>
                 </div>
                 <span
                   className={`font-mono font-bold text-xl ${
@@ -239,12 +239,12 @@ export default function EventClient() {
             {d.tournament}
           </h1>
           {"location" in d && (d as EventDetail).location && (
-            <p className="text-white/25 text-xs mb-1">
+            <p className="text-white/50 text-xs mb-1">
               📍 {(d as EventDetail).location}
             </p>
           )}
           <p className="text-white/40 text-sm mb-1">{d.event}</p>
-          <div className="text-white/20 text-xs mb-6">
+          <div className="text-white/45 text-xs mb-6">
             {new Date(d.date).toLocaleDateString("en-US", {
               weekday: "long",
               month: "long",
@@ -257,19 +257,19 @@ export default function EventClient() {
           <div className="grid grid-cols-2 gap-3 mb-4">
             {/* Final Result */}
             <div className="bg-white/[0.04] border border-white/10 rounded-2xl py-4 px-3">
-              <div className="text-[10px] text-white/30 uppercase tracking-widest mb-2 font-bold">
+              <div className="text-[10px] text-white/50 uppercase tracking-widest mb-2 font-bold">
                 Final Result
               </div>
               <div className="flex items-baseline justify-center gap-1">
                 <span className="text-3xl font-black gradient-text">
                   {d.place}
                 </span>
-                <span className="text-white/20 text-lg font-light">
+                <span className="text-white/45 text-lg font-light">
                   / {d.total}
                 </span>
               </div>
               {pct && (
-                <div className="text-white/30 text-xs mt-1">Top {pct}%</div>
+                <div className="text-white/50 text-xs mt-1">Top {pct}%</div>
               )}
             </div>
 
@@ -284,7 +284,7 @@ export default function EventClient() {
                     {detail.pool.wins}-{detail.pool.losses}
                   </span>
                 </div>
-                <div className="text-white/30 text-xs mt-1">
+                <div className="text-white/50 text-xs mt-1">
                   Seed #{detail.pool.seed} → DE #{detail.pool.deSeed}
                 </div>
               </div>
@@ -324,7 +324,7 @@ export default function EventClient() {
 
         {/* No detail data yet */}
         {!detail && (
-          <div className="text-center py-16 text-white/20">
+          <div className="text-center py-16 text-white/45">
             <p className="text-4xl mb-4">🤺</p>
             <p className="text-sm">Detailed report coming soon</p>
           </div>

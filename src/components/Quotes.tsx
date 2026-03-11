@@ -31,7 +31,7 @@ export default function Quotes() {
             <p className="text-lg md:text-xl text-white/70 leading-relaxed italic pl-8 border-l-2 border-white/10">
               {q.text}
             </p>
-            <footer className="mt-3 pl-8 text-sm text-white/25 tracking-wider">
+            <footer className="mt-3 pl-8 text-sm text-white/50 tracking-wider">
               — Rian Wei
             </footer>
           </motion.blockquote>

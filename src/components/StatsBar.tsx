@@ -70,7 +70,7 @@ export default function StatsBar() {
             <div className="text-white/80 font-medium text-sm mt-1">
               {stat.label}
             </div>
-            <div className="text-white/30 text-xs mt-0.5">{stat.sub}</div>
+            <div className="text-white/50 text-xs mt-0.5">{stat.sub}</div>
           </motion.div>
         ))}
       </div>

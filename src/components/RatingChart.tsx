@@ -75,7 +75,7 @@ export default function RatingChart() {
                 />
 
                 {/* Date label */}
-                <span className="text-xs text-white/30">
+                <span className="text-xs text-white/50">
                   {new Date(point.date).toLocaleDateString("en-US", {
                     month: "short",
                     year: "2-digit",
@@ -90,7 +90,7 @@ export default function RatingChart() {
         <div className="mt-8 flex items-center justify-center gap-8 text-sm text-white/40">
           <span>
             E23{" "}
-            <span className="text-white/20">→</span>{" "}
+            <span className="text-white/45">→</span>{" "}
             <span className="text-amber-400 font-bold">A26</span> in 3 seasons
           </span>
         </div>

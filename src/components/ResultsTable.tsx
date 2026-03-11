@@ -68,7 +68,7 @@ export default function ResultsTable() {
                 <h3 className="text-xl font-bold text-white">
                   {tourName}
                 </h3>
-                <p className="text-white/30 text-sm">
+                <p className="text-white/50 text-sm">
                   {events[0].location} •{" "}
                   {new Date(events[0].date).toLocaleDateString("en-US", {
                     month: "short",
@@ -102,7 +102,7 @@ export default function ResultsTable() {
                       <span className="text-white/80 font-medium">
                         {event.event}
                       </span>
-                      <span className="text-white/20 text-sm ml-3">
+                      <span className="text-white/45 text-sm ml-3">
                         {new Date(event.date).toLocaleDateString("en-US", {
                           month: "short",
                           day: "numeric",
@@ -123,12 +123,12 @@ export default function ResultsTable() {
                           >
                             {event.result.place}
                           </span>
-                          <span className="text-white/20 text-sm">
+                          <span className="text-white/45 text-sm">
                             /{event.result.total}
                           </span>
                         </>
                       ) : (
-                        <span className="text-white/20">—</span>
+                        <span className="text-white/45">—</span>
                       )}
                     </div>
                     {"rating" in event && event.rating && (
