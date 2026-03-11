@@ -7,7 +7,6 @@ import Quotes from "@/components/Quotes";
 import StatsBar from "@/components/StatsBar";
 import FilterBar from "@/components/FilterBar";
 import SeasonTimeline from "@/components/SeasonTimeline";
-import RatingChart from "@/components/RatingChart";
 import Achievements from "@/components/Achievements";
 import Footer from "@/components/Footer";
 import OpponentsPreview from "@/components/OpponentsPreview";
@@ -62,9 +61,6 @@ export default function Home() {
         selectedLevels={selectedLevels}
         selectedCategories={selectedCategories}
       />
-      <div id="rating">
-        <RatingChart />
-      </div>
       <div id="opponents">
         <OpponentsPreview />
       </div>
