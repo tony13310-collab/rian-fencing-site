@@ -5,7 +5,7 @@ import { profile } from "@/data/profile";
 
 export default function Achievements() {
   return (
-    <section id="about" className="py-24 px-6 max-w-6xl mx-auto">
+    <section id="highlights" className="py-24 px-6 max-w-6xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
