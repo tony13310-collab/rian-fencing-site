@@ -65,25 +65,54 @@ export default function Hero() {
           {profile.weapon} • {profile.club}
         </motion.div>
 
-        {/* Name */}
-        <motion.h1
+        {/* Name with seal */}
+        <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="text-6xl md:text-8xl font-black tracking-tight mb-4"
+          className="relative inline-flex items-end justify-center gap-3 mb-8"
         >
-          <span className="gradient-text">{profile.name}</span>
-        </motion.h1>
+          <h1
+            className="text-6xl md:text-8xl font-black tracking-tight"
+            style={{
+              fontFamily: "'Playfair Display', Georgia, serif",
+              letterSpacing: "-0.02em",
+            }}
+          >
+            <span className="gradient-text" style={{ fontStyle: "italic" }}>Rian</span>
+            <span className="text-white/90" style={{ fontStyle: "italic" }}> Wei</span>
+          </h1>
 
-        {/* Chinese name */}
-        <motion.p
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-2xl md:text-3xl text-white/50 font-light tracking-[0.3em] mb-8"
-        >
-          {profile.chineseName}
-        </motion.p>
+          {/* Chinese seal stamp - 隶书印章 */}
+          <motion.div
+            initial={{ opacity: 0, rotate: -15, scale: 0.5 }}
+            animate={{ opacity: 1, rotate: -8, scale: 1 }}
+            transition={{ duration: 0.6, delay: 0.6, type: "spring", stiffness: 200 }}
+            className="relative -mb-1 ml-1"
+          >
+            <div
+              className="w-14 h-14 md:w-16 md:h-16 rounded-md flex items-center justify-center"
+              style={{
+                border: "2.5px solid #dc2626",
+                boxShadow: "inset 0 0 0 1px rgba(220,38,38,0.3), 0 0 15px rgba(220,38,38,0.2)",
+                background: "rgba(220,38,38,0.05)",
+              }}
+            >
+              <span
+                className="text-red-600 font-black leading-none text-center"
+                style={{
+                  fontSize: "clamp(14px, 2vw, 18px)",
+                  fontFamily: "'Noto Serif SC', 'SimSun', serif",
+                  letterSpacing: "0.15em",
+                  writingMode: "vertical-rl",
+                  textOrientation: "upright",
+                }}
+              >
+                魏瑞安
+              </span>
+            </div>
+          </motion.div>
+        </motion.div>
 
         {/* Rating & Ranking badges - reads from profile.currentRankings */}
         <motion.div
@@ -138,10 +167,10 @@ export default function Hero() {
             View Results
           </a>
           <a
-            href="#about"
-            className="px-8 py-3 rounded-xl border border-white/20 text-white/70 font-medium text-lg hover:bg-white/5 transition-all duration-300"
+            href="#highlights"
+            className="px-8 py-3 rounded-xl border border-white/45 text-white/70 font-medium text-lg hover:bg-white/5 transition-all duration-300"
           >
-            About
+            Highlights
           </a>
         </motion.div>
       </div>
