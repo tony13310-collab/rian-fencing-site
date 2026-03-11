@@ -71,7 +71,7 @@ export default function Hero() {
             <span className="gradient-text" style={{ fontStyle: "italic" }}>Rian Wei</span>
           </h1>
 
-          {/* Chinese seal stamp - 阴刻风格 (黑底红字红框) */}
+          {/* Chinese seal stamp image */}
           <motion.div
             initial={{ opacity: 0, rotate: -15, scale: 0.5 }}
             animate={{ opacity: 1, rotate: -6, scale: 1 }}
@@ -79,33 +79,11 @@ export default function Hero() {
             className="relative -mb-1 ml-2"
             style={{ filter: "drop-shadow(0 0 15px rgba(196, 53, 37, 0.35))" }}
           >
-            <div
-              className="relative flex flex-col items-center justify-center gap-0.5"
-              style={{
-                width: "clamp(44px, 7vw, 56px)",
-                height: "clamp(84px, 14vw, 112px)",
-                background: "#1a0a08",
-                borderRadius: "2px",
-                border: "3px solid #C83C23",
-                boxShadow: "inset 0 0 6px rgba(0,0,0,0.8), 0 0 8px rgba(200,60,35,0.15)",
-              }}
-            >
-              {["魏", "瑞", "安"].map((char, i) => (
-                <span
-                  key={i}
-                  style={{
-                    fontFamily: "'Noto Serif SC', 'STKaiti', 'KaiTi', serif",
-                    fontSize: "clamp(16px, 2.5vw, 22px)",
-                    fontWeight: 900,
-                    color: "#C83C23",
-                    lineHeight: 1.05,
-                    textShadow: "0 0 4px rgba(200,60,35,0.4)",
-                  }}
-                >
-                  {char}
-                </span>
-              ))}
-            </div>
+            <img
+              src="/seal.png"
+              alt="魏瑞安"
+              className="h-20 md:h-24 w-auto rounded-sm"
+            />
           </motion.div>
         </motion.div>
 
