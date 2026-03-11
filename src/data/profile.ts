@@ -25,7 +25,8 @@ export const profile = {
   bio: "Rising Men's Saber fencer competing at the Cadet, Junior, and Division I levels on the national circuit. Training at Capital Fencing Academy in the Capitol Division.",
   achievements: [
     "🥈 SJCC Junior Men's Saber — 2nd Place (Jan 2026)",
-    "🏆 Cobra Challenge Y-14 — Champion",
+    "🏆 Cobra Challenge Y-14 — Champion (Nov 2025)",
+    "🏆 Capitol Clash Y-14 — Champion (Jan 2025)",
     "🔝 Junior Olympics Junior MS — 11th/297 (Jan 2026)",
     "📈 Rating progression: E23 → A26 in 3 seasons",
   ],
