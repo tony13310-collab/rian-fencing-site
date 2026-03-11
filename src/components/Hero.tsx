@@ -72,19 +72,43 @@ export default function Hero() {
             <span className="text-white/90" style={{ fontStyle: "italic" }}> Wei</span>
           </h1>
 
-          {/* Chinese seal stamp image */}
+          {/* Chinese seal stamp - 楷书印章 */}
           <motion.div
             initial={{ opacity: 0, rotate: -15, scale: 0.5 }}
             animate={{ opacity: 1, rotate: -6, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.6, type: "spring", stiffness: 200 }}
             className="relative -mb-1 ml-2"
+            style={{ filter: "drop-shadow(0 0 12px rgba(196, 53, 37, 0.4))" }}
           >
-            <img
-              src="/seal.jpg"
-              alt="魏瑞安 seal"
-              className="w-16 h-auto md:w-20 drop-shadow-[0_0_15px_rgba(220,38,38,0.4)]"
-              style={{ mixBlendMode: "lighten" }}
-            />
+            <div
+              className="relative flex flex-col items-center justify-center"
+              style={{
+                width: "clamp(48px, 8vw, 64px)",
+                height: "clamp(80px, 13vw, 108px)",
+                background: "#B83224",
+                borderRadius: "3px",
+                border: "3px solid #D44A30",
+                boxShadow: "inset 0 0 0 2px #A02A1C, inset 0 0 8px rgba(0,0,0,0.3)",
+              }}
+            >
+              {/* Characters - vertical */}
+              {["魏", "瑞", "安"].map((char, i) => (
+                <span
+                  key={i}
+                  style={{
+                    fontFamily: "'Noto Serif SC', 'STKaiti', 'KaiTi', serif",
+                    fontSize: "clamp(16px, 2.5vw, 22px)",
+                    fontWeight: 900,
+                    color: "#E8523E",
+                    lineHeight: 1.1,
+                    textShadow: "1px 1px 0 #8B1E14, -0.5px -0.5px 0 #D44A30",
+                    letterSpacing: "0.05em",
+                  }}
+                >
+                  {char}
+                </span>
+              ))}
+            </div>
           </motion.div>
         </motion.div>
 
