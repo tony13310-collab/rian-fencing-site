@@ -197,6 +197,145 @@ export default function OpponentDetailClient() {
           </div>
         </motion.div>
 
+        {/* Trend Chart - wins above, losses below, over time */}
+        {data.total >= 2 && (
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ delay: 0.15 }}
+            className="mb-8"
+          >
+            <h2 className="text-sm font-bold text-white/50 uppercase tracking-widest mb-4">
+              📈 Trend Over Time
+            </h2>
+            <div className="bg-white/[0.02] border border-white/5 rounded-2xl p-4">
+              {/* Timeline chart */}
+              <svg
+                viewBox={`0 0 ${Math.max(data.total * 60 + 40, 300)} 140`}
+                className="w-full h-auto overflow-visible"
+                style={{ minHeight: 100 }}
+              >
+                {/* Center line */}
+                <line
+                  x1="20"
+                  y1="70"
+                  x2={data.total * 60 + 20}
+                  y2="70"
+                  stroke="rgba(255,255,255,0.08)"
+                  strokeWidth="1"
+                  strokeDasharray="4 4"
+                />
+                {/* Win zone label */}
+                <text x="4" y="30" fill="rgba(74,222,128,0.3)" fontSize="9" fontWeight="bold">W</text>
+                {/* Loss zone label */}
+                <text x="4" y="115" fill="rgba(248,113,113,0.3)" fontSize="9" fontWeight="bold">L</text>
+
+                {/* Running score line + dots */}
+                {(() => {
+                  // Reverse bouts so oldest is first (bouts are stored newest-first)
+                  const chronoBouts = [...data.bouts].reverse();
+                  let runningScore = 0;
+                  const points: {x: number; y: number; win: boolean; score: string; date: string; tournament: string}[] = [];
+
+                  chronoBouts.forEach((bout, i) => {
+                    runningScore += bout.win ? 1 : -1;
+                    const x = 30 + i * 60;
+                    // Map running score to y: 0 score = 70 (center), each +1 = -20px, each -1 = +20px
+                    const y = 70 - runningScore * 20;
+                    points.push({
+                      x,
+                      y: Math.max(8, Math.min(132, y)),
+                      win: bout.win,
+                      score: bout.score,
+                      date: bout.date,
+                      tournament: bout.tournament,
+                    });
+                  });
+
+                  // Build path
+                  const pathD = points.map((p, i) => `${i === 0 ? 'M' : 'L'} ${p.x} ${p.y}`).join(' ');
+
+                  return (
+                    <>
+                      {/* Connecting line */}
+                      <path
+                        d={pathD}
+                        fill="none"
+                        stroke="rgba(255,255,255,0.15)"
+                        strokeWidth="2"
+                        strokeLinejoin="round"
+                      />
+                      {/* Gradient area fill */}
+                      <defs>
+                        <linearGradient id="trendGrad" x1="0" y1="0" x2="0" y2="1">
+                          <stop offset="0%" stopColor="#4ade80" stopOpacity="0.1" />
+                          <stop offset="50%" stopColor="#4ade80" stopOpacity="0" />
+                          <stop offset="50%" stopColor="#f87171" stopOpacity="0" />
+                          <stop offset="100%" stopColor="#f87171" stopOpacity="0.1" />
+                        </linearGradient>
+                      </defs>
+                      {/* Dots */}
+                      {points.map((p, i) => (
+                        <g key={i}>
+                          {/* Glow */}
+                          <circle
+                            cx={p.x}
+                            cy={p.y}
+                            r="8"
+                            fill={p.win ? "rgba(74,222,128,0.15)" : "rgba(248,113,113,0.15)"}
+                          />
+                          {/* Dot */}
+                          <circle
+                            cx={p.x}
+                            cy={p.y}
+                            r="5"
+                            fill={p.win ? "#4ade80" : "#f87171"}
+                            stroke={p.win ? "#166534" : "#991b1b"}
+                            strokeWidth="1.5"
+                          />
+                          {/* Score label */}
+                          <text
+                            x={p.x}
+                            y={p.win ? p.y - 12 : p.y + 16}
+                            textAnchor="middle"
+                            fill={p.win ? "#4ade80" : "#f87171"}
+                            fontSize="8"
+                            fontWeight="bold"
+                            fontFamily="monospace"
+                          >
+                            {p.score}
+                          </text>
+                          {/* Date label (abbreviated) */}
+                          <text
+                            x={p.x}
+                            y={p.win ? p.y - 22 : p.y + 26}
+                            textAnchor="middle"
+                            fill="rgba(255,255,255,0.2)"
+                            fontSize="7"
+                          >
+                            {p.date ? new Date(p.date).toLocaleDateString('en-US', {month: 'short', year: '2-digit'}) : ''}
+                          </text>
+                        </g>
+                      ))}
+                    </>
+                  );
+                })()}
+              </svg>
+
+              {/* Legend */}
+              <div className="flex justify-center gap-6 mt-3 text-[10px] text-white/30">
+                <span className="flex items-center gap-1">
+                  <span className="w-2 h-2 rounded-full bg-green-400 inline-block" /> Win
+                </span>
+                <span className="flex items-center gap-1">
+                  <span className="w-2 h-2 rounded-full bg-red-400 inline-block" /> Loss
+                </span>
+                <span>← Older · Newer →</span>
+              </div>
+            </div>
+          </motion.div>
+        )}
+
         {/* All bouts grouped by tournament */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
