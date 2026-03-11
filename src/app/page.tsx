@@ -3,6 +3,7 @@
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
+import Quotes from "@/components/Quotes";
 import StatsBar from "@/components/StatsBar";
 import FilterBar from "@/components/FilterBar";
 import SeasonTimeline from "@/components/SeasonTimeline";
@@ -46,6 +47,7 @@ export default function Home() {
     <main className="noise-overlay">
       <Navbar />
       <Hero />
+      <Quotes />
       <StatsBar />
       <FilterBar
         selectedLevels={selectedLevels}
