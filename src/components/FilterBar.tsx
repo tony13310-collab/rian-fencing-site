@@ -32,8 +32,7 @@ export default function FilterBar({
       <div className="max-w-6xl mx-auto">
         {/* Category filters */}
         <div className="flex flex-wrap items-center gap-2">
-          <span className="text-white/50 text-xs font-medium uppercase tracking-wider mr-2 min-w-[60px]">
-            Age
+          <span className="text-white/50 text-xs font-medium uppercase tracking-wider mr-2">
           </span>
           {categories.map((cat) => {
             const active = selectedCategories.has(cat);
