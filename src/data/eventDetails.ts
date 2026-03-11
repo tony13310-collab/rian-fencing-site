@@ -3,7 +3,7 @@
 export interface PoolBout {
   opponent: string;
   club: string;
-  score: string;
+  score: string; // Full score: "5-3", "4-5"
   win: boolean;
 }
 
@@ -33,6 +33,7 @@ export interface EventDetail {
   date: string;
   tournament: string;
   event: string;
+  location: string;
   place: number;
   total: number;
   rating?: string;
@@ -51,6 +52,7 @@ export const eventDetails: Record<string, EventDetail> = {
     date: "2026-01-24",
     tournament: "January SJCC",
     event: "Junior Men's Saber",
+    location: "Portland, OR",
     place: 2,
     total: 117,
     rating: "A26",
@@ -58,12 +60,12 @@ export const eventDetails: Record<string, EventDetail> = {
       poolNumber: 6,
       seed: 6,
       bouts: [
-        { opponent: "GERSTMANN Max T.", club: "OFC", score: "D4", win: false },
-        { opponent: "RAJMOHAN Arya", club: "COBRAFC", score: "V5", win: true },
-        { opponent: "BRUM Charles E.", club: "WESTCOASTFA", score: "V5", win: true },
-        { opponent: "LI Alex Y.", club: "SCFA", score: "V5", win: true },
-        { opponent: "KHOTLINE Daniel", club: "DYNAMOFC", score: "D4", win: false },
-        { opponent: "LEE Brady", club: "GFA", score: "V5", win: true },
+        { opponent: "GERSTMANN Max T.", club: "OFC", score: "4-5", win: false },
+        { opponent: "RAJMOHAN Arya", club: "COBRAFC", score: "5-3", win: true },
+        { opponent: "BRUM Charles E.", club: "WESTCOAST FA", score: "5-1", win: true },
+        { opponent: "LI Alex Y.", club: "SCFA", score: "5-1", win: true },
+        { opponent: "KHOTLINE Daniel", club: "DYNAMO FC", score: "4-5", win: false },
+        { opponent: "LEE Brady", club: "GFA", score: "5-3", win: true },
       ],
       wins: 4,
       losses: 2,
@@ -89,6 +91,7 @@ export const eventDetails: Record<string, EventDetail> = {
     date: "2026-01-12",
     tournament: "Junior Olympics",
     event: "Junior Men's Saber",
+    location: "Columbus, OH",
     place: 11,
     total: 297,
     rating: "B26",
@@ -96,12 +99,12 @@ export const eventDetails: Record<string, EventDetail> = {
       poolNumber: 14,
       seed: 73,
       bouts: [
-        { opponent: "NARDINI Nathanael P.", club: "TIM MOREHOUSE", score: "V5", win: true },
-        { opponent: "KAMAL Aidan", club: "NFFC", score: "V5", win: true },
-        { opponent: "DOLEV Ido", club: "PDX FENCING", score: "V5", win: true },
-        { opponent: "KHANNA Adamantis", club: "BOSTON FC", score: "V5", win: true },
-        { opponent: "REN James", club: "GFA", score: "V5", win: true },
-        { opponent: "KULKARNI Shreyas", club: "Orange Coast", score: "V5", win: true },
+        { opponent: "NARDINI Nathanael P.", club: "TIM MOREHOUSE", score: "5-3", win: true },
+        { opponent: "KAMAL Aidan", club: "NFFC", score: "5-0", win: true },
+        { opponent: "DOLEV Ido", club: "PDX FENCING", score: "5-2", win: true },
+        { opponent: "KHANNA Adamantis", club: "BOSTON FC", score: "5-3", win: true },
+        { opponent: "REN James", club: "GFA", score: "5-3", win: true },
+        { opponent: "KULKARNI Shreyas", club: "Orange Coast", score: "5-1", win: true },
       ],
       wins: 6,
       losses: 0,
@@ -124,18 +127,19 @@ export const eventDetails: Record<string, EventDetail> = {
     date: "2026-01-10",
     tournament: "Junior Olympics",
     event: "Cadet Men's Saber",
+    location: "Columbus, OH",
     place: 44,
     total: 277,
     pool: {
       poolNumber: 32,
       seed: 32,
       bouts: [
-        { opponent: "WANG Justin", club: "ALPHA FA", score: "V5", win: true },
-        { opponent: "GORDON Samuel", club: "INTL FENCE CLB", score: "V5", win: true },
-        { opponent: "VU Mark", club: "BERGEN FC", score: "V5", win: true },
-        { opponent: "KEMP Austin", club: "SABIO", score: "D4", win: false },
-        { opponent: "STAMPER Wyatt", club: "OREGON FA", score: "V5", win: true },
-        { opponent: "WANG Alex", club: "GFA", score: "V5", win: true },
+        { opponent: "WANG Justin", club: "ALPHA FA", score: "5-1", win: true },
+        { opponent: "GORDON Samuel", club: "INTL FENCE CLB", score: "5-4", win: true },
+        { opponent: "VU Mark", club: "BERGEN FC", score: "5-0", win: true },
+        { opponent: "KEMP Austin", club: "SABIO", score: "4-5", win: false },
+        { opponent: "STAMPER Wyatt", club: "OREGON FA", score: "5-1", win: true },
+        { opponent: "WANG Alex", club: "GFA", score: "5-4", win: true },
       ],
       wins: 5,
       losses: 1,
@@ -157,18 +161,19 @@ export const eventDetails: Record<string, EventDetail> = {
     date: "2026-02-15",
     tournament: "February NAC",
     event: "Junior Men's Saber",
+    location: "Minneapolis, MN",
     place: 31,
     total: 203,
     pool: {
       poolNumber: 17,
       seed: 44,
       bouts: [
-        { opponent: "LIU Ethan", club: "NELLYA", score: "D3", win: false },
-        { opponent: "CAO Oliver", club: "WESTCOAST FA", score: "D4", win: false },
-        { opponent: "ATANASSOV Vasil V.", club: "North Carolina", score: "D4", win: false },
-        { opponent: "GHISLAIN-FERNANDEZ Alexandre", club: "🇨🇦 CAN", score: "V5", win: true },
-        { opponent: "ALAVE Kyle", club: "TIM MOREHOUSE", score: "V5", win: true },
-        { opponent: "LAUB William", club: "INTL FENCE CLB", score: "V5", win: true },
+        { opponent: "LIU Ethan", club: "NELLYA", score: "3-5", win: false },
+        { opponent: "CAO Oliver", club: "WESTCOAST FA", score: "4-5", win: false },
+        { opponent: "ATANASSOV Vasil V.", club: "North Carolina", score: "4-5", win: false },
+        { opponent: "GHISLAIN-FERNANDEZ Alexandre", club: "🇨🇦 CAN", score: "5-1", win: true },
+        { opponent: "ALAVE Kyle", club: "TIM MOREHOUSE", score: "5-1", win: true },
+        { opponent: "LAUB William", club: "INTL FENCE CLB", score: "5-3", win: true },
       ],
       wins: 3,
       losses: 3,
@@ -190,18 +195,19 @@ export const eventDetails: Record<string, EventDetail> = {
     date: "2026-02-13",
     tournament: "February NAC",
     event: "Div I Men's Saber",
+    location: "Minneapolis, MN",
     place: 105,
     total: 209,
     pool: {
       poolNumber: 26,
       seed: 88,
       bouts: [
-        { opponent: "LAUB William", club: "INTL FENCE CLB", score: "V5", win: true },
-        { opponent: "WANG Theodore", club: "Z1 FENCING", score: "D4", win: false },
-        { opponent: "ZEWDA Kebron", club: "ROCHESTER FC", score: "V5", win: true },
-        { opponent: "YOOK Isaac", club: "TIM MOREHOUSE", score: "D3", win: false },
-        { opponent: "NG Jonathan", club: "DURKAN FA", score: "V5", win: true },
-        { opponent: "LIM William J.", club: "GFA", score: "D0", win: false },
+        { opponent: "LAUB William", club: "INTL FENCE CLB", score: "5-3", win: true },
+        { opponent: "WANG Theodore", club: "Z1 FENCING", score: "4-5", win: false },
+        { opponent: "ZEWDA Kebron", club: "ROCHESTER FC", score: "5-3", win: true },
+        { opponent: "YOOK Isaac", club: "TIM MOREHOUSE", score: "3-5", win: false },
+        { opponent: "NG Jonathan", club: "DURKAN FA", score: "5-2", win: true },
+        { opponent: "LIM William J.", club: "GFA", score: "0-5", win: false },
       ],
       wins: 3,
       losses: 3,

@@ -246,6 +246,11 @@ export default function EventClient() {
           <h1 className="text-2xl font-black text-white/90 mb-1">
             {d.tournament}
           </h1>
+          {"location" in d && (d as EventDetail).location && (
+            <p className="text-white/25 text-xs mb-1">
+              📍 {(d as EventDetail).location}
+            </p>
+          )}
           <p className="text-white/40 text-sm mb-6">{d.event}</p>
 
           <div className="inline-flex items-baseline gap-1 mb-2">
