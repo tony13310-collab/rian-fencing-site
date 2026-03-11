@@ -53,16 +53,16 @@ export default function Hero() {
         🤺
       </motion.div>
 
-      <div className="relative z-10 text-center px-6 max-w-4xl">
+      <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl w-full">
         {/* Name with seal */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative flex flex-col md:flex-row items-center justify-center gap-3 mb-8"
+          className="relative flex flex-col items-center justify-center gap-2 mb-6"
         >
           <h1
-            className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tight whitespace-nowrap"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tight"
             style={{
               fontFamily: "'Playfair Display', Georgia, serif",
               letterSpacing: "-0.02em",
@@ -76,26 +76,25 @@ export default function Hero() {
             initial={{ opacity: 0, scale: 0.5 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.6, type: "spring", stiffness: 200 }}
-            className="relative -mb-1 ml-2"
             style={{ filter: "drop-shadow(0 0 15px rgba(196, 53, 37, 0.35))" }}
           >
             <img
               src="/seal.png"
               alt="魏瑞安"
-              className="h-20 md:h-24 w-auto rounded-sm"
+              className="h-14 sm:h-16 md:h-20 lg:h-24 w-auto rounded-sm"
             />
           </motion.div>
         </motion.div>
 
-        {/* Rating & Ranking badges - reads from profile.currentRankings */}
+        {/* Rating & Ranking badges */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.6 }}
-          className="flex flex-wrap items-center justify-center gap-3 mb-10"
+          className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-6 sm:mb-8 px-2"
         >
-          <div className="px-5 py-2.5 rounded-xl bg-gradient-to-r from-amber-500/20 to-orange-600/20 border border-amber-500/30 backdrop-blur-sm">
-            <span className="text-amber-400 font-black text-lg tracking-wide">
+          <div className="px-3 sm:px-5 py-2 rounded-xl bg-gradient-to-r from-amber-500/20 to-orange-600/20 border border-amber-500/30 backdrop-blur-sm">
+            <span className="text-amber-400 font-black text-sm sm:text-lg tracking-wide">
               ⚔️ {profile.rating}
             </span>
           </div>
@@ -108,9 +107,9 @@ export default function Hero() {
             };
             const c = colors[r.color] || colors.blue;
             return (
-              <div key={r.category} className={`px-5 py-2.5 rounded-xl ${c.bg} border ${c.border} backdrop-blur-sm`}>
-                <span className="text-white/40 text-xs font-medium mr-1.5">{r.category}</span>
-                <span className={`${c.text} font-black text-lg`}>#{r.rank}</span>
+              <div key={r.category} className={`px-3 sm:px-5 py-2 rounded-xl ${c.bg} border ${c.border} backdrop-blur-sm`}>
+                <span className="text-white/40 text-[10px] sm:text-xs font-medium mr-1">{r.category}</span>
+                <span className={`${c.text} font-black text-sm sm:text-lg`}>#{r.rank}</span>
               </div>
             );
           })}
@@ -121,42 +120,32 @@ export default function Hero() {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.8, delay: 0.8 }}
-          className="text-lg text-white/50 max-w-2xl mx-auto leading-relaxed mb-8"
+          className="text-sm sm:text-base md:text-lg text-white/50 max-w-2xl mx-auto leading-relaxed mb-6 sm:mb-8 px-2"
         >
           {profile.bio}
         </motion.p>
 
-        {/* CTA */}
+        {/* CTA - 2x2 grid on mobile, row on desktop */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6, delay: 1.0 }}
-          className="flex gap-4 justify-center"
+          className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2 sm:gap-3 justify-center px-2"
         >
-          <a
-            href="#results"
-            className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold text-base hover:shadow-[0_0_30px_rgba(0,212,255,0.4)] transition-all duration-300 hover:scale-105 min-w-[140px] text-center"
-          >
-            Results
-          </a>
-          <a
-            href="#opponents"
-            className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold text-base hover:shadow-[0_0_30px_rgba(0,212,255,0.4)] transition-all duration-300 hover:scale-105 min-w-[140px] text-center"
-          >
-            Database
-          </a>
-          <a
-            href="#highlights"
-            className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold text-base hover:shadow-[0_0_30px_rgba(0,212,255,0.4)] transition-all duration-300 hover:scale-105 min-w-[140px] text-center"
-          >
-            Highlights
-          </a>
-          <a
-            href="#contact"
-            className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold text-base hover:shadow-[0_0_30px_rgba(0,212,255,0.4)] transition-all duration-300 hover:scale-105 min-w-[140px] text-center"
-          >
-            Contact
-          </a>
+          {[
+            { label: "Results", href: "#results" },
+            { label: "Database", href: "#opponents" },
+            { label: "Highlights", href: "#highlights" },
+            { label: "Contact", href: "#contact" },
+          ].map((btn) => (
+            <a
+              key={btn.href}
+              href={btn.href}
+              className="px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold text-sm sm:text-base hover:shadow-[0_0_30px_rgba(0,212,255,0.4)] transition-all duration-300 hover:scale-105 text-center"
+            >
+              {btn.label}
+            </a>
+          ))}
         </motion.div>
       </div>
 
