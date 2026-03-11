@@ -12,13 +12,13 @@ export default function OpponentsPreview() {
   // Top rivals (most bouts)
   const rivals = Object.entries(opponents)
     .sort((a, b) => b[1].total - a[1].total)
-    .slice(0, 8);
+    .slice(0, 10);
 
   // Nemesis (lost most to, at least 2 bouts)
   const nemesis = Object.entries(opponents)
     .filter(([, d]) => d.total >= 2 && d.winRate <= 30)
     .sort((a, b) => b[1].total - a[1].total)
-    .slice(0, 3);
+    .slice(0, 10);
 
   return (
     <section className="py-12 px-4">
