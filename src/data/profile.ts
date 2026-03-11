@@ -1,6 +1,6 @@
 export const profile = {
   name: "Rian Wei",
-  chineseName: "魏睿安",
+  chineseName: "魏瑞安",
   nickname: "瑞瑞",
   birthYear: 2011,
   weapon: "Men's Saber",
