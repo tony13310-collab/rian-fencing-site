@@ -109,9 +109,16 @@ export default function OpponentsPreview() {
                     <span className="text-white/70 font-medium text-sm">
                       {name}
                     </span>
-                    <span className="text-red-400 text-xs font-bold">
-                      {data.wins}-{data.losses} ({data.winRate}%)
-                    </span>
+                    <div className="flex items-center gap-3">
+                      <span className="text-white/50 text-xs">
+                        <span className="text-green-400">{data.wins}W</span>
+                        <span className="text-white/45"> - </span>
+                        <span className="text-red-400">{data.losses}L</span>
+                      </span>
+                      <span className="text-xs font-bold px-2 py-0.5 rounded bg-red-500/15 text-red-400">
+                        {data.winRate}%
+                      </span>
+                    </div>
                   </Link>
                 );
               })}
