@@ -59,10 +59,10 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative inline-flex items-end justify-center gap-3 mb-8"
+          className="relative flex flex-col md:flex-row items-center justify-center gap-3 mb-8"
         >
           <h1
-            className="text-6xl md:text-8xl font-black tracking-tight"
+            className="text-5xl sm:text-6xl md:text-8xl font-black tracking-tight whitespace-nowrap"
             style={{
               fontFamily: "'Playfair Display', Georgia, serif",
               letterSpacing: "-0.02em",
