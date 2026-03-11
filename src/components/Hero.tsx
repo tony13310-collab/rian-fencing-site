@@ -71,26 +71,25 @@ export default function Hero() {
             <span className="gradient-text" style={{ fontStyle: "italic" }}>Rian Wei</span>
           </h1>
 
-          {/* Chinese seal stamp - 楷书印章 */}
+          {/* Chinese seal stamp - 阴刻风格 (黑底红字红框) */}
           <motion.div
             initial={{ opacity: 0, rotate: -15, scale: 0.5 }}
             animate={{ opacity: 1, rotate: -6, scale: 1 }}
             transition={{ duration: 0.6, delay: 0.6, type: "spring", stiffness: 200 }}
             className="relative -mb-1 ml-2"
-            style={{ filter: "drop-shadow(0 0 12px rgba(196, 53, 37, 0.4))" }}
+            style={{ filter: "drop-shadow(0 0 15px rgba(196, 53, 37, 0.35))" }}
           >
             <div
-              className="relative flex flex-col items-center justify-center"
+              className="relative flex flex-col items-center justify-center gap-0.5"
               style={{
-                width: "clamp(48px, 8vw, 64px)",
-                height: "clamp(80px, 13vw, 108px)",
-                background: "#B83224",
-                borderRadius: "3px",
-                border: "3px solid #D44A30",
-                boxShadow: "inset 0 0 0 2px #A02A1C, inset 0 0 8px rgba(0,0,0,0.3)",
+                width: "clamp(44px, 7vw, 56px)",
+                height: "clamp(84px, 14vw, 112px)",
+                background: "#1a0a08",
+                borderRadius: "2px",
+                border: "3px solid #C83C23",
+                boxShadow: "inset 0 0 6px rgba(0,0,0,0.8), 0 0 8px rgba(200,60,35,0.15)",
               }}
             >
-              {/* Characters - vertical */}
               {["魏", "瑞", "安"].map((char, i) => (
                 <span
                   key={i}
@@ -98,10 +97,9 @@ export default function Hero() {
                     fontFamily: "'Noto Serif SC', 'STKaiti', 'KaiTi', serif",
                     fontSize: "clamp(16px, 2.5vw, 22px)",
                     fontWeight: 900,
-                    color: "#E8523E",
-                    lineHeight: 1.1,
-                    textShadow: "1px 1px 0 #8B1E14, -0.5px -0.5px 0 #D44A30",
-                    letterSpacing: "0.05em",
+                    color: "#C83C23",
+                    lineHeight: 1.05,
+                    textShadow: "0 0 4px rgba(200,60,35,0.4)",
                   }}
                 >
                   {char}
