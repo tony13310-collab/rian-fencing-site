@@ -4,10 +4,6 @@ import { motion } from "framer-motion";
 
 const quotes = [
   {
-    text: "Fencing drives you to chase victory with everything you have — then teaches you that defeat is not the opposite of winning, but the price of pursuing it.",
-    accent: "from-cyan-400 to-blue-500",
-  },
-  {
     text: "The blade sharpened my hunger to win. The losses sharpened everything else. You step on the strip to conquer your opponent; you walk off it having conquered yourself.",
     accent: "from-purple-400 to-violet-500",
   },
