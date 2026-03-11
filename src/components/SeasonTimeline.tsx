@@ -240,7 +240,7 @@ export default function SeasonTimeline({
                             <span
                               className={`text-[10px] w-[60px] sm:w-[72px] py-1 rounded-md ${colors.text} border ${colors.border} uppercase tracking-wider font-bold text-center inline-block shrink-0`}
                             >
-                              {level}
+                              {level === "International" ? "INTL" : level === "National" ? "NAT'L" : level}
                             </span>
                             <h4 className="text-white/90 font-bold text-xs sm:text-sm md:text-base truncate">
                               {tourName}
