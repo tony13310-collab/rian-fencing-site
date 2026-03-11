@@ -243,7 +243,7 @@ export default function SeasonTimeline({
                         <div className="px-5 py-3 flex items-center justify-between border-b border-white/5">
                           <div className="flex items-center gap-3">
                             <span
-                              className={`text-[10px] px-2 py-0.5 rounded-md ${colors.text} border ${colors.border} uppercase tracking-wider font-bold`}
+                              className={`text-[10px] w-[72px] py-1 rounded-md ${colors.text} border ${colors.border} uppercase tracking-wider font-bold text-center inline-block`}
                             >
                               {level}
                             </span>
@@ -277,7 +277,7 @@ export default function SeasonTimeline({
                               >
                                 <div className="flex items-center gap-3">
                                   <span
-                                    className={`${catBg} px-2.5 py-1 rounded-md text-[10px] font-bold text-white uppercase tracking-wider min-w-[52px] text-center`}
+                                    className={`${catBg} w-[72px] py-1 rounded-md text-[10px] font-bold text-white uppercase tracking-wider text-center inline-block shrink-0`}
                                   >
                                     {event.category}
                                   </span>
