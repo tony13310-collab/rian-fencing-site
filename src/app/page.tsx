@@ -10,6 +10,7 @@ import SeasonTimeline from "@/components/SeasonTimeline";
 import RatingChart from "@/components/RatingChart";
 import Achievements from "@/components/Achievements";
 import Footer from "@/components/Footer";
+import OpponentsPreview from "@/components/OpponentsPreview";
 import { allEvents, TournamentLevel, AgeCategory } from "@/data/events";
 
 export default function Home() {
@@ -63,6 +64,9 @@ export default function Home() {
       />
       <div id="rating">
         <RatingChart />
+      </div>
+      <div id="opponents">
+        <OpponentsPreview />
       </div>
       <Achievements />
       <Footer />
