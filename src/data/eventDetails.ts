@@ -18,6 +18,7 @@ export interface PoolResult {
   indicator: number;
   poolRank: number | null;
   poolSize: number | null;
+  deSeed: number | null;
 }
 
 export interface DEBout {
@@ -74,6 +75,7 @@ export const eventDetails: Record<string, EventDetail> = {
       indicator: 10,
       poolRank: null,
       poolSize: null,
+      deSeed: 26,
     },
     de: [
       { round: "T128", opponent: "TASIKAS Peter", club: "", score: "15-9", win: true },
@@ -113,6 +115,7 @@ export const eventDetails: Record<string, EventDetail> = {
       indicator: 18,
       poolRank: null,
       poolSize: null,
+      deSeed: 11,
     },
     de: [
       { round: "T128", opponent: "KHANNA Adamantis", club: "", score: "15-11", win: true },
@@ -148,6 +151,7 @@ export const eventDetails: Record<string, EventDetail> = {
       indicator: 14,
       poolRank: null,
       poolSize: null,
+      deSeed: 38,
     },
     de: [
       { round: "T256", opponent: "MARCELLINO Robert", club: "", score: "15-8", win: true },
@@ -182,6 +186,7 @@ export const eventDetails: Record<string, EventDetail> = {
       indicator: 6,
       poolRank: null,
       poolSize: null,
+      deSeed: 82,
     },
     de: [
       { round: "T128", opponent: "LI Howard", club: "", score: "15-9", win: true },
@@ -216,6 +221,7 @@ export const eventDetails: Record<string, EventDetail> = {
       indicator: -1,
       poolRank: null,
       poolSize: null,
+      deSeed: 107,
     },
     de: [
       { round: "T256", opponent: "SADHU Neiyam", club: "", score: "15-14", win: true },

@@ -103,13 +103,20 @@ function PoolSection({ pool }: { pool: NonNullable<EventDetail["pool"]> }) {
         </div>
       </div>
 
-      {pool.poolRank && pool.poolSize && (
-        <div className="mt-3 text-center text-sm text-white/40">
-          Pool result → Seeded{" "}
-          <span className="text-white/70 font-bold">
-            #{pool.poolRank}
-          </span>{" "}
-          / {pool.poolSize} into DE
+      {(pool.poolRank || pool.deSeed) && (
+        <div className="mt-4 py-3 px-4 rounded-xl bg-white/[0.03] border border-white/5 text-center">
+          <span className="text-white/30 text-sm">Pool Result → </span>
+          {pool.poolRank && pool.poolSize && (
+            <span className="text-white/50 text-sm">
+              Ranked <span className="text-white/80 font-bold">#{pool.poolRank}</span> / {pool.poolSize}
+              {pool.deSeed && " → "}
+            </span>
+          )}
+          {pool.deSeed && (
+            <span className="text-cyan-400/80 text-sm font-bold">
+              DE Seed #{pool.deSeed}
+            </span>
+          )}
         </div>
       )}
     </section>
