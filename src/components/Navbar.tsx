@@ -34,7 +34,7 @@ export default function Navbar() {
           {/* Seal logo */}
           <img src="/seal.png" alt="魏瑞安" className="h-10 w-auto rounded-sm" />
           <span className="text-white/50 text-sm font-medium hidden sm:block">
-            Rian Wei
+            American Saber Fencer
           </span>
         </a>
 
