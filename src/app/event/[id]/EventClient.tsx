@@ -103,22 +103,7 @@ function PoolSection({ pool }: { pool: NonNullable<EventDetail["pool"]> }) {
         </div>
       </div>
 
-      {(pool.poolRank || pool.deSeed) && (
-        <div className="mt-4 py-3 px-4 rounded-xl bg-white/[0.03] border border-white/5 text-center">
-          <span className="text-white/30 text-sm">Pool Result → </span>
-          {pool.poolRank && pool.poolSize && (
-            <span className="text-white/50 text-sm">
-              Ranked <span className="text-white/80 font-bold">#{pool.poolRank}</span> / {pool.poolSize}
-              {pool.deSeed && " → "}
-            </span>
-          )}
-          {pool.deSeed && (
-            <span className="text-cyan-400/80 text-sm font-bold">
-              DE Seed #{pool.deSeed}
-            </span>
-          )}
-        </div>
-      )}
+      {/* Pool result now shown in header */}
     </section>
   );
 }
@@ -258,27 +243,8 @@ export default function EventClient() {
               📍 {(d as EventDetail).location}
             </p>
           )}
-          <p className="text-white/40 text-sm mb-6">{d.event}</p>
-
-          <div className="inline-flex items-baseline gap-1 mb-2">
-            <span className="text-5xl font-black gradient-text">
-              {d.place}
-            </span>
-            <span className="text-white/20 text-2xl font-light">
-              / {d.total}
-            </span>
-          </div>
-          {pct && (
-            <div className="text-white/30 text-sm">Top {pct}%</div>
-          )}
-          {d.rating && (
-            <div className="mt-3 inline-block px-4 py-1.5 rounded-lg bg-amber-500/15 border border-amber-500/20">
-              <span className="text-amber-400 font-bold text-sm">
-                Rating earned: {d.rating}
-              </span>
-            </div>
-          )}
-          <div className="mt-3 text-white/20 text-xs">
+          <p className="text-white/40 text-sm mb-1">{d.event}</p>
+          <div className="text-white/20 text-xs mb-6">
             {new Date(d.date).toLocaleDateString("en-US", {
               weekday: "long",
               month: "long",
@@ -286,6 +252,52 @@ export default function EventClient() {
               year: "numeric",
             })}
           </div>
+
+          {/* Final Result + Pool Result side by side */}
+          <div className="grid grid-cols-2 gap-3 mb-4">
+            {/* Final Result */}
+            <div className="bg-white/[0.04] border border-white/10 rounded-2xl py-4 px-3">
+              <div className="text-[10px] text-white/30 uppercase tracking-widest mb-2 font-bold">
+                Final Result
+              </div>
+              <div className="flex items-baseline justify-center gap-1">
+                <span className="text-3xl font-black gradient-text">
+                  {d.place}
+                </span>
+                <span className="text-white/20 text-lg font-light">
+                  / {d.total}
+                </span>
+              </div>
+              {pct && (
+                <div className="text-white/30 text-xs mt-1">Top {pct}%</div>
+              )}
+            </div>
+
+            {/* Pool Result */}
+            {detail?.pool && (
+              <div className="bg-white/[0.04] border border-cyan-500/15 rounded-2xl py-4 px-3">
+                <div className="text-[10px] text-cyan-400/50 uppercase tracking-widest mb-2 font-bold">
+                  Pool Result
+                </div>
+                <div className="flex items-baseline justify-center gap-1">
+                  <span className="text-3xl font-black text-white/80">
+                    {detail.pool.wins}-{detail.pool.losses}
+                  </span>
+                </div>
+                <div className="text-white/30 text-xs mt-1">
+                  Seed #{detail.pool.seed} → DE #{detail.pool.deSeed}
+                </div>
+              </div>
+            )}
+          </div>
+
+          {d.rating && (
+            <div className="inline-block px-4 py-1.5 rounded-lg bg-amber-500/15 border border-amber-500/20 mb-2">
+              <span className="text-amber-400 font-bold text-sm">
+                Rating earned: {d.rating}
+              </span>
+            </div>
+          )}
         </motion.div>
 
         {/* Pool */}
