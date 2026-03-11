@@ -142,7 +142,32 @@ export default function Hero() {
           {profile.bio}
         </motion.p>
 
-        {/* CTA buttons removed */}
+        {/* CTA */}
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 1.0 }}
+          className="flex gap-4 justify-center"
+        >
+          <a
+            href="#results"
+            className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold text-base hover:shadow-[0_0_30px_rgba(0,212,255,0.4)] transition-all duration-300 hover:scale-105 min-w-[140px] text-center"
+          >
+            View Results
+          </a>
+          <a
+            href="#opponents"
+            className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold text-base hover:shadow-[0_0_30px_rgba(0,212,255,0.4)] transition-all duration-300 hover:scale-105 min-w-[140px] text-center"
+          >
+            Database
+          </a>
+          <a
+            href="#highlights"
+            className="px-6 py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold text-base hover:shadow-[0_0_30px_rgba(0,212,255,0.4)] transition-all duration-300 hover:scale-105 min-w-[140px] text-center"
+          >
+            Highlights
+          </a>
+        </motion.div>
       </div>
 
     </section>
