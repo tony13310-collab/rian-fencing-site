@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { profile } from "@/data/profile";
 
 export default function Achievements() {
@@ -15,25 +16,44 @@ export default function Achievements() {
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-black mb-3">
           <span className="gradient-text">Highlights</span>
         </h2>
-
       </motion.div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        {profile.achievements.map((achievement, i) => (
-          <motion.div
-            key={i}
-            initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ delay: i * 0.15 }}
-            className="stat-card gradient-border bg-[#12121a] rounded-2xl p-4 sm:p-6 flex items-start gap-3 sm:gap-4"
-          >
-            <div className="text-2xl sm:text-3xl">{achievement.slice(0, 2)}</div>
-            <p className="text-white/80 text-sm sm:text-lg font-medium leading-relaxed">
-              {achievement.slice(2).trim()}
-            </p>
-          </motion.div>
-        ))}
+        {profile.achievements.map((achievement, i) => {
+          const inner = (
+            <>
+              <div className="text-2xl sm:text-3xl">{achievement.emoji}</div>
+              <p className="text-white/80 text-sm sm:text-lg font-medium leading-relaxed">
+                {achievement.text}
+              </p>
+              {achievement.eventId && (
+                <span className="text-white/20 ml-auto text-lg shrink-0">›</span>
+              )}
+            </>
+          );
+
+          const cls = `stat-card gradient-border bg-[#12121a] rounded-2xl p-4 sm:p-6 flex items-center gap-3 sm:gap-4 ${
+            achievement.eventId ? "hover:bg-white/[0.03] transition-colors cursor-pointer" : ""
+          }`;
+
+          return (
+            <motion.div
+              key={i}
+              initial={{ opacity: 0, x: i % 2 === 0 ? -30 : 30 }}
+              whileInView={{ opacity: 1, x: 0 }}
+              viewport={{ once: true }}
+              transition={{ delay: i * 0.15 }}
+            >
+              {achievement.eventId ? (
+                <Link href={`/event/${achievement.eventId}`} className={cls}>
+                  {inner}
+                </Link>
+              ) : (
+                <div className={cls}>{inner}</div>
+              )}
+            </motion.div>
+          );
+        })}
       </div>
 
       {/* Club info */}

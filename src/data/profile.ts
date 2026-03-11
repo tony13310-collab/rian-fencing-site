@@ -24,11 +24,11 @@ export const profile = {
   location: "Bethesda, MD",
   bio: "Rising Men's Saber fencer competing at the Cadet, Junior, and Division I levels on the national circuit. Training at Capital Fencing Academy in the Capitol Division.",
   achievements: [
-    "🥈 SJCC Junior Men's Saber — 2nd Place (Jan 2026)",
-    "🔝 Junior Olympics Junior MS — 11th/297 (Jan 2026)",
-    "🏆 Cobra Challenge Y-14 — Champion (Nov 2025)",
-    "🏆 Capitol Clash Y-14 — Champion (Jan 2025)",
-    "📈 Rating progression: E23 → A26 in 3 seasons",
+    { emoji: "🥈", text: "SJCC Junior Men's Saber — 2nd Place (Jan 2026)", eventId: "2026-01-24_junior-men-s-saber" },
+    { emoji: "🔝", text: "Junior Olympics Junior MS — 11th/297 (Jan 2026)", eventId: "2026-01-12_junior-men-s-saber" },
+    { emoji: "🏆", text: "Cobra Challenge Y-14 — Champion (Nov 2025)", eventId: "2025-11-29_y-14-men-s-saber" },
+    { emoji: "🏆", text: "Capitol Clash Y-14 — Champion (Jan 2025)", eventId: "2025-01-18_y-14-men-s-saber" },
+    { emoji: "📈", text: "Rating progression: E23 → A26 in 3 seasons", eventId: null },
   ],
   social: {
     instagram: "",
