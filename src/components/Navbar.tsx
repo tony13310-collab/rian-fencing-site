@@ -15,7 +15,7 @@ export default function Navbar() {
 
   const links = [
     { label: "Results", href: "#results" },
-    { label: "H2H", href: "#opponents" },
+    { label: "Database", href: "#opponents" },
     { label: "About", href: "#about" },
   ];
 
