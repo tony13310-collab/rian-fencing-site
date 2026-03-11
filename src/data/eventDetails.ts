@@ -84,7 +84,7 @@ export const eventDetails: Record<string, EventDetail> = {
       { round: "T16", opponent: "CIEMINS Henry", club: "", score: "15-11", win: true },
       { round: "Quarterfinal", opponent: "WANG Andrew Chang", club: "", score: "15-11", win: true },
       { round: "Semifinal", opponent: "RADJABLI Maximillian", club: "", score: "15-10", win: true },
-      { round: "Final", opponent: "CLARK Aram", club: "", score: "MED", win: false },
+      { round: "Final", opponent: "CLARK Aram", club: "", score: "Medical Withdraw", win: false },
     ],
   },
 
