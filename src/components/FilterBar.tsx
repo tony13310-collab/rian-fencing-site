@@ -16,7 +16,7 @@ interface FilterBarProps {
 }
 
 const levels: TournamentLevel[] = ["International", "National", "SYC", "RYC", "Local"];
-const categories: AgeCategory[] = ["Y-8", "Y-10", "Y-12", "Y-14", "Cadet", "Junior", "Div I"];
+const categories: AgeCategory[] = ["Div I", "Junior", "Cadet", "Y-14", "Y-12", "Y-10", "Y-8"];
 const placements: PlacementFilter[] = ["Gold", "Medals", "Top 8", "Top 16", "Top 32"];
 
 const placementColors: Record<PlacementFilter, string> = {
@@ -49,6 +49,27 @@ export default function FilterBar({
       className="relative z-30 bg-[#0a0a0f]/95 backdrop-blur-xl border-b border-white/5 py-3 sm:py-4 px-4 sm:px-6"
     >
       <div className="max-w-6xl mx-auto space-y-2">
+        {/* Category filters */}
+        <div className="flex flex-wrap items-center gap-1.5">
+          {categories.map((cat) => {
+            const active = selectedCategories.has(cat);
+            const bgClass = categoryColors[cat] || "bg-gray-600";
+            return (
+              <button
+                key={cat}
+                onClick={() => onToggleCategory(cat)}
+                className={`${btnBase} ${
+                  active
+                    ? `${bgClass} text-white shadow-lg`
+                    : btnInactive
+                }`}
+              >
+                {cat}
+              </button>
+            );
+          })}
+        </div>
+
         {/* Level filters */}
         <div className="flex flex-wrap items-center gap-1.5">
           {levels.map((level) => {
@@ -66,27 +87,6 @@ export default function FilterBar({
                 }`}
               >
                 {label}
-              </button>
-            );
-          })}
-        </div>
-
-        {/* Category filters */}
-        <div className="flex flex-wrap items-center gap-1.5">
-          {categories.map((cat) => {
-            const active = selectedCategories.has(cat);
-            const bgClass = categoryColors[cat] || "bg-gray-600";
-            return (
-              <button
-                key={cat}
-                onClick={() => onToggleCategory(cat)}
-                className={`${btnBase} ${
-                  active
-                    ? `${bgClass} text-white shadow-lg`
-                    : btnInactive
-                }`}
-              >
-                {cat}
               </button>
             );
           })}
