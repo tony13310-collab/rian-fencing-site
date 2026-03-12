@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { TournamentLevel, AgeCategory, levelColors, categoryColors } from "@/data/events";
 
-export type PlacementFilter = "Gold" | "Medals" | "Top 8";
+export type PlacementFilter = "Gold" | "Medals" | "Top 8" | "Top 16" | "Top 32";
 
 interface FilterBarProps {
   selectedLevels: Set<TournamentLevel>;
@@ -17,12 +17,14 @@ interface FilterBarProps {
 
 const levels: TournamentLevel[] = ["International", "National", "SYC", "RYC", "Local"];
 const categories: AgeCategory[] = ["Y-8", "Y-10", "Y-12", "Y-14", "Cadet", "Junior", "Div I"];
-const placements: PlacementFilter[] = ["Gold", "Medals", "Top 8"];
+const placements: PlacementFilter[] = ["Gold", "Medals", "Top 8", "Top 16", "Top 32"];
 
 const placementColors: Record<PlacementFilter, string> = {
   "Gold": "bg-yellow-500",
   "Medals": "bg-orange-500",
   "Top 8": "bg-cyan-600",
+  "Top 16": "bg-indigo-600",
+  "Top 32": "bg-violet-600",
 };
 
 export default function FilterBar({
@@ -101,7 +103,7 @@ export default function FilterBar({
                     : "bg-white/5 text-white/50 hover:text-white/50 border border-white/10"
                 }`}
               >
-                {p === "Gold" ? "🥇 Gold" : p === "Medals" ? "🏅 Medals" : "⭐ Top 8"}
+                {p === "Gold" ? "🥇 Gold" : p === "Medals" ? "🏅 Medals" : p}
               </button>
             );
           })}

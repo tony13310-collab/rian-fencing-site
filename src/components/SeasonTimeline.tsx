@@ -60,6 +60,8 @@ export default function SeasonTimeline({
       if (selectedPlacements.has("Gold") && e.place === 1) placeOk = true;
       if (selectedPlacements.has("Medals") && e.place <= 3) placeOk = true;
       if (selectedPlacements.has("Top 8") && e.place <= 8) placeOk = true;
+      if (selectedPlacements.has("Top 16") && e.place <= 16) placeOk = true;
+      if (selectedPlacements.has("Top 32") && e.place <= 32) placeOk = true;
     }
     return levelOk && catOk && placeOk;
   });
