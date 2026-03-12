@@ -57,8 +57,8 @@ export default function StatsBar() {
     },
     {
       label: "Medals",
-      value: medals.toString(),
-      sub: "Top 3 finishes",
+      value: top8.toString(),
+      sub: "Top 8 finishes",
       color: "from-green-400 to-emerald-500",
     },
   ];
