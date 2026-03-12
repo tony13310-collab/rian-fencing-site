@@ -75,6 +75,58 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
             Enter
           </button>
         </form>
+
+        <div className="mt-6 pt-6 border-t border-white/5">
+          <p className="text-white/30 text-xs mb-3">Don&apos;t have the password?</p>
+          <a
+            href="#contact-gate"
+            onClick={(e) => {
+              e.preventDefault();
+              const el = document.getElementById("contact-gate");
+              if (el) el.classList.toggle("hidden");
+            }}
+            className="inline-block px-5 py-2.5 rounded-xl border border-white/10 text-white/60 text-sm font-medium hover:border-cyan-500/30 hover:text-cyan-400 transition-all"
+          >
+            ✉️ Contact Me
+          </a>
+
+          <form
+            id="contact-gate"
+            action="https://formsubmit.co/tony13310@gmail.com"
+            method="POST"
+            className="hidden mt-4 space-y-3 text-left"
+          >
+            <input type="hidden" name="_subject" value="[rianwei.com] Password Request" />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_next" value="https://rianwei.com" />
+            <input
+              type="text"
+              name="name"
+              placeholder="Your Name"
+              required
+              className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-white text-sm placeholder-white/30 focus:outline-none focus:border-cyan-500/50"
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Your Email"
+              required
+              className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-white text-sm placeholder-white/30 focus:outline-none focus:border-cyan-500/50"
+            />
+            <textarea
+              name="message"
+              placeholder="Message (optional)"
+              rows={2}
+              className="w-full bg-white/5 border border-white/10 rounded-lg px-3 py-2 text-white text-sm placeholder-white/30 focus:outline-none focus:border-cyan-500/50 resize-none"
+            />
+            <button
+              type="submit"
+              className="w-full px-4 py-2 rounded-lg bg-white/10 text-white/80 text-sm font-medium hover:bg-white/15 transition-colors"
+            >
+              Send Request
+            </button>
+          </form>
+        </div>
       </div>
     </div>
   );
