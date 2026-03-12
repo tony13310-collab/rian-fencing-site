@@ -3,43 +3,85 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { opponents, getOpponentSlug, OpponentData } from "@/data/opponents";
+import { peerBirthYears } from "@/data/peerBirthYears";
+
+const RIAN_BIRTH_YEAR = 2011;
+const PEER_YEARS = [2010, 2011, 2012];
+
+// Weight: same year = 3, younger (2012) = 2, older (2010) = 1
+function peerWeight(birthYear: number): number {
+  if (birthYear === RIAN_BIRTH_YEAR) return 3;
+  if (birthYear === RIAN_BIRTH_YEAR + 1) return 2; // younger
+  if (birthYear === RIAN_BIRTH_YEAR - 1) return 1; // older
+  return 0;
+}
+
+function yearLabel(year: number): string {
+  if (year === RIAN_BIRTH_YEAR) return `'${String(year).slice(2)}`;
+  if (year > RIAN_BIRTH_YEAR) return `'${String(year).slice(2)}`;
+  return `'${String(year).slice(2)}`;
+}
+
+interface PeerEntry {
+  name: string;
+  birthYear: number;
+  data: OpponentData;
+  weight: number;
+  score: number; // weight × bouts for sorting
+}
 
 export default function OpponentsPreview() {
   // Only use last 365 days
   const cutoff = new Date();
   cutoff.setDate(cutoff.getDate() - 365);
 
-  // Filter opponents to recent bouts only and recompute stats
-  const recentOpponents: [string, OpponentData][] = [];
+  // Build peer list: filter to 2010-2012 birth years + recent bouts
+  const peers: PeerEntry[] = [];
   for (const [name, data] of Object.entries(opponents)) {
+    const birthYear = peerBirthYears[name];
+    if (!birthYear || !PEER_YEARS.includes(birthYear)) continue;
+
     const recentBouts = data.bouts.filter(b => new Date(b.date) >= cutoff);
     if (recentBouts.length === 0) continue;
+
     const wins = recentBouts.filter(b => b.win).length;
     const losses = recentBouts.length - wins;
-    recentOpponents.push([name, {
-      ...data,
-      wins,
-      losses,
-      total: recentBouts.length,
-      winRate: Math.round((wins / recentBouts.length) * 100),
-      bouts: recentBouts,
-    }]);
+    const weight = peerWeight(birthYear);
+
+    peers.push({
+      name,
+      birthYear,
+      data: {
+        ...data,
+        wins,
+        losses,
+        total: recentBouts.length,
+        winRate: Math.round((wins / recentBouts.length) * 100),
+        bouts: recentBouts,
+      },
+      weight,
+      score: weight * recentBouts.length,
+    });
   }
 
-  const totalOpponents = recentOpponents.length;
-  const totalBouts = recentOpponents.reduce((s, [, d]) => s + d.total, 0);
-  const totalWins = recentOpponents.reduce((s, [, d]) => s + d.wins, 0);
+  // Sort by weighted score (same age + more bouts = higher)
+  peers.sort((a, b) => b.score - a.score || b.data.total - a.data.total);
 
-  // Top rivals (most bouts in recent seasons)
-  const rivals = recentOpponents
-    .sort((a, b) => b[1].total - a[1].total)
+  // Split into most faced and tough matchups
+  const topPeers = peers.slice(0, 10);
+  const toughPeers = peers
+    .filter(p => p.data.total >= 2 && p.data.winRate <= 30)
     .slice(0, 10);
 
-  // Tough matchups (lost most to, at least 2 recent bouts)
-  const nemesis = recentOpponents
-    .filter(([, d]) => d.total >= 2 && d.winRate <= 30)
-    .sort((a, b) => b[1].total - a[1].total)
-    .slice(0, 10);
+  const totalPeers = peers.length;
+  const totalBouts = peers.reduce((s, p) => s + p.data.total, 0);
+  const totalWins = peers.reduce((s, p) => s + p.data.wins, 0);
+
+  const yearColor: Record<number, string> = {
+    2010: "text-orange-400/60",
+    2011: "text-cyan-400/60",
+    2012: "text-purple-400/60",
+  };
 
   return (
     <section id="opponents" className="py-12 px-3 sm:px-4">
@@ -51,26 +93,26 @@ export default function OpponentsPreview() {
           className="mb-8"
         >
           <h2 className="text-xl sm:text-2xl font-black text-white/80 mb-1">
-            ⚔️ H2H Database
+            ⚔️ Peer Competitors
           </h2>
           <p className="text-white/50 text-xs sm:text-sm">
-            {totalOpponents} opponents · {totalBouts} bouts · {totalBouts > 0 ? Math.round((totalWins / totalBouts) * 100) : 0}% win rate
-            <span className="text-white/30"> · Last 12 months</span>
+            {totalPeers} peers · {totalBouts} bouts · {totalBouts > 0 ? Math.round((totalWins / totalBouts) * 100) : 0}% win rate
+            <span className="text-white/30"> · Last 12 months · Born 2010–2012</span>
           </p>
         </motion.div>
 
-        {/* Top Rivals */}
+        {/* Most Faced Peers */}
         <div className="mb-6">
           <h3 className="text-xs font-bold text-white/50 uppercase tracking-widest mb-3">
-            🔥 Most Faced Opponents
+            🔥 Most Faced Peers
           </h3>
           <div className="space-y-1.5">
-            {rivals.map(([name, data], i) => {
-              const slug = getOpponentSlug(name);
-              const winPct = data.winRate;
+            {topPeers.map((peer, i) => {
+              const slug = getOpponentSlug(peer.name);
+              const winPct = peer.data.winRate;
               return (
                 <motion.div
-                  key={name}
+                  key={peer.name}
                   initial={{ opacity: 0, x: -20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
@@ -85,14 +127,17 @@ export default function OpponentsPreview() {
                         {i + 1}
                       </span>
                       <span className="text-white/70 font-medium text-xs sm:text-sm truncate">
-                        {name}
+                        {peer.name}
+                      </span>
+                      <span className={`text-[10px] font-bold ${yearColor[peer.birthYear] || "text-white/30"} shrink-0`}>
+                        {yearLabel(peer.birthYear)}
                       </span>
                     </div>
                     <div className="flex items-center gap-2 shrink-0">
                       <span className="text-white/40 text-xs whitespace-nowrap">
-                        <span className="text-green-400">{data.wins}W</span>
+                        <span className="text-green-400">{peer.data.wins}W</span>
                         <span className="text-white/45">-</span>
-                        <span className="text-red-400">{data.losses}L</span>
+                        <span className="text-red-400">{peer.data.losses}L</span>
                       </span>
                       <span
                         className={`text-xs font-bold px-1.5 py-0.5 rounded ${
@@ -113,32 +158,37 @@ export default function OpponentsPreview() {
           </div>
         </div>
 
-        {/* Nemesis warning */}
-        {nemesis.length > 0 && (
+        {/* Tough Matchups */}
+        {toughPeers.length > 0 && (
           <div className="mb-6">
             <h3 className="text-xs font-bold text-red-400/50 uppercase tracking-widest mb-3">
               ⚠️ Tough Matchups
             </h3>
             <div className="space-y-1.5">
-              {nemesis.map(([name, data]) => {
-                const slug = getOpponentSlug(name);
+              {toughPeers.map((peer) => {
+                const slug = getOpponentSlug(peer.name);
                 return (
                   <Link
-                    key={name}
+                    key={peer.name}
                     href={`/opponents/${slug}`}
                     className="flex items-center justify-between px-3 sm:px-4 py-2.5 rounded-xl bg-red-500/[0.03] hover:bg-red-500/[0.06] transition-colors border border-red-500/10 gap-2"
                   >
-                    <span className="text-white/70 font-medium text-xs sm:text-sm truncate min-w-0 flex-1">
-                      {name}
-                    </span>
+                    <div className="flex items-center gap-2 min-w-0 flex-1">
+                      <span className="text-white/70 font-medium text-xs sm:text-sm truncate">
+                        {peer.name}
+                      </span>
+                      <span className={`text-[10px] font-bold ${yearColor[peer.birthYear] || "text-white/30"} shrink-0`}>
+                        {yearLabel(peer.birthYear)}
+                      </span>
+                    </div>
                     <div className="flex items-center gap-2 shrink-0">
                       <span className="text-white/50 text-xs whitespace-nowrap">
-                        <span className="text-green-400">{data.wins}W</span>
+                        <span className="text-green-400">{peer.data.wins}W</span>
                         <span className="text-white/45">-</span>
-                        <span className="text-red-400">{data.losses}L</span>
+                        <span className="text-red-400">{peer.data.losses}L</span>
                       </span>
                       <span className="text-xs font-bold px-1.5 py-0.5 rounded bg-red-500/15 text-red-400">
-                        {data.winRate}%
+                        {peer.data.winRate}%
                       </span>
                     </div>
                   </Link>
@@ -153,7 +203,7 @@ export default function OpponentsPreview() {
           href="/opponents"
           className="block text-center py-3 px-6 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 font-bold text-sm hover:bg-cyan-500/20 transition-colors"
         >
-          View All {totalOpponents} Opponents →
+          View All Opponents →
         </Link>
       </div>
     </section>
