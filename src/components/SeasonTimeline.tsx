@@ -169,19 +169,18 @@ export default function SeasonTimeline({
                       <h3 className="text-2xl md:text-3xl font-black gradient-text">
                         {getSeasonLabel(season)}
                       </h3>
+                      {/* Rating */}
+                      {meta?.rating && (
+                        <span className="text-amber-400 text-sm font-bold">
+                          {meta.rating}
+                        </span>
+                      )}
                       <span className="text-white/50 text-sm font-medium">
                         {getSeasonAge(season)}
                       </span>
                       <span className="text-white/45 text-sm">
                         {seasonEvents.length} events
                       </span>
-
-                      {/* Rating badge */}
-                      {meta?.rating && (
-                        <span className="px-3 py-1.5 rounded-xl bg-gradient-to-r from-amber-500/20 to-orange-600/20 border border-amber-500/30 text-amber-400 text-sm font-black tracking-wider">
-                          ⚔️ {meta.rating}
-                        </span>
-                      )}
 
                       {/* Ranking badges */}
                       {meta?.rankings &&
