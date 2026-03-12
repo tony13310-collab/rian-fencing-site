@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect, useRef } from "react";
+import SaberFencer from "./SaberFencer";
 
 
 const PASS_HASH = "1cd683f8ec18781985cd2f9347ba8e1b6058ba3d7a15054c8d83bb8375b0559e"; // sha256 of password
@@ -101,8 +102,8 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
       </button>
 
       <div className="relative z-10 max-w-sm w-full text-center">
-        {/* Fencing emoji */}
-        <div className="text-7xl mb-6">🤺</div>
+        {/* Animated saber fencer */}
+        <SaberFencer />
 
         <div className="mb-8">
           <h1
