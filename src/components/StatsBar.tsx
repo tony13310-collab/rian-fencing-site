@@ -47,19 +47,19 @@ export default function StatsBar() {
       label: "Pool Bouts",
       value: poolBouts.toString(),
       sub: "All time",
-      color: "from-yellow-400 to-amber-500",
+      color: "from-sky-400 to-blue-500",
     },
     {
       label: "DE Bouts",
       value: deBouts.toString(),
       sub: "All time",
-      color: "from-amber-400 to-orange-500",
+      color: "from-teal-400 to-cyan-500",
     },
     {
       label: "Medals",
       value: top8.toString(),
       sub: "Top 8 finishes",
-      color: "from-green-400 to-emerald-500",
+      color: "from-yellow-300 to-amber-500",
     },
   ];
 
