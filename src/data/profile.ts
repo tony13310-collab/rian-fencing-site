@@ -22,7 +22,7 @@ export const profile = {
     { date: "2026-01", rating: "A26" },
   ],
   location: "Bethesda, MD",
-  bio: "Rising Men's Saber fencer competing at the Cadet, Junior, and Division I levels on the national circuit. Training at Capital Fencing Academy in the Capitol Division.",
+  bio: "Rising Men's Saber fencer competing at the Cadet, Junior, and Division I levels. Training at Capital Fencing Academy in the Capitol Division.",
   achievements: [
     { emoji: "🥈", text: "SJCC Junior Men's Saber — 2nd/117, Portland, OR (Jan 2026)", eventId: "2026-01-24_junior-men-s-saber" },
     { emoji: "🔝", text: "Junior Olympics Junior MS — 11th/297, Columbus, OH (Jan 2026)", eventId: "2026-01-12_junior-men-s-saber" },
