@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { opponents, getOpponentSlug, OpponentData } from "@/data/opponents";
-import { peerBirthYears } from "@/data/peerBirthYears";
 
 const RIAN_BIRTH_YEAR = 2011;
 const PEER_YEARS = [2010, 2011, 2012];
@@ -38,7 +37,7 @@ export default function OpponentsPreview() {
   // Build peer list: filter to 2010-2012 birth years + recent bouts
   const peers: PeerEntry[] = [];
   for (const [name, data] of Object.entries(opponents)) {
-    const birthYear = peerBirthYears[name];
+    const birthYear = data.birthYear;
     if (!birthYear || !PEER_YEARS.includes(birthYear)) continue;
 
     const recentBouts = data.bouts.filter(b => new Date(b.date) >= cutoff);

@@ -1,5 +1,6 @@
 // Auto-generated H2H opponent database - 405 opponents, 944 bouts
 // Generated from FencingTracker history + FTL pool bouts
+// birthYear: inferred from age categories (Y-14 in year Y → born ≥ Y-13)
 
 export interface OpponentBout {
   tournament: string;
@@ -16,6 +17,7 @@ export interface OpponentData {
   total: number;
   winRate: number;
   clubs: string[];
+  birthYear: number | null;
   bouts: OpponentBout[];
 }
 
@@ -44,7 +46,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "2-5"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "ALAVE Kyle": {
     "wins": 1,
@@ -81,7 +84,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "1-5"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "ALUF Brendon": {
     "wins": 2,
@@ -109,7 +113,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "ANDRES Michael": {
     "wins": 1,
@@ -128,7 +133,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-14"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "ANTHONY Devyn V.": {
     "wins": 2,
@@ -173,7 +179,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "1-5"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "ARCHIBALD Zachary": {
     "wins": 1,
@@ -192,7 +199,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-7"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "ATANASSOV Vasil V.": {
     "wins": 0,
@@ -220,7 +228,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "9-15"
       }
-    ]
+    ],
+    "birthYear": 2007
   },
   "AVERY Marcus": {
     "wins": 4,
@@ -265,7 +274,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "AYDOGDU Hakan": {
     "wins": 2,
@@ -293,7 +303,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "BADMUS Joshua": {
     "wins": 4,
@@ -338,7 +349,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-8"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "BAHK Caleb": {
     "wins": 0,
@@ -366,7 +378,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "1-5"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "BAI Evan": {
     "wins": 3,
@@ -445,7 +458,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-4"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "BALAGOPAL Aditya": {
     "wins": 1,
@@ -464,7 +478,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "BALE ATMAN": {
     "wins": 1,
@@ -483,7 +498,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-8"
       }
-    ]
+    ],
+    "birthYear": 2008
   },
   "BARENBOYM Michael": {
     "wins": 0,
@@ -511,7 +527,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-5"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "BARRY Dave": {
     "wins": 4,
@@ -556,7 +573,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "BEKDJANOV Arthur": {
     "wins": 1,
@@ -575,7 +593,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-11"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "BELL III Alfred (Tripp) R.": {
     "wins": 0,
@@ -594,7 +613,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "6-15"
       }
-    ]
+    ],
+    "birthYear": 2010
   },
   "BENE Paul": {
     "wins": 2,
@@ -638,7 +658,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "2-5"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "BENNETT Lachlan": {
     "wins": 4,
@@ -683,7 +704,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "BHANDARE Niev": {
     "wins": 2,
@@ -711,7 +733,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "BITKOWER Edward": {
     "wins": 2,
@@ -739,7 +762,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "BIVIJI Adam": {
     "wins": 7,
@@ -828,7 +852,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "BIVIJI Ali": {
     "wins": 3,
@@ -865,7 +890,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "BLAIR Campbell": {
     "wins": 2,
@@ -892,7 +918,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "BOLLU Viren": {
     "wins": 1,
@@ -911,7 +938,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-9"
       }
-    ]
+    ],
+    "birthYear": 2010
   },
   "BONGIORNO Wesley": {
     "wins": 3,
@@ -947,7 +975,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-8"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "BOSITA Brennan": {
     "wins": 4,
@@ -1011,7 +1040,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "10-3"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "BRAMLETT Myer": {
     "wins": 2,
@@ -1038,7 +1068,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "BREUER Daniel": {
     "wins": 1,
@@ -1057,7 +1088,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-8"
       }
-    ]
+    ],
+    "birthYear": 2010
   },
   "BRIMMER Robert (Trey)": {
     "wins": 2,
@@ -1085,7 +1117,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "BROOKS Isaac": {
     "wins": 2,
@@ -1112,7 +1145,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "BROOKS Theo": {
     "wins": 3,
@@ -1148,7 +1182,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "BROWN Andrew": {
     "wins": 1,
@@ -1167,7 +1202,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-13"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "BRUM Charles E.": {
     "wins": 1,
@@ -1186,7 +1222,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2007
   },
   "BUCKLEY Owen": {
     "wins": 2,
@@ -1214,7 +1251,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "BURENKOV Matthew": {
     "wins": 2,
@@ -1242,7 +1280,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "BUSQUETS Diego": {
     "wins": 2,
@@ -1269,7 +1308,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "BUYUCCAN Jonah": {
     "wins": 3,
@@ -1304,7 +1344,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "CAI fungyu": {
     "wins": 3,
@@ -1340,7 +1381,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "CAO Donald": {
     "wins": 0,
@@ -1367,7 +1409,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "3-5"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "CAO Oliver": {
     "wins": 0,
@@ -1386,7 +1429,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-5"
       }
-    ]
+    ],
+    "birthYear": 2007
   },
   "CARRINGTON IV William T.": {
     "wins": 0,
@@ -1423,7 +1467,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "0-5"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "CHAMBERS Miles": {
     "wins": 0,
@@ -1442,7 +1487,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "5-10"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "CHAN Elliott": {
     "wins": 3,
@@ -1479,7 +1525,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "CHAN Ewan": {
     "wins": 1,
@@ -1516,7 +1563,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "1-5"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "CHANG Ethan": {
     "wins": 4,
@@ -1560,7 +1608,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "CHANG Timothy": {
     "wins": 4,
@@ -1605,7 +1654,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "CHATTABOINA Haveesh": {
     "wins": 2,
@@ -1633,7 +1683,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "CHAVES Matthew J.": {
     "wins": 1,
@@ -1652,7 +1703,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-4"
       }
-    ]
+    ],
+    "birthYear": null
   },
   "CHAWLA Abhishek": {
     "wins": 5,
@@ -1706,7 +1758,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "CHEN Anson": {
     "wins": 1,
@@ -1725,7 +1778,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-1"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "CHEN Jack": {
     "wins": 1,
@@ -1744,7 +1798,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-12"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "CHEN Jonathan": {
     "wins": 0,
@@ -1772,7 +1827,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "9-15"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "CHEN Shawn": {
     "wins": 2,
@@ -1800,7 +1856,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "CHEN Xing Ji": {
     "wins": 2,
@@ -1828,7 +1885,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "CHEONG Heonjun": {
     "wins": 0,
@@ -1847,7 +1905,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-5"
       }
-    ]
+    ],
+    "birthYear": null
   },
   "CHERNAEV Antonio": {
     "wins": 2,
@@ -1892,7 +1951,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-5"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "CHI Everett": {
     "wins": 3,
@@ -1928,7 +1988,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "CHOI Clayton": {
     "wins": 2,
@@ -1956,7 +2017,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "CHON Collin": {
     "wins": 3,
@@ -2011,7 +2073,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-15"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "CHTERENTAL Alex": {
     "wins": 0,
@@ -2039,7 +2102,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "1-5"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "CIECIEREGA MATTHEW": {
     "wins": 1,
@@ -2058,7 +2122,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "10-7"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "CIEMINS Henry": {
     "wins": 1,
@@ -2077,7 +2142,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-11"
       }
-    ]
+    ],
+    "birthYear": 2007
   },
   "CLARK Aram": {
     "wins": 1,
@@ -2113,7 +2179,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "3-5"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "COBIAN Richard": {
     "wins": 1,
@@ -2132,7 +2199,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-13"
       }
-    ]
+    ],
+    "birthYear": 2006
   },
   "COGLIANO Max": {
     "wins": 1,
@@ -2151,7 +2219,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-8"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "CRAIN Bennett": {
     "wins": 2,
@@ -2195,7 +2264,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-5"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "CRAWFORD William": {
     "wins": 2,
@@ -2223,7 +2293,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "CRICOL Damian": {
     "wins": 0,
@@ -2242,7 +2313,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "9-15"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "D'AMELJ Edoardo": {
     "wins": 2,
@@ -2286,7 +2358,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-5"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "DAI Zihou": {
     "wins": 2,
@@ -2367,7 +2440,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "10-4"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "DATTILIO Aidan": {
     "wins": 2,
@@ -2395,7 +2469,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "DE PLANELL-LOTTI Pau": {
     "wins": 3,
@@ -2432,7 +2507,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "DE SIENA Salvatore": {
     "wins": 0,
@@ -2460,7 +2536,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-5"
       }
-    ]
+    ],
+    "birthYear": 2008
   },
   "DEL VECCHIO Nicolas": {
     "wins": 0,
@@ -2487,7 +2564,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "1-5"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "DOLEV Ido": {
     "wins": 1,
@@ -2506,7 +2584,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2007
   },
   "DONNELL Cillian": {
     "wins": 3,
@@ -2541,7 +2620,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "DUMOULIN Gabriel": {
     "wins": 2,
@@ -2569,7 +2649,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-4"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "EARLEY Jack": {
     "wins": 2,
@@ -2597,7 +2678,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "EYBELMAN Ariel": {
     "wins": 0,
@@ -2624,7 +2706,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-5"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "EYSTER Edison": {
     "wins": 1,
@@ -2643,7 +2726,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-9"
       }
-    ]
+    ],
+    "birthYear": 2008
   },
   "FANG Eason": {
     "wins": 2,
@@ -2688,7 +2772,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-4"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "FARBER Jake": {
     "wins": 2,
@@ -2716,7 +2801,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "FEI Danny": {
     "wins": 2,
@@ -2769,7 +2855,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "2-5"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "FENG Brendan": {
     "wins": 6,
@@ -2841,7 +2928,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-4"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "FERRARO Pietro": {
     "wins": 2,
@@ -2868,7 +2956,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "FERRIS JR. Michael": {
     "wins": 4,
@@ -2913,7 +3002,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "FIROOZI Alex": {
     "wins": 2,
@@ -2940,7 +3030,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "FIROOZI Sam": {
     "wins": 2,
@@ -2968,7 +3059,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "FIRSTMAN William B.": {
     "wins": 0,
@@ -2996,7 +3088,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "3-5"
       }
-    ]
+    ],
+    "birthYear": 2008
   },
   "FORD Aaron": {
     "wins": 2,
@@ -3023,7 +3116,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "FOUX Jonathan": {
     "wins": 2,
@@ -3051,7 +3145,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "FOWLER Escher": {
     "wins": 2,
@@ -3079,7 +3174,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "FU BRANDEN": {
     "wins": 2,
@@ -3107,7 +3203,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "GAO Francis": {
     "wins": 1,
@@ -3126,7 +3223,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-5"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "GARCIA RODRIGUEZ Juan Pablo": {
     "wins": 4,
@@ -3170,7 +3268,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "GATTO Enzo P.": {
     "wins": 2,
@@ -3198,7 +3297,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "GERSTMANN Max T.": {
     "wins": 0,
@@ -3217,7 +3317,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-5"
       }
-    ]
+    ],
+    "birthYear": 2007
   },
   "GHAYALOD ansh": {
     "wins": 1,
@@ -3236,7 +3337,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-4"
       }
-    ]
+    ],
+    "birthYear": null
   },
   "GHISLAIN-FERNANDEZ Alexandre": {
     "wins": 1,
@@ -3255,7 +3357,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2007
   },
   "GILSHTEYN Jacob": {
     "wins": 0,
@@ -3283,7 +3386,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "2-5"
       }
-    ]
+    ],
+    "birthYear": 2008
   },
   "GOLART Dylan": {
     "wins": 2,
@@ -3310,7 +3414,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "GONG zihao": {
     "wins": 0,
@@ -3329,7 +3434,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "6-15"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "GONZALEZ Jake": {
     "wins": 1,
@@ -3348,7 +3454,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-14"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "GONZALEZ Leo": {
     "wins": 2,
@@ -3375,7 +3482,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "GORDON Ezekiel": {
     "wins": 1,
@@ -3411,7 +3519,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "10-3"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "GORDON Samuel": {
     "wins": 3,
@@ -3447,7 +3556,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "GRABOWSKI Alexander": {
     "wins": 1,
@@ -3483,7 +3593,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "1-5"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "GRABOWSKI Stanley": {
     "wins": 3,
@@ -3519,7 +3630,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "GREENSTEIN Viktor": {
     "wins": 1,
@@ -3538,7 +3650,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "GREMILLION Obadiah": {
     "wins": 1,
@@ -3566,7 +3679,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "7-15"
       }
-    ]
+    ],
+    "birthYear": 2006
   },
   "GRIGORIEV Roman": {
     "wins": 2,
@@ -3594,7 +3708,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "GU Andrew": {
     "wins": 2,
@@ -3622,7 +3737,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-4"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "GU Kevin": {
     "wins": 2,
@@ -3650,7 +3766,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "GUFFEY Christopher": {
     "wins": 0,
@@ -3678,7 +3795,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "0-5"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "GUREVICH Benjamin": {
     "wins": 0,
@@ -3733,7 +3851,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "0-5"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "HALL Noah": {
     "wins": 0,
@@ -3752,7 +3871,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "10-15"
       }
-    ]
+    ],
+    "birthYear": 2010
   },
   "HARDRICK Noah": {
     "wins": 2,
@@ -3805,7 +3925,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "HAUSLER Jayden": {
     "wins": 2,
@@ -3833,7 +3954,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "HE Jason": {
     "wins": 2,
@@ -3860,7 +3982,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "HEATH Isabella": {
     "wins": 2,
@@ -3887,7 +4010,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-4"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "HENDERSON Louis": {
     "wins": 2,
@@ -3914,7 +4038,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "HENDERSON Lucas": {
     "wins": 0,
@@ -3941,7 +4066,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "3-5"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "HENRY Cadel": {
     "wins": 5,
@@ -4004,7 +4130,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-4"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "HENRY Ethan": {
     "wins": 2,
@@ -4032,7 +4159,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "HJERPE Wade H.": {
     "wins": 3,
@@ -4068,7 +4196,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "HO Alden": {
     "wins": 2,
@@ -4096,7 +4225,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "HOLZ Lucas": {
     "wins": 2,
@@ -4124,7 +4254,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "HONG Rubin": {
     "wins": 0,
@@ -4143,7 +4274,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "2-5"
       }
-    ]
+    ],
+    "birthYear": null
   },
   "HOWERTON Beckett": {
     "wins": 2,
@@ -4170,7 +4302,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "HU Chris": {
     "wins": 0,
@@ -4198,7 +4331,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-5"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "HU Harry": {
     "wins": 2,
@@ -4260,7 +4394,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-4"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "HU Jayden": {
     "wins": 2,
@@ -4288,7 +4423,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "HUANG Alex F.": {
     "wins": 0,
@@ -4315,7 +4451,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "1-5"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "HUCHWAJDA Alex": {
     "wins": 3,
@@ -4377,7 +4514,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-5"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "HWANG Jayden": {
     "wins": 0,
@@ -4405,7 +4543,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "3-5"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "ISAYENKO Daniel": {
     "wins": 1,
@@ -4442,7 +4581,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-12"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "IYER Neil": {
     "wins": 5,
@@ -4496,7 +4636,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "JAVIER Xavier": {
     "wins": 2,
@@ -4524,7 +4665,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "JEFFORDS Alexander": {
     "wins": 0,
@@ -4543,7 +4685,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "3-5"
       }
-    ]
+    ],
+    "birthYear": null
   },
   "JI Johnson": {
     "wins": 1,
@@ -4580,7 +4723,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "2-5"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "JIA Charles": {
     "wins": 2,
@@ -4607,7 +4751,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "JIANG Terence": {
     "wins": 2,
@@ -4635,7 +4780,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-4"
       }
-    ]
+    ],
+    "birthYear": 2008
   },
   "JIN Adam": {
     "wins": 2,
@@ -4662,7 +4808,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "JIN Liangxuan": {
     "wins": 0,
@@ -4681,7 +4828,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "5-15"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "JIN Louis": {
     "wins": 1,
@@ -4700,7 +4848,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-10"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "JOHNSON Leland": {
     "wins": 2,
@@ -4770,7 +4919,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "0-5"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "JOHNSON Leyton": {
     "wins": 2,
@@ -4797,7 +4947,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "JOHNSON Waldron": {
     "wins": 2,
@@ -4824,7 +4975,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "KAMAL Aidan": {
     "wins": 1,
@@ -4852,7 +5004,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "0-5"
       }
-    ]
+    ],
+    "birthYear": 2007
   },
   "KAMURA Kosei": {
     "wins": 3,
@@ -4888,7 +5041,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "KANE Kiran": {
     "wins": 2,
@@ -4915,7 +5069,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "KANG Evan R.": {
     "wins": 0,
@@ -4934,7 +5089,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "3-5"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "KANG Jeremy": {
     "wins": 0,
@@ -4962,7 +5118,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "6-15"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "KANG Matthew": {
     "wins": 1,
@@ -4981,7 +5138,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-9"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "KANIA Alexander": {
     "wins": 2,
@@ -5009,7 +5167,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "KARAVAS Nicholas": {
     "wins": 6,
@@ -5072,7 +5231,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "10-3"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "KEMP Austin": {
     "wins": 0,
@@ -5091,7 +5251,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-5"
       }
-    ]
+    ],
+    "birthYear": 2010
   },
   "KHANNA Adamantis": {
     "wins": 2,
@@ -5127,7 +5288,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "14-15"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "KHOTLINE Daniel": {
     "wins": 0,
@@ -5146,7 +5308,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-5"
       }
-    ]
+    ],
+    "birthYear": 2007
   },
   "KIM ELIJAH": {
     "wins": 0,
@@ -5165,7 +5328,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "9-15"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "KIM Eric": {
     "wins": 2,
@@ -5193,7 +5357,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "KIM Ethan": {
     "wins": 0,
@@ -5247,7 +5412,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "0-5"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "KIM Yusung": {
     "wins": 2,
@@ -5275,7 +5441,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-4"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "KIM seoha": {
     "wins": 0,
@@ -5294,7 +5461,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "14-15"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "KITSON Chase": {
     "wins": 3,
@@ -5331,7 +5499,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-9"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "KONDOGI Saivarun": {
     "wins": 1,
@@ -5350,7 +5519,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-9"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "KONG Ethan": {
     "wins": 1,
@@ -5369,7 +5539,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "KOTVALI Aneesh": {
     "wins": 1,
@@ -5388,7 +5559,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-12"
       }
-    ]
+    ],
+    "birthYear": 2005
   },
   "KOVACHEV Martin": {
     "wins": 1,
@@ -5416,7 +5588,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-7"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "KOVALEV Daniil N.": {
     "wins": 0,
@@ -5444,7 +5617,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "1-5"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "KOZLOV Lucas": {
     "wins": 1,
@@ -5481,7 +5655,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "0-5"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "KRISHNARASA Aiyann": {
     "wins": 1,
@@ -5500,7 +5675,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "KROON Landon": {
     "wins": 2,
@@ -5528,7 +5704,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "KU Collin": {
     "wins": 1,
@@ -5547,7 +5724,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-10"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "KULKARNI Shreyas": {
     "wins": 1,
@@ -5566,7 +5744,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2007
   },
   "KUMAR Arjun": {
     "wins": 1,
@@ -5585,7 +5764,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-14"
       }
-    ]
+    ],
+    "birthYear": 2008
   },
   "KUMAR Avinash": {
     "wins": 3,
@@ -5622,7 +5802,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-5"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "KUSHKOV Michael": {
     "wins": 2,
@@ -5649,7 +5830,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "KWON Kenneth": {
     "wins": 1,
@@ -5668,7 +5850,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-10"
       }
-    ]
+    ],
+    "birthYear": 2010
   },
   "LAM Austin": {
     "wins": 2,
@@ -5696,7 +5879,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "LAMTAN Christoffer": {
     "wins": 0,
@@ -5715,7 +5899,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-5"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "LAUB William": {
     "wins": 2,
@@ -5743,7 +5928,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2007
   },
   "LEE Aiden": {
     "wins": 1,
@@ -5762,7 +5948,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-1"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "LEE Andrew": {
     "wins": 0,
@@ -5790,7 +5977,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "2-5"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "LEE Brady": {
     "wins": 1,
@@ -5809,7 +5997,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2007
   },
   "LEE Brendan": {
     "wins": 1,
@@ -5828,7 +6017,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-11"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "LEE Ezra": {
     "wins": 6,
@@ -5890,7 +6080,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "LEE Gordon": {
     "wins": 7,
@@ -5960,7 +6151,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-4"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "LEE Jeffrey": {
     "wins": 1,
@@ -5979,7 +6171,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "LEE Nathan Uju": {
     "wins": 1,
@@ -6007,7 +6200,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "11-15"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "LEE Shane Gunn": {
     "wins": 1,
@@ -6026,7 +6220,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-2"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "LEVIN Jacob": {
     "wins": 3,
@@ -6063,7 +6258,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "LEVY Daniel": {
     "wins": 1,
@@ -6082,7 +6278,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-5"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "LI AYDEN": {
     "wins": 1,
@@ -6110,7 +6307,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "8-15"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "LI Alex Y.": {
     "wins": 1,
@@ -6129,7 +6327,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2007
   },
   "LI Coby": {
     "wins": 1,
@@ -6148,7 +6347,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-4"
       }
-    ]
+    ],
+    "birthYear": 2006
   },
   "LI Howard": {
     "wins": 1,
@@ -6202,7 +6402,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-10"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "LI Michael": {
     "wins": 4,
@@ -6247,7 +6448,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "LI Ryan": {
     "wins": 4,
@@ -6292,7 +6494,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-4"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "LI Yidong A.": {
     "wins": 2,
@@ -6320,7 +6523,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "LIANG Preston": {
     "wins": 3,
@@ -6357,7 +6561,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "LIAO Sirui": {
     "wins": 2,
@@ -6385,7 +6590,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "LIEBOWITZ Carson": {
     "wins": 0,
@@ -6413,7 +6619,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "0-5"
       }
-    ]
+    ],
+    "birthYear": 2008
   },
   "LIM JUWANA Maximilian": {
     "wins": 0,
@@ -6441,7 +6648,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "3-5"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "LIM Kai": {
     "wins": 1,
@@ -6460,7 +6668,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-8"
       }
-    ]
+    ],
+    "birthYear": 2008
   },
   "LIM William J.": {
     "wins": 0,
@@ -6479,7 +6688,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "0-5"
       }
-    ]
+    ],
+    "birthYear": null
   },
   "LIN Alex": {
     "wins": 2,
@@ -6506,7 +6716,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "LIN Brendan": {
     "wins": 3,
@@ -6543,7 +6754,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "LIN Maxim": {
     "wins": 0,
@@ -6562,7 +6774,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "9-15"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "LIN Philip T.": {
     "wins": 2,
@@ -6607,7 +6820,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "2-5"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "LIU Aaron": {
     "wins": 4,
@@ -6652,7 +6866,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-4"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "LIU Daniel": {
     "wins": 1,
@@ -6671,7 +6886,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "LIU ERIC": {
     "wins": 0,
@@ -6698,7 +6914,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "3-5"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "LIU Ethan": {
     "wins": 3,
@@ -6744,7 +6961,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "LIU Jeremy": {
     "wins": 1,
@@ -6763,7 +6981,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "LIU Kevin": {
     "wins": 1,
@@ -6782,7 +7001,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-12"
       }
-    ]
+    ],
+    "birthYear": 2007
   },
   "LIU Ryan": {
     "wins": 0,
@@ -6819,7 +7039,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "2-5"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "LIU Victor": {
     "wins": 0,
@@ -6847,7 +7068,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "0-5"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "LIU Yijin": {
     "wins": 1,
@@ -6866,7 +7088,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-9"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "LIUZHANG Ben": {
     "wins": 2,
@@ -6893,7 +7116,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "LLOYD Max": {
     "wins": 1,
@@ -6912,7 +7136,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-12"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "LO Lei": {
     "wins": 2,
@@ -6940,7 +7165,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "LOO Jason": {
     "wins": 2,
@@ -6967,7 +7193,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-4"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "LU Simon": {
     "wins": 2,
@@ -6995,7 +7222,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "LUC Linkin": {
     "wins": 5,
@@ -7048,7 +7276,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "LVOFF Leo": {
     "wins": 0,
@@ -7076,7 +7305,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-5"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "MAGITSKY Isaac": {
     "wins": 2,
@@ -7104,7 +7334,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-4"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "MAI Ryan": {
     "wins": 4,
@@ -7148,7 +7379,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "MAKLIN David": {
     "wins": 1,
@@ -7167,7 +7399,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-3"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "MALEK Zak": {
     "wins": 5,
@@ -7221,7 +7454,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "MANESCU Miron": {
     "wins": 3,
@@ -7257,7 +7491,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "MARCELLINO Robert": {
     "wins": 1,
@@ -7276,7 +7511,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-8"
       }
-    ]
+    ],
+    "birthYear": 2010
   },
   "MARCISZ Maksym": {
     "wins": 2,
@@ -7304,7 +7540,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "MARTINSON Torm": {
     "wins": 0,
@@ -7332,7 +7569,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "1-5"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "MARTIRE Francis": {
     "wins": 1,
@@ -7351,7 +7589,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "MATTOO Deven": {
     "wins": 1,
@@ -7370,7 +7609,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-13"
       }
-    ]
+    ],
+    "birthYear": 2007
   },
   "MATTOO Dhruv": {
     "wins": 1,
@@ -7389,7 +7629,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2006
   },
   "MAWLER malcolm": {
     "wins": 1,
@@ -7425,7 +7666,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "1-5"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "MCDONALD Finn": {
     "wins": 1,
@@ -7462,7 +7704,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "3-5"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "MCDONALD Ryan": {
     "wins": 2,
@@ -7490,7 +7733,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "MEHAN Nicholas": {
     "wins": 0,
@@ -7545,7 +7789,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "2-10"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "MEHTA Yash": {
     "wins": 0,
@@ -7572,7 +7817,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-5"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "MELE Gianni": {
     "wins": 2,
@@ -7599,7 +7845,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "MELUL Jonathan": {
     "wins": 2,
@@ -7627,7 +7874,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "MERMEGAS Alexander": {
     "wins": 4,
@@ -7672,7 +7920,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "MHLEY Gavin": {
     "wins": 2,
@@ -7699,7 +7948,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "MIAO Heqi": {
     "wins": 2,
@@ -7727,7 +7977,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "MICLAUS Justin": {
     "wins": 0,
@@ -7746,7 +7997,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-5"
       }
-    ]
+    ],
+    "birthYear": null
   },
   "MILLER Joseph": {
     "wins": 1,
@@ -7765,7 +8017,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-5"
       }
-    ]
+    ],
+    "birthYear": 2010
   },
   "MITHUN Prabal": {
     "wins": 2,
@@ -7793,7 +8046,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "MUNOZ Jonas": {
     "wins": 5,
@@ -7847,7 +8101,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "NAMBIAR Navin": {
     "wins": 3,
@@ -7884,7 +8139,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "NARDINI Nathanael P.": {
     "wins": 5,
@@ -7948,7 +8204,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-15"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "NG Jonathan": {
     "wins": 1,
@@ -7967,7 +8224,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": null
   },
   "NGO Emerson": {
     "wins": 4,
@@ -8013,7 +8271,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "O'KEEFE Brody": {
     "wins": 5,
@@ -8067,7 +8326,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "OH Aster": {
     "wins": 4,
@@ -8147,7 +8407,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "3-10"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "OLSON Kai": {
     "wins": 2,
@@ -8175,7 +8436,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "ONG Dylan": {
     "wins": 1,
@@ -8194,7 +8456,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2006
   },
   "ORIE Sohan": {
     "wins": 2,
@@ -8222,7 +8485,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "OTT William": {
     "wins": 5,
@@ -8275,7 +8539,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "O’LOUGHLIN Jacob": {
     "wins": 4,
@@ -8319,7 +8584,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "PARK Layne": {
     "wins": 2,
@@ -8346,7 +8612,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "PARKILA Lukas": {
     "wins": 1,
@@ -8365,7 +8632,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-10"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "PAUL James": {
     "wins": 1,
@@ -8384,7 +8652,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-6"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "PAUL Jimmy": {
     "wins": 2,
@@ -8411,7 +8680,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "PEI Kent": {
     "wins": 2,
@@ -8439,7 +8709,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "PEREIRA Beckham": {
     "wins": 2,
@@ -8467,7 +8738,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "PERRIN Leo": {
     "wins": 2,
@@ -8494,7 +8766,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "PINTO Marcus": {
     "wins": 2,
@@ -8547,7 +8820,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "0-5"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "PIPKE Garrett": {
     "wins": 4,
@@ -8591,7 +8865,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "PORTER Dupree": {
     "wins": 1,
@@ -8619,7 +8894,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "11-15"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "PRIMUS Nazir": {
     "wins": 0,
@@ -8647,7 +8923,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "1-5"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "PROSPER Nathaniel": {
     "wins": 1,
@@ -8666,7 +8943,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-5"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "QI Zach": {
     "wins": 2,
@@ -8694,7 +8972,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "QIN toby": {
     "wins": 2,
@@ -8721,7 +9000,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-4"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "RADJABLI Maximillian": {
     "wins": 2,
@@ -8749,7 +9029,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-11"
       }
-    ]
+    ],
+    "birthYear": 2007
   },
   "RAJMOHAN Arya": {
     "wins": 1,
@@ -8768,7 +9049,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2007
   },
   "RAMANAN Jaisimh": {
     "wins": 0,
@@ -8796,7 +9078,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "2-5"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "RAVOOR Sahas": {
     "wins": 2,
@@ -8824,7 +9107,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "REN James": {
     "wins": 1,
@@ -8843,7 +9127,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2007
   },
   "RINALDI Savio": {
     "wins": 5,
@@ -8897,7 +9182,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-11"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "ROBINSON Ezra": {
     "wins": 1,
@@ -8916,7 +9202,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "ROH Jaden": {
     "wins": 2,
@@ -8943,7 +9230,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-7"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "ROORDA Easton": {
     "wins": 2,
@@ -8970,7 +9258,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2010
   },
   "SADHU Neiyam": {
     "wins": 1,
@@ -8989,7 +9278,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-14"
       }
-    ]
+    ],
+    "birthYear": null
   },
   "SALMAN Hamzah": {
     "wins": 0,
@@ -9033,7 +9323,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-5"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "SALMAN Ibrahim": {
     "wins": 4,
@@ -9077,7 +9368,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "SANGSTER Arden": {
     "wins": 0,
@@ -9096,7 +9388,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "12-15"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "SANTOS Theodore": {
     "wins": 0,
@@ -9124,7 +9417,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "3-5"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "SAYAR Luke": {
     "wins": 4,
@@ -9169,7 +9463,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "SCHIMEL Luke": {
     "wins": 1,
@@ -9188,7 +9483,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-13"
       }
-    ]
+    ],
+    "birthYear": 2008
   },
   "SCHWARTZMAN Jakub": {
     "wins": 2,
@@ -9216,7 +9512,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "SEELMAN Cole": {
     "wins": 1,
@@ -9235,7 +9532,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-7"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "SENTHIL Gatik": {
     "wins": 2,
@@ -9262,7 +9560,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "SETH Khalen": {
     "wins": 2,
@@ -9290,7 +9589,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "SHANKAR Rahm": {
     "wins": 1,
@@ -9309,7 +9609,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "SHAPIRO Simon": {
     "wins": 0,
@@ -9354,7 +9655,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "3-5"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "SHARMA Ayaan": {
     "wins": 2,
@@ -9382,7 +9684,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "SHICK Cedric": {
     "wins": 1,
@@ -9427,7 +9730,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "SHINCHUK Jacob": {
     "wins": 0,
@@ -9446,7 +9750,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-5"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "SHIPITSIN Alexander": {
     "wins": 0,
@@ -9465,7 +9770,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "10-15"
       }
-    ]
+    ],
+    "birthYear": 2008
   },
   "SIMS Elliot": {
     "wins": 1,
@@ -9484,7 +9790,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-6"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "SINGH Swaran": {
     "wins": 2,
@@ -9512,7 +9819,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "SKARBONKIEWICZ Maksymilian A.": {
     "wins": 0,
@@ -9531,7 +9839,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "5-15"
       }
-    ]
+    ],
+    "birthYear": null
   },
   "SLAVNOV Anton": {
     "wins": 0,
@@ -9550,7 +9859,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "5-15"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "SMITH Etienne": {
     "wins": 1,
@@ -9569,7 +9879,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-8"
       }
-    ]
+    ],
+    "birthYear": 2006
   },
   "SO Morgan": {
     "wins": 3,
@@ -9605,7 +9916,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "SONG Aidan": {
     "wins": 4,
@@ -9650,7 +9962,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "SONG Nicholas": {
     "wins": 2,
@@ -9678,7 +9991,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "SOWERS Samuel": {
     "wins": 0,
@@ -9697,7 +10011,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "7-15"
       }
-    ]
+    ],
+    "birthYear": 2008
   },
   "SRA Nawab": {
     "wins": 1,
@@ -9716,7 +10031,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-2"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "SRIVATS Vedh": {
     "wins": 1,
@@ -9735,7 +10051,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-11"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "STAMPER Wyatt": {
     "wins": 1,
@@ -9754,7 +10071,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2010
   },
   "STENSON Silas": {
     "wins": 2,
@@ -9781,7 +10099,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "STEVENS Flynn": {
     "wins": 2,
@@ -9809,7 +10128,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "STURGEON Cole": {
     "wins": 0,
@@ -9828,7 +10148,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "6-15"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "SU Kingston": {
     "wins": 2,
@@ -9856,7 +10177,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "SU Landon": {
     "wins": 0,
@@ -9900,7 +10222,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "3-5"
       }
-    ]
+    ],
+    "birthYear": 2010
   },
   "SUN Andrew": {
     "wins": 0,
@@ -9937,7 +10260,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "3-10"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "SUN Stephen": {
     "wins": 2,
@@ -9982,7 +10306,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-5"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "SZULIM Lucjan": {
     "wins": 1,
@@ -10026,7 +10351,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "10-15"
       }
-    ]
+    ],
+    "birthYear": 2010
   },
   "TA-ZHOU Sophia": {
     "wins": 3,
@@ -10061,7 +10387,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "TAI Milton": {
     "wins": 3,
@@ -10096,7 +10423,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "TAKEBE Ren": {
     "wins": 1,
@@ -10115,7 +10443,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-7"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "TAN Rui": {
     "wins": 0,
@@ -10143,7 +10472,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "3-5"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "TANG Morgan": {
     "wins": 3,
@@ -10196,7 +10526,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "TANI Tino": {
     "wins": 1,
@@ -10215,7 +10546,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-4"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "TANJGA Luka": {
     "wins": 1,
@@ -10234,7 +10566,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "TASIKAS Peter": {
     "wins": 1,
@@ -10253,7 +10586,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-9"
       }
-    ]
+    ],
+    "birthYear": 2007
   },
   "TEPLESKY Sasha": {
     "wins": 2,
@@ -10281,7 +10615,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "THEUNISSE Oliver": {
     "wins": 2,
@@ -10309,7 +10644,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "THOMAS Texas": {
     "wins": 0,
@@ -10337,7 +10673,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "2-5"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "TIAGI Daniel": {
     "wins": 0,
@@ -10373,7 +10710,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "3-5"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "TIAGI George": {
     "wins": 0,
@@ -10392,7 +10730,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "0-5"
       }
-    ]
+    ],
+    "birthYear": null
   },
   "TSE Aiden J": {
     "wins": 0,
@@ -10429,7 +10768,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "0-5"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "UEMOTO Ken": {
     "wins": 0,
@@ -10457,7 +10797,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "2-5"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "URSU Marcel T.": {
     "wins": 1,
@@ -10493,7 +10834,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "5-15"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "VALENCIA Jose": {
     "wins": 0,
@@ -10520,7 +10862,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-5"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "VAN ROY Ray": {
     "wins": 2,
@@ -10548,7 +10891,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-4"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "VASQUEZ Matteo": {
     "wins": 2,
@@ -10575,7 +10919,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "VISH Manyu": {
     "wins": 1,
@@ -10594,7 +10939,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-3"
       }
-    ]
+    ],
+    "birthYear": 2008
   },
   "VO Blake": {
     "wins": 1,
@@ -10613,7 +10959,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-9"
       }
-    ]
+    ],
+    "birthYear": 2007
   },
   "VO Landon": {
     "wins": 0,
@@ -10632,7 +10979,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "2-5"
       }
-    ]
+    ],
+    "birthYear": 2006
   },
   "VOSPER James": {
     "wins": 2,
@@ -10660,7 +11008,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "VU Mark": {
     "wins": 1,
@@ -10679,7 +11028,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2010
   },
   "WAGNER Joseph": {
     "wins": 0,
@@ -10707,7 +11057,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "1-5"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "WANG ANDREW CHANG": {
     "wins": 1,
@@ -10735,7 +11086,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "9-15"
       }
-    ]
+    ],
+    "birthYear": 2007
   },
   "WANG Alex": {
     "wins": 2,
@@ -10763,7 +11115,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-10"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "WANG Andrew": {
     "wins": 0,
@@ -10791,7 +11144,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "1-5"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "WANG Daniel": {
     "wins": 2,
@@ -10845,7 +11199,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "WANG David": {
     "wins": 2,
@@ -10872,7 +11227,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "WANG Edward": {
     "wins": 2,
@@ -10899,7 +11255,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "WANG HongXi": {
     "wins": 1,
@@ -10918,7 +11275,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-10"
       }
-    ]
+    ],
+    "birthYear": 2006
   },
   "WANG Justin": {
     "wins": 1,
@@ -10937,7 +11295,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2010
   },
   "WANG Max": {
     "wins": 2,
@@ -10964,7 +11323,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "WANG Michael": {
     "wins": 2,
@@ -10991,7 +11351,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-4"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "WANG Nicolas": {
     "wins": 0,
@@ -11018,7 +11379,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "13-15"
       }
-    ]
+    ],
+    "birthYear": 2006
   },
   "WANG Ryan": {
     "wins": 3,
@@ -11055,7 +11417,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "WANG Theodore": {
     "wins": 0,
@@ -11074,7 +11437,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-5"
       }
-    ]
+    ],
+    "birthYear": null
   },
   "WANG Tiger": {
     "wins": 0,
@@ -11101,7 +11465,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "3-5"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "WANG Will": {
     "wins": 0,
@@ -11129,7 +11494,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-5"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "WAXLER Alex": {
     "wins": 6,
@@ -11191,7 +11557,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "WELSTEAD Nicholas": {
     "wins": 2,
@@ -11219,7 +11586,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "WINTERSET Mason": {
     "wins": 2,
@@ -11247,7 +11615,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "WONG David": {
     "wins": 1,
@@ -11266,7 +11635,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-10"
       }
-    ]
+    ],
+    "birthYear": 2006
   },
   "WONG Lucas": {
     "wins": 0,
@@ -11285,7 +11655,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "5-15"
       }
-    ]
+    ],
+    "birthYear": 2008
   },
   "WONG Mac": {
     "wins": 0,
@@ -11313,7 +11684,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "1-5"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "WONG Max": {
     "wins": 1,
@@ -11332,7 +11704,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-13"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "WONG Ron": {
     "wins": 5,
@@ -11386,7 +11759,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-13"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "XIA Matthew": {
     "wins": 1,
@@ -11405,7 +11779,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-11"
       }
-    ]
+    ],
+    "birthYear": 2008
   },
   "XIE Ethan": {
     "wins": 0,
@@ -11432,7 +11807,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "2-5"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "XU Andrew": {
     "wins": 2,
@@ -11460,7 +11836,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "XU Ethan": {
     "wins": 2,
@@ -11488,7 +11865,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "XU Ivan": {
     "wins": 2,
@@ -11533,7 +11911,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-5"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "XU Princeton": {
     "wins": 2,
@@ -11560,7 +11939,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "YAN Luke": {
     "wins": 2,
@@ -11588,7 +11968,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-4"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "YAN William": {
     "wins": 1,
@@ -11616,7 +11997,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "8-15"
       }
-    ]
+    ],
+    "birthYear": 2008
   },
   "YANG Dylan": {
     "wins": 1,
@@ -11635,7 +12017,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": null
   },
   "YANG Jake": {
     "wins": 1,
@@ -11654,7 +12037,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-4"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "YANG Justin": {
     "wins": 1,
@@ -11682,7 +12066,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "13-15"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "YANG Phillip": {
     "wins": 1,
@@ -11728,7 +12113,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "2-5"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "YAO Zachary": {
     "wins": 2,
@@ -11756,7 +12142,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-10"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "YAP Kah Kai (Cayden)": {
     "wins": 2,
@@ -11784,7 +12171,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2008
   },
   "YE Eric": {
     "wins": 0,
@@ -11811,7 +12199,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "1-5"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "YOOK Isaac": {
     "wins": 6,
@@ -11917,7 +12306,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "2-5"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "YU Ian": {
     "wins": 2,
@@ -11945,7 +12335,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-7"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "YUCEL Emine": {
     "wins": 1,
@@ -11964,7 +12355,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-12"
       }
-    ]
+    ],
+    "birthYear": null
   },
   "ZENG Vito": {
     "wins": 3,
@@ -12000,7 +12392,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "ZEWDA Kebron": {
     "wins": 1,
@@ -12019,7 +12412,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": null
   },
   "ZHANG Aiden": {
     "wins": 2,
@@ -12047,7 +12441,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "ZHANG Kaixuan": {
     "wins": 0,
@@ -12066,7 +12461,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "14-15"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "ZHANG Ray": {
     "wins": 2,
@@ -12094,7 +12490,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-0"
       }
-    ]
+    ],
+    "birthYear": 2011
   },
   "ZHANG Shaoxuan": {
     "wins": 2,
@@ -12122,7 +12519,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-4"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "ZHAO David": {
     "wins": 2,
@@ -12149,7 +12547,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-2"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "ZHAO Lucas": {
     "wins": 1,
@@ -12177,7 +12576,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "14-15"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "ZHAO Royce": {
     "wins": 5,
@@ -12248,7 +12648,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "1-5"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "ZHAO Zhiyu(Yogi)": {
     "wins": 1,
@@ -12267,7 +12668,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2006
   },
   "ZHENG LEON": {
     "wins": 2,
@@ -12295,7 +12697,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-4"
       }
-    ]
+    ],
+    "birthYear": 2013
   },
   "ZHU Yuchen (Kevin)": {
     "wins": 0,
@@ -12314,7 +12717,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "0-5"
       }
-    ]
+    ],
+    "birthYear": null
   },
   "ZLATINSKI Jason": {
     "wins": 2,
@@ -12342,7 +12746,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-4"
       }
-    ]
+    ],
+    "birthYear": 2009
   },
   "ZONG Shiyan": {
     "wins": 2,
@@ -12370,7 +12775,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ]
+    ],
+    "birthYear": 2012
   },
   "ZWAKA Jonas": {
     "wins": 2,
@@ -12398,7 +12804,8 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
-    ]
+    ],
+    "birthYear": 2009
   }
 };
 
