@@ -1,6 +1,7 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
+import FencingDuel from "./FencingDuel";
 
 const PASS_HASH = "1cd683f8ec18781985cd2f9347ba8e1b6058ba3d7a15054c8d83bb8375b0559e"; // sha256 of password
 
@@ -14,9 +15,10 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
   const [input, setInput] = useState("");
   const [error, setError] = useState(false);
   const [checking, setChecking] = useState(true);
+  const [musicOn, setMusicOn] = useState(false);
+  const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
-    // Check if already unlocked
     const stored = sessionStorage.getItem("rw_auth");
     if (stored === "1") {
       setUnlocked(true);
@@ -24,11 +26,36 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
     setChecking(false);
   }, []);
 
+  useEffect(() => {
+    if (unlocked) return;
+    // Create audio element
+    const audio = new Audio("/bgm.mp3");
+    audio.loop = true;
+    audio.volume = 0.3;
+    audioRef.current = audio;
+    return () => {
+      audio.pause();
+      audio.src = "";
+    };
+  }, [unlocked]);
+
+  const toggleMusic = () => {
+    const audio = audioRef.current;
+    if (!audio) return;
+    if (musicOn) {
+      audio.pause();
+    } else {
+      audio.play().catch(() => {});
+    }
+    setMusicOn(!musicOn);
+  };
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const hash = await sha256(input.trim());
     if (hash === PASS_HASH) {
       sessionStorage.setItem("rw_auth", "1");
+      if (audioRef.current) audioRef.current.pause();
       setUnlocked(true);
       setError(false);
     } else {
@@ -41,10 +68,41 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
   if (unlocked) return <>{children}</>;
 
   return (
-    <div className="min-h-screen bg-[#0a0a0f] flex items-center justify-center px-6">
-      <div className="max-w-sm w-full text-center">
+    <div className="min-h-screen bg-[#0a0a0f] flex items-center justify-center px-6 relative overflow-hidden">
+      {/* Background ambient glow */}
+      <div className="absolute inset-0 overflow-hidden pointer-events-none">
+        <div
+          className="absolute w-[400px] h-[400px] rounded-full opacity-[0.06]"
+          style={{
+            background: "radial-gradient(circle, rgba(0,212,255,0.5) 0%, transparent 70%)",
+            top: "-100px",
+            right: "-100px",
+          }}
+        />
+        <div
+          className="absolute w-[300px] h-[300px] rounded-full opacity-[0.04]"
+          style={{
+            background: "radial-gradient(circle, rgba(124,58,237,0.5) 0%, transparent 70%)",
+            bottom: "-80px",
+            left: "-80px",
+          }}
+        />
+      </div>
+
+      {/* Music toggle */}
+      <button
+        onClick={toggleMusic}
+        className="absolute top-4 right-4 z-50 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/40 hover:text-white/70 hover:border-white/20 transition-all"
+        title={musicOn ? "Mute" : "Play music"}
+      >
+        {musicOn ? "🔊" : "🔇"}
+      </button>
+
+      <div className="relative z-10 max-w-sm w-full text-center">
+        {/* Fencing duel animation */}
+        <FencingDuel />
+
         <div className="mb-8">
-          <div className="text-6xl mb-4">🤺</div>
           <h1
             className="text-4xl font-black gradient-text mb-2"
             style={{ fontFamily: "'Playfair Display', Georgia, serif", fontStyle: "italic" }}
