@@ -1,0 +1,237 @@
+[
+  {
+    "eventId": "2025-05-18_cadet-men-s-saber",
+    "ftlEventId": "E37BD77C14BB47DF8C00E4DA11579517",
+    "place": 19,
+    "total": 91,
+    "pool": {
+      "bouts": [
+        {"opponent": "KOVALEV Daniil N.", "club": "WESTCOASTFA", "score": "1-5", "win": false},
+        {"opponent": "PEREIRA Beckham", "club": "INTLFENCECLB", "score": "5-1", "win": true},
+        {"opponent": "GRIGORIEV Roman", "club": "PREMIERFA", "score": "5-0", "win": true},
+        {"opponent": "GATTO Enzo P.", "club": "SPARTAK", "score": "5-2", "win": true},
+        {"opponent": "YOOK Isaac", "club": "TIMMOREHOUSE", "score": "5-2", "win": true},
+        {"opponent": "WONG Ron", "club": "LAFAP", "score": "5-1", "win": true}
+      ],
+      "wins": 5, "losses": 1, "touchesScored": 26, "touchesReceived": 11, "indicator": 15, "poolSize": 7
+    }
+  },
+  {
+    "eventId": "2025-05-16_junior-men-s-saber",
+    "ftlEventId": "28A7662A90A84C509C5196637392B66E",
+    "place": 16,
+    "total": 114,
+    "pool": {
+      "bouts": [
+        {"opponent": "HOLZ Lucas", "club": "PREMIERFA", "score": "5-1", "win": true},
+        {"opponent": "BRIMMER Robert (Trey)", "club": "LVFA", "score": "5-2", "win": true},
+        {"opponent": "KITSON Chase", "club": "GFA", "score": "5-4", "win": true},
+        {"opponent": "HWANG Jayden", "club": "LAFAP", "score": "3-5", "win": false},
+        {"opponent": "LIU Aaron", "club": "NELLYA", "score": "5-3", "win": true}
+      ],
+      "wins": 4, "losses": 1, "touchesScored": 23, "touchesReceived": 15, "indicator": 8, "poolSize": 7
+    }
+  },
+  {
+    "eventId": "2025-03-21_y-14-men-s-saber",
+    "ftlEventId": "8538BA50DEBD471FBFDEA8EA2909CC41",
+    "place": 3,
+    "total": 96,
+    "pool": {
+      "bouts": [
+        {"opponent": "TAN Rui", "club": "CHN", "score": "3-5", "win": false},
+        {"opponent": "CHANG Timothy", "club": "TIMMOREHOUSE", "score": "5-1", "win": true},
+        {"opponent": "SCHWARTZMAN Jakub", "club": "NAZLYMOVFF", "score": "5-1", "win": true},
+        {"opponent": "MIAO Heqi", "club": "AFFA", "score": "5-1", "win": true},
+        {"opponent": "XU Andrew", "club": "MIRACLEFC", "score": "5-1", "win": true},
+        {"opponent": "CHOI Clayton", "club": "GFA", "score": "5-0", "win": true}
+      ],
+      "wins": 5, "losses": 1, "touchesScored": 28, "touchesReceived": 9, "indicator": 19, "poolSize": 7
+    }
+  },
+  {
+    "eventId": "2025-03-08_y-14-men-s-saber",
+    "ftlEventId": "AE11ECD239C44C63B7451CB116EA49F4",
+    "place": 66,
+    "total": 273,
+    "pool": {
+      "bouts": [
+        {"opponent": "OLSON Kai", "club": "OREGONFA", "score": "5-1", "win": true},
+        {"opponent": "LI Michael", "club": "PFC", "score": "5-3", "win": true},
+        {"opponent": "BURENKOV Matthew", "club": "ZETAFENCING", "score": "5-0", "win": true},
+        {"opponent": "O'LOUGHLIN Jacob", "club": "ROCHESTERFC", "score": "5-1", "win": true},
+        {"opponent": "GU Andrew", "club": "LAFAP", "score": "5-4", "win": true},
+        {"opponent": "ZONG Shiyan", "club": "CHN", "score": "5-1", "win": true}
+      ],
+      "wins": 6, "losses": 0, "touchesScored": 30, "touchesReceived": 10, "indicator": 20, "poolSize": 7
+    }
+  },
+  {
+    "eventId": "2025-03-07_cadet-men-s-saber",
+    "ftlEventId": "9B2C737DF50E4F88B706CB5E2BAA9E63",
+    "place": 44,
+    "total": 225,
+    "pool": {
+      "bouts": [
+        {"opponent": "LI Yidong A.", "club": "LAGUNAFC", "score": "5-3", "win": true},
+        {"opponent": "SUN Stephen", "club": "MASTERSFA-NJ", "score": "5-0", "win": true},
+        {"opponent": "FIROOZI Sam", "club": "MANHATTANFC", "score": "5-3", "win": true},
+        {"opponent": "ZWAKA Jonas", "club": "SHERIDANFA", "score": "5-3", "win": true},
+        {"opponent": "MEHAN Nicholas", "club": "STAMFORDFC", "score": "4-5", "win": false},
+        {"opponent": "ZLATINSKI Jason", "club": "GFA", "score": "5-4", "win": true}
+      ],
+      "wins": 5, "losses": 1, "touchesScored": 29, "touchesReceived": 18, "indicator": 11, "poolSize": 7
+    }
+  },
+  {
+    "eventId": "2025-02-17_cadet-men-s-saber",
+    "ftlEventId": "29D0B3694EE34F57BE452D29E68CAC66",
+    "place": 55,
+    "total": 286,
+    "pool": {
+      "bouts": [
+        {"opponent": "HENRY Ethan", "club": "SCFA", "score": "5-3", "win": true},
+        {"opponent": "HAUSLER Jayden", "club": "H3", "score": "5-2", "win": true},
+        {"opponent": "UEMOTO Ken", "club": "DURKANFA", "score": "2-5", "win": false},
+        {"opponent": "HU Chris", "club": "AFFA", "score": "4-5", "win": false},
+        {"opponent": "HENRY Cadel", "club": "FORGE", "score": "5-4", "win": true},
+        {"opponent": "CHATTABOINA Haveesh", "club": "FAODENVER", "score": "5-2", "win": true}
+      ],
+      "wins": 4, "losses": 2, "touchesScored": 26, "touchesReceived": 21, "indicator": 5, "poolSize": 7
+    }
+  },
+  {
+    "eventId": "2025-02-16_junior-men-s-saber",
+    "ftlEventId": "3B332D00D72A46E98BA31BB9932427D3",
+    "place": 188,
+    "total": 342,
+    "pool": {
+      "bouts": [
+        {"opponent": "CHTERENTAL Alex", "club": "DYNAMOFC", "score": "1-5", "win": false},
+        {"opponent": "DUMOULIN Gabriel", "club": "CANDLEWOODFC", "score": "5-4", "win": true},
+        {"opponent": "RAMANAN Jaisimh", "club": "SFSS", "score": "2-5", "win": false},
+        {"opponent": "VOSPER James", "club": "SANDIEGOFC", "score": "5-2", "win": true},
+        {"opponent": "THOMAS Texas", "club": "FAODENVER", "score": "2-5", "win": false},
+        {"opponent": "AYDOGDU Hakan", "club": "DURKANFA", "score": "5-3", "win": true}
+      ],
+      "wins": 3, "losses": 3, "touchesScored": 20, "touchesReceived": 24, "indicator": -4, "poolSize": 7
+    }
+  },
+  {
+    "eventId": "2024-12-07_junior-men-s-saber",
+    "ftlEventId": "798A037A1CE34DA691D0033B1DE774C5",
+    "place": 63,
+    "total": 205,
+    "pool": {
+      "bouts": [
+        {"opponent": "GILSHTEYN Jacob", "club": "LAIFC", "score": "2-5", "win": false},
+        {"opponent": "WANG Daniel", "club": "DYNAMOFC", "score": "3-5", "win": false},
+        {"opponent": "KIM Ethan", "club": "TIMMOREHOUSE", "score": "3-5", "win": false},
+        {"opponent": "YAP Kah Kai (Cayden)", "club": "HALBERSTADT", "score": "5-2", "win": true},
+        {"opponent": "FIRSTMAN William B.", "club": "NELLYA", "score": "3-5", "win": false}
+      ],
+      "wins": 1, "losses": 4, "touchesScored": 16, "touchesReceived": 22, "indicator": -6, "poolSize": 6
+    }
+  },
+  {
+    "eventId": "2024-12-06_cadet-men-s-saber",
+    "ftlEventId": "DC067CF260654DA4B34A4DDA97173595",
+    "place": 35,
+    "total": 170,
+    "pool": {
+      "bouts": [
+        {"opponent": "IYER Neil", "club": "HALBERSTADT", "score": "5-2", "win": true},
+        {"opponent": "WANG Daniel", "club": "DYNAMOFC", "score": "5-2", "win": true},
+        {"opponent": "NGO Emerson", "club": "LAFAP", "score": "5-1", "win": true},
+        {"opponent": "BARRY Dave", "club": "SFA", "score": "5-0", "win": true},
+        {"opponent": "CHAN Elliott", "club": "PHX", "score": "5-2", "win": true}
+      ],
+      "wins": 5, "losses": 0, "touchesScored": 25, "touchesReceived": 7, "indicator": 18, "poolSize": 7
+    }
+  },
+  {
+    "eventId": "2024-12-01_y-14-men-s-saber",
+    "ftlEventId": "057895A08F814BBA8C7446CBE83C50C0",
+    "place": 60,
+    "total": 142,
+    "pool": {
+      "bouts": [
+        {"opponent": "ISAYENKO Daniel", "club": "MANHATTANFC", "score": "4-5", "win": false},
+        {"opponent": "WAXLER Alex", "club": "TIMMOREHOUSE", "score": "5-0", "win": true},
+        {"opponent": "SHAPIRO Simon", "club": "DYNAMOFC", "score": "3-5", "win": false},
+        {"opponent": "JI Johnson", "club": "AIFENCING", "score": "2-5", "win": false},
+        {"opponent": "LIAO Sirui", "club": "MIRACLEFC", "score": "5-3", "win": true},
+        {"opponent": "FOUX Jonathan", "club": "COBRAFC", "score": "5-3", "win": true}
+      ],
+      "wins": 3, "losses": 3, "touchesScored": 24, "touchesReceived": 21, "indicator": 3, "poolSize": 7
+    }
+  },
+  {
+    "eventId": "2024-11-30_cadet-men-s-saber",
+    "ftlEventId": "8E6962332DF848D9864BC4070CF5A41C",
+    "place": 8,
+    "total": 104,
+    "pool": {
+      "bouts": [
+        {"opponent": "WAXLER Alex", "club": "TIMMOREHOUSE", "score": "5-0", "win": true},
+        {"opponent": "LIEBOWITZ Carson", "club": "MANHATTANFC", "score": "0-5", "win": false},
+        {"opponent": "JIANG Terence", "club": "AURAFA", "score": "5-4", "win": true},
+        {"opponent": "CHANG Timothy", "club": "TIMMOREHOUSE", "score": "5-0", "win": true},
+        {"opponent": "KARAVAS Nicholas", "club": "FAOBOSTON", "score": "5-1", "win": true},
+        {"opponent": "DE SIENA Salvatore", "club": "ESCRIMEURFC", "score": "4-5", "win": false}
+      ],
+      "wins": 4, "losses": 2, "touchesScored": 24, "touchesReceived": 15, "indicator": 9, "poolSize": 7
+    }
+  },
+  {
+    "eventId": "2024-11-10_cadet-men-s-saber",
+    "ftlEventId": "9E46DD403B3447A99A46D5B358B002E9",
+    "place": 149,
+    "total": 271,
+    "pool": {
+      "bouts": [
+        {"opponent": "PRIMUS Nazir", "club": "PWESTBROOK", "score": "1-5", "win": false},
+        {"opponent": "IYER Neil", "club": "HALBERSTADT", "score": "5-4", "win": true},
+        {"opponent": "BAI Evan", "club": "AURAFA", "score": "3-5", "win": false},
+        {"opponent": "KARAVAS Nicholas", "club": "FAOBOSTON", "score": "5-0", "win": true},
+        {"opponent": "SONG Aidan", "club": "TIMMOREHOUSE", "score": "5-2", "win": true},
+        {"opponent": "SUN Andrew", "club": "MANHATTANFC", "score": "3-5", "win": false}
+      ],
+      "wins": 3, "losses": 3, "touchesScored": 22, "touchesReceived": 21, "indicator": 1, "poolSize": 7
+    }
+  },
+  {
+    "eventId": "2024-07-05_y-12-men-s-saber",
+    "ftlEventId": "20317555F5564159A2340FF91FC99167",
+    "place": 5,
+    "total": 230,
+    "pool": {
+      "bouts": [
+        {"opponent": "BUCKLEY Owen", "club": "CFAFLLC", "score": "5-0", "win": true},
+        {"opponent": "LAM Austin", "club": "TTFA", "score": "5-2", "win": true},
+        {"opponent": "LUC Linkin", "club": "PREMIERFA", "score": "5-1", "win": true},
+        {"opponent": "WANG Ryan", "club": "AGFC (CA)", "score": "5-1", "win": true},
+        {"opponent": "LI Ryan", "club": "LAGUNAFC", "score": "5-1", "win": true},
+        {"opponent": "ALUF Brendon", "club": "MANHATTANFC", "score": "5-0", "win": true}
+      ],
+      "wins": 6, "losses": 0, "touchesScored": 30, "touchesReceived": 5, "indicator": 25, "poolSize": 7
+    }
+  },
+  {
+    "eventId": "2024-07-04_y-14-men-s-saber",
+    "ftlEventId": "2DAF82A676B54F978935F850A9299E7E",
+    "place": 40,
+    "total": 299,
+    "pool": {
+      "bouts": [
+        {"opponent": "LIANG Preston", "club": "SBFA", "score": "5-1", "win": true},
+        {"opponent": "ZHANG Ray", "club": "MANHATTANFC", "score": "5-0", "win": true},
+        {"opponent": "ANTHONY Devyn V.", "club": "PWESTBROOK", "score": "5-4", "win": true},
+        {"opponent": "LUC Linkin", "club": "PREMIERFA", "score": "5-3", "win": true},
+        {"opponent": "GU Kevin", "club": "SPARTAK", "score": "5-3", "win": true},
+        {"opponent": "SONG Aidan", "club": "TIMMOREHOUSE", "score": "5-2", "win": true}
+      ],
+      "wins": 6, "losses": 0, "touchesScored": 30, "touchesReceived": 13, "indicator": 17, "poolSize": 7
+    }
+  }
+]
