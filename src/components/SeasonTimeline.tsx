@@ -154,7 +154,8 @@ export default function SeasonTimeline({
                   },
                 };
                 return (
-                  <div className="mb-6">
+                  <div className="mb-6 space-y-2">
+                    {/* Row 1: Season title, age, events, rating */}
                     <div className="flex items-center gap-4 flex-wrap">
                       <h3 className="text-2xl md:text-3xl font-black gradient-text">
                         {getSeasonLabel(season)}
@@ -165,17 +166,17 @@ export default function SeasonTimeline({
                       <span className="text-white/45 text-sm">
                         {seasonEvents.length} events
                       </span>
-
-                      {/* Rating */}
                       {meta?.rating && (
                         <span className="text-amber-400 text-sm font-bold">
                           {meta.rating}
                         </span>
                       )}
+                    </div>
 
-                      {/* Ranking badges */}
-                      {meta?.rankings &&
-                        rankingOrder.map((cat) => {
+                    {/* Row 2: Ranking badges */}
+                    {meta?.rankings && (
+                      <div className="flex items-center gap-2 flex-wrap">
+                        {rankingOrder.map((cat) => {
                           const rank = meta.rankings?.[cat];
                           if (!rank) return null;
                           const style =
@@ -200,15 +201,16 @@ export default function SeasonTimeline({
                             </span>
                           );
                         })}
-                    </div>
-                    {/* Quick stats */}
-                    <div className="flex gap-4 mt-2 text-sm">
+                      </div>
+                    )}
+
+                    {/* Row 3: Medals + Pool win rate */}
+                    <div className="flex gap-4 text-sm">
                       {medals > 0 && (
                         <span className="text-amber-400">
                           🏆 {medals} medals
                         </span>
                       )}
-
                       {(() => {
                         let totalWins = 0;
                         let totalBouts = 0;
