@@ -11,7 +11,7 @@ const quotes = [
 
 export default function Quotes() {
   return (
-    <section className="relative py-16 px-6 max-w-4xl mx-auto">
+    <section className="relative py-8 px-6 max-w-4xl mx-auto">
       <div className="space-y-12">
         {quotes.map((q, i) => (
           <motion.blockquote

@@ -5,7 +5,7 @@ import { profile } from "@/data/profile";
 
 export default function Hero() {
   return (
-    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden grid-bg pb-16">
+    <section className="relative min-h-[85vh] flex items-center justify-center overflow-hidden grid-bg pb-8">
       {/* Animated background orbs */}
       <div className="absolute inset-0 overflow-hidden">
         <motion.div
