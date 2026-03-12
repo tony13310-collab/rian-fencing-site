@@ -92,7 +92,7 @@ export default function OpponentsPreview() {
           viewport={{ once: true }}
           className="mb-8"
         >
-          <h2 className="text-xl sm:text-2xl font-black text-white/80 mb-1">
+          <h2 className="text-2xl md:text-3xl font-black gradient-text mb-1">
             ⚔️ Peer Competitors
           </h2>
           <p className="text-white/50 text-xs sm:text-sm">
