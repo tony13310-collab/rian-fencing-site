@@ -15,7 +15,7 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
   const [input, setInput] = useState("");
   const [error, setError] = useState(false);
   const [checking, setChecking] = useState(true);
-  const [musicOn, setMusicOn] = useState(false);
+  const [musicOn, setMusicOn] = useState(true);
   const audioRef = useRef<HTMLAudioElement | null>(null);
 
   useEffect(() => {
@@ -33,6 +33,8 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
     audio.loop = true;
     audio.volume = 0.3;
     audioRef.current = audio;
+    // Auto-play on load
+    audio.play().catch(() => {});
     return () => {
       audio.pause();
       audio.src = "";
