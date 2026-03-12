@@ -229,6 +229,38 @@ export const eventDetails: Record<string, EventDetail> = {
     ],
   },
 
+  // ====== Cobra Challenge SYC/RCC 2025 (Secaucus, NJ) ======
+
+  "2025-11-29_y-14-men-s-saber": {
+    id: "2025-11-29_y-14-men-s-saber",
+    date: "2025-11-29",
+    tournament: "Cobra Challenge SYC/RCC",
+    event: "Y-14 Men's Saber",
+    location: "Secaucus, NJ",
+    place: 1,
+    total: 150,
+    pool: {
+      poolNumber: 0,
+      seed: 1,
+      bouts: [
+        { opponent: "ROH Jaden", club: "GFA", score: "5-2", win: true },
+        { opponent: "MARTIRE Francis", club: "MANHATTANFC", score: "5-1", win: true },
+        { opponent: "LIU Jeremy", club: "AFC", score: "5-1", win: true },
+        { opponent: "SHANKAR Rahm", club: "SABIO", score: "5-0", win: true },
+        { opponent: "KRISHNARASA Aiyann", club: "INTEGRITY", score: "5-0", win: true },
+        { opponent: "LEE Jeffrey", club: "TIMMOREHOUSE", score: "5-1", win: true },
+      ],
+      wins: 6,
+      losses: 0,
+      touchesScored: 30,
+      touchesReceived: 5,
+      indicator: 25,
+      poolRank: null,
+      poolSize: 7,
+      deSeed: null,
+    },
+  },
+
   // ====== November NAC 2025 (Fort Worth, TX) ======
 
   "2025-11-17_y-14-men-s-saber": {

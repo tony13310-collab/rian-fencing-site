@@ -1,6 +1,5 @@
 // Auto-generated H2H opponent database - 405 opponents, 944 bouts
 // Generated from FencingTracker history + FTL pool bouts
-// birthYear: from USA Fencing point standings (Y14/Cadet/Junior) + age category inference
 
 export interface OpponentBout {
   tournament: string;
@@ -17,7 +16,6 @@ export interface OpponentData {
   total: number;
   winRate: number;
   clubs: string[];
-  birthYear: number | null;
   bouts: OpponentBout[];
 }
 
@@ -12808,10 +12806,3 @@ export const opponents: Record<string, OpponentData> = {
     "birthYear": 2009
   }
 };
-
-export function findOpponentBySlug(slug: string): [string, OpponentData] | null {
-  for (const [name, data] of Object.entries(opponents)) {
-    if (getOpponentSlug(name) === slug) return [name, data];
-  }
-  return null;
-}

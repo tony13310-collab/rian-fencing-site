@@ -40,7 +40,7 @@ export const allEvents: CompEvent[] = [
     { date: "2026-01-24", tournament: "January SJCC", event: "Junior Men's Saber", category: "Junior", level: "National", place: 2, total: 117, rating: "A26", medal: "🥈" },
     { date: "2026-01-12", tournament: "Junior Olympics", event: "Junior Men's Saber", category: "Junior", level: "National", place: 11, total: 297, rating: "B26" },
     { date: "2026-01-10", tournament: "Junior Olympics", event: "Cadet Men's Saber", category: "Cadet", level: "National", place: 44, total: 277, rating: "" },
-    { date: "2025-11-29", tournament: "Cobra Challenge SYC/RCC", event: "Y-14 Men's Saber", category: "Y-14", level: "SYC", place: 1, total: 150, rating: "", medal: "🥇" },
+    { date: "2025-11-29", tournament: "Cobra Challenge SYC/RCC", event: "Y-14 Men's Saber", category: "Y-14", level: "SYC", place: 1, total: 150, rating: "", medal: "🥇", poolSeed: 1, ftlEventId: "5BE2AA8B8F094C02BA783BC934730629" },
     { date: "2025-11-17", tournament: "November NAC", event: "Y-14 Men's Saber", category: "Y-14", level: "National", place: 7, total: 170, rating: "" },
     { date: "2025-11-16", tournament: "November NAC", event: "Cadet Men's Saber", category: "Cadet", level: "National", place: 11, total: 307, rating: "" },
     { date: "2025-11-14", tournament: "November NAC", event: "Div I Men's Saber", category: "Div I", level: "National", place: 94, total: 200, rating: "" },
