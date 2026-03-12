@@ -217,8 +217,7 @@ export default function SeasonTimeline({
                         let poolBouts = 0;
                         let deWins = 0;
                         let deBouts = 0;
-                        const allSeasonEvents = allBySeason[season] || [];
-                        for (const e of allSeasonEvents) {
+                        for (const e of seasonEvents) {
                           const id = makeEventId(e.date, e.event);
                           const detail = eventDetails[id];
                           if (detail?.pool) {
