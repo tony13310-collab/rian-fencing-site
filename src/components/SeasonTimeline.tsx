@@ -58,7 +58,7 @@ export default function SeasonTimeline({
     let placeOk = selectedPlacements.size === 0;
     if (!placeOk && e.place && e.total) {
       if (selectedPlacements.has("Gold") && e.place === 1) placeOk = true;
-      if (selectedPlacements.has("Medals") && e.place <= 3) placeOk = true;
+      if (selectedPlacements.has("Top 4") && e.place <= 4) placeOk = true;
       if (selectedPlacements.has("Top 8") && e.place <= 8) placeOk = true;
       if (selectedPlacements.has("Top 16") && e.place <= 16) placeOk = true;
       if (selectedPlacements.has("Top 32") && e.place <= 32) placeOk = true;
