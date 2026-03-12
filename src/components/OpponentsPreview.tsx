@@ -2,20 +2,54 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { opponents, getOpponentSlug } from "@/data/opponents";
+import { opponents, getOpponentSlug, OpponentData } from "@/data/opponents";
+import { seasonOrder } from "@/data/events";
+
+// Get fencing season from a date string: Aug+ = next season, before Aug = current
+function getSeason(dateStr: string): string {
+  const d = new Date(dateStr);
+  const year = d.getFullYear();
+  const month = d.getMonth(); // 0-indexed
+  // Fencing season runs Aug-Jul: Aug 2025 → season 2025-2026
+  if (month >= 7) return `${year}-${year + 1}`;
+  return `${year - 1}-${year}`;
+}
 
 export default function OpponentsPreview() {
-  const totalOpponents = Object.keys(opponents).length;
-  const totalBouts = Object.values(opponents).reduce((s, d) => s + d.total, 0);
-  const totalWins = Object.values(opponents).reduce((s, d) => s + d.wins, 0);
+  // Only use last 2 seasons
+  const recentSeasons = new Set(seasonOrder.slice(0, 2));
 
-  // Top rivals (most bouts)
-  const rivals = Object.entries(opponents)
+  // Filter opponents to recent bouts only and recompute stats
+  const recentOpponents: [string, OpponentData][] = [];
+  for (const [name, data] of Object.entries(opponents)) {
+    const recentBouts = data.bouts.filter(b => {
+      const season = getSeason(b.date);
+      return recentSeasons.has(season);
+    });
+    if (recentBouts.length === 0) continue;
+    const wins = recentBouts.filter(b => b.win).length;
+    const losses = recentBouts.length - wins;
+    recentOpponents.push([name, {
+      ...data,
+      wins,
+      losses,
+      total: recentBouts.length,
+      winRate: Math.round((wins / recentBouts.length) * 100),
+      bouts: recentBouts,
+    }]);
+  }
+
+  const totalOpponents = recentOpponents.length;
+  const totalBouts = recentOpponents.reduce((s, [, d]) => s + d.total, 0);
+  const totalWins = recentOpponents.reduce((s, [, d]) => s + d.wins, 0);
+
+  // Top rivals (most bouts in recent seasons)
+  const rivals = recentOpponents
     .sort((a, b) => b[1].total - a[1].total)
     .slice(0, 10);
 
-  // Nemesis (lost most to, at least 2 bouts)
-  const nemesis = Object.entries(opponents)
+  // Tough matchups (lost most to, at least 2 recent bouts)
+  const nemesis = recentOpponents
     .filter(([, d]) => d.total >= 2 && d.winRate <= 30)
     .sort((a, b) => b[1].total - a[1].total)
     .slice(0, 10);
@@ -33,7 +67,8 @@ export default function OpponentsPreview() {
             ⚔️ H2H Database
           </h2>
           <p className="text-white/50 text-xs sm:text-sm">
-            {totalOpponents} opponents · {totalBouts} bouts · {Math.round((totalWins / totalBouts) * 100)}% win rate
+            {totalOpponents} opponents · {totalBouts} bouts · {totalBouts > 0 ? Math.round((totalWins / totalBouts) * 100) : 0}% win rate
+            <span className="text-white/30"> · Last 2 seasons</span>
           </p>
         </motion.div>
 
