@@ -246,18 +246,11 @@ export default function SeasonTimeline({
                               const pct = Math.round((poolWins / poolBouts) * 100);
                               return (
                                 <span className={`${pct >= 75 ? "text-green-400" : pct >= 60 ? "text-blue-400/70" : "text-white/50"}`}>
-                                  Pool: {poolWins}-{poolBouts - poolWins} ({pct}%)
+                                  Pool: {poolWins}W {poolBouts - poolWins}L {pct}%
                                 </span>
                               );
                             })()}
-                            {deBouts > 0 && (() => {
-                              const pct = Math.round((deWins / deBouts) * 100);
-                              return (
-                                <span className={`${pct >= 75 ? "text-green-400" : pct >= 60 ? "text-blue-400/70" : "text-white/50"}`}>
-                                  DE: {deWins}-{deBouts - deWins} ({pct}%)
-                                </span>
-                              );
-                            })()}
+
                           </>
                         );
                       })()}
