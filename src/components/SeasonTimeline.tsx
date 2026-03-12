@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { makeEventId } from "@/data/eventDetails";
+import { makeEventId, eventDetails } from "@/data/eventDetails";
 import {
   CompEvent,
   TournamentLevel,
@@ -224,6 +224,25 @@ export default function SeasonTimeline({
                           {(bestPlace.pct * 100).toFixed(0)}%)
                         </span>
                       )}
+                      {(() => {
+                        let totalWins = 0;
+                        let totalBouts = 0;
+                        for (const e of seasonEvents) {
+                          const id = makeEventId(e.date, e.event);
+                          const detail = eventDetails[id];
+                          if (detail?.pool) {
+                            totalWins += detail.pool.wins;
+                            totalBouts += detail.pool.wins + detail.pool.losses;
+                          }
+                        }
+                        if (totalBouts === 0) return null;
+                        const pct = Math.round((totalWins / totalBouts) * 100);
+                        return (
+                          <span className={`${pct >= 75 ? "text-green-400" : pct >= 60 ? "text-blue-400/70" : "text-white/50"}`}>
+                            Pool: {totalWins}-{totalBouts - totalWins} ({pct}%)
+                          </span>
+                        );
+                      })()}
                     </div>
                   </div>
                 );
