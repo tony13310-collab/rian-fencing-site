@@ -54,7 +54,7 @@ export default function OpponentsClient() {
     <main className="min-h-screen bg-[#0a0a0f] text-white">
       {/* Header */}
       <div className="sticky top-0 z-50 bg-[#0a0a0f]/95 backdrop-blur-xl border-b border-white/5">
-        <div className="max-w-2xl mx-auto px-4 py-3">
+        <div className="max-w-2xl mx-auto px-3 sm:px-4 py-3">
           <div className="flex items-center gap-3 mb-3">
             <Link
               href="/"
@@ -158,7 +158,7 @@ export default function OpponentsClient() {
       </div>
 
       {/* Results count */}
-      <div className="max-w-2xl mx-auto px-4 py-3">
+      <div className="max-w-2xl mx-auto px-3 sm:px-4 py-3">
         <p className="text-white/45 text-xs">
           {entries.length} opponent{entries.length !== 1 ? "s" : ""}
           {search && ` matching "${search}"`}
@@ -166,7 +166,7 @@ export default function OpponentsClient() {
       </div>
 
       {/* Opponent list */}
-      <div className="max-w-2xl mx-auto px-4 pb-20">
+      <div className="max-w-2xl mx-auto px-3 sm:px-4 pb-20">
         <AnimatePresence mode="popLayout">
           {entries.map((opp, i) => {
             const winPct = opp.winRate;

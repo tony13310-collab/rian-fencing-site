@@ -37,7 +37,7 @@ export default function ResultsTable() {
   });
 
   return (
-    <section id="results" className="py-24 px-6 max-w-6xl mx-auto">
+    <section id="results" className="py-16 sm:py-24 px-3 sm:px-6 max-w-6xl mx-auto">
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
