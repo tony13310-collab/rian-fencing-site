@@ -93,8 +93,8 @@ export default function SeasonTimeline({
           if (!seasonEvents || seasonEvents.length === 0) return null;
 
           const tournaments = groupByTournament(seasonEvents);
-          const medals = seasonEvents.filter(
-            (e) => e.place && e.place <= 3
+          const finals = seasonEvents.filter(
+            (e) => e.place && e.place <= 8
           ).length;
 
           return (
@@ -206,9 +206,9 @@ export default function SeasonTimeline({
 
                     {/* Row 3: Medals + Pool win rate */}
                     <div className="flex gap-4 text-sm">
-                      {medals > 0 && (
+                      {finals > 0 && (
                         <span className="text-amber-400">
-                          🏆 {medals} medals
+                          🏆 {finals} finals
                         </span>
                       )}
                       {(() => {
