@@ -5,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Quotes from "@/components/Quotes";
 import StatsBar from "@/components/StatsBar";
-import FilterBar from "@/components/FilterBar";
+import FilterBar, { PlacementFilter } from "@/components/FilterBar";
 import SeasonTimeline from "@/components/SeasonTimeline";
 import Achievements from "@/components/Achievements";
 import Footer from "@/components/Footer";
@@ -20,6 +20,9 @@ export default function Home() {
   const [selectedCategories, setSelectedCategories] = useState<
     Set<AgeCategory>
   >(new Set());
+  const [selectedPlacements, setSelectedPlacements] = useState<Set<PlacementFilter>>(
+    new Set()
+  );
 
   const toggleLevel = (level: TournamentLevel) => {
     setSelectedLevels((prev) => {
@@ -39,9 +42,19 @@ export default function Home() {
     });
   };
 
+  const togglePlacement = (p: PlacementFilter) => {
+    setSelectedPlacements((prev) => {
+      const next = new Set(prev);
+      if (next.has(p)) next.delete(p);
+      else next.add(p);
+      return next;
+    });
+  };
+
   const clearAll = () => {
     setSelectedLevels(new Set());
     setSelectedCategories(new Set());
+    setSelectedPlacements(new Set());
   };
 
   return (
@@ -53,14 +66,17 @@ export default function Home() {
       <FilterBar
         selectedLevels={selectedLevels}
         selectedCategories={selectedCategories}
+        selectedPlacements={selectedPlacements}
         onToggleLevel={toggleLevel}
         onToggleCategory={toggleCategory}
+        onTogglePlacement={togglePlacement}
         onClearAll={clearAll}
       />
       <SeasonTimeline
         events={allEvents}
         selectedLevels={selectedLevels}
         selectedCategories={selectedCategories}
+        selectedPlacements={selectedPlacements}
       />
       <div id="opponents">
         <OpponentsPreview />

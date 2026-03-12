@@ -12,11 +12,13 @@ import {
   categoryColors,
   seasonMeta,
 } from "@/data/events";
+import { PlacementFilter } from "@/components/FilterBar";
 
 interface SeasonTimelineProps {
   events: CompEvent[];
   selectedLevels: Set<TournamentLevel>;
   selectedCategories: Set<AgeCategory>;
+  selectedPlacements?: Set<PlacementFilter>;
 }
 
 function getPlaceDisplay(place: number | null, total: number | null) {
@@ -45,6 +47,7 @@ export default function SeasonTimeline({
   events,
   selectedLevels,
   selectedCategories,
+  selectedPlacements = new Set(),
 }: SeasonTimelineProps) {
   // Filter events
   const filtered = events.filter((e) => {
@@ -52,7 +55,13 @@ export default function SeasonTimeline({
       selectedLevels.size === 0 || selectedLevels.has(e.level);
     const catOk =
       selectedCategories.size === 0 || selectedCategories.has(e.category);
-    return levelOk && catOk;
+    let placeOk = selectedPlacements.size === 0;
+    if (!placeOk && e.place && e.total) {
+      if (selectedPlacements.has("Gold") && e.place === 1) placeOk = true;
+      if (selectedPlacements.has("Medals") && e.place <= 3) placeOk = true;
+      if (selectedPlacements.has("Top 8") && e.place <= 8) placeOk = true;
+    }
+    return levelOk && catOk && placeOk;
   });
 
   // Group by season
