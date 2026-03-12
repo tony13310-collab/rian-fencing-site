@@ -42,7 +42,7 @@ export default function FilterBar({
                 onClick={() => onToggleLevel(level)}
                 className={`px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-200 border ${
                   active
-                    ? `bg-gradient-to-r ${colors.bg} ${colors.border} ${colors.text} shadow-lg`
+                    ? `${colors.bg} ${colors.text} shadow-lg`
                     : "border-white/10 text-white/50 hover:text-white/50 hover:border-white/20"
                 }`}
               >

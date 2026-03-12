@@ -232,13 +232,13 @@ export default function SeasonTimeline({
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: tidx * 0.05 }}
-                        className={`rounded-2xl border ${colors.border} bg-gradient-to-r ${colors.bg} overflow-hidden backdrop-blur-sm`}
+                        className={`rounded-2xl border ${colors.border} bg-gradient-to-r ${colors.cardBg} overflow-hidden backdrop-blur-sm`}
                       >
                         {/* Tournament header */}
                         <div className="px-3 sm:px-5 py-3 flex items-center justify-between border-b border-white/5 gap-2">
                           <div className="flex items-center gap-2 sm:gap-3 min-w-0">
                             <span
-                              className={`text-[10px] w-[60px] sm:w-[72px] py-1 rounded-md ${colors.text} border ${colors.border} uppercase tracking-wider font-bold text-center inline-block shrink-0`}
+                              className={`text-[10px] w-[60px] sm:w-[72px] py-1 rounded-md ${colors.bg} ${colors.text} uppercase tracking-wider font-bold text-center inline-block shrink-0`}
                             >
                               {level === "International" ? "INTL" : level === "National" ? "NAT'L" : level}
                             </span>

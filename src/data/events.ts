@@ -162,12 +162,12 @@ export const seasonOrder = [
 ];
 
 // Color schemes
-export const levelColors: Record<TournamentLevel, { bg: string; border: string; text: string }> = {
-  International: { bg: "from-yellow-500/20 to-amber-600/20", border: "border-yellow-500/30", text: "text-yellow-400" },
-  National: { bg: "from-purple-500/15 to-indigo-600/15", border: "border-purple-500/30", text: "text-purple-400" },
-  SYC: { bg: "from-cyan-500/15 to-blue-600/15", border: "border-cyan-500/30", text: "text-cyan-400" },
-  RYC: { bg: "from-emerald-500/15 to-green-600/15", border: "border-emerald-500/30", text: "text-emerald-400" },
-  Local: { bg: "from-gray-500/10 to-slate-600/10", border: "border-gray-500/20", text: "text-gray-400" },
+export const levelColors: Record<TournamentLevel, { bg: string; cardBg: string; border: string; text: string }> = {
+  International: { bg: "bg-amber-600", cardBg: "from-amber-500/10 to-amber-600/10", border: "border-amber-600/30", text: "text-white" },
+  National: { bg: "bg-purple-600", cardBg: "from-purple-500/10 to-indigo-600/10", border: "border-purple-600/30", text: "text-white" },
+  SYC: { bg: "bg-cyan-600", cardBg: "from-cyan-500/10 to-blue-600/10", border: "border-cyan-600/30", text: "text-white" },
+  RYC: { bg: "bg-emerald-600", cardBg: "from-emerald-500/10 to-green-600/10", border: "border-emerald-600/30", text: "text-white" },
+  Local: { bg: "bg-gray-600", cardBg: "from-gray-500/5 to-slate-600/5", border: "border-gray-600/20", text: "text-white" },
 };
 
 export const categoryColors: Record<string, string> = {
