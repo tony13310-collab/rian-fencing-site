@@ -27,6 +27,10 @@ const placementColors: Record<PlacementFilter, string> = {
   "Top 32": "bg-violet-600",
 };
 
+// Shared button style
+const btnBase = "min-w-[56px] px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-wider transition-all duration-200 text-center";
+const btnInactive = "bg-white/5 text-white/50 border border-white/10 hover:border-white/20";
+
 export default function FilterBar({
   selectedLevels,
   selectedCategories,
@@ -46,7 +50,7 @@ export default function FilterBar({
     >
       <div className="max-w-6xl mx-auto space-y-2">
         {/* Level filters */}
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="flex flex-wrap items-center gap-1.5">
           {levels.map((level) => {
             const active = selectedLevels.has(level);
             const colors = levelColors[level];
@@ -55,10 +59,10 @@ export default function FilterBar({
               <button
                 key={level}
                 onClick={() => onToggleLevel(level)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-200 border ${
+                className={`${btnBase} ${
                   active
-                    ? `${colors.bg} ${colors.text} shadow-lg border-transparent`
-                    : "border-white/10 text-white/50 hover:text-white/50 hover:border-white/20"
+                    ? `${colors.bg} ${colors.text} shadow-lg border border-transparent`
+                    : btnInactive
                 }`}
               >
                 {label}
@@ -68,7 +72,7 @@ export default function FilterBar({
         </div>
 
         {/* Category filters */}
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="flex flex-wrap items-center gap-1.5">
           {categories.map((cat) => {
             const active = selectedCategories.has(cat);
             const bgClass = categoryColors[cat] || "bg-gray-600";
@@ -76,10 +80,10 @@ export default function FilterBar({
               <button
                 key={cat}
                 onClick={() => onToggleCategory(cat)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-200 ${
+                className={`${btnBase} ${
                   active
                     ? `${bgClass} text-white shadow-lg`
-                    : "bg-white/5 text-white/50 hover:text-white/50 border border-white/10"
+                    : btnInactive
                 }`}
               >
                 {cat}
@@ -89,7 +93,7 @@ export default function FilterBar({
         </div>
 
         {/* Placement filters */}
-        <div className="flex flex-wrap items-center gap-2">
+        <div className="flex flex-wrap items-center gap-1.5">
           {placements.map((p) => {
             const active = selectedPlacements.has(p);
             const bgClass = placementColors[p];
@@ -97,20 +101,20 @@ export default function FilterBar({
               <button
                 key={p}
                 onClick={() => onTogglePlacement(p)}
-                className={`px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-200 ${
+                className={`${btnBase} ${
                   active
                     ? `${bgClass} text-white shadow-lg`
-                    : "bg-white/5 text-white/50 hover:text-white/50 border border-white/10"
+                    : btnInactive
                 }`}
               >
-                {p === "Gold" ? "🥇 Gold" : p === "Medals" ? "🏅 Medals" : p}
+                {p}
               </button>
             );
           })}
           {hasFilters && (
             <button
               onClick={onClearAll}
-              className="px-3 py-1.5 rounded-lg text-xs font-medium text-red-400/60 hover:text-red-400 transition-colors ml-2"
+              className={`${btnBase} text-red-400/60 hover:text-red-400 ml-1`}
             >
               ✕ Clear
             </button>
