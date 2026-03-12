@@ -1,3 +1,109 @@
+import { allEvents, seasonMeta, seasonOrder } from "./events";
+import { makeEventId } from "./eventDetails";
+
+// --- Computed values ---
+const ratingOrder = ['A', 'B', 'C', 'D', 'E', 'U'];
+
+// Current rating = highest rating ever earned
+const allRatings = allEvents.filter(e => e.rating).map(e => e.rating);
+const computedRating = allRatings.sort((a, b) => {
+  const ai = ratingOrder.indexOf(a[0]);
+  const bi = ratingOrder.indexOf(b[0]);
+  return ai - bi;
+})[0] || "";
+
+// Current season = newest season
+const computedCurrentSeason = seasonOrder[0];
+
+// Rankings from seasonMeta (manually maintained there)
+const currentMeta = seasonMeta.find(m => m.season === computedCurrentSeason);
+const rankColorMap: Record<string, string> = {
+  "Y-8": "gray", "Y-10": "gray", "Y-12": "green", "Y-14": "green",
+  "Cadet": "blue", "Junior": "purple", "Div I": "red",
+};
+const computedRankings = currentMeta?.rankings
+  ? Object.entries(currentMeta.rankings)
+      .sort(([a], [b]) => {
+        const order = ["Y-10", "Y-12", "Y-14", "Cadet", "Junior", "Div I"];
+        return order.indexOf(a) - order.indexOf(b);
+      })
+      .map(([cat, rank]) => ({
+        category: cat,
+        rank,
+        color: rankColorMap[cat] || "blue",
+      }))
+  : [];
+
+// Rating history — computed from first occurrence of each rating
+const ratingHistory: { date: string; rating: string }[] = [];
+const seenRatings = new Set<string>();
+const sortedByDate = [...allEvents].sort((a, b) => a.date.localeCompare(b.date));
+for (const ev of sortedByDate) {
+  if (ev.rating && !seenRatings.has(ev.rating)) {
+    seenRatings.add(ev.rating);
+    ratingHistory.push({
+      date: ev.date.substring(0, 7), // "YYYY-MM"
+      rating: ev.rating,
+    });
+  }
+}
+
+// Achievements — auto-generated from events
+function computeAchievements() {
+  const achievements: { emoji: string; text: string; eventId: string | null }[] = [];
+
+  // Find golds and medals (top 3) at National/SYC level with 50+ fencers
+  const notable = [...allEvents]
+    .filter(e => e.place && e.total && e.total >= 50)
+    .sort((a, b) => b.date.localeCompare(a.date));
+
+  // Golds
+  for (const e of notable.filter(ev => ev.place === 1)) {
+    const month = new Date(e.date + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+    achievements.push({
+      emoji: "🏆",
+      text: `${e.tournament} ${e.event.replace("Men's Saber", "MS")} — Champion/${e.total} (${month})`,
+      eventId: makeEventId(e.date, e.event),
+    });
+  }
+
+  // Silver/Bronze at 100+ fencer events
+  for (const e of notable.filter(ev => ev.place && ev.place >= 2 && ev.place <= 3 && ev.total! >= 100)) {
+    const medal = e.place === 2 ? "🥈" : "🥉";
+    const placeStr = e.place === 2 ? "2nd" : "3rd";
+    const month = new Date(e.date + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+    achievements.push({
+      emoji: medal,
+      text: `${e.tournament} ${e.event.replace("Men's Saber", "MS")} — ${placeStr}/${e.total} (${month})`,
+      eventId: makeEventId(e.date, e.event),
+    });
+  }
+
+  // Top 8 at National events with 200+ fencers
+  for (const e of notable.filter(ev => ev.place && ev.place > 3 && ev.place <= 8 && ev.total! >= 200 && ev.level === "National")) {
+    const month = new Date(e.date + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+    achievements.push({
+      emoji: "🔝",
+      text: `${e.tournament} ${e.event.replace("Men's Saber", "MS")} — ${e.place}th/${e.total} (${month})`,
+      eventId: makeEventId(e.date, e.event),
+    });
+  }
+
+  // Rating progression
+  if (ratingHistory.length >= 2) {
+    const first = ratingHistory[0].rating;
+    const last = ratingHistory[ratingHistory.length - 1].rating;
+    const seasons = new Set(allEvents.filter(e => e.rating).map(e => e.season)).size;
+    achievements.push({
+      emoji: "📈",
+      text: `Rating progression: ${first} → ${last} in ${seasons} seasons`,
+      eventId: null,
+    });
+  }
+
+  return achievements;
+}
+
 export const profile = {
   name: "Rian Wei",
   chineseName: "魏瑞安",
@@ -6,31 +112,13 @@ export const profile = {
   weapon: "Men's Saber",
   club: "Capital Fencing Academy",
   division: "Capitol Division",
-  rating: "A26",
-  currentSeason: "2025-2026",
-  currentRankings: [
-    { category: "Y-14", rank: 2, color: "green" },
-    { category: "Cadet", rank: 6, color: "blue" },
-    { category: "Junior", rank: 50, color: "purple" },
-  ] as { category: string; rank: number; color: string }[],
-  ratingHistory: [
-    { date: "2023-07", rating: "E23" },
-    { date: "2024-01", rating: "D24" },
-    { date: "2024-07", rating: "C25" },
-    { date: "2025-01", rating: "B25" },
-    { date: "2025-07", rating: "B26" },
-    { date: "2026-01", rating: "A26" },
-  ],
+  rating: computedRating,
+  currentSeason: computedCurrentSeason,
+  currentRankings: computedRankings,
+  ratingHistory,
   location: "Bethesda, MD",
   bio: "Rising Men's Saber fencer competing at the Cadet, Junior, and Division I levels. Training at Capital Fencing Academy in the Capitol Division.",
-  achievements: [
-    { emoji: "🥈", text: "SJCC Junior Men's Saber — 2nd/117, Portland, OR (Jan 2026)", eventId: "2026-01-24_junior-men-s-saber" },
-    { emoji: "🔝", text: "Junior Olympics Junior MS — 11th/297, Columbus, OH (Jan 2026)", eventId: "2026-01-12_junior-men-s-saber" },
-    { emoji: "🏆", text: "Cobra Challenge Y-14 — Champion/150, Fort Worth, TX (Nov 2025)", eventId: "2025-11-29_y-14-men-s-saber" },
-    { emoji: "🥉", text: "Fairfax Challenge Y-14 — 3rd/96, Fairfax, VA (Mar 2025)", eventId: "2025-03-21_y-14-men-s-saber" },
-    { emoji: "🏆", text: "Capitol Clash Y-14 — Champion/182, Washington, DC (Jan 2025)", eventId: "2025-01-18_y-14-men-s-saber" },
-    { emoji: "📈", text: "Rating progression: E23 → A26 in 3 seasons", eventId: null },
-  ],
+  achievements: computeAchievements(),
   social: {
     instagram: "",
     youtube: "",
@@ -38,11 +126,8 @@ export const profile = {
   },
 };
 
-export const seasons = [
-  {
-    year: "2025-2026",
-    label: "Current Season",
-    events: [
+// REMOVED: seasons array was duplicate of events.ts — use allEvents instead
+/*
       // Summer Nationals 2025
       {
         id: "sn25-y14",
@@ -197,6 +282,4 @@ export const seasons = [
       },
     ],
   },
-];
-
-export type Event = (typeof seasons)[0]["events"][0];
+*/

@@ -140,37 +140,45 @@ export interface SeasonMeta {
   rankings?: Record<string, number>; // Category → national rank
 }
 
-export const seasonMeta: SeasonMeta[] = [
-  {
-    season: "2025-2026",
-    rating: "A26",
-    rankings: { "Y-14": 2, "Cadet": 6, "Junior": 50 },
-  },
-  {
-    season: "2024-2025",
-    rating: "C25",
-    rankings: { "Y-14": 29 },
-  },
-  {
-    season: "2023-2024",
-    rating: "E24",
-  },
-  {
-    season: "2022-2023",
-    rankings: { "Y-12": 11 },
-  },
-];
+// Rankings must be manually updated (from USA Fencing, not computable)
+const manualRankings: Record<string, Record<string, number>> = {
+  "2025-2026": { "Y-14": 2, "Cadet": 6, "Junior": 50 },
+  "2024-2025": { "Y-14": 29 },
+  "2022-2023": { "Y-12": 11 },
+};
 
-// Season order (newest first)
-export const seasonOrder = [
-  "2025-2026",
-  "2024-2025",
-  "2023-2024",
-  "2022-2023",
-  "2021-2022",
-  "2019-2020",
-  "2018-2019",
-];
+// Compute season ratings from events, combine with manual rankings
+function computeSeasonMeta(): SeasonMeta[] {
+  const ratingOrder = ['A', 'B', 'C', 'D', 'E', 'U'];
+  const bySeason: Record<string, CompEvent[]> = {};
+  for (const e of allEvents) {
+    if (!bySeason[e.season]) bySeason[e.season] = [];
+    bySeason[e.season].push(e);
+  }
+
+  return Object.entries(bySeason).map(([season, events]) => {
+    // Find highest rating in this season
+    const ratings = events.filter(e => e.rating).map(e => e.rating);
+    const bestRating = ratings.sort((a, b) => {
+      const ai = ratingOrder.indexOf(a[0]);
+      const bi = ratingOrder.indexOf(b[0]);
+      if (ai !== bi) return ai - bi;
+      return a.localeCompare(b); // same letter, compare year
+    })[0] || undefined;
+
+    const meta: SeasonMeta = { season };
+    if (bestRating) meta.rating = bestRating;
+    if (manualRankings[season]) meta.rankings = manualRankings[season];
+    return meta;
+  });
+}
+
+export const seasonMeta: SeasonMeta[] = computeSeasonMeta();
+
+// Season order (newest first) — computed from allEvents
+export const seasonOrder = [...new Set(allEvents.map((e) => e.season))].sort(
+  (a, b) => b.localeCompare(a)
+);
 
 // Color schemes
 export const levelColors: Record<TournamentLevel, { bg: string; cardBg: string; border: string; text: string }> = {
