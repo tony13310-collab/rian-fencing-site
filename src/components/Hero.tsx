@@ -62,14 +62,13 @@ export default function Hero() {
           className="relative flex flex-col items-center justify-center gap-3 mb-6"
         >
           <h1
-            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tight leading-tight"
+            className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-wider leading-tight uppercase"
             style={{
-              fontFamily: "'Playfair Display', Georgia, serif",
-              letterSpacing: "-0.02em",
+              fontFamily: "'Cinzel', 'Playfair Display', Georgia, serif",
               paddingBottom: "0.1em",
             }}
           >
-            <span className="gradient-text" style={{ fontStyle: "italic" }}>Rian Wei</span>
+            <span className="gradient-text">Rian Wei</span>
           </h1>
 
           {/* Chinese seal stamp image */}
