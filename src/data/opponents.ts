@@ -1,6 +1,7 @@
 // Auto-generated H2H opponent database - 405 opponents, 944 bouts
 // Generated from FencingTracker history + FTL pool bouts
-// birthYear: inferred from age categories (Y-14 in year Y → born ≥ Y-13)
+// birthYear: inferred from age categories, with manual overrides
+// NOTE: birthYear is MINIMUM (oldest possible). Actual birth year may be later.
 
 export interface OpponentBout {
   tournament: string;
@@ -6403,7 +6404,7 @@ export const opponents: Record<string, OpponentData> = {
         "score": "4-10"
       }
     ],
-    "birthYear": 2013
+    "birthYear": 2011
   },
   "LI Michael": {
     "wins": 4,

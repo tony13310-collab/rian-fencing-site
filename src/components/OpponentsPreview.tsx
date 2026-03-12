@@ -69,7 +69,8 @@ export default function OpponentsPreview() {
   // Split into most faced and tough matchups
   const topPeers = peers.slice(0, 10);
   const toughPeers = peers
-    .filter(p => p.data.total >= 2 && p.data.winRate <= 30)
+    .filter(p => p.data.total >= 2 && p.data.winRate < 50)
+    .sort((a, b) => a.data.winRate - b.data.winRate || b.data.total - a.data.total)
     .slice(0, 10);
 
   const totalPeers = peers.length;
