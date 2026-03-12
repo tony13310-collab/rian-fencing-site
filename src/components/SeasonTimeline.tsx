@@ -96,16 +96,6 @@ export default function SeasonTimeline({
           const medals = seasonEvents.filter(
             (e) => e.place && e.place <= 3
           ).length;
-          const bestPlace = seasonEvents.reduce(
-            (best, e) => {
-              if (!e.place || !e.total) return best;
-              const pct = e.place / e.total;
-              return !best.pct || pct < best.pct
-                ? { pct, place: e.place, total: e.total }
-                : best;
-            },
-            { pct: null as number | null, place: 0, total: 0 }
-          );
 
           return (
             <motion.div
@@ -218,12 +208,7 @@ export default function SeasonTimeline({
                           🏆 {medals} medals
                         </span>
                       )}
-                      {bestPlace.pct && (
-                        <span className="text-cyan-400/60">
-                          Best: {bestPlace.place}/{bestPlace.total} (
-                          {(bestPlace.pct * 100).toFixed(0)}%)
-                        </span>
-                      )}
+
                       {(() => {
                         let totalWins = 0;
                         let totalBouts = 0;
