@@ -59,7 +59,7 @@ export default function Hero() {
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="relative flex flex-col items-center justify-center gap-2 mb-6"
+          className="relative flex flex-col items-center justify-center gap-3 mb-6"
         >
           <h1
             className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-black tracking-tight"
@@ -81,7 +81,7 @@ export default function Hero() {
             <img
               src="/seal.png"
               alt="魏瑞安"
-              className="h-14 sm:h-16 md:h-20 lg:h-24 w-auto rounded-sm"
+              className="h-16 sm:h-18 md:h-20 lg:h-24 w-auto rounded-sm pb-1"
             />
           </motion.div>
         </motion.div>
