@@ -257,8 +257,18 @@ export const eventDetails: Record<string, EventDetail> = {
       indicator: 25,
       poolRank: null,
       poolSize: 7,
-      deSeed: null,
+      deSeed: 1,
     },
+    de: [
+      { round: "T256", opponent: "BYE", club: "", score: "BYE", win: true },
+      { round: "T128", opponent: "GAO Francis", club: "ZETAFENCING", score: "15-5", win: true },
+      { round: "T64", opponent: "LLOYD Max", club: "TIMMOREHOUSE", score: "15-12", win: true },
+      { round: "T32", opponent: "ROH Jaden", club: "GFA", score: "15-7", win: true },
+      { round: "T16", opponent: "BROOKS Theo", club: "CAPITALFA", score: "15-9", win: true },
+      { round: "T8", opponent: "DAI Zihou", club: "Z1FENCING", score: "15-12", win: true },
+      { round: "Semi", opponent: "BAI Evan", club: "AURAFENCING", score: "15-9", win: true },
+      { round: "Final", opponent: "URSU Marcel T.", club: "TIMMOREHOUSE", score: "15-8", win: true },
+    ],
   },
 
   // ====== November NAC 2025 (Fort Worth, TX) ======

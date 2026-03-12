@@ -17,6 +17,7 @@ export interface OpponentData {
   winRate: number;
   clubs: string[];
   bouts: OpponentBout[];
+  birthYear?: number | null;
 }
 
 export function getOpponentSlug(name: string): string {
@@ -24,6 +25,13 @@ export function getOpponentSlug(name: string): string {
     .toLowerCase()
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/^-|-$/g, "");
+}
+
+export function findOpponentBySlug(slug: string): [string, OpponentData] | null {
+  for (const [name, data] of Object.entries(opponents)) {
+    if (getOpponentSlug(name) === slug) return [name, data];
+  }
+  return null;
 }
 
 export const opponents: Record<string, OpponentData> = {
