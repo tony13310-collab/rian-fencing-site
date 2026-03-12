@@ -3,29 +3,16 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { opponents, getOpponentSlug, OpponentData } from "@/data/opponents";
-import { seasonOrder } from "@/data/events";
-
-// Get fencing season from a date string: Aug+ = next season, before Aug = current
-function getSeason(dateStr: string): string {
-  const d = new Date(dateStr);
-  const year = d.getFullYear();
-  const month = d.getMonth(); // 0-indexed
-  // Fencing season runs Aug-Jul: Aug 2025 → season 2025-2026
-  if (month >= 7) return `${year}-${year + 1}`;
-  return `${year - 1}-${year}`;
-}
 
 export default function OpponentsPreview() {
-  // Only use last 2 seasons
-  const recentSeasons = new Set(seasonOrder.slice(0, 2));
+  // Only use last 365 days
+  const cutoff = new Date();
+  cutoff.setDate(cutoff.getDate() - 365);
 
   // Filter opponents to recent bouts only and recompute stats
   const recentOpponents: [string, OpponentData][] = [];
   for (const [name, data] of Object.entries(opponents)) {
-    const recentBouts = data.bouts.filter(b => {
-      const season = getSeason(b.date);
-      return recentSeasons.has(season);
-    });
+    const recentBouts = data.bouts.filter(b => new Date(b.date) >= cutoff);
     if (recentBouts.length === 0) continue;
     const wins = recentBouts.filter(b => b.win).length;
     const losses = recentBouts.length - wins;
@@ -68,7 +55,7 @@ export default function OpponentsPreview() {
           </h2>
           <p className="text-white/50 text-xs sm:text-sm">
             {totalOpponents} opponents · {totalBouts} bouts · {totalBouts > 0 ? Math.round((totalWins / totalBouts) * 100) : 0}% win rate
-            <span className="text-white/30"> · Last 2 seasons</span>
+            <span className="text-white/30"> · Last 12 months</span>
           </p>
         </motion.div>
 
