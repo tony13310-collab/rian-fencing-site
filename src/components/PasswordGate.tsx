@@ -1,7 +1,6 @@
 "use client";
 
-import { useState, useEffect, useRef } from "react";
-import SaberFencer from "./SaberFencer";
+import { useState, useEffect } from "react";
 
 
 const PASS_HASH = "1cd683f8ec18781985cd2f9347ba8e1b6058ba3d7a15054c8d83bb8375b0559e"; // sha256 of password
@@ -16,8 +15,7 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
   const [input, setInput] = useState("");
   const [error, setError] = useState(false);
   const [checking, setChecking] = useState(true);
-  const [musicOn, setMusicOn] = useState(true);
-  const audioRef = useRef<HTMLAudioElement | null>(null);
+
 
   useEffect(() => {
     const stored = sessionStorage.getItem("rw_auth");
@@ -27,38 +25,12 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
     setChecking(false);
   }, []);
 
-  useEffect(() => {
-    if (unlocked) return;
-    // Create audio element
-    const audio = new Audio("/bgm.mp3");
-    audio.loop = true;
-    audio.volume = 0.3;
-    audioRef.current = audio;
-    // Auto-play on load
-    audio.play().catch(() => {});
-    return () => {
-      audio.pause();
-      audio.src = "";
-    };
-  }, [unlocked]);
-
-  const toggleMusic = () => {
-    const audio = audioRef.current;
-    if (!audio) return;
-    if (musicOn) {
-      audio.pause();
-    } else {
-      audio.play().catch(() => {});
-    }
-    setMusicOn(!musicOn);
-  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     const hash = await sha256(input.trim());
     if (hash === PASS_HASH) {
       sessionStorage.setItem("rw_auth", "1");
-      if (audioRef.current) audioRef.current.pause();
       setUnlocked(true);
       setError(false);
     } else {
@@ -92,18 +64,8 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
         />
       </div>
 
-      {/* Music toggle */}
-      <button
-        onClick={toggleMusic}
-        className="absolute top-4 right-4 z-50 w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center text-white/40 hover:text-white/70 hover:border-white/20 transition-all"
-        title={musicOn ? "Mute" : "Play music"}
-      >
-        {musicOn ? "🔊" : "🔇"}
-      </button>
-
       <div className="relative z-10 max-w-sm w-full text-center">
-        {/* Animated saber fencer */}
-        <SaberFencer />
+        <div className="text-7xl mb-6">🤺</div>
 
         <div className="mb-8">
           <h1
