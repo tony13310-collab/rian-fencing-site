@@ -66,11 +66,18 @@ export default function SeasonTimeline({
     return levelOk && catOk && placeOk;
   });
 
-  // Group by season
+  // Group by season (filtered for display)
   const bySeason: Record<string, CompEvent[]> = {};
   for (const e of filtered) {
     if (!bySeason[e.season]) bySeason[e.season] = [];
     bySeason[e.season].push(e);
+  }
+
+  // Group by season (ALL events, unfiltered - for season-level stats like pool win rate)
+  const allBySeason: Record<string, CompEvent[]> = {};
+  for (const e of events) {
+    if (!allBySeason[e.season]) allBySeason[e.season] = [];
+    allBySeason[e.season].push(e);
   }
 
   // Group events within season by tournament
@@ -210,7 +217,8 @@ export default function SeasonTimeline({
                         let poolBouts = 0;
                         let deWins = 0;
                         let deBouts = 0;
-                        for (const e of seasonEvents) {
+                        const allSeasonEvents = allBySeason[season] || [];
+                        for (const e of allSeasonEvents) {
                           const id = makeEventId(e.date, e.event);
                           const detail = eventDetails[id];
                           if (detail?.pool) {
