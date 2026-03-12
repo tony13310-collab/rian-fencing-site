@@ -38,7 +38,7 @@ function getSeasonLabel(season: string) {
 function getSeasonAge(season: string) {
   const startYear = parseInt(season.split("-")[0]);
   const age = startYear - 2011; // Rian born 2011
-  return `Age ${age}–${age + 1}`;
+  return `Age ${age}`;
 }
 
 export default function SeasonTimeline({
