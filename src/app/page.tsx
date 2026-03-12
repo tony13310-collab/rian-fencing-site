@@ -11,6 +11,7 @@ import Achievements from "@/components/Achievements";
 import Footer from "@/components/Footer";
 import OpponentsPreview from "@/components/OpponentsPreview";
 import Contact from "@/components/Contact";
+import PoolTrend from "@/components/PoolTrend";
 import { allEvents, TournamentLevel, AgeCategory } from "@/data/events";
 
 export default function Home() {
@@ -63,6 +64,7 @@ export default function Home() {
       <Hero />
       <Quotes />
       <StatsBar />
+      <PoolTrend />
       <FilterBar
         selectedLevels={selectedLevels}
         selectedCategories={selectedCategories}
