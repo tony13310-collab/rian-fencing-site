@@ -93,9 +93,7 @@ export default function SeasonTimeline({
           if (!seasonEvents || seasonEvents.length === 0) return null;
 
           const tournaments = groupByTournament(seasonEvents);
-          const finals = seasonEvents.filter(
-            (e) => e.place && e.place <= 8
-          ).length;
+
 
           return (
             <motion.div
@@ -206,28 +204,61 @@ export default function SeasonTimeline({
 
                     {/* Row 3: Medals + Pool win rate */}
                     <div className="flex gap-4 text-sm">
-                      {finals > 0 && (
-                        <span className="text-amber-400">
-                          🏆 {finals} finals
-                        </span>
-                      )}
+
                       {(() => {
-                        let totalWins = 0;
-                        let totalBouts = 0;
+                        let poolWins = 0;
+                        let poolBouts = 0;
+                        let deWins = 0;
+                        let deBouts = 0;
                         for (const e of seasonEvents) {
                           const id = makeEventId(e.date, e.event);
                           const detail = eventDetails[id];
                           if (detail?.pool) {
-                            totalWins += detail.pool.wins;
-                            totalBouts += detail.pool.wins + detail.pool.losses;
+                            poolWins += detail.pool.wins;
+                            poolBouts += detail.pool.wins + detail.pool.losses;
+                          }
+                          // Calculate DE wins from placement
+                          if (e.place && e.total && detail?.pool?.deSeed) {
+                            // DE tableau size = next power of 2 that fits deSeed
+                            const tableauSize = Math.pow(2, Math.ceil(Math.log2(detail.pool.deSeed)));
+                            // Total DE rounds in this tableau
+                            const totalRounds = Math.log2(tableauSize);
+                            // Rounds survived based on place
+                            let roundsWon = 0;
+                            if (e.place === 1) roundsWon = totalRounds;
+                            else if (e.place === 2) roundsWon = totalRounds - 1;
+                            else {
+                              // place 3-4 → lost in semis, place 5-8 → lost in quarters, etc.
+                              const bracket = Math.pow(2, Math.ceil(Math.log2(e.place)));
+                              roundsWon = totalRounds - Math.log2(bracket);
+                            }
+                            if (roundsWon > 0) {
+                              deWins += roundsWon;
+                              deBouts += roundsWon + 1; // won rounds + 1 loss
+                            } else {
+                              deBouts += 1; // lost first round
+                            }
                           }
                         }
-                        if (totalBouts === 0) return null;
-                        const pct = Math.round((totalWins / totalBouts) * 100);
                         return (
-                          <span className={`${pct >= 75 ? "text-green-400" : pct >= 60 ? "text-blue-400/70" : "text-white/50"}`}>
-                            Pool: {totalWins}-{totalBouts - totalWins} ({pct}%)
-                          </span>
+                          <>
+                            {poolBouts > 0 && (() => {
+                              const pct = Math.round((poolWins / poolBouts) * 100);
+                              return (
+                                <span className={`${pct >= 75 ? "text-green-400" : pct >= 60 ? "text-blue-400/70" : "text-white/50"}`}>
+                                  Pool: {poolWins}-{poolBouts - poolWins} ({pct}%)
+                                </span>
+                              );
+                            })()}
+                            {deBouts > 0 && (() => {
+                              const pct = Math.round((deWins / deBouts) * 100);
+                              return (
+                                <span className={`${pct >= 75 ? "text-green-400" : pct >= 60 ? "text-blue-400/70" : "text-white/50"}`}>
+                                  DE: {deWins}-{deBouts - deWins} ({pct}%)
+                                </span>
+                              );
+                            })()}
+                          </>
                         );
                       })()}
                     </div>
