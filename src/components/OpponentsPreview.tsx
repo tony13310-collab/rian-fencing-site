@@ -198,12 +198,12 @@ export default function OpponentsPreview() {
           </div>
         )}
 
-        {/* CTA */}
+        {/* CTA — links to full opponent list (all time, all ages) */}
         <Link
           href="/opponents"
           className="block text-center py-3 px-6 rounded-xl bg-cyan-500/10 border border-cyan-500/20 text-cyan-400 font-bold text-sm hover:bg-cyan-500/20 transition-colors"
         >
-          View All Opponents →
+          View All {Object.keys(opponents).length} Opponents →
         </Link>
       </div>
     </section>
