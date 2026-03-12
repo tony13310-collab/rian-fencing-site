@@ -92,12 +92,22 @@ export default function OpponentsPreview() {
           viewport={{ once: true }}
           className="mb-8"
         >
-          <h2 className="text-2xl md:text-3xl font-black gradient-text mb-1">
-            ⚔️ Peer Competitors
-          </h2>
-          <p className="text-white/50 text-xs sm:text-sm">
-            {totalPeers} peers · {totalBouts} bouts · {totalBouts > 0 ? Math.round((totalWins / totalBouts) * 100) : 0}% win rate
-            <span className="text-white/30"> · Last 12 months · Born 2010–2012</span>
+          <div className="flex items-center gap-4 flex-wrap mb-1">
+            <h2 className="text-2xl md:text-3xl font-black gradient-text">
+              Peer Competitors
+            </h2>
+            <span className="text-white/50 text-sm font-medium">
+              {totalPeers} peers
+            </span>
+            <span className="text-white/45 text-sm">
+              {totalBouts} bouts
+            </span>
+            <span className="text-white/45 text-sm">
+              {totalBouts > 0 ? Math.round((totalWins / totalBouts) * 100) : 0}% win
+            </span>
+          </div>
+          <p className="text-white/30 text-xs">
+            Last 12 months · Born 2010–2012
           </p>
         </motion.div>
 
