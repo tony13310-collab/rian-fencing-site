@@ -101,21 +101,8 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
       </button>
 
       <div className="relative z-10 max-w-sm w-full text-center">
-        {/* Fencing video */}
-        <div className="relative w-full mb-6 rounded-2xl overflow-hidden border border-white/10">
-          <video
-            autoPlay
-            loop
-            muted
-            playsInline
-            className="w-full h-auto opacity-70"
-            style={{ filter: "contrast(1.2) brightness(0.8)" }}
-          >
-            <source src="/fencing.mp4" type="video/mp4" />
-          </video>
-          {/* Gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-t from-[#0a0a0f] via-transparent to-[#0a0a0f]/50" />
-        </div>
+        {/* Fencing emoji */}
+        <div className="text-7xl mb-6">🤺</div>
 
         <div className="mb-8">
           <h1
