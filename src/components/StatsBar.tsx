@@ -2,6 +2,7 @@
 
 import { motion } from "framer-motion";
 import { allEvents } from "@/data/events";
+import { eventDetails } from "@/data/eventDetails";
 
 export default function StatsBar() {
   const totalEvents = allEvents.length;
@@ -17,6 +18,18 @@ export default function StatsBar() {
     (e) => e.place === 1
   ).length;
 
+  // Count pool and DE bouts from eventDetails
+  let poolBouts = 0;
+  let deBouts = 0;
+  for (const detail of Object.values(eventDetails)) {
+    if (detail.pool?.bouts) {
+      poolBouts += detail.pool.bouts.length;
+    }
+    if (detail.de) {
+      deBouts += detail.de.length;
+    }
+  }
+
   const stats = [
     {
       label: "Seasons",
@@ -31,21 +44,21 @@ export default function StatsBar() {
       color: "from-purple-400 to-violet-500",
     },
     {
-      label: "Gold Medals",
-      value: golds.toString(),
-      sub: "1st place",
+      label: "Pool Bouts",
+      value: poolBouts.toString(),
+      sub: "All time",
       color: "from-yellow-400 to-amber-500",
+    },
+    {
+      label: "DE Bouts",
+      value: deBouts.toString(),
+      sub: "All time",
+      color: "from-amber-400 to-orange-500",
     },
     {
       label: "Medals",
       value: medals.toString(),
       sub: "Top 3 finishes",
-      color: "from-amber-400 to-orange-500",
-    },
-    {
-      label: "Top 8",
-      value: top8.toString(),
-      sub: "All events",
       color: "from-green-400 to-emerald-500",
     },
   ];
