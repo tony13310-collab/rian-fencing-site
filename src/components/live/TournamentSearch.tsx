@@ -202,7 +202,7 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-            placeholder="±7 days from today"
+            placeholder="Name of the tournament"
             className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/70 focus:outline-none focus:border-white/30 text-sm"
           />
           <button
