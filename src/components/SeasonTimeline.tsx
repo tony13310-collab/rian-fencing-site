@@ -290,7 +290,7 @@ export default function SeasonTimeline({
                             >
                               {level === "International" ? "INTL" : level === "National" ? "NAT'L" : level}
                             </span>
-                            <h4 className="text-white/90 font-bold text-xs sm:text-sm md:text-base truncate">
+                            <h4 className="text-cyan-300 font-bold text-xs sm:text-sm md:text-base truncate">
                               {tourName}
                             </h4>
                           </div>
