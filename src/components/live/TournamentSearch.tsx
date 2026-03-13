@@ -147,8 +147,9 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
 
     // Hash tournament id to pick a consistent color
     const colorIdx = t.id.split("").reduce((sum, c) => sum + c.charCodeAt(0), 0) % colors.length;
-    const liveColor = { bg: "from-red-500/10 to-orange-500/5", border: "border-red-500/15", badge: "bg-red-500/20 text-red-400 border-red-500/30", ring: "ring-red-500/30" };
-    const color = isLive ? liveColor : colors[colorIdx];
+    const liveColor = { bg: "from-red-900/40 to-red-800/20", border: "border-red-700/30", badge: "bg-red-500/20 text-red-400 border-red-500/30", ring: "ring-red-500/30" };
+    const upcomingColor = { bg: "from-green-900/40 to-green-800/20", border: "border-green-700/30", badge: "bg-green-500/20 text-green-400 border-green-500/30", ring: "ring-green-500/30" };
+    const color = isLive ? liveColor : badge === "UPCOMING" ? upcomingColor : colors[colorIdx];
 
     return (
       <button
@@ -181,12 +182,12 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
           </div>
         </div>
 
-        {/* Bottom action hint */}
-        <div className={`px-4 py-2 text-xs uppercase tracking-wider font-bold text-center ${
-          isSelected ? "bg-red-500/10 text-red-400" : "bg-white/[0.02] text-white/50"
-        }`}>
-          {isSelected ? "✓ Selected — loading events..." : "Tap to view events →"}
-        </div>
+        {/* Selected indicator */}
+        {isSelected && (
+          <div className="px-4 py-2 text-xs uppercase tracking-wider font-bold text-center bg-red-500/10 text-red-400">
+            Loading events...
+          </div>
+        )}
       </button>
     );
   };
