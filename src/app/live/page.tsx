@@ -94,17 +94,10 @@ export default function LivePage() {
   }, []);
 
   return (
-    <main className="noise-overlay">
+    <main className="noise-overlay min-h-screen">
       <Navbar />
-      <div className="pt-24 pb-8 max-w-5xl mx-auto px-4 sm:px-6">
-        <div className="flex items-center gap-3 mb-2">
-          <span className="text-red-400 animate-pulse text-lg">●</span>
-          <h1 className="text-3xl font-bold text-white/90">Live Dashboard</h1>
-        </div>
-        <p className="text-white/40 text-sm">Real-time tournament tracking & opponent scouting</p>
-      </div>
 
-      <div className="pb-12 px-4 sm:px-6 max-w-5xl mx-auto">
+      <div className="max-w-5xl mx-auto px-4 sm:px-6 pt-24 pb-12">
         <AnimatePresence mode="wait">
           {view === "search" && (
             <motion.div
@@ -114,14 +107,31 @@ export default function LivePage() {
               exit={{ opacity: 0, y: -20 }}
               className="space-y-8"
             >
-              <FencerSearch />
-              <TournamentSearch
-                onTournamentFound={handleTournamentFound}
-                onEventSelect={handleEventSelect}
-                tournament={tournament}
-              />
+              {/* Scout Section */}
+              <section>
+                <h2 className="text-lg font-bold text-white/90 uppercase tracking-wider mb-4">
+                  🎯 Scout Opponent
+                </h2>
+                <FencerSearch />
+              </section>
+
+              {/* Divider */}
+              <div className="border-t border-white/10" />
+
+              {/* Tournaments Section */}
+              <section>
+                <h2 className="text-lg font-bold text-white/90 uppercase tracking-wider mb-4">
+                  🏆 Tournaments
+                </h2>
+                <TournamentSearch
+                  onTournamentFound={handleTournamentFound}
+                  onEventSelect={handleEventSelect}
+                  tournament={tournament}
+                />
+              </section>
             </motion.div>
           )}
+
           {view === "event" && selectedEvent && (
             <motion.div
               key="event"
@@ -131,7 +141,7 @@ export default function LivePage() {
             >
               <button
                 onClick={handleBack}
-                className="text-white/40 hover:text-white/70 text-sm mb-4 flex items-center gap-1"
+                className="text-white/60 hover:text-white text-sm mb-6 flex items-center gap-1"
               >
                 ← Back to tournaments
               </button>
@@ -143,6 +153,7 @@ export default function LivePage() {
           )}
         </AnimatePresence>
       </div>
+
       <Footer />
     </main>
   );

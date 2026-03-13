@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from "react";
 import type { Tournament, TournamentEvent } from "@/app/live/page";
-import FencerSearch from "./FencerSearch";
 
 const API_BASE = "https://rian-fencing-api.tony13310.workers.dev";
 
@@ -196,22 +195,6 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
 
   return (
     <div className="space-y-6">
-      {/* Header */}
-      <div className="text-center py-4">
-        <h1 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
-          <span className="text-red-400">●</span> Live Dashboard
-        </h1>
-        <p className="text-white/60 text-sm mt-2">Real-time competition analysis for Rian Wei</p>
-      </div>
-
-      {/* Fencer Scout Search */}
-      <div className="bg-white/[0.02] rounded-2xl border border-white/5 p-4">
-        <h2 className="text-white/70 text-xs uppercase tracking-wider font-bold mb-3">
-          🎯 Scout Opponent
-        </h2>
-        <FencerSearch />
-      </div>
-
       {/* Divider */}
       <div className="flex items-center gap-3">
         <div className="flex-1 h-px bg-white/5" />
