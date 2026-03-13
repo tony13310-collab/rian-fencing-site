@@ -1,6 +1,6 @@
 {
   "name": "rian-fencing-site",
-  "version": "5.0.0",
+  "version": "5.0.1",
   "private": true,
   "scripts": {
     "dev": "next dev",
