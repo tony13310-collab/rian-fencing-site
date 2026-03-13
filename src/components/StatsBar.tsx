@@ -90,17 +90,12 @@ export default function StatsBar() {
       sub: "All time",
       color: "from-teal-400 to-cyan-500",
     },
-    {
-      label: "Top 8",
-      value: top8.toString(),
-      sub: "All time",
-      color: "from-yellow-300 to-amber-500",
-    },
+
   ];
 
   return (
     <section className="relative z-20 px-4 sm:px-6 max-w-6xl mx-auto pt-12 pb-8">
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4">
+      <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
         {stats.map((stat, i) => (
           <motion.div
             key={stat.label}
