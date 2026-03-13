@@ -1,0 +1,3120 @@
+[
+  {
+    "date": "2025-03-15",
+    "tourn": "Capital Czajkowski",
+    "event": "Senior Mixed Saber",
+    "from": "2025-03-14",
+    "to": "2025-03-16",
+    "tournId": "F9CBC05CDFA548089C27498A926E6E66",
+    "eventId": null,
+    "events": [
+      {
+        "id": "759D718E5B0149278533708A882F85CC",
+        "name": ""
+      }
+    ]
+  },
+  {
+    "date": "2025-01-05",
+    "tourn": "January NAC",
+    "event": "Cadet Men's Saber",
+    "from": "2025-01-03",
+    "to": "2025-01-07",
+    "tournId": "5DBF919C0C4D4299A4D1806EFC6F41E7",
+    "eventId": null,
+    "events": [
+      {
+        "id": "9C8D4CCFB26B44AAB90679319D33A196",
+        "name": ""
+      },
+      {
+        "id": "68A368C5FE7E42838CCEC5F294A1277E",
+        "name": ""
+      },
+      {
+        "id": "B9C2D803C02B47F9BB244BB88D571BCF",
+        "name": ""
+      },
+      {
+        "id": "B1A00B7E8D984DAD81199B73C1AD088E",
+        "name": ""
+      },
+      {
+        "id": "E40FA789980D41C0892E7B075B2E1923",
+        "name": ""
+      },
+      {
+        "id": "0C8EC468490F47339B0D8D8ECFB3D7F3",
+        "name": ""
+      },
+      {
+        "id": "F4916931881A48FD901CA41D770EC9CE",
+        "name": ""
+      },
+      {
+        "id": "8796804F3C19466ABE4208E6AB8A27F4",
+        "name": ""
+      },
+      {
+        "id": "1C95C85C17A34D5FB2C62D8819D2E290",
+        "name": ""
+      },
+      {
+        "id": "A78675F449D44855935E36AA18375A3E",
+        "name": ""
+      },
+      {
+        "id": "F29F94D7F4A9416192B23DB47FD458F8",
+        "name": ""
+      },
+      {
+        "id": "F1CF14D5C4C94D59A6E5668630FB4889",
+        "name": ""
+      },
+      {
+        "id": "C78E5980FBAC45AE8260F5D3234DD5A6",
+        "name": ""
+      },
+      {
+        "id": "1ACC8810BD1B4FAABBB74B621B6181A2",
+        "name": ""
+      },
+      {
+        "id": "FCFE9BFB388A4B9580257F2FCFA59605",
+        "name": ""
+      },
+      {
+        "id": "C944C02FB28549189CC1089FFAC6FC33",
+        "name": ""
+      },
+      {
+        "id": "BBB82A451C6646F5A21A048570B8DF6E",
+        "name": ""
+      },
+      {
+        "id": "CE6FC89373764745AA0EADA9532537A9",
+        "name": ""
+      },
+      {
+        "id": "A086D7AD29194F2B9FDBE38F097C9C44",
+        "name": ""
+      },
+      {
+        "id": "24E4DD4EC9724CD3ADF7B071DDC12A51",
+        "name": ""
+      },
+      {
+        "id": "B55016E42583440697A6CC3EDFB4481F",
+        "name": ""
+      },
+      {
+        "id": "842E24E5635348BC80242864F3C13D44",
+        "name": ""
+      },
+      {
+        "id": "46F6408BE988487BA557B2897A90AA69",
+        "name": ""
+      },
+      {
+        "id": "CBD7E18F917C491799E1E40A2F060510",
+        "name": ""
+      },
+      {
+        "id": "78EEDA288ECD456C91C0D0AFDCD901C3",
+        "name": ""
+      },
+      {
+        "id": "22C31252C9B449A69A8FB40DA858C27F",
+        "name": ""
+      },
+      {
+        "id": "7E96D6B421214764A955A2FD0A2E3115",
+        "name": ""
+      },
+      {
+        "id": "066D75644EB94A6D84BF77B79939E927",
+        "name": ""
+      },
+      {
+        "id": "E07817CB805640568C55CD58D3C87674",
+        "name": ""
+      },
+      {
+        "id": "AF83BF428F6441679A8AE3AD03625C4D",
+        "name": ""
+      },
+      {
+        "id": "15D283DC31C74A3BBC1EC745F634C5D3",
+        "name": ""
+      },
+      {
+        "id": "30DC03F1471444FFB8B16F849A8FC115",
+        "name": ""
+      },
+      {
+        "id": "B4AD67509B1B4CC691AB3C4714D7B672",
+        "name": ""
+      },
+      {
+        "id": "A6C1EC3140BB4557802AC8FC927BF4E5",
+        "name": ""
+      },
+      {
+        "id": "F79E76D26B884FD9ADF082AC874E53F3",
+        "name": ""
+      },
+      {
+        "id": "D3D95177D1584B2B860C5DF915193A52",
+        "name": ""
+      },
+      {
+        "id": "85F646B017374DC8BBB9D275495C6776",
+        "name": ""
+      },
+      {
+        "id": "6B272F1232E6446CA90DD4B4EC46D905",
+        "name": ""
+      },
+      {
+        "id": "35E82C00615541508D04C6AA12B290D2",
+        "name": ""
+      },
+      {
+        "id": "54C29D8E5541416794D62E3061E9F06A",
+        "name": ""
+      },
+      {
+        "id": "0EC5C8284D224568A49669852810F0F0",
+        "name": ""
+      },
+      {
+        "id": "505773EF5D2344C0A46F4F184C134FF4",
+        "name": ""
+      },
+      {
+        "id": "0269988EFFAB429EA52D4377A7F74634",
+        "name": ""
+      },
+      {
+        "id": "8A31CE87887F4AA2B97A8EEDCB3F3B36",
+        "name": ""
+      },
+      {
+        "id": "CB7CE7BF25B94638A868FD28C13E60F5",
+        "name": ""
+      },
+      {
+        "id": "EB6F467492DF45A0862AB589B8F8EF7E",
+        "name": ""
+      },
+      {
+        "id": "B5CAAD343F974205BD5CC7428DDCBCB3",
+        "name": ""
+      },
+      {
+        "id": "1C634A7350F54EC498723942FBED374E",
+        "name": ""
+      },
+      {
+        "id": "370BD4B907884B37956D0BD2D8F23D36",
+        "name": ""
+      },
+      {
+        "id": "CDB4AC6B27A6412FA0F9C7482864CF40",
+        "name": ""
+      },
+      {
+        "id": "78B6407407964E78AE2038C51C1C3C9E",
+        "name": ""
+      },
+      {
+        "id": "DE4595B7E7EE441D93360A97AB836B5A",
+        "name": ""
+      },
+      {
+        "id": "4F2149AF9B8340CD8BF4B98AF311BBE5",
+        "name": ""
+      },
+      {
+        "id": "38E3DBDD5D464A25B6F5DFC3E375CC46",
+        "name": ""
+      },
+      {
+        "id": "0C321169F5444F389DDA148D27B5ACB0",
+        "name": ""
+      },
+      {
+        "id": "8F072594812E430D890D531CE2B4CC21",
+        "name": ""
+      },
+      {
+        "id": "EE7D4F0502CF476C8657FF3633AA7117",
+        "name": ""
+      },
+      {
+        "id": "72011F8A89CC4A499B659DB3586B5481",
+        "name": ""
+      },
+      {
+        "id": "056B4DCAB7F24190BF990B032890B76F",
+        "name": ""
+      }
+    ]
+  },
+  {
+    "date": "2024-10-12",
+    "tourn": "Ben Gutenberg",
+    "event": "Y-14 Men's Saber",
+    "from": "2024-10-11",
+    "to": "2024-10-13",
+    "tournId": "91DF2DCD3F4947B28E9C9188CE7D606B",
+    "eventId": null,
+    "events": [
+      {
+        "id": "1B373601C685478692BB56A0B80DB037",
+        "name": ""
+      },
+      {
+        "id": "34CBA5B54CD44557A171EB739EAFE647",
+        "name": ""
+      },
+      {
+        "id": "6C405B09500844E380C7C51DA9244059",
+        "name": ""
+      },
+      {
+        "id": "8F95EBB3B0AB45B9BAE328D39D81696D",
+        "name": ""
+      },
+      {
+        "id": "C64CFD7C0FA744A89C4AFF70E09175B3",
+        "name": ""
+      },
+      {
+        "id": "E9415CDECA134F15B8EB76C4025BB9F1",
+        "name": ""
+      },
+      {
+        "id": "A3EAF98618FA4FECAC155ED94D9140D7",
+        "name": ""
+      },
+      {
+        "id": "04B40D442944444393B42364989FAA1F",
+        "name": ""
+      },
+      {
+        "id": "0920A269541341A9B51ACD4FAC940EB6",
+        "name": ""
+      },
+      {
+        "id": "650757ADB12E47BABD7410CD1089770A",
+        "name": ""
+      },
+      {
+        "id": "CE2BF7015B43418EB88576F5C7AA8614",
+        "name": ""
+      },
+      {
+        "id": "89CEE28DCF0749BFA963FE571689DD03",
+        "name": ""
+      },
+      {
+        "id": "DDC5796DD2FF40019ECD4A82F56982F3",
+        "name": ""
+      },
+      {
+        "id": "C29C254F172047E1A35D7F93183B2562",
+        "name": ""
+      },
+      {
+        "id": "BDAF138BEBB1477CB08B563241BF7444",
+        "name": ""
+      },
+      {
+        "id": "8021488F2835495A8CB6C5177E04E63C",
+        "name": ""
+      },
+      {
+        "id": "40656464739842C0913961E91064A9F0",
+        "name": ""
+      },
+      {
+        "id": "71A7571855BD4DE1AA20C44BE97F89AE",
+        "name": ""
+      },
+      {
+        "id": "74776CBF87164512B5D5F011F74F3AC8",
+        "name": ""
+      },
+      {
+        "id": "9897A6A5D2F64C84A914DB1E3B23C937",
+        "name": ""
+      },
+      {
+        "id": "1336C1EA6C1E4B7C80A767B861135F84",
+        "name": ""
+      },
+      {
+        "id": "7696D177E2DD47A7ABBFB12C39852A44",
+        "name": ""
+      },
+      {
+        "id": "D918993B8C834E42B908DE394D0EDBEB",
+        "name": ""
+      },
+      {
+        "id": "20A7917F8408492CB9E40ED8321303AF",
+        "name": ""
+      },
+      {
+        "id": "567968BB4A31426FBE9529B82E818A16",
+        "name": ""
+      },
+      {
+        "id": "049BAE08EBA849898AFFA7BCBABE4002",
+        "name": ""
+      },
+      {
+        "id": "A6D2B6A2BF9843BFA411363226052107",
+        "name": ""
+      },
+      {
+        "id": "3B95DD0EFB4E443CAB4B08E7ED3F131F",
+        "name": ""
+      },
+      {
+        "id": "88117D7E41F64B7FA8ED39336FCB5613",
+        "name": ""
+      },
+      {
+        "id": "D87234564DB84BA7A6A4D3742AA073AC",
+        "name": ""
+      },
+      {
+        "id": "6855FBE1D72D4773A9BE54E0565E6C0E",
+        "name": ""
+      },
+      {
+        "id": "99C2D27FB6C24E80B747758EFBB1BE46",
+        "name": ""
+      },
+      {
+        "id": "EE80F223E4B44D7D93FA14F9217146C8",
+        "name": ""
+      },
+      {
+        "id": "88C9E26EFDA34257933375091CE1A73A",
+        "name": ""
+      },
+      {
+        "id": "5A98A94C6CC54F7F88F9393D76EDEFF5",
+        "name": ""
+      }
+    ]
+  },
+  {
+    "date": "2024-09-21",
+    "tourn": "River City",
+    "event": "Cadet Men's Saber",
+    "from": "2024-09-20",
+    "to": "2024-09-22",
+    "tournId": "16D9495743F5407FBA820F348D342CA6",
+    "eventId": null,
+    "events": [
+      {
+        "id": "090F5AB2CA984D1F9867E307B0AA5E5D",
+        "name": ""
+      },
+      {
+        "id": "9E25DC1E25D44A978C72D17156681F9E",
+        "name": ""
+      },
+      {
+        "id": "D1391DD75A244A38963C2E16740F5F50",
+        "name": ""
+      },
+      {
+        "id": "F72620BBE4024166BB70BEE07D8D8581",
+        "name": ""
+      },
+      {
+        "id": "FC67578093484DBE8E702BCECCA38E1A",
+        "name": ""
+      },
+      {
+        "id": "945DE8CD0CCA4987A138B0D79BB5B0CA",
+        "name": ""
+      },
+      {
+        "id": "BC402D1D74C04870B43366C799EA97F5",
+        "name": ""
+      },
+      {
+        "id": "77C8B03276AD4EF0BDB2C926E5A73A34",
+        "name": ""
+      },
+      {
+        "id": "F7B9650314EF497B98A10D513C9F7564",
+        "name": ""
+      },
+      {
+        "id": "5B2A4770229041C9AE5CFAFB4646432A",
+        "name": ""
+      },
+      {
+        "id": "4817FC270A114AF69307F06FB9F38986",
+        "name": ""
+      },
+      {
+        "id": "D0FAE50387E14BFE90204EDB7E7BE156",
+        "name": ""
+      },
+      {
+        "id": "D81C22A5195A446FB634BD7DBABC4A30",
+        "name": ""
+      },
+      {
+        "id": "61C8895A874740589B4F4FBC3625E0B8",
+        "name": ""
+      },
+      {
+        "id": "68594CE37A4843B496A698F5D2020AB4",
+        "name": ""
+      },
+      {
+        "id": "87C8F736B38848A6A58DF75E35502CEB",
+        "name": ""
+      },
+      {
+        "id": "7F83DD18D59B496580C136F7FF9A9A3D",
+        "name": ""
+      },
+      {
+        "id": "B5F582E028D24F9EBE2139DCAC41560E",
+        "name": ""
+      },
+      {
+        "id": "820BC08CDC254045878F91966B0BFDC4",
+        "name": ""
+      },
+      {
+        "id": "024A7FDED0C44CD8A4B0D7EE4CB3CA1F",
+        "name": ""
+      },
+      {
+        "id": "8259E55BFC44445EB10A3A5A452DE572",
+        "name": ""
+      },
+      {
+        "id": "3A27A9A6C3D94217B72AF91D9BA7E857",
+        "name": ""
+      },
+      {
+        "id": "7DD0DF4841724B38BC3BE2548BF05D82",
+        "name": ""
+      },
+      {
+        "id": "CB9223849928430A89B08169C29473F5",
+        "name": ""
+      },
+      {
+        "id": "004BD33852CD4C96A451C3EB2CA370A5",
+        "name": ""
+      },
+      {
+        "id": "FBC9FAD272534D6DB645731A12422649",
+        "name": ""
+      },
+      {
+        "id": "EAD671BE31CE47D392BCD26276FD1D5A",
+        "name": ""
+      },
+      {
+        "id": "6DE88E3166AF4A6DAE3B087B78A8213D",
+        "name": ""
+      },
+      {
+        "id": "D8901AB5EFAB46D4A06C649B8526BEEC",
+        "name": ""
+      },
+      {
+        "id": "0E1FA7AD533A46FF9EA1C1C9F1CF2C93",
+        "name": ""
+      },
+      {
+        "id": "F4CE200B86294B5CB69B9DCFBE0AEFB4",
+        "name": ""
+      },
+      {
+        "id": "DD4AB7FD127C4BFDB2B9ECC1BF4F8F23",
+        "name": ""
+      },
+      {
+        "id": "FE948902D2DF4051B75D8C3F996970D4",
+        "name": ""
+      },
+      {
+        "id": "170D1BB7F5B147B189A2F94014B83500",
+        "name": ""
+      },
+      {
+        "id": "72328E4B1F0141FB95BB4C7979B7A159",
+        "name": ""
+      },
+      {
+        "id": "B42198B477C84A83A498E76DD845208C",
+        "name": ""
+      }
+    ]
+  },
+  {
+    "date": "2024-05-05",
+    "tourn": "Mission SYC",
+    "event": "Y-12 Men's Saber",
+    "from": "2024-05-03",
+    "to": "2024-05-06",
+    "tournId": "DB91FD7D700643C7A66980EF3C7B8F97",
+    "eventId": null,
+    "events": [
+      {
+        "id": "49E53B49FD9845ECAF6E4A9B24A9E36C",
+        "name": ""
+      },
+      {
+        "id": "AF60B63C4043401D9FE3098F3BA4B190",
+        "name": ""
+      },
+      {
+        "id": "10B4CA09A1D24A87BC7831149559B98B",
+        "name": ""
+      },
+      {
+        "id": "C27AFEEE7AAA4ECAA4788B756A5620E6",
+        "name": ""
+      },
+      {
+        "id": "35B8DB540F334D94AC2D0843292C11BD",
+        "name": ""
+      },
+      {
+        "id": "A9ACACDF69824F78AA6EE55A67DBF5B1",
+        "name": ""
+      },
+      {
+        "id": "B68C81DC6E344E28BD429E0C4529E150",
+        "name": ""
+      },
+      {
+        "id": "DCCF412520A24269BC2DCD33B22DB8FB",
+        "name": ""
+      },
+      {
+        "id": "FF85124947E44714B4820FCE033882BA",
+        "name": ""
+      },
+      {
+        "id": "B2A7DA8962F647668186CA8D1AF7596D",
+        "name": ""
+      },
+      {
+        "id": "24C9089CD4B949E080A994E62F8DD46B",
+        "name": ""
+      },
+      {
+        "id": "88B79A9E0BCC472A920E5A6EE929AB4E",
+        "name": ""
+      },
+      {
+        "id": "3D287685D105411D9A4851D5B515D1E1",
+        "name": ""
+      },
+      {
+        "id": "61BE16C6F9274503BECCACF227B55E92",
+        "name": ""
+      },
+      {
+        "id": "FFFC6BE6A9D6456EBF0CC29027B87D49",
+        "name": ""
+      },
+      {
+        "id": "1CF882D568444563A17648111E04E8A8",
+        "name": ""
+      },
+      {
+        "id": "6E080E49F2A14FD192BE40697C022000",
+        "name": ""
+      },
+      {
+        "id": "837DB1C901BB48C5BAC2933B9E7986D1",
+        "name": ""
+      }
+    ]
+  },
+  {
+    "date": "2024-05-04",
+    "tourn": "Mission SYC",
+    "event": "Y-14 Men's Saber",
+    "from": "2024-05-03",
+    "to": "2024-05-06",
+    "tournId": "DB91FD7D700643C7A66980EF3C7B8F97",
+    "eventId": null,
+    "events": [
+      {
+        "id": "49E53B49FD9845ECAF6E4A9B24A9E36C",
+        "name": ""
+      },
+      {
+        "id": "AF60B63C4043401D9FE3098F3BA4B190",
+        "name": ""
+      },
+      {
+        "id": "10B4CA09A1D24A87BC7831149559B98B",
+        "name": ""
+      },
+      {
+        "id": "C27AFEEE7AAA4ECAA4788B756A5620E6",
+        "name": ""
+      },
+      {
+        "id": "35B8DB540F334D94AC2D0843292C11BD",
+        "name": ""
+      },
+      {
+        "id": "A9ACACDF69824F78AA6EE55A67DBF5B1",
+        "name": ""
+      },
+      {
+        "id": "B68C81DC6E344E28BD429E0C4529E150",
+        "name": ""
+      },
+      {
+        "id": "DCCF412520A24269BC2DCD33B22DB8FB",
+        "name": ""
+      },
+      {
+        "id": "FF85124947E44714B4820FCE033882BA",
+        "name": ""
+      },
+      {
+        "id": "B2A7DA8962F647668186CA8D1AF7596D",
+        "name": ""
+      },
+      {
+        "id": "24C9089CD4B949E080A994E62F8DD46B",
+        "name": ""
+      },
+      {
+        "id": "88B79A9E0BCC472A920E5A6EE929AB4E",
+        "name": ""
+      },
+      {
+        "id": "3D287685D105411D9A4851D5B515D1E1",
+        "name": ""
+      },
+      {
+        "id": "61BE16C6F9274503BECCACF227B55E92",
+        "name": ""
+      },
+      {
+        "id": "FFFC6BE6A9D6456EBF0CC29027B87D49",
+        "name": ""
+      },
+      {
+        "id": "1CF882D568444563A17648111E04E8A8",
+        "name": ""
+      },
+      {
+        "id": "6E080E49F2A14FD192BE40697C022000",
+        "name": ""
+      },
+      {
+        "id": "837DB1C901BB48C5BAC2933B9E7986D1",
+        "name": ""
+      }
+    ]
+  },
+  {
+    "date": "2024-04-21",
+    "tourn": "NoVA Knights",
+    "event": "Cadet Men's Saber",
+    "from": "2024-04-19",
+    "to": "2024-04-22",
+    "tournId": "A48C487F9C7043F69FBE048BF20DBFB5",
+    "eventId": null,
+    "events": [
+      {
+        "id": "CD7ABE55DD4A4DA1A3DC93D5DD1D0BF8",
+        "name": ""
+      },
+      {
+        "id": "B66F115E32E4425FBA68C6B3ED4C7DDF",
+        "name": ""
+      },
+      {
+        "id": "751EF4090EB8438CB23D3B8E21724C93",
+        "name": ""
+      },
+      {
+        "id": "7955123E022E4FCBAC7F336B8E73EBCC",
+        "name": ""
+      },
+      {
+        "id": "DA5985342D7C4796A87A75D4861C01CC",
+        "name": ""
+      },
+      {
+        "id": "273F983AD38D4F3D9132D89B83E231E7",
+        "name": ""
+      },
+      {
+        "id": "3E1EE034118240A095B52F069E29C91F",
+        "name": ""
+      },
+      {
+        "id": "0E33B7E506B24A408563877B39835451",
+        "name": ""
+      },
+      {
+        "id": "9A04DAA2E984425DA96D550F902B6BE4",
+        "name": ""
+      },
+      {
+        "id": "A45F4BB6DC44496A8BE5DD2697DDCDF8",
+        "name": ""
+      },
+      {
+        "id": "924747A0BE9440E48DA196B996242533",
+        "name": ""
+      },
+      {
+        "id": "94BBC35D94BC4DA9840B2061D9E1F875",
+        "name": ""
+      },
+      {
+        "id": "306E51D218CB4834A7549C1AF7A6893E",
+        "name": ""
+      },
+      {
+        "id": "5CF42D8D1802413AB55CC9296711C12E",
+        "name": ""
+      },
+      {
+        "id": "24B278FF2B444E71AA9576FBE7C7BC28",
+        "name": ""
+      },
+      {
+        "id": "DB6D311C757247208C8F7D468783ACE8",
+        "name": ""
+      },
+      {
+        "id": "5F6610B0026A488BBBDAB89B61A268C1",
+        "name": ""
+      },
+      {
+        "id": "80E09359412C46D3894C2C859B3230B3",
+        "name": ""
+      },
+      {
+        "id": "185554C30E764DC0A7284BF371BE2D4D",
+        "name": ""
+      },
+      {
+        "id": "F0C46479E1694153A55910EF61F1FD94",
+        "name": ""
+      },
+      {
+        "id": "9C63611E970E4CF3B9E55C2EFF2EAB67",
+        "name": ""
+      },
+      {
+        "id": "3F0828B67D7742A29EDFD406C807E041",
+        "name": ""
+      },
+      {
+        "id": "A1E0BA93957C4238985C44607AD7AC32",
+        "name": ""
+      },
+      {
+        "id": "95594F2979834B9CB495C7DD37C7CD1B",
+        "name": ""
+      },
+      {
+        "id": "0EA4886E9F7F4BC7B190336B07DB19EA",
+        "name": ""
+      },
+      {
+        "id": "A78882284F6A4F85AE0CA4E2A5ACC25C",
+        "name": ""
+      },
+      {
+        "id": "AFBCEB9E33B04E0599AD9235B7B78C38",
+        "name": ""
+      },
+      {
+        "id": "E6D04D02F43F449BB4306A83D9C95537",
+        "name": ""
+      },
+      {
+        "id": "7934E082D94E429483384AFD9090BBD7",
+        "name": ""
+      },
+      {
+        "id": "E0E32553E7FF432190E0D5FA1C922E4A",
+        "name": ""
+      },
+      {
+        "id": "AAEA5BC34363427CB3C24E9924AE9E82",
+        "name": ""
+      },
+      {
+        "id": "A320ECBBF31644288D1B948384D2D315",
+        "name": ""
+      },
+      {
+        "id": "C6ADF5A70F3445AC8729DD4E313CBA4C",
+        "name": ""
+      },
+      {
+        "id": "C0494611D0FB44819B110BB5581060A1",
+        "name": ""
+      },
+      {
+        "id": "BFBC2C4FED4745F29BCFBA5E7FA8BD5E",
+        "name": ""
+      }
+    ]
+  },
+  {
+    "date": "2024-04-20",
+    "tourn": "NoVA Knights",
+    "event": "Y-14 Men's Saber",
+    "from": "2024-04-19",
+    "to": "2024-04-22",
+    "tournId": "A48C487F9C7043F69FBE048BF20DBFB5",
+    "eventId": null,
+    "events": [
+      {
+        "id": "CD7ABE55DD4A4DA1A3DC93D5DD1D0BF8",
+        "name": ""
+      },
+      {
+        "id": "B66F115E32E4425FBA68C6B3ED4C7DDF",
+        "name": ""
+      },
+      {
+        "id": "751EF4090EB8438CB23D3B8E21724C93",
+        "name": ""
+      },
+      {
+        "id": "7955123E022E4FCBAC7F336B8E73EBCC",
+        "name": ""
+      },
+      {
+        "id": "DA5985342D7C4796A87A75D4861C01CC",
+        "name": ""
+      },
+      {
+        "id": "273F983AD38D4F3D9132D89B83E231E7",
+        "name": ""
+      },
+      {
+        "id": "3E1EE034118240A095B52F069E29C91F",
+        "name": ""
+      },
+      {
+        "id": "0E33B7E506B24A408563877B39835451",
+        "name": ""
+      },
+      {
+        "id": "9A04DAA2E984425DA96D550F902B6BE4",
+        "name": ""
+      },
+      {
+        "id": "A45F4BB6DC44496A8BE5DD2697DDCDF8",
+        "name": ""
+      },
+      {
+        "id": "924747A0BE9440E48DA196B996242533",
+        "name": ""
+      },
+      {
+        "id": "94BBC35D94BC4DA9840B2061D9E1F875",
+        "name": ""
+      },
+      {
+        "id": "306E51D218CB4834A7549C1AF7A6893E",
+        "name": ""
+      },
+      {
+        "id": "5CF42D8D1802413AB55CC9296711C12E",
+        "name": ""
+      },
+      {
+        "id": "24B278FF2B444E71AA9576FBE7C7BC28",
+        "name": ""
+      },
+      {
+        "id": "DB6D311C757247208C8F7D468783ACE8",
+        "name": ""
+      },
+      {
+        "id": "5F6610B0026A488BBBDAB89B61A268C1",
+        "name": ""
+      },
+      {
+        "id": "80E09359412C46D3894C2C859B3230B3",
+        "name": ""
+      },
+      {
+        "id": "185554C30E764DC0A7284BF371BE2D4D",
+        "name": ""
+      },
+      {
+        "id": "F0C46479E1694153A55910EF61F1FD94",
+        "name": ""
+      },
+      {
+        "id": "9C63611E970E4CF3B9E55C2EFF2EAB67",
+        "name": ""
+      },
+      {
+        "id": "3F0828B67D7742A29EDFD406C807E041",
+        "name": ""
+      },
+      {
+        "id": "A1E0BA93957C4238985C44607AD7AC32",
+        "name": ""
+      },
+      {
+        "id": "95594F2979834B9CB495C7DD37C7CD1B",
+        "name": ""
+      },
+      {
+        "id": "0EA4886E9F7F4BC7B190336B07DB19EA",
+        "name": ""
+      },
+      {
+        "id": "A78882284F6A4F85AE0CA4E2A5ACC25C",
+        "name": ""
+      },
+      {
+        "id": "AFBCEB9E33B04E0599AD9235B7B78C38",
+        "name": ""
+      },
+      {
+        "id": "E6D04D02F43F449BB4306A83D9C95537",
+        "name": ""
+      },
+      {
+        "id": "7934E082D94E429483384AFD9090BBD7",
+        "name": ""
+      },
+      {
+        "id": "E0E32553E7FF432190E0D5FA1C922E4A",
+        "name": ""
+      },
+      {
+        "id": "AAEA5BC34363427CB3C24E9924AE9E82",
+        "name": ""
+      },
+      {
+        "id": "A320ECBBF31644288D1B948384D2D315",
+        "name": ""
+      },
+      {
+        "id": "C6ADF5A70F3445AC8729DD4E313CBA4C",
+        "name": ""
+      },
+      {
+        "id": "C0494611D0FB44819B110BB5581060A1",
+        "name": ""
+      },
+      {
+        "id": "BFBC2C4FED4745F29BCFBA5E7FA8BD5E",
+        "name": ""
+      }
+    ]
+  },
+  {
+    "date": "2023-09-24",
+    "tourn": "River City",
+    "event": "Y-14 Men's Saber",
+    "from": "2023-09-22",
+    "to": "2023-09-25",
+    "tournId": "CE5D9DBB6BA644868213262329544891",
+    "eventId": null,
+    "events": [
+      {
+        "id": "AF4DC4DB37494AE292E2B3CD5C20E97D",
+        "name": ""
+      },
+      {
+        "id": "4DDDAA65085C43F0B1D94EBBA0375DDF",
+        "name": ""
+      },
+      {
+        "id": "F1821C5E543848CC8B48D2081D8C52D6",
+        "name": ""
+      },
+      {
+        "id": "B2FD4F1A5F934D968498F4F356910C68",
+        "name": ""
+      },
+      {
+        "id": "FC7FFA4351D647AC891BD6655BCF19A5",
+        "name": ""
+      },
+      {
+        "id": "300EC5A1F8FE4C28847AF712B7EC1F04",
+        "name": ""
+      },
+      {
+        "id": "BA9D77BCC1B747D89A94E1F4B0B9F04C",
+        "name": ""
+      },
+      {
+        "id": "20A33B6B1B93446BBE27668C1F572BB4",
+        "name": ""
+      },
+      {
+        "id": "33E1071FA64343C694CF810CAEDD0B69",
+        "name": ""
+      },
+      {
+        "id": "BD2827CB6CC24F889B41ECABDF516D1A",
+        "name": ""
+      },
+      {
+        "id": "1BEC6C81D3D94E3E86A29085AFAA9E48",
+        "name": ""
+      },
+      {
+        "id": "22C3949AF52942A697ECADF2D5FE5E65",
+        "name": ""
+      },
+      {
+        "id": "0E503BBD416C46CA9C75480580C7D3A8",
+        "name": ""
+      },
+      {
+        "id": "059798EA26D74032AB839264C6720508",
+        "name": ""
+      },
+      {
+        "id": "A8CA158570B5456B85860B76A1CA1B3E",
+        "name": ""
+      },
+      {
+        "id": "E6B0FE60AD1A45FB83AB02437C68C00B",
+        "name": ""
+      },
+      {
+        "id": "3F91576C0CFE4CEBB84F69CB823358F5",
+        "name": ""
+      },
+      {
+        "id": "4AB1760A6FA1493686E63953AE02ACC6",
+        "name": ""
+      },
+      {
+        "id": "37E7FC2A831D44D3996CFC90AF8D918E",
+        "name": ""
+      },
+      {
+        "id": "9D983DDCFC184A47A569BF5CFF06E53B",
+        "name": ""
+      },
+      {
+        "id": "1F3A1EA712C748D8A45C1569F0BB850D",
+        "name": ""
+      },
+      {
+        "id": "7D723BFF188C417C93B7DC4890A79913",
+        "name": ""
+      },
+      {
+        "id": "1324F46B46544E8697EE9BB1FC4CB8E3",
+        "name": ""
+      },
+      {
+        "id": "C972A03059754C9BB9ABCB839B2DC20A",
+        "name": ""
+      },
+      {
+        "id": "0E7E4A58C9514467B2542A7E9945C624",
+        "name": ""
+      },
+      {
+        "id": "133C161485B94C2C8C906BC73860B8B2",
+        "name": ""
+      },
+      {
+        "id": "BB464936A17B4B7F8B8190A65784E3B2",
+        "name": ""
+      },
+      {
+        "id": "68EE0489127241FA8BDE94B4DFEFECBD",
+        "name": ""
+      },
+      {
+        "id": "ADD838C76A3442E6BAA647F57E0B6087",
+        "name": ""
+      },
+      {
+        "id": "5984B681BBEC49828D528F56AB52E130",
+        "name": ""
+      },
+      {
+        "id": "2A1C58914EB442B0B4020861D6BDB50E",
+        "name": ""
+      },
+      {
+        "id": "513197BC5DA14131A59268E3CDE10504",
+        "name": ""
+      },
+      {
+        "id": "A692C9F31C8D476BA79173A2208F008E",
+        "name": ""
+      }
+    ]
+  },
+  {
+    "date": "2023-09-23",
+    "tourn": "River City",
+    "event": "Cadet Men's Saber",
+    "from": "2023-09-22",
+    "to": "2023-09-25",
+    "tournId": "CE5D9DBB6BA644868213262329544891",
+    "eventId": null,
+    "events": [
+      {
+        "id": "AF4DC4DB37494AE292E2B3CD5C20E97D",
+        "name": ""
+      },
+      {
+        "id": "4DDDAA65085C43F0B1D94EBBA0375DDF",
+        "name": ""
+      },
+      {
+        "id": "F1821C5E543848CC8B48D2081D8C52D6",
+        "name": ""
+      },
+      {
+        "id": "B2FD4F1A5F934D968498F4F356910C68",
+        "name": ""
+      },
+      {
+        "id": "FC7FFA4351D647AC891BD6655BCF19A5",
+        "name": ""
+      },
+      {
+        "id": "300EC5A1F8FE4C28847AF712B7EC1F04",
+        "name": ""
+      },
+      {
+        "id": "BA9D77BCC1B747D89A94E1F4B0B9F04C",
+        "name": ""
+      },
+      {
+        "id": "20A33B6B1B93446BBE27668C1F572BB4",
+        "name": ""
+      },
+      {
+        "id": "33E1071FA64343C694CF810CAEDD0B69",
+        "name": ""
+      },
+      {
+        "id": "BD2827CB6CC24F889B41ECABDF516D1A",
+        "name": ""
+      },
+      {
+        "id": "1BEC6C81D3D94E3E86A29085AFAA9E48",
+        "name": ""
+      },
+      {
+        "id": "22C3949AF52942A697ECADF2D5FE5E65",
+        "name": ""
+      },
+      {
+        "id": "0E503BBD416C46CA9C75480580C7D3A8",
+        "name": ""
+      },
+      {
+        "id": "059798EA26D74032AB839264C6720508",
+        "name": ""
+      },
+      {
+        "id": "A8CA158570B5456B85860B76A1CA1B3E",
+        "name": ""
+      },
+      {
+        "id": "E6B0FE60AD1A45FB83AB02437C68C00B",
+        "name": ""
+      },
+      {
+        "id": "3F91576C0CFE4CEBB84F69CB823358F5",
+        "name": ""
+      },
+      {
+        "id": "4AB1760A6FA1493686E63953AE02ACC6",
+        "name": ""
+      },
+      {
+        "id": "37E7FC2A831D44D3996CFC90AF8D918E",
+        "name": ""
+      },
+      {
+        "id": "9D983DDCFC184A47A569BF5CFF06E53B",
+        "name": ""
+      },
+      {
+        "id": "1F3A1EA712C748D8A45C1569F0BB850D",
+        "name": ""
+      },
+      {
+        "id": "7D723BFF188C417C93B7DC4890A79913",
+        "name": ""
+      },
+      {
+        "id": "1324F46B46544E8697EE9BB1FC4CB8E3",
+        "name": ""
+      },
+      {
+        "id": "C972A03059754C9BB9ABCB839B2DC20A",
+        "name": ""
+      },
+      {
+        "id": "0E7E4A58C9514467B2542A7E9945C624",
+        "name": ""
+      },
+      {
+        "id": "133C161485B94C2C8C906BC73860B8B2",
+        "name": ""
+      },
+      {
+        "id": "BB464936A17B4B7F8B8190A65784E3B2",
+        "name": ""
+      },
+      {
+        "id": "68EE0489127241FA8BDE94B4DFEFECBD",
+        "name": ""
+      },
+      {
+        "id": "ADD838C76A3442E6BAA647F57E0B6087",
+        "name": ""
+      },
+      {
+        "id": "5984B681BBEC49828D528F56AB52E130",
+        "name": ""
+      },
+      {
+        "id": "2A1C58914EB442B0B4020861D6BDB50E",
+        "name": ""
+      },
+      {
+        "id": "513197BC5DA14131A59268E3CDE10504",
+        "name": ""
+      },
+      {
+        "id": "A692C9F31C8D476BA79173A2208F008E",
+        "name": ""
+      }
+    ]
+  },
+  {
+    "date": "2023-09-03",
+    "tourn": "North Texas",
+    "event": "Y-14 Men's Saber",
+    "from": "2023-09-01",
+    "to": "2023-09-04",
+    "tournId": "E8B788440D3D4BF3B47B9FDBFA86C339",
+    "eventId": null,
+    "events": [
+      {
+        "id": "FAE42DBA60634BD4901B39A86832823B",
+        "name": ""
+      },
+      {
+        "id": "0979B580CC474A01B858E7D0DE7F4DDD",
+        "name": ""
+      },
+      {
+        "id": "AA6633133971432A9B424BE223837826",
+        "name": ""
+      },
+      {
+        "id": "4530C8B55681403EA4FC825DE5705A17",
+        "name": ""
+      },
+      {
+        "id": "D908B4B21D624E618714E7E950F353D4",
+        "name": ""
+      },
+      {
+        "id": "F445A386A43246D5AD22A1C6BEBC923A",
+        "name": ""
+      },
+      {
+        "id": "D83624C6A7D54913BA7C4F63E2BBD21B",
+        "name": ""
+      },
+      {
+        "id": "FCD84684DB7C4B73ACCB61BD4B15CE75",
+        "name": ""
+      },
+      {
+        "id": "55688812653B4303A11D110008EAFBF1",
+        "name": ""
+      },
+      {
+        "id": "6196176E60834329864D4C86294BE92E",
+        "name": ""
+      },
+      {
+        "id": "C91B507CD31A4EA98C184EE73ABD8507",
+        "name": ""
+      },
+      {
+        "id": "6F4AE0C7F9484538AEB71EA407044967",
+        "name": ""
+      },
+      {
+        "id": "0A2AEF32F4FB438C869603130494A9C4",
+        "name": ""
+      },
+      {
+        "id": "8DF288D72562499DA8052AA1A4D21C89",
+        "name": ""
+      },
+      {
+        "id": "9B0F50E0935C498ABB6F75A9F3B43D62",
+        "name": ""
+      },
+      {
+        "id": "59519E9B4AC24616A1DFE85E4AB5E10B",
+        "name": ""
+      },
+      {
+        "id": "28D3EFA607444D388240F8D12C2E2EA0",
+        "name": ""
+      },
+      {
+        "id": "1ABF74C2489E481AB905832D2A7393FE",
+        "name": ""
+      },
+      {
+        "id": "589923C0C83F42EF9BD453D5FBC8EE88",
+        "name": ""
+      },
+      {
+        "id": "520E41C80388478AAEA0A93C356D4CFE",
+        "name": ""
+      },
+      {
+        "id": "D72CA2ACC9E141838EBD19335DE7E2EB",
+        "name": ""
+      },
+      {
+        "id": "38C288937DD44083A040105754D77C68",
+        "name": ""
+      },
+      {
+        "id": "D7800847D8C546D8B1C802264CF0A2FC",
+        "name": ""
+      },
+      {
+        "id": "39AC116F20104282A69C2589F6D57076",
+        "name": ""
+      },
+      {
+        "id": "0BAA8F56ADE64F5F8C895CC6ECE6BEB9",
+        "name": ""
+      },
+      {
+        "id": "C4F168CC9BBD4EFE8E88E8499D79F318",
+        "name": ""
+      },
+      {
+        "id": "D7F34A63D70B41B1A84BF568916A71F7",
+        "name": ""
+      },
+      {
+        "id": "23C8F61CE97E4C0186E6E20185167986",
+        "name": ""
+      }
+    ]
+  },
+  {
+    "date": "2023-09-02",
+    "tourn": "North Texas",
+    "event": "Y-12 Men's Saber",
+    "from": "2023-09-01",
+    "to": "2023-09-04",
+    "tournId": "E8B788440D3D4BF3B47B9FDBFA86C339",
+    "eventId": null,
+    "events": [
+      {
+        "id": "FAE42DBA60634BD4901B39A86832823B",
+        "name": ""
+      },
+      {
+        "id": "0979B580CC474A01B858E7D0DE7F4DDD",
+        "name": ""
+      },
+      {
+        "id": "AA6633133971432A9B424BE223837826",
+        "name": ""
+      },
+      {
+        "id": "4530C8B55681403EA4FC825DE5705A17",
+        "name": ""
+      },
+      {
+        "id": "D908B4B21D624E618714E7E950F353D4",
+        "name": ""
+      },
+      {
+        "id": "F445A386A43246D5AD22A1C6BEBC923A",
+        "name": ""
+      },
+      {
+        "id": "D83624C6A7D54913BA7C4F63E2BBD21B",
+        "name": ""
+      },
+      {
+        "id": "FCD84684DB7C4B73ACCB61BD4B15CE75",
+        "name": ""
+      },
+      {
+        "id": "55688812653B4303A11D110008EAFBF1",
+        "name": ""
+      },
+      {
+        "id": "6196176E60834329864D4C86294BE92E",
+        "name": ""
+      },
+      {
+        "id": "C91B507CD31A4EA98C184EE73ABD8507",
+        "name": ""
+      },
+      {
+        "id": "6F4AE0C7F9484538AEB71EA407044967",
+        "name": ""
+      },
+      {
+        "id": "0A2AEF32F4FB438C869603130494A9C4",
+        "name": ""
+      },
+      {
+        "id": "8DF288D72562499DA8052AA1A4D21C89",
+        "name": ""
+      },
+      {
+        "id": "9B0F50E0935C498ABB6F75A9F3B43D62",
+        "name": ""
+      },
+      {
+        "id": "59519E9B4AC24616A1DFE85E4AB5E10B",
+        "name": ""
+      },
+      {
+        "id": "28D3EFA607444D388240F8D12C2E2EA0",
+        "name": ""
+      },
+      {
+        "id": "1ABF74C2489E481AB905832D2A7393FE",
+        "name": ""
+      },
+      {
+        "id": "589923C0C83F42EF9BD453D5FBC8EE88",
+        "name": ""
+      },
+      {
+        "id": "520E41C80388478AAEA0A93C356D4CFE",
+        "name": ""
+      },
+      {
+        "id": "D72CA2ACC9E141838EBD19335DE7E2EB",
+        "name": ""
+      },
+      {
+        "id": "38C288937DD44083A040105754D77C68",
+        "name": ""
+      },
+      {
+        "id": "D7800847D8C546D8B1C802264CF0A2FC",
+        "name": ""
+      },
+      {
+        "id": "39AC116F20104282A69C2589F6D57076",
+        "name": ""
+      },
+      {
+        "id": "0BAA8F56ADE64F5F8C895CC6ECE6BEB9",
+        "name": ""
+      },
+      {
+        "id": "C4F168CC9BBD4EFE8E88E8499D79F318",
+        "name": ""
+      },
+      {
+        "id": "D7F34A63D70B41B1A84BF568916A71F7",
+        "name": ""
+      },
+      {
+        "id": "23C8F61CE97E4C0186E6E20185167986",
+        "name": ""
+      }
+    ]
+  },
+  {
+    "date": "2023-04-16",
+    "tourn": "Fairfax",
+    "event": "Y-12 Men's Saber",
+    "from": "2023-04-14",
+    "to": "2023-04-17",
+    "tournId": "2DCE857497774216A32507AE4A9B1CA1",
+    "eventId": null,
+    "events": [
+      {
+        "id": "6C9451D27E784196AA91BCCD08C1CC93",
+        "name": ""
+      },
+      {
+        "id": "5698338B4917468783AE838ECE33E04B",
+        "name": ""
+      },
+      {
+        "id": "A5C7F04CAE22499E8D1D992EDEFF42E9",
+        "name": ""
+      },
+      {
+        "id": "1768BA67A677420DB49AA8F287BDB46D",
+        "name": ""
+      },
+      {
+        "id": "AF2C5A9329D14852B55A8C645EF0500A",
+        "name": ""
+      },
+      {
+        "id": "CD769D2E7A3C4C1D8776559D38B984A2",
+        "name": ""
+      },
+      {
+        "id": "1997ECDCA2EA47A9B0C6267E68498539",
+        "name": ""
+      },
+      {
+        "id": "B68F7E720B96477BAD46806E12E22C44",
+        "name": ""
+      },
+      {
+        "id": "71874F5C3D844515A2A8C2F2E24D06E4",
+        "name": ""
+      },
+      {
+        "id": "AAA71C2AB3E94DA5B1441B98E189241D",
+        "name": ""
+      },
+      {
+        "id": "1F373F49A8B94ED4B000584B5E3C01C0",
+        "name": ""
+      },
+      {
+        "id": "85B11C62B6D54F339374263E86C21B21",
+        "name": ""
+      },
+      {
+        "id": "919B903DA83B483FAD5358D992E7E650",
+        "name": ""
+      },
+      {
+        "id": "D63BED130EA246B38733512993B31444",
+        "name": ""
+      },
+      {
+        "id": "6A8E2BF8AA0D456794B1450FDC467DD4",
+        "name": ""
+      },
+      {
+        "id": "E72AA3C089584DD386ECCA2C72DB6EC5",
+        "name": ""
+      },
+      {
+        "id": "7A23472762894C92BF344348A62C2212",
+        "name": ""
+      },
+      {
+        "id": "66D30875BDCD482D94B94ABD3C7734A4",
+        "name": ""
+      },
+      {
+        "id": "5CA110B45FDC41259CFDEF43E18B9219",
+        "name": ""
+      },
+      {
+        "id": "AC6A1F731E1748F781B240060E1FC6A6",
+        "name": ""
+      },
+      {
+        "id": "B1B751643FFF45CB8FFBDDBBB41BE448",
+        "name": ""
+      },
+      {
+        "id": "03601DCCF9C84E6BA6E645F36E0C8389",
+        "name": ""
+      },
+      {
+        "id": "BE22125994824AEFB8A8530202B78A29",
+        "name": ""
+      },
+      {
+        "id": "D5AE5D276BCB49558F8E3D95AAE9367B",
+        "name": ""
+      },
+      {
+        "id": "C8F6D1818BED44E9B3520898ED291F5F",
+        "name": ""
+      },
+      {
+        "id": "624AB3B85ADA41F0B8458B4DCBAB7CC7",
+        "name": ""
+      },
+      {
+        "id": "233C381B43844B908A13CA6BC3539202",
+        "name": ""
+      },
+      {
+        "id": "7340ACD91D1B42499D74BABEB410E3CA",
+        "name": ""
+      },
+      {
+        "id": "9EE7D58E71214DF1BA0FFDA14061E11A",
+        "name": ""
+      },
+      {
+        "id": "7B86B8454F5440A688A62C1F8DE8E64A",
+        "name": ""
+      },
+      {
+        "id": "2476ED88C5A1475F9A276376F6034B18",
+        "name": ""
+      },
+      {
+        "id": "B4684B326790427896CFA3FA1C87174A",
+        "name": ""
+      },
+      {
+        "id": "1BBEE47E2443466CB79B7A13AD158EA6",
+        "name": ""
+      },
+      {
+        "id": "33DDCA12EC1E4FC6AFFDA6B182E0B3AE",
+        "name": ""
+      },
+      {
+        "id": "910914819D3B4996BB363678712286B3",
+        "name": ""
+      },
+      {
+        "id": "8D90FDD04548406683C7541DBD645954",
+        "name": ""
+      },
+      {
+        "id": "EDF7C92B07304F259E8AA79DF1F8D59C",
+        "name": ""
+      },
+      {
+        "id": "ABE004F9B909429A8BF40F4A0D509DBA",
+        "name": ""
+      },
+      {
+        "id": "F96BC2F677C746469D64E57E1EA92FE2",
+        "name": ""
+      },
+      {
+        "id": "3AA1B8ECB1DA419B9C9530C2114E9B91",
+        "name": ""
+      },
+      {
+        "id": "609FF986EF5B4E54A373B6808B0841E3",
+        "name": ""
+      },
+      {
+        "id": "D0D778F85DF7474DBA4B888167CD553C",
+        "name": ""
+      },
+      {
+        "id": "9554D98F958041C4A68FAEFD8CAFF69E",
+        "name": ""
+      },
+      {
+        "id": "50568C09BA314A17AA6CE0DCACAD915D",
+        "name": ""
+      },
+      {
+        "id": "C4A53A23CB90455B893645E9C8E6B598",
+        "name": ""
+      },
+      {
+        "id": "9DCAEFE21346493EBF187E498D15D76E",
+        "name": ""
+      },
+      {
+        "id": "2C1F0C8FB16A42918B5875320179EE79",
+        "name": ""
+      },
+      {
+        "id": "61E091D3160A4B0F9AD594AFCE9673C5",
+        "name": ""
+      }
+    ]
+  },
+  {
+    "date": "2023-03-11",
+    "tourn": "Ben Gutenberg",
+    "event": "Y-12 Men's Saber",
+    "from": "2023-03-10",
+    "to": "2023-03-12",
+    "tournId": "27B8A317A92541E08CF499231C986D23",
+    "eventId": null,
+    "events": [
+      {
+        "id": "2A0EA2BA787445B2A4567D77B454F640",
+        "name": ""
+      },
+      {
+        "id": "026D6E0319294D8F9AFAF9464870E9D0",
+        "name": ""
+      },
+      {
+        "id": "2A07BED098AA473D9D9DBC3683E069B6",
+        "name": ""
+      },
+      {
+        "id": "F99C4B57722D4AF8BDF5E85A26783A6C",
+        "name": ""
+      },
+      {
+        "id": "8252FAFA089446F2A5CA887D71FC86D9",
+        "name": ""
+      },
+      {
+        "id": "86F86A5A67A54E33B4AD701B90219089",
+        "name": ""
+      },
+      {
+        "id": "14C0C896AA3D40818BAE542A360B30D7",
+        "name": ""
+      },
+      {
+        "id": "130B480A21A94F9A8F227765F4A47890",
+        "name": ""
+      },
+      {
+        "id": "535EAF44411B4BF0BAD08856CCEE6247",
+        "name": ""
+      },
+      {
+        "id": "936AC65BA3734C0CA601F372D6207B34",
+        "name": ""
+      },
+      {
+        "id": "DC8E68391419484BAC628005812CF0BD",
+        "name": ""
+      },
+      {
+        "id": "F5C64AC88D2D41ECB8C763F55FEB6A48",
+        "name": ""
+      },
+      {
+        "id": "86D614E3F3624FFD9D21ACE40EAD659F",
+        "name": ""
+      },
+      {
+        "id": "4F8114DBCA204F90B1B3AECDCB04D518",
+        "name": ""
+      },
+      {
+        "id": "4DAE193D518241B483DB4B4966E4B438",
+        "name": ""
+      },
+      {
+        "id": "6BB88A6778F64F6887878F7E6D00CF20",
+        "name": ""
+      },
+      {
+        "id": "9FEE11731EFB441BA7D0464C495E7A3B",
+        "name": ""
+      },
+      {
+        "id": "B8EC7A42C119433D81072D9820CB8D7D",
+        "name": ""
+      },
+      {
+        "id": "43FEDB1BA3514F37AED7332B12E1CDF5",
+        "name": ""
+      },
+      {
+        "id": "1BFFDC522C8B4E1BBB3B2CFD5EAC2BF1",
+        "name": ""
+      },
+      {
+        "id": "BB87B24E7EF04EEEA5A04248B6B7F483",
+        "name": ""
+      },
+      {
+        "id": "A129492614A54EF7AE80554232A36556",
+        "name": ""
+      },
+      {
+        "id": "75806D5AEF0849F4B589FA1EFBCE1D59",
+        "name": ""
+      },
+      {
+        "id": "333AC9804354405BA4763A0110CEF055",
+        "name": ""
+      }
+    ]
+  },
+  {
+    "date": "2023-02-11",
+    "tourn": "River City",
+    "event": "Y-12 Men's Saber",
+    "from": "2023-02-10",
+    "to": "2023-02-12",
+    "tournId": "4BFE91AD7F684EBF958B0114631FAB74",
+    "eventId": null,
+    "events": [
+      {
+        "id": "EBDC194921C549EF9FFE37CAB59B0F1E",
+        "name": ""
+      },
+      {
+        "id": "78DD0F868C9842A7B87EE7FEF6EE60CC",
+        "name": ""
+      },
+      {
+        "id": "661CD84077B94AA7B74BCC566A681421",
+        "name": ""
+      },
+      {
+        "id": "9FC51CD85EF04E81A21CEA81894048F0",
+        "name": ""
+      },
+      {
+        "id": "4511482B852343CDA9F3DB12C1BB631B",
+        "name": ""
+      },
+      {
+        "id": "7E50BD5FB3734F55926DA6DD5CCE188E",
+        "name": ""
+      },
+      {
+        "id": "E03935AE9C8C4E30B936C52074B58622",
+        "name": ""
+      },
+      {
+        "id": "905A04C9AE1045548B490A63A091D590",
+        "name": ""
+      },
+      {
+        "id": "36B6E69756D14A0DA058AAFD82E9DFE2",
+        "name": ""
+      },
+      {
+        "id": "3C9B1DCEA2DE403897743C47B800117D",
+        "name": ""
+      },
+      {
+        "id": "8A5018025B0F4103BA81AAAC566ADB35",
+        "name": ""
+      },
+      {
+        "id": "12528FFBD15A4F2DAF90A01ADA21DA7D",
+        "name": ""
+      },
+      {
+        "id": "A3C60C01A2AE4EF4A3B1B200AD8A474B",
+        "name": ""
+      },
+      {
+        "id": "A2BB3645EEF24D6F9E0533E4464132A0",
+        "name": ""
+      },
+      {
+        "id": "AE316008E3D44E8783E42F39D8577E70",
+        "name": ""
+      },
+      {
+        "id": "7A227BC44F524C69B6CFE021011179BE",
+        "name": ""
+      },
+      {
+        "id": "98D8A42F56F34938829BA2372245A4EA",
+        "name": ""
+      },
+      {
+        "id": "F06959179D8349F685E6AA79404EDF57",
+        "name": ""
+      },
+      {
+        "id": "65707E70111545D1A46A84D4963FF068",
+        "name": ""
+      },
+      {
+        "id": "9084611847AF41EABEB005B75A85E280",
+        "name": ""
+      },
+      {
+        "id": "3A2C66D33E334BE7B2D81B4BDB694416",
+        "name": ""
+      },
+      {
+        "id": "01E5EBCEB59145E3B849EC1D505389E3",
+        "name": ""
+      },
+      {
+        "id": "B07FDC6806CC478A9081ABA64219B336",
+        "name": ""
+      },
+      {
+        "id": "DC97779B96E64C8B84D7757E8D2A2C9A",
+        "name": ""
+      },
+      {
+        "id": "70666EBA467B490E85E16636E75554FA",
+        "name": ""
+      },
+      {
+        "id": "2D0BFD669FEB423BB62098635C3ECCC1",
+        "name": ""
+      },
+      {
+        "id": "F17DAAA2533C4A9796FA9F959D2733B7",
+        "name": ""
+      },
+      {
+        "id": "7308D87340254A01A3AEDA338791679B",
+        "name": ""
+      },
+      {
+        "id": "38A8AE26D2714E35978CD565E03645EA",
+        "name": ""
+      },
+      {
+        "id": "A5D8C9C0CF884EAB83A9072731839519",
+        "name": ""
+      }
+    ]
+  },
+  {
+    "date": "2023-01-14",
+    "tourn": "Capitol Clash",
+    "event": "Y-12 Men's Saber",
+    "from": "2023-01-13",
+    "to": "2023-01-16",
+    "tournId": "818754D70B1A4230B60A5F4AF82CD939",
+    "eventId": null,
+    "events": [
+      {
+        "id": "A9E727B558C84A3DB881739ECBC55AC2",
+        "name": ""
+      },
+      {
+        "id": "4392E40B94C74B06B39666373CF3AFC0",
+        "name": ""
+      },
+      {
+        "id": "1EBF1CBDD26E4B8DA9C10FAC20688604",
+        "name": ""
+      },
+      {
+        "id": "061892C0F5834FD48B1BD379322F2D11",
+        "name": ""
+      },
+      {
+        "id": "0FDBE1480AF84B95B58A81AC259FD266",
+        "name": ""
+      },
+      {
+        "id": "EA03A804DCB64D8B87ABC871DAAB3BD0",
+        "name": ""
+      },
+      {
+        "id": "EF610A89650645E5B387E8845530AA28",
+        "name": ""
+      },
+      {
+        "id": "8B7E5777F2C3448BA5927855E23F3481",
+        "name": ""
+      },
+      {
+        "id": "FCC79C6F666F45B2B0531A60D907CD28",
+        "name": ""
+      },
+      {
+        "id": "AD38576A3F3745A2A3F61E6C376CCC1F",
+        "name": ""
+      },
+      {
+        "id": "FB9CAF1470C347068DD61DD037A6CD7B",
+        "name": ""
+      },
+      {
+        "id": "BFEA9329C8C84852B6362899EFD73DE8",
+        "name": ""
+      },
+      {
+        "id": "518DD556E13841CB802F78CE872CD687",
+        "name": ""
+      },
+      {
+        "id": "69F2984608554CE2B05D199770B804C1",
+        "name": ""
+      },
+      {
+        "id": "62E0DD9F4D964F1A82BAF65F41EBA998",
+        "name": ""
+      },
+      {
+        "id": "7BE38C2113854DC39D684C4801C1DA83",
+        "name": ""
+      },
+      {
+        "id": "E96CC5D5DC214E0C8623C578D46AA14C",
+        "name": ""
+      },
+      {
+        "id": "4AA890F0FEA24EC28E438A9570448259",
+        "name": ""
+      },
+      {
+        "id": "D0EA13E2E37A418C82092C709DE7DD87",
+        "name": ""
+      },
+      {
+        "id": "D2AA6D0EB04D4136BED81FC921300486",
+        "name": ""
+      },
+      {
+        "id": "6959B269D6BB4D418A31544E2B91E702",
+        "name": ""
+      },
+      {
+        "id": "0BD8811C240847D5858685163E146788",
+        "name": ""
+      },
+      {
+        "id": "5BEBD882F47844BA86B1BEBB3D67320A",
+        "name": ""
+      },
+      {
+        "id": "E69F85125387423A98981AF28544F908",
+        "name": ""
+      }
+    ]
+  },
+  {
+    "date": "2022-10-02",
+    "tourn": "NoVA Knights",
+    "event": "Y-12 Men's Saber",
+    "from": "2022-09-30",
+    "to": "2022-10-03",
+    "tournId": "5DE2A49537BF47838EE6D76A3BFA7029",
+    "eventId": null,
+    "events": [
+      {
+        "id": "50E5B361B28E4ACAA00C941B245CCB52",
+        "name": ""
+      },
+      {
+        "id": "4BC056A5298442E881405CE1AEABA020",
+        "name": ""
+      },
+      {
+        "id": "F876CB22E18A40BAB6F2045277E78F08",
+        "name": ""
+      },
+      {
+        "id": "05F0D711A11F4F07B670201368D46D52",
+        "name": ""
+      },
+      {
+        "id": "24A7780BD7B943F7A72EB0100B409F6C",
+        "name": ""
+      },
+      {
+        "id": "B5BF75389AD84718B2BE34263A6300CE",
+        "name": ""
+      },
+      {
+        "id": "6F8F70B25099446B88873ECCE6BA8967",
+        "name": ""
+      },
+      {
+        "id": "7F4FB261D3CA41CEA2DB64B025A70B8E",
+        "name": ""
+      },
+      {
+        "id": "8FCE3B49459E446784C38520E1EE8160",
+        "name": ""
+      },
+      {
+        "id": "612FB38988D541C5AF816AEA97869A6A",
+        "name": ""
+      },
+      {
+        "id": "8C0D2ACAB8DF4420A3458F3E0C7B76AC",
+        "name": ""
+      },
+      {
+        "id": "492CE3D7393242B981FCCAD5D435CE58",
+        "name": ""
+      },
+      {
+        "id": "CC238C8D4989463FB96EABC47D2584DF",
+        "name": ""
+      },
+      {
+        "id": "C4FB803AABF04B0093061C31F6869B6C",
+        "name": ""
+      },
+      {
+        "id": "DB87A2CEE50D4E6EA5BE81BE1EE114B4",
+        "name": ""
+      },
+      {
+        "id": "AFFFCF9751284E6B94657B16A2B73726",
+        "name": ""
+      },
+      {
+        "id": "BB40F387E106426683A2587065D84E14",
+        "name": ""
+      },
+      {
+        "id": "A6F164F24A994CDA94B29D6347D976CD",
+        "name": ""
+      },
+      {
+        "id": "0235D23A0D6E4592A3C3711DD9CBAA8D",
+        "name": ""
+      },
+      {
+        "id": "C2E252DD38394B458F4134A30B2DAB9C",
+        "name": ""
+      },
+      {
+        "id": "956F2FAC4DA64350A9A020E7BDBAB96F",
+        "name": ""
+      },
+      {
+        "id": "D5D0D2EA3844404CB9554CD105A7B614",
+        "name": ""
+      },
+      {
+        "id": "BC6FF9F12DD6487EB8032F0CF3B412E4",
+        "name": ""
+      },
+      {
+        "id": "DD251203D8B84EC7A2589DA6DF24464F",
+        "name": ""
+      },
+      {
+        "id": "F9F4C31AE6FB44D8BF4AFCF3270F05EB",
+        "name": ""
+      },
+      {
+        "id": "84464C88567B49909C1D00E39F44BC37",
+        "name": ""
+      },
+      {
+        "id": "46256D7E753F40DFA3780D8B35969DCF",
+        "name": ""
+      },
+      {
+        "id": "039906E78D3F4BBBBE280A3A100F14BB",
+        "name": ""
+      },
+      {
+        "id": "E12587F497BE42B6A991058B1A8049A7",
+        "name": ""
+      },
+      {
+        "id": "7691EEEC7E8248E3BCC4C226DFEBD506",
+        "name": ""
+      }
+    ]
+  },
+  {
+    "date": "2022-10-01",
+    "tourn": "NoVA Knights",
+    "event": "Y-14 Men's Saber",
+    "from": "2022-09-30",
+    "to": "2022-10-03",
+    "tournId": "5DE2A49537BF47838EE6D76A3BFA7029",
+    "eventId": null,
+    "events": [
+      {
+        "id": "50E5B361B28E4ACAA00C941B245CCB52",
+        "name": ""
+      },
+      {
+        "id": "4BC056A5298442E881405CE1AEABA020",
+        "name": ""
+      },
+      {
+        "id": "F876CB22E18A40BAB6F2045277E78F08",
+        "name": ""
+      },
+      {
+        "id": "05F0D711A11F4F07B670201368D46D52",
+        "name": ""
+      },
+      {
+        "id": "24A7780BD7B943F7A72EB0100B409F6C",
+        "name": ""
+      },
+      {
+        "id": "B5BF75389AD84718B2BE34263A6300CE",
+        "name": ""
+      },
+      {
+        "id": "6F8F70B25099446B88873ECCE6BA8967",
+        "name": ""
+      },
+      {
+        "id": "7F4FB261D3CA41CEA2DB64B025A70B8E",
+        "name": ""
+      },
+      {
+        "id": "8FCE3B49459E446784C38520E1EE8160",
+        "name": ""
+      },
+      {
+        "id": "612FB38988D541C5AF816AEA97869A6A",
+        "name": ""
+      },
+      {
+        "id": "8C0D2ACAB8DF4420A3458F3E0C7B76AC",
+        "name": ""
+      },
+      {
+        "id": "492CE3D7393242B981FCCAD5D435CE58",
+        "name": ""
+      },
+      {
+        "id": "CC238C8D4989463FB96EABC47D2584DF",
+        "name": ""
+      },
+      {
+        "id": "C4FB803AABF04B0093061C31F6869B6C",
+        "name": ""
+      },
+      {
+        "id": "DB87A2CEE50D4E6EA5BE81BE1EE114B4",
+        "name": ""
+      },
+      {
+        "id": "AFFFCF9751284E6B94657B16A2B73726",
+        "name": ""
+      },
+      {
+        "id": "BB40F387E106426683A2587065D84E14",
+        "name": ""
+      },
+      {
+        "id": "A6F164F24A994CDA94B29D6347D976CD",
+        "name": ""
+      },
+      {
+        "id": "0235D23A0D6E4592A3C3711DD9CBAA8D",
+        "name": ""
+      },
+      {
+        "id": "C2E252DD38394B458F4134A30B2DAB9C",
+        "name": ""
+      },
+      {
+        "id": "956F2FAC4DA64350A9A020E7BDBAB96F",
+        "name": ""
+      },
+      {
+        "id": "D5D0D2EA3844404CB9554CD105A7B614",
+        "name": ""
+      },
+      {
+        "id": "BC6FF9F12DD6487EB8032F0CF3B412E4",
+        "name": ""
+      },
+      {
+        "id": "DD251203D8B84EC7A2589DA6DF24464F",
+        "name": ""
+      },
+      {
+        "id": "F9F4C31AE6FB44D8BF4AFCF3270F05EB",
+        "name": ""
+      },
+      {
+        "id": "84464C88567B49909C1D00E39F44BC37",
+        "name": ""
+      },
+      {
+        "id": "46256D7E753F40DFA3780D8B35969DCF",
+        "name": ""
+      },
+      {
+        "id": "039906E78D3F4BBBBE280A3A100F14BB",
+        "name": ""
+      },
+      {
+        "id": "E12587F497BE42B6A991058B1A8049A7",
+        "name": ""
+      },
+      {
+        "id": "7691EEEC7E8248E3BCC4C226DFEBD506",
+        "name": ""
+      }
+    ]
+  },
+  {
+    "date": "2022-09-03",
+    "tourn": "North Texas",
+    "event": "Y-12 Men's Saber",
+    "from": "2022-09-01",
+    "to": "2022-09-04",
+    "tournId": "E6B97C61AF9345B5B1EC32D007B79126",
+    "eventId": null,
+    "events": [
+      {
+        "id": "5FCC1CA0ED68425EA80C26C4A70D1231",
+        "name": ""
+      },
+      {
+        "id": "5EBEF949BBB443669681767F2E9DF230",
+        "name": ""
+      },
+      {
+        "id": "63753CCCC37A4942BAF7F09F6DF84EE8",
+        "name": ""
+      },
+      {
+        "id": "9C6992F58C324E00BCC1B8DB862CBEDC",
+        "name": ""
+      },
+      {
+        "id": "4C8290EF941A4F099C822C6FCC26C9D7",
+        "name": ""
+      },
+      {
+        "id": "0F09DC8D98024874B8B1544C00B1F3A5",
+        "name": ""
+      },
+      {
+        "id": "F68331F562224EACAB6D4F8906C3EF14",
+        "name": ""
+      },
+      {
+        "id": "4F83D1DC085141F6B86885087F47A8B9",
+        "name": ""
+      },
+      {
+        "id": "FACA8B572B85482CA2E9E7DB70F59A56",
+        "name": ""
+      },
+      {
+        "id": "2657CAE8F58A400982CE795A4B4B4401",
+        "name": ""
+      },
+      {
+        "id": "F1A1517A8CBA48C29891A1EAE70AB808",
+        "name": ""
+      },
+      {
+        "id": "D0CD74B5EDF446219363ADE67793CFE9",
+        "name": ""
+      },
+      {
+        "id": "79DCD62C65A243089FAF2A7E0F69E774",
+        "name": ""
+      },
+      {
+        "id": "9EDC38C9E4D64FFB966017CFFED08ACC",
+        "name": ""
+      },
+      {
+        "id": "B1C8AE3FCB5F41759FF020E9C80E154F",
+        "name": ""
+      },
+      {
+        "id": "BE0F01B68D264C18A16B799D94029730",
+        "name": ""
+      },
+      {
+        "id": "FD12DAC9EA374C98B8B7867C9B0C5D8E",
+        "name": ""
+      },
+      {
+        "id": "56CE9DC84B804571A7F59865CC27BBB7",
+        "name": ""
+      },
+      {
+        "id": "49D45A3AE4EA42019ABCB8FEBDAF45E8",
+        "name": ""
+      },
+      {
+        "id": "8E52C93162714C3F9C6480699A1670B2",
+        "name": ""
+      },
+      {
+        "id": "D77806880C1F4C1FBFCE52AACB9C971E",
+        "name": ""
+      },
+      {
+        "id": "E33D85C5784E4034987642DF47C37CF3",
+        "name": ""
+      },
+      {
+        "id": "CBADF03768C74D42A7B97959534948F9",
+        "name": ""
+      },
+      {
+        "id": "8E8758E6A2B147EAAB0ACE8A29AADEB0",
+        "name": ""
+      }
+    ]
+  },
+  {
+    "date": "2022-07-11",
+    "tourn": "USA Fencing National Championships",
+    "event": "Y-10 Men's Saber",
+    "from": "2022-07-01",
+    "to": "2022-07-13",
+    "tournId": "1284FEA0552D485AB5148798185B8CA1",
+    "eventId": null,
+    "events": [
+      {
+        "id": "4177F97DFC4A4CABB9E96D0B614C90C3",
+        "name": ""
+      },
+      {
+        "id": "0604AC8FA80447B5B633AFD4968000A2",
+        "name": ""
+      },
+      {
+        "id": "36609154A16E4170BC8FB7A199B00047",
+        "name": ""
+      },
+      {
+        "id": "25ED32D77D3C4A5C8A652DF902CE50B9",
+        "name": ""
+      },
+      {
+        "id": "CE680CC611CC446B921848DF4D9B25DE",
+        "name": ""
+      },
+      {
+        "id": "514D14BD323C42919A18BC184427522C",
+        "name": ""
+      },
+      {
+        "id": "0D7BCD82587A49878217D2C0F1B4D73D",
+        "name": ""
+      },
+      {
+        "id": "2CAC78C66F9045E48D4887C1FA56883B",
+        "name": ""
+      },
+      {
+        "id": "CC826BFD46014525B75EA0ADDBFFBC34",
+        "name": ""
+      },
+      {
+        "id": "63BDA0238B1A4B8681759ABCE2E8D583",
+        "name": ""
+      },
+      {
+        "id": "4F611B6EF74D4CD39F9A08EFF9A207D0",
+        "name": ""
+      },
+      {
+        "id": "1A2685A26E00496EAEAA47CA5DF27896",
+        "name": ""
+      },
+      {
+        "id": "35BDB218F80C4179A2E004D06ED5FD93",
+        "name": ""
+      },
+      {
+        "id": "2410B96A35844902A3DD645BAD7FD4FB",
+        "name": ""
+      },
+      {
+        "id": "B898FA7F398C4354A5ACDA1B37876A55",
+        "name": ""
+      },
+      {
+        "id": "8987721129FC4CF09C8EEEA008141312",
+        "name": ""
+      },
+      {
+        "id": "C192410065DD4864B0E25B2BEF5CEA47",
+        "name": ""
+      },
+      {
+        "id": "A8C1D8DC396C403BADCAA037B9BCEA6B",
+        "name": ""
+      },
+      {
+        "id": "A450D93F97CE48BABF7BF3351004FE97",
+        "name": ""
+      },
+      {
+        "id": "537D819489AF466E93029449CAE2B8E6",
+        "name": ""
+      },
+      {
+        "id": "1688AD6FA0A54EC6920DC839E2D32C96",
+        "name": ""
+      },
+      {
+        "id": "6CD6FCBDBE4C45FCB3F581EE30424F54",
+        "name": ""
+      },
+      {
+        "id": "C617CE06AF1348B98091E542E2261DCC",
+        "name": ""
+      },
+      {
+        "id": "D8693C2220C0467F826411785E582089",
+        "name": ""
+      },
+      {
+        "id": "60584C62F95645838A338082EDD29009",
+        "name": ""
+      },
+      {
+        "id": "37E43F83316A4ADA88485C3F6D1A0EF0",
+        "name": ""
+      },
+      {
+        "id": "7FEAD462963043B7BB4F299AD8A8F39F",
+        "name": ""
+      },
+      {
+        "id": "9265495169964B2E9B9B881E172966D9",
+        "name": ""
+      },
+      {
+        "id": "E1C5C1B2309741D39D61B5BC3DFC86C5",
+        "name": ""
+      },
+      {
+        "id": "55169A99CC994AC280800A22D89D189B",
+        "name": ""
+      },
+      {
+        "id": "BE044F62EAA34A829BF1F9397398EF4B",
+        "name": ""
+      },
+      {
+        "id": "E5CDC1F4834246D08A258D0D8E15F039",
+        "name": ""
+      },
+      {
+        "id": "9B4EB81AC28E462FAB2011B353637B60",
+        "name": ""
+      },
+      {
+        "id": "6A1EDF3EC81F45709E942458D3050B1E",
+        "name": ""
+      },
+      {
+        "id": "D36E705BD0454249908F95356BAFC246",
+        "name": ""
+      },
+      {
+        "id": "411F3955E2D949F98F8905641222E0AA",
+        "name": ""
+      },
+      {
+        "id": "2EB99FAFF9884BFAA9D089A77B93D201",
+        "name": ""
+      },
+      {
+        "id": "86A07A287F7B4EF1A860069411AB9148",
+        "name": ""
+      },
+      {
+        "id": "2FD9FE5E97A04F9089DBDA1487C6CE79",
+        "name": ""
+      },
+      {
+        "id": "2F2F01FBA412422A8CF94B5203A7CF81",
+        "name": ""
+      },
+      {
+        "id": "D7BB87D54DFF4329920BCB07932BA445",
+        "name": ""
+      },
+      {
+        "id": "098A6563B0214D5DBD44509261824261",
+        "name": ""
+      },
+      {
+        "id": "A24FFA9F401E478793C6D7553CBD289F",
+        "name": ""
+      },
+      {
+        "id": "BC3DE4CE64F4420C815C2768C2E72E95",
+        "name": ""
+      },
+      {
+        "id": "273BC48A182D4A51811C4B5734EBCF1B",
+        "name": ""
+      },
+      {
+        "id": "35B20F5FF1ED4ECE90642ACCB4787660",
+        "name": ""
+      },
+      {
+        "id": "4549E30978C6418480E562FC4330D97B",
+        "name": ""
+      },
+      {
+        "id": "33AD7707ABFC4B6F8652F68F476B6450",
+        "name": ""
+      },
+      {
+        "id": "6826FE6804C3472DB8968F5077958FFF",
+        "name": ""
+      },
+      {
+        "id": "ADDAD9FABF5A4E7FB795BACCBE4F11E8",
+        "name": ""
+      },
+      {
+        "id": "F4D37288F4F84BE3BA968B3DCAB042EA",
+        "name": ""
+      },
+      {
+        "id": "95D5CFC5CCA44AC38018C70992BCE890",
+        "name": ""
+      },
+      {
+        "id": "1FA94E82D29D468090BB12538E2FD9AF",
+        "name": ""
+      },
+      {
+        "id": "F04C73FFEDC642F8A9E4F45DFBF1CFBE",
+        "name": ""
+      },
+      {
+        "id": "E2AD12AB5AD649F9832D7CF25249F511",
+        "name": ""
+      },
+      {
+        "id": "C193D19C65E84756B27084863125AEBF",
+        "name": ""
+      },
+      {
+        "id": "E706B14ABCEF421BBD8C348F66F84000",
+        "name": ""
+      },
+      {
+        "id": "F4D8230D8D734DB490D384D9D422E69C",
+        "name": ""
+      },
+      {
+        "id": "3446F1C5F9AB46DA8F6DD86C676B6168",
+        "name": ""
+      },
+      {
+        "id": "A139547A14494164968D24F055CAB201",
+        "name": ""
+      },
+      {
+        "id": "A61419F7D5DF4450A05F0F5421C941BF",
+        "name": ""
+      },
+      {
+        "id": "B5B8DD2056AA4E08ACC6D5CB2B6B1CDA",
+        "name": ""
+      },
+      {
+        "id": "CCEDA48D70F1400399B937CA861A7C4D",
+        "name": ""
+      },
+      {
+        "id": "DAF8E640B89B455AB33E5055846DB2DC",
+        "name": ""
+      },
+      {
+        "id": "799892A31AF34298AE4D54ACF36888B3",
+        "name": ""
+      },
+      {
+        "id": "5A0DB9B514E14A2F992DBD26CF072C1D",
+        "name": ""
+      },
+      {
+        "id": "193B567639BA4532A91DFCA1865E667C",
+        "name": ""
+      },
+      {
+        "id": "528702D90B234138A5E802CFD820225E",
+        "name": ""
+      },
+      {
+        "id": "A2636F14171B4137814550EB28D96880",
+        "name": ""
+      },
+      {
+        "id": "915B787C94D54CC28BB691DDBCC46ED9",
+        "name": ""
+      },
+      {
+        "id": "CEC674F18E83405E90CFE63AD7488A62",
+        "name": ""
+      },
+      {
+        "id": "A6B9F7CAA72141DA8AE8FEC5B3440B4B",
+        "name": ""
+      },
+      {
+        "id": "D2C94D27470B4561B10C21720DFB06B8",
+        "name": ""
+      },
+      {
+        "id": "8EF54E87E8314A1EA58161ED60418AD5",
+        "name": ""
+      },
+      {
+        "id": "08785ABC920649C99B2F57E56DA10107",
+        "name": ""
+      },
+      {
+        "id": "2A0D6B0866634312A2596611CC6E96EB",
+        "name": ""
+      },
+      {
+        "id": "536948A74FBD4D079321E48EE6DECC68",
+        "name": ""
+      },
+      {
+        "id": "919801B803454DDC87D7EC474CB125C7",
+        "name": ""
+      },
+      {
+        "id": "CE07CFBB67214279B8A4DC4C3F47DE84",
+        "name": ""
+      },
+      {
+        "id": "D6FDF47A6F63404CA18C8641CF48F500",
+        "name": ""
+      },
+      {
+        "id": "7FBE6AF72F1A411896F084631D50E0A0",
+        "name": ""
+      },
+      {
+        "id": "DF1A29245E7F4B06BC05944DA866D0F6",
+        "name": ""
+      },
+      {
+        "id": "206597D1010A43F78EE55F382E848DCF",
+        "name": ""
+      },
+      {
+        "id": "48EFFDB732394BCA8F9F8B16C54A18FD",
+        "name": ""
+      },
+      {
+        "id": "9BB53B9DFBFA4170A52543DBFD15BF26",
+        "name": ""
+      },
+      {
+        "id": "36E028D3F893491391DBE79FE8D322C7",
+        "name": ""
+      },
+      {
+        "id": "C2F3057EBF7B41428D8BE30DF8BF756C",
+        "name": ""
+      },
+      {
+        "id": "DFA762ADF2D347A483B9B139811F6057",
+        "name": ""
+      },
+      {
+        "id": "18E5883167084F86B55299CAB1A9D057",
+        "name": ""
+      },
+      {
+        "id": "A8EA68F5A00F4785BCC1516EBAD86592",
+        "name": ""
+      },
+      {
+        "id": "335613965E524B23A5F2F53A6A9EF693",
+        "name": ""
+      },
+      {
+        "id": "7F5CF84644CC436E8F6FA4F1BAF9A525",
+        "name": ""
+      },
+      {
+        "id": "162900438E2C4E0892A78CBE547635DE",
+        "name": ""
+      },
+      {
+        "id": "8670A43A92974A23A32FEFA63B2B1E94",
+        "name": ""
+      },
+      {
+        "id": "04810B76C7CB46D5A74193498EA7A3E4",
+        "name": ""
+      },
+      {
+        "id": "5DA1FC2B27C04AB58304C412AD4BBAC8",
+        "name": ""
+      }
+    ]
+  },
+  {
+    "date": "2022-06-12",
+    "tourn": "DCFC",
+    "event": "Y-10 Mixed Saber",
+    "from": "2022-06-11",
+    "to": "2022-06-13",
+    "tournId": "144C3FB54BA24613871851EED15547C4",
+    "eventId": null,
+    "events": [
+      {
+        "id": "C8B7E8B83D4048A5B261CD613BEEEF80",
+        "name": ""
+      },
+      {
+        "id": "3251733587364084B4CFA74AB3D38D62",
+        "name": ""
+      },
+      {
+        "id": "45B40FDC8249475C8220B79F9D6AEA92",
+        "name": ""
+      },
+      {
+        "id": "A09BE9EE91C047D2A7554D0A3F0A9493",
+        "name": ""
+      },
+      {
+        "id": "2DC2D6248FE1419A9B0A48C1FFFA2255",
+        "name": ""
+      },
+      {
+        "id": "1B211139ED614D3DA1BC2CA24FA11E7B",
+        "name": ""
+      }
+    ]
+  },
+  {
+    "date": "2021-06-19",
+    "tourn": "Fairfax",
+    "event": "Y-10 Men's Saber",
+    "from": "2021-06-18",
+    "to": "2021-06-20",
+    "tournId": "5D2A40EAB0784188BDEDF9E52D46BCBF",
+    "eventId": null,
+    "events": [
+      {
+        "id": "A43D2EC05F1D472DB9796CDF2079863C",
+        "name": ""
+      },
+      {
+        "id": "BC622195087540088B0D8B2751A79E5B",
+        "name": ""
+      },
+      {
+        "id": "47548496568E4736BE8AA4272ADE577E",
+        "name": ""
+      },
+      {
+        "id": "C70A6B7EEED6495CB10D6F25149813F2",
+        "name": ""
+      },
+      {
+        "id": "3620C8EF4C9745F0BDE7E14E9B6EC526",
+        "name": ""
+      },
+      {
+        "id": "2582649B96F540BEA4FC7670651444E1",
+        "name": ""
+      },
+      {
+        "id": "CF28B99A93B64510973FE574E2D5D542",
+        "name": ""
+      },
+      {
+        "id": "2158BC800ACE452EB0E5ADF076DA3927",
+        "name": ""
+      },
+      {
+        "id": "573060A7A5664546817ACC86E8DA18A7",
+        "name": ""
+      },
+      {
+        "id": "E903EA0B89D54A418F8970C4523BBAE3",
+        "name": ""
+      },
+      {
+        "id": "55175D28123E4DF380E892795A57CA62",
+        "name": ""
+      },
+      {
+        "id": "700B85187CD246FABB1AED04A4F16A8E",
+        "name": ""
+      },
+      {
+        "id": "54F076D7083B469089E1F8BAD54A3AF3",
+        "name": ""
+      },
+      {
+        "id": "298F295E392A48C1A36CA6F1CCF37F2B",
+        "name": ""
+      },
+      {
+        "id": "A818925F7ECA4DF4B8C99D1E2A38B16B",
+        "name": ""
+      },
+      {
+        "id": "CBF90B65FB6E471CB773CBEC0A25EAB2",
+        "name": ""
+      },
+      {
+        "id": "BFE20A02E3F64D59BBB82B8003DD2345",
+        "name": ""
+      },
+      {
+        "id": "636F662FAC054541BD9EE781F72D00EE",
+        "name": ""
+      },
+      {
+        "id": "08DC1EC12B8B43E5911969A3C4BD389B",
+        "name": ""
+      },
+      {
+        "id": "0DE9BF8AF97B4FA291397D8AEE36498C",
+        "name": ""
+      },
+      {
+        "id": "9BA885951A5B4D6281A2A9479E0CD11B",
+        "name": ""
+      },
+      {
+        "id": "24541CD1CF944667AED287AB975B4463",
+        "name": ""
+      },
+      {
+        "id": "385255DEE7814A4DA984B017274300DB",
+        "name": ""
+      },
+      {
+        "id": "1616D0060CDC462AA240DC21E8070EAC",
+        "name": ""
+      },
+      {
+        "id": "66F86A0EE557445299BBB1781CD8992A",
+        "name": ""
+      },
+      {
+        "id": "DF1F540E978F4C7F9A1B448FF4928DF4",
+        "name": ""
+      },
+      {
+        "id": "B9281432CD134E958BF40F3233722025",
+        "name": ""
+      },
+      {
+        "id": "780B4DFFEE264B4E8462890244B2E182",
+        "name": ""
+      },
+      {
+        "id": "3CABD59168D4455D9C67DF8E97ED10FC",
+        "name": ""
+      },
+      {
+        "id": "61FF14172993482BA63F28FC156BD8F7",
+        "name": ""
+      },
+      {
+        "id": "A2FA121A6C18459EAB350AB0B2AFD7B4",
+        "name": ""
+      },
+      {
+        "id": "ADBB1155091145ACBF577737A4033E64",
+        "name": ""
+      },
+      {
+        "id": "8F99F4E1968047DA95C742D5431CF377",
+        "name": ""
+      },
+      {
+        "id": "B88BD3297DBD4F70AE9D4EA60CF83292",
+        "name": ""
+      },
+      {
+        "id": "A8E17E1983124F5394983828B1E17F43",
+        "name": ""
+      },
+      {
+        "id": "201176D25BB84C64993E89E1B082CF90",
+        "name": ""
+      },
+      {
+        "id": "B025FFD43FE842E88C1BDC7B781582C6",
+        "name": ""
+      },
+      {
+        "id": "DEC526CFFAB44084924C4392705BA79F",
+        "name": ""
+      },
+      {
+        "id": "3F8385C033D74120B2C8C0C5B374D722",
+        "name": ""
+      },
+      {
+        "id": "B5CCC7C24E854391A3A4066A273E8956",
+        "name": ""
+      },
+      {
+        "id": "9C141BBEA95D4CF48846876424EC9987",
+        "name": ""
+      },
+      {
+        "id": "89B0882F620F4A259F2565BFA4CADB6E",
+        "name": ""
+      },
+      {
+        "id": "5B94EF1E4C934587BE8689DE0CD166EA",
+        "name": ""
+      },
+      {
+        "id": "2DBD8BFDBBF04ACDAEDD1ACA218AEB8F",
+        "name": ""
+      },
+      {
+        "id": "6CEA5372E2ED4614AC316BB64C50D119",
+        "name": ""
+      },
+      {
+        "id": "1896B25B3B2C417AA6503BEC196AC99E",
+        "name": ""
+      },
+      {
+        "id": "CDDF1AF6B66F4324B1EA12340F34C458",
+        "name": ""
+      },
+      {
+        "id": "7592EAD3F6514A7E94866C28FB6D09ED",
+        "name": ""
+      }
+    ]
+  }
+]
