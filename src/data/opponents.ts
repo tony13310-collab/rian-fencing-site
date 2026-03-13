@@ -1534,7 +1534,7 @@ export const opponents: Record<string, OpponentData> = {
         "score": "5-4"
       }
     ],
-    "birthYear": null
+    "birthYear": 0
   },
   "CHAWLA Abhishek": {
     "wins": 5,
@@ -2994,7 +2994,7 @@ export const opponents: Record<string, OpponentData> = {
         "score": "5-4"
       }
     ],
-    "birthYear": null
+    "birthYear": 0
   },
   "GHISLAIN-FERNANDEZ Alexandre": {
     "wins": 1,
@@ -3830,7 +3830,7 @@ export const opponents: Record<string, OpponentData> = {
         "score": "2-5"
       }
     ],
-    "birthYear": null
+    "birthYear": 0
   },
   "HOWERTON Beckett": {
     "wins": 2,
@@ -4204,7 +4204,7 @@ export const opponents: Record<string, OpponentData> = {
         "score": "3-5"
       }
     ],
-    "birthYear": null
+    "birthYear": 0
   },
   "JI Johnson": {
     "wins": 1,
@@ -6010,7 +6010,7 @@ export const opponents: Record<string, OpponentData> = {
         "score": "0-5"
       }
     ],
-    "birthYear": null
+    "birthYear": 0
   },
   "LIN Alex": {
     "wins": 2,
@@ -8800,7 +8800,7 @@ export const opponents: Record<string, OpponentData> = {
         "score": "5-15"
       }
     ],
-    "birthYear": null
+    "birthYear": 2009
   },
   "SLAVNOV Anton": {
     "wins": 0,
@@ -9604,7 +9604,7 @@ export const opponents: Record<string, OpponentData> = {
         "score": "0-5"
       }
     ],
-    "birthYear": null
+    "birthYear": 0
   },
   "TSE Aiden J": {
     "wins": 0,
@@ -11030,7 +11030,7 @@ export const opponents: Record<string, OpponentData> = {
         "score": "15-12"
       }
     ],
-    "birthYear": null
+    "birthYear": 0
   },
   "ZENG Vito": {
     "wins": 2,
@@ -11074,7 +11074,7 @@ export const opponents: Record<string, OpponentData> = {
         "score": "5-3"
       }
     ],
-    "birthYear": null
+    "birthYear": 0
   },
   "ZHANG Aiden": {
     "wins": 2,
@@ -11350,7 +11350,7 @@ export const opponents: Record<string, OpponentData> = {
         "score": "0-5"
       }
     ],
-    "birthYear": null
+    "birthYear": 0
   },
   "ZLATINSKI Jason": {
     "wins": 2,
