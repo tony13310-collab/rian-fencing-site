@@ -248,17 +248,17 @@ export default function SeasonTimeline({
                           }
                         }
                         return (
-                          <div className="flex flex-wrap gap-x-4 gap-y-0.5">
+                          <div className="flex flex-wrap gap-x-3 gap-y-0.5 text-white/50">
                             {deBouts > 0 && (
                               <span className="text-teal-400/80">
-                                DE: {deWins}W {deBouts - deWins}L
+                                {deBouts} DE
                               </span>
                             )}
                             {poolBouts > 0 && (() => {
                               const pct = Math.round((poolWins / poolBouts) * 100);
                               return (
                                 <span className={`${pct >= 75 ? "text-green-400" : pct >= 60 ? "text-blue-400/70" : "text-white/50"}`}>
-                                  Pool: {poolWins}W {poolBouts - poolWins}L {pct}%
+                                  {poolBouts} Bouts · {pct}%
                                 </span>
                               );
                             })()}
