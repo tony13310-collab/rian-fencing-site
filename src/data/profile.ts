@@ -83,7 +83,7 @@ function computeAchievements() {
   for (const e of notable.filter(ev => ev.place && ev.place > 3 && ev.place <= 8 && ev.total! >= 200 && ev.level === "National")) {
     const month = new Date(e.date + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
     achievements.push({
-      emoji: "🔝",
+      emoji: "🏅",
       text: `${e.tournament} ${e.event.replace("Men's Saber", "MS")} — ${e.place}th/${e.total} (${month})`,
       eventId: makeEventId(e.date, e.event),
     });
@@ -93,7 +93,7 @@ function computeAchievements() {
   const joJunior = allEvents.find(e => e.date === "2026-01-12" && e.event.includes("Junior"));
   if (joJunior) {
     achievements.push({
-      emoji: "🎖️",
+      emoji: "🌟",
       text: `Junior Olympics Junior MS — 11th/297 (Jan 2026)`,
       eventId: makeEventId(joJunior.date, joJunior.event),
     });
