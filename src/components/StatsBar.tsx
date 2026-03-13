@@ -71,9 +71,9 @@ export default function StatsBar() {
       color: "from-teal-400 to-cyan-500",
     },
     {
-      label: "Medals",
+      label: "Top 8",
       value: top8.toString(),
-      sub: "Top 8 finishes",
+      sub: "All time",
       color: "from-yellow-300 to-amber-500",
     },
   ];
