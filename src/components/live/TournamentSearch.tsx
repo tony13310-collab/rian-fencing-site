@@ -14,17 +14,80 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
   const [searching, setSearching] = useState(false);
   const [error, setError] = useState("");
 
+  const [results, setResults] = useState<any[]>([]);
+  const API_BASE = "https://rian-fencing-api.tony13310.workers.dev";
+
   const handleSearch = async () => {
     if (!query.trim()) return;
     setSearching(true);
     setError("");
+    setResults([]);
 
-    // TODO: Implement actual FTL + FIE search
-    // For now, show a placeholder
-    setTimeout(() => {
+    try {
+      // Search FTL
+      const resp = await fetch(
+        `${API_BASE}/api/ftl/search?q=${encodeURIComponent(query.trim())}&from=2018-01-01&to=2027-12-31`
+      );
+      const data = await resp.json();
+
+      if (data.tournaments && data.tournaments.length > 0) {
+        setResults(data.tournaments);
+      } else {
+        setError("No tournaments found. Try a different search term.");
+      }
+    } catch (err: any) {
+      setError(`Search failed: ${err.message}`);
+    } finally {
       setSearching(false);
-      setError("Search will connect to FTL and FIE APIs. Enter a tournament name to search.");
-    }, 500);
+    }
+  };
+
+  const handleSelectTournament = async (t: any) => {
+    setSearching(true);
+    setError("");
+    try {
+      // Fetch saber events for this tournament
+      const resp = await fetch(`${API_BASE}/api/ftl/event/${t.id}`);
+      const data = await resp.json();
+
+      const events: TournamentEvent[] = (data.events || []).map((e: any) => {
+        const name = e.name || "";
+        let category = "Unknown";
+        if (name.includes("Y-14") || name.includes("Y14")) category = "Y-14";
+        else if (name.includes("Y-12") || name.includes("Y12")) category = "Y-12";
+        else if (name.includes("Y-10") || name.includes("Y10")) category = "Y-10";
+        else if (name.includes("Y-8") || name.includes("Y8")) category = "Y-8";
+        else if (name.includes("Cadet")) category = "Cadet";
+        else if (name.includes("Junior")) category = "Junior";
+        else if (name.includes("Div") || name.includes("Division")) category = "Div I";
+        else if (name.includes("Senior")) category = "Senior";
+
+        return {
+          id: e.id,
+          name,
+          date: "",
+          category,
+          weapon: "Saber",
+          gender: name.includes("Women") ? "Women" : "Men",
+          source: "ftl" as const,
+          sourceUrl: `https://www.fencingtimelive.com/events/results/${e.id}`,
+        };
+      });
+
+      setResults([]);
+      onTournamentFound({
+        id: t.id,
+        name: t.name,
+        location: t.location,
+        dates: "",
+        source: "ftl",
+        events,
+      });
+    } catch (err: any) {
+      setError(`Failed to load tournament: ${err.message}`);
+    } finally {
+      setSearching(false);
+    }
   };
 
   return (
@@ -84,6 +147,30 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
       {error && (
         <div className="max-w-2xl mx-auto text-center text-white/30 text-sm py-4">
           {error}
+        </div>
+      )}
+
+      {/* Search results list */}
+      {results.length > 0 && !tournament && (
+        <div className="max-w-2xl mx-auto space-y-2">
+          <p className="text-white/30 text-xs uppercase tracking-wider font-bold">
+            {results.length} tournament{results.length > 1 ? "s" : ""} found
+          </p>
+          {results.map((t) => (
+            <button
+              key={t.id}
+              onClick={() => handleSelectTournament(t)}
+              className="w-full flex items-center justify-between bg-white/[0.03] hover:bg-white/[0.06] rounded-xl p-4 transition-colors text-left"
+            >
+              <div>
+                <p className="text-white/80 font-medium">{t.name}</p>
+                <p className="text-white/30 text-sm">{t.location}</p>
+              </div>
+              <svg className="w-5 h-5 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+              </svg>
+            </button>
+          ))}
         </div>
       )}
 
