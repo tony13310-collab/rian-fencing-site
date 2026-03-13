@@ -428,7 +428,15 @@ async function handleFTSearch(url: URL): Promise<Response> {
   return jsonResponse(data);
 }
 
+const FT_CACHE_TTL = 30 * 24 * 60 * 60; // 30 days in seconds
+
 async function handleFTProfileByName(nameQuery: string): Promise<Response> {
+  // Check cache first
+  const cacheKey = new Request(`https://ft-cache.internal/profile/${encodeURIComponent(nameQuery.toLowerCase())}`);
+  const cache = caches.default;
+  const cached = await cache.match(cacheKey);
+  if (cached) return cached;
+
   // Search for the fencer first
   const searchResp = await fetch("https://fencingtracker.com/search", {
     method: "POST",
@@ -440,12 +448,26 @@ async function handleFTProfileByName(nameQuery: string): Promise<Response> {
   if (!searchData || searchData.length === 0) {
     return jsonResponse({ error: "Fencer not found", query: nameQuery }, 404);
   }
-  // Use the first result
   const fencer = searchData[0];
-  return await handleFTProfile(String(fencer.usfa_id));
+  const result = await handleFTProfile(String(fencer.usfa_id));
+
+  // Cache successful responses for 30 days
+  if (result.status === 200) {
+    const toCache = new Response(result.body, result);
+    toCache.headers.set("Cache-Control", `public, max-age=${FT_CACHE_TTL}`);
+    await cache.put(cacheKey, toCache.clone());
+    return toCache;
+  }
+  return result;
 }
 
 async function handleFTProfile(usfaId: string): Promise<Response> {
+  // Check cache by USFA ID
+  const cacheKey = new Request(`https://ft-cache.internal/profile-id/${usfaId}`);
+  const cache = caches.default;
+  const cached = await cache.match(cacheKey);
+  if (cached) return cached;
+
   const headers = { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" };
 
   // First we need to find the name slug — try fetching with redirect
@@ -554,7 +576,7 @@ async function handleFTProfile(usfaId: string): Promise<Response> {
     ? recentSaber.reduce((sum, r) => sum + (1 - r.place / r.total), 0) / recentSaber.length
     : 0;
 
-  return jsonResponse({
+  const response = jsonResponse({
     usfaId,
     name,
     birthYear,
@@ -564,9 +586,15 @@ async function handleFTProfile(usfaId: string): Promise<Response> {
     poolStrength,
     podium: podiumData,
     avgPercentile: Math.round(avgPercentile * 100),
-    recentResults: recentSaber.slice(0, 8), // last 8 saber events
+    recentResults: recentSaber.slice(0, 8),
     totalEvents: results.length,
   });
+
+  // Cache for 30 days
+  const toCache = new Response(response.body, response);
+  toCache.headers.set("Cache-Control", `public, max-age=${FT_CACHE_TTL}`);
+  await cache.put(cacheKey, toCache.clone());
+  return toCache;
 }
 
 // ========== FTL Results/DE API ==========
