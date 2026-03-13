@@ -93,10 +93,6 @@ export default function Hero() {
           transition={{ duration: 0.6, delay: 0.6 }}
           className="flex flex-wrap items-center justify-center gap-2 sm:gap-3 mb-6 sm:mb-8 px-2"
         >
-          <div className="px-3 sm:px-5 py-2 rounded-xl bg-gradient-to-r from-amber-500/20 to-orange-600/20 border border-amber-500/30 backdrop-blur-sm">
-            <span className="text-white/70 text-xs font-medium mr-1">Rating</span>
-            <span className="text-amber-400 font-black text-sm sm:text-lg">{profile.rating}</span>
-          </div>
           {profile.currentRankings.map((r) => {
             const colors: Record<string, { bg: string; border: string; text: string }> = {
               green: { bg: "bg-green-500/10", border: "border-green-500/20", text: "text-green-400" },
@@ -112,6 +108,10 @@ export default function Hero() {
               </div>
             );
           })}
+          <div className="px-3 sm:px-5 py-2 rounded-xl bg-gradient-to-r from-amber-500/20 to-orange-600/20 border border-amber-500/30 backdrop-blur-sm">
+            <span className="text-white/70 text-xs font-medium mr-1">Rating</span>
+            <span className="text-amber-400 font-black text-sm sm:text-lg">{profile.rating}</span>
+          </div>
         </motion.div>
 
         {/* Bio */}
