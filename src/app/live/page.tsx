@@ -107,28 +107,39 @@ export default function LivePage() {
               exit={{ opacity: 0, y: -20 }}
               className="space-y-8"
             >
-              {/* Search Section */}
-              <section>
-                <h2 className="text-lg font-bold text-white/90 uppercase tracking-wider mb-4">
-                  🎯 Search Fencer
-                </h2>
-                <FencerSearch />
-              </section>
+              {/* 1. In Progress + Upcoming (from TournamentSearch auto-load) */}
+              <TournamentSearch
+                onTournamentFound={handleTournamentFound}
+                onEventSelect={handleEventSelect}
+                tournament={tournament}
+              />
 
-              {/* Divider */}
-              <div className="border-t border-white/10" />
+              {/* 2. Search bars */}
+              <div className="space-y-6">
+                {/* Fencer Search */}
+                <div>
+                  <h2 className="text-sm font-bold text-white/80 uppercase tracking-wider mb-3">
+                    🔍 Fencers
+                  </h2>
+                  <FencerSearch />
+                </div>
 
-              {/* Tournaments Section */}
-              <section>
-                <h2 className="text-lg font-bold text-white/90 uppercase tracking-wider mb-4">
-                  🏆 Tournaments
-                </h2>
-                <TournamentSearch
-                  onTournamentFound={handleTournamentFound}
-                  onEventSelect={handleEventSelect}
-                  tournament={tournament}
-                />
-              </section>
+                {/* Divider */}
+                <div className="border-t border-white/10" />
+
+                {/* Tournament Search - just the search bar, moved out */}
+                <div>
+                  <h2 className="text-sm font-bold text-white/80 uppercase tracking-wider mb-3">
+                    🔍 Tournaments
+                  </h2>
+                  <TournamentSearch
+                    onTournamentFound={handleTournamentFound}
+                    onEventSelect={handleEventSelect}
+                    tournament={tournament}
+                    searchOnly
+                  />
+                </div>
+              </div>
             </motion.div>
           )}
 

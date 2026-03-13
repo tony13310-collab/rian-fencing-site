@@ -130,7 +130,7 @@ export default function FencerSearch() {
         <button
           onClick={handleSearch}
           disabled={searching || query.trim().split(/\s+/).length < 2}
-          className="px-5 py-3 bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/20 rounded-xl text-orange-400 text-sm font-bold transition-colors disabled:opacity-30"
+          className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-white font-bold text-sm transition-colors disabled:opacity-30"
         >
           {searching ? "..." : "Search"}
         </button>

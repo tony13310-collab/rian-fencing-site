@@ -18,9 +18,10 @@ interface Props {
   onTournamentFound: (t: Tournament) => void;
   onEventSelect: (event: TournamentEvent) => void;
   tournament: Tournament | null;
+  searchOnly?: boolean;
 }
 
-export default function TournamentSearch({ onTournamentFound, onEventSelect, tournament }: Props) {
+export default function TournamentSearch({ onTournamentFound, onEventSelect, tournament, searchOnly }: Props) {
   const [query, setQuery] = useState("");
   const [searching, setSearching] = useState(false);
   const [error, setError] = useState("");
@@ -193,34 +194,72 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
     );
   };
 
+  // searchOnly mode: just the search bar + results
+  if (searchOnly) {
+    return (
+      <div className="space-y-4">
+        <div className="flex gap-2">
+          <input
+            type="text"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+            onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+            placeholder="Search tournaments (±7 days from today)..."
+            className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-white/30 text-sm"
+          />
+          <button
+            onClick={handleSearch}
+            disabled={searching || !query.trim()}
+            className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-white font-bold text-sm transition-colors disabled:opacity-30"
+          >
+            {searching ? "..." : "Search"}
+          </button>
+        </div>
+        {error && <div className="text-red-400/80 text-sm">{error}</div>}
+        {searchResults.length > 0 && (
+          <div className="space-y-3">
+            {searchResults.map((t) => (
+              <TournamentCard key={t.id} t={t} />
+            ))}
+          </div>
+        )}
+        {selectedTournament && (
+          <div className="space-y-3 border-t border-white/5 pt-4">
+            <h3 className="text-white/80 text-sm font-bold">
+              ⚔️ {selectedTournament.name} — Men&apos;s Saber
+            </h3>
+            {loadingEvents && (
+              <div className="text-center py-6">
+                <div className="w-6 h-6 border-2 border-white/20 border-t-white/60 rounded-full animate-spin mx-auto" />
+              </div>
+            )}
+            {!loadingEvents && events.length === 0 && (
+              <p className="text-white/60 text-sm">No Men&apos;s Saber events found</p>
+            )}
+            {events.map((evt) => (
+              <button
+                key={evt.id}
+                onClick={() => onEventSelect(evt)}
+                className="w-full text-left p-4 bg-white/[0.03] hover:bg-white/[0.06] rounded-xl transition-colors"
+              >
+                <div className="flex items-center justify-between">
+                  <div>
+                    <span className="text-white/90 font-bold text-sm">{evt.name}</span>
+                    <span className="text-white/60 text-sm ml-2">{evt.date}{evt.total ? ` • ${evt.total}` : ""}</span>
+                  </div>
+                  <span className="text-white/40">→</span>
+                </div>
+              </button>
+            ))}
+          </div>
+        )}
+      </div>
+    );
+  }
+
+  // Default mode: In Progress + Upcoming cards
   return (
     <div className="space-y-6">
-      {/* Divider */}
-      <div className="flex items-center gap-3">
-        <div className="flex-1 h-px bg-white/5" />
-        <span className="text-white/15 text-sm">TOURNAMENTS</span>
-        <div className="flex-1 h-px bg-white/5" />
-      </div>
-
-      {/* Tournament search bar */}
-      <div className="flex gap-2">
-        <input
-          type="text"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-          onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-          placeholder="Search tournaments (±7 days from today)..."
-          className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/50 focus:outline-none focus:border-red-500/30 text-sm"
-        />
-        <button
-          onClick={handleSearch}
-          disabled={searching || !query.trim()}
-          className="px-5 py-3 bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 rounded-xl text-red-400 text-sm font-bold transition-colors disabled:opacity-30"
-        >
-          {searching ? "..." : "Search"}
-        </button>
-      </div>
-
       {/* Loading state */}
       {autoLoading && (
         <div className="text-center py-12">
@@ -229,22 +268,10 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
         </div>
       )}
 
-      {/* Search results */}
-      {searchResults.length > 0 && (
-        <div className="space-y-3">
-          <h2 className="text-white/70 text-sm uppercase tracking-wider font-bold">
-            🔍 Search Results
-          </h2>
-          {searchResults.map((t) => (
-            <TournamentCard key={t.id} t={t} />
-          ))}
-        </div>
-      )}
-
       {/* In Progress */}
-      {!autoLoading && inProgress.length > 0 && !searchResults.length && (
+      {!autoLoading && inProgress.length > 0 && (
         <div className="space-y-3">
-          <h2 className="text-white/70 text-sm uppercase tracking-wider font-bold">
+          <h2 className="text-white/80 text-sm uppercase tracking-wider font-bold">
             🔴 In Progress
           </h2>
           {inProgress.map((t) => (
@@ -254,9 +281,9 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
       )}
 
       {/* Upcoming */}
-      {!autoLoading && upcoming.length > 0 && !searchResults.length && (
+      {!autoLoading && upcoming.length > 0 && (
         <div className="space-y-3">
-          <h2 className="text-white/70 text-sm uppercase tracking-wider font-bold">
+          <h2 className="text-white/80 text-sm uppercase tracking-wider font-bold">
             📅 Upcoming National & SYC
           </h2>
           {upcoming.map((t) => (
@@ -265,18 +292,17 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
         </div>
       )}
 
-      {/* No tournaments found */}
-      {!autoLoading && inProgress.length === 0 && upcoming.length === 0 && !searchResults.length && !error && (
-        <div className="text-center py-12 bg-white/[0.02] rounded-2xl">
-          <div className="text-3xl mb-3">🤺</div>
-          <p className="text-white/70 text-sm">No active tournaments in the next 7 days</p>
-          <p className="text-white/50 text-sm mt-1">Use search to find specific events</p>
+      {/* No tournaments */}
+      {!autoLoading && inProgress.length === 0 && upcoming.length === 0 && (
+        <div className="text-center py-8 bg-white/[0.02] rounded-2xl">
+          <div className="text-2xl mb-2">🤺</div>
+          <p className="text-white/60 text-sm">No active tournaments in the next 7 days</p>
         </div>
       )}
 
       {/* Error */}
       {error && (
-        <div className="text-center py-4 text-red-400/60 text-sm">{error}</div>
+        <div className="text-center py-4 text-red-400/80 text-sm">{error}</div>
       )}
 
       {/* Selected tournament events */}
