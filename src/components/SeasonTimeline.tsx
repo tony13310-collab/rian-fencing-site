@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { makeEventId, eventDetails } from "@/data/eventDetails";
 import {
+  allEvents,
   CompEvent,
   TournamentLevel,
   AgeCategory,
@@ -12,7 +13,39 @@ import {
   categoryColors,
   seasonMeta,
 } from "@/data/events";
+import { opponents } from "@/data/opponents";
 import { PlacementFilter } from "@/components/FilterBar";
+
+// Pre-compute per-season bout counts from opponents.ts (H2H database)
+// Map opponent bout dates to the correct season using allEvents season assignments
+function getOpponentSeasonBouts() {
+  // Build date→season lookup from allEvents (authoritative season assignment)
+  const dateSeason: Record<string, string> = {};
+  for (const e of allEvents) {
+    dateSeason[e.date] = e.season;
+  }
+  const seasons: Record<string, { pool: number; de: number }> = {};
+  for (const opp of Object.values(opponents)) {
+    for (const b of opp.bouts) {
+      // Parse "November 24, 2018" → find matching event date → get season
+      const d = new Date(b.date);
+      const iso = d.toISOString().slice(0, 10);
+      // Try exact date match first; fallback to month-based season
+      let season = dateSeason[iso];
+      if (!season) {
+        const year = d.getFullYear();
+        const month = d.getMonth() + 1;
+        const sy = month >= 7 ? year : year - 1;
+        season = `${sy}-${sy + 1}`;
+      }
+      if (!seasons[season]) seasons[season] = { pool: 0, de: 0 };
+      if (b.type === "Pool") seasons[season].pool++;
+      else seasons[season].de++;
+    }
+  }
+  return seasons;
+}
+const oppSeasonBouts = getOpponentSeasonBouts();
 
 interface SeasonTimelineProps {
   events: CompEvent[];
@@ -249,16 +282,20 @@ export default function SeasonTimeline({
                             }
                           }
                         }
+                        // Use Math.max with opponents.ts data for consistency with StatsBar
+                        const oppData = oppSeasonBouts[season] || { pool: 0, de: 0 };
+                        const finalPoolBouts = Math.max(poolBouts, oppData.pool);
+                        const finalDEBouts = Math.max(deBouts, oppData.de);
                         return (
                           <div className="flex flex-wrap gap-x-3 gap-y-0.5 text-white/50">
-                            {deBouts > 0 && (
+                            {finalDEBouts > 0 && (
                               <span className="text-teal-400/80">
-                                {deBouts} DE Bouts
+                                {finalDEBouts} DE Bouts
                               </span>
                             )}
-                            {poolBouts > 0 && (
+                            {finalPoolBouts > 0 && (
                               <span className="text-white/50">
-                                {poolBouts} Pool Bouts
+                                {finalPoolBouts} Pool Bouts
                               </span>
                             )}
                             {poolBouts > 0 && (() => {

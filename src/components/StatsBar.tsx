@@ -19,31 +19,51 @@ export default function StatsBar() {
     (e) => e.place === 1
   ).length;
 
-  // Count pool and DE bouts from eventDetails
-  let poolBoutsDetail = 0;
-  let deBoutsDetail = 0;
-  for (const detail of Object.values(eventDetails)) {
-    if (detail.pool?.bouts) {
-      poolBoutsDetail += detail.pool.bouts.length;
-    }
-    if (detail.de) {
-      deBoutsDetail += detail.de.length;
-    }
+  // Count bouts per season from both sources, take max per season, then sum
+  // This ensures StatsBar totals = sum of season header totals
+  const detSeasons: Record<string, { pool: number; de: number }> = {};
+  for (const e of allEvents) {
+    const id = e.date + "_" + e.event.toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/-$/, "");
+    const detail = (eventDetails as Record<string, (typeof eventDetails)[keyof typeof eventDetails]>)[id];
+    const year = parseInt(e.date.slice(0, 4));
+    const month = parseInt(e.date.slice(5, 7));
+    const sy = month >= 7 ? year : year - 1;
+    const season = `${sy}-${sy + 1}`;
+    if (!detSeasons[season]) detSeasons[season] = { pool: 0, de: 0 };
+    if (detail?.pool) detSeasons[season].pool += detail.pool.wins + detail.pool.losses;
+    if (detail?.de) detSeasons[season].de += detail.de.length;
   }
 
-  // Also count from opponents.ts (H2H database — may have more bouts)
-  let poolBoutsH2H = 0;
-  let deBoutsH2H = 0;
+  // Map opponent bouts to seasons using allEvents date→season mapping
+  const dateSeason: Record<string, string> = {};
+  for (const e of allEvents) dateSeason[e.date] = e.season;
+  const oppSeasons: Record<string, { pool: number; de: number }> = {};
   for (const opp of Object.values(opponents)) {
     for (const b of opp.bouts) {
-      if (b.type === "Pool") poolBoutsH2H++;
-      else deBoutsH2H++; // T128, T64, T32, etc. are all DE rounds
+      const d = new Date(b.date);
+      const iso = d.toISOString().slice(0, 10);
+      let season = dateSeason[iso];
+      if (!season) {
+        const year = d.getFullYear();
+        const month = d.getMonth() + 1;
+        const sy = month >= 7 ? year : year - 1;
+        season = `${sy}-${sy + 1}`;
+      }
+      if (!oppSeasons[season]) oppSeasons[season] = { pool: 0, de: 0 };
+      if (b.type === "Pool") oppSeasons[season].pool++;
+      else oppSeasons[season].de++;
     }
   }
 
-  // Use the larger count from either source
-  const poolBouts = Math.max(poolBoutsDetail, poolBoutsH2H);
-  const deBouts = Math.max(deBoutsDetail, deBoutsH2H);
+  const allSeasonKeys = new Set([...Object.keys(detSeasons), ...Object.keys(oppSeasons)]);
+  let poolBouts = 0;
+  let deBouts = 0;
+  for (const s of allSeasonKeys) {
+    const det = detSeasons[s] || { pool: 0, de: 0 };
+    const opp = oppSeasons[s] || { pool: 0, de: 0 };
+    poolBouts += Math.max(det.pool, opp.pool);
+    deBouts += Math.max(det.de, opp.de);
+  }
 
   const stats = [
     {
