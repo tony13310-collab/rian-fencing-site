@@ -35,6 +35,18 @@ export default {
         return await handleFTLPools(eventId);
       }
 
+      // /api/ftl/de/:eventId — get DE tableau data
+      if (path.startsWith("/api/ftl/de/")) {
+        const eventId = path.replace("/api/ftl/de/", "");
+        return await handleFTLDE(eventId);
+      }
+
+      // /api/ftl/results/:eventId — get results data
+      if (path.startsWith("/api/ftl/results/")) {
+        const eventId = path.replace("/api/ftl/results/", "");
+        return await handleFTLResults(eventId);
+      }
+
       // /api/fie/search?q=world+cup+sabre
       if (path === "/api/fie/search") {
         return await handleFIESearch(url);
@@ -378,6 +390,182 @@ async function handleFIESearch(url: URL): Promise<Response> {
   return jsonResponse({
     message: "FIE is a SPA — server-side fetch returns shell only. Need browser or FIE API.",
     query,
+  });
+}
+
+async function handleFTLResults(eventId: string): Promise<Response> {
+  const headers = { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" };
+  const resp = await fetch(`https://www.fencingtimelive.com/events/results/data/${eventId}`, { headers });
+  
+  if (!resp.ok) {
+    return jsonResponse({ eventId, error: "Failed to fetch results" }, 502);
+  }
+
+  const data: any = await resp.json();
+  const rianEntry = (data || []).find((e: any) => e.name === "WEI Rian" || (e.name || "").startsWith("WEI Rian"));
+  
+  return jsonResponse({
+    eventId,
+    total: (data || []).length,
+    rianEntry: rianEntry || null,
+  });
+}
+
+async function handleFTLDE(eventId: string): Promise<Response> {
+  const headers = { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" };
+
+  // Step 1: Get tableau link from results page
+  const resultsResp = await fetch(`https://www.fencingtimelive.com/events/results/${eventId}`, { headers });
+  const resultsHtml = await resultsResp.text();
+
+  const tableauMatch = resultsHtml.match(/\/tableaus\/scores\/([A-F0-9]{32})\/([A-F0-9]{32})/);
+  if (!tableauMatch) {
+    return jsonResponse({ eventId, de: null, message: "No DE tableau found" });
+  }
+
+  const tableauId = tableauMatch[2];
+
+  // Step 2: Get tree info
+  const treesResp = await fetch(`https://www.fencingtimelive.com/tableaus/scores/${eventId}/${tableauId}/trees`, { headers });
+  const trees: any = await treesResp.json();
+  
+  if (!trees || trees.length === 0) {
+    return jsonResponse({ eventId, de: null, message: "No tableau trees found" });
+  }
+
+  const tree = trees[0];
+  const treeGuid = tree.guid;
+  const numTables = tree.numTables;
+
+  // Step 3: Fetch the full tableau HTML (table 0 has all data)
+  const tableResp = await fetch(
+    `https://www.fencingtimelive.com/tableaus/scores/${eventId}/${tableauId}/trees/${treeGuid}/tables/0/${numTables}`,
+    { headers }
+  );
+  const tableHtml = await tableResp.text();
+
+  // Step 4: Parse Rian's DE path from the HTML
+  // The tableau HTML has rows with fencer entries and scores
+  // We need to find WEI Rian and trace his path through the bracket
+  
+  const matches: any[] = [];
+  
+  // Find all fencer entries and scores
+  // Each bout appears as: seed + name in a cell, score in an adjacent cell
+  // Pattern: <span class='tseed'>(N)</span><span class='tcln'>LAST</span> <span class='tcfn'>First</span>
+  
+  // Find Rian's DE seed
+  const rianSeedMatch = tableHtml.match(/tseed[^>]*>\((\d+T?)\)[^<]*<\/span><span class='tcln'>WEI<\/span>\s*<span class='tcfn'>Rian<\/span>/);
+  const rianDESeed = rianSeedMatch ? rianSeedMatch[1] : "?";
+  
+  // Parse all bouts from the tableau
+  // Score pattern: <span class='tsco'>15 - 9<br/>...
+  // We need to find bouts involving WEI Rian
+  
+  // Strategy: find all cells with WEI Rian, determine column (round), 
+  // and find the adjacent score cell
+  
+  // Simpler approach: find "WEI" + "Rian" appearances and their context
+  const rianPattern = /WEI<\/span>\s*<span class='tcfn'>Rian/g;
+  let rianMatch;
+  const rianPositions: number[] = [];
+  while ((rianMatch = rianPattern.exec(tableHtml)) !== null) {
+    rianPositions.push(rianMatch.index);
+  }
+
+  // For each Rian appearance, look backwards for seed and forwards/backwards for score
+  // Round headers: "Table of 128", "Table of 64", etc.
+  const roundHeaders = ["Table of 256", "Table of 128", "Table of 64", "Table of 32", "Table of 16", "Table of 8", "Semi-Finals", "Finals"];
+  
+  // Parse all scores near Rian's appearances
+  // Find cells containing WEI Rian and the score cells in the same <tr> group
+  
+  // Actually, let's use a different approach: parse all bouts
+  // Each bout has: winner name in one column, score in a tsco span
+  // If WEI Rian appears as a winner, that's a win. If the score is after a different name, that's a loss.
+  
+  // Find all score cells
+  const scorePattern = /tsco'>(\d+)\s*-\s*(\d+)/g;
+  let scoreMatch;
+  const allScores: { index: number; s1: number; s2: number }[] = [];
+  while ((scoreMatch = scorePattern.exec(tableHtml)) !== null) {
+    allScores.push({ index: scoreMatch.index, s1: parseInt(scoreMatch[1]), s2: parseInt(scoreMatch[2]) });
+  }
+
+  // For each Rian position, find the nearest score
+  for (const rianPos of rianPositions) {
+    // Find the closest score to this Rian mention
+    let closestScore = null;
+    let minDist = Infinity;
+    for (const score of allScores) {
+      const dist = Math.abs(score.index - rianPos);
+      if (dist < minDist) {
+        minDist = dist;
+        closestScore = score;
+      }
+    }
+    
+    if (closestScore && minDist < 3000) {
+      // Determine if this is a win or loss
+      // If Rian's name appears BEFORE the score in a winner cell, it's a win
+      // The winner appears with the score in the same row area
+      
+      // Look for the opponent near this score
+      const scoreArea = tableHtml.substring(
+        Math.max(0, closestScore.index - 1500),
+        Math.min(tableHtml.length, closestScore.index + 200)
+      );
+      
+      // Find fencer names near this score
+      const namePattern = /tcln'>([^<]+)<\/span>\s*<span class='tcfn'>([^<]+)/g;
+      const nearbyNames: { lastName: string; firstName: string; index: number }[] = [];
+      let nameMatch;
+      while ((nameMatch = namePattern.exec(scoreArea)) !== null) {
+        nearbyNames.push({
+          lastName: nameMatch[1],
+          firstName: nameMatch[2],
+          index: nameMatch.index,
+        });
+      }
+      
+      // Determine if Rian won (Rian appears in the same td/row cluster as the score)
+      const isRianNearScore = scoreArea.includes("WEI</span>") && scoreArea.includes("Rian");
+      const opponent = nearbyNames.find(n => n.lastName !== "WEI" && n.lastName !== "- BYE -");
+      
+      if (opponent) {
+        // Check if score cell is after Rian's name (win) or before (loss)
+        // In FTL tableau, the score appears in the loser's side
+        // So if Rian is in the same cell group as the score, the score is FROM that bout
+        // The winner's score comes first (higher number)
+        const s1 = closestScore.s1;
+        const s2 = closestScore.s2;
+        const win = s1 > s2 ? isRianNearScore : !isRianNearScore;
+        
+        matches.push({
+          opponent: decodeHtmlEntities(`${opponent.lastName} ${opponent.firstName}`),
+          score: `${s1}-${s2}`,
+          win: s1 > s2, // In FTL, winner's score is always first
+          raw: true, // mark as needing manual verification
+        });
+      }
+    }
+  }
+  
+  // Deduplicate matches (same opponent may appear multiple times in HTML)
+  const seen = new Set<string>();
+  const uniqueMatches = matches.filter(m => {
+    const key = `${m.opponent}-${m.score}`;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+
+  return jsonResponse({
+    eventId,
+    tableauId,
+    rianDESeed,
+    matches: uniqueMatches,
+    totalRianAppearances: rianPositions.length,
   });
 }
 

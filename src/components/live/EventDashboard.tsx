@@ -70,19 +70,34 @@ export default function EventDashboard({ event, tournamentName }: Props) {
         setPoolData(null);
       }
 
-      // Also fetch results to get Rian's overall seed / final placement
+      // Fetch results data
       try {
         const resultsResp = await fetch(`${API_BASE}/api/ftl/results/${event.id}`);
         const resultsJson = await resultsResp.json();
         if (resultsJson.rianEntry) {
           setRianPlace(resultsJson.rianEntry.place);
-          if (!rianPoolSeed) {
-            // Use overall seed if we don't have pool seed
-          }
         }
-      } catch {
-        // Results endpoint may not exist yet
-      }
+      } catch { /* Results may not be available yet */ }
+
+      // Fetch DE data
+      try {
+        const deResp = await fetch(`${API_BASE}/api/ftl/de/${event.id}`);
+        const deJson = await deResp.json();
+        if (deJson.matches && deJson.matches.length > 0) {
+          setDeData({
+            rianDESeed: parseInt(deJson.rianDESeed) || 0,
+            matches: deJson.matches.map((m: any, i: number) => ({
+              round: `T${Math.pow(2, 7 - i)}`, // approximate round
+              opponent: m.opponent,
+              club: "",
+              score: m.score,
+              win: m.win,
+              status: "completed" as const,
+            })),
+            lastRefreshed: new Date().toLocaleTimeString(),
+          });
+        }
+      } catch { /* DE may not be available yet */ }
 
     } catch (err: any) {
       setError(`Failed to load data: ${err.message}`);
@@ -226,13 +241,58 @@ export default function EventDashboard({ event, tournamentName }: Props) {
             </div>
           )}
 
-          {/* DE Section (placeholder for now) */}
+          {/* DE Section */}
           <div className="border-t border-white/5 pt-6 mt-6">
-            <div className="text-center py-8 bg-white/[0.02] rounded-2xl">
-              <div className="text-3xl mb-3">🗡️</div>
-              <p className="text-white/40 text-sm">DE tableau — coming soon</p>
-              <p className="text-white/20 text-xs mt-1">Will show bracket path and opponent analysis</p>
-            </div>
+            {deData && deData.matches.length > 0 ? (
+              <div className="space-y-4">
+                <div className="flex items-center justify-between">
+                  <h3 className="text-white/50 text-xs uppercase tracking-wider font-bold">
+                    🗡️ Direct Elimination — Seed #{deData.rianDESeed}
+                  </h3>
+                  {rianPlace && (
+                    <span className={`text-sm font-bold px-3 py-1 rounded-full ${
+                      rianPlace === "1" ? "bg-yellow-500/20 text-yellow-400" :
+                      rianPlace === "2" ? "bg-gray-400/20 text-gray-300" :
+                      rianPlace.startsWith("3") ? "bg-orange-500/20 text-orange-400" :
+                      "bg-white/10 text-white/50"
+                    }`}>
+                      Final: {rianPlace === "1" ? "🥇" : rianPlace === "2" ? "🥈" : rianPlace.startsWith("3") ? "🥉" : ""} #{rianPlace}
+                    </span>
+                  )}
+                </div>
+
+                <div className="space-y-2">
+                  {deData.matches.map((m, i) => (
+                    <div
+                      key={i}
+                      className={`flex items-center gap-3 p-3 rounded-xl ${
+                        m.win ? "bg-green-500/5 border border-green-500/10" : "bg-red-500/5 border border-red-500/10"
+                      }`}
+                    >
+                      <span className="text-white/20 text-xs font-mono w-10">
+                        {i === deData.matches.length - 1 ? "Final" :
+                         i === deData.matches.length - 2 ? "SF" :
+                         i === deData.matches.length - 3 ? "QF" :
+                         `R${i + 1}`}
+                      </span>
+                      <span className={`text-sm font-bold ${m.win ? "text-green-400" : "text-red-400"}`}>
+                        {m.win ? "W" : "L"}
+                      </span>
+                      <span className="text-white/70 text-sm flex-1">vs {m.opponent}</span>
+                      {m.score && (
+                        <span className="text-white/40 text-sm font-mono">{m.score}</span>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ) : (
+              <div className="text-center py-8 bg-white/[0.02] rounded-2xl">
+                <div className="text-3xl mb-3">🗡️</div>
+                <p className="text-white/40 text-sm">DE tableau not yet available</p>
+                <p className="text-white/20 text-xs mt-1">Click Refresh when DE starts</p>
+              </div>
+            )}
           </div>
 
           {/* Last refreshed */}
