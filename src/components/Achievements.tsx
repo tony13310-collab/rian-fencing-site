@@ -20,11 +20,35 @@ export default function Achievements() {
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         {profile.achievements.map((achievement, i) => {
+          // Extract rating from text like "• Earned C25" or "Earned D24 rating"
+          const ratingMatch = achievement.text.match(/(?:Earned|Renewed)\s+([A-E]\d{2})/);
+          const isRatingCard = achievement.emoji === "⬆️" || achievement.emoji === "🔄";
+          const ratingLabel = isRatingCard ? ratingMatch?.[1] : null;
+
+          const ratingColors: Record<string, string> = {
+            'E': 'from-gray-400 to-gray-500',
+            'D': 'from-green-400 to-emerald-500',
+            'C': 'from-blue-400 to-cyan-500',
+            'B': 'from-purple-400 to-violet-500',
+            'A': 'from-yellow-400 to-amber-500',
+          };
+
           const inner = (
             <>
-              <div className="text-2xl sm:text-3xl">{achievement.emoji}</div>
+              {ratingLabel ? (
+                <div className={`flex-shrink-0 w-10 h-10 sm:w-12 sm:h-12 rounded-xl bg-gradient-to-br ${ratingColors[ratingLabel[0]] || 'from-gray-400 to-gray-500'} flex items-center justify-center`}>
+                  <span className="text-black font-black text-xs sm:text-sm">{ratingLabel}</span>
+                </div>
+              ) : (
+                <div className="text-2xl sm:text-3xl">{achievement.emoji}</div>
+              )}
               <p className="text-white/80 text-sm sm:text-lg font-medium leading-relaxed">
-                {achievement.text}
+                {achievement.text.replace(/\s•\s(Earned|Renewed)\s+[A-E]\d{2}/, '')}
+                {!isRatingCard && ratingMatch && (
+                  <span className={`ml-2 inline-flex items-center px-1.5 py-0.5 rounded text-[10px] sm:text-xs font-black text-black bg-gradient-to-r ${ratingColors[ratingMatch[1][0]] || 'from-gray-400 to-gray-500'}`}>
+                    {ratingMatch[1]}
+                  </span>
+                )}
               </p>
               {achievement.eventId && (
                 <span className="text-white/20 ml-auto text-lg shrink-0">›</span>
