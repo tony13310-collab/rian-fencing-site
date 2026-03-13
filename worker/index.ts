@@ -428,7 +428,7 @@ async function handleFTSearch(url: URL): Promise<Response> {
   return jsonResponse(data);
 }
 
-const FT_CACHE_TTL = 7 * 24 * 60 * 60; // 7 days in seconds
+const FT_CACHE_TTL = 10 * 24 * 60 * 60; // 10 days in seconds
 
 async function handleFTProfileByName(nameQuery: string): Promise<Response> {
   // Check cache first
