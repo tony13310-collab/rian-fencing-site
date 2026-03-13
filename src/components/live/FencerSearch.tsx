@@ -123,7 +123,7 @@ export default function FencerSearch() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-            placeholder="Search by first + last name (e.g. Kim Kendrick)..."
+            placeholder="Search fencer by first + last name..."
             className="w-full bg-white/5 border border-white/10 rounded-xl pl-9 pr-4 py-3 text-white placeholder:text-white/50 focus:outline-none focus:border-orange-500/30 text-sm"
           />
         </div>
@@ -132,7 +132,7 @@ export default function FencerSearch() {
           disabled={searching || query.trim().split(/\s+/).length < 2}
           className="px-5 py-3 bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/20 rounded-xl text-orange-400 text-sm font-bold transition-colors disabled:opacity-30"
         >
-          {searching ? "..." : "Scout"}
+          {searching ? "..." : "Search"}
         </button>
       </div>
 

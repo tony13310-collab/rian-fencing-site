@@ -107,10 +107,10 @@ export default function LivePage() {
               exit={{ opacity: 0, y: -20 }}
               className="space-y-8"
             >
-              {/* Scout Section */}
+              {/* Search Section */}
               <section>
                 <h2 className="text-lg font-bold text-white/90 uppercase tracking-wider mb-4">
-                  🎯 Scout Opponent
+                  🎯 Search Fencer
                 </h2>
                 <FencerSearch />
               </section>
