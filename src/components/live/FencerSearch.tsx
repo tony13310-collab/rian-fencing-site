@@ -9,7 +9,7 @@ const API_BASE = "https://rian-fencing-api.tony13310.workers.dev";
 export default function FencerSearch() {
   const [query, setQuery] = useState("");
   const [searching, setSearching] = useState(false);
-  const [results, setResults] = useState<{ usfa_id: number; name: string; club: string }[]>([]);
+  const [results, setResults] = useState<{ usfa_id: number; name: string; club: string; birthYear?: number; currentRating?: string }[]>([]);
   const [selectedFencer, setSelectedFencer] = useState<FTProfile | null>(null);
   const [loadingProfile, setLoadingProfile] = useState(false);
   const [error, setError] = useState("");
@@ -22,12 +22,12 @@ export default function FencerSearch() {
     setSelectedFencer(null);
 
     try {
-      const resp = await fetch(`${API_BASE}/api/ft/search?q=${encodeURIComponent(query)}`);
+      const resp = await fetch(`${API_BASE}/api/ft/search-saber?q=${encodeURIComponent(query)}`);
       const data = await resp.json();
       if (Array.isArray(data) && data.length > 0) {
         setResults(data);
       } else {
-        setError("No fencers found");
+        setError("No Men's Saber fencers found");
       }
     } catch {
       setError("Search failed");
@@ -129,6 +129,12 @@ export default function FencerSearch() {
             >
               <span className="text-white/80 text-sm font-medium">{f.name.replace(/-/g, " ")}</span>
               <span className="text-white/30 text-xs ml-3">{f.club}</span>
+              {f.currentRating && f.currentRating !== "U" && (
+                <span className="text-white/20 text-xs ml-2">{f.currentRating}</span>
+              )}
+              {f.birthYear && (
+                <span className="text-white/15 text-xs ml-1">({f.birthYear})</span>
+              )}
             </button>
           ))}
         </div>

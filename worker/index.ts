@@ -52,9 +52,14 @@ export default {
         return await handleFTLResults(eventId);
       }
 
-      // /api/ft/search?q=GERSTMANN — search FencingTracker
+      // /api/ft/search?q=GERSTMANN — search FencingTracker (all weapons)
       if (path === "/api/ft/search") {
         return await handleFTSearch(url);
+      }
+
+      // /api/ft/search-saber?q=name — search FT, filtered to Men's Saber only
+      if (path === "/api/ft/search-saber") {
+        return await handleFTSearchSaber(url);
       }
 
       // /api/ft/profile?q=GERSTMANN+Max or /api/ft/profile/:usfaId
@@ -506,6 +511,86 @@ async function handleFTSearch(url: URL): Promise<Response> {
 }
 
 const FT_CACHE_TTL = 10 * 24 * 60 * 60; // 10 days in seconds
+
+async function handleFTSearchSaber(url: URL): Promise<Response> {
+  const q = url.searchParams.get("q") || "";
+  if (!q) return jsonResponse({ error: "Missing q parameter" }, 400);
+
+  // Search FT
+  const searchResp = await fetch("https://fencingtracker.com/search", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ query: q, limit: 10 }),
+  });
+  if (!searchResp.ok) return jsonResponse({ error: "FT search failed" }, 502);
+  const searchData: any = await searchResp.json();
+  if (!searchData || searchData.length === 0) {
+    return jsonResponse([]);
+  }
+
+  // For each result, fetch profile (uses cache) and filter to saber fencers
+  const results: any[] = [];
+  const headers = { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" };
+
+  // Check up to 10 results in parallel (cached profiles return fast)
+  const checks = searchData.slice(0, 10).map(async (fencer: any) => {
+    const usfaId = String(fencer.usfa_id);
+    const nameSlug = fencer.name;
+
+    // Quick check: fetch summary page and look for "Men's Saber" in results
+    const cacheKey = new Request(`https://ft-cache.internal/saber-check/${usfaId}`);
+    const cache = caches.default;
+    const cached = await cache.match(cacheKey);
+
+    let isSaber = false;
+    let profileData: any = null;
+
+    if (cached) {
+      const cachedData = await cached.json();
+      isSaber = cachedData.isSaber;
+      profileData = cachedData.profile;
+    } else {
+      try {
+        const profileResp = await fetch(`https://fencingtracker.com/p/${usfaId}/${nameSlug}`, { headers });
+        if (profileResp.ok) {
+          const html = await profileResp.text();
+          // Check for Men's Saber events
+          isSaber = /Men['']s Saber/i.test(html) || /Mixed Saber/i.test(html);
+
+          if (isSaber) {
+            // Extract basic info
+            const birthMatch = html.match(/<h3[^>]*>\s*(\d{4})\s*<\/h3>/);
+            const ratingMatch = html.match(/Rating History[\s\S]*?<td>Saber<\/td>\s*<td>([A-Z]\d{2})<\/td>/);
+            profileData = {
+              birthYear: birthMatch ? parseInt(birthMatch[1]) : null,
+              currentRating: ratingMatch ? ratingMatch[1] : "U",
+            };
+          }
+        }
+      } catch {}
+
+      // Cache saber check for 10 days
+      const toCache = new Response(JSON.stringify({ isSaber, profile: profileData }), {
+        headers: { "Content-Type": "application/json", "Cache-Control": `public, max-age=${FT_CACHE_TTL}` },
+      });
+      await cache.put(cacheKey, toCache);
+    }
+
+    if (isSaber) {
+      results.push({
+        usfa_id: fencer.usfa_id,
+        name: fencer.name,
+        club: fencer.club,
+        birthYear: profileData?.birthYear,
+        currentRating: profileData?.currentRating || "U",
+      });
+    }
+  });
+
+  await Promise.all(checks);
+
+  return jsonResponse(results);
+}
 
 async function handleFTProfileByName(nameQuery: string): Promise<Response> {
   // Check cache first
