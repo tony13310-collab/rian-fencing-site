@@ -2,9 +2,11 @@
 
 import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import LiveNavbar from "@/components/live/LiveNavbar";
+import Navbar from "@/components/Navbar";
 import TournamentSearch from "@/components/live/TournamentSearch";
+import FencerSearch from "@/components/live/FencerSearch";
 import EventDashboard from "@/components/live/EventDashboard";
+import Footer from "@/components/Footer";
 
 export interface TournamentEvent {
   id: string;
@@ -36,7 +38,6 @@ export interface PoolFencer {
   strength?: number;
   recentResults?: { event: string; place: string; date: string }[];
   birthYear?: number;
-  // Pool scores
   scores?: { win: boolean; score: string }[];
   victories?: number;
   vm?: string;
@@ -93,13 +94,17 @@ export default function LivePage() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#0a0a0f] text-white">
-      <LiveNavbar
-        view={view}
-        eventName={selectedEvent?.name}
-        onBack={handleBack}
-      />
-      <main className="pt-20 pb-12 px-4 sm:px-6 max-w-5xl mx-auto">
+    <main className="noise-overlay">
+      <Navbar />
+      <div className="pt-24 pb-8 max-w-5xl mx-auto px-4 sm:px-6">
+        <div className="flex items-center gap-3 mb-2">
+          <span className="text-red-400 animate-pulse text-lg">●</span>
+          <h1 className="text-3xl font-bold text-white/90">Live Dashboard</h1>
+        </div>
+        <p className="text-white/40 text-sm">Real-time tournament tracking & opponent scouting</p>
+      </div>
+
+      <div className="pb-12 px-4 sm:px-6 max-w-5xl mx-auto">
         <AnimatePresence mode="wait">
           {view === "search" && (
             <motion.div
@@ -107,7 +112,9 @@ export default function LivePage() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
+              className="space-y-8"
             >
+              <FencerSearch />
               <TournamentSearch
                 onTournamentFound={handleTournamentFound}
                 onEventSelect={handleEventSelect}
@@ -122,6 +129,12 @@ export default function LivePage() {
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
             >
+              <button
+                onClick={handleBack}
+                className="text-white/40 hover:text-white/70 text-sm mb-4 flex items-center gap-1"
+              >
+                ← Back to tournaments
+              </button>
               <EventDashboard
                 event={selectedEvent}
                 tournamentName={tournament?.name || ""}
@@ -129,7 +142,8 @@ export default function LivePage() {
             </motion.div>
           )}
         </AnimatePresence>
-      </main>
-    </div>
+      </div>
+      <Footer />
+    </main>
   );
 }

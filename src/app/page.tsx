@@ -1,61 +1,34 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useCallback } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Quotes from "@/components/Quotes";
 import StatsBar from "@/components/StatsBar";
-import FilterBar, { PlacementFilter } from "@/components/FilterBar";
-import SeasonTimeline from "@/components/SeasonTimeline";
 import Achievements from "@/components/Achievements";
-import Footer from "@/components/Footer";
-import OpponentsPreview from "@/components/OpponentsPreview";
 import Contact from "@/components/Contact";
-import { allEvents, TournamentLevel, AgeCategory } from "@/data/events";
+import Footer from "@/components/Footer";
+import TournamentSearch from "@/components/live/TournamentSearch";
+import FencerSearch from "@/components/live/FencerSearch";
+import EventDashboard from "@/components/live/EventDashboard";
+import type { Tournament, TournamentEvent } from "@/app/live/page";
 
 export default function Home() {
-  const [selectedLevels, setSelectedLevels] = useState<Set<TournamentLevel>>(
-    new Set()
-  );
-  const [selectedCategories, setSelectedCategories] = useState<
-    Set<AgeCategory>
-  >(new Set());
-  const [selectedPlacements, setSelectedPlacements] = useState<Set<PlacementFilter>>(
-    new Set()
-  );
+  const [tournament, setTournament] = useState<Tournament | null>(null);
+  const [selectedEvent, setSelectedEvent] = useState<TournamentEvent | null>(null);
 
-  const toggleLevel = (level: TournamentLevel) => {
-    setSelectedLevels((prev) => {
-      const next = new Set(prev);
-      if (next.has(level)) next.delete(level);
-      else next.add(level);
-      return next;
-    });
-  };
+  const handleTournamentFound = useCallback((t: Tournament) => {
+    setTournament(t);
+  }, []);
 
-  const toggleCategory = (cat: AgeCategory) => {
-    setSelectedCategories((prev) => {
-      const next = new Set(prev);
-      if (next.has(cat)) next.delete(cat);
-      else next.add(cat);
-      return next;
-    });
-  };
+  const handleEventSelect = useCallback((event: TournamentEvent) => {
+    setSelectedEvent(event);
+  }, []);
 
-  const togglePlacement = (p: PlacementFilter) => {
-    setSelectedPlacements((prev) => {
-      const next = new Set(prev);
-      if (next.has(p)) next.delete(p);
-      else next.add(p);
-      return next;
-    });
-  };
-
-  const clearAll = () => {
-    setSelectedLevels(new Set());
-    setSelectedCategories(new Set());
-    setSelectedPlacements(new Set());
-  };
+  const handleBackToSearch = useCallback(() => {
+    setSelectedEvent(null);
+    setTournament(null);
+  }, []);
 
   return (
     <main className="noise-overlay">
@@ -63,24 +36,36 @@ export default function Home() {
       <Hero />
       <Quotes />
       <StatsBar />
-      <FilterBar
-        selectedLevels={selectedLevels}
-        selectedCategories={selectedCategories}
-        selectedPlacements={selectedPlacements}
-        onToggleLevel={toggleLevel}
-        onToggleCategory={toggleCategory}
-        onTogglePlacement={togglePlacement}
-        onClearAll={clearAll}
-      />
-      <SeasonTimeline
-        events={allEvents}
-        selectedLevels={selectedLevels}
-        selectedCategories={selectedCategories}
-        selectedPlacements={selectedPlacements}
-      />
-      <div id="opponents">
-        <OpponentsPreview />
-      </div>
+
+      {/* Live Section */}
+      <section className="max-w-6xl mx-auto px-4 sm:px-6 py-12">
+        <div className="flex items-center gap-3 mb-8">
+          <span className="text-red-400 animate-pulse text-lg">●</span>
+          <h2 className="text-2xl font-bold text-white/90">Live & Upcoming</h2>
+        </div>
+
+        {selectedEvent ? (
+          <div>
+            <button
+              onClick={handleBackToSearch}
+              className="text-white/40 hover:text-white/70 text-sm mb-4 flex items-center gap-1"
+            >
+              ← Back
+            </button>
+            <EventDashboard event={selectedEvent} tournamentName={tournament?.name || ""} />
+          </div>
+        ) : (
+          <div className="space-y-8">
+            <FencerSearch />
+            <TournamentSearch
+              onTournamentFound={handleTournamentFound}
+              onEventSelect={handleEventSelect}
+              tournament={tournament}
+            />
+          </div>
+        )}
+      </section>
+
       <Achievements />
       <Contact />
       <Footer />
