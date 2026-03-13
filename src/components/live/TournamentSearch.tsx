@@ -123,32 +123,67 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
     }
   }
 
-  const TournamentCard = ({ t, badge }: { t: UpcomingTournament; badge?: string }) => (
-    <button
-      onClick={() => selectTournament(t)}
-      className={`w-full text-left p-4 rounded-xl transition-all ${
-        selectedTournament?.id === t.id
-          ? "bg-red-500/10 border border-red-500/20"
-          : "bg-white/[0.03] hover:bg-white/[0.06] border border-transparent"
-      }`}
-    >
-      <div className="space-y-1">
-        <div className="flex items-start gap-2 flex-wrap">
-          <h3 className="text-white/90 font-bold text-sm">{t.name}</h3>
-          {badge && (
-            <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold shrink-0 ${
-              badge === "LIVE" 
-                ? "bg-red-500/20 text-red-400 border border-red-500/30 animate-pulse"
-                : "bg-blue-500/10 text-blue-400 border border-blue-500/20"
-            }`}>
-              {badge}
+  const TournamentCard = ({ t, badge }: { t: UpcomingTournament; badge?: string }) => {
+    const isSelected = selectedTournament?.id === t.id;
+    const isLive = badge === "LIVE";
+
+    // Calculate days info
+    const now = new Date();
+    const startDate = new Date(t.start);
+    const endDate = t.end ? new Date(t.end) : startDate;
+    const daysUntil = Math.ceil((startDate.getTime() - now.getTime()) / (1000 * 60 * 60 * 24));
+    const totalDays = Math.ceil((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)) + 1;
+    const dayOfEvent = isLive ? Math.ceil((now.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)) + 1 : 0;
+
+    return (
+      <button
+        onClick={() => selectTournament(t)}
+        className={`w-full text-left rounded-2xl transition-all overflow-hidden ${
+          isSelected
+            ? "ring-2 ring-red-500/30"
+            : "hover:scale-[1.01]"
+        } ${isLive ? "bg-gradient-to-br from-red-500/10 to-orange-500/5 border border-red-500/15" : "bg-white/[0.03] border border-white/5 hover:border-white/10"}`}
+      >
+        <div className="p-4 space-y-3">
+          {/* Top row: badge + status */}
+          <div className="flex items-center justify-between">
+            {badge && (
+              <span className={`text-[10px] px-2.5 py-1 rounded-full font-bold uppercase tracking-wider ${
+                isLive
+                  ? "bg-red-500/20 text-red-400 border border-red-500/30 animate-pulse"
+                  : "bg-blue-500/10 text-blue-400 border border-blue-500/20"
+              }`}>
+                {isLive ? "● LIVE" : `In ${daysUntil} day${daysUntil !== 1 ? "s" : ""}`}
+              </span>
+            )}
+            {isLive && totalDays > 1 && (
+              <span className="text-white/20 text-[10px]">Day {dayOfEvent} of {totalDays}</span>
+            )}
+          </div>
+
+          {/* Tournament name */}
+          <h3 className="text-white font-bold text-base leading-tight">{t.name}</h3>
+
+          {/* Info row */}
+          <div className="flex items-center gap-4 text-xs text-white/40">
+            <span className="flex items-center gap-1">
+              📍 {t.location}
             </span>
-          )}
+            <span className="flex items-center gap-1">
+              📅 {t.dates}
+            </span>
+          </div>
         </div>
-        <p className="text-white/30 text-xs">{t.location} • {t.dates}</p>
-      </div>
-    </button>
-  );
+
+        {/* Bottom action hint */}
+        <div className={`px-4 py-2 text-[10px] uppercase tracking-wider font-bold text-center ${
+          isSelected ? "bg-red-500/10 text-red-400" : "bg-white/[0.02] text-white/15"
+        }`}>
+          {isSelected ? "✓ Selected — loading events..." : "Tap to view events →"}
+        </div>
+      </button>
+    );
+  };
 
   return (
     <div className="space-y-6">
