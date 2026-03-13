@@ -282,18 +282,19 @@ export default function SeasonTimeline({
                         transition={{ delay: tidx * 0.05 }}
                         className={`rounded-2xl border ${tidx % 2 === 0 ? 'border-white/10 bg-[#1a1a30]' : 'border-white/5 bg-[#12121a]'} overflow-hidden backdrop-blur-sm`}
                       >
-                        {/* Tournament header - unified bar */}
-                        <div className={`px-3 sm:px-5 py-2.5 flex items-center justify-between border-b border-white/5 ${colors.bg} rounded-t-2xl`}>
+                        {/* Tournament header */}
+                        <div className="px-3 sm:px-5 py-3 flex items-center justify-between border-b border-white/5 gap-2">
                           <div className="flex items-center gap-2 sm:gap-3 min-w-0">
-                            <span className={`text-[10px] ${colors.text} uppercase tracking-wider font-bold shrink-0`}>
+                            <span
+                              className={`text-[10px] w-[60px] sm:w-[72px] py-1 rounded-md ${colors.bg} ${colors.text} uppercase tracking-wider font-bold text-center inline-block shrink-0`}
+                            >
                               {level === "International" ? "INTL" : level === "National" ? "NAT'L" : level}
                             </span>
-                            <span className="text-white/20">|</span>
-                            <h4 className="text-white font-bold text-xs sm:text-sm md:text-base truncate">
+                            <h4 className="text-cyan-300 font-bold text-xs sm:text-sm md:text-base truncate">
                               {tourName}
                             </h4>
                           </div>
-                          <span className="text-white/60 text-[10px] sm:text-xs shrink-0">
+                          <span className="text-white/50 text-[10px] sm:text-xs shrink-0">
                             {new Date(tourEvents[0].date).toLocaleDateString(
                               "en-US",
                               { month: "short", year: "numeric" }
