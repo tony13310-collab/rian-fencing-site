@@ -18,6 +18,7 @@ export default function Navbar() {
     { label: "Database", href: "#opponents" },
     { label: "Highlights", href: "#highlights" },
     { label: "Contact", href: "#contact" },
+    { label: "● Live", href: "/live", isLive: true },
   ];
 
   return (
@@ -45,7 +46,9 @@ export default function Navbar() {
             <a
               key={link.href}
               href={link.href}
-              className="text-white/50 hover:text-white transition-colors text-sm font-medium"
+              className={`hover:text-white transition-colors text-sm font-medium ${
+                (link as any).isLive ? "text-red-400 animate-pulse" : "text-white/50"
+              }`}
             >
               {link.label}
             </a>
@@ -97,7 +100,9 @@ export default function Navbar() {
                   key={link.href}
                   href={link.href}
                   onClick={() => setMobileOpen(false)}
-                  className="block text-white/60 hover:text-white transition-colors font-medium"
+                  className={`block hover:text-white transition-colors font-medium ${
+                    (link as any).isLive ? "text-red-400" : "text-white/60"
+                  }`}
                 >
                   {link.label}
                 </a>
