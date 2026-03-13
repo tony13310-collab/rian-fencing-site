@@ -109,7 +109,6 @@ export default function Hero() {
             );
           })}
           <div className="px-3 sm:px-5 py-2 rounded-xl bg-gradient-to-r from-amber-500/20 to-orange-600/20 border border-amber-500/30 backdrop-blur-sm">
-            <span className="text-white/70 text-xs font-medium mr-1">Rating</span>
             <span className="text-amber-400 font-black text-sm sm:text-lg">{profile.rating}</span>
           </div>
         </motion.div>
