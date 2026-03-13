@@ -26,8 +26,22 @@ export default function FencerSearch() {
       const data = await resp.json();
       if (Array.isArray(data) && data.length > 0) {
         setResults(data);
+        // Check if any result has the query as actual surname
+        const qLower = query.trim().toLowerCase();
+        const hasSurnameMatch = data.some((f: any) => {
+          const parts = (f.name || "").toLowerCase().split("-");
+          return parts[parts.length - 1] === qLower;
+        });
+        if (!hasSurnameMatch && qLower.split(/\s+/).length === 1) {
+          setError("Tip: Add a first name for better results (e.g. \"" + query.trim() + " Rian\")");
+        }
       } else {
-        setError("No Men's Saber fencers found");
+        const words = query.trim().split(/\s+/);
+        if (words.length === 1) {
+          setError("No results. Try adding a first name (e.g. \"" + query.trim() + " Rian\")");
+        } else {
+          setError("No Men's Saber fencers found");
+        }
       }
     } catch {
       setError("Search failed");

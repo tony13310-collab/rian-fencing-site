@@ -523,9 +523,13 @@ async function handleFTSearchSaber(url: URL): Promise<Response> {
   queries.add(q);
   const qParts = q.trim().split(/\s+/);
   if (qParts.length === 1) {
-    // Single word: try with common first names to find surname matches
-    // Also try reversed (e.g., "Wei" → search "Wei " with trailing space doesn't help)
-    // Best we can do: increase limit and hope
+    // Single word (likely a surname): FT's substring search buries short surnames
+    // Try a few high-value prefix searches to find actual surname matches
+    // Limit to 3 prefixes to stay within Cloudflare subrequest limits
+    const prefixes = ["J", "K", "R"];
+    for (const p of prefixes) {
+      queries.add(`${p}-${q}`);
+    }
   } else if (qParts.length >= 2) {
     // Multi word: try all permutations
     // "Kim Kendrick" → "Kim Kendrick", "Kendrick Kim", "Kim-Kendrick", "Kendrick-Kim"
@@ -541,7 +545,7 @@ async function handleFTSearchSaber(url: URL): Promise<Response> {
       const resp = await fetch("https://fencingtracker.com/search", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ query, limit: 30 }),
+        body: JSON.stringify({ query, limit: 10 }),
       });
       if (resp.ok) {
         const data: any = await resp.json();
@@ -584,8 +588,9 @@ async function handleFTSearchSaber(url: URL): Promise<Response> {
   const results: any[] = [];
   const headers = { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" };
 
-  // Check results in parallel, return up to 10 saber fencers
-  const checks = searchData.slice(0, 30).map(async (fencer: any) => {
+  // Check results sequentially to stay within subrequest limits (50 max)
+  // Only check the first 15 unique results
+  const checks = searchData.slice(0, 15).map(async (fencer: any) => {
     const usfaId = String(fencer.usfa_id);
     const nameSlug = fencer.name;
 
