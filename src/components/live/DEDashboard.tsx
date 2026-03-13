@@ -33,7 +33,7 @@ export default function DEDashboard({ event, deData, setDeData }: Props) {
           <h2 className="text-xl sm:text-2xl font-bold text-white">
             {event.name}
           </h2>
-          <p className="text-white/40 text-sm mt-1">
+          <p className="text-white/70 text-sm mt-1">
             Direct Elimination • {event.date}
           </p>
         </div>
@@ -56,7 +56,7 @@ export default function DEDashboard({ event, deData, setDeData }: Props) {
       {deData && (
         <div className="bg-gradient-to-r from-orange-500/10 to-red-500/10 border border-orange-500/20 rounded-xl p-4 flex items-center gap-4">
           <div className="text-center">
-            <p className="text-white/30 text-[10px] uppercase">DE Seed</p>
+            <p className="text-white/60 text-xs uppercase">DE Seed</p>
             <p className="text-3xl font-black text-orange-400">#{deData.rianDESeed}</p>
           </div>
           <div className="h-10 w-px bg-white/10" />
@@ -88,7 +88,7 @@ export default function DEDashboard({ event, deData, setDeData }: Props) {
                     m.win ? "bg-green-500/5 border border-green-500/10" : "bg-red-500/5 border border-red-500/10"
                   }`}
                 >
-                  <span className="text-white/30 text-xs font-mono w-10">{m.round}</span>
+                  <span className="text-white/60 text-xs font-mono w-10">{m.round}</span>
                   <span className={`text-sm font-bold ${m.win ? "text-green-400" : "text-red-400"}`}>
                     {m.win ? "W" : "L"}
                   </span>
@@ -96,7 +96,7 @@ export default function DEDashboard({ event, deData, setDeData }: Props) {
                     {m.opponent === "BYE" ? "BYE" : `vs ${m.opponent}`}
                   </span>
                   {m.score && m.score !== "BYE" && (
-                    <span className="text-white/40 text-sm">{m.score}</span>
+                    <span className="text-white/70 text-sm">{m.score}</span>
                   )}
                 </div>
               ))}
@@ -126,7 +126,7 @@ export default function DEDashboard({ event, deData, setDeData }: Props) {
           {/* Projected opponents */}
           {projected.length > 0 && (
             <div className="space-y-2">
-              <h3 className="text-white/30 text-xs uppercase tracking-wider font-bold">
+              <h3 className="text-white/60 text-xs uppercase tracking-wider font-bold">
                 Potential Future Opponents
               </h3>
               {projected.map((m, i) => (
@@ -134,11 +134,11 @@ export default function DEDashboard({ event, deData, setDeData }: Props) {
                   key={i}
                   className="flex items-center gap-3 p-3 rounded-xl bg-white/[0.02] border border-white/5"
                 >
-                  <span className="text-white/20 text-xs font-mono w-10">{m.round}</span>
-                  <span className="text-white/30 text-sm">
+                  <span className="text-white/50 text-xs font-mono w-10">{m.round}</span>
+                  <span className="text-white/60 text-sm">
                     vs {m.opponent}
-                    {m.club && <span className="text-white/15 ml-1">({m.club})</span>}
-                    {m.seed && <span className="text-white/15 ml-1">#{m.seed}</span>}
+                    {m.club && <span className="text-white/50 ml-1">({m.club})</span>}
+                    {m.seed && <span className="text-white/50 ml-1">#{m.seed}</span>}
                   </span>
                 </div>
               ))}
@@ -148,7 +148,7 @@ export default function DEDashboard({ event, deData, setDeData }: Props) {
       ) : (
         <div className="text-center py-16">
           <div className="text-4xl mb-4">🗡️</div>
-          <p className="text-white/40 text-sm mb-4">
+          <p className="text-white/70 text-sm mb-4">
             DE tableau not yet available
           </p>
           <button
@@ -162,7 +162,7 @@ export default function DEDashboard({ event, deData, setDeData }: Props) {
 
       {/* Last refreshed */}
       {deData?.lastRefreshed && (
-        <p className="text-white/15 text-[10px] text-center">
+        <p className="text-white/50 text-xs text-center">
           Last refreshed: {deData.lastRefreshed}
         </p>
       )}

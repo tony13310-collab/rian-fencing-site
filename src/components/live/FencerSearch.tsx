@@ -151,7 +151,7 @@ export default function FencerSearch() {
                 <span className="text-white/50 text-sm ml-2">{f.currentRating}</span>
               )}
               {f.birthYear && (
-                <span className="text-white/15 text-sm ml-1">({f.birthYear})</span>
+                <span className="text-white/50 text-sm ml-1">({f.birthYear})</span>
               )}
             </button>
           ))}

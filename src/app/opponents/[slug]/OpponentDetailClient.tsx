@@ -83,11 +83,11 @@ export default function OpponentDetailClient() {
         <div className="max-w-lg mx-auto flex items-center gap-3">
           <Link
             href="/opponents"
-            className="text-white/40 hover:text-white/70 transition-colors text-sm"
+            className="text-white/70 hover:text-white/70 transition-colors text-sm"
           >
             ← Opponents
           </Link>
-          <span className="text-white/10">|</span>
+          <span className="text-white/50">|</span>
           <span className="text-white/50 text-sm truncate">vs {name}</span>
         </div>
       </motion.div>
@@ -105,12 +105,12 @@ export default function OpponentDetailClient() {
           <div className="flex items-center justify-center gap-6 mb-4">
             <div className="text-center">
               <div className="text-3xl sm:text-4xl font-black text-green-400">{data.wins}</div>
-              <div className="text-[10px] text-white/50 uppercase tracking-widest">Wins</div>
+              <div className="text-xs text-white/50 uppercase tracking-widest">Wins</div>
             </div>
-            <div className="text-white/10 text-3xl font-light">—</div>
+            <div className="text-white/50 text-3xl font-light">—</div>
             <div className="text-center">
               <div className="text-3xl sm:text-4xl font-black text-red-400">{data.losses}</div>
-              <div className="text-[10px] text-white/50 uppercase tracking-widest">Losses</div>
+              <div className="text-xs text-white/50 uppercase tracking-widest">Losses</div>
             </div>
           </div>
 
@@ -170,7 +170,7 @@ export default function OpponentDetailClient() {
           className="grid grid-cols-2 gap-3 mb-8"
         >
           <div className="bg-white/[0.04] border border-cyan-500/10 rounded-2xl py-4 px-3 text-center">
-            <div className="text-[10px] text-cyan-400/50 uppercase tracking-widest mb-2 font-bold">
+            <div className="text-xs text-cyan-400/50 uppercase tracking-widest mb-2 font-bold">
               Pool Bouts
             </div>
             <div className="text-2xl font-black text-white/80">
@@ -183,7 +183,7 @@ export default function OpponentDetailClient() {
             )}
           </div>
           <div className="bg-white/[0.04] border border-purple-500/10 rounded-2xl py-4 px-3 text-center">
-            <div className="text-[10px] text-purple-400/50 uppercase tracking-widest mb-2 font-bold">
+            <div className="text-xs text-purple-400/50 uppercase tracking-widest mb-2 font-bold">
               DE Bouts
             </div>
             <div className="text-2xl font-black text-white/80">
@@ -323,7 +323,7 @@ export default function OpponentDetailClient() {
               </svg>
 
               {/* Legend */}
-              <div className="flex justify-center gap-6 mt-3 text-[10px] text-white/50">
+              <div className="flex justify-center gap-6 mt-3 text-xs text-white/50">
                 <span className="flex items-center gap-1">
                   <span className="w-2 h-2 rounded-full bg-green-400 inline-block" /> Win
                 </span>
@@ -359,7 +359,7 @@ export default function OpponentDetailClient() {
                   </div>
                   <div className="flex items-center gap-2 mt-0.5">
                     <span className="text-white/50 text-xs">{group.event}</span>
-                    <span className="text-white/10">·</span>
+                    <span className="text-white/50">·</span>
                     <span className="text-white/50 text-xs">{group.date}</span>
                   </div>
                 </div>

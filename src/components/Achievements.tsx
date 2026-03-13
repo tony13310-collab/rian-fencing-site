@@ -45,13 +45,13 @@ export default function Achievements() {
               <p className="text-white/80 text-sm sm:text-lg font-medium leading-relaxed">
                 {achievement.text.replace(/\s•\s(Earned|Renewed)\s+[A-E]\d{2}/, '')}
                 {!isRatingCard && ratingMatch && (
-                  <span className={`ml-2 inline-flex items-center px-1.5 py-0.5 rounded text-[10px] sm:text-xs font-black text-black bg-gradient-to-r ${ratingColors[ratingMatch[1][0]] || 'from-gray-400 to-gray-500'}`}>
+                  <span className={`ml-2 inline-flex items-center px-1.5 py-0.5 rounded text-xs sm:text-xs font-black text-black bg-gradient-to-r ${ratingColors[ratingMatch[1][0]] || 'from-gray-400 to-gray-500'}`}>
                     {ratingMatch[1]}
                   </span>
                 )}
               </p>
               {achievement.eventId && (
-                <span className="text-white/20 ml-auto text-lg shrink-0">›</span>
+                <span className="text-white/50 ml-auto text-lg shrink-0">›</span>
               )}
             </>
           );
@@ -90,7 +90,7 @@ export default function Achievements() {
         <h3 className="text-2xl font-bold mb-2 text-white/90">
           {profile.club}
         </h3>
-        <p className="text-white/40 mb-4">
+        <p className="text-white/70 mb-4">
           {profile.division} • {profile.location}
         </p>
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20">

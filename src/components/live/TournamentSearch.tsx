@@ -186,7 +186,7 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
 
         {/* Bottom action hint */}
         <div className={`px-4 py-2 text-xs uppercase tracking-wider font-bold text-center ${
-          isSelected ? "bg-red-500/10 text-red-400" : "bg-white/[0.02] text-white/15"
+          isSelected ? "bg-red-500/10 text-red-400" : "bg-white/[0.02] text-white/50"
         }`}>
           {isSelected ? "✓ Selected — loading events..." : "Tap to view events →"}
         </div>
@@ -205,7 +205,7 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleSearch()}
             placeholder="Search tournaments (±7 days from today)..."
-            className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/40 focus:outline-none focus:border-white/30 text-sm"
+            className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/70 focus:outline-none focus:border-white/30 text-sm"
           />
           <button
             onClick={handleSearch}
@@ -247,7 +247,7 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
                     <span className="text-white/90 font-bold text-sm">{evt.name}</span>
                     <span className="text-white/60 text-sm ml-2">{evt.date}{evt.total ? ` • ${evt.total}` : ""}</span>
                   </div>
-                  <span className="text-white/40">→</span>
+                  <span className="text-white/70">→</span>
                 </div>
               </button>
             ))}

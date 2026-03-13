@@ -28,7 +28,7 @@ const placementColors: Record<PlacementFilter, string> = {
 };
 
 // Mobile button style (compact)
-const btnMobile = "min-w-[56px] px-3 py-1.5 rounded-lg text-[11px] font-bold uppercase tracking-wider transition-all duration-200 text-center";
+const btnMobile = "min-w-[56px] px-3 py-1.5 rounded-lg text-xs font-bold uppercase tracking-wider transition-all duration-200 text-center";
 // Desktop button style (spacious)
 const btnDesktop = "md:min-w-[80px] md:px-5 md:py-2.5 md:rounded-xl md:text-xs";
 const btnInactive = "bg-white/5 text-white/50 border border-white/10 hover:border-white/20 hover:bg-white/[0.08]";
@@ -54,7 +54,7 @@ export default function FilterBar({
         {/* Desktop: 3-column grid layout */}
         <div className="hidden md:grid md:grid-cols-[auto_1fr] md:gap-x-6 md:gap-y-4 md:items-center">
           {/* Category label + buttons */}
-          <span className="text-white/30 text-xs font-semibold uppercase tracking-widest">Age</span>
+          <span className="text-white/60 text-xs font-semibold uppercase tracking-widest">Age</span>
           <div className="flex flex-wrap items-center gap-2">
             {categories.map((cat) => {
               const active = selectedCategories.has(cat);
@@ -76,7 +76,7 @@ export default function FilterBar({
           </div>
 
           {/* Level label + buttons */}
-          <span className="text-white/30 text-xs font-semibold uppercase tracking-widest">Level</span>
+          <span className="text-white/60 text-xs font-semibold uppercase tracking-widest">Level</span>
           <div className="flex flex-wrap items-center gap-2">
             {levels.map((level) => {
               const active = selectedLevels.has(level);
@@ -99,7 +99,7 @@ export default function FilterBar({
           </div>
 
           {/* Placement label + buttons */}
-          <span className="text-white/30 text-xs font-semibold uppercase tracking-widest">Result</span>
+          <span className="text-white/60 text-xs font-semibold uppercase tracking-widest">Result</span>
           <div className="flex flex-wrap items-center gap-2">
             {placements.map((p) => {
               const active = selectedPlacements.has(p);

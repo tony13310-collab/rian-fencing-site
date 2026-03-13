@@ -74,7 +74,7 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
           >
             Rian Wei
           </h1>
-          <p className="text-white/40 text-sm">Enter password to continue</p>
+          <p className="text-white/70 text-sm">Enter password to continue</p>
         </div>
 
         <form onSubmit={handleSubmit} className="space-y-4">
@@ -100,7 +100,7 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
         </form>
 
         <div className="mt-6 pt-6 border-t border-white/5">
-          <p className="text-white/30 text-xs mb-3">Don&apos;t have the password?</p>
+          <p className="text-white/60 text-xs mb-3">Don&apos;t have the password?</p>
           <a
             href="#contact-gate"
             onClick={(e) => {

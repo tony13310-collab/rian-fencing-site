@@ -381,7 +381,7 @@ export default function EventDashboard({ event, tournamentName }: Props) {
           </div>
 
           {poolData?.lastRefreshed && (
-            <p className="text-white/15 text-xs text-center">
+            <p className="text-white/50 text-xs text-center">
               Last refreshed: {poolData.lastRefreshed}
             </p>
           )}

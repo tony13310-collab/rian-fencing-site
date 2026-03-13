@@ -71,7 +71,7 @@ export default function PoolDashboard({ event, poolData, setPoolData }: Props) {
           <h2 className="text-xl sm:text-2xl font-bold text-white">
             {event.name}
           </h2>
-          <p className="text-white/40 text-sm mt-1">
+          <p className="text-white/70 text-sm mt-1">
             Pool Round • {event.date}
           </p>
         </div>
@@ -94,19 +94,19 @@ export default function PoolDashboard({ event, poolData, setPoolData }: Props) {
       {poolData && (
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
           <div className="bg-white/[0.03] rounded-xl p-3 text-center">
-            <p className="text-white/30 text-[10px] uppercase tracking-wider">Seed</p>
+            <p className="text-white/60 text-xs uppercase tracking-wider">Seed</p>
             <p className="text-2xl font-black text-white">#{poolData.rianSeed}</p>
           </div>
           <div className="bg-white/[0.03] rounded-xl p-3 text-center">
-            <p className="text-white/30 text-[10px] uppercase tracking-wider">Pool</p>
+            <p className="text-white/60 text-xs uppercase tracking-wider">Pool</p>
             <p className="text-2xl font-black text-white">{poolData.poolNumber}</p>
           </div>
           <div className="bg-white/[0.03] rounded-xl p-3 text-center">
-            <p className="text-white/30 text-[10px] uppercase tracking-wider">Pool Size</p>
+            <p className="text-white/60 text-xs uppercase tracking-wider">Pool Size</p>
             <p className="text-2xl font-black text-white">{poolData.fencers.length}</p>
           </div>
           <div className="bg-white/[0.03] rounded-xl p-3 text-center">
-            <p className="text-white/30 text-[10px] uppercase tracking-wider">Fencers</p>
+            <p className="text-white/60 text-xs uppercase tracking-wider">Fencers</p>
             <p className="text-2xl font-black text-white">{event.total || "—"}</p>
           </div>
         </div>
@@ -129,7 +129,7 @@ export default function PoolDashboard({ event, poolData, setPoolData }: Props) {
       ) : (
         <div className="text-center py-16">
           <div className="text-4xl mb-4">⚔️</div>
-          <p className="text-white/40 text-sm mb-4">
+          <p className="text-white/70 text-sm mb-4">
             Pool assignments not yet available
           </p>
           <button
@@ -159,7 +159,7 @@ export default function PoolDashboard({ event, poolData, setPoolData }: Props) {
                   {b.win ? "V" : "D"}
                 </span>
                 <span className="text-white/70 text-sm">{b.opponent}</span>
-                <span className="text-white/40 text-sm ml-auto">{b.score}</span>
+                <span className="text-white/70 text-sm ml-auto">{b.score}</span>
               </div>
             ))}
           </div>
@@ -168,7 +168,7 @@ export default function PoolDashboard({ event, poolData, setPoolData }: Props) {
 
       {/* Last refreshed */}
       {poolData?.lastRefreshed && (
-        <p className="text-white/15 text-[10px] text-center">
+        <p className="text-white/50 text-xs text-center">
           Last refreshed: {poolData.lastRefreshed}
         </p>
       )}

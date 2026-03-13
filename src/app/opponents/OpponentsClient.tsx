@@ -58,11 +58,11 @@ export default function OpponentsClient() {
           <div className="flex items-center gap-3 mb-3">
             <Link
               href="/"
-              className="text-white/40 hover:text-white/70 transition-colors text-sm"
+              className="text-white/70 hover:text-white/70 transition-colors text-sm"
             >
               ← Home
             </Link>
-            <span className="text-white/10">|</span>
+            <span className="text-white/50">|</span>
             <h1 className="text-white/80 font-bold">Head-to-Head Database</h1>
           </div>
 
@@ -124,7 +124,7 @@ export default function OpponentsClient() {
                 className={`shrink-0 px-3 py-1.5 rounded-lg text-xs font-medium transition-all ${
                   filter === f.key
                     ? "bg-cyan-500/20 text-cyan-400 border border-cyan-500/30"
-                    : "bg-white/5 text-white/40 border border-white/5 hover:border-white/10"
+                    : "bg-white/5 text-white/70 border border-white/5 hover:border-white/10"
                 }`}
               >
                 {f.label}
@@ -144,10 +144,10 @@ export default function OpponentsClient() {
               <button
                 key={s.key}
                 onClick={() => setSort(s.key)}
-                className={`px-2.5 py-1 rounded-md text-[10px] font-medium uppercase tracking-wider transition-all ${
+                className={`px-2.5 py-1 rounded-md text-xs font-medium uppercase tracking-wider transition-all ${
                   sort === s.key
                     ? "bg-white/10 text-white/70"
-                    : "text-white/50 hover:text-white/40"
+                    : "text-white/50 hover:text-white/70"
                 }`}
               >
                 {s.label}
@@ -206,7 +206,7 @@ export default function OpponentsClient() {
                         </span>
                       </div>
                       <div
-                        className={`w-10 text-center px-1.5 py-0.5 rounded text-[10px] font-black ${
+                        className={`w-10 text-center px-1.5 py-0.5 rounded text-xs font-black ${
                           winPct >= 60
                             ? "bg-green-500/15 text-green-400"
                             : winPct >= 40
@@ -227,13 +227,13 @@ export default function OpponentsClient() {
                         style={{ width: `${winPct}%` }}
                       />
                     </div>
-                    <span className="text-[10px] text-white/45 shrink-0">
+                    <span className="text-xs text-white/45 shrink-0">
                       {opp.total} bout{opp.total !== 1 ? "s" : ""}
                     </span>
                   </div>
 
                   {/* Last met */}
-                  <div className="text-[10px] text-white/45 mt-1">
+                  <div className="text-xs text-white/45 mt-1">
                     Last: {opp.lastDate} · {opp.bouts[0]?.tournament}
                   </div>
                 </Link>

@@ -55,7 +55,7 @@ interface SeasonTimelineProps {
 }
 
 function getPlaceDisplay(place: number | null, total: number | null) {
-  if (!place || !total) return { text: "—", color: "text-white/40" };
+  if (!place || !total) return { text: "—", color: "text-white/70" };
   const pct = place / total;
   let color = "text-white/50";
   if (place <= 3) color = "text-amber-400 font-black";
@@ -228,7 +228,7 @@ export default function SeasonTimeline({
                               key={cat}
                               className={`px-3 py-1.5 rounded-xl ${style.bg} border ${style.border} text-sm font-bold flex items-center gap-1.5`}
                             >
-                              <span className="text-white/40 text-xs uppercase tracking-wider">
+                              <span className="text-white/70 text-xs uppercase tracking-wider">
                                 {cat}
                               </span>
                               <span
@@ -334,7 +334,7 @@ export default function SeasonTimeline({
                         <div className="px-3 sm:px-5 py-3 flex items-center justify-between border-b border-white/5 gap-2">
                           <div className="flex items-center gap-2 sm:gap-3 min-w-0">
                             <span
-                              className={`text-[10px] w-[60px] sm:w-[72px] py-1 rounded-md ${colors.bg} ${colors.text} uppercase tracking-wider font-bold text-center inline-block shrink-0`}
+                              className={`text-xs w-[60px] sm:w-[72px] py-1 rounded-md ${colors.bg} ${colors.text} uppercase tracking-wider font-bold text-center inline-block shrink-0`}
                             >
                               {level === "International" ? "INTL" : level === "National" ? "NAT'L" : level}
                             </span>
@@ -342,7 +342,7 @@ export default function SeasonTimeline({
                               {tourName}
                             </h4>
                           </div>
-                          <span className="text-white/50 text-[10px] sm:text-xs shrink-0">
+                          <span className="text-white/50 text-xs sm:text-xs shrink-0">
                             {new Date(tourEvents[0].date).toLocaleDateString(
                               "en-US",
                               { month: "short", year: "numeric" }
@@ -368,7 +368,7 @@ export default function SeasonTimeline({
                               >
                                 <div className="flex items-center gap-2 sm:gap-3 min-w-0 flex-1">
                                   <span
-                                    className={`${catBg} w-[60px] sm:w-[72px] py-1 rounded-md text-[10px] font-bold text-white uppercase tracking-wider text-center inline-block shrink-0`}
+                                    className={`${catBg} w-[60px] sm:w-[72px] py-1 rounded-md text-xs font-bold text-white uppercase tracking-wider text-center inline-block shrink-0`}
                                   >
                                     {event.category}
                                   </span>
@@ -382,7 +382,7 @@ export default function SeasonTimeline({
                                   </span>
                                   <span className="w-12 sm:w-14 text-center">
                                     {event.rating ? (
-                                      <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-amber-500/15 text-amber-400 border border-amber-500/20 font-bold">
+                                      <span className="text-xs px-1.5 py-0.5 rounded-md bg-amber-500/15 text-amber-400 border border-amber-500/20 font-bold">
                                         {event.rating}
                                       </span>
                                     ) : null}
@@ -392,7 +392,7 @@ export default function SeasonTimeline({
                                       {pd.text}
                                     </span>
                                     {event.total && (
-                                      <span className="text-white/45 text-[10px] sm:text-sm">
+                                      <span className="text-white/45 text-xs sm:text-sm">
                                         /{event.total}
                                       </span>
                                     )}

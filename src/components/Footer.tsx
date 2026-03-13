@@ -17,10 +17,10 @@ export default function Footer() {
           © {new Date().getFullYear()} {profile.name} • {profile.club} •{" "}
           {profile.division}
         </p>
-        <p className="text-white/10 text-xs mt-2">
+        <p className="text-white/50 text-xs mt-2">
           Data sourced from USA Fencing, FencingTimeLive & FencingTracker
         </p>
-        <p className="text-white/10 text-xs mt-1">
+        <p className="text-white/50 text-xs mt-1">
           v{pkg.version} • {allEvents.length} events • {Object.keys(opponents).length} opponents • {totalBouts} bouts • Data updated {DATA_UPDATED}
         </p>
       </div>

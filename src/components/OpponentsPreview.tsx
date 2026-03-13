@@ -106,7 +106,7 @@ export default function OpponentsPreview() {
               {totalBouts > 0 ? Math.round((totalWins / totalBouts) * 100) : 0}% win
             </span>
           </div>
-          <p className="text-white/30 text-xs">
+          <p className="text-white/60 text-xs">
             Last 12 months · Born 2010–2012
           </p>
         </motion.div>
@@ -139,12 +139,12 @@ export default function OpponentsPreview() {
                       <span className="text-white/70 font-medium text-xs sm:text-sm truncate">
                         {peer.name}
                       </span>
-                      <span className={`text-[10px] font-bold ${yearColor[peer.birthYear] || "text-white/30"} shrink-0`}>
+                      <span className={`text-xs font-bold ${yearColor[peer.birthYear] || "text-white/60"} shrink-0`}>
                         {yearLabel(peer.birthYear)}
                       </span>
                     </div>
                     <div className="flex items-center gap-1.5 shrink-0">
-                      <span className="text-white/40 text-xs whitespace-nowrap w-14 text-right font-mono">
+                      <span className="text-white/70 text-xs whitespace-nowrap w-14 text-right font-mono">
                         <span className="text-green-400">{peer.data.wins}W</span>
                         <span className="text-white/45">-</span>
                         <span className="text-red-400">{peer.data.losses}L</span>
@@ -187,7 +187,7 @@ export default function OpponentsPreview() {
                       <span className="text-white/70 font-medium text-xs sm:text-sm truncate">
                         {peer.name}
                       </span>
-                      <span className={`text-[10px] font-bold ${yearColor[peer.birthYear] || "text-white/30"} shrink-0`}>
+                      <span className={`text-xs font-bold ${yearColor[peer.birthYear] || "text-white/60"} shrink-0`}>
                         {yearLabel(peer.birthYear)}
                       </span>
                     </div>

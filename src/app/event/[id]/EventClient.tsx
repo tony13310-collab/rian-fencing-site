@@ -64,7 +64,7 @@ function PoolSection({ pool }: { pool: NonNullable<EventDetail["pool"]> }) {
           <div className="text-xl font-black text-white/80">
             {pool.wins}-{pool.losses}
           </div>
-          <div className="text-[10px] text-white/50 uppercase tracking-wider">
+          <div className="text-xs text-white/50 uppercase tracking-wider">
             Record
           </div>
         </div>
@@ -72,7 +72,7 @@ function PoolSection({ pool }: { pool: NonNullable<EventDetail["pool"]> }) {
           <div className="text-xl font-black text-white/80">
             {pool.touchesScored}
           </div>
-          <div className="text-[10px] text-white/50 uppercase tracking-wider">
+          <div className="text-xs text-white/50 uppercase tracking-wider">
             Scored
           </div>
         </div>
@@ -80,7 +80,7 @@ function PoolSection({ pool }: { pool: NonNullable<EventDetail["pool"]> }) {
           <div className="text-xl font-black text-white/80">
             {pool.touchesReceived}
           </div>
-          <div className="text-[10px] text-white/50 uppercase tracking-wider">
+          <div className="text-xs text-white/50 uppercase tracking-wider">
             Received
           </div>
         </div>
@@ -97,7 +97,7 @@ function PoolSection({ pool }: { pool: NonNullable<EventDetail["pool"]> }) {
             {pool.indicator > 0 ? "+" : ""}
             {pool.indicator}
           </div>
-          <div className="text-[10px] text-white/50 uppercase tracking-wider">
+          <div className="text-xs text-white/50 uppercase tracking-wider">
             Indicator
           </div>
         </div>
@@ -138,7 +138,7 @@ function DESection({ bouts }: { bouts: NonNullable<EventDetail["de"]> }) {
                 }`}
               >
                 <div>
-                  <div className="text-white/40 text-xs font-bold uppercase tracking-wider mb-0.5">
+                  <div className="text-white/70 text-xs font-bold uppercase tracking-wider mb-0.5">
                     {bout.round}
                   </div>
                   <div className="text-white/80 font-medium text-sm">
@@ -210,11 +210,11 @@ export default function EventClient() {
         <div className="max-w-lg mx-auto flex items-center gap-3">
           <Link
             href="/"
-            className="text-white/40 hover:text-white/70 transition-colors text-sm"
+            className="text-white/70 hover:text-white/70 transition-colors text-sm"
           >
             ← Back
           </Link>
-          <span className="text-white/10">|</span>
+          <span className="text-white/50">|</span>
           <span className="text-white/50 text-sm truncate">
             {d.tournament}
           </span>
@@ -243,7 +243,7 @@ export default function EventClient() {
               📍 {(d as EventDetail).location}
             </p>
           )}
-          <p className="text-white/40 text-sm mb-1">{d.event}</p>
+          <p className="text-white/70 text-sm mb-1">{d.event}</p>
           <div className="text-white/45 text-xs mb-6">
             {new Date(d.date).toLocaleDateString("en-US", {
               weekday: "long",
@@ -257,7 +257,7 @@ export default function EventClient() {
           <div className="grid grid-cols-2 gap-3 mb-4">
             {/* Final Result */}
             <div className="bg-white/[0.04] border border-white/10 rounded-2xl py-4 px-3">
-              <div className="text-[10px] text-white/50 uppercase tracking-widest mb-2 font-bold">
+              <div className="text-xs text-white/50 uppercase tracking-widest mb-2 font-bold">
                 Final Result
               </div>
               <div className="flex items-baseline justify-center gap-1">
@@ -276,7 +276,7 @@ export default function EventClient() {
             {/* Pool Result */}
             {detail?.pool && (
               <div className="bg-white/[0.04] border border-cyan-500/15 rounded-2xl py-4 px-3">
-                <div className="text-[10px] text-cyan-400/50 uppercase tracking-widest mb-2 font-bold">
+                <div className="text-xs text-cyan-400/50 uppercase tracking-widest mb-2 font-bold">
                   Pool Result
                 </div>
                 <div className="flex items-baseline justify-center gap-1">
