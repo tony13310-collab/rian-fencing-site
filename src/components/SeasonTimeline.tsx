@@ -280,7 +280,7 @@ export default function SeasonTimeline({
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ delay: tidx * 0.05 }}
-                        className={`rounded-2xl border ${colors.border} bg-gradient-to-r ${colors.cardBg} overflow-hidden backdrop-blur-sm`}
+                        className={`rounded-2xl border ${tidx % 2 === 0 ? 'border-white/10 bg-[#16162a]' : 'border-white/5 bg-[#1a1a2e]'} overflow-hidden backdrop-blur-sm`}
                       >
                         {/* Tournament header */}
                         <div className="px-3 sm:px-5 py-3 flex items-center justify-between border-b border-white/5 gap-2">
