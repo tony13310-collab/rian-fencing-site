@@ -80,20 +80,7 @@ export default function Achievements() {
         })}
       </div>
 
-      {/* Club info */}
-      <motion.div
-        initial={{ opacity: 0, y: 30 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true }}
-        className="mt-16 gradient-border bg-[#12121a] rounded-2xl p-8 text-center"
-      >
-        <h3 className="text-2xl font-bold mb-2 text-white/90">
-          {profile.club}
-        </h3>
-        <p className="text-white/70">
-          {profile.division} • {profile.location} • {profile.weapon}
-        </p>
-      </motion.div>
+
     </section>
   );
 }
