@@ -332,13 +332,18 @@ export default function SeasonTimeline({
                                     {event.event}
                                   </span>
                                 </div>
-                                <div className="flex items-center gap-2 sm:gap-3 shrink-0">
-                                  {event.medal && (
-                                    <span className="text-base sm:text-xl">
-                                      {event.medal}
-                                    </span>
-                                  )}
-                                  <div className="text-right min-w-[55px] sm:min-w-[80px]">
+                                <div className="flex items-center shrink-0">
+                                  <span className="w-6 sm:w-8 text-center">
+                                    {event.medal || ""}
+                                  </span>
+                                  <span className="w-12 sm:w-14 text-center">
+                                    {event.rating ? (
+                                      <span className="text-[10px] px-1.5 py-0.5 rounded-md bg-amber-500/15 text-amber-400 border border-amber-500/20 font-bold">
+                                        {event.rating}
+                                      </span>
+                                    ) : null}
+                                  </span>
+                                  <div className="text-right w-[55px] sm:w-[80px]">
                                     <span className={`text-sm sm:text-lg ${pd.color}`}>
                                       {pd.text}
                                     </span>
@@ -348,11 +353,6 @@ export default function SeasonTimeline({
                                       </span>
                                     )}
                                   </div>
-                                  {event.rating && (
-                                    <span className="text-[10px] px-1.5 sm:px-2 py-0.5 rounded-md bg-amber-500/15 text-amber-400 border border-amber-500/20 font-bold hidden sm:inline">
-                                      {event.rating}
-                                    </span>
-                                  )}
                                 </div>
                               </Link>
                             );
