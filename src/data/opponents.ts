@@ -8548,7 +8548,7 @@ export const opponents: Record<string, OpponentData> = {
     ],
     "birthYear": 2012
   },
-  "O’LOUGHLIN Jacob": {
+  "O'LOUGHLIN Jacob": {
     "wins": 4,
     "losses": 0,
     "total": 4,

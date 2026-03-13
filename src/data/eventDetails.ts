@@ -82,7 +82,7 @@ export const eventDetails: Record<string, EventDetail> = {
       { round: "T64", opponent: "VO Blake", club: "", score: "15-9", win: true },
       { round: "T32", opponent: "YAN William", club: "", score: "15-13", win: true },
       { round: "T16", opponent: "CIEMINS Henry", club: "", score: "15-11", win: true },
-      { round: "Quarterfinal", opponent: "WANG Andrew Chang", club: "", score: "15-11", win: true },
+      { round: "Quarterfinal", opponent: "WANG ANDREW CHANG", club: "", score: "15-11", win: true },
       { round: "Semifinal", opponent: "RADJABLI Maximillian", club: "", score: "15-10", win: true },
       { round: "Final", opponent: "CLARK Aram", club: "", score: "Medical Withdraw", win: false },
     ],
@@ -156,7 +156,7 @@ export const eventDetails: Record<string, EventDetail> = {
     de: [
       { round: "T256", opponent: "MARCELLINO Robert", club: "", score: "15-8", win: true },
       { round: "T128", opponent: "KWON Kenneth", club: "", score: "15-10", win: true },
-      { round: "T64", opponent: "LI Ayden", club: "", score: "14-15", win: false },
+      { round: "T64", opponent: "LI AYDEN", club: "", score: "14-15", win: false },
     ],
   },
 
@@ -306,7 +306,7 @@ export const eventDetails: Record<string, EventDetail> = {
       { round: "T128", opponent: "SRA Nawab", club: "SABIO", score: "15-13", win: true },
       { round: "T64", opponent: "KONDOGI Saivarun", club: "", score: "15-2", win: true },
       { round: "T32", opponent: "BOSITA Brennan", club: "", score: "15-9", win: true },
-      { round: "T16", opponent: "GATTO Enzo", club: "", score: "15-8", win: true },
+      { round: "T16", opponent: "GATTO Enzo P.", club: "", score: "15-8", win: true },
       { round: "T8", opponent: "LI Howard", club: "EAGLE BLADE", score: "9-15", win: false },
     ],
   },
@@ -482,7 +482,7 @@ export const eventDetails: Record<string, EventDetail> = {
       deSeed: 125,
     },
     de: [
-      { round: "T256", opponent: "SKARBONKIEWICZ Maksymilian", club: "OREGONFA", score: "5-15", win: false },
+      { round: "T256", opponent: "SKARBONKIEWICZ Maksymilian A.", club: "OREGONFA", score: "5-15", win: false },
     ],
   },
 
