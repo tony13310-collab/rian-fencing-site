@@ -193,9 +193,9 @@ export default function EventDashboard({ event, tournamentName }: Props) {
       {/* Event header */}
       <div className="flex items-start justify-between">
         <div>
-          <p className="text-white/30 text-xs">{tournamentName}</p>
+          <p className="text-white/60 text-sm">{tournamentName}</p>
           <h2 className="text-xl sm:text-2xl font-bold text-white mt-1">{event.name}</h2>
-          <p className="text-white/40 text-sm mt-1">
+          <p className="text-white/70 text-sm mt-1">
             {event.date}{event.total ? ` • ${event.total} fencers` : ""}
           </p>
         </div>
@@ -218,7 +218,7 @@ export default function EventDashboard({ event, tournamentName }: Props) {
       {loading && (
         <div className="text-center py-16">
           <div className="w-8 h-8 border-2 border-red-400/30 border-t-red-400 rounded-full animate-spin mx-auto mb-4" />
-          <p className="text-white/40 text-sm">Fetching data from FencingTimeLive...</p>
+          <p className="text-white/70 text-sm">Fetching data from FencingTimeLive...</p>
         </div>
       )}
 
@@ -230,8 +230,8 @@ export default function EventDashboard({ event, tournamentName }: Props) {
           {ftProgress.total > 0 && ftProgress.loaded < ftProgress.total && (
             <div className="bg-white/[0.03] rounded-xl p-3">
               <div className="flex items-center justify-between mb-2">
-                <span className="text-white/40 text-xs">📊 Loading scouting data...</span>
-                <span className="text-white/30 text-xs">{ftProgress.loaded}/{ftProgress.total}</span>
+                <span className="text-white/70 text-sm">📊 Loading scouting data...</span>
+                <span className="text-white/60 text-sm">{ftProgress.loaded}/{ftProgress.total}</span>
               </div>
               <div className="h-1 bg-white/5 rounded-full overflow-hidden">
                 <div
@@ -247,29 +247,29 @@ export default function EventDashboard({ event, tournamentName }: Props) {
               {/* Rian's stats cards */}
               <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
                 <div className="bg-white/[0.03] rounded-xl p-3 text-center">
-                  <p className="text-white/30 text-[10px] uppercase tracking-wider">Pool Seed</p>
+                  <p className="text-white/60 text-xs uppercase tracking-wider">Pool Seed</p>
                   <p className="text-2xl font-black text-white">#{poolData.rianSeed}</p>
                 </div>
                 <div className="bg-white/[0.03] rounded-xl p-3 text-center">
-                  <p className="text-white/30 text-[10px] uppercase tracking-wider">Pool</p>
+                  <p className="text-white/60 text-xs uppercase tracking-wider">Pool</p>
                   <p className="text-2xl font-black text-white">
                     {poolData.poolNumber}
-                    {poolData.strip && <span className="text-sm text-white/30 ml-1">({poolData.strip})</span>}
+                    {poolData.strip && <span className="text-sm text-white/60 ml-1">({poolData.strip})</span>}
                   </p>
                 </div>
                 <div className="bg-white/[0.03] rounded-xl p-3 text-center">
-                  <p className="text-white/30 text-[10px] uppercase tracking-wider">Pool Size</p>
+                  <p className="text-white/60 text-xs uppercase tracking-wider">Pool Size</p>
                   <p className="text-2xl font-black text-white">{poolData.fencers.length}</p>
                 </div>
                 <div className="bg-white/[0.03] rounded-xl p-3 text-center">
-                  <p className="text-white/30 text-[10px] uppercase tracking-wider">
+                  <p className="text-white/60 text-xs uppercase tracking-wider">
                     {rianBouts.length > 0 ? "Record" : "Fencers"}
                   </p>
                   <p className="text-2xl font-black">
                     {rianBouts.length > 0 ? (
                       <>
                         <span className="text-green-400">{wins}W</span>
-                        <span className="text-white/20"> - </span>
+                        <span className="text-white/50"> - </span>
                         <span className="text-red-400">{losses}L</span>
                       </>
                     ) : (
@@ -282,7 +282,7 @@ export default function EventDashboard({ event, tournamentName }: Props) {
               {/* Pool Results */}
               {rianBouts.length > 0 && (
                 <div className="space-y-2">
-                  <h3 className="text-white/50 text-xs uppercase tracking-wider font-bold">⚔️ Pool Results</h3>
+                  <h3 className="text-white/50 text-sm uppercase tracking-wider font-bold">⚔️ Pool Results</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {rianBouts.map((b, i) => (
                       <div
@@ -303,7 +303,7 @@ export default function EventDashboard({ event, tournamentName }: Props) {
 
               {/* Pool Opponents */}
               <div className="space-y-2">
-                <h3 className="text-white/50 text-xs uppercase tracking-wider font-bold">👥 Pool Opponents</h3>
+                <h3 className="text-white/50 text-sm uppercase tracking-wider font-bold">👥 Pool Opponents</h3>
                 {poolData.fencers.map((f, i) => (
                   <OpponentCard
                     key={i}
@@ -318,8 +318,8 @@ export default function EventDashboard({ event, tournamentName }: Props) {
           ) : (
             <div className="text-center py-12 bg-white/[0.02] rounded-2xl">
               <div className="text-3xl mb-3">⏳</div>
-              <p className="text-white/40 text-sm">Pool assignments not yet available</p>
-              <p className="text-white/20 text-xs mt-1">Click Refresh when pools are posted</p>
+              <p className="text-white/70 text-sm">Pool assignments not yet available</p>
+              <p className="text-white/50 text-sm mt-1">Click Refresh when pools are posted</p>
             </div>
           )}
 
@@ -328,7 +328,7 @@ export default function EventDashboard({ event, tournamentName }: Props) {
             {deData && deData.matches.length > 0 ? (
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <h3 className="text-white/50 text-xs uppercase tracking-wider font-bold">
+                  <h3 className="text-white/50 text-sm uppercase tracking-wider font-bold">
                     🗡️ Direct Elimination — Seed #{deData.rianDESeed}
                   </h3>
                   {rianPlace && (
@@ -374,14 +374,14 @@ export default function EventDashboard({ event, tournamentName }: Props) {
             ) : (
               <div className="text-center py-8 bg-white/[0.02] rounded-2xl">
                 <div className="text-3xl mb-3">🗡️</div>
-                <p className="text-white/40 text-sm">DE tableau not yet available</p>
-                <p className="text-white/20 text-xs mt-1">Click Refresh when DE starts</p>
+                <p className="text-white/70 text-sm">DE tableau not yet available</p>
+                <p className="text-white/50 text-sm mt-1">Click Refresh when DE starts</p>
               </div>
             )}
           </div>
 
           {poolData?.lastRefreshed && (
-            <p className="text-white/15 text-[10px] text-center">
+            <p className="text-white/15 text-xs text-center">
               Last refreshed: {poolData.lastRefreshed}
             </p>
           )}

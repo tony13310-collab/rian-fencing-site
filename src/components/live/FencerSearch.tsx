@@ -117,14 +117,14 @@ export default function FencerSearch() {
       {/* Search input */}
       <div className="flex gap-2">
         <div className="relative flex-1">
-          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-white/20">🔍</span>
+          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-white/50">🔍</span>
           <input
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleSearch()}
             placeholder="Search by first + last name (e.g. Kim Kendrick)..."
-            className="w-full bg-white/5 border border-white/10 rounded-xl pl-9 pr-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-orange-500/30 text-sm"
+            className="w-full bg-white/5 border border-white/10 rounded-xl pl-9 pr-4 py-3 text-white placeholder:text-white/50 focus:outline-none focus:border-orange-500/30 text-sm"
           />
         </div>
         <button
@@ -146,12 +146,12 @@ export default function FencerSearch() {
               className="w-full text-left p-3 bg-white/[0.03] hover:bg-white/[0.06] rounded-xl transition-colors"
             >
               <span className="text-white/80 text-sm font-medium">{f.name.replace(/-/g, " ")}</span>
-              <span className="text-white/30 text-xs ml-3">{f.club}</span>
+              <span className="text-white/60 text-sm ml-3">{f.club}</span>
               {f.currentRating && f.currentRating !== "U" && (
-                <span className="text-white/20 text-xs ml-2">{f.currentRating}</span>
+                <span className="text-white/50 text-sm ml-2">{f.currentRating}</span>
               )}
               {f.birthYear && (
-                <span className="text-white/15 text-xs ml-1">({f.birthYear})</span>
+                <span className="text-white/15 text-sm ml-1">({f.birthYear})</span>
               )}
             </button>
           ))}
@@ -162,7 +162,7 @@ export default function FencerSearch() {
       {loadingProfile && (
         <div className="text-center py-8">
           <div className="w-6 h-6 border-2 border-orange-400/30 border-t-orange-400 rounded-full animate-spin mx-auto mb-3" />
-          <p className="text-white/30 text-xs">Loading scouting report...</p>
+          <p className="text-white/60 text-sm">Loading scouting report...</p>
         </div>
       )}
 
@@ -173,19 +173,19 @@ export default function FencerSearch() {
           <div className="flex items-start justify-between">
             <div>
               <h2 className="text-xl font-black text-white">{selectedFencer.name}</h2>
-              <p className="text-white/40 text-sm mt-1">
+              <p className="text-white/70 text-sm mt-1">
                 {selectedFencer.club || "Unattached"} • Born {selectedFencer.birthYear || "?"}
               </p>
             </div>
             <div className="flex items-center gap-2">
               {threatLevel && (
-                <span className={`text-xs px-3 py-1 rounded-full border font-bold ${threatColors[threatLevel]}`}>
+                <span className={`text-sm px-3 py-1 rounded-full border font-bold ${threatColors[threatLevel]}`}>
                   {threatLevel === "elite" ? "🔥 Elite" : threatLevel === "strong" ? "⚠️ Strong" : threatLevel === "mid" ? "Mid" : "✅ Developing"}
                 </span>
               )}
               <button
                 onClick={() => { setSelectedFencer(null); setResults([]); setQuery(""); }}
-                className="text-white/20 hover:text-white/50 text-xs p-1"
+                className="text-white/50 hover:text-white/50 text-sm p-1"
               >
                 ✕
               </button>
@@ -195,19 +195,19 @@ export default function FencerSearch() {
           {/* Stats Grid */}
           <div className="grid grid-cols-4 gap-2">
             <div className="bg-white/[0.03] rounded-lg p-3 text-center">
-              <p className="text-white/30 text-[10px] uppercase">Rating</p>
+              <p className="text-white/60 text-xs uppercase">Rating</p>
               <p className="text-white/90 text-lg font-black">{selectedFencer.currentRating || "U"}</p>
             </div>
             <div className="bg-white/[0.03] rounded-lg p-3 text-center">
-              <p className="text-white/30 text-[10px] uppercase">DE Str</p>
+              <p className="text-white/60 text-xs uppercase">DE Str</p>
               <p className="text-white/90 text-lg font-black">{selectedFencer.deStrength || "—"}</p>
             </div>
             <div className="bg-white/[0.03] rounded-lg p-3 text-center">
-              <p className="text-white/30 text-[10px] uppercase">Pool Str</p>
+              <p className="text-white/60 text-xs uppercase">Pool Str</p>
               <p className="text-white/90 text-lg font-black">{selectedFencer.poolStrength || "—"}</p>
             </div>
             <div className="bg-white/[0.03] rounded-lg p-3 text-center">
-              <p className="text-white/30 text-[10px] uppercase">Avg %ile</p>
+              <p className="text-white/60 text-xs uppercase">Avg %ile</p>
               <p className="text-white/90 text-lg font-black">{selectedFencer.avgPercentile}%</p>
             </div>
           </div>
@@ -218,26 +218,26 @@ export default function FencerSearch() {
               {selectedFencer.podium.gold > 0 && <span className="text-yellow-400">🥇 ×{selectedFencer.podium.gold}</span>}
               {selectedFencer.podium.silver > 0 && <span className="text-gray-300">🥈 ×{selectedFencer.podium.silver}</span>}
               {selectedFencer.podium.bronze > 0 && <span className="text-orange-400">🥉 ×{selectedFencer.podium.bronze}</span>}
-              <span className="text-white/20">(this season)</span>
+              <span className="text-white/50">(this season)</span>
             </div>
           )}
 
           {/* H2H with Rian */}
           {h2h && (
             <div>
-              <h4 className="text-white/40 text-[10px] uppercase tracking-wider font-bold mb-2">
+              <h4 className="text-white/70 text-xs uppercase tracking-wider font-bold mb-2">
                 ⚔️ Head-to-Head vs Rian: {h2h.wins}W - {h2h.losses}L
               </h4>
               <div className="space-y-1">
                 {h2h.bouts.slice(0, 8).map((b: any, i: number) => (
-                  <div key={i} className="flex items-center gap-2 text-xs">
+                  <div key={i} className="flex items-center gap-2 text-sm">
                     <span className={b.win ? "text-green-400" : "text-red-400"}>
                       {b.win ? "W" : "L"}
                     </span>
                     <span className="text-white/50">{b.score}</span>
-                    <span className="text-white/20">•</span>
-                    <span className="text-white/30">{b.date}</span>
-                    <span className="text-white/20 truncate">{b.type} @ {b.tournament}</span>
+                    <span className="text-white/50">•</span>
+                    <span className="text-white/60">{b.date}</span>
+                    <span className="text-white/50 truncate">{b.type} @ {b.tournament}</span>
                   </div>
                 ))}
               </div>
@@ -245,13 +245,13 @@ export default function FencerSearch() {
           )}
 
           {!h2h && (
-            <p className="text-white/20 text-xs">No prior bouts with Rian on record</p>
+            <p className="text-white/50 text-sm">No prior bouts with Rian on record</p>
           )}
 
           {/* Recent Results */}
           {selectedFencer.recentResults.length > 0 && (
             <div>
-              <h4 className="text-white/40 text-[10px] uppercase tracking-wider font-bold mb-2">
+              <h4 className="text-white/70 text-xs uppercase tracking-wider font-bold mb-2">
                 📅 Recent Results
               </h4>
               <div className="space-y-1">
@@ -259,12 +259,12 @@ export default function FencerSearch() {
                   const pct = Math.round((1 - r.place / r.total) * 100);
                   const pctColor = pct >= 80 ? "text-green-400" : pct >= 50 ? "text-yellow-400" : "text-red-400";
                   return (
-                    <div key={i} className="flex items-center gap-2 text-xs">
-                      <span className="text-white/30 w-16">{r.date}</span>
+                    <div key={i} className="flex items-center gap-2 text-sm">
+                      <span className="text-white/60 w-16">{r.date}</span>
                       <span className={`font-mono w-14 ${pctColor}`}>{r.place}/{r.total}</span>
-                      <span className="text-white/40 truncate flex-1">{r.event}</span>
+                      <span className="text-white/70 truncate flex-1">{r.event}</span>
                       {r.ratingEarned && r.ratingEarned !== "U" && (
-                        <span className="text-white/20 text-[10px]">{r.ratingEarned}</span>
+                        <span className="text-white/50 text-xs">{r.ratingEarned}</span>
                       )}
                     </div>
                   );
@@ -278,7 +278,7 @@ export default function FencerSearch() {
             href={`https://fencingtracker.com/p/${selectedFencer.usfaId}/${selectedFencer.name.replace(/ /g, '-')}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1 text-xs text-blue-400/60 hover:text-blue-400 transition-colors"
+            className="inline-flex items-center gap-1 text-sm text-blue-400/60 hover:text-blue-400 transition-colors"
           >
             View full profile on FencingTracker →
           </a>
