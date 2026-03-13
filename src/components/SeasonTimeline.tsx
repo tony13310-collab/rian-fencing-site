@@ -224,26 +224,28 @@ export default function SeasonTimeline({
                             poolWins += detail.pool.wins;
                             poolBouts += detail.pool.wins + detail.pool.losses;
                           }
-                          // Calculate DE wins from placement
-                          if (e.place && e.total && detail?.pool?.deSeed) {
-                            // DE tableau size = next power of 2 that fits deSeed
-                            const tableauSize = Math.pow(2, Math.ceil(Math.log2(detail.pool.deSeed)));
-                            // Total DE rounds in this tableau
-                            const totalRounds = Math.log2(tableauSize);
-                            // Rounds survived based on place
+                          // Calculate DE bouts from de array or placement
+                          if (detail?.de && detail.de.length > 0) {
+                            // Use actual DE data
+                            deWins += detail.de.filter((d: { win: boolean }) => d.win).length;
+                            deBouts += detail.de.length;
+                          } else if (e.place && e.total) {
+                            // Estimate from placement: place determines rounds survived
+                            // Tableau size based on total participants (typically 80% make DE)
+                            const deSize = Math.pow(2, Math.ceil(Math.log2(Math.min(e.total, Math.max(e.place, 2)))));
+                            const totalRounds = Math.log2(deSize);
                             let roundsWon = 0;
                             if (e.place === 1) roundsWon = totalRounds;
                             else if (e.place === 2) roundsWon = totalRounds - 1;
                             else {
-                              // place 3-4 → lost in semis, place 5-8 → lost in quarters, etc.
                               const bracket = Math.pow(2, Math.ceil(Math.log2(e.place)));
                               roundsWon = totalRounds - Math.log2(bracket);
                             }
                             if (roundsWon > 0) {
                               deWins += roundsWon;
-                              deBouts += roundsWon + 1; // won rounds + 1 loss
+                              deBouts += roundsWon + 1;
                             } else {
-                              deBouts += 1; // lost first round
+                              deBouts += 1;
                             }
                           }
                         }
