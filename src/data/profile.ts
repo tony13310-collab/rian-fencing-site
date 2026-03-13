@@ -89,6 +89,16 @@ function computeAchievements() {
     });
   }
 
+  // JO Junior — first B rating, massive field
+  const joJunior = allEvents.find(e => e.date === "2026-01-12" && e.event.includes("Junior"));
+  if (joJunior) {
+    achievements.push({
+      emoji: "🎖️",
+      text: `Junior Olympics Junior MS — 11th/297, earned B26 rating (Jan 2026)`,
+      eventId: makeEventId(joJunior.date, joJunior.event),
+    });
+  }
+
   // Rating progression
   if (ratingHistory.length >= 2) {
     const first = ratingHistory[0].rating;
