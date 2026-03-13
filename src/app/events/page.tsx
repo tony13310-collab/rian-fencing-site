@@ -45,10 +45,7 @@ export default function EventsPage() {
   return (
     <main className="noise-overlay">
       <Navbar />
-      <div className="pt-24 pb-8 max-w-6xl mx-auto px-4 sm:px-6">
-        <h1 className="text-3xl font-bold text-white/90 mb-2">Events</h1>
-        <p className="text-white/40 text-sm">Competition history across all seasons</p>
-      </div>
+      <div className="pt-20" />
       <FilterBar
         selectedLevels={selectedLevels}
         selectedCategories={selectedCategories}
