@@ -67,16 +67,16 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
     setEvents([]);
 
     try {
-      // Search next 7 days + in-progress (from 7 days ago)
+      // Search past 1 year + future 1 year
       const now = new Date();
-      const from = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000).toISOString().split("T")[0];
-      const to = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000).toISOString().split("T")[0];
+      const from = new Date(now.getTime() - 365 * 24 * 60 * 60 * 1000).toISOString().split("T")[0];
+      const to = new Date(now.getTime() + 365 * 24 * 60 * 60 * 1000).toISOString().split("T")[0];
 
       const resp = await fetch(`${API_BASE}/api/ftl/search?q=${encodeURIComponent(query)}&from=${from}&to=${to}`);
       const data = await resp.json();
       setSearchResults(data.tournaments || []);
       if ((data.tournaments || []).length === 0) {
-        setError("No active tournaments found for this search");
+        setError("No tournaments found matching this search");
       }
     } catch {
       setError("Search failed");
