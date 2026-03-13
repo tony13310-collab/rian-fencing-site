@@ -13,13 +13,54 @@ interface Props {
 export default function PoolDashboard({ event, poolData, setPoolData }: Props) {
   const [refreshing, setRefreshing] = useState(false);
 
+  const API_BASE = "https://rian-fencing-api.tony13310.workers.dev";
+
   const handleRefresh = async () => {
     setRefreshing(true);
-    // TODO: Fetch pool data from FTL/FIE
-    // For now simulate
-    setTimeout(() => {
+    try {
+      const resp = await fetch(`${API_BASE}/api/ftl/pools/${event.id}`);
+      const data = await resp.json();
+
+      if (data.rianPool) {
+        const pool = data.rianPool;
+        const fencers = pool.fencers.map((f: any) => ({
+          seed: f.seed,
+          name: f.name,
+          club: f.club,
+          country: f.country,
+          rating: undefined,
+          strength: undefined,
+        }));
+
+        // Build bout results from scores
+        const rianIdx = pool.fencers.findIndex((f: any) => f.name === "WEI Rian" || f.name.startsWith("WEI Rian"));
+        const bouts = rianIdx >= 0 ? pool.fencers[rianIdx].scores.map((s: any, i: number) => {
+          // Map score index to opponent (skip self)
+          const opIdx = i >= rianIdx ? i + 1 : i;
+          const opp = pool.fencers[opIdx];
+          return {
+            win: s.win,
+            opponent: opp?.name || "Unknown",
+            score: s.score,
+          };
+        }) : [];
+
+        setPoolData({
+          rianSeed: rianIdx >= 0 ? pool.fencers[rianIdx].seed : 0,
+          poolNumber: pool.poolNumber,
+          fencers,
+          bouts: bouts.length > 0 ? bouts : undefined,
+          lastRefreshed: new Date().toLocaleTimeString(),
+        });
+      } else {
+        // Rian not found — might be in a different event
+        setPoolData(null);
+      }
+    } catch (err) {
+      console.error("Pool fetch error:", err);
+    } finally {
       setRefreshing(false);
-    }, 1000);
+    }
   };
 
   return (

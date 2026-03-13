@@ -4,15 +4,13 @@ import { useState, useCallback } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import LiveNavbar from "@/components/live/LiveNavbar";
 import TournamentSearch from "@/components/live/TournamentSearch";
-import PoolDashboard from "@/components/live/PoolDashboard";
-import DEDashboard from "@/components/live/DEDashboard";
-import { opponents } from "@/data/opponents";
+import EventDashboard from "@/components/live/EventDashboard";
 
 export interface TournamentEvent {
   id: string;
   name: string;
   date: string;
-  category: string; // Cadet, Junior, Div I, Y-14, etc.
+  category: string;
   weapon: string;
   gender: string;
   total?: number;
@@ -34,19 +32,22 @@ export interface PoolFencer {
   name: string;
   club: string;
   country?: string;
-  // From local DB
-  h2h?: { wins: number; losses: number; bouts: { date: string; score: string; win: boolean; event: string }[] };
-  // From FencingTracker / FIE
   rating?: string;
   strength?: number;
   recentResults?: { event: string; place: string; date: string }[];
   birthYear?: number;
+  // Pool scores
+  scores?: { win: boolean; score: string }[];
+  victories?: number;
+  vm?: string;
+  ts?: number;
+  tr?: number;
+  ind?: string;
 }
 
 export interface PoolData {
-  eventId: string;
-  eventName: string;
   poolNumber: number;
+  strip?: string;
   rianSeed: number;
   fencers: PoolFencer[];
   bouts?: { opponent: string; score: string; win: boolean }[];
@@ -61,43 +62,35 @@ export interface DEMatch {
   score?: string;
   win?: boolean;
   status: "completed" | "upcoming" | "projected";
-  // Opponent analysis
   analysis?: PoolFencer;
 }
 
 export interface DEData {
-  eventId: string;
-  eventName: string;
   rianDESeed: number;
   matches: DEMatch[];
   lastRefreshed?: string;
 }
 
-type View = "search" | "pool" | "de";
+type View = "search" | "event";
 
 export default function LivePage() {
   const [view, setView] = useState<View>("search");
   const [tournament, setTournament] = useState<Tournament | null>(null);
   const [selectedEvent, setSelectedEvent] = useState<TournamentEvent | null>(null);
-  const [poolData, setPoolData] = useState<PoolData | null>(null);
-  const [deData, setDEData] = useState<DEData | null>(null);
 
   const handleTournamentFound = useCallback((t: Tournament) => {
     setTournament(t);
   }, []);
 
-  const handleEventSelect = useCallback((event: TournamentEvent, viewType: "pool" | "de") => {
+  const handleEventSelect = useCallback((event: TournamentEvent) => {
     setSelectedEvent(event);
-    setView(viewType);
+    setView("event");
   }, []);
 
   const handleBack = useCallback(() => {
-    if (view === "pool" || view === "de") {
-      setView("search");
-      setPoolData(null);
-      setDEData(null);
-    }
-  }, [view]);
+    setView("search");
+    setSelectedEvent(null);
+  }, []);
 
   return (
     <div className="min-h-screen bg-[#0a0a0f] text-white">
@@ -122,31 +115,16 @@ export default function LivePage() {
               />
             </motion.div>
           )}
-          {view === "pool" && selectedEvent && (
+          {view === "event" && selectedEvent && (
             <motion.div
-              key="pool"
+              key="event"
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: -20 }}
             >
-              <PoolDashboard
+              <EventDashboard
                 event={selectedEvent}
-                poolData={poolData}
-                setPoolData={setPoolData}
-              />
-            </motion.div>
-          )}
-          {view === "de" && selectedEvent && (
-            <motion.div
-              key="de"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              exit={{ opacity: 0, y: -20 }}
-            >
-              <DEDashboard
-                event={selectedEvent}
-                deData={deData}
-                setDeData={setDEData}
+                tournamentName={tournament?.name || ""}
               />
             </motion.div>
           )}

@@ -5,17 +5,17 @@ import type { Tournament, TournamentEvent } from "@/app/live/page";
 
 interface Props {
   onTournamentFound: (t: Tournament) => void;
-  onEventSelect: (event: TournamentEvent, view: "pool" | "de") => void;
+  onEventSelect: (event: TournamentEvent) => void;
   tournament: Tournament | null;
 }
+
+const API_BASE = "https://rian-fencing-api.tony13310.workers.dev";
 
 export default function TournamentSearch({ onTournamentFound, onEventSelect, tournament }: Props) {
   const [query, setQuery] = useState("");
   const [searching, setSearching] = useState(false);
   const [error, setError] = useState("");
-
   const [results, setResults] = useState<any[]>([]);
-  const API_BASE = "https://rian-fencing-api.tony13310.workers.dev";
 
   const handleSearch = async () => {
     if (!query.trim()) return;
@@ -24,13 +24,11 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
     setResults([]);
 
     try {
-      // Search FTL
       const resp = await fetch(
         `${API_BASE}/api/ftl/search?q=${encodeURIComponent(query.trim())}&from=2018-01-01&to=2027-12-31`
       );
       const data = await resp.json();
-
-      if (data.tournaments && data.tournaments.length > 0) {
+      if (data.tournaments?.length > 0) {
         setResults(data.tournaments);
       } else {
         setError("No tournaments found. Try a different search term.");
@@ -46,17 +44,14 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
     setSearching(true);
     setError("");
     try {
-      // Fetch saber events for this tournament
       const resp = await fetch(`${API_BASE}/api/ftl/event/${t.id}`);
       const data = await resp.json();
 
       const events: TournamentEvent[] = (data.events || []).map((e: any) => {
-        const name = e.name || "";
+        const name = (e.name || "").replace(/&#x27;/g, "'").replace(/&amp;/g, "&");
         let category = "Unknown";
         if (name.includes("Y-14") || name.includes("Y14")) category = "Y-14";
         else if (name.includes("Y-12") || name.includes("Y12")) category = "Y-12";
-        else if (name.includes("Y-10") || name.includes("Y10")) category = "Y-10";
-        else if (name.includes("Y-8") || name.includes("Y8")) category = "Y-8";
         else if (name.includes("Cadet")) category = "Cadet";
         else if (name.includes("Junior")) category = "Junior";
         else if (name.includes("Div") || name.includes("Division")) category = "Div I";
@@ -65,24 +60,18 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
         return {
           id: e.id,
           name,
-          date: "",
+          date: e.date ? `${e.date}${e.startTime ? " • " + e.startTime : ""}` : "",
           category,
           weapon: "Saber",
           gender: name.includes("Women") ? "Women" : "Men",
+          total: e.competitors || undefined,
           source: "ftl" as const,
           sourceUrl: `https://www.fencingtimelive.com/events/results/${e.id}`,
         };
       });
 
       setResults([]);
-      onTournamentFound({
-        id: t.id,
-        name: t.name,
-        location: t.location,
-        dates: "",
-        source: "ftl",
-        events,
-      });
+      onTournamentFound({ id: t.id, name: t.name, location: t.location, dates: t.dates || "", source: "ftl", events });
     } catch (err: any) {
       setError(`Failed to load tournament: ${err.message}`);
     } finally {
@@ -130,8 +119,6 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
             Search
           </button>
         </div>
-
-        {/* Source badges */}
         <div className="flex items-center gap-3 mt-3 justify-center">
           <span className="text-[10px] text-white/20 uppercase tracking-wider">Searches:</span>
           <span className="text-[10px] px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
@@ -145,12 +132,10 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
 
       {/* Error */}
       {error && (
-        <div className="max-w-2xl mx-auto text-center text-white/30 text-sm py-4">
-          {error}
-        </div>
+        <div className="max-w-2xl mx-auto text-center text-white/30 text-sm py-4">{error}</div>
       )}
 
-      {/* Search results list */}
+      {/* Search results — tournament list */}
       {results.length > 0 && !tournament && (
         <div className="max-w-2xl mx-auto space-y-2">
           <p className="text-white/30 text-xs uppercase tracking-wider font-bold">
@@ -164,9 +149,7 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
                 key={t.id}
                 onClick={() => handleSelectTournament(t)}
                 className={`w-full flex items-center justify-between rounded-xl p-4 transition-colors text-left ${
-                  isUpcoming
-                    ? "bg-red-500/5 hover:bg-red-500/10 border border-red-500/20"
-                    : "bg-white/[0.03] hover:bg-white/[0.06]"
+                  isUpcoming ? "bg-red-500/5 hover:bg-red-500/10 border border-red-500/20" : "bg-white/[0.03] hover:bg-white/[0.06]"
                 }`}
               >
                 <div className="flex-1 min-w-0">
@@ -199,7 +182,7 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
         </div>
       )}
 
-      {/* Tournament results */}
+      {/* Tournament events — just clickable names */}
       {tournament && (
         <div className="max-w-2xl mx-auto space-y-4">
           <div className="gradient-border bg-[#12121a] rounded-2xl p-6">
@@ -210,52 +193,35 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
                   {tournament.location} • {tournament.dates}
                 </p>
               </div>
-              <span className={`text-[10px] px-2 py-1 rounded-full font-bold ${
-                tournament.source === "ftl"
-                  ? "bg-blue-500/10 text-blue-400 border border-blue-500/20"
-                  : "bg-purple-500/10 text-purple-400 border border-purple-500/20"
-              }`}>
-                {tournament.source === "ftl" ? "🇺🇸 FTL" : "🌍 FIE"}
+              <span className="text-[10px] px-2 py-1 rounded-full font-bold bg-blue-500/10 text-blue-400 border border-blue-500/20">
+                🇺🇸 FTL
               </span>
             </div>
 
-            {/* Events list */}
             <div className="space-y-2">
               {tournament.events.map((event) => (
-                <div
+                <button
                   key={event.id}
-                  className="flex items-center justify-between bg-white/[0.03] rounded-xl p-3 hover:bg-white/[0.06] transition-colors"
+                  onClick={() => onEventSelect(event)}
+                  className="w-full flex items-center gap-3 bg-white/[0.03] rounded-xl p-4 hover:bg-white/[0.06] transition-colors text-left"
                 >
-                  <div className="flex items-center gap-3">
-                    <span className={`text-[10px] px-2 py-0.5 rounded font-bold uppercase ${
-                      event.category === "Y-14" ? "bg-cyan-500/10 text-cyan-400" :
-                      event.category === "Cadet" ? "bg-green-500/10 text-green-400" :
-                      event.category === "Junior" ? "bg-orange-500/10 text-orange-400" :
-                      event.category === "Div I" ? "bg-red-500/10 text-red-400" :
-                      "bg-white/10 text-white/60"
-                    }`}>
-                      {event.category}
-                    </span>
-                    <div>
-                      <p className="text-white/80 text-sm font-medium">{event.name}</p>
-                      <p className="text-white/30 text-xs">{event.date}{event.total ? ` • ${event.total} fencers` : ""}</p>
-                    </div>
+                  <span className={`text-[10px] px-2 py-0.5 rounded font-bold uppercase ${
+                    event.category === "Y-14" ? "bg-cyan-500/10 text-cyan-400" :
+                    event.category === "Cadet" ? "bg-green-500/10 text-green-400" :
+                    event.category === "Junior" ? "bg-orange-500/10 text-orange-400" :
+                    event.category === "Div I" ? "bg-red-500/10 text-red-400" :
+                    "bg-white/10 text-white/60"
+                  }`}>
+                    {event.category}
+                  </span>
+                  <div className="flex-1">
+                    <p className="text-white/80 text-sm font-medium">{event.name}</p>
+                    <p className="text-white/30 text-xs">{event.date}{event.total ? ` • ${event.total} fencers` : ""}</p>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <button
-                      onClick={() => onEventSelect(event, "pool")}
-                      className="px-3 py-1.5 rounded-lg bg-blue-500/10 text-blue-400 text-xs font-bold hover:bg-blue-500/20 transition-colors"
-                    >
-                      Pools
-                    </button>
-                    <button
-                      onClick={() => onEventSelect(event, "de")}
-                      className="px-3 py-1.5 rounded-lg bg-orange-500/10 text-orange-400 text-xs font-bold hover:bg-orange-500/20 transition-colors"
-                    >
-                      DE
-                    </button>
-                  </div>
-                </div>
+                  <svg className="w-5 h-5 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                  </svg>
+                </button>
               ))}
             </div>
           </div>
@@ -263,7 +229,7 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
       )}
 
       {/* Instructions when empty */}
-      {!tournament && !error && !searching && (
+      {!tournament && !error && !searching && results.length === 0 && (
         <div className="max-w-2xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
             <div className="bg-white/[0.02] rounded-xl p-4 text-center">

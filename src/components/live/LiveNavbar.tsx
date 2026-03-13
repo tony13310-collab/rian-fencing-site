@@ -3,7 +3,7 @@
 import Link from "next/link";
 
 interface Props {
-  view: "search" | "pool" | "de";
+  view: "search" | "event";
   eventName?: string;
   onBack: () => void;
 }
