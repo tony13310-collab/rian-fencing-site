@@ -5,7 +5,7 @@ import { join, dirname } from 'path';
 import { fileURLToPath } from 'url';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
-const poolData = JSON.parse(readFileSync(join(__dirname, 'all-pool-data.json'), 'utf8'));
+const poolData = JSON.parse(readFileSync(join(__dirname, process.argv[2] || 'all-pool-data.json'), 'utf8'));
 const eventsPath = join(__dirname, '..', 'src', 'data', 'events.ts');
 let content = readFileSync(eventsPath, 'utf8');
 

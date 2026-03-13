@@ -35,11 +35,51 @@ function s(season: string, events: Omit<CompEvent, "season">[]): CompEvent[] {
 export const allEvents: CompEvent[] = [
   // === 2025-2026 Season ===
   ...s("2025-2026", [
-    { date: "2026-02-15", tournament: "February NAC", event: "Junior Men's Saber", category: "Junior", level: "National", place: 31, total: 203, rating: "" },
-    { date: "2026-02-13", tournament: "February NAC", event: "Div I Men's Saber", category: "Div I", level: "National", place: 105, total: 209, rating: "" },
-    { date: "2026-01-24", tournament: "January SJCC", event: "Junior Men's Saber", category: "Junior", level: "National", place: 2, total: 117, rating: "A26", medal: "🥈" },
-    { date: "2026-01-12", tournament: "Junior Olympics", event: "Junior Men's Saber", category: "Junior", level: "National", place: 11, total: 297, rating: "B26" },
-    { date: "2026-01-10", tournament: "Junior Olympics", event: "Cadet Men's Saber", category: "Cadet", level: "National", place: 44, total: 277, rating: "" },
+    { poolBouts: [
+          { opponent: "LIU Ethan", club: "NELLYA", score: "D3", win: false },
+          { opponent: "CAO Oliver", club: "WESTCOASTFA", score: "D4", win: false },
+          { opponent: "ATANASSOV Vasil V.", club: "North Carolina", score: "D4", win: false },
+          { opponent: "GHISLAIN-FERNANDEZ Alexandre", club: "CAN", score: "V5", win: true },
+          { opponent: "ALAVE Kyle", club: "TIMMOREHOUSE", score: "V5", win: true },
+          { opponent: "LAUB William", club: "INTLFENCECLB", score: "V5", win: true }
+        ], ftlEventId: "8903CD145CB742FEB7F55BB3B30D9133",
+    date: "2026-02-15", tournament: "February NAC", event: "Junior Men's Saber", category: "Junior", level: "National", place: 31, total: 203, rating: "" },
+    { poolBouts: [
+          { opponent: "LAUB William", club: "INTLFENCECLB", score: "V5", win: true },
+          { opponent: "WANG Theodore", club: "Z1FENCING", score: "D4", win: false },
+          { opponent: "ZEWDA Kebron", club: "ROCHESTERFC", score: "V5", win: true },
+          { opponent: "YOOK Isaac", club: "TIMMOREHOUSE", score: "D3", win: false },
+          { opponent: "NG Jonathan", club: "DURKANFA", score: "V5", win: true },
+          { opponent: "LIM William J.", club: "GFA", score: "D0", win: false }
+        ], ftlEventId: "9A3B491C717747A0A2E6D33B276D3561",
+    date: "2026-02-13", tournament: "February NAC", event: "Div I Men's Saber", category: "Div I", level: "National", place: 105, total: 209, rating: "" },
+    { poolBouts: [
+          { opponent: "GERSTMANN Max T.", club: "OFC", score: "D4", win: false },
+          { opponent: "RAJMOHAN Arya", club: "COBRAFC", score: "V5", win: true },
+          { opponent: "BRUM Charles E.", club: "WESTCOASTFA", score: "V5", win: true },
+          { opponent: "LI Alex Y.", club: "SCFA", score: "V5", win: true },
+          { opponent: "KHOTLINE Daniel", club: "DYNAMOFC", score: "D4", win: false },
+          { opponent: "LEE Brady", club: "GFA", score: "V5", win: true }
+        ], ftlEventId: "6A4791BBA9D74B25ACECDEDCF10E2E76",
+    date: "2026-01-24", tournament: "January SJCC", event: "Junior Men's Saber", category: "Junior", level: "National", place: 2, total: 117, rating: "A26", medal: "🥈" },
+    { poolBouts: [
+          { opponent: "NARDINI Nathanael P.", club: "TIMMOREHOUSE", score: "V5", win: true },
+          { opponent: "KAMAL Aidan", club: "NFFC", score: "V5", win: true },
+          { opponent: "DOLEV Ido", club: "PDXFENCING", score: "V5", win: true },
+          { opponent: "KHANNA Adamantis", club: "BOSTONFC", score: "V5", win: true },
+          { opponent: "REN James", club: "GFA", score: "V5", win: true },
+          { opponent: "KULKARNI Shreyas", club: "Orange Coast", score: "V5", win: true }
+        ], ftlEventId: "19C84E7752D54731B323D0D33D5C12CF",
+    date: "2026-01-12", tournament: "Junior Olympics", event: "Junior Men's Saber", category: "Junior", level: "National", place: 11, total: 297, rating: "B26" },
+    { poolBouts: [
+          { opponent: "WANG Justin", club: "ALPHAFA", score: "V5", win: true },
+          { opponent: "GORDON Samuel", club: "INTLFENCECLB", score: "V5", win: true },
+          { opponent: "VU Mark", club: "BERGENFC", score: "V5", win: true },
+          { opponent: "KEMP Austin", club: "SABIO", score: "D4", win: false },
+          { opponent: "STAMPER Wyatt", club: "OREGONFA", score: "V5", win: true },
+          { opponent: "WANG Alex", club: "GFA", score: "V5", win: true }
+        ], ftlEventId: "FE6A7D19C5E6482A9B84771A2724C257",
+    date: "2026-01-10", tournament: "Junior Olympics", event: "Cadet Men's Saber", category: "Cadet", level: "National", place: 44, total: 277, rating: "" },
     { date: "2025-11-29", tournament: "Cobra Challenge SYC/RCC", event: "Y-14 Men's Saber", category: "Y-14", level: "SYC", place: 1, total: 150, rating: "", medal: "🥇", poolSeed: 1, poolBouts: [
           { opponent: "ROH Jaden", club: "GFA", score: "V5", win: true },
           { opponent: "MARTIRE Francis", club: "MANHATTANFC", score: "V5", win: true },
@@ -48,15 +88,84 @@ export const allEvents: CompEvent[] = [
           { opponent: "KRISHNARASA Aiyann", club: "INTEGRITY", score: "V5", win: true },
           { opponent: "LEE Jeffrey", club: "TIMMOREHOUSE", score: "V5", win: true }
         ], ftlEventId: "5BE2AA8B8F094C02BA783BC934730629" },
-    { date: "2025-11-17", tournament: "November NAC", event: "Y-14 Men's Saber", category: "Y-14", level: "National", place: 7, total: 170, rating: "" },
-    { date: "2025-11-16", tournament: "November NAC", event: "Cadet Men's Saber", category: "Cadet", level: "National", place: 11, total: 307, rating: "" },
-    { date: "2025-11-14", tournament: "November NAC", event: "Div I Men's Saber", category: "Div I", level: "National", place: 94, total: 200, rating: "" },
-    { date: "2025-10-05", tournament: "October NAC", event: "Div I Men's Saber", category: "Div I", level: "National", place: 145, total: 216, rating: "" },
-    { date: "2025-10-04", tournament: "October NAC", event: "Cadet Men's Saber", category: "Cadet", level: "National", place: 59, total: 210, rating: "" },
-    { date: "2025-10-03", tournament: "October NAC", event: "Junior Men's Saber", category: "Junior", level: "National", place: 101, total: 296, rating: "" },
-    { date: "2025-07-03", tournament: "Summer Nationals", event: "Y-14 Men's Saber", category: "Y-14", level: "National", place: 14, total: 308, rating: "" },
-    { date: "2025-06-30", tournament: "Summer Nationals", event: "Cadet Men's Saber", category: "Cadet", level: "National", place: 81, total: 282, rating: "" },
-    { date: "2025-06-28", tournament: "Summer Nationals", event: "Junior Men's Saber", category: "Junior", level: "National", place: 85, total: 346, rating: "" },
+    { poolBouts: [
+          { opponent: "KONG Ethan", club: "SFC", score: "V5", win: true },
+          { opponent: "LEE Nathan Uju", club: "SCFA", score: "V5", win: true },
+          { opponent: "WANG Ryan", club: "AGFC (CA)", score: "V5", win: true },
+          { opponent: "BALAGOPAL Aditya", club: "FFA", score: "V5", win: true },
+          { opponent: "NGO Emerson", club: "EAGLE BLADE", score: "V5", win: true },
+          { opponent: "ROBINSON Ezra", club: "FAODENVER", score: "V5", win: true }
+        ], ftlEventId: "08EC2FD5A3AE4D918695EC3936ACF986", date: "2025-11-17", tournament: "November NAC", event: "Y-14 Men's Saber", category: "Y-14", level: "National", place: 7, total: 170, rating: "" },
+    { poolBouts: [
+          { opponent: "LEVIN Jacob", club: "Z1FENCING", score: "V5", win: true },
+          { opponent: "MCDONALD Finn", club: "DEVLYFC-PA", score: "V5", win: true },
+          { opponent: "KAMURA Kosei", club: "GFA", score: "V5", win: true },
+          { opponent: "LIU Ethan", club: "NELLYA", score: "V5", win: true },
+          { opponent: "TANJGA Luka", club: "MANHATTANFC", score: "V5", win: true },
+          { opponent: "TANI Tino", club: "SCFA", score: "V5", win: true }
+        ], ftlEventId: "A09DCCCD39004FF4B1F7841673FF87BC",
+    date: "2025-11-16", tournament: "November NAC", event: "Cadet Men's Saber", category: "Cadet", level: "National", place: 11, total: 307, rating: "" },
+    { poolBouts: [
+          { opponent: "YANG Dylan", club: "PREMIERFA", score: "V5", win: true },
+          { opponent: "MICLAUS Justin", club: "NOTREDAME", score: "D4", win: false },
+          { opponent: "GREMILLION Obadiah", club: "CALI", score: "V5", win: true },
+          { opponent: "TIAGI George", club: "ALLEFENCING", score: "D0", win: false },
+          { opponent: "NAMBIAR Navin", club: "GFA", score: "V5", win: true },
+          { opponent: "CHEONG Heonjun", club: "SABIO", score: "D4", win: false }
+        ], ftlEventId: "D62040E630394A92B216ABD3D04DDBB1",
+    date: "2025-11-14", tournament: "November NAC", event: "Div I Men's Saber", category: "Div I", level: "National", place: 94, total: 200, rating: "" },
+    { poolBouts: [
+          { opponent: "CHAVES Matthew J.", club: "FORGE", score: "V5", win: true },
+          { opponent: "ZHU Yuchen (Kevin)", club: "CAN", score: "D0", win: false },
+          { opponent: "JEFFORDS Alexander", club: "SBFA", score: "D3", win: false },
+          { opponent: "FANG Eason", club: "SFA", score: "V5", win: true },
+          { opponent: "HONG Rubin", club: "GFA", score: "D2", win: false },
+          { opponent: "GHAYALOD ansh", club: "TIMMOREHOUSE", score: "V5", win: true }
+        ], ftlEventId: "692F1BFED9B7465CA25168DAF4408B77",
+    date: "2025-10-05", tournament: "October NAC", event: "Div I Men's Saber", category: "Div I", level: "National", place: 145, total: 216, rating: "" },
+    { poolBouts: [
+          { opponent: "CARRINGTON IV William T.", club: "COBRAFC", score: "D4", win: false },
+          { opponent: "LAMTAN Christoffer", club: "MANHATTANFC", score: "D4", win: false },
+          { opponent: "KANG Evan R.", club: "DYNAMOFC", score: "D3", win: false },
+          { opponent: "LIU Daniel", club: "SOL FA", score: "V5", win: true },
+          { opponent: "GREENSTEIN Viktor", club: "LAIFC", score: "V5", win: true },
+          { opponent: "TANG Morgan", club: "HALBERSTADT", score: "V5", win: true }
+        ], ftlEventId: "6AC2F4789A7B4F74A54D37505F57B7FC",
+    date: "2025-10-04", tournament: "October NAC", event: "Cadet Men's Saber", category: "Cadet", level: "National", place: 59, total: 210, rating: "" },
+    { poolBouts: [
+          { opponent: "LI Coby", club: "CAN", score: "V5", win: true },
+          { opponent: "ZHAO Zhiyu(Yogi)", club: "SCFA", score: "V5", win: true },
+          { opponent: "ONG Dylan", club: "INTLFENCECLB", score: "V5", win: true },
+          { opponent: "MATTOO Dhruv", club: "TIMMOREHOUSE", score: "V5", win: true },
+          { opponent: "WANG Nicolas", club: "FAODENVER", score: "D3", win: false },
+          { opponent: "VO Landon", club: "PREMIERFA", score: "D2", win: false }
+        ], ftlEventId: "756DF2598D6942EFB60AE2D70D712523",
+    date: "2025-10-03", tournament: "October NAC", event: "Junior Men's Saber", category: "Junior", level: "National", place: 101, total: 296, rating: "" },
+    { poolBouts: [
+          { opponent: "FERRIS JR. Michael", club: "PDXFENCING", score: "V5", win: true },
+          { opponent: "WONG Ron", club: "LAFAP", score: "V5", win: true },
+          { opponent: "PEI Kent", club: "Northern California", score: "V5", win: true },
+          { opponent: "BARENBOYM Michael", club: "SHERIDANFA", score: "D4", win: false },
+          { opponent: "SINGH Swaran", club: "PHX", score: "V5", win: true },
+          { opponent: "KANIA Alexander", club: "MIDWESTFC", score: "V5", win: true }
+        ], ftlEventId: "2BB968AA89754F1FBDEA1763F841AA0F",
+    date: "2025-07-03", tournament: "Summer Nationals", event: "Y-14 Men's Saber", category: "Y-14", level: "National", place: 14, total: 308, rating: "" },
+    { poolBouts: [
+          { opponent: "WINTERSET Mason", club: "SBFA", score: "V5", win: true },
+          { opponent: "VAN ROY Ray", club: "HALBERSTADT", score: "V5", win: true },
+          { opponent: "NARDINI Nathanael P.", club: "COBRAFC", score: "V5", win: true },
+          { opponent: "NAMBIAR Navin", club: "GFA", score: "V5", win: true },
+          { opponent: "GUREVICH Benjamin", club: "ALLEFENCING", score: "D3", win: false }
+        ], ftlEventId: "FA417D7708444A1CAF39EA2D8DF6C2BC",
+    date: "2025-06-30", tournament: "Summer Nationals", event: "Cadet Men's Saber", category: "Cadet", level: "National", place: 81, total: 282, rating: "" },
+    { poolBouts: [
+          { opponent: "ZENG Vito", club: "SPARTAK", score: "V5", win: true },
+          { opponent: "MANESCU Miron", club: "MANHATTANFC", score: "V5", win: true },
+          { opponent: "HJERPE Wade H.", club: "PHX", score: "V5", win: true },
+          { opponent: "CHI Everett", club: "WESTCOASTFA", score: "V5", win: true },
+          { opponent: "TIAGI Daniel", club: "ALLEFENCING", score: "D3", win: false }
+        ], ftlEventId: "C9FF989C6AA54810961E8E086FF96D65",
+    date: "2025-06-28", tournament: "Summer Nationals", event: "Junior Men's Saber", category: "Junior", level: "National", place: 85, total: 346, rating: "" },
   ]),
 
   // === 2024-2025 Season ===
