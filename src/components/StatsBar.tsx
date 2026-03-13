@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { allEvents } from "@/data/events";
 import { eventDetails } from "@/data/eventDetails";
+import { opponents } from "@/data/opponents";
 
 export default function StatsBar() {
   const totalEvents = allEvents.length;
@@ -19,16 +20,30 @@ export default function StatsBar() {
   ).length;
 
   // Count pool and DE bouts from eventDetails
-  let poolBouts = 0;
-  let deBouts = 0;
+  let poolBoutsDetail = 0;
+  let deBoutsDetail = 0;
   for (const detail of Object.values(eventDetails)) {
     if (detail.pool?.bouts) {
-      poolBouts += detail.pool.bouts.length;
+      poolBoutsDetail += detail.pool.bouts.length;
     }
     if (detail.de) {
-      deBouts += detail.de.length;
+      deBoutsDetail += detail.de.length;
     }
   }
+
+  // Also count from opponents.ts (H2H database — may have more bouts)
+  let poolBoutsH2H = 0;
+  let deBoutsH2H = 0;
+  for (const opp of Object.values(opponents)) {
+    for (const b of opp.bouts) {
+      if (b.type === "Pool") poolBoutsH2H++;
+      else deBoutsH2H++; // T128, T64, T32, etc. are all DE rounds
+    }
+  }
+
+  // Use the larger count from either source
+  const poolBouts = Math.max(poolBoutsDetail, poolBoutsH2H);
+  const deBouts = Math.max(deBoutsDetail, deBoutsH2H);
 
   const stats = [
     {
