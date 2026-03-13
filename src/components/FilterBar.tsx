@@ -15,8 +15,8 @@ interface FilterBarProps {
   onClearAll: () => void;
 }
 
-const levels: TournamentLevel[] = ["International", "National", "SYC", "RYC", "Local"];
-const categories: AgeCategory[] = ["Div I", "Junior", "Cadet", "Y-14", "Y-12", "Y-10", "Y-8"];
+const levels: TournamentLevel[] = ["International", "National", "SYC", "RYC"];
+const categories: AgeCategory[] = ["Div I", "Junior", "Cadet", "Y-14", "Y-12"];
 const placements: PlacementFilter[] = ["Gold", "Top 4", "Top 8", "Top 16", "Top 32"];
 
 const placementColors: Record<PlacementFilter, string> = {
