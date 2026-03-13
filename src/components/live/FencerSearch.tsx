@@ -15,7 +15,11 @@ export default function FencerSearch() {
   const [error, setError] = useState("");
 
   async function handleSearch() {
-    if (!query.trim()) return;
+    const words = query.trim().split(/\s+/);
+    if (words.length < 2) {
+      setError("Please enter first + last name (e.g. \"Kim Kendrick\")");
+      return;
+    }
     setSearching(true);
     setError("");
     setResults([]);
@@ -125,7 +129,7 @@ export default function FencerSearch() {
         </div>
         <button
           onClick={handleSearch}
-          disabled={searching || !query.trim()}
+          disabled={searching || query.trim().split(/\s+/).length < 2}
           className="px-5 py-3 bg-orange-500/10 hover:bg-orange-500/20 border border-orange-500/20 rounded-xl text-orange-400 text-sm font-bold transition-colors disabled:opacity-30"
         >
           {searching ? "..." : "Scout"}

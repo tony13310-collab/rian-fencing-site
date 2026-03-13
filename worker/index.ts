@@ -522,15 +522,7 @@ async function handleFTSearchSaber(url: URL): Promise<Response> {
   const queries = new Set<string>();
   queries.add(q);
   const qParts = q.trim().split(/\s+/);
-  if (qParts.length === 1) {
-    // Single word (likely a surname): FT's substring search buries short surnames
-    // Try a few high-value prefix searches to find actual surname matches
-    // Limit to 3 prefixes to stay within Cloudflare subrequest limits
-    const prefixes = ["J", "K", "R"];
-    for (const p of prefixes) {
-      queries.add(`${p}-${q}`);
-    }
-  } else if (qParts.length >= 2) {
+  if (qParts.length >= 2) {
     // Multi word: try all permutations
     // "Kim Kendrick" → "Kim Kendrick", "Kendrick Kim", "Kim-Kendrick", "Kendrick-Kim"
     queries.add(`${qParts.join("-")}`);
