@@ -89,26 +89,37 @@ function computeAchievements() {
     });
   }
 
-  // JO Junior — first B rating, massive field
+  // JO Junior — 11/297 in a massive Junior field
   const joJunior = allEvents.find(e => e.date === "2026-01-12" && e.event.includes("Junior"));
   if (joJunior) {
     achievements.push({
       emoji: "🎖️",
-      text: `Junior Olympics Junior MS — 11th/297, earned B26 rating (Jan 2026)`,
+      text: `Junior Olympics Junior MS — 11th/297 (Jan 2026)`,
       eventId: makeEventId(joJunior.date, joJunior.event),
     });
   }
 
-  // Rating progression
-  if (ratingHistory.length >= 2) {
-    const first = ratingHistory[0].rating;
-    const last = ratingHistory[ratingHistory.length - 1].rating;
-    const seasons = new Set(allEvents.filter(e => e.rating).map(e => e.season)).size;
-    achievements.push({
-      emoji: "📈",
-      text: `Rating progression: ${first} → ${last} in ${seasons} seasons`,
-      eventId: null,
-    });
+  // Rating upgrades — each letter change is a milestone
+  const ratingOrder = ['U', 'E', 'D', 'C', 'B', 'A'];
+  const ratedEvents = [...allEvents]
+    .filter(e => e.rating)
+    .sort((a, b) => a.date.localeCompare(b.date));
+  let prevLetter = '';
+  for (const e of ratedEvents) {
+    const letter = e.rating.charAt(0);
+    if (letter !== prevLetter && prevLetter !== '') {
+      const prevIdx = ratingOrder.indexOf(prevLetter);
+      const curIdx = ratingOrder.indexOf(letter);
+      if (curIdx > prevIdx) {
+        const month = new Date(e.date + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+        achievements.push({
+          emoji: "⬆️",
+          text: `Earned ${e.rating} rating — ${e.tournament} ${e.event.replace("Men's Saber", "MS")} ${e.place}/${e.total} (${month})`,
+          eventId: makeEventId(e.date, e.event),
+        });
+      }
+    }
+    prevLetter = letter;
   }
 
   // First competition milestone
