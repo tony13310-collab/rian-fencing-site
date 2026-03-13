@@ -137,11 +137,16 @@ export default function Hero() {
             { label: "Peers", href: "/peers" },
             { label: "Highlights", href: "#highlights" },
             { label: "Contact", href: "#contact" },
-          ].map((btn) => (
+            { label: "● Live", href: "/live", isLive: true },
+          ].map((btn: any) => (
             <a
               key={btn.href}
               href={btn.href}
-              className="px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-bold text-sm sm:text-base hover:shadow-[0_0_30px_rgba(0,212,255,0.4)] transition-all duration-300 hover:scale-105 text-center"
+              className={`px-4 sm:px-6 py-2.5 sm:py-3 rounded-xl font-bold text-sm sm:text-base transition-all duration-300 hover:scale-105 text-center ${
+                btn.isLive
+                  ? "bg-gradient-to-r from-red-500 to-orange-500 text-white hover:shadow-[0_0_30px_rgba(239,68,68,0.4)] animate-pulse"
+                  : "bg-gradient-to-r from-cyan-500 to-purple-600 text-white hover:shadow-[0_0_30px_rgba(0,212,255,0.4)]"
+              }`}
             >
               {btn.label}
             </a>
