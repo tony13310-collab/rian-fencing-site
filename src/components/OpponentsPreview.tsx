@@ -143,14 +143,14 @@ export default function OpponentsPreview() {
                         {yearLabel(peer.birthYear)}
                       </span>
                     </div>
-                    <div className="flex items-center gap-2 shrink-0">
-                      <span className="text-white/40 text-xs whitespace-nowrap">
+                    <div className="flex items-center gap-1.5 shrink-0">
+                      <span className="text-white/40 text-xs whitespace-nowrap w-14 text-right font-mono">
                         <span className="text-green-400">{peer.data.wins}W</span>
                         <span className="text-white/45">-</span>
                         <span className="text-red-400">{peer.data.losses}L</span>
                       </span>
                       <span
-                        className={`text-xs font-bold px-1.5 py-0.5 rounded ${
+                        className={`text-xs font-bold w-12 text-center py-0.5 rounded ${
                           winPct >= 60
                             ? "bg-green-500/15 text-green-400"
                             : winPct >= 40
@@ -191,13 +191,13 @@ export default function OpponentsPreview() {
                         {yearLabel(peer.birthYear)}
                       </span>
                     </div>
-                    <div className="flex items-center gap-2 shrink-0">
-                      <span className="text-white/50 text-xs whitespace-nowrap">
+                    <div className="flex items-center gap-1.5 shrink-0">
+                      <span className="text-white/50 text-xs whitespace-nowrap w-14 text-right font-mono">
                         <span className="text-green-400">{peer.data.wins}W</span>
                         <span className="text-white/45">-</span>
                         <span className="text-red-400">{peer.data.losses}L</span>
                       </span>
-                      <span className="text-xs font-bold px-1.5 py-0.5 rounded bg-red-500/15 text-red-400">
+                      <span className="text-xs font-bold w-12 text-center py-0.5 rounded bg-red-500/15 text-red-400">
                         {peer.data.winRate}%
                       </span>
                     </div>
