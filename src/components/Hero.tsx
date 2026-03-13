@@ -133,8 +133,8 @@ export default function Hero() {
           className="grid grid-cols-2 sm:flex sm:flex-wrap gap-2 sm:gap-3 justify-center px-2"
         >
           {[
-            { label: "Results", href: "#results" },
-            { label: "Database", href: "#opponents" },
+            { label: "Events", href: "/events" },
+            { label: "Peers", href: "/peers" },
             { label: "Highlights", href: "#highlights" },
             { label: "Contact", href: "#contact" },
           ].map((btn) => (
