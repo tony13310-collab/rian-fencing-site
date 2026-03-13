@@ -2,6 +2,7 @@
 
 import Navbar from "@/components/Navbar";
 import OpponentsPreview from "@/components/OpponentsPreview";
+import FencerSearch from "@/components/live/FencerSearch";
 import Footer from "@/components/Footer";
 
 export default function PeersPage() {
@@ -15,6 +16,9 @@ export default function PeersPage() {
       <div id="opponents">
         <OpponentsPreview />
       </div>
+      <section className="max-w-5xl mx-auto px-4 sm:px-6 py-12">
+        <FencerSearch />
+      </section>
       <Footer />
     </main>
   );
