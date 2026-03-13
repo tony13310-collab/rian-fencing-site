@@ -104,7 +104,7 @@ export default function Hero() {
             return (
               <div key={r.category} className={`px-3 sm:px-5 py-2 rounded-xl ${c.bg} border ${c.border} backdrop-blur-sm`}>
                 <span className="text-white/70 text-xs sm:text-xs font-medium mr-1">{r.category}</span>
-                <span className={`${c.text} font-black text-sm sm:text-lg`}>#{r.rank}</span>
+                <span className={`${c.text} font-black text-base sm:text-xl`}>#{r.rank}</span>
               </div>
             );
           })}
