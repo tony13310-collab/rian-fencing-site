@@ -162,7 +162,7 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
           <div className="flex items-center justify-between">
             {badge && (
               <span className={`text-xs px-2.5 py-1 rounded-full font-bold uppercase tracking-wider border ${color.badge} ${isLive ? "animate-pulse" : ""}`}>
-                {isLive ? "● LIVE" : `In ${daysUntil} day${daysUntil !== 1 ? "s" : ""}`}
+                {isLive ? "LIVE" : `IN ${daysUntil} DAY${daysUntil !== 1 ? "S" : ""}`}
               </span>
             )}
             {isLive && totalDays > 1 && (
@@ -174,13 +174,10 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
           <h3 className="text-white font-bold text-base leading-tight">{t.name}</h3>
 
           {/* Info row */}
-          <div className="flex items-center gap-4 text-sm text-white/70">
-            <span className="flex items-center gap-1">
-              📍 {t.location}
-            </span>
-            <span className="flex items-center gap-1">
-              📅 {t.dates}
-            </span>
+          <div className="text-sm text-white/70">
+            <span>{t.location}</span>
+            <span className="mx-2">·</span>
+            <span>{t.dates}</span>
           </div>
         </div>
 
@@ -210,7 +207,7 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
           <button
             onClick={handleSearch}
             disabled={searching || !query.trim()}
-            className="px-6 py-3 bg-white/10 hover:bg-white/20 border border-white/20 rounded-xl text-white font-bold text-sm transition-colors disabled:opacity-30"
+            className="px-6 py-3 bg-white text-black font-bold text-sm rounded-xl hover:bg-white/90 transition-colors disabled:opacity-30"
           >
             {searching ? "..." : "Search"}
           </button>
@@ -272,7 +269,7 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
       {!autoLoading && inProgress.length > 0 && (
         <div className="space-y-3">
           <h2 className="text-white/80 text-sm uppercase tracking-wider font-bold">
-            🔴 In Progress
+            IN PROGRESS
           </h2>
           {inProgress.map((t) => (
             <TournamentCard key={t.id} t={t} badge="LIVE" />
@@ -284,7 +281,7 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
       {!autoLoading && upcoming.length > 0 && (
         <div className="space-y-3">
           <h2 className="text-white/80 text-sm uppercase tracking-wider font-bold">
-            📅 Upcoming National & SYC
+            UPCOMING NATIONAL & SYC
           </h2>
           {upcoming.map((t) => (
             <TournamentCard key={t.id} t={t} badge="UPCOMING" />
@@ -295,7 +292,7 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
       {/* No tournaments */}
       {!autoLoading && inProgress.length === 0 && upcoming.length === 0 && (
         <div className="text-center py-8 bg-white/[0.02] rounded-2xl">
-          <div className="text-2xl mb-2">🤺</div>
+          <div className="text-2xl mb-2"></div>
           <p className="text-white/60 text-sm">No active tournaments in the next 7 days</p>
         </div>
       )}

@@ -119,7 +119,7 @@ export default function LivePage() {
                 {/* Fencer Search */}
                 <div>
                   <h2 className="text-sm font-bold text-white/80 uppercase tracking-wider mb-3">
-                    🔍 Fencers
+                    FENCERS
                   </h2>
                   <FencerSearch />
                 </div>
@@ -130,7 +130,7 @@ export default function LivePage() {
                 {/* Tournament Search - just the search bar, moved out */}
                 <div>
                   <h2 className="text-sm font-bold text-white/80 uppercase tracking-wider mb-3">
-                    🔍 Tournaments
+                    TOURNAMENTS
                   </h2>
                   <TournamentSearch
                     onTournamentFound={handleTournamentFound}
