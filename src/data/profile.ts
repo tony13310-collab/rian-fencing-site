@@ -106,29 +106,33 @@ function computeAchievements() {
   const ratedEvents = [...allEvents]
     .filter(e => e.rating)
     .sort((a, b) => a.date.localeCompare(b.date));
-  let prevLetter = '';
+  let prevRating = '';
   for (const e of ratedEvents) {
     const letter = e.rating.charAt(0);
-    if (letter !== prevLetter && prevLetter !== '') {
+    const prevLetter = prevRating.charAt(0);
+    if (prevRating && e.rating !== prevRating) {
       const prevIdx = ratingOrder.indexOf(prevLetter);
       const curIdx = ratingOrder.indexOf(letter);
-      if (curIdx > prevIdx) {
+      const isUpgrade = curIdx > prevIdx;
+      const isRenewal = letter === prevLetter; // same letter, new year
+      if (isUpgrade || isRenewal) {
         const eid = makeEventId(e.date, e.event);
         const existing = achievements.find(a => a.eventId === eid);
+        const label = isUpgrade ? `Earned ${e.rating}` : `Renewed ${e.rating}`;
         if (existing) {
-          // Merge rating into existing achievement
-          existing.text += ` • Earned ${e.rating}`;
+          existing.text += ` • ${label}`;
         } else {
           const month = new Date(e.date + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+          const emoji = isUpgrade ? "⬆️" : "🔄";
           achievements.push({
-            emoji: "⬆️",
-            text: `Earned ${e.rating} rating — ${e.tournament} ${e.event.replace("Men's Saber", "MS")} ${e.place}/${e.total} (${month})`,
+            emoji,
+            text: `${label} rating — ${e.tournament} ${e.event.replace("Men's Saber", "MS")} ${e.place}/${e.total} (${month})`,
             eventId: eid,
           });
         }
       }
     }
-    prevLetter = letter;
+    prevRating = e.rating;
   }
 
   // First competition milestone
