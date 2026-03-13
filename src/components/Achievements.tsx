@@ -90,14 +90,9 @@ export default function Achievements() {
         <h3 className="text-2xl font-bold mb-2 text-white/90">
           {profile.club}
         </h3>
-        <p className="text-white/70 mb-4">
-          {profile.division} • {profile.location}
+        <p className="text-white/70">
+          {profile.division} • {profile.location} • {profile.weapon}
         </p>
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-purple-500/10 border border-purple-500/20">
-          <span className="text-purple-400 font-medium">
-            {profile.weapon}
-          </span>
-        </div>
       </motion.div>
     </section>
   );
