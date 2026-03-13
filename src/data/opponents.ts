@@ -4474,9 +4474,9 @@ export const opponents: Record<string, OpponentData> = {
   },
   "KAMAL Aidan": {
     "wins": 1,
-    "losses": 1,
-    "total": 2,
-    "winRate": 0.5,
+    "losses": 0,
+    "total": 1,
+    "winRate": 1,
     "clubs": ["NFFC"],
     "bouts": [
       {
@@ -4486,14 +4486,6 @@ export const opponents: Record<string, OpponentData> = {
         "type": "Pool",
         "win": true,
         "score": "5-0"
-      },
-      {
-        "tournament": "Summer Nationals",
-        "event": "Junior Men's Saber",
-        "date": "June 28, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "0-5"
       }
     ],
     "birthYear": 2007
