@@ -135,24 +135,33 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
     const totalDays = Math.ceil((endDate.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)) + 1;
     const dayOfEvent = isLive ? Math.ceil((now.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24)) + 1 : 0;
 
+    // Color palette based on index for variety
+    const colors = [
+      { bg: "from-blue-500/10 to-cyan-500/5", border: "border-blue-500/15", badge: "bg-blue-500/10 text-blue-400 border-blue-500/20", ring: "ring-blue-500/30" },
+      { bg: "from-purple-500/10 to-pink-500/5", border: "border-purple-500/15", badge: "bg-purple-500/10 text-purple-400 border-purple-500/20", ring: "ring-purple-500/30" },
+      { bg: "from-emerald-500/10 to-teal-500/5", border: "border-emerald-500/15", badge: "bg-emerald-500/10 text-emerald-400 border-emerald-500/20", ring: "ring-emerald-500/30" },
+      { bg: "from-amber-500/10 to-yellow-500/5", border: "border-amber-500/15", badge: "bg-amber-500/10 text-amber-400 border-amber-500/20", ring: "ring-amber-500/30" },
+      { bg: "from-rose-500/10 to-pink-500/5", border: "border-rose-500/15", badge: "bg-rose-500/10 text-rose-400 border-rose-500/20", ring: "ring-rose-500/30" },
+      { bg: "from-indigo-500/10 to-violet-500/5", border: "border-indigo-500/15", badge: "bg-indigo-500/10 text-indigo-400 border-indigo-500/20", ring: "ring-indigo-500/30" },
+    ];
+
+    // Hash tournament id to pick a consistent color
+    const colorIdx = t.id.split("").reduce((sum, c) => sum + c.charCodeAt(0), 0) % colors.length;
+    const liveColor = { bg: "from-red-500/10 to-orange-500/5", border: "border-red-500/15", badge: "bg-red-500/20 text-red-400 border-red-500/30", ring: "ring-red-500/30" };
+    const color = isLive ? liveColor : colors[colorIdx];
+
     return (
       <button
         onClick={() => selectTournament(t)}
         className={`w-full text-left rounded-2xl transition-all overflow-hidden ${
-          isSelected
-            ? "ring-2 ring-red-500/30"
-            : "hover:scale-[1.01]"
-        } ${isLive ? "bg-gradient-to-br from-red-500/10 to-orange-500/5 border border-red-500/15" : "bg-white/[0.03] border border-white/5 hover:border-white/10"}`}
+          isSelected ? `ring-2 ${color.ring}` : "hover:scale-[1.01]"
+        } bg-gradient-to-br ${color.bg} border ${color.border}`}
       >
         <div className="p-4 space-y-3">
           {/* Top row: badge + status */}
           <div className="flex items-center justify-between">
             {badge && (
-              <span className={`text-[10px] px-2.5 py-1 rounded-full font-bold uppercase tracking-wider ${
-                isLive
-                  ? "bg-red-500/20 text-red-400 border border-red-500/30 animate-pulse"
-                  : "bg-blue-500/10 text-blue-400 border border-blue-500/20"
-              }`}>
+              <span className={`text-[10px] px-2.5 py-1 rounded-full font-bold uppercase tracking-wider border ${color.badge} ${isLive ? "animate-pulse" : ""}`}>
                 {isLive ? "● LIVE" : `In ${daysUntil} day${daysUntil !== 1 ? "s" : ""}`}
               </span>
             )}
