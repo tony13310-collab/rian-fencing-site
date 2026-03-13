@@ -201,11 +201,11 @@ export default function SeasonTimeline({
                       <span className="text-white/70 text-base font-bold">
                         {getSeasonAge(season)}
                       </span>
-                      <span className="text-white/60 text-base font-medium">
+                      <span className="text-white/70 text-base font-bold">
                         {seasonEvents.length} events
                       </span>
                       {meta?.rating && (
-                        <span className="text-amber-400 text-base font-bold">
+                        <span className="text-white/70 text-base font-bold">
                           {meta.rating}
                         </span>
                       )}
