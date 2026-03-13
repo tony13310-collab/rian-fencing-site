@@ -198,14 +198,14 @@ export default function SeasonTimeline({
                       <h3 className="text-2xl md:text-3xl font-black gradient-text">
                         {getSeasonLabel(season)}
                       </h3>
-                      <span className="text-white/50 text-sm font-medium">
+                      <span className="text-white/70 text-base font-bold">
                         {getSeasonAge(season)}
                       </span>
-                      <span className="text-white/45 text-sm">
+                      <span className="text-white/60 text-base font-medium">
                         {seasonEvents.length} events
                       </span>
                       {meta?.rating && (
-                        <span className="text-amber-400 text-sm font-bold">
+                        <span className="text-amber-400 text-base font-bold">
                           {meta.rating}
                         </span>
                       )}
