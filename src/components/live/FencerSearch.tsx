@@ -123,7 +123,7 @@ export default function FencerSearch() {
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleSearch()}
             placeholder="First Last Name"
-            className="w-full bg-white/5 border border-white/10 rounded-xl pl-4 pr-4 py-3 text-white placeholder:text-white/50 focus:outline-none focus:border-orange-500/30 text-sm"
+            className="w-full bg-white/5 border border-white/10 rounded-xl pl-4 pr-4 py-3 text-white placeholder:text-white/70 focus:outline-none focus:border-white/30 text-sm"
           />
         </div>
         <button
