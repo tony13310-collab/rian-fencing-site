@@ -46,26 +46,29 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop nav */}
-        <div className="hidden md:flex items-center gap-8">
-          {links.map((link) => (
-            <Link
-              key={link.href}
-              href={link.href}
-              className={`hover:text-white transition-colors text-sm font-medium ${
-                link.isLive
-                  ? "text-red-400 animate-pulse"
-                  : isActive(link.href)
-                  ? "text-white"
-                  : "text-white/50"
-              }`}
-            >
-              {link.label}
-            </Link>
-          ))}
-        </div>
+        {/* Desktop nav — hidden on homepage */}
+        {pathname !== "/" && (
+          <div className="hidden md:flex items-center gap-8">
+            {links.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                className={`hover:text-white transition-colors text-sm font-medium ${
+                  link.isLive
+                    ? "text-red-400 animate-pulse"
+                    : isActive(link.href)
+                    ? "text-white"
+                    : "text-white/50"
+                }`}
+              >
+                {link.label}
+              </Link>
+            ))}
+          </div>
+        )}
 
-        {/* Mobile hamburger */}
+        {/* Mobile hamburger — hidden on homepage */}
+        {pathname !== "/" ? (
         <button
           onClick={() => setMobileOpen(!mobileOpen)}
           className="md:hidden text-white/50 p-2"
@@ -78,6 +81,7 @@ export default function Navbar() {
             )}
           </svg>
         </button>
+        ) : null}
       </div>
 
       {/* Mobile menu */}
