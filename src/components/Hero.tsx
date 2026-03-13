@@ -135,7 +135,6 @@ export default function Hero() {
           {[
             { label: "Events", href: "/events" },
             { label: "Peers", href: "/peers" },
-            { label: "Highlights", href: "#highlights" },
             { label: "Contact", href: "#contact" },
             { label: "● Live", href: "/live", isLive: true },
           ].map((btn: any) => (
