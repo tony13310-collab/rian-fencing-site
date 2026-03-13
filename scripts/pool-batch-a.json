@@ -1,1 +1,84 @@
-[]
+[
+  {
+    "date": "2023-03-11",
+    "event": "Y-12 Men's Saber",
+    "eventId": "A2BB3645EEF24D6F9E0533E4464132A0",
+    "poolSeed": 2,
+    "bouts": [
+      {
+        "opponent": "CAI fungyu",
+        "club": "CAPITALFA / Capitol /  USA",
+        "score": "5-0",
+        "win": true
+      },
+      {
+        "opponent": "GRABOWSKI Alexander",
+        "club": "CAPITALFA / Capitol /  USA", 
+        "score": "1-5",
+        "win": false
+      },
+      {
+        "opponent": "PIPKE Garrett",
+        "club": "NOVAFC / Virginia /  USA",
+        "score": "5-1",
+        "win": true
+      },
+      {
+        "opponent": "D'AMELJ Edoardo",
+        "club": "NAZLYMOVFF / Capitol /  USA",
+        "score": "4-5", 
+        "win": false
+      },
+      {
+        "opponent": "OTT William",
+        "club": "MIRACLEFC / Virginia /  USA",
+        "score": "5-2",
+        "win": true
+      },
+      {
+        "opponent": "XU Princeton",
+        "club": "TTFA / North Carolina /  USA",
+        "score": "5-4",
+        "win": true
+      }
+    ]
+  },
+  {
+    "date": "2023-09-03",
+    "event": "Y-14 Men's Saber",
+    "eventId": "28D3EFA607444D388240F8D12C2E2EA0",
+    "poolSeed": 3,
+    "bouts": [
+      {
+        "opponent": "LIN Alex",
+        "club": "LONESTARFC / North Texas",
+        "score": "5-1",
+        "win": true
+      },
+      {
+        "opponent": "ZHAO Royce",
+        "club": "TIMMOREHOUSE / Westchester-Rockland",
+        "score": "5-2",
+        "win": true
+      },
+      {
+        "opponent": "KAMURA Kosei",
+        "club": "GFA / North Texas",
+        "score": "5-3",
+        "win": true
+      },
+      {
+        "opponent": "HENDERSON Lucas",
+        "club": "AFC / Western New York",
+        "score": "3-5",
+        "win": false
+      },
+      {
+        "opponent": "SENTHIL Gatik",
+        "club": "FIT / North Texas",
+        "score": "5-4",
+        "win": true
+      }
+    ]
+  }
+]
