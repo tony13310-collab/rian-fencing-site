@@ -116,7 +116,7 @@ export default function OpponentsPreview() {
           <h3 className="text-xs font-bold text-white/50 uppercase tracking-widest mb-3">
             🔥 Most Faced Peers
           </h3>
-          <div className="space-y-1.5">
+          <div className="space-y-1.5 md:grid md:grid-cols-2 md:gap-2 md:space-y-0">
             {topPeers.map((peer, i) => {
               const slug = getOpponentSlug(peer.name);
               const winPct = peer.data.winRate;
@@ -174,7 +174,7 @@ export default function OpponentsPreview() {
             <h3 className="text-xs font-bold text-red-400/50 uppercase tracking-widest mb-3">
               ⚠️ Tough Matchups
             </h3>
-            <div className="space-y-1.5">
+            <div className="space-y-1.5 md:grid md:grid-cols-2 md:gap-2 md:space-y-0">
               {toughPeers.map((peer) => {
                 const slug = getOpponentSlug(peer.name);
                 return (
