@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import PasswordGate from "@/components/PasswordGate";
+import SwipeNavigator from "@/components/SwipeNavigator";
 
 export const metadata: Metadata = {
   title: "Rian Wei | Men's Saber Fencer",
@@ -30,7 +31,7 @@ export default function RootLayout({
         />
       </head>
       <body className="antialiased">
-        <PasswordGate>{children}</PasswordGate>
+        <PasswordGate><SwipeNavigator>{children}</SwipeNavigator></PasswordGate>
       </body>
     </html>
   );
