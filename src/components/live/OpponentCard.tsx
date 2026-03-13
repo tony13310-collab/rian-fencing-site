@@ -1,36 +1,21 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { PoolFencer } from "@/app/live/page";
+import type { FTProfile } from "./EventDashboard";
 import { opponents } from "@/data/opponents";
-
-const API_BASE = "https://rian-fencing-api.tony13310.workers.dev";
-
-interface FTProfile {
-  usfaId: string;
-  name: string;
-  birthYear: number | null;
-  club: string;
-  currentRating: string;
-  deStrength: number;
-  poolStrength: number;
-  podium: { gold: number; silver: number; bronze: number };
-  avgPercentile: number;
-  recentResults: { date: string; tournament: string; event: string; place: number; total: number; ratingEarned: string }[];
-  totalEvents: number;
-}
 
 interface Props {
   fencer: PoolFencer;
   isRian?: boolean;
+  deMatch?: { round: string; score?: string; win: boolean };
+  ftProfile?: FTProfile;
+  ftStatus?: "pending" | "loading" | "loaded" | "error";
 }
 
-export default function OpponentCard({ fencer, isRian }: Props) {
+export default function OpponentCard({ fencer, isRian, deMatch, ftProfile, ftStatus }: Props) {
   const [expanded, setExpanded] = useState(false);
-  const [ftProfile, setFtProfile] = useState<FTProfile | null>(null);
-  const [ftLoading, setFtLoading] = useState(false);
-  const [ftError, setFtError] = useState("");
 
   // Look up in local DB
   const localData = opponents[fencer.name];
@@ -39,24 +24,6 @@ export default function OpponentCard({ fencer, isRian }: Props) {
     losses: localData.losses,
     bouts: localData.bouts,
   } : null;
-
-  // Fetch FT profile when expanded
-  useEffect(() => {
-    if (!expanded || ftProfile || ftLoading || isRian) return;
-    setFtLoading(true);
-    const searchName = fencer.name.replace(/,\s*/, " ").trim();
-    fetch(`${API_BASE}/api/ft/profile?q=${encodeURIComponent(searchName)}`)
-      .then(r => r.json())
-      .then(data => {
-        if (data.error) {
-          setFtError("Not found on FencingTracker");
-        } else {
-          setFtProfile(data);
-        }
-      })
-      .catch(() => setFtError("Failed to load"))
-      .finally(() => setFtLoading(false));
-  }, [expanded, ftProfile, ftLoading, isRian, fencer.name]);
 
   if (isRian) {
     return (
@@ -71,12 +38,12 @@ export default function OpponentCard({ fencer, isRian }: Props) {
   }
 
   const h2hColor = h2h
-    ? h2h.wins > h2h.losses ? "text-green-400" 
-    : h2h.wins < h2h.losses ? "text-red-400" 
+    ? h2h.wins > h2h.losses ? "text-green-400"
+    : h2h.wins < h2h.losses ? "text-red-400"
     : "text-yellow-400"
     : "text-white/30";
 
-  // Determine threat level
+  // Threat level from FT data
   const threatLevel = ftProfile
     ? ftProfile.deStrength >= 3000 ? "elite"
     : ftProfile.deStrength >= 2700 ? "strong"
@@ -95,9 +62,28 @@ export default function OpponentCard({ fencer, isRian }: Props) {
     <div>
       <button
         onClick={() => setExpanded(!expanded)}
-        className="w-full flex items-center gap-3 bg-white/[0.03] hover:bg-white/[0.06] rounded-xl p-3 transition-colors text-left"
+        className={`w-full flex items-center gap-3 rounded-xl p-3 transition-colors text-left ${
+          deMatch
+            ? deMatch.win
+              ? "bg-green-500/5 hover:bg-green-500/10 border border-green-500/10"
+              : "bg-red-500/5 hover:bg-red-500/10 border border-red-500/10"
+            : "bg-white/[0.03] hover:bg-white/[0.06]"
+        }`}
       >
-        <span className="text-white/40 text-xs font-mono w-6 text-right">#{fencer.seed}</span>
+        {/* DE round label or pool seed */}
+        {deMatch ? (
+          <span className="text-white/30 text-xs font-mono w-10">{deMatch.round}</span>
+        ) : (
+          <span className="text-white/40 text-xs font-mono w-6 text-right">#{fencer.seed}</span>
+        )}
+
+        {/* DE score */}
+        {deMatch && (
+          <span className={`text-sm font-bold w-12 ${deMatch.win ? "text-green-400" : "text-red-400"}`}>
+            {deMatch.win ? "W" : "L"} {deMatch.score}
+          </span>
+        )}
+
         <div className="flex-1 min-w-0">
           <div className="flex items-center gap-2">
             <span className="text-white/80 font-medium text-sm truncate">{fencer.name}</span>
@@ -106,15 +92,28 @@ export default function OpponentCard({ fencer, isRian }: Props) {
                 {fencer.country}
               </span>
             )}
+            {/* Inline threat badge */}
+            {threatLevel && (
+              <span className={`text-[9px] px-1.5 py-0.5 rounded-full border font-bold ${threatColors[threatLevel]}`}>
+                {threatLevel === "elite" ? "🔥" : threatLevel === "strong" ? "⚠️" : threatLevel === "mid" ? "—" : "✅"}
+              </span>
+            )}
           </div>
-          <span className="text-white/30 text-xs">{fencer.club || "—"}</span>
+          <span className="text-white/30 text-xs">{ftProfile?.club || fencer.club || "—"}</span>
         </div>
+
         {h2h && (
           <span className={`text-xs font-bold ${h2hColor}`}>
             {h2h.wins}-{h2h.losses}
           </span>
         )}
-        {!h2h && <span className="text-white/20 text-xs">NEW</span>}
+        {!h2h && !deMatch && <span className="text-white/20 text-xs">NEW</span>}
+
+        {/* Loading indicator for FT data */}
+        {ftStatus === "loading" && (
+          <div className="w-3 h-3 border border-white/20 border-t-white/50 rounded-full animate-spin" />
+        )}
+
         <svg
           className={`w-4 h-4 text-white/20 transition-transform ${expanded ? "rotate-180" : ""}`}
           fill="none" stroke="currentColor" viewBox="0 0 24 24"
@@ -155,19 +154,18 @@ export default function OpponentCard({ fencer, isRian }: Props) {
                 </div>
               )}
 
-              {/* FencingTracker Profile */}
-              {ftLoading && (
+              {/* FencingTracker Scouting Report */}
+              {ftStatus === "loading" && (
                 <div className="text-center py-3">
                   <div className="inline-flex items-center gap-2 text-white/30 text-xs">
                     <div className="w-3 h-3 border border-white/20 border-t-white/50 rounded-full animate-spin" />
-                    Loading FencingTracker data...
+                    Loading scouting data...
                   </div>
                 </div>
               )}
 
               {ftProfile && (
                 <div className="space-y-3">
-                  {/* Threat Badge + Key Stats */}
                   <div className="flex items-center justify-between">
                     <h4 className="text-white/40 text-[10px] uppercase tracking-wider font-bold">
                       📊 Scouting Report
@@ -199,7 +197,7 @@ export default function OpponentCard({ fencer, isRian }: Props) {
                     </div>
                   </div>
 
-                  {/* Profile Row */}
+                  {/* Profile row */}
                   <div className="flex items-center gap-3 text-xs text-white/40">
                     <span>🏠 {ftProfile.club || "Unattached"}</span>
                     <span>•</span>
@@ -211,15 +209,9 @@ export default function OpponentCard({ fencer, isRian }: Props) {
                   {/* Season Podiums */}
                   {(ftProfile.podium.gold + ftProfile.podium.silver + ftProfile.podium.bronze > 0) && (
                     <div className="flex gap-3 text-xs">
-                      {ftProfile.podium.gold > 0 && (
-                        <span className="text-yellow-400">🥇 ×{ftProfile.podium.gold}</span>
-                      )}
-                      {ftProfile.podium.silver > 0 && (
-                        <span className="text-gray-300">🥈 ×{ftProfile.podium.silver}</span>
-                      )}
-                      {ftProfile.podium.bronze > 0 && (
-                        <span className="text-orange-400">🥉 ×{ftProfile.podium.bronze}</span>
-                      )}
+                      {ftProfile.podium.gold > 0 && <span className="text-yellow-400">🥇 ×{ftProfile.podium.gold}</span>}
+                      {ftProfile.podium.silver > 0 && <span className="text-gray-300">🥈 ×{ftProfile.podium.silver}</span>}
+                      {ftProfile.podium.bronze > 0 && <span className="text-orange-400">🥉 ×{ftProfile.podium.bronze}</span>}
                       <span className="text-white/20">(this season)</span>
                     </div>
                   )}
@@ -237,9 +229,7 @@ export default function OpponentCard({ fencer, isRian }: Props) {
                           return (
                             <div key={i} className="flex items-center gap-2 text-xs">
                               <span className="text-white/30 w-16">{r.date}</span>
-                              <span className={`font-mono w-14 ${pctColor}`}>
-                                {r.place}/{r.total}
-                              </span>
+                              <span className={`font-mono w-14 ${pctColor}`}>{r.place}/{r.total}</span>
                               <span className="text-white/40 truncate flex-1">{r.event}</span>
                               {r.ratingEarned && r.ratingEarned !== "U" && (
                                 <span className="text-white/20 text-[10px]">{r.ratingEarned}</span>
@@ -251,7 +241,6 @@ export default function OpponentCard({ fencer, isRian }: Props) {
                     </div>
                   )}
 
-                  {/* FencingTracker Link */}
                   <a
                     href={`https://fencingtracker.com/p/${ftProfile.usfaId}/${ftProfile.name.replace(/ /g, '-')}`}
                     target="_blank"
@@ -263,17 +252,12 @@ export default function OpponentCard({ fencer, isRian }: Props) {
                 </div>
               )}
 
-              {ftError && !ftLoading && (
-                <div className="text-white/20 text-xs text-center py-2">
-                  {ftError}
-                </div>
+              {ftStatus === "error" && (
+                <div className="text-white/20 text-xs text-center py-2">Not found on FencingTracker</div>
               )}
 
-              {/* No data at all */}
-              {!h2h && !ftProfile && !ftLoading && !ftError && (
-                <p className="text-white/20 text-xs text-center py-2">
-                  No prior data available — first-time opponent
-                </p>
+              {!h2h && !ftProfile && ftStatus !== "loading" && ftStatus !== "error" && (
+                <p className="text-white/20 text-xs text-center py-2">No prior data available</p>
               )}
             </div>
           </motion.div>

@@ -1,10 +1,24 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState, useEffect, useCallback } from "react";
 import type { TournamentEvent, PoolData, DEData } from "@/app/live/page";
 import OpponentCard from "./OpponentCard";
 
 const API_BASE = "https://rian-fencing-api.tony13310.workers.dev";
+
+export interface FTProfile {
+  usfaId: string;
+  name: string;
+  birthYear: number | null;
+  club: string;
+  currentRating: string;
+  deStrength: number;
+  poolStrength: number;
+  podium: { gold: number; silver: number; bronze: number };
+  avgPercentile: number;
+  recentResults: { date: string; tournament: string; event: string; place: number; total: number; ratingEarned: string }[];
+  totalEvents: number;
+}
 
 interface Props {
   event: TournamentEvent;
@@ -20,10 +34,55 @@ export default function EventDashboard({ event, tournamentName }: Props) {
   const [rianPoolSeed, setRianPoolSeed] = useState<number | null>(null);
   const [error, setError] = useState("");
 
+  // FT profile cache: name -> profile
+  const [ftCache, setFtCache] = useState<Record<string, FTProfile | "loading" | "error">>({});
+  const [ftProgress, setFtProgress] = useState({ loaded: 0, total: 0 });
+
+  // Batch fetch FT profiles for all opponents
+  const prefetchFTProfiles = useCallback(async (names: string[]) => {
+    const uniqueNames = [...new Set(names.filter(n => n !== "WEI Rian" && !n.startsWith("WEI Rian")))];
+    if (uniqueNames.length === 0) return;
+
+    setFtProgress({ loaded: 0, total: uniqueNames.length });
+
+    // Mark all as loading
+    setFtCache(prev => {
+      const next = { ...prev };
+      uniqueNames.forEach(n => { if (!next[n]) next[n] = "loading"; });
+      return next;
+    });
+
+    // Fetch in parallel with concurrency limit of 3
+    let loaded = 0;
+    const queue = [...uniqueNames];
+    const workers = Array.from({ length: 3 }, async () => {
+      while (queue.length > 0) {
+        const name = queue.shift()!;
+        try {
+          const searchName = name.replace(/,\s*/, " ").trim();
+          const resp = await fetch(`${API_BASE}/api/ft/profile?q=${encodeURIComponent(searchName)}`);
+          const data = await resp.json();
+          if (data.error) {
+            setFtCache(prev => ({ ...prev, [name]: "error" }));
+          } else {
+            setFtCache(prev => ({ ...prev, [name]: data as FTProfile }));
+          }
+        } catch {
+          setFtCache(prev => ({ ...prev, [name]: "error" }));
+        }
+        loaded++;
+        setFtProgress({ loaded, total: uniqueNames.length });
+      }
+    });
+    await Promise.all(workers);
+  }, []);
+
   const fetchData = async (isRefresh = false) => {
     if (isRefresh) setRefreshing(true);
     else setLoading(true);
     setError("");
+
+    const allOpponentNames: string[] = [];
 
     try {
       // Fetch pool data
@@ -49,7 +108,13 @@ export default function EventDashboard({ event, tournamentName }: Props) {
           ind: f.ind,
         }));
 
-        // Build bout results
+        // Collect opponent names for pre-fetch
+        fencers.forEach((f: any) => {
+          if (f.name !== "WEI Rian" && !f.name.startsWith("WEI Rian")) {
+            allOpponentNames.push(f.name);
+          }
+        });
+
         const bouts = rianIdx >= 0 ? pool.fencers[rianIdx].scores.map((s: any, i: number) => {
           const opIdx = i >= rianIdx ? i + 1 : i;
           const opp = pool.fencers[opIdx];
@@ -77,27 +142,30 @@ export default function EventDashboard({ event, tournamentName }: Props) {
         if (resultsJson.rianEntry) {
           setRianPlace(resultsJson.rianEntry.place);
         }
-      } catch { /* Results may not be available yet */ }
+      } catch {}
 
       // Fetch DE data
       try {
         const deResp = await fetch(`${API_BASE}/api/ftl/de/${event.id}`);
         const deJson = await deResp.json();
         if (deJson.matches && deJson.matches.length > 0) {
+          const matches = deJson.matches.map((m: any, i: number) => ({
+            round: `T${Math.pow(2, 7 - i)}`,
+            opponent: m.opponent,
+            club: "",
+            score: m.score,
+            win: m.win,
+            status: "completed" as const,
+          }));
           setDeData({
             rianDESeed: parseInt(deJson.rianDESeed) || 0,
-            matches: deJson.matches.map((m: any, i: number) => ({
-              round: `T${Math.pow(2, 7 - i)}`, // approximate round
-              opponent: m.opponent,
-              club: "",
-              score: m.score,
-              win: m.win,
-              status: "completed" as const,
-            })),
+            matches,
             lastRefreshed: new Date().toLocaleTimeString(),
           });
+          // Collect DE opponent names
+          matches.forEach((m: any) => allOpponentNames.push(m.opponent));
         }
-      } catch { /* DE may not be available yet */ }
+      } catch {}
 
     } catch (err: any) {
       setError(`Failed to load data: ${err.message}`);
@@ -105,13 +173,17 @@ export default function EventDashboard({ event, tournamentName }: Props) {
       setLoading(false);
       setRefreshing(false);
     }
+
+    // Pre-fetch all FT profiles in background
+    if (allOpponentNames.length > 0) {
+      prefetchFTProfiles(allOpponentNames);
+    }
   };
 
   useEffect(() => {
     fetchData();
   }, [event.id]);
 
-  // Pool bouts with color
   const rianBouts = poolData?.bouts || [];
   const wins = rianBouts.filter(b => b.win).length;
   const losses = rianBouts.filter(b => !b.win).length;
@@ -150,14 +222,26 @@ export default function EventDashboard({ event, tournamentName }: Props) {
         </div>
       )}
 
-      {/* Error */}
-      {error && (
-        <div className="text-center py-8 text-red-400/60 text-sm">{error}</div>
-      )}
+      {error && <div className="text-center py-8 text-red-400/60 text-sm">{error}</div>}
 
-      {/* Pool section */}
       {!loading && (
         <>
+          {/* FT pre-load progress bar */}
+          {ftProgress.total > 0 && ftProgress.loaded < ftProgress.total && (
+            <div className="bg-white/[0.03] rounded-xl p-3">
+              <div className="flex items-center justify-between mb-2">
+                <span className="text-white/40 text-xs">📊 Loading scouting data...</span>
+                <span className="text-white/30 text-xs">{ftProgress.loaded}/{ftProgress.total}</span>
+              </div>
+              <div className="h-1 bg-white/5 rounded-full overflow-hidden">
+                <div
+                  className="h-full bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full transition-all duration-300"
+                  style={{ width: `${(ftProgress.loaded / ftProgress.total) * 100}%` }}
+                />
+              </div>
+            </div>
+          )}
+
           {poolData ? (
             <>
               {/* Rian's stats cards */}
@@ -195,12 +279,10 @@ export default function EventDashboard({ event, tournamentName }: Props) {
                 </div>
               </div>
 
-              {/* Pool Results (bout scores) */}
+              {/* Pool Results */}
               {rianBouts.length > 0 && (
                 <div className="space-y-2">
-                  <h3 className="text-white/50 text-xs uppercase tracking-wider font-bold">
-                    ⚔️ Pool Results
-                  </h3>
+                  <h3 className="text-white/50 text-xs uppercase tracking-wider font-bold">⚔️ Pool Results</h3>
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-2">
                     {rianBouts.map((b, i) => (
                       <div
@@ -221,14 +303,14 @@ export default function EventDashboard({ event, tournamentName }: Props) {
 
               {/* Pool Opponents */}
               <div className="space-y-2">
-                <h3 className="text-white/50 text-xs uppercase tracking-wider font-bold">
-                  👥 Pool Opponents
-                </h3>
+                <h3 className="text-white/50 text-xs uppercase tracking-wider font-bold">👥 Pool Opponents</h3>
                 {poolData.fencers.map((f, i) => (
                   <OpponentCard
                     key={i}
                     fencer={f}
                     isRian={f.name === "WEI Rian" || f.name.startsWith("WEI Rian")}
+                    ftProfile={typeof ftCache[f.name] === "object" ? ftCache[f.name] as FTProfile : undefined}
+                    ftStatus={ftCache[f.name] === "loading" ? "loading" : ftCache[f.name] === "error" ? "error" : ftCache[f.name] ? "loaded" : "pending"}
                   />
                 ))}
               </div>
@@ -262,28 +344,31 @@ export default function EventDashboard({ event, tournamentName }: Props) {
                 </div>
 
                 <div className="space-y-2">
-                  {deData.matches.map((m, i) => (
-                    <div
-                      key={i}
-                      className={`flex items-center gap-3 p-3 rounded-xl ${
-                        m.win ? "bg-green-500/5 border border-green-500/10" : "bg-red-500/5 border border-red-500/10"
-                      }`}
-                    >
-                      <span className="text-white/20 text-xs font-mono w-10">
-                        {i === deData.matches.length - 1 ? "Final" :
-                         i === deData.matches.length - 2 ? "SF" :
-                         i === deData.matches.length - 3 ? "QF" :
-                         `R${i + 1}`}
-                      </span>
-                      <span className={`text-sm font-bold ${m.win ? "text-green-400" : "text-red-400"}`}>
-                        {m.win ? "W" : "L"}
-                      </span>
-                      <span className="text-white/70 text-sm flex-1">vs {m.opponent}</span>
-                      {m.score && (
-                        <span className="text-white/40 text-sm font-mono">{m.score}</span>
-                      )}
-                    </div>
-                  ))}
+                  {deData.matches.map((m, i) => {
+                    const ftData = typeof ftCache[m.opponent] === "object" ? ftCache[m.opponent] as FTProfile : undefined;
+                    return (
+                      <OpponentCard
+                        key={`de-${i}`}
+                        fencer={{
+                          seed: 0,
+                          name: m.opponent,
+                          club: ftData?.club || m.club || "",
+                          country: "",
+                          scores: [],
+                          victories: 0,
+                        }}
+                        deMatch={{
+                          round: i === deData.matches.length - 1 ? "Final" :
+                                 i === deData.matches.length - 2 ? "SF" :
+                                 i === deData.matches.length - 3 ? "QF" : `R${i + 1}`,
+                          score: m.score || "",
+                          win: m.win ?? true,
+                        }}
+                        ftProfile={ftData}
+                        ftStatus={ftCache[m.opponent] === "loading" ? "loading" : ftCache[m.opponent] === "error" ? "error" : ftCache[m.opponent] ? "loaded" : "pending"}
+                      />
+                    );
+                  })}
                 </div>
               </div>
             ) : (
@@ -295,7 +380,6 @@ export default function EventDashboard({ event, tournamentName }: Props) {
             )}
           </div>
 
-          {/* Last refreshed */}
           {poolData?.lastRefreshed && (
             <p className="text-white/15 text-[10px] text-center">
               Last refreshed: {poolData.lastRefreshed}
