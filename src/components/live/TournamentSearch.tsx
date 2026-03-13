@@ -156,21 +156,46 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
           <p className="text-white/30 text-xs uppercase tracking-wider font-bold">
             {results.length} tournament{results.length > 1 ? "s" : ""} found
           </p>
-          {results.map((t) => (
-            <button
-              key={t.id}
-              onClick={() => handleSelectTournament(t)}
-              className="w-full flex items-center justify-between bg-white/[0.03] hover:bg-white/[0.06] rounded-xl p-4 transition-colors text-left"
-            >
-              <div>
-                <p className="text-white/80 font-medium">{t.name}</p>
-                <p className="text-white/30 text-sm">{t.location}</p>
-              </div>
-              <svg className="w-5 h-5 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-              </svg>
-            </button>
-          ))}
+          {results.map((t) => {
+            const isUpcoming = t.start && new Date(t.start) >= new Date() && new Date(t.start) <= new Date(Date.now() + 10 * 86400000);
+            const isPast = t.start && new Date(t.start) < new Date();
+            return (
+              <button
+                key={t.id}
+                onClick={() => handleSelectTournament(t)}
+                className={`w-full flex items-center justify-between rounded-xl p-4 transition-colors text-left ${
+                  isUpcoming
+                    ? "bg-red-500/5 hover:bg-red-500/10 border border-red-500/20"
+                    : "bg-white/[0.03] hover:bg-white/[0.06]"
+                }`}
+              >
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2">
+                    <p className="text-white/80 font-medium truncate">{t.name}</p>
+                    {isUpcoming && (
+                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-red-500/20 text-red-400 font-bold whitespace-nowrap animate-pulse">
+                        UPCOMING
+                      </span>
+                    )}
+                  </div>
+                  <div className="flex items-center gap-2 mt-0.5">
+                    <p className="text-white/30 text-sm">{t.location}</p>
+                    {t.dates && (
+                      <>
+                        <span className="text-white/10">•</span>
+                        <p className={`text-sm ${isUpcoming ? "text-red-400/70" : isPast ? "text-white/20" : "text-white/30"}`}>
+                          {t.dates}
+                        </p>
+                      </>
+                    )}
+                  </div>
+                </div>
+                <svg className="w-5 h-5 text-white/20 flex-shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            );
+          })}
         </div>
       )}
 

@@ -74,15 +74,32 @@ async function handleFTLSearch(url: URL): Promise<Response> {
     return name.includes(query);
   });
 
-  // Map to our format
+  // Map to our format and sort by start date (newest first)
   const tournaments = rows.map((row: any) => ({
     id: row.Id || row.id || "",
     name: row.Name || row.name || "",
     location: row.Location || row.location || "",
-    startDate: row.StartDate || row.startDate || "",
-    endDate: row.EndDate || row.endDate || "",
-    venue: row.Venue || row.venue || "",
+    dates: row.dates || row.Dates || "",
+    start: row.start || row.Start || row.startDate || row.StartDate || "",
   }));
+
+  // Sort: upcoming first (within 10 days from now), then most recent past
+  const now = new Date();
+  const tenDaysFromNow = new Date(now.getTime() + 10 * 24 * 60 * 60 * 1000);
+
+  tournaments.sort((a: any, b: any) => {
+    const aDate = new Date(a.start);
+    const bDate = new Date(b.start);
+    const aUpcoming = aDate >= now && aDate <= tenDaysFromNow;
+    const bUpcoming = bDate >= now && bDate <= tenDaysFromNow;
+
+    // Upcoming tournaments first
+    if (aUpcoming && !bUpcoming) return -1;
+    if (!aUpcoming && bUpcoming) return 1;
+
+    // Then sort by date descending (newest first)
+    return bDate.getTime() - aDate.getTime();
+  });
 
   return jsonResponse({ tournaments, total: tournaments.length });
 }
