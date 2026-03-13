@@ -101,6 +101,18 @@ function computeAchievements() {
     });
   }
 
+  // First competition milestone
+  const firstEvent = [...allEvents].sort((a, b) => a.date.localeCompare(b.date))[0];
+  if (firstEvent) {
+    const age = new Date(firstEvent.date + 'T12:00:00').getFullYear() - 2011;
+    const month = new Date(firstEvent.date + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+    achievements.push({
+      emoji: "⭐",
+      text: `First competition at age ${age} — ${firstEvent.tournament} ${firstEvent.event.replace("Men's Saber", "MS")} (${month})`,
+      eventId: makeEventId(firstEvent.date, firstEvent.event),
+    });
+  }
+
   return achievements;
 }
 
