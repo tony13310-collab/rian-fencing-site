@@ -105,7 +105,7 @@ export default function FencerSearch() {
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-            placeholder="Search opponent by name..."
+            placeholder="Search by first + last name (e.g. Kim Kendrick)..."
             className="w-full bg-white/5 border border-white/10 rounded-xl pl-9 pr-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-orange-500/30 text-sm"
           />
         </div>

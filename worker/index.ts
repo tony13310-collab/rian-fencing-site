@@ -516,24 +516,76 @@ async function handleFTSearchSaber(url: URL): Promise<Response> {
   const q = url.searchParams.get("q") || "";
   if (!q) return jsonResponse({ error: "Missing q parameter" }, 400);
 
-  // Search FT
-  const searchResp = await fetch("https://fencingtracker.com/search", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ query: q, limit: 10 }),
-  });
-  if (!searchResp.ok) return jsonResponse({ error: "FT search failed" }, 502);
-  const searchData: any = await searchResp.json();
-  if (!searchData || searchData.length === 0) {
+  // Multi-strategy search to work around FT's substring matching
+  // FT uses "First-Last" format. Searching "wei" returns "Allweiler", etc.
+  // We try multiple query patterns to find actual matches
+  const queries = new Set<string>();
+  queries.add(q);
+  const qParts = q.trim().split(/\s+/);
+  if (qParts.length === 1) {
+    // Single word: try with common first names to find surname matches
+    // Also try reversed (e.g., "Wei" → search "Wei " with trailing space doesn't help)
+    // Best we can do: increase limit and hope
+  } else if (qParts.length >= 2) {
+    // Multi word: try all permutations
+    // "Kim Kendrick" → "Kim Kendrick", "Kendrick Kim", "Kim-Kendrick", "Kendrick-Kim"
+    queries.add(`${qParts.join("-")}`);
+    queries.add(`${qParts.reverse().join(" ")}`);
+    queries.add(`${qParts.join("-")}`);
+  }
+
+  // Fetch all queries in parallel, merge + dedupe
+  const allResults = new Map<number, any>();
+  await Promise.all(Array.from(queries).map(async (query) => {
+    try {
+      const resp = await fetch("https://fencingtracker.com/search", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ query, limit: 30 }),
+      });
+      if (resp.ok) {
+        const data: any = await resp.json();
+        if (Array.isArray(data)) {
+          data.forEach((f: any) => {
+            if (!allResults.has(f.usfa_id)) allResults.set(f.usfa_id, f);
+          });
+        }
+      }
+    } catch {}
+  }));
+
+  const searchData = Array.from(allResults.values());
+  if (searchData.length === 0) {
     return jsonResponse([]);
   }
 
-  // For each result, fetch profile (uses cache) and filter to saber fencers
+  // Sort search results: prioritize exact surname/firstname matches
+  const qLower = q.toLowerCase().replace(/ /g, "-");
+  const sortParts = q.toLowerCase().split(/[\s-]+/);
+  searchData.sort((a: any, b: any) => {
+    const aName = (a.name || "").toLowerCase();
+    const bName = (b.name || "").toLowerCase();
+    // Exact match first
+    if (aName === qLower && bName !== qLower) return -1;
+    if (bName === qLower && aName !== qLower) return 1;
+    // Ends with query (surname match like "Rian-Wei" ends with "wei")
+    const aEnds = aName.endsWith("-" + sortParts[sortParts.length - 1]) || aName.endsWith(sortParts[sortParts.length - 1]);
+    const bEnds = bName.endsWith("-" + sortParts[sortParts.length - 1]) || bName.endsWith(sortParts[sortParts.length - 1]);
+    if (aEnds && !bEnds) return -1;
+    if (bEnds && !aEnds) return 1;
+    // Starts with query
+    const aStarts = aName.startsWith(sortParts[0]);
+    const bStarts = bName.startsWith(sortParts[0]);
+    if (aStarts && !bStarts) return -1;
+    if (bStarts && !aStarts) return 1;
+    return 0;
+  });
+
   const results: any[] = [];
   const headers = { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" };
 
-  // Check up to 10 results in parallel (cached profiles return fast)
-  const checks = searchData.slice(0, 10).map(async (fencer: any) => {
+  // Check results in parallel, return up to 10 saber fencers
+  const checks = searchData.slice(0, 30).map(async (fencer: any) => {
     const usfaId = String(fencer.usfa_id);
     const nameSlug = fencer.name;
 
@@ -554,8 +606,8 @@ async function handleFTSearchSaber(url: URL): Promise<Response> {
         const profileResp = await fetch(`https://fencingtracker.com/p/${usfaId}/${nameSlug}`, { headers });
         if (profileResp.ok) {
           const html = await profileResp.text();
-          // Check for Men's Saber events
-          isSaber = /Men['']s Saber/i.test(html) || /Mixed Saber/i.test(html);
+          // Check for Men's Saber events (handle various apostrophe encodings)
+          isSaber = /Men.s Saber/i.test(html) || /Mixed Saber/i.test(html) || /Saber/.test(html) && /Men/.test(html);
 
           if (isSaber) {
             // Extract basic info
@@ -589,7 +641,15 @@ async function handleFTSearchSaber(url: URL): Promise<Response> {
 
   await Promise.all(checks);
 
-  return jsonResponse(results);
+  // Deduplicate by usfa_id and limit to 10
+  const seen = new Set<number>();
+  const deduped = results.filter(r => {
+    if (seen.has(r.usfa_id)) return false;
+    seen.add(r.usfa_id);
+    return true;
+  });
+
+  return jsonResponse(deduped.slice(0, 10));
 }
 
 async function handleFTProfileByName(nameQuery: string): Promise<Response> {
