@@ -18,6 +18,11 @@ export default {
     const path = url.pathname;
 
     try {
+      // /api/ftl/upcoming — auto-fetch in-progress + next 7 days national/SYC tournaments
+      if (path === "/api/ftl/upcoming") {
+        return await handleFTLUpcoming();
+      }
+
       // /api/ftl/search?q=sjcc&from=2026-01-01&to=2026-12-31
       if (path === "/api/ftl/search") {
         return await handleFTLSearch(url);
@@ -76,6 +81,78 @@ export default {
     }
   },
 };
+
+// National-level and SYC tournament name patterns
+const NATIONAL_PATTERNS = [
+  /\bNAC\b/i,
+  /\bSJCC\b/i,
+  /\bJunior\s*Olympics\b/i,
+  /\bSummer\s*Nationals?\b/i,
+  /\bNational\s*Championships?\b/i,
+  /\bSYC\b/i,
+  /\bDiv\s*1\b/i,
+  /\bDivision\s*1\b/i,
+  /\bParafencing\b/i,
+];
+
+function isNationalOrSYC(name: string): boolean {
+  return NATIONAL_PATTERNS.some(p => p.test(name));
+}
+
+async function handleFTLUpcoming(): Promise<Response> {
+  const now = new Date();
+  // Search from 7 days ago (to catch in-progress multi-day events) to 7 days ahead
+  const from = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000).toISOString().split("T")[0];
+  const to = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000).toISOString().split("T")[0];
+
+  const ftlUrl = `https://www.fencingtimelive.com/tournaments/search/data/advanced?from=${from}&to=${to}&country=USA`;
+  const resp = await fetch(ftlUrl, {
+    headers: { "User-Agent": "Mozilla/5.0", "Accept": "application/json" },
+  });
+
+  if (!resp.ok) return jsonResponse({ error: "FTL search failed" }, 502);
+  const data: any = await resp.json();
+  const rows = data.rows || data || [];
+
+  const today = now.toISOString().split("T")[0];
+
+  const inProgress: any[] = [];
+  const upcoming: any[] = [];
+  const national: any[] = [];
+
+  for (const row of rows) {
+    const name = row.Name || row.name || "";
+    const start = row.start || row.Start || row.startDate || row.StartDate || "";
+    const end = row.end || row.End || row.endDate || row.EndDate || "";
+    const id = row.Id || row.id || "";
+    const location = row.Location || row.location || "";
+    const dates = row.dates || row.Dates || "";
+
+    const item = { id, name: decodeHtmlEntities(name), location, dates, start, end };
+
+    // Determine status
+    const startDate = start.split("T")[0];
+    const endDate = (end || start).split("T")[0];
+
+    if (startDate <= today && endDate >= today) {
+      // In progress
+      inProgress.push(item);
+    } else if (startDate > today) {
+      // Upcoming — only include national/SYC
+      if (isNationalOrSYC(name)) {
+        upcoming.push(item);
+      }
+      // Also add to national list for the full view
+      national.push(item);
+    }
+  }
+
+  // Sort upcoming by start date (soonest first)
+  upcoming.sort((a: any, b: any) => a.start.localeCompare(b.start));
+  inProgress.sort((a: any, b: any) => a.start.localeCompare(b.start));
+
+  return jsonResponse({ inProgress, upcoming, total: rows.length });
+}
 
 async function handleFTLSearch(url: URL): Promise<Response> {
   const query = (url.searchParams.get("q") || "").toLowerCase();

@@ -1,7 +1,18 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { Tournament, TournamentEvent } from "@/app/live/page";
+
+const API_BASE = "https://rian-fencing-api.tony13310.workers.dev";
+
+interface UpcomingTournament {
+  id: string;
+  name: string;
+  location: string;
+  dates: string;
+  start: string;
+  end: string;
+}
 
 interface Props {
   onTournamentFound: (t: Tournament) => void;
@@ -9,242 +20,265 @@ interface Props {
   tournament: Tournament | null;
 }
 
-const API_BASE = "https://rian-fencing-api.tony13310.workers.dev";
-
 export default function TournamentSearch({ onTournamentFound, onEventSelect, tournament }: Props) {
   const [query, setQuery] = useState("");
   const [searching, setSearching] = useState(false);
   const [error, setError] = useState("");
-  const [results, setResults] = useState<any[]>([]);
 
-  const handleSearch = async () => {
+  // Auto-loaded tournaments
+  const [inProgress, setInProgress] = useState<UpcomingTournament[]>([]);
+  const [upcoming, setUpcoming] = useState<UpcomingTournament[]>([]);
+  const [autoLoading, setAutoLoading] = useState(true);
+
+  // Search results
+  const [searchResults, setSearchResults] = useState<UpcomingTournament[]>([]);
+
+  // Selected tournament's events
+  const [selectedTournament, setSelectedTournament] = useState<UpcomingTournament | null>(null);
+  const [events, setEvents] = useState<TournamentEvent[]>([]);
+  const [loadingEvents, setLoadingEvents] = useState(false);
+
+  // Auto-load upcoming tournaments on mount
+  useEffect(() => {
+    loadUpcoming();
+  }, []);
+
+  async function loadUpcoming() {
+    setAutoLoading(true);
+    try {
+      const resp = await fetch(`${API_BASE}/api/ftl/upcoming`);
+      const data = await resp.json();
+      setInProgress(data.inProgress || []);
+      setUpcoming(data.upcoming || []);
+    } catch {
+      setError("Failed to load tournaments");
+    } finally {
+      setAutoLoading(false);
+    }
+  }
+
+  async function handleSearch() {
     if (!query.trim()) return;
     setSearching(true);
     setError("");
-    setResults([]);
+    setSearchResults([]);
+    setSelectedTournament(null);
+    setEvents([]);
 
     try {
-      const resp = await fetch(
-        `${API_BASE}/api/ftl/search?q=${encodeURIComponent(query.trim())}&from=2018-01-01&to=2027-12-31`
-      );
+      // Search next 7 days + in-progress (from 7 days ago)
+      const now = new Date();
+      const from = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000).toISOString().split("T")[0];
+      const to = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000).toISOString().split("T")[0];
+
+      const resp = await fetch(`${API_BASE}/api/ftl/search?q=${encodeURIComponent(query)}&from=${from}&to=${to}`);
       const data = await resp.json();
-      if (data.tournaments?.length > 0) {
-        setResults(data.tournaments);
-      } else {
-        setError("No tournaments found. Try a different search term.");
+      setSearchResults(data.tournaments || []);
+      if ((data.tournaments || []).length === 0) {
+        setError("No active tournaments found for this search");
       }
-    } catch (err: any) {
-      setError(`Search failed: ${err.message}`);
+    } catch {
+      setError("Search failed");
     } finally {
       setSearching(false);
     }
-  };
+  }
 
-  const handleSelectTournament = async (t: any) => {
-    setSearching(true);
-    setError("");
+  async function selectTournament(t: UpcomingTournament) {
+    setSelectedTournament(t);
+    setLoadingEvents(true);
+    setEvents([]);
+
     try {
       const resp = await fetch(`${API_BASE}/api/ftl/event/${t.id}`);
       const data = await resp.json();
+      const evts: TournamentEvent[] = (data.events || []).map((e: any) => ({
+        id: e.id,
+        name: e.name,
+        date: e.date || t.start,
+        category: e.category || "",
+        weapon: "Saber",
+        gender: "Men",
+        total: e.total,
+        source: "ftl" as const,
+        sourceUrl: `https://www.fencingtimelive.com/events/results/${e.id}`,
+      }));
 
-      const events: TournamentEvent[] = (data.events || []).map((e: any) => {
-        const name = (e.name || "").replace(/&#x27;/g, "'").replace(/&amp;/g, "&");
-        let category = "Unknown";
-        if (name.includes("Y-14") || name.includes("Y14")) category = "Y-14";
-        else if (name.includes("Y-12") || name.includes("Y12")) category = "Y-12";
-        else if (name.includes("Cadet")) category = "Cadet";
-        else if (name.includes("Junior")) category = "Junior";
-        else if (name.includes("Div") || name.includes("Division")) category = "Div I";
-        else if (name.includes("Senior")) category = "Senior";
+      setEvents(evts);
 
-        return {
-          id: e.id,
-          name,
-          date: e.date ? `${e.date}${e.startTime ? " • " + e.startTime : ""}` : "",
-          category,
-          weapon: "Saber",
-          gender: name.includes("Women") ? "Women" : "Men",
-          total: e.competitors || undefined,
-          source: "ftl" as const,
-          sourceUrl: `https://www.fencingtimelive.com/events/results/${e.id}`,
-        };
+      // Also notify parent
+      onTournamentFound({
+        id: t.id,
+        name: t.name,
+        location: t.location,
+        dates: t.dates,
+        source: "ftl",
+        events: evts,
       });
-
-      setResults([]);
-      onTournamentFound({ id: t.id, name: t.name, location: t.location, dates: t.dates || "", source: "ftl", events });
-    } catch (err: any) {
-      setError(`Failed to load tournament: ${err.message}`);
+    } catch {
+      setError("Failed to load events");
     } finally {
-      setSearching(false);
+      setLoadingEvents(false);
     }
-  };
+  }
+
+  const TournamentCard = ({ t, badge }: { t: UpcomingTournament; badge?: string }) => (
+    <button
+      onClick={() => selectTournament(t)}
+      className={`w-full text-left p-4 rounded-xl transition-all ${
+        selectedTournament?.id === t.id
+          ? "bg-red-500/10 border border-red-500/20"
+          : "bg-white/[0.03] hover:bg-white/[0.06] border border-transparent"
+      }`}
+    >
+      <div className="flex items-start justify-between gap-3">
+        <div className="flex-1 min-w-0">
+          <div className="flex items-center gap-2">
+            <h3 className="text-white/90 font-bold text-sm truncate">{t.name}</h3>
+            {badge && (
+              <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold shrink-0 ${
+                badge === "LIVE" 
+                  ? "bg-red-500/20 text-red-400 border border-red-500/30 animate-pulse"
+                  : "bg-blue-500/10 text-blue-400 border border-blue-500/20"
+              }`}>
+                {badge}
+              </span>
+            )}
+          </div>
+          <p className="text-white/30 text-xs mt-1">{t.location}</p>
+        </div>
+        <span className="text-white/20 text-xs shrink-0">{t.dates}</span>
+      </div>
+    </button>
+  );
 
   return (
-    <div className="space-y-8">
+    <div className="space-y-6">
       {/* Header */}
-      <div className="text-center pt-8">
-        <h1 className="text-3xl sm:text-4xl font-black mb-2">
-          <span className="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-orange-400">
-            Live Competition
-          </span>
+      <div className="text-center py-4">
+        <h1 className="text-3xl sm:text-4xl font-black text-white tracking-tight">
+          <span className="text-red-400">●</span> Live Dashboard
         </h1>
-        <p className="text-white/40 text-sm">
-          Search a tournament to analyze pools and DE opponents in real-time
-        </p>
+        <p className="text-white/30 text-sm mt-2">Real-time competition analysis for Rian Wei</p>
       </div>
 
       {/* Search bar */}
-      <div className="max-w-2xl mx-auto">
-        <div className="flex gap-2">
-          <div className="flex-1 relative">
-            <input
-              type="text"
-              value={query}
-              onChange={(e) => setQuery(e.target.value)}
-              onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-              placeholder="e.g. March NAC 2026, Junior World Cup Budapest..."
-              className="w-full bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder-white/30 focus:outline-none focus:border-red-400/50 focus:ring-1 focus:ring-red-400/20 text-sm sm:text-base"
-            />
-            {searching && (
-              <div className="absolute right-3 top-1/2 -translate-y-1/2">
-                <div className="w-5 h-5 border-2 border-red-400/30 border-t-red-400 rounded-full animate-spin" />
-              </div>
-            )}
-          </div>
-          <button
-            onClick={handleSearch}
-            disabled={searching || !query.trim()}
-            className="px-6 py-3 bg-gradient-to-r from-red-500 to-orange-500 rounded-xl font-bold text-sm hover:from-red-600 hover:to-orange-600 transition-all disabled:opacity-40 disabled:cursor-not-allowed"
-          >
-            Search
-          </button>
-        </div>
-        <div className="flex items-center gap-3 mt-3 justify-center">
-          <span className="text-[10px] text-white/20 uppercase tracking-wider">Searches:</span>
-          <span className="text-[10px] px-2 py-0.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
-            🇺🇸 FencingTimeLive
-          </span>
-          <span className="text-[10px] px-2 py-0.5 rounded-full bg-purple-500/10 text-purple-400 border border-purple-500/20">
-            🌍 FIE
-          </span>
-        </div>
+      <div className="flex gap-2">
+        <input
+          type="text"
+          value={query}
+          onChange={(e) => setQuery(e.target.value)}
+          onKeyDown={(e) => e.key === "Enter" && handleSearch()}
+          placeholder="Search active tournaments..."
+          className="flex-1 bg-white/5 border border-white/10 rounded-xl px-4 py-3 text-white placeholder:text-white/20 focus:outline-none focus:border-red-500/30 text-sm"
+        />
+        <button
+          onClick={handleSearch}
+          disabled={searching || !query.trim()}
+          className="px-5 py-3 bg-red-500/10 hover:bg-red-500/20 border border-red-500/20 rounded-xl text-red-400 text-sm font-bold transition-colors disabled:opacity-30"
+        >
+          {searching ? "..." : "Search"}
+        </button>
       </div>
+
+      {/* Loading state */}
+      {autoLoading && (
+        <div className="text-center py-12">
+          <div className="w-8 h-8 border-2 border-red-400/30 border-t-red-400 rounded-full animate-spin mx-auto mb-4" />
+          <p className="text-white/40 text-sm">Loading active tournaments...</p>
+        </div>
+      )}
+
+      {/* Search results */}
+      {searchResults.length > 0 && (
+        <div className="space-y-3">
+          <h2 className="text-white/40 text-xs uppercase tracking-wider font-bold">
+            🔍 Search Results
+          </h2>
+          {searchResults.map((t) => (
+            <TournamentCard key={t.id} t={t} />
+          ))}
+        </div>
+      )}
+
+      {/* In Progress */}
+      {!autoLoading && inProgress.length > 0 && !searchResults.length && (
+        <div className="space-y-3">
+          <h2 className="text-white/40 text-xs uppercase tracking-wider font-bold">
+            🔴 In Progress
+          </h2>
+          {inProgress.map((t) => (
+            <TournamentCard key={t.id} t={t} badge="LIVE" />
+          ))}
+        </div>
+      )}
+
+      {/* Upcoming */}
+      {!autoLoading && upcoming.length > 0 && !searchResults.length && (
+        <div className="space-y-3">
+          <h2 className="text-white/40 text-xs uppercase tracking-wider font-bold">
+            📅 Upcoming National & SYC
+          </h2>
+          {upcoming.map((t) => (
+            <TournamentCard key={t.id} t={t} badge="UPCOMING" />
+          ))}
+        </div>
+      )}
+
+      {/* No tournaments found */}
+      {!autoLoading && inProgress.length === 0 && upcoming.length === 0 && !searchResults.length && !error && (
+        <div className="text-center py-12 bg-white/[0.02] rounded-2xl">
+          <div className="text-3xl mb-3">🤺</div>
+          <p className="text-white/40 text-sm">No active tournaments in the next 7 days</p>
+          <p className="text-white/20 text-xs mt-1">Use search to find specific events</p>
+        </div>
+      )}
 
       {/* Error */}
       {error && (
-        <div className="max-w-2xl mx-auto text-center text-white/30 text-sm py-4">{error}</div>
+        <div className="text-center py-4 text-red-400/60 text-sm">{error}</div>
       )}
 
-      {/* Search results — tournament list */}
-      {results.length > 0 && !tournament && (
-        <div className="max-w-2xl mx-auto space-y-2">
-          <p className="text-white/30 text-xs uppercase tracking-wider font-bold">
-            {results.length} tournament{results.length > 1 ? "s" : ""} found
-          </p>
-          {results.map((t) => {
-            const isUpcoming = t.start && new Date(t.start) >= new Date() && new Date(t.start) <= new Date(Date.now() + 10 * 86400000);
-            const isPast = t.start && new Date(t.start) < new Date();
-            return (
-              <button
-                key={t.id}
-                onClick={() => handleSelectTournament(t)}
-                className={`w-full flex items-center justify-between rounded-xl p-4 transition-colors text-left ${
-                  isUpcoming ? "bg-red-500/5 hover:bg-red-500/10 border border-red-500/20" : "bg-white/[0.03] hover:bg-white/[0.06]"
-                }`}
-              >
-                <div className="flex-1 min-w-0">
-                  <div className="flex items-center gap-2">
-                    <p className="text-white/80 font-medium truncate">{t.name}</p>
-                    {isUpcoming && (
-                      <span className="text-[10px] px-2 py-0.5 rounded-full bg-red-500/20 text-red-400 font-bold whitespace-nowrap animate-pulse">
-                        UPCOMING
-                      </span>
-                    )}
-                  </div>
-                  <div className="flex items-center gap-2 mt-0.5">
-                    <p className="text-white/30 text-sm">{t.location}</p>
-                    {t.dates && (
-                      <>
-                        <span className="text-white/10">•</span>
-                        <p className={`text-sm ${isUpcoming ? "text-red-400/70" : isPast ? "text-white/20" : "text-white/30"}`}>
-                          {t.dates}
-                        </p>
-                      </>
-                    )}
-                  </div>
+      {/* Selected tournament events */}
+      {selectedTournament && (
+        <div className="space-y-3 border-t border-white/5 pt-6">
+          <h2 className="text-white/40 text-xs uppercase tracking-wider font-bold">
+            ⚔️ {selectedTournament.name} — Men&apos;s Saber Events
+          </h2>
+
+          {loadingEvents && (
+            <div className="text-center py-8">
+              <div className="w-6 h-6 border-2 border-white/20 border-t-white/50 rounded-full animate-spin mx-auto mb-3" />
+              <p className="text-white/30 text-xs">Loading events...</p>
+            </div>
+          )}
+
+          {!loadingEvents && events.length === 0 && (
+            <div className="text-center py-8 bg-white/[0.02] rounded-xl">
+              <p className="text-white/30 text-sm">No Men&apos;s Saber events found</p>
+            </div>
+          )}
+
+          {events.map((evt) => (
+            <button
+              key={evt.id}
+              onClick={() => onEventSelect(evt)}
+              className="w-full text-left p-4 bg-white/[0.03] hover:bg-white/[0.06] rounded-xl transition-colors"
+            >
+              <div className="flex items-center justify-between">
+                <div>
+                  <h3 className="text-white/80 font-bold text-sm">{evt.name}</h3>
+                  <p className="text-white/30 text-xs mt-1">
+                    {evt.date}
+                    {evt.total ? ` • ${evt.total} fencers` : ""}
+                  </p>
                 </div>
-                <svg className="w-5 h-5 text-white/20 flex-shrink-0 ml-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <svg className="w-5 h-5 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                 </svg>
-              </button>
-            );
-          })}
-        </div>
-      )}
-
-      {/* Tournament events — just clickable names */}
-      {tournament && (
-        <div className="max-w-2xl mx-auto space-y-4">
-          <div className="gradient-border bg-[#12121a] rounded-2xl p-6">
-            <div className="flex items-start justify-between mb-4">
-              <div>
-                <h2 className="text-xl font-bold text-white">{tournament.name}</h2>
-                <p className="text-white/40 text-sm">
-                  {tournament.location} • {tournament.dates}
-                </p>
               </div>
-              <span className="text-[10px] px-2 py-1 rounded-full font-bold bg-blue-500/10 text-blue-400 border border-blue-500/20">
-                🇺🇸 FTL
-              </span>
-            </div>
-
-            <div className="space-y-2">
-              {tournament.events.map((event) => (
-                <button
-                  key={event.id}
-                  onClick={() => onEventSelect(event)}
-                  className="w-full flex items-center gap-3 bg-white/[0.03] rounded-xl p-4 hover:bg-white/[0.06] transition-colors text-left"
-                >
-                  <span className={`text-[10px] px-2 py-0.5 rounded font-bold uppercase ${
-                    event.category === "Y-14" ? "bg-cyan-500/10 text-cyan-400" :
-                    event.category === "Cadet" ? "bg-green-500/10 text-green-400" :
-                    event.category === "Junior" ? "bg-orange-500/10 text-orange-400" :
-                    event.category === "Div I" ? "bg-red-500/10 text-red-400" :
-                    "bg-white/10 text-white/60"
-                  }`}>
-                    {event.category}
-                  </span>
-                  <div className="flex-1">
-                    <p className="text-white/80 text-sm font-medium">{event.name}</p>
-                    <p className="text-white/30 text-xs">{event.date}{event.total ? ` • ${event.total} fencers` : ""}</p>
-                  </div>
-                  <svg className="w-5 h-5 text-white/20" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              ))}
-            </div>
-          </div>
-        </div>
-      )}
-
-      {/* Instructions when empty */}
-      {!tournament && !error && !searching && results.length === 0 && (
-        <div className="max-w-2xl mx-auto">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-8">
-            <div className="bg-white/[0.02] rounded-xl p-4 text-center">
-              <div className="text-2xl mb-2">🔍</div>
-              <p className="text-white/50 text-xs">Search tournament by name</p>
-            </div>
-            <div className="bg-white/[0.02] rounded-xl p-4 text-center">
-              <div className="text-2xl mb-2">⚔️</div>
-              <p className="text-white/50 text-xs">Analyze pool opponents</p>
-            </div>
-            <div className="bg-white/[0.02] rounded-xl p-4 text-center">
-              <div className="text-2xl mb-2">🗡️</div>
-              <p className="text-white/50 text-xs">Scout DE bracket opponents</p>
-            </div>
-          </div>
+            </button>
+          ))}
         </div>
       )}
     </div>
