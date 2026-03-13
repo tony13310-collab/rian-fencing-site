@@ -6,7 +6,6 @@ import Navbar from "@/components/Navbar";
 import TournamentSearch from "@/components/live/TournamentSearch";
 import FencerSearch from "@/components/live/FencerSearch";
 import EventDashboard from "@/components/live/EventDashboard";
-import Footer from "@/components/Footer";
 
 export interface TournamentEvent {
   id: string;
@@ -165,7 +164,6 @@ export default function LivePage() {
         </AnimatePresence>
       </div>
 
-      <Footer />
     </main>
   );
 }

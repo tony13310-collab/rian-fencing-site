@@ -4,7 +4,6 @@ import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import FilterBar, { PlacementFilter } from "@/components/FilterBar";
 import SeasonTimeline from "@/components/SeasonTimeline";
-import Footer from "@/components/Footer";
 import { allEvents, TournamentLevel, AgeCategory } from "@/data/events";
 
 export default function EventsPage() {
@@ -61,7 +60,6 @@ export default function EventsPage() {
         selectedCategories={selectedCategories}
         selectedPlacements={selectedPlacements}
       />
-      <Footer />
     </main>
   );
 }
