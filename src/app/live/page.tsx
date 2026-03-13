@@ -128,9 +128,10 @@ export default function LivePage() {
 
                 {/* Tournament Search - just the search bar, moved out */}
                 <div>
-                  <h2 className="text-sm font-bold text-white/80 uppercase tracking-wider mb-3">
+                  <h2 className="text-sm font-bold text-white/80 uppercase tracking-wider mb-1">
                     TOURNAMENTS
                   </h2>
+                  <p className="text-white/50 text-sm mb-3">±7 days from today</p>
                   <TournamentSearch
                     onTournamentFound={handleTournamentFound}
                     onEventSelect={handleEventSelect}
