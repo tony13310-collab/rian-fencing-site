@@ -117,14 +117,13 @@ export default function FencerSearch() {
       {/* Search input */}
       <div className="flex gap-2">
         <div className="relative flex-1">
-          <span className="absolute left-3 top-1/2 -translate-y-1/2 text-white/50">🔍</span>
           <input
             type="text"
             value={query}
             onChange={(e) => setQuery(e.target.value)}
             onKeyDown={(e) => e.key === "Enter" && handleSearch()}
-            placeholder="Search fencer by first + last name..."
-            className="w-full bg-white/5 border border-white/10 rounded-xl pl-9 pr-4 py-3 text-white placeholder:text-white/50 focus:outline-none focus:border-orange-500/30 text-sm"
+            placeholder="First Last Name"
+            className="w-full bg-white/5 border border-white/10 rounded-xl pl-4 pr-4 py-3 text-white placeholder:text-white/50 focus:outline-none focus:border-orange-500/30 text-sm"
           />
         </div>
         <button
