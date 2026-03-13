@@ -100,6 +100,8 @@ function computeAchievements() {
   }
 
   // Rating upgrades — each letter change is a milestone
+  // If event already in achievements, append rating to existing entry instead of duplicating
+  const existingEventIds = new Set(achievements.map(a => a.eventId).filter(Boolean));
   const ratingOrder = ['U', 'E', 'D', 'C', 'B', 'A'];
   const ratedEvents = [...allEvents]
     .filter(e => e.rating)
@@ -111,12 +113,19 @@ function computeAchievements() {
       const prevIdx = ratingOrder.indexOf(prevLetter);
       const curIdx = ratingOrder.indexOf(letter);
       if (curIdx > prevIdx) {
-        const month = new Date(e.date + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
-        achievements.push({
-          emoji: "⬆️",
-          text: `Earned ${e.rating} rating — ${e.tournament} ${e.event.replace("Men's Saber", "MS")} ${e.place}/${e.total} (${month})`,
-          eventId: makeEventId(e.date, e.event),
-        });
+        const eid = makeEventId(e.date, e.event);
+        const existing = achievements.find(a => a.eventId === eid);
+        if (existing) {
+          // Merge rating into existing achievement
+          existing.text += ` • Earned ${e.rating}`;
+        } else {
+          const month = new Date(e.date + 'T12:00:00').toLocaleDateString('en-US', { month: 'short', year: 'numeric' });
+          achievements.push({
+            emoji: "⬆️",
+            text: `Earned ${e.rating} rating — ${e.tournament} ${e.event.replace("Men's Saber", "MS")} ${e.place}/${e.total} (${month})`,
+            eventId: eid,
+          });
+        }
       }
     }
     prevLetter = letter;
