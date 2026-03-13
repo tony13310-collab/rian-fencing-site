@@ -44,7 +44,6 @@ export default function Contact() {
           <span className="gradient-text">Contact</span>
         </h2>
         <p className="text-white/70 text-sm sm:text-lg">
-          Interested in recruiting or have questions? Get in touch.
         </p>
       </motion.div>
 
