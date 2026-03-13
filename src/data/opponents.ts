@@ -1,5 +1,6 @@
-// Auto-generated H2H opponent database - 405 opponents, 944 bouts
+// Auto-generated H2H opponent database - 405 opponents, 918 bouts
 // Generated from FencingTracker history + FTL pool bouts
+// Last fixed: 2026-03-13
 
 export interface OpponentBout {
   tournament: string;
@@ -40,9 +41,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "2"
-    ],
+    "clubs": ["PWESTBROOK"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -59,12 +58,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 2,
     "total": 3,
-    "winRate": 33,
-    "clubs": [
-      "106",
-      "17",
-      "COBRAFC"
-    ],
+    "winRate": 0.33,
+    "clubs": ["COBRAFC"],
     "bouts": [
       {
         "tournament": "February NAC",
@@ -97,11 +92,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "84",
-      "MANHATTANFC"
-    ],
+    "winRate": 1,
+    "clubs": ["MANHATTANFC"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
@@ -126,10 +118,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "71"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "October NAC",
@@ -146,12 +136,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 2,
     "total": 4,
-    "winRate": 50,
-    "clubs": [
-      "3",
-      "1",
-      "COBRAFC"
-    ],
+    "winRate": 0.5,
+    "clubs": ["COBRAFC", "PWESTBROOK"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
@@ -192,10 +178,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "28"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Mission SYC",
@@ -213,10 +197,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "9",
-      "43"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "February NAC",
@@ -241,12 +222,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 4,
     "losses": 0,
     "total": 4,
-    "winRate": 100,
-    "clubs": [
-      "47",
-      "34",
-      "TIMMOREHOUSE"
-    ],
+    "winRate": 1,
+    "clubs": ["TIMMOREHOUSE"],
     "bouts": [
       {
         "tournament": "Ben Gutenberg Memorial SYC / RCC",
@@ -287,11 +264,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "60",
-      "DURKANFA"
-    ],
+    "winRate": 1,
+    "clubs": ["DURKANFA"],
     "bouts": [
       {
         "tournament": "Junior Olympics & Div 1 NAC",
@@ -316,12 +290,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 4,
     "losses": 0,
     "total": 4,
-    "winRate": 100,
-    "clubs": [
-      "166",
-      "21",
-      "12"
-    ],
+    "winRate": 1,
+    "clubs": ["CAPITALFA"],
     "bouts": [
       {
         "tournament": "October NAC",
@@ -363,10 +333,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "74",
-      "SHERIDANFA"
-    ],
+    "clubs": ["SHERIDANFA"],
     "bouts": [
       {
         "tournament": "March SJCC",
@@ -391,14 +358,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 3,
     "losses": 5,
     "total": 8,
-    "winRate": 38,
-    "clubs": [
-      "3",
-      "95",
-      "16",
-      "8",
-      "AURAFA"
-    ],
+    "winRate": 0.38,
+    "clubs": ["AURAFA", "PFA"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC",
@@ -471,10 +432,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "151"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -491,10 +450,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "42"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -509,24 +466,13 @@ export const opponents: Record<string, OpponentData> = {
   },
   "BARENBOYM Michael": {
     "wins": 0,
-    "losses": 2,
-    "total": 2,
+    "losses": 1,
+    "total": 1,
     "winRate": 0,
-    "clubs": [
-      "44",
-      "SHERIDANFA"
-    ],
+    "clubs": ["SHERIDANFA"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-14 Men's Saber",
-        "date": "July 3, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      },
-      {
-        "tournament": "Summer Nationals",
         "event": "Y-14 Men's Saber",
         "date": "July 3, 2025",
         "type": "Pool",
@@ -540,12 +486,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 4,
     "losses": 0,
     "total": 4,
-    "winRate": 100,
-    "clubs": [
-      "170",
-      "20",
-      "SFA"
-    ],
+    "winRate": 1,
+    "clubs": ["SFA"],
     "bouts": [
       {
         "tournament": "December SJCC + Para NAC",
@@ -586,10 +528,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "30"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
@@ -607,9 +547,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "7"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Junior Olympics",
@@ -626,11 +564,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 2,
     "total": 4,
-    "winRate": 50,
-    "clubs": [
-      "17",
-      "22"
-    ],
+    "winRate": 0.5,
+    "clubs": ["MIRACLEFC"],
     "bouts": [
       {
         "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
@@ -671,12 +606,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 4,
     "losses": 0,
     "total": 4,
-    "winRate": 100,
-    "clubs": [
-      "100",
-      "35",
-      "SHERIDANFA"
-    ],
+    "winRate": 1,
+    "clubs": ["SHERIDANFA"],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
@@ -717,11 +648,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "12",
-      "FAW"
-    ],
+    "winRate": 1,
+    "clubs": ["FAW"],
     "bouts": [
       {
         "tournament": "Fairfax Challenge Fall RYC/RJCC & Y8 (Non-Regional)",
@@ -746,11 +674,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "14",
-      "DCFENCERS"
-    ],
+    "winRate": 1,
+    "clubs": ["DCFENCERS"],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC, RCC, Veteran ROC & Y8",
@@ -773,18 +698,10 @@ export const opponents: Record<string, OpponentData> = {
   },
   "BIVIJI Adam": {
     "wins": 7,
-    "losses": 2,
-    "total": 9,
-    "winRate": 78,
-    "clubs": [
-      "16",
-      "70",
-      "29",
-      "97",
-      "24",
-      "21",
-      "COBRAFC"
-    ],
+    "losses": 1,
+    "total": 8,
+    "winRate": 0.88,
+    "clubs": ["COBRAFC"],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
@@ -835,14 +752,6 @@ export const opponents: Record<string, OpponentData> = {
         "score": "5-2"
       },
       {
-        "tournament": "Cobra Challenge SYC/RCC",
-        "event": "Y-10 Men's Saber",
-        "date": "May 31, 2021",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      },
-      {
         "tournament": "SYC",
         "event": "Y-10 Men's Saber",
         "date": "May 31, 2021",
@@ -865,12 +774,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 3,
     "losses": 0,
     "total": 3,
-    "winRate": 100,
-    "clubs": [
-      "3",
-      "61",
-      "COBRAFC"
-    ],
+    "winRate": 1,
+    "clubs": ["COBRAFC"],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
@@ -903,10 +808,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "71"
-    ],
+    "winRate": 1,
+    "clubs": ["TIMMOREHOUSE"],
     "bouts": [
       {
         "tournament": "Mission SYC",
@@ -931,10 +834,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "3"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "River City Regional Rumble RJCC / RYC & Y8",
@@ -951,11 +852,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 3,
     "losses": 0,
     "total": 3,
-    "winRate": 100,
-    "clubs": [
-      "27",
-      "16"
-    ],
+    "winRate": 1,
+    "clubs": ["DCFENCERS"],
     "bouts": [
       {
         "tournament": "River City Regional Rumble RJCC / RYC & Y8",
@@ -988,15 +886,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 4,
     "losses": 2,
     "total": 6,
-    "winRate": 67,
-    "clubs": [
-      "26",
-      "19",
-      "31",
-      "12",
-      "73",
-      "GFA"
-    ],
+    "winRate": 0.67,
+    "clubs": ["GFA"],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -1053,10 +944,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "16"
-    ],
+    "winRate": 1,
+    "clubs": ["FORGE"],
     "bouts": [
       {
         "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
@@ -1081,10 +970,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "10"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "River City Regional Rumble RJCC / RYC & Y8",
@@ -1101,11 +988,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "109",
-      "LVFA"
-    ],
+    "winRate": 1,
+    "clubs": ["LVFA"],
     "bouts": [
       {
         "tournament": "May SJCC",
@@ -1130,10 +1014,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "6"
-    ],
+    "winRate": 1,
+    "clubs": ["NAZLYMOVFF"],
     "bouts": [
       {
         "tournament": "DCFC Youth Challenge #4",
@@ -1158,11 +1040,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 3,
     "losses": 0,
     "total": 3,
-    "winRate": 100,
-    "clubs": [
-      "12",
-      "9"
-    ],
+    "winRate": 1,
+    "clubs": ["NAZLYMOVFF"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC",
@@ -1195,10 +1074,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "170"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "March NAC",
@@ -1215,10 +1092,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "107"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "January SJCC",
@@ -1235,11 +1110,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "200",
-      "CFAFLLC"
-    ],
+    "winRate": 1,
+    "clubs": ["CFAFLLC"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
@@ -1264,11 +1136,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "250",
-      "ZETAFENCING"
-    ],
+    "winRate": 1,
+    "clubs": ["ZETAFENCING"],
     "bouts": [
       {
         "tournament": "March NAC",
@@ -1293,10 +1162,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "5"
-    ],
+    "winRate": 1,
+    "clubs": ["DCFENCERS"],
     "bouts": [
       {
         "tournament": "DCFC Youth Challenge #4",
@@ -1321,10 +1188,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 3,
     "losses": 0,
     "total": 3,
-    "winRate": 100,
-    "clubs": [
-      "27"
-    ],
+    "winRate": 1,
+    "clubs": ["UMBCFC"],
     "bouts": [
       {
         "tournament": "Capital Czajkowski Cup #3",
@@ -1357,11 +1222,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 3,
     "losses": 0,
     "total": 3,
-    "winRate": 100,
-    "clubs": [
-      "5",
-      "8"
-    ],
+    "winRate": 1,
+    "clubs": ["CAPITALFA"],
     "bouts": [
       {
         "tournament": "River City Regional Rumble RJCC / RYC & Y8",
@@ -1395,9 +1257,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "25"
-    ],
+    "clubs": ["LAGUNAFC"],
     "bouts": [
       {
         "tournament": "North Texas Roundup SYC/RCC",
@@ -1423,9 +1283,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "29"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "February NAC",
@@ -1440,14 +1298,10 @@ export const opponents: Record<string, OpponentData> = {
   },
   "CARRINGTON IV William T.": {
     "wins": 0,
-    "losses": 3,
-    "total": 3,
+    "losses": 2,
+    "total": 2,
     "winRate": 0,
-    "clubs": [
-      "41",
-      "2",
-      "COBRAFC"
-    ],
+    "clubs": ["COBRAFC"],
     "bouts": [
       {
         "tournament": "October NAC",
@@ -1456,14 +1310,6 @@ export const opponents: Record<string, OpponentData> = {
         "type": "Pool",
         "win": false,
         "score": "4-5"
-      },
-      {
-        "tournament": "Cobra Challenge SYC/RCC",
-        "event": "Y-10 Men's Saber",
-        "date": "May 31, 2021",
-        "type": "Pool",
-        "win": false,
-        "score": "0-5"
       },
       {
         "tournament": "SYC",
@@ -1481,9 +1327,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "5"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Fairfax Challenge SYC/RJCC",
@@ -1500,12 +1344,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 3,
     "losses": 0,
     "total": 3,
-    "winRate": 100,
-    "clubs": [
-      "45",
-      "16",
-      "PHX"
-    ],
+    "winRate": 1,
+    "clubs": ["PHX"],
     "bouts": [
       {
         "tournament": "May SJCC",
@@ -1538,12 +1378,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 2,
     "total": 3,
-    "winRate": 33,
-    "clubs": [
-      "60",
-      "25",
-      "PFA"
-    ],
+    "winRate": 0.33,
+    "clubs": ["PFA"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -1576,11 +1412,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 4,
     "losses": 0,
     "total": 4,
-    "winRate": 100,
-    "clubs": [
-      "33",
-      "17"
-    ],
+    "winRate": 1,
+    "clubs": ["NAZLYMOVFF"],
     "bouts": [
       {
         "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
@@ -1621,12 +1454,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 4,
     "losses": 0,
     "total": 4,
-    "winRate": 100,
-    "clubs": [
-      "49",
-      "81",
-      "TIMMOREHOUSE"
-    ],
+    "winRate": 1,
+    "clubs": ["TIMMOREHOUSE"],
     "bouts": [
       {
         "tournament": "Fairfax Challenge SYC/RJCC",
@@ -1667,11 +1496,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "234",
-      "FAODENVER"
-    ],
+    "winRate": 1,
+    "clubs": ["FAODENVER"],
     "bouts": [
       {
         "tournament": "Junior Olympics & Div 1 NAC",
@@ -1696,10 +1522,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "26"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "October NAC",
@@ -1716,13 +1540,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 5,
     "losses": 0,
     "total": 5,
-    "winRate": 100,
-    "clubs": [
-      "3",
-      "23",
-      "15",
-      "CAPITALFA"
-    ],
+    "winRate": 1,
+    "clubs": ["CAPITALFA"],
     "bouts": [
       {
         "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
@@ -1771,10 +1590,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "114"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
@@ -1791,10 +1608,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "62"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "March NAC",
@@ -1812,10 +1627,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "1",
-      "15"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Capital Czajkowski Cup #3",
@@ -1840,11 +1652,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "147",
-      "OREGONFA"
-    ],
+    "winRate": 1,
+    "clubs": ["OREGONFA"],
     "bouts": [
       {
         "tournament": "March NAC",
@@ -1869,11 +1678,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "121",
-      "CHN"
-    ],
+    "winRate": 1,
+    "clubs": ["CHN"],
     "bouts": [
       {
         "tournament": "March NAC and Parafencing National Championships",
@@ -1899,9 +1705,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "7"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -1916,14 +1720,10 @@ export const opponents: Record<string, OpponentData> = {
   },
   "CHERNAEV Antonio": {
     "wins": 2,
-    "losses": 2,
-    "total": 4,
-    "winRate": 50,
-    "clubs": [
-      "66",
-      "38",
-      "LILOVFA"
-    ],
+    "losses": 1,
+    "total": 3,
+    "winRate": 0.67,
+    "clubs": ["LILOVFA"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -1942,14 +1742,6 @@ export const opponents: Record<string, OpponentData> = {
         "score": "5-2"
       },
       {
-        "tournament": "Cobra Challenge SYC/RCC",
-        "event": "Y-10 Men's Saber",
-        "date": "May 31, 2021",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      },
-      {
         "tournament": "SYC",
         "event": "Y-10 Men's Saber",
         "date": "May 31, 2021",
@@ -1961,25 +1753,14 @@ export const opponents: Record<string, OpponentData> = {
     "birthYear": 2012
   },
   "CHI Everett": {
-    "wins": 3,
+    "wins": 2,
     "losses": 0,
-    "total": 3,
-    "winRate": 100,
-    "clubs": [
-      "278",
-      "WESTCOASTFA"
-    ],
+    "total": 2,
+    "winRate": 1,
+    "clubs": ["WESTCOASTFA"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Junior Men's Saber",
-        "date": "June 28, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "Summer Nationals",
         "event": "Junior Men's Saber",
         "date": "June 28, 2025",
         "type": "Pool",
@@ -2001,11 +1782,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "86",
-      "GFA"
-    ],
+    "winRate": 1,
+    "clubs": ["GFA"],
     "bouts": [
       {
         "tournament": "Fairfax Challenge SYC/RJCC",
@@ -2030,14 +1808,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 3,
     "losses": 2,
     "total": 5,
-    "winRate": 60,
-    "clubs": [
-      "22",
-      "12",
-      "65",
-      "2",
-      "GFA"
-    ],
+    "winRate": 0.6,
+    "clubs": ["GFA"],
     "bouts": [
       {
         "tournament": "Junior Olympics",
@@ -2087,10 +1859,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "65",
-      "DYNAMOFC"
-    ],
+    "clubs": ["DYNAMOFC"],
     "bouts": [
       {
         "tournament": "Junior Olympics & Div 1 NAC",
@@ -2115,10 +1884,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "63"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "USA Fencing National Championships & July Challenge",
@@ -2135,10 +1902,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "14"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "January SJCC",
@@ -2155,11 +1920,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 2,
     "total": 3,
-    "winRate": 33,
-    "clubs": [
-      "41",
-      "3"
-    ],
+    "winRate": 0.33,
+    "clubs": ["TIMMOREHOUSE"],
     "bouts": [
       {
         "tournament": "Mission SYC",
@@ -2192,10 +1954,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "168"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "October NAC",
@@ -2212,10 +1972,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "236"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
@@ -2232,11 +1990,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 2,
     "total": 4,
-    "winRate": 50,
-    "clubs": [
-      "19",
-      "10"
-    ],
+    "winRate": 0.5,
+    "clubs": ["FORGE"],
     "bouts": [
       {
         "tournament": "River City Regional Rumble - RYC/RJCC and Y8",
@@ -2277,11 +2032,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "55",
-      "ZETAFENCING"
-    ],
+    "winRate": 1,
+    "clubs": ["ZETAFENCING"],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
@@ -2307,9 +2059,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "2"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
@@ -2326,11 +2076,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 2,
     "total": 4,
-    "winRate": 50,
-    "clubs": [
-      "10",
-      "16"
-    ],
+    "winRate": 0.5,
+    "clubs": ["NAZLYMOVFF"],
     "bouts": [
       {
         "tournament": "Mission SYC",
@@ -2371,16 +2118,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 6,
     "total": 8,
-    "winRate": 25,
-    "clubs": [
-      "6",
-      "83",
-      "69",
-      "34",
-      "21",
-      "8",
-      "TIMMOREHOUSE"
-    ],
+    "winRate": 0.25,
+    "clubs": ["TIMMOREHOUSE"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC",
@@ -2453,11 +2192,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "73",
-      "TIMMOREHOUSE"
-    ],
+    "winRate": 1,
+    "clubs": ["TIMMOREHOUSE"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -2482,12 +2218,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 3,
     "losses": 0,
     "total": 3,
-    "winRate": 100,
-    "clubs": [
-      "9",
-      "3",
-      "TIMMOREHOUSE"
-    ],
+    "winRate": 1,
+    "clubs": ["TIMMOREHOUSE"],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC, RCC, Veteran ROC & Y8",
@@ -2521,10 +2253,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "35",
-      "ESCRIMEURFC"
-    ],
+    "clubs": ["ESCRIMEURFC"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -2550,9 +2279,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "2"
-    ],
+    "clubs": ["CAPITALFA"],
     "bouts": [
       {
         "tournament": "Capital Czajkowski Cup #3",
@@ -2577,10 +2304,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "259"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Junior Olympics",
@@ -2597,10 +2322,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 3,
     "losses": 0,
     "total": 3,
-    "winRate": 100,
-    "clubs": [
-      "3"
-    ],
+    "winRate": 1,
+    "clubs": ["DCFENCERS"],
     "bouts": [
       {
         "tournament": "DCFC Youth Challenge #4",
@@ -2633,11 +2356,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "214",
-      "CANDLEWOODFC"
-    ],
+    "winRate": 1,
+    "clubs": ["CANDLEWOODFC"],
     "bouts": [
       {
         "tournament": "Junior Olympics & Div 1 NAC",
@@ -2662,11 +2382,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "147",
-      "ZETAFENCING"
-    ],
+    "winRate": 1,
+    "clubs": ["ZETAFENCING"],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
@@ -2692,9 +2409,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "82"
-    ],
+    "clubs": ["DYNAMOFC"],
     "bouts": [
       {
         "tournament": "January NAC",
@@ -2719,10 +2434,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "7"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
@@ -2739,12 +2452,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 2,
     "total": 4,
-    "winRate": 50,
-    "clubs": [
-      "172",
-      "102",
-      "117"
-    ],
+    "winRate": 0.5,
+    "clubs": ["SFA"],
     "bouts": [
       {
         "tournament": "October NAC",
@@ -2785,11 +2494,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "114",
-      "ZETAFENCING"
-    ],
+    "winRate": 1,
+    "clubs": ["ZETAFENCING"],
     "bouts": [
       {
         "tournament": "March SJCC",
@@ -2814,12 +2520,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 3,
     "total": 5,
-    "winRate": 40,
-    "clubs": [
-      "33",
-      "58",
-      "8"
-    ],
+    "winRate": 0.4,
+    "clubs": ["MIRACLEFC"],
     "bouts": [
       {
         "tournament": "Fairfax Challenge Spring RYC/RJCC/ROC",
@@ -2868,15 +2570,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 6,
     "losses": 1,
     "total": 7,
-    "winRate": 86,
-    "clubs": [
-      "8",
-      "46",
-      "25",
-      "3",
-      "7",
-      "MIRACLEFC"
-    ],
+    "winRate": 0.86,
+    "clubs": ["MIRACLEFC"],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
@@ -2941,10 +2636,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "3"
-    ],
+    "winRate": 1,
+    "clubs": ["CAPITALFA"],
     "bouts": [
       {
         "tournament": "Capital Czajkowski Cup #3",
@@ -2966,26 +2659,14 @@ export const opponents: Record<string, OpponentData> = {
     "birthYear": 2012
   },
   "FERRIS JR. Michael": {
-    "wins": 4,
+    "wins": 3,
     "losses": 0,
-    "total": 4,
-    "winRate": 100,
-    "clubs": [
-      "198",
-      "177",
-      "PDXFENCING"
-    ],
+    "total": 3,
+    "winRate": 1,
+    "clubs": ["PDXFENCING"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-14 Men's Saber",
-        "date": "July 3, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Summer Nationals",
         "event": "Y-14 Men's Saber",
         "date": "July 3, 2025",
         "type": "Pool",
@@ -3015,10 +2696,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "63"
-    ],
+    "winRate": 1,
+    "clubs": ["MANHATTANFC"],
     "bouts": [
       {
         "tournament": "Mission SYC",
@@ -3043,11 +2722,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "160",
-      "MANHATTANFC"
-    ],
+    "winRate": 1,
+    "clubs": ["MANHATTANFC"],
     "bouts": [
       {
         "tournament": "March NAC",
@@ -3073,10 +2749,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "111",
-      "NELLYA"
-    ],
+    "clubs": ["NELLYA"],
     "bouts": [
       {
         "tournament": "December SJCC + Para NAC",
@@ -3101,10 +2774,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "14"
-    ],
+    "winRate": 1,
+    "clubs": ["NATCAPITALFC"],
     "bouts": [
       {
         "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
@@ -3129,11 +2800,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "113",
-      "COBRAFC"
-    ],
+    "winRate": 1,
+    "clubs": ["COBRAFC"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -3158,11 +2826,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "17",
-      "NAZLYMOVFF"
-    ],
+    "winRate": 1,
+    "clubs": ["NAZLYMOVFF"],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC, RCC, Veteran ROC & Y8",
@@ -3187,11 +2852,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "46",
-      "SBFA"
-    ],
+    "winRate": 1,
+    "clubs": ["SBFA"],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
@@ -3216,10 +2878,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "123"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC",
@@ -3236,11 +2896,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 4,
     "losses": 0,
     "total": 4,
-    "winRate": 100,
-    "clubs": [
-      "30",
-      "19"
-    ],
+    "winRate": 1,
+    "clubs": ["ALLEFENCING"],
     "bouts": [
       {
         "tournament": "River City Regional Rumble - RYC/RJCC and Y8",
@@ -3281,11 +2938,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "52",
-      "SPARTAK"
-    ],
+    "winRate": 1,
+    "clubs": ["SPARTAK"],
     "bouts": [
       {
         "tournament": "May SJCC",
@@ -3311,9 +2965,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "54"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "January SJCC",
@@ -3330,10 +2982,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "185"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "October NAC",
@@ -3350,10 +3000,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "162"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "February NAC",
@@ -3371,10 +3019,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "20",
-      "LAIFC"
-    ],
+    "clubs": ["LAIFC"],
     "bouts": [
       {
         "tournament": "December SJCC + Para NAC",
@@ -3399,10 +3044,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "34"
-    ],
+    "winRate": 1,
+    "clubs": ["MIRACLEFC"],
     "bouts": [
       {
         "tournament": "River City Regional Rumble - RYC/RJCC and Y8",
@@ -3428,9 +3071,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "6"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
@@ -3447,10 +3088,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "70"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Junior Olympics & Div 1 NAC",
@@ -3467,10 +3106,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "34"
-    ],
+    "winRate": 1,
+    "clubs": ["NATCAPITALFC"],
     "bouts": [
       {
         "tournament": "Fairfax Challenge Spring RYC/RJCC/ROC",
@@ -3495,11 +3132,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 2,
     "total": 3,
-    "winRate": 33,
-    "clubs": [
-      "22",
-      "35"
-    ],
+    "winRate": 0.33,
+    "clubs": ["NELLYA"],
     "bouts": [
       {
         "tournament": "Fairfax Challenge Spring RYC/RJCC/ROC",
@@ -3532,11 +3166,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 3,
     "losses": 0,
     "total": 3,
-    "winRate": 100,
-    "clubs": [
-      "175",
-      "11"
-    ],
+    "winRate": 1,
+    "clubs": ["ZETAFENCING"],
     "bouts": [
       {
         "tournament": "Junior Olympics",
@@ -3569,11 +3200,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 2,
     "total": 3,
-    "winRate": 33,
-    "clubs": [
-      "47",
-      "3"
-    ],
+    "winRate": 0.33,
+    "clubs": ["CAPITALFA"],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
@@ -3606,11 +3234,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 3,
     "losses": 0,
     "total": 3,
-    "winRate": 100,
-    "clubs": [
-      "10",
-      "15"
-    ],
+    "winRate": 1,
+    "clubs": ["CAPITALFA"],
     "bouts": [
       {
         "tournament": "River City Regional Rumble RYC/RJCC",
@@ -3643,10 +3268,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "64"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "October NAC",
@@ -3663,11 +3286,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 1,
     "total": 2,
-    "winRate": 50,
-    "clubs": [
-      "81",
-      "8"
-    ],
+    "winRate": 0.5,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -3692,11 +3312,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "78",
-      "PREMIERFA"
-    ],
+    "winRate": 1,
+    "clubs": ["PREMIERFA"],
     "bouts": [
       {
         "tournament": "May SJCC",
@@ -3721,11 +3338,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "82",
-      "LAFAP"
-    ],
+    "winRate": 1,
+    "clubs": ["LAFAP"],
     "bouts": [
       {
         "tournament": "March NAC",
@@ -3750,11 +3364,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "197",
-      "SPARTAK"
-    ],
+    "winRate": 1,
+    "clubs": ["SPARTAK"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
@@ -3780,10 +3391,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "3",
-      "GFA"
-    ],
+    "clubs": ["GFA"],
     "bouts": [
       {
         "tournament": "March SJCC",
@@ -3806,27 +3414,13 @@ export const opponents: Record<string, OpponentData> = {
   },
   "GUREVICH Benjamin": {
     "wins": 0,
-    "losses": 5,
-    "total": 5,
+    "losses": 4,
+    "total": 4,
     "winRate": 0,
-    "clubs": [
-      "83",
-      "1",
-      "7",
-      "ALLEFENCING",
-      "ALLE"
-    ],
+    "clubs": ["ALLEFENCING", "ALLE"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Cadet Men's Saber",
-        "date": "June 30, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "Summer Nationals",
         "event": "Cadet Men's Saber",
         "date": "June 30, 2025",
         "type": "Pool",
@@ -3865,9 +3459,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "1"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "River City Regional Rumble RJCC / RYC & Y8",
@@ -3884,12 +3476,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 3,
     "total": 5,
-    "winRate": 40,
-    "clubs": [
-      "6",
-      "3",
-      "13"
-    ],
+    "winRate": 0.4,
+    "clubs": ["NAZLYMOVFF"],
     "bouts": [
       {
         "tournament": "River City Regional Rumble RJCC / RYC & Y8",
@@ -3938,11 +3526,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "215",
-      "H3"
-    ],
+    "winRate": 1,
+    "clubs": ["H3"],
     "bouts": [
       {
         "tournament": "Junior Olympics & Div 1 NAC",
@@ -3967,10 +3552,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "44"
-    ],
+    "winRate": 1,
+    "clubs": ["PFA"],
     "bouts": [
       {
         "tournament": "Ben Gutenberg Memorial SYC / RCC",
@@ -3995,10 +3578,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "3"
-    ],
+    "winRate": 1,
+    "clubs": ["DCFENCERS"],
     "bouts": [
       {
         "tournament": "DCFC Youth Challenge #4",
@@ -4023,10 +3604,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "60"
-    ],
+    "winRate": 1,
+    "clubs": ["Western New York"],
     "bouts": [
       {
         "tournament": "Ben Gutenberg SYC - RJCC",
@@ -4052,9 +3631,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "5"
-    ],
+    "clubs": ["AFC"],
     "bouts": [
       {
         "tournament": "North Texas Roundup SYC / RCC",
@@ -4079,14 +3656,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 5,
     "losses": 1,
     "total": 6,
-    "winRate": 83,
-    "clubs": [
-      "16",
-      "212",
-      "8",
-      "19",
-      "FORGE"
-    ],
+    "winRate": 0.83,
+    "clubs": ["FORGE"],
     "bouts": [
       {
         "tournament": "Fairfax Challenge SYC/RJCC",
@@ -4143,11 +3714,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "198",
-      "SCFA"
-    ],
+    "winRate": 1,
+    "clubs": ["SCFA"],
     "bouts": [
       {
         "tournament": "Junior Olympics & Div 1 NAC",
@@ -4169,25 +3737,14 @@ export const opponents: Record<string, OpponentData> = {
     "birthYear": 2009
   },
   "HJERPE Wade H.": {
-    "wins": 3,
+    "wins": 2,
     "losses": 0,
-    "total": 3,
-    "winRate": 100,
-    "clubs": [
-      "7",
-      "PHX"
-    ],
+    "total": 2,
+    "winRate": 1,
+    "clubs": ["PHX"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Junior Men's Saber",
-        "date": "June 28, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "Summer Nationals",
         "event": "Junior Men's Saber",
         "date": "June 28, 2025",
         "type": "Pool",
@@ -4209,11 +3766,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "59",
-      "PREMIERFA"
-    ],
+    "winRate": 1,
+    "clubs": ["PREMIERFA"],
     "bouts": [
       {
         "tournament": "March NAC",
@@ -4238,11 +3792,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "69",
-      "PREMIERFA"
-    ],
+    "winRate": 1,
+    "clubs": ["PREMIERFA"],
     "bouts": [
       {
         "tournament": "May SJCC",
@@ -4268,9 +3819,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "37"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "October NAC",
@@ -4287,10 +3836,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "31"
-    ],
+    "winRate": 1,
+    "clubs": ["MIRACLEFC"],
     "bouts": [
       {
         "tournament": "River City Regional Rumble - RYC/RJCC and Y8",
@@ -4316,10 +3863,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "71",
-      "AFFA"
-    ],
+    "clubs": ["AFFA"],
     "bouts": [
       {
         "tournament": "Junior Olympics & Div 1 NAC",
@@ -4344,13 +3888,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 4,
     "total": 6,
-    "winRate": 33,
-    "clubs": [
-      "34",
-      "9",
-      "2",
-      "NELLYA"
-    ],
+    "winRate": 0.33,
+    "clubs": ["NELLYA"],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC",
@@ -4407,11 +3946,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "25",
-      "MANHATTANFC"
-    ],
+    "winRate": 1,
+    "clubs": ["MANHATTANFC"],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
@@ -4437,9 +3973,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "1"
-    ],
+    "clubs": ["LILOVFA"],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC",
@@ -4464,13 +3998,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 3,
     "losses": 3,
     "total": 6,
-    "winRate": 50,
-    "clubs": [
-      "3",
-      "1",
-      "2",
-      "RESEARCHTRI"
-    ],
+    "winRate": 0.5,
+    "clubs": ["RESEARCHTRI"],
     "bouts": [
       {
         "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
@@ -4528,10 +4057,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "20",
-      "LAFAP"
-    ],
+    "clubs": ["LAFAP"],
     "bouts": [
       {
         "tournament": "May SJCC",
@@ -4556,12 +4082,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 2,
     "total": 3,
-    "winRate": 33,
-    "clubs": [
-      "34",
-      "56",
-      "MANHATTANFC"
-    ],
+    "winRate": 0.33,
+    "clubs": ["MANHATTANFC"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -4594,13 +4116,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 5,
     "losses": 0,
     "total": 5,
-    "winRate": 100,
-    "clubs": [
-      "59",
-      "125",
-      "26",
-      "HALBERSTADT"
-    ],
+    "winRate": 1,
+    "clubs": ["HALBERSTADT", "BAFC"],
     "bouts": [
       {
         "tournament": "December SJCC + Para NAC",
@@ -4649,11 +4166,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "82",
-      "NOVAFC"
-    ],
+    "winRate": 1,
+    "clubs": ["NOVAFC"],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
@@ -4679,9 +4193,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "83"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "October NAC",
@@ -4698,12 +4210,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 2,
     "total": 3,
-    "winRate": 33,
-    "clubs": [
-      "5",
-      "14",
-      "AIFENCING"
-    ],
+    "winRate": 0.33,
+    "clubs": ["AIFENCING"],
     "bouts": [
       {
         "tournament": "Fairfax Challenge SYC/RJCC",
@@ -4736,10 +4244,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "106"
-    ],
+    "winRate": 1,
+    "clubs": ["TIMMOREHOUSE"],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC",
@@ -4764,11 +4270,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "73",
-      "AURAFA"
-    ],
+    "winRate": 1,
+    "clubs": ["AURAFA"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -4793,10 +4296,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "21"
-    ],
+    "winRate": 1,
+    "clubs": ["MD-TERRAPIN"],
     "bouts": [
       {
         "tournament": "Capital Czajkowski Cup #3",
@@ -4822,9 +4323,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "13"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "October NAC",
@@ -4841,10 +4340,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "100"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -4861,13 +4358,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 5,
     "total": 7,
-    "winRate": 29,
-    "clubs": [
-      "58",
-      "5",
-      "2",
-      "DCFENCERS"
-    ],
+    "winRate": 0.29,
+    "clubs": ["DCFENCERS"],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
@@ -4932,10 +4424,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "10"
-    ],
+    "winRate": 1,
+    "clubs": ["DCFENCERS"],
     "bouts": [
       {
         "tournament": "DCFC Youth Challenge #4",
@@ -4960,10 +4450,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "14"
-    ],
+    "winRate": 1,
+    "clubs": ["NOVAFC"],
     "bouts": [
       {
         "tournament": "Capital Czajkowski Cup #3",
@@ -4988,11 +4476,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 1,
     "total": 2,
-    "winRate": 50,
-    "clubs": [
-      "292",
-      "NFFC"
-    ],
+    "winRate": 0.5,
+    "clubs": ["NFFC"],
     "bouts": [
       {
         "tournament": "Junior Olympics",
@@ -5017,11 +4502,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 3,
     "losses": 0,
     "total": 3,
-    "winRate": 100,
-    "clubs": [
-      "204",
-      "53"
-    ],
+    "winRate": 1,
+    "clubs": ["GFA"],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -5054,10 +4536,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "17"
-    ],
+    "winRate": 1,
+    "clubs": ["NOVAFC"],
     "bouts": [
       {
         "tournament": "Fairfax Challenge Spring RYC/RJCC/ROC",
@@ -5083,9 +4563,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "3"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "October NAC",
@@ -5103,10 +4581,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "7",
-      "28"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "North Texas Roundup SYC / RCC",
@@ -5131,10 +4606,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "10"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -5148,25 +4621,14 @@ export const opponents: Record<string, OpponentData> = {
     "birthYear": 2011
   },
   "KANIA Alexander": {
-    "wins": 2,
+    "wins": 1,
     "losses": 0,
-    "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "59",
-      "MIDWESTFC"
-    ],
+    "total": 1,
+    "winRate": 1,
+    "clubs": ["MIDWESTFC"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-14 Men's Saber",
-        "date": "July 3, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Summer Nationals",
         "event": "Y-14 Men's Saber",
         "date": "July 3, 2025",
         "type": "Pool",
@@ -5180,14 +4642,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 6,
     "losses": 0,
     "total": 6,
-    "winRate": 100,
-    "clubs": [
-      "60",
-      "243",
-      "38",
-      "15",
-      "FAOBOSTON"
-    ],
+    "winRate": 1,
+    "clubs": ["FAOBOSTON"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -5245,9 +4701,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "73"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Junior Olympics",
@@ -5264,11 +4718,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 1,
     "total": 3,
-    "winRate": 67,
-    "clubs": [
-      "109",
-      "10"
-    ],
+    "winRate": 0.67,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Junior Olympics",
@@ -5302,9 +4753,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "25"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "January SJCC",
@@ -5322,9 +4771,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "8"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -5341,11 +4788,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "32",
-      "HALBERSTADT"
-    ],
+    "winRate": 1,
+    "clubs": ["HALBERSTADT"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -5371,12 +4815,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 5,
     "total": 5,
     "winRate": 0,
-    "clubs": [
-      "8",
-      "2",
-      "6",
-      "TIMMOREHOUSE"
-    ],
+    "clubs": ["TIMMOREHOUSE"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
@@ -5425,11 +4864,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "109",
-      "GFA"
-    ],
+    "winRate": 1,
+    "clubs": ["GFA"],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
@@ -5455,9 +4891,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "1"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Fairfax Challenge Fall RYC/RJCC & Y8 (Non-Regional)",
@@ -5474,12 +4908,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 3,
     "losses": 0,
     "total": 3,
-    "winRate": 100,
-    "clubs": [
-      "81",
-      "2",
-      "GFA"
-    ],
+    "winRate": 1,
+    "clubs": ["GFA"],
     "bouts": [
       {
         "tournament": "May SJCC",
@@ -5512,10 +4942,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "52"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -5532,10 +4960,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "163"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -5552,10 +4978,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "134"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "December SJCC + Para NAC",
@@ -5572,11 +4996,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 1,
     "total": 2,
-    "winRate": 50,
-    "clubs": [
-      "16",
-      "79"
-    ],
+    "winRate": 0.5,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "March NAC",
@@ -5602,10 +5023,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "11",
-      "WESTCOASTFA"
-    ],
+    "clubs": ["WESTCOASTFA"],
     "bouts": [
       {
         "tournament": "May SJCC",
@@ -5630,12 +5048,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 2,
     "total": 3,
-    "winRate": 33,
-    "clubs": [
-      "7",
-      "95",
-      "DURKANFA"
-    ],
+    "winRate": 0.33,
+    "clubs": ["DURKANFA"],
     "bouts": [
       {
         "tournament": "Mission SYC",
@@ -5668,10 +5082,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "139"
-    ],
+    "winRate": 1,
+    "clubs": ["INTEGRITY"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC",
@@ -5688,11 +5100,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "57",
-      "SBFA"
-    ],
+    "winRate": 1,
+    "clubs": ["SBFA"],
     "bouts": [
       {
         "tournament": "March NAC and Parafencing National Championships",
@@ -5717,10 +5126,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "173"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Junior Olympics & Div 1 NAC",
@@ -5737,10 +5144,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "229"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Junior Olympics",
@@ -5757,10 +5162,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "17"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -5777,12 +5180,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 3,
     "losses": 0,
     "total": 3,
-    "winRate": 100,
-    "clubs": [
-      "209",
-      "25",
-      "DYNAMOFC"
-    ],
+    "winRate": 1,
+    "clubs": ["DYNAMOFC"],
     "bouts": [
       {
         "tournament": "National Championships & July Challenge (Summer Nationals)",
@@ -5815,10 +5214,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "51"
-    ],
+    "winRate": 1,
+    "clubs": ["DYNAMOFC"],
     "bouts": [
       {
         "tournament": "USA Fencing National Championships & July Challenge",
@@ -5843,10 +5240,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "93"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Junior Olympics",
@@ -5863,11 +5258,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "187",
-      "TTFA"
-    ],
+    "winRate": 1,
+    "clubs": ["TTFA"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
@@ -5893,9 +5285,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "125"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "October NAC",
@@ -5912,11 +5302,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "147",
-      "61"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "February NAC",
@@ -5941,10 +5328,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "128"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
@@ -5962,10 +5347,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "45",
-      "MANHATTANFC"
-    ],
+    "clubs": ["MANHATTANFC"],
     "bouts": [
       {
         "tournament": "March SJCC",
@@ -5990,10 +5372,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "61"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "January SJCC",
@@ -6010,10 +5390,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "109"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "March NAC",
@@ -6030,13 +5408,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 6,
     "losses": 0,
     "total": 6,
-    "winRate": 100,
-    "clubs": [
-      "26",
-      "25",
-      "59",
-      "NOVAFC"
-    ],
+    "winRate": 1,
+    "clubs": ["NOVAFC"],
     "bouts": [
       {
         "tournament": "River City Regional Rumble RJCC / RYC & Y8",
@@ -6093,13 +5466,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 7,
     "losses": 0,
     "total": 7,
-    "winRate": 100,
-    "clubs": [
-      "14",
-      "17",
-      "12",
-      "CAPITALFA"
-    ],
+    "winRate": 1,
+    "clubs": ["CAPITALFA"],
     "bouts": [
       {
         "tournament": "NoVA Knights RYC/RJCC",
@@ -6164,10 +5532,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "131"
-    ],
+    "winRate": 1,
+    "clubs": ["TIMMOREHOUSE"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC",
@@ -6184,11 +5550,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 1,
     "total": 2,
-    "winRate": 50,
-    "clubs": [
-      "22",
-      "7"
-    ],
+    "winRate": 0.5,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -6213,10 +5576,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "71"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -6233,12 +5594,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 3,
     "losses": 0,
     "total": 3,
-    "winRate": 100,
-    "clubs": [
-      "250",
-      "48",
-      "TIMMOREHOUSE"
-    ],
+    "winRate": 1,
+    "clubs": ["TIMMOREHOUSE"],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -6271,10 +5628,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "97"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
@@ -6291,11 +5646,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 1,
     "total": 2,
-    "winRate": 50,
-    "clubs": [
-      "16",
-      "28"
-    ],
+    "winRate": 0.5,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "North Texas Roundup SYC / RCC",
@@ -6320,10 +5672,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "48"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "January SJCC",
@@ -6340,10 +5690,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "265"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "October NAC",
@@ -6360,13 +5708,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 4,
     "total": 5,
-    "winRate": 20,
-    "clubs": [
-      "71",
-      "1",
-      "38",
-      "3"
-    ],
+    "winRate": 0.2,
+    "clubs": ["LAFAP"],
     "bouts": [
       {
         "tournament": "February NAC",
@@ -6415,12 +5758,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 4,
     "losses": 0,
     "total": 4,
-    "winRate": 100,
-    "clubs": [
-      "161",
-      "122",
-      "PFC"
-    ],
+    "winRate": 1,
+    "clubs": ["PFC"],
     "bouts": [
       {
         "tournament": "March NAC",
@@ -6461,12 +5800,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 4,
     "losses": 0,
     "total": 4,
-    "winRate": 100,
-    "clubs": [
-      "52",
-      "26",
-      "LAGUNAFC"
-    ],
+    "winRate": 1,
+    "clubs": ["LAGUNAFC"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
@@ -6507,11 +5842,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "51",
-      "LAGUNAFC"
-    ],
+    "winRate": 1,
+    "clubs": ["LAGUNAFC"],
     "bouts": [
       {
         "tournament": "March NAC",
@@ -6536,12 +5868,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 3,
     "losses": 0,
     "total": 3,
-    "winRate": 100,
-    "clubs": [
-      "110",
-      "263",
-      "SBFA"
-    ],
+    "winRate": 1,
+    "clubs": ["SBFA"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
@@ -6574,11 +5902,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "115",
-      "MIRACLEFC"
-    ],
+    "winRate": 1,
+    "clubs": ["MIRACLEFC"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -6604,10 +5929,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "34",
-      "MANHATTANFC"
-    ],
+    "clubs": ["MANHATTANFC"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -6633,10 +5955,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "66",
-      "BERGENFC"
-    ],
+    "clubs": ["BERGENFC"],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
@@ -6661,10 +5980,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "118"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "December SJCC + Para NAC",
@@ -6682,9 +5999,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "34"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "February NAC",
@@ -6701,10 +6016,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "42"
-    ],
+    "winRate": 1,
+    "clubs": ["LONESTARFC"],
     "bouts": [
       {
         "tournament": "North Texas Roundup SYC / RCC",
@@ -6729,12 +6042,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 3,
     "losses": 0,
     "total": 3,
-    "winRate": 100,
-    "clubs": [
-      "14",
-      "102",
-      "COBRAFC"
-    ],
+    "winRate": 1,
+    "clubs": ["COBRAFC"],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
@@ -6768,9 +6077,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "22"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "January NAC",
@@ -6787,12 +6094,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 2,
     "total": 4,
-    "winRate": 50,
-    "clubs": [
-      "59",
-      "28",
-      "STAMFORDFC"
-    ],
+    "winRate": 0.5,
+    "clubs": ["STAMFORDFC", "SFC"],
     "bouts": [
       {
         "tournament": "March SJCC",
@@ -6833,12 +6136,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 4,
     "losses": 0,
     "total": 4,
-    "winRate": 100,
-    "clubs": [
-      "89",
-      "5",
-      "NELLYA"
-    ],
+    "winRate": 1,
+    "clubs": ["NELLYA"],
     "bouts": [
       {
         "tournament": "May SJCC",
@@ -6879,10 +6178,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "124"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "October NAC",
@@ -6900,9 +6197,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "24"
-    ],
+    "clubs": ["BOSTONFC"],
     "bouts": [
       {
         "tournament": "Mission SYC",
@@ -6927,13 +6222,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 3,
     "losses": 1,
     "total": 4,
-    "winRate": 75,
-    "clubs": [
-      "179",
-      "121",
-      "175",
-      "NELLYA"
-    ],
+    "winRate": 0.75,
+    "clubs": ["NELLYA"],
     "bouts": [
       {
         "tournament": "February NAC",
@@ -6974,10 +6264,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "92"
-    ],
+    "winRate": 1,
+    "clubs": ["AFC"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC",
@@ -6994,10 +6282,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "51"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Junior Olympics",
@@ -7015,11 +6301,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 3,
     "total": 3,
     "winRate": 0,
-    "clubs": [
-      "29",
-      "22",
-      "NELLYA"
-    ],
+    "clubs": ["NELLYA"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -7053,10 +6335,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "3",
-      "SFA"
-    ],
+    "clubs": ["SFA"],
     "bouts": [
       {
         "tournament": "Local",
@@ -7081,10 +6360,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "53"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "May SJCC",
@@ -7101,10 +6378,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "45"
-    ],
+    "winRate": 1,
+    "clubs": ["COBRAFC"],
     "bouts": [
       {
         "tournament": "Mission SYC",
@@ -7129,10 +6404,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "57"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC",
@@ -7149,11 +6422,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "177",
-      "LAFAP"
-    ],
+    "winRate": 1,
+    "clubs": ["LAFAP"],
     "bouts": [
       {
         "tournament": "National Championships & July Challenge (Summer Nationals)",
@@ -7178,10 +6448,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "57"
-    ],
+    "winRate": 1,
+    "clubs": ["MANHATTANFC"],
     "bouts": [
       {
         "tournament": "Ben Gutenberg SYC - RJCC",
@@ -7206,11 +6474,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "107",
-      "LONESTARFC"
-    ],
+    "winRate": 1,
+    "clubs": ["LONESTARFC"],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
@@ -7232,15 +6497,11 @@ export const opponents: Record<string, OpponentData> = {
     "birthYear": 2013
   },
   "LUC Linkin": {
-    "wins": 5,
+    "wins": 4,
     "losses": 0,
-    "total": 5,
-    "winRate": 100,
-    "clubs": [
-      "57",
-      "111",
-      "PREMIERFA"
-    ],
+    "total": 4,
+    "winRate": 1,
+    "clubs": ["PREMIERFA"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
@@ -7257,14 +6518,6 @@ export const opponents: Record<string, OpponentData> = {
         "type": "T64",
         "win": true,
         "score": "15-8"
-      },
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-14 Men's Saber",
-        "date": "July 4, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
       },
       {
         "tournament": "Summer Nationals",
@@ -7290,10 +6543,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "102",
-      "INTEGRITY"
-    ],
+    "clubs": ["INTEGRITY"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -7318,11 +6568,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "105",
-      "DYNAMOFC"
-    ],
+    "winRate": 1,
+    "clubs": ["DYNAMOFC"],
     "bouts": [
       {
         "tournament": "March NAC and Parafencing National Championships",
@@ -7347,11 +6594,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 4,
     "losses": 0,
     "total": 4,
-    "winRate": 100,
-    "clubs": [
-      "20",
-      "51"
-    ],
+    "winRate": 1,
+    "clubs": ["LONESTARFC"],
     "bouts": [
       {
         "tournament": "North Texas Roundup SYC / RCC",
@@ -7392,10 +6636,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "243"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "March NAC",
@@ -7412,13 +6654,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 5,
     "losses": 0,
     "total": 5,
-    "winRate": 100,
-    "clubs": [
-      "65",
-      "105",
-      "88",
-      "BOSTONFC"
-    ],
+    "winRate": 1,
+    "clubs": ["BOSTONFC"],
     "bouts": [
       {
         "tournament": "Mission SYC",
@@ -7464,25 +6701,14 @@ export const opponents: Record<string, OpponentData> = {
     "birthYear": 2012
   },
   "MANESCU Miron": {
-    "wins": 3,
+    "wins": 2,
     "losses": 0,
-    "total": 3,
-    "winRate": 100,
-    "clubs": [
-      "216",
-      "MANHATTANFC"
-    ],
+    "total": 2,
+    "winRate": 1,
+    "clubs": ["MANHATTANFC"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Junior Men's Saber",
-        "date": "June 28, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Summer Nationals",
         "event": "Junior Men's Saber",
         "date": "June 28, 2025",
         "type": "Pool",
@@ -7504,10 +6730,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "218"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Junior Olympics",
@@ -7524,11 +6748,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "239",
-      "MIDWESTFC"
-    ],
+    "winRate": 1,
+    "clubs": ["MIDWESTFC"],
     "bouts": [
       {
         "tournament": "March NAC",
@@ -7551,22 +6772,11 @@ export const opponents: Record<string, OpponentData> = {
   },
   "MARTINSON Torm": {
     "wins": 0,
-    "losses": 2,
-    "total": 2,
+    "losses": 1,
+    "total": 1,
     "winRate": 0,
-    "clubs": [
-      "13",
-      "MANHATTANFC"
-    ],
+    "clubs": ["MANHATTANFC"],
     "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC",
-        "event": "Y-10 Men's Saber",
-        "date": "May 31, 2021",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      },
       {
         "tournament": "SYC",
         "event": "Y-10 Men's Saber",
@@ -7582,10 +6792,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "129"
-    ],
+    "winRate": 1,
+    "clubs": ["MANHATTANFC"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC",
@@ -7602,10 +6810,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "36"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "February NAC",
@@ -7622,10 +6828,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "187"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "October NAC",
@@ -7642,11 +6846,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 2,
     "total": 3,
-    "winRate": 33,
-    "clubs": [
-      "10",
-      "DCFENCERS"
-    ],
+    "winRate": 0.33,
+    "clubs": ["DCFENCERS"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -7677,14 +6878,10 @@ export const opponents: Record<string, OpponentData> = {
   },
   "MCDONALD Finn": {
     "wins": 1,
-    "losses": 2,
-    "total": 3,
-    "winRate": 33,
-    "clubs": [
-      "159",
-      "23",
-      "DEVLYFC-PA"
-    ],
+    "losses": 1,
+    "total": 2,
+    "winRate": 0.5,
+    "clubs": ["DEVLYFC-PA"],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -7693,14 +6890,6 @@ export const opponents: Record<string, OpponentData> = {
         "type": "Pool",
         "win": true,
         "score": "5-1"
-      },
-      {
-        "tournament": "Cobra Challenge SYC/RCC",
-        "event": "Y-10 Men's Saber",
-        "date": "May 31, 2021",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
       },
       {
         "tournament": "SYC",
@@ -7717,11 +6906,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "54",
-      "TIMMOREHOUSE"
-    ],
+    "winRate": 1,
+    "clubs": ["TIMMOREHOUSE"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -7747,13 +6933,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 5,
     "total": 5,
     "winRate": 0,
-    "clubs": [
-      "3",
-      "69",
-      "1",
-      "7",
-      "STAMFORDFC"
-    ],
+    "clubs": ["STAMFORDFC"],
     "bouts": [
       {
         "tournament": "May SJCC",
@@ -7803,9 +6983,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "19"
-    ],
+    "clubs": ["RESEARCHTRI"],
     "bouts": [
       {
         "tournament": "NoVA Knights RYC/RJCC",
@@ -7830,10 +7008,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "51"
-    ],
+    "winRate": 1,
+    "clubs": ["TIMMOREHOUSE"],
     "bouts": [
       {
         "tournament": "Ben Gutenberg SYC - RJCC",
@@ -7858,11 +7034,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "56",
-      "ALLEFENCING"
-    ],
+    "winRate": 1,
+    "clubs": ["ALLEFENCING"],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC, RCC, Veteran ROC & Y8",
@@ -7887,12 +7060,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 4,
     "losses": 0,
     "total": 4,
-    "winRate": 100,
-    "clubs": [
-      "32",
-      "19",
-      "TIMMOREHOUSE"
-    ],
+    "winRate": 1,
+    "clubs": ["TIMMOREHOUSE"],
     "bouts": [
       {
         "tournament": "Mission SYC",
@@ -7933,10 +7102,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "98"
-    ],
+    "winRate": 1,
+    "clubs": ["STAMFORDFC"],
     "bouts": [
       {
         "tournament": "Mission SYC",
@@ -7961,11 +7128,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "21",
-      "AFFA"
-    ],
+    "winRate": 1,
+    "clubs": ["AFFA"],
     "bouts": [
       {
         "tournament": "Fairfax Challenge SYC/RJCC",
@@ -7991,9 +7155,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "23"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -8010,10 +7172,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "48"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "North Texas Roundup SYC / RCC",
@@ -8030,11 +7190,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "109",
-      "EXCELFA"
-    ],
+    "winRate": 1,
+    "clubs": ["EXCELFA"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -8059,13 +7216,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 5,
     "losses": 0,
     "total": 5,
-    "winRate": 100,
-    "clubs": [
-      "14",
-      "27",
-      "20",
-      "CAPITALFA"
-    ],
+    "winRate": 1,
+    "clubs": ["CAPITALFA"],
     "bouts": [
       {
         "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
@@ -8111,15 +7263,11 @@ export const opponents: Record<string, OpponentData> = {
     "birthYear": 2011
   },
   "NAMBIAR Navin": {
-    "wins": 3,
+    "wins": 2,
     "losses": 0,
-    "total": 3,
-    "winRate": 100,
-    "clubs": [
-      "200",
-      "220",
-      "GFA"
-    ],
+    "total": 2,
+    "winRate": 1,
+    "clubs": ["GFA"],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -8136,31 +7284,16 @@ export const opponents: Record<string, OpponentData> = {
         "type": "Pool",
         "win": true,
         "score": "5-2"
-      },
-      {
-        "tournament": "Summer Nationals",
-        "event": "Cadet Men's Saber",
-        "date": "June 30, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
       }
     ],
     "birthYear": 2009
   },
   "NARDINI Nathanael P.": {
-    "wins": 5,
+    "wins": 4,
     "losses": 1,
-    "total": 6,
-    "winRate": 83,
-    "clubs": [
-      "80",
-      "48",
-      "10",
-      "24",
-      "19",
-      "COBRAFC"
-    ],
+    "total": 5,
+    "winRate": 0.8,
+    "clubs": ["COBRAFC"],
     "bouts": [
       {
         "tournament": "Junior Olympics",
@@ -8172,14 +7305,6 @@ export const opponents: Record<string, OpponentData> = {
       },
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Cadet Men's Saber",
-        "date": "June 30, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Summer Nationals",
         "event": "Cadet Men's Saber",
         "date": "June 30, 2025",
         "type": "Pool",
@@ -8217,10 +7342,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "97"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "February NAC",
@@ -8237,13 +7360,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 4,
     "losses": 0,
     "total": 4,
-    "winRate": 100,
-    "clubs": [
-      "45",
-      "240",
-      "102",
-      "LAFAP"
-    ],
+    "winRate": 1,
+    "clubs": ["LAFAP"],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -8284,13 +7402,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 5,
     "losses": 0,
     "total": 5,
-    "winRate": 100,
-    "clubs": [
-      "60",
-      "176",
-      "104",
-      "NJFENCINGALL"
-    ],
+    "winRate": 1,
+    "clubs": ["NJFENCINGALL"],
     "bouts": [
       {
         "tournament": "Mission SYC",
@@ -8339,15 +7452,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 4,
     "losses": 4,
     "total": 8,
-    "winRate": 50,
-    "clubs": [
-      "15",
-      "14",
-      "3",
-      "47",
-      "5",
-      "TIMMOREHOUSE"
-    ],
+    "winRate": 0.5,
+    "clubs": ["TIMMOREHOUSE", "SFC"],
     "bouts": [
       {
         "tournament": "January NAC",
@@ -8420,11 +7526,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "132",
-      "OREGONFA"
-    ],
+    "winRate": 1,
+    "clubs": ["OREGONFA"],
     "bouts": [
       {
         "tournament": "March NAC",
@@ -8449,10 +7552,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "278"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "October NAC",
@@ -8469,11 +7570,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "17",
-      "SHERIDANFA"
-    ],
+    "winRate": 1,
+    "clubs": ["SHERIDANFA"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -8495,15 +7593,11 @@ export const opponents: Record<string, OpponentData> = {
     "birthYear": 2011
   },
   "OTT William": {
-    "wins": 5,
+    "wins": 4,
     "losses": 0,
-    "total": 5,
-    "winRate": 100,
-    "clubs": [
-      "30",
-      "23",
-      "119"
-    ],
+    "total": 4,
+    "winRate": 1,
+    "clubs": ["MIRACLEFC"],
     "bouts": [
       {
         "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
@@ -8530,14 +7624,6 @@ export const opponents: Record<string, OpponentData> = {
         "score": "5-2"
       },
       {
-        "tournament": "Capitol Clash SYC/RCC",
-        "event": "Y-12 Men's Saber",
-        "date": "January 14, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
         "tournament": "SYC",
         "event": "Y-12 Men's Saber",
         "date": "January 14, 2023",
@@ -8552,11 +7638,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 4,
     "losses": 0,
     "total": 4,
-    "winRate": 100,
-    "clubs": [
-      "235",
-      "51"
-    ],
+    "winRate": 1,
+    "clubs": ["ROCHESTERFC"],
     "bouts": [
       {
         "tournament": "March NAC",
@@ -8597,10 +7680,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "90"
-    ],
+    "winRate": 1,
+    "clubs": ["AURAFA"],
     "bouts": [
       {
         "tournament": "Ben Gutenberg SYC - RJCC",
@@ -8625,10 +7706,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "65"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
@@ -8645,10 +7724,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "23"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Fairfax Challenge Spring RYC/RJCC/ROC",
@@ -8665,10 +7742,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "19"
-    ],
+    "winRate": 1,
+    "clubs": ["CAPITALFA"],
     "bouts": [
       {
         "tournament": "Capital Czajkowski Cup #3",
@@ -8690,25 +7765,14 @@ export const opponents: Record<string, OpponentData> = {
     "birthYear": 2012
   },
   "PEI Kent": {
-    "wins": 2,
+    "wins": 1,
     "losses": 0,
-    "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "303",
-      "Northern California"
-    ],
+    "total": 1,
+    "winRate": 1,
+    "clubs": ["Northern California"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-14 Men's Saber",
-        "date": "July 3, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "Summer Nationals",
         "event": "Y-14 Men's Saber",
         "date": "July 3, 2025",
         "type": "Pool",
@@ -8722,11 +7786,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "60",
-      "INTLFENCECLB"
-    ],
+    "winRate": 1,
+    "clubs": ["INTLFENCECLB"],
     "bouts": [
       {
         "tournament": "May SJCC",
@@ -8751,10 +7812,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "27"
-    ],
+    "winRate": 1,
+    "clubs": ["NAZLYMOVFF"],
     "bouts": [
       {
         "tournament": "Fairfax Challenge Spring RYC/RJCC/ROC",
@@ -8779,12 +7838,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 3,
     "total": 5,
-    "winRate": 40,
-    "clubs": [
-      "3",
-      "22",
-      "TIMMOREHOUSE"
-    ],
+    "winRate": 0.4,
+    "clubs": ["TIMMOREHOUSE"],
     "bouts": [
       {
         "tournament": "National Championships & July Challenge (Summer Nationals)",
@@ -8833,11 +7888,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 4,
     "losses": 0,
     "total": 4,
-    "winRate": 100,
-    "clubs": [
-      "20",
-      "7"
-    ],
+    "winRate": 1,
+    "clubs": ["NOVAFC"],
     "bouts": [
       {
         "tournament": "River City Regional Rumble RYC/RJCC",
@@ -8878,11 +7930,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 1,
     "total": 2,
-    "winRate": 50,
-    "clubs": [
-      "122",
-      "3"
-    ],
+    "winRate": 0.5,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -8908,10 +7957,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "9",
-      "PWESTBROOK"
-    ],
+    "clubs": ["PWESTBROOK"],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -8936,10 +7982,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "24"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "River City Regional Rumble RYC/RJCC",
@@ -8956,11 +8000,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "121",
-      "WESTCOASTFA"
-    ],
+    "winRate": 1,
+    "clubs": ["WESTCOASTFA"],
     "bouts": [
       {
         "tournament": "March NAC",
@@ -8985,10 +8026,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "18"
-    ],
+    "winRate": 1,
+    "clubs": ["RESEARCHTRI"],
     "bouts": [
       {
         "tournament": "River City Regional Rumble - RYC/RJCC and Y8",
@@ -9013,11 +8052,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "3",
-      "68"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "January SJCC",
@@ -9042,10 +8078,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "72"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "January SJCC",
@@ -9063,10 +8097,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "165",
-      "SFSS"
-    ],
+    "clubs": ["SFSS"],
     "bouts": [
       {
         "tournament": "Junior Olympics & Div 1 NAC",
@@ -9091,11 +8122,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "251",
-      "RENAISSANCE"
-    ],
+    "winRate": 1,
+    "clubs": ["RENAISSANCE"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
@@ -9120,10 +8148,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "8"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Junior Olympics",
@@ -9140,13 +8166,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 5,
     "losses": 0,
     "total": 5,
-    "winRate": 100,
-    "clubs": [
-      "13",
-      "22",
-      "12",
-      "8"
-    ],
+    "winRate": 1,
+    "clubs": ["CAPITALFA"],
     "bouts": [
       {
         "tournament": "Capital Czajkowski Cup #3",
@@ -9195,10 +8216,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "60"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -9215,10 +8234,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "28"
-    ],
+    "winRate": 1,
+    "clubs": ["GFA"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC",
@@ -9243,10 +8260,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "32"
-    ],
+    "winRate": 1,
+    "clubs": ["NOVAFC"],
     "bouts": [
       {
         "tournament": "River City Regional Rumble RJCC / RYC & Y8",
@@ -9271,10 +8286,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "153"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "February NAC",
@@ -9292,10 +8305,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 4,
     "total": 4,
     "winRate": 0,
-    "clubs": [
-      "18",
-      "16"
-    ],
+    "clubs": ["GFA", "North Texas"],
     "bouts": [
       {
         "tournament": "River City Regional Rumble RJCC / RYC & Y8",
@@ -9336,11 +8346,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 4,
     "losses": 0,
     "total": 4,
-    "winRate": 100,
-    "clubs": [
-      "43",
-      "91"
-    ],
+    "winRate": 1,
+    "clubs": ["GFA"],
     "bouts": [
       {
         "tournament": "North Texas Roundup SYC / RCC",
@@ -9382,9 +8389,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "32"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "March NAC",
@@ -9402,10 +8407,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "43",
-      "COBRAFC"
-    ],
+    "clubs": ["COBRAFC"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -9430,12 +8432,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 4,
     "losses": 0,
     "total": 4,
-    "winRate": 100,
-    "clubs": [
-      "33",
-      "32",
-      "AIFENCING"
-    ],
+    "winRate": 1,
+    "clubs": ["AIFENCING"],
     "bouts": [
       {
         "tournament": "Ben Gutenberg Memorial SYC / RCC",
@@ -9476,10 +8474,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "16"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -9496,11 +8492,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "74",
-      "NAZLYMOVFF"
-    ],
+    "winRate": 1,
+    "clubs": ["NAZLYMOVFF"],
     "bouts": [
       {
         "tournament": "Fairfax Challenge SYC/RJCC",
@@ -9525,10 +8518,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "198"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
@@ -9545,10 +8536,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "63"
-    ],
+    "winRate": 1,
+    "clubs": ["FIT"],
     "bouts": [
       {
         "tournament": "North Texas Roundup SYC / RCC",
@@ -9573,11 +8562,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "163",
-      "MIDWESTFC"
-    ],
+    "winRate": 1,
+    "clubs": ["MIDWESTFC"],
     "bouts": [
       {
         "tournament": "National Championships & July Challenge (Summer Nationals)",
@@ -9602,10 +8588,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "54"
-    ],
+    "winRate": 1,
+    "clubs": ["SABIO"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC",
@@ -9623,11 +8607,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 4,
     "total": 4,
     "winRate": 0,
-    "clubs": [
-      "65",
-      "11",
-      "DYNAMOFC"
-    ],
+    "clubs": ["DYNAMOFC"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -9668,11 +8648,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "141",
-      "REDSTARCHICG"
-    ],
+    "winRate": 1,
+    "clubs": ["REDSTARCHICG"],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
@@ -9697,12 +8674,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 3,
     "total": 4,
-    "winRate": 25,
-    "clubs": [
-      "2",
-      "16",
-      "INTEGRITY"
-    ],
+    "winRate": 0.25,
+    "clubs": ["INTEGRITY"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -9744,9 +8717,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "12"
-    ],
+    "clubs": ["DYNAMO"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -9764,9 +8735,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "110"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -9783,10 +8752,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "124"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "March NAC and Parafencing National Championships",
@@ -9800,25 +8767,14 @@ export const opponents: Record<string, OpponentData> = {
     "birthYear": 2012
   },
   "SINGH Swaran": {
-    "wins": 2,
+    "wins": 1,
     "losses": 0,
-    "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "219",
-      "PHX"
-    ],
+    "total": 1,
+    "winRate": 1,
+    "clubs": ["PHX"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-14 Men's Saber",
-        "date": "July 3, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Summer Nationals",
         "event": "Y-14 Men's Saber",
         "date": "July 3, 2025",
         "type": "Pool",
@@ -9833,9 +8789,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "32"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "October NAC",
@@ -9853,9 +8807,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "8"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Ben Gutenberg SYC - RJCC",
@@ -9872,10 +8824,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "105"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "May SJCC",
@@ -9892,11 +8842,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 3,
     "losses": 0,
     "total": 3,
-    "winRate": 100,
-    "clubs": [
-      "12",
-      "54"
-    ],
+    "winRate": 1,
+    "clubs": ["TIMMOREHOUSE"],
     "bouts": [
       {
         "tournament": "Mission SYC",
@@ -9929,12 +8876,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 4,
     "losses": 0,
     "total": 4,
-    "winRate": 100,
-    "clubs": [
-      "263",
-      "266",
-      "TIMMOREHOUSE"
-    ],
+    "winRate": 1,
+    "clubs": ["TIMMOREHOUSE"],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -9975,11 +8918,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "82",
-      "BOSTONFC"
-    ],
+    "winRate": 1,
+    "clubs": ["BOSTONFC"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -10005,9 +8945,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "28"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "December SJCC + Para NAC",
@@ -10024,10 +8962,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "124"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -10044,10 +8980,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "30"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Ben Gutenberg SYC - RJCC",
@@ -10064,10 +8998,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "260"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Junior Olympics",
@@ -10084,10 +9016,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "40"
-    ],
+    "winRate": 1,
+    "clubs": ["FIT"],
     "bouts": [
       {
         "tournament": "North Texas Roundup SYC / RCC",
@@ -10112,11 +9042,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "49",
-      "CAN"
-    ],
+    "winRate": 1,
+    "clubs": ["CAN"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -10142,9 +9069,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "46"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "March NAC",
@@ -10161,11 +9086,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "241",
-      "LAFAP"
-    ],
+    "winRate": 1,
+    "clubs": ["LAFAP"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
@@ -10191,10 +9113,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 4,
     "total": 4,
     "winRate": 0,
-    "clubs": [
-      "6",
-      "1"
-    ],
+    "clubs": ["MIRACLEFC"],
     "bouts": [
       {
         "tournament": "Junior Olympics",
@@ -10236,11 +9155,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 3,
     "total": 3,
     "winRate": 0,
-    "clubs": [
-      "13",
-      "24",
-      "MANHATTANFC"
-    ],
+    "clubs": ["MANHATTANFC"],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -10273,12 +9188,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 2,
     "total": 4,
-    "winRate": 50,
-    "clubs": [
-      "224",
-      "129",
-      "MASTERSFA-NJ"
-    ],
+    "winRate": 0.5,
+    "clubs": ["MASTERSFA-NJ"],
     "bouts": [
       {
         "tournament": "March NAC",
@@ -10319,11 +9230,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 3,
     "total": 4,
-    "winRate": 25,
-    "clubs": [
-      "17",
-      "7"
-    ],
+    "winRate": 0.25,
+    "clubs": ["CAPITALFA"],
     "bouts": [
       {
         "tournament": "River City Regional Rumble RJCC / RYC & Y8",
@@ -10364,10 +9272,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 3,
     "losses": 0,
     "total": 3,
-    "winRate": 100,
-    "clubs": [
-      "2"
-    ],
+    "winRate": 1,
+    "clubs": ["NAZLYMOVFF"],
     "bouts": [
       {
         "tournament": "DCFC Youth Challenge #4",
@@ -10400,10 +9306,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 3,
     "losses": 0,
     "total": 3,
-    "winRate": 100,
-    "clubs": [
-      "8"
-    ],
+    "winRate": 1,
+    "clubs": ["DCFENCERS"],
     "bouts": [
       {
         "tournament": "DCFC Youth Challenge #4",
@@ -10436,10 +9340,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "62"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Fairfax Challenge SYC/RJCC",
@@ -10457,10 +9359,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "12",
-      "CHN"
-    ],
+    "clubs": ["CHN"],
     "bouts": [
       {
         "tournament": "Fairfax Challenge SYC/RJCC",
@@ -10485,12 +9384,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 3,
     "losses": 2,
     "total": 5,
-    "winRate": 60,
-    "clubs": [
-      "177",
-      "3",
-      "39"
-    ],
+    "winRate": 0.6,
+    "clubs": ["HALBERSTADT"],
     "bouts": [
       {
         "tournament": "October NAC",
@@ -10539,10 +9434,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "16"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -10559,10 +9452,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "277"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -10579,10 +9470,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "103"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "January SJCC",
@@ -10599,11 +9488,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "176",
-      "NOVAFC"
-    ],
+    "winRate": 1,
+    "clubs": ["NOVAFC"],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
@@ -10628,11 +9514,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "53",
-      "TTFA"
-    ],
+    "winRate": 1,
+    "clubs": ["TTFA"],
     "bouts": [
       {
         "tournament": "Local",
@@ -10658,10 +9541,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "218",
-      "FAODENVER"
-    ],
+    "clubs": ["FAODENVER"],
     "bouts": [
       {
         "tournament": "Junior Olympics & Div 1 NAC",
@@ -10684,24 +9564,13 @@ export const opponents: Record<string, OpponentData> = {
   },
   "TIAGI Daniel": {
     "wins": 0,
-    "losses": 3,
-    "total": 3,
+    "losses": 2,
+    "total": 2,
     "winRate": 0,
-    "clubs": [
-      "140",
-      "ALLEFENCING"
-    ],
+    "clubs": ["ALLEFENCING"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Junior Men's Saber",
-        "date": "June 28, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "Summer Nationals",
         "event": "Junior Men's Saber",
         "date": "June 28, 2025",
         "type": "Pool",
@@ -10724,9 +9593,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "104"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -10744,11 +9611,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 3,
     "total": 3,
     "winRate": 0,
-    "clubs": [
-      "19",
-      "9",
-      "HALBERSTADT"
-    ],
+    "clubs": ["HALBERSTADT"],
     "bouts": [
       {
         "tournament": "February NAC",
@@ -10782,10 +9645,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "76",
-      "DURKANFA"
-    ],
+    "clubs": ["DURKANFA"],
     "bouts": [
       {
         "tournament": "Junior Olympics & Div 1 NAC",
@@ -10810,11 +9670,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 2,
     "total": 3,
-    "winRate": 33,
-    "clubs": [
-      "2",
-      "1"
-    ],
+    "winRate": 0.33,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC",
@@ -10848,9 +9705,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "3"
-    ],
+    "clubs": ["CAPITALFA"],
     "bouts": [
       {
         "tournament": "Fairfax Challenge Spring RYC/RJCC/ROC",
@@ -10872,25 +9727,14 @@ export const opponents: Record<string, OpponentData> = {
     "birthYear": 2012
   },
   "VAN ROY Ray": {
-    "wins": 2,
+    "wins": 1,
     "losses": 0,
-    "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "220",
-      "HALBERSTADT"
-    ],
+    "total": 1,
+    "winRate": 1,
+    "clubs": ["HALBERSTADT"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Cadet Men's Saber",
-        "date": "June 30, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "Summer Nationals",
         "event": "Cadet Men's Saber",
         "date": "June 30, 2025",
         "type": "Pool",
@@ -10904,10 +9748,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "41"
-    ],
+    "winRate": 1,
+    "clubs": ["FSA INC"],
     "bouts": [
       {
         "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
@@ -10932,10 +9774,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "100"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -10952,10 +9792,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "47"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "January SJCC",
@@ -10973,9 +9811,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "173"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "October NAC",
@@ -10992,11 +9828,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "309",
-      "SANDIEGOFC"
-    ],
+    "winRate": 1,
+    "clubs": ["SANDIEGOFC"],
     "bouts": [
       {
         "tournament": "Junior Olympics & Div 1 NAC",
@@ -11021,10 +9854,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "224"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Junior Olympics",
@@ -11042,10 +9873,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "26",
-      "TRIWEAPONFC"
-    ],
+    "clubs": ["TRIWEAPONFC"],
     "bouts": [
       {
         "tournament": "Local",
@@ -11070,11 +9898,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 1,
     "total": 2,
-    "winRate": 50,
-    "clubs": [
-      "5",
-      "45"
-    ],
+    "winRate": 0.5,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "January SJCC",
@@ -11099,11 +9924,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "98",
-      "25"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Junior Olympics",
@@ -11129,10 +9951,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "11",
-      "AFC"
-    ],
+    "clubs": ["AFC"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -11155,15 +9974,10 @@ export const opponents: Record<string, OpponentData> = {
   },
   "WANG Daniel": {
     "wins": 2,
-    "losses": 3,
-    "total": 5,
-    "winRate": 40,
-    "clubs": [
-      "6",
-      "3",
-      "27",
-      "DYNAMOFC"
-    ],
+    "losses": 2,
+    "total": 4,
+    "winRate": 0.5,
+    "clubs": ["DYNAMOFC"],
     "bouts": [
       {
         "tournament": "February NAC",
@@ -11190,14 +10004,6 @@ export const opponents: Record<string, OpponentData> = {
         "score": "5-2"
       },
       {
-        "tournament": "December NAC",
-        "event": "Cadet Men's Saber",
-        "date": "December 6, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
         "tournament": "Cobra Challenge SYC",
         "event": "Y-14 Men's Saber",
         "date": "December 1, 2024",
@@ -11212,10 +10018,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "72"
-    ],
+    "winRate": 1,
+    "clubs": ["AGFC (CA)"],
     "bouts": [
       {
         "tournament": "USA Fencing National Championships & July Challenge",
@@ -11240,10 +10044,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "53"
-    ],
+    "winRate": 1,
+    "clubs": ["DYNAMOFC"],
     "bouts": [
       {
         "tournament": "Ben Gutenberg SYC - RJCC",
@@ -11268,10 +10070,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "199"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
@@ -11288,10 +10088,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "106"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Junior Olympics",
@@ -11308,10 +10106,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "3"
-    ],
+    "winRate": 1,
+    "clubs": ["CAPITALFA"],
     "bouts": [
       {
         "tournament": "River City Regional Rumble - RYC/RJCC and Y8",
@@ -11336,10 +10132,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "80"
-    ],
+    "winRate": 1,
+    "clubs": ["MANHATTANFC"],
     "bouts": [
       {
         "tournament": "January NAC",
@@ -11365,9 +10159,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "13"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "October NAC",
@@ -11392,12 +10184,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 3,
     "losses": 0,
     "total": 3,
-    "winRate": 100,
-    "clubs": [
-      "119",
-      "188",
-      "AGFC (CA)"
-    ],
+    "winRate": 1,
+    "clubs": ["AGFC (CA)"],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -11431,9 +10219,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "132"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "February NAC",
@@ -11451,9 +10237,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "27"
-    ],
+    "clubs": ["LAFAP"],
     "bouts": [
       {
         "tournament": "North Texas Roundup SYC/RCC",
@@ -11479,10 +10263,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "36",
-      "BERGENFC"
-    ],
+    "clubs": ["BERGENFC"],
     "bouts": [
       {
         "tournament": "March SJCC",
@@ -11504,29 +10285,16 @@ export const opponents: Record<string, OpponentData> = {
     "birthYear": 2013
   },
   "WAXLER Alex": {
-    "wins": 6,
+    "wins": 5,
     "losses": 0,
-    "total": 6,
-    "winRate": 100,
-    "clubs": [
-      "102",
-      "89",
-      "12",
-      "TIMMOREHOUSE"
-    ],
+    "total": 5,
+    "winRate": 1,
+    "clubs": ["TIMMOREHOUSE"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
         "event": "Y-14 Men's Saber",
         "date": "December 1, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Cadet Men's Saber",
-        "date": "November 30, 2024",
         "type": "Pool",
         "win": true,
         "score": "5-0"
@@ -11570,11 +10338,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "167",
-      "DYNAMOFC"
-    ],
+    "winRate": 1,
+    "clubs": ["DYNAMOFC"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
@@ -11596,25 +10361,14 @@ export const opponents: Record<string, OpponentData> = {
     "birthYear": 2013
   },
   "WINTERSET Mason": {
-    "wins": 2,
+    "wins": 1,
     "losses": 0,
-    "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "224",
-      "SBFA"
-    ],
+    "total": 1,
+    "winRate": 1,
+    "clubs": ["SBFA"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Cadet Men's Saber",
-        "date": "June 30, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "Summer Nationals",
         "event": "Cadet Men's Saber",
         "date": "June 30, 2025",
         "type": "Pool",
@@ -11628,10 +10382,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "29"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "May SJCC",
@@ -11649,9 +10401,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "14"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
@@ -11669,10 +10419,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "149",
-      "MANHATTANFC"
-    ],
+    "clubs": ["MANHATTANFC"],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
@@ -11697,10 +10444,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "53"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -11714,27 +10459,14 @@ export const opponents: Record<string, OpponentData> = {
     "birthYear": 2010
   },
   "WONG Ron": {
-    "wins": 5,
+    "wins": 4,
     "losses": 0,
-    "total": 5,
-    "winRate": 100,
-    "clubs": [
-      "110",
-      "60",
-      "25",
-      "LAFAP"
-    ],
+    "total": 4,
+    "winRate": 1,
+    "clubs": ["LAFAP"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-14 Men's Saber",
-        "date": "July 3, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Summer Nationals",
         "event": "Y-14 Men's Saber",
         "date": "July 3, 2025",
         "type": "Pool",
@@ -11772,10 +10504,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "2"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
@@ -11793,9 +10523,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "5"
-    ],
+    "clubs": ["Maryland"],
     "bouts": [
       {
         "tournament": "NoVA Knights RYC/RJCC",
@@ -11820,11 +10548,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "93",
-      "MIRACLEFC"
-    ],
+    "winRate": 1,
+    "clubs": ["MIRACLEFC"],
     "bouts": [
       {
         "tournament": "Fairfax Challenge SYC/RJCC",
@@ -11849,11 +10574,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "206",
-      "BAFC"
-    ],
+    "winRate": 1,
+    "clubs": ["BAFC"],
     "bouts": [
       {
         "tournament": "March NAC",
@@ -11878,12 +10600,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 2,
     "total": 4,
-    "winRate": 50,
-    "clubs": [
-      "8",
-      "58",
-      "MIRACLEFC"
-    ],
+    "winRate": 0.5,
+    "clubs": ["MIRACLEFC"],
     "bouts": [
       {
         "tournament": "NoVA Knights RYC/RJCC",
@@ -11924,10 +10642,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "22"
-    ],
+    "winRate": 1,
+    "clubs": ["TTFA"],
     "bouts": [
       {
         "tournament": "River City Regional Rumble RYC/RJCC",
@@ -11952,11 +10668,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "14",
-      "PREMIERFC"
-    ],
+    "winRate": 1,
+    "clubs": ["PREMIERFC"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -11981,11 +10694,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 1,
     "total": 2,
-    "winRate": 50,
-    "clubs": [
-      "18",
-      "28"
-    ],
+    "winRate": 0.5,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "January SJCC",
@@ -12010,10 +10720,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "146"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -12030,10 +10738,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "223"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
@@ -12050,11 +10756,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 1,
     "total": 2,
-    "winRate": 50,
-    "clubs": [
-      "32",
-      "15"
-    ],
+    "winRate": 0.5,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
@@ -12079,13 +10782,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 3,
     "total": 4,
-    "winRate": 25,
-    "clubs": [
-      "14",
-      "16",
-      "29",
-      "SBFA"
-    ],
+    "winRate": 0.25,
+    "clubs": ["SBFA"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
@@ -12126,11 +10824,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "13",
-      "146"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
@@ -12155,11 +10850,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "64",
-      "HALBERSTADT"
-    ],
+    "winRate": 1,
+    "clubs": ["HALBERSTADT"],
     "bouts": [
       {
         "tournament": "December SJCC + Para NAC",
@@ -12185,9 +10877,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [
-      "1"
-    ],
+    "clubs": ["EFA"],
     "bouts": [
       {
         "tournament": "NoVA Knights RYC/RJCC",
@@ -12210,19 +10900,10 @@ export const opponents: Record<string, OpponentData> = {
   },
   "YOOK Isaac": {
     "wins": 6,
-    "losses": 5,
-    "total": 11,
-    "winRate": 55,
-    "clubs": [
-      "162",
-      "38",
-      "59",
-      "96",
-      "74",
-      "8",
-      "25",
-      "TIMMOREHOUSE"
-    ],
+    "losses": 4,
+    "total": 10,
+    "winRate": 0.6,
+    "clubs": ["TIMMOREHOUSE", "MANHATTANFC"],
     "bouts": [
       {
         "tournament": "February NAC",
@@ -12281,14 +10962,6 @@ export const opponents: Record<string, OpponentData> = {
         "score": "5-4"
       },
       {
-        "tournament": "Cobra Challenge SYC/RCC",
-        "event": "Y-10 Men's Saber",
-        "date": "May 31, 2021",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      },
-      {
         "tournament": "SYC",
         "event": "Y-10 Men's Saber",
         "date": "May 31, 2021",
@@ -12319,11 +10992,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "5",
-      "24"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
@@ -12348,10 +11018,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "5"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Capital Czajkowski Cup #3",
@@ -12365,25 +11033,14 @@ export const opponents: Record<string, OpponentData> = {
     "birthYear": null
   },
   "ZENG Vito": {
-    "wins": 3,
+    "wins": 2,
     "losses": 0,
-    "total": 3,
-    "winRate": 100,
-    "clubs": [
-      "269",
-      "SPARTAK"
-    ],
+    "total": 2,
+    "winRate": 1,
+    "clubs": ["SPARTAK"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Junior Men's Saber",
-        "date": "June 28, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Summer Nationals",
         "event": "Junior Men's Saber",
         "date": "June 28, 2025",
         "type": "Pool",
@@ -12405,10 +11062,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "186"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "February NAC",
@@ -12425,11 +11080,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "168",
-      "SFA"
-    ],
+    "winRate": 1,
+    "clubs": ["SFA"],
     "bouts": [
       {
         "tournament": "March NAC and Parafencing National Championships",
@@ -12455,9 +11107,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "2"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "Fairfax Challenge SYC/RJCC",
@@ -12474,11 +11124,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "170",
-      "MANHATTANFC"
-    ],
+    "winRate": 1,
+    "clubs": ["MANHATTANFC"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
@@ -12503,11 +11150,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "112",
-      "CAN"
-    ],
+    "winRate": 1,
+    "clubs": ["CAN"],
     "bouts": [
       {
         "tournament": "March NAC",
@@ -12532,10 +11176,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "3"
-    ],
+    "winRate": 1,
+    "clubs": ["MIRACLEFC"],
     "bouts": [
       {
         "tournament": "Fairfax Challenge Summer ROC/RJCC/RYC/VET - Reg Re-Opens 12/28",
@@ -12560,11 +11202,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 1,
     "total": 2,
-    "winRate": 50,
-    "clubs": [
-      "21",
-      "57"
-    ],
+    "winRate": 0.5,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "November NAC",
@@ -12589,14 +11228,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 5,
     "losses": 2,
     "total": 7,
-    "winRate": 71,
-    "clubs": [
-      "116",
-      "17",
-      "11",
-      "26",
-      "44"
-    ],
+    "winRate": 0.71,
+    "clubs": ["TIMMOREHOUSE"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
@@ -12661,10 +11294,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 100,
-    "clubs": [
-      "130"
-    ],
+    "winRate": 1,
+    "clubs": [],
     "bouts": [
       {
         "tournament": "October NAC",
@@ -12681,11 +11312,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "49",
-      "BERGENFC"
-    ],
+    "winRate": 1,
+    "clubs": ["BERGENFC"],
     "bouts": [
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
@@ -12711,9 +11339,7 @@ export const opponents: Record<string, OpponentData> = {
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [
-      "157"
-    ],
+    "clubs": [],
     "bouts": [
       {
         "tournament": "October NAC",
@@ -12730,11 +11356,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "155",
-      "GFA"
-    ],
+    "winRate": 1,
+    "clubs": ["GFA"],
     "bouts": [
       {
         "tournament": "March NAC",
@@ -12759,11 +11382,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "200",
-      "CHN"
-    ],
+    "winRate": 1,
+    "clubs": ["CHN"],
     "bouts": [
       {
         "tournament": "March NAC",
@@ -12788,11 +11408,8 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 100,
-    "clubs": [
-      "153",
-      "SHERIDANFA"
-    ],
+    "winRate": 1,
+    "clubs": ["SHERIDANFA"],
     "bouts": [
       {
         "tournament": "March NAC",
