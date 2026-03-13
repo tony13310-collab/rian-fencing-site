@@ -132,23 +132,20 @@ export default function TournamentSearch({ onTournamentFound, onEventSelect, tou
           : "bg-white/[0.03] hover:bg-white/[0.06] border border-transparent"
       }`}
     >
-      <div className="flex items-start justify-between gap-3">
-        <div className="flex-1 min-w-0">
-          <div className="flex items-center gap-2">
-            <h3 className="text-white/90 font-bold text-sm truncate">{t.name}</h3>
-            {badge && (
-              <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold shrink-0 ${
-                badge === "LIVE" 
-                  ? "bg-red-500/20 text-red-400 border border-red-500/30 animate-pulse"
-                  : "bg-blue-500/10 text-blue-400 border border-blue-500/20"
-              }`}>
-                {badge}
-              </span>
-            )}
-          </div>
-          <p className="text-white/30 text-xs mt-1">{t.location}</p>
+      <div className="space-y-1">
+        <div className="flex items-start gap-2 flex-wrap">
+          <h3 className="text-white/90 font-bold text-sm">{t.name}</h3>
+          {badge && (
+            <span className={`text-[10px] px-2 py-0.5 rounded-full font-bold shrink-0 ${
+              badge === "LIVE" 
+                ? "bg-red-500/20 text-red-400 border border-red-500/30 animate-pulse"
+                : "bg-blue-500/10 text-blue-400 border border-blue-500/20"
+            }`}>
+              {badge}
+            </span>
+          )}
         </div>
-        <span className="text-white/20 text-xs shrink-0">{t.dates}</span>
+        <p className="text-white/30 text-xs">{t.location} • {t.dates}</p>
       </div>
     </button>
   );
