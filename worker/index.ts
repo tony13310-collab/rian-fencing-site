@@ -47,6 +47,24 @@ export default {
         return await handleFTLResults(eventId);
       }
 
+      // /api/ft/search?q=GERSTMANN — search FencingTracker
+      if (path === "/api/ft/search") {
+        return await handleFTSearch(url);
+      }
+
+      // /api/ft/profile?q=GERSTMANN+Max or /api/ft/profile/:usfaId
+      if (path.startsWith("/api/ft/profile")) {
+        const nameQuery = url.searchParams.get("q");
+        if (nameQuery) {
+          return await handleFTProfileByName(nameQuery);
+        }
+        const usfaId = path.replace("/api/ft/profile/", "");
+        if (usfaId && usfaId !== "") {
+          return await handleFTProfile(usfaId);
+        }
+        return jsonResponse({ error: "Missing q parameter or USFA ID" }, 400);
+      }
+
       // /api/fie/search?q=world+cup+sabre
       if (path === "/api/fie/search") {
         return await handleFIESearch(url);
@@ -392,6 +410,166 @@ async function handleFIESearch(url: URL): Promise<Response> {
     query,
   });
 }
+
+// ========== FencingTracker API ==========
+
+async function handleFTSearch(url: URL): Promise<Response> {
+  const q = url.searchParams.get("q") || "";
+  if (!q) return jsonResponse({ error: "Missing q parameter" }, 400);
+
+  const resp = await fetch("https://fencingtracker.com/search", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ query: q, limit: 10 }),
+  });
+
+  if (!resp.ok) return jsonResponse({ error: "FT search failed" }, 502);
+  const data: any = await resp.json();
+  return jsonResponse(data);
+}
+
+async function handleFTProfileByName(nameQuery: string): Promise<Response> {
+  // Search for the fencer first
+  const searchResp = await fetch("https://fencingtracker.com/search", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({ query: nameQuery, limit: 5 }),
+  });
+  if (!searchResp.ok) return jsonResponse({ error: "FT search failed" }, 502);
+  const searchData: any = await searchResp.json();
+  if (!searchData || searchData.length === 0) {
+    return jsonResponse({ error: "Fencer not found", query: nameQuery }, 404);
+  }
+  // Use the first result
+  const fencer = searchData[0];
+  return await handleFTProfile(String(fencer.usfa_id));
+}
+
+async function handleFTProfile(usfaId: string): Promise<Response> {
+  const headers = { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" };
+
+  // First we need to find the name slug — try fetching with redirect
+  // FencingTracker URLs are /p/{id}/{Name-Slug}
+  // Try search API to get the slug
+  let nameSlug = "";
+  try {
+    const searchResp = await fetch("https://fencingtracker.com/search", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ query: usfaId, limit: 5 }),
+    });
+    if (searchResp.ok) {
+      const searchData: any = await searchResp.json();
+      const match = searchData.find((s: any) => String(s.usfa_id) === String(usfaId));
+      if (match) nameSlug = match.name;
+    }
+  } catch {}
+
+  // If search didn't work, try common name formats
+  if (!nameSlug) {
+    // Try fetching the search page which might have the person
+    return jsonResponse({ error: "Could not find fencer slug for USFA ID " + usfaId }, 404);
+  }
+
+  // Fetch summary page
+  const summaryResp = await fetch(`https://fencingtracker.com/p/${usfaId}/${nameSlug}`, { headers });
+  if (!summaryResp.ok) return jsonResponse({ error: "Profile not found" }, 404);
+  const summaryHtml = await summaryResp.text();
+
+  // Parse birth year
+  const birthYearMatch = summaryHtml.match(/<h3[^>]*>\s*(\d{4})\s*<\/h3>/);
+  const birthYear = birthYearMatch ? parseInt(birthYearMatch[1]) : null;
+
+  // Parse name
+  const nameMatch = summaryHtml.match(/<h1[^>]*>([^<]+)<\/h1>/);
+  const name = nameMatch ? decodeHtmlEntities(nameMatch[1].trim()) : "";
+
+  // Parse current rating (first Saber row)
+  let currentRating = "";
+  const ratingMatch = summaryHtml.match(/Rating History[\s\S]*?<td>Saber<\/td>\s*<td>([A-Z]\d{2})<\/td>/);
+  if (ratingMatch) currentRating = ratingMatch[1];
+
+  // Club comes from the search step (nameSlug lookup)
+  let club = "";
+  // nameSlug is already from search, extract club from same search
+  try {
+    const clubSearchResp = await fetch("https://fencingtracker.com/search", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ query: usfaId, limit: 5 }),
+    });
+    if (clubSearchResp.ok) {
+      const clubData: any = await clubSearchResp.json();
+      const match = clubData.find((s: any) => String(s.usfa_id) === String(usfaId));
+      if (match) club = match.club || "";
+    }
+  } catch {}
+
+  // Parse podium finishes (current season = first data column)
+  const podiumData: any = {};
+  const goldMatch = summaryHtml.match(/Gold<\/td>\s*<td[^>]*>(\d+|-)<\/td>/);
+  const silverMatch = summaryHtml.match(/Silver<\/td>\s*<td[^>]*>(\d+|-)<\/td>/);
+  const bronzeMatch = summaryHtml.match(/Bronze<\/td>\s*<td[^>]*>(\d+|-)<\/td>/);
+  podiumData.gold = goldMatch && goldMatch[1] !== "-" ? parseInt(goldMatch[1]) : 0;
+  podiumData.silver = silverMatch && silverMatch[1] !== "-" ? parseInt(silverMatch[1]) : 0;
+  podiumData.bronze = bronzeMatch && bronzeMatch[1] !== "-" ? parseInt(bronzeMatch[1]) : 0;
+
+  // Parse recent results (last 365 days of saber events)
+  const results: any[] = [];
+  const resultPattern = /<tr>\s*<td[^>]*>([^<]+)<\/td>\s*<td[^>]*>([^<]+)<\/td>\s*<td[^>]*>(?:<a[^>]*>)?([^<]+)(?:<\/a>)?<\/td>\s*<td[^>]*>(\d+)\s*\/\s*(\d+)<\/td>\s*<td[^>]*>([^<]*)<\/td>/g;
+  let resultMatch;
+  while ((resultMatch = resultPattern.exec(summaryHtml)) !== null) {
+    const event = decodeHtmlEntities(resultMatch[3].trim());
+    // Only include Saber events
+    if (!event.toLowerCase().includes("saber")) continue;
+    results.push({
+      date: resultMatch[1].trim(),
+      tournament: decodeHtmlEntities(resultMatch[2].trim()),
+      event,
+      place: parseInt(resultMatch[4]),
+      total: parseInt(resultMatch[5]),
+      ratingEarned: resultMatch[6].trim(),
+    });
+  }
+
+  // Fetch strength page
+  let deStrength = 0;
+  let poolStrength = 0;
+  try {
+    const strengthResp = await fetch(`https://fencingtracker.com/p/${usfaId}/${name.replace(/ /g, '-')}/strength`, { headers });
+    if (strengthResp.ok) {
+      const strengthHtml = await strengthResp.text();
+      // Parse saber DE and Pool strength
+      const deMatch = strengthHtml.match(/Saber<\/td>\s*<td>DE<\/td>\s*<td>(\d+)<\/td>/);
+      const poolMatch = strengthHtml.match(/Saber<\/td>\s*<td>Pool<\/td>\s*<td>(\d+)<\/td>/);
+      if (deMatch) deStrength = parseInt(deMatch[1]);
+      if (poolMatch) poolStrength = parseInt(poolMatch[1]);
+    }
+  } catch {}
+
+  // Calculate pool win rate from recent saber results
+  // (We can approximate from place/total ratios)
+  const recentSaber = results.slice(0, 12); // last ~12 events
+  const avgPercentile = recentSaber.length > 0
+    ? recentSaber.reduce((sum, r) => sum + (1 - r.place / r.total), 0) / recentSaber.length
+    : 0;
+
+  return jsonResponse({
+    usfaId,
+    name,
+    birthYear,
+    club,
+    currentRating,
+    deStrength,
+    poolStrength,
+    podium: podiumData,
+    avgPercentile: Math.round(avgPercentile * 100),
+    recentResults: recentSaber.slice(0, 8), // last 8 saber events
+    totalEvents: results.length,
+  });
+}
+
+// ========== FTL Results/DE API ==========
 
 async function handleFTLResults(eventId: string): Promise<Response> {
   const headers = { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" };
