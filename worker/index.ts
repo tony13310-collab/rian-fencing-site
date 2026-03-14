@@ -139,16 +139,13 @@ async function handleFTLUpcoming(): Promise<Response> {
     const startDate = start.split("T")[0];
     const endDate = (end || start).split("T")[0];
 
+    // Only include National/SYC level tournaments
+    if (!isNationalOrSYC(name)) continue;
+
     if (startDate <= today && endDate >= today) {
-      // In progress
       inProgress.push(item);
     } else if (startDate > today) {
-      // Upcoming — only include national/SYC
-      if (isNationalOrSYC(name)) {
-        upcoming.push(item);
-      }
-      // Also add to national list for the full view
-      national.push(item);
+      upcoming.push(item);
     }
   }
 
