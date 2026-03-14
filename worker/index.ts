@@ -149,11 +149,52 @@ async function handleFTLUpcoming(): Promise<Response> {
     }
   }
 
-  // Sort upcoming by start date (soonest first)
-  upcoming.sort((a: any, b: any) => a.start.localeCompare(b.start));
-  inProgress.sort((a: any, b: any) => a.start.localeCompare(b.start));
+  // Verify each tournament has relevant Men's Saber events (Cadet/Junior/Div I)
+  const RELEVANT_EVENT_PATTERNS = [
+    /Cadet\s+Men.*Saber/i,
+    /Junior\s+Men.*Saber/i,
+    /Div\s*(ision)?\s*(I|1)\s+Men.*Saber/i,
+    /DV1MS/i,  // FTL abbreviation for Div I Men's Saber
+    /CDTMS/i,  // FTL abbreviation for Cadet Men's Saber
+    /JNRMS/i,  // FTL abbreviation for Junior Men's Saber
+  ];
 
-  return jsonResponse({ inProgress, upcoming, total: rows.length });
+  async function hasRelevantSaberEvents(tournamentId: string): Promise<boolean> {
+    try {
+      const scheduleUrl = `https://www.fencingtimelive.com/tournaments/eventSchedule/${tournamentId}`;
+      const schedResp = await fetch(scheduleUrl, {
+        headers: { "User-Agent": "Mozilla/5.0", "Accept": "text/html" },
+      });
+      if (!schedResp.ok) return true; // On error, include by default
+      const html = await schedResp.text();
+      return RELEVANT_EVENT_PATTERNS.some(p => p.test(html));
+    } catch {
+      return true; // On error, include by default
+    }
+  }
+
+  // Check all candidates in parallel (max 6 concurrent)
+  const allCandidates = [...inProgress, ...upcoming];
+  const verified = new Set<string>();
+  for (let i = 0; i < allCandidates.length; i += 6) {
+    const batch = allCandidates.slice(i, i + 6);
+    const results = await Promise.all(batch.map(async (item) => {
+      const has = await hasRelevantSaberEvents(item.id);
+      return { id: item.id, has };
+    }));
+    for (const r of results) {
+      if (r.has) verified.add(r.id);
+    }
+  }
+
+  const verifiedInProgress = inProgress.filter(item => verified.has(item.id));
+  const verifiedUpcoming = upcoming.filter(item => verified.has(item.id));
+
+  // Sort by start date
+  verifiedUpcoming.sort((a: any, b: any) => a.start.localeCompare(b.start));
+  verifiedInProgress.sort((a: any, b: any) => a.start.localeCompare(b.start));
+
+  return jsonResponse({ inProgress: verifiedInProgress, upcoming: verifiedUpcoming, total: rows.length });
 }
 
 async function handleFTLSearch(url: URL): Promise<Response> {
