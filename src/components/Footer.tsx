@@ -2,7 +2,7 @@
 
 import pkg from "../../package.json";
 
-const DATA_UPDATED = "2026-03-13";
+const DATA_UPDATED = new Date().toISOString().slice(0, 10);
 
 export default function Footer() {
   return (
