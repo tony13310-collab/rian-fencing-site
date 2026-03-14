@@ -1,9 +1,12 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { useParams } from "next/navigation";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { findOpponentBySlug } from "@/data/opponents";
+
+const API = "https://rian-fencing-api.tony13310.workers.dev";
 
 export default function OpponentDetailClient() {
   const { slug } = useParams<{ slug: string }>();
@@ -26,6 +29,23 @@ export default function OpponentDetailClient() {
 
   const [name, data] = result;
   const winPct = data.winRate;
+
+  // Fetch FT Strength
+  const [ftStr, setFtStr] = useState<{ de: number | null; pool: number | null } | null>(null);
+  useEffect(() => {
+    const cleanName = name
+      .replace(/\s+(I{2,3}|IV|V|Jr\.?|Sr\.?)\b/gi, "")
+      .replace(/\s*\([^)]*\)\s*/g, " ")
+      .replace(/\s+[A-Z]\.\s*/g, " ")
+      .replace(/\s+/g, " ")
+      .trim();
+    fetch(`${API}/api/ft/profile?q=${encodeURIComponent(cleanName)}`)
+      .then(r => r.ok ? r.json() : null)
+      .then(d => {
+        if (d) setFtStr({ de: d.deStrength ?? null, pool: d.poolStrength ?? null });
+      })
+      .catch(() => {});
+  }, [name]);
 
   // Group bouts by tournament+event
   const grouped: {
@@ -99,7 +119,14 @@ export default function OpponentDetailClient() {
           animate={{ opacity: 1, y: 0 }}
           className="text-center mb-8"
         >
-          <h1 className="text-2xl font-black text-white/90 mb-2">{name}</h1>
+          <h1 className="text-2xl font-black text-white/90 mb-1">{name}</h1>
+          {ftStr && (ftStr.pool != null || ftStr.de != null) && (
+            <p className="text-white/50 text-sm font-mono mb-2">
+              {ftStr.pool != null && <>P{ftStr.pool}</>}
+              {ftStr.pool != null && ftStr.de != null && " · "}
+              {ftStr.de != null && <>D{ftStr.de}</>}
+            </p>
+          )}
 
           {/* Big record display */}
           <div className="flex items-center justify-center gap-6 mb-4">
