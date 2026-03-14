@@ -1,8 +1,11 @@
 "use client";
 
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { opponents, getOpponentSlug, OpponentData } from "@/data/opponents";
+
+const API = "https://rian-fencing-api.tony13310.workers.dev";
 
 const RIAN_BIRTH_YEAR = 2011;
 const PEER_YEARS = [2010, 2011, 2012];
@@ -77,6 +80,38 @@ export default function OpponentsPreview() {
   const totalBouts = peers.reduce((s, p) => s + p.data.total, 0);
   const totalWins = peers.reduce((s, p) => s + p.data.wins, 0);
 
+  // Fetch FT DE Strength for all displayed peers
+  const allDisplayed = [...new Set([...topPeers, ...toughPeers].map(p => p.name))];
+  const [strMap, setStrMap] = useState<Record<string, number | null>>({});
+
+  useEffect(() => {
+    let cancelled = false;
+    async function fetchStr() {
+      const results: Record<string, number | null> = {};
+      // Fetch 3 at a time
+      for (let i = 0; i < allDisplayed.length; i += 3) {
+        const batch = allDisplayed.slice(i, i + 3);
+        await Promise.all(batch.map(async (name) => {
+          try {
+            const res = await fetch(`${API}/api/ft/profile?q=${encodeURIComponent(name)}`);
+            if (res.ok) {
+              const data = await res.json();
+              results[name] = data.deStrength ?? null;
+            } else {
+              results[name] = null;
+            }
+          } catch {
+            results[name] = null;
+          }
+        }));
+        if (!cancelled) setStrMap({ ...results });
+      }
+    }
+    if (allDisplayed.length > 0) fetchStr();
+    return () => { cancelled = true; };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, []);
+
   const yearColor: Record<number, string> = {
     2010: "text-orange-400/60",
     2011: "text-cyan-400/60",
@@ -142,6 +177,9 @@ export default function OpponentsPreview() {
                       <span className={`text-xs font-bold ${yearColor[peer.birthYear] || "text-white/60"} shrink-0`}>
                         {yearLabel(peer.birthYear)}
                       </span>
+                      {strMap[peer.name] != null && (
+                        <span className="text-white/40 text-xs font-mono shrink-0">{strMap[peer.name]}</span>
+                      )}
                     </div>
                     <div className="flex items-center gap-1.5 shrink-0">
                       <span className="text-white/70 text-xs whitespace-nowrap w-14 text-right font-mono">
@@ -190,6 +228,9 @@ export default function OpponentsPreview() {
                       <span className={`text-xs font-bold ${yearColor[peer.birthYear] || "text-white/60"} shrink-0`}>
                         {yearLabel(peer.birthYear)}
                       </span>
+                      {strMap[peer.name] != null && (
+                        <span className="text-white/40 text-xs font-mono shrink-0">{strMap[peer.name]}</span>
+                      )}
                     </div>
                     <div className="flex items-center gap-1.5 shrink-0">
                       <span className="text-white/50 text-xs whitespace-nowrap w-14 text-right font-mono">
