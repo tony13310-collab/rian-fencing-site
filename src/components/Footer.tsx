@@ -2,7 +2,7 @@
 
 import pkg from "../../package.json";
 
-const DATA_UPDATED = new Date().toISOString().slice(0, 10);
+const DATA_UPDATED = new Date().toISOString().replace("T", " ").slice(0, 19) + " UTC";
 
 export default function Footer() {
   return (
