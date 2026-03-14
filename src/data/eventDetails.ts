@@ -598,6 +598,14 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Capitol Clash SYC/RCC",
     event: "Y-14 Men's Saber",
     location: "Bethesda, MD",
+    de: [
+      { round: "", opponent: "LIU Aaron", club: "", score: "15-3", win: true },
+      { round: "", opponent: "NARAYAN Rishi", club: "", score: "15-8", win: true },
+      { round: "", opponent: "MERMEGAS Alexander", club: "", score: "15-8", win: true },
+      { round: "", opponent: "JOHNSON Leland", club: "", score: "15-7", win: true },
+      { round: "", opponent: "CHEN Anson", club: "", score: "15-1", win: true },
+      { round: "", opponent: "BIVIJI Ali", club: "", score: "15-14", win: true }
+    ],
     place: 1,
     total: 182,
     rating: "C25",
@@ -661,6 +669,9 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "May SJCC",
     event: "Cadet Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "LIU Yijin", club: "", score: "15-9", win: true }
+    ],
     place: 19,
     total: 91,
     rating: "",
@@ -691,6 +702,11 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "May SJCC",
     event: "Junior Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "WONG David", club: "", score: "15-10", win: true },
+      { round: "", opponent: "CHAN Elliott", club: "", score: "15-4", win: true },
+      { round: "", opponent: "SMITH Etienne", club: "", score: "15-8", win: true }
+    ],
     place: 16,
     total: 114,
     rating: "",
@@ -720,6 +736,12 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Fairfax Challenge SYC/RJCC",
     event: "Y-14 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "LOO Jason", club: "", score: "15-5", win: true },
+      { round: "", opponent: "LIM JUWANA Maximilian", club: "", score: "15-10", win: true },
+      { round: "", opponent: "TAKEBE Ren", club: "", score: "15-7", win: true },
+      { round: "", opponent: "GUREVICH Benjamin", club: "", score: "15-8", win: true }
+    ],
     place: 3,
     total: 96,
     rating: "",
@@ -750,6 +772,9 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "March NAC",
     event: "Y-14 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "MAKLIN David", club: "", score: "15-3", win: true }
+    ],
     place: 66,
     total: 273,
     rating: "",
@@ -780,6 +805,9 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "March NAC",
     event: "Cadet Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "YOOK Isaac", club: "", score: "15-4", win: true }
+    ],
     place: 44,
     total: 225,
     rating: "",
@@ -810,6 +838,10 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Junior Olympics",
     event: "Cadet Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "STURGEON Cole", club: "", score: "15-9", win: true },
+      { round: "", opponent: "KU Collin", club: "", score: "15-14", win: true }
+    ],
     place: 55,
     total: 286,
     rating: "",
@@ -840,6 +872,9 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Junior Olympics",
     event: "Junior Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "ZHAO Lucas", club: "", score: "15-14", win: true }
+    ],
     place: 188,
     total: 342,
     rating: "",
@@ -870,6 +905,9 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "December SJCC",
     event: "Junior Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "RADJABLI Maximillian", club: "", score: "15-11", win: true }
+    ],
     place: 63,
     total: 205,
     rating: "",
@@ -899,6 +937,9 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "December SJCC",
     event: "Cadet Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "LIM Kai", club: "", score: "15-8", win: true }
+    ],
     place: 35,
     total: 170,
     rating: "",
@@ -928,6 +969,9 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Cobra Challenge SYC/RCC/Y8",
     event: "Y-14 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "LEE Shane Gunn", club: "", score: "15-2", win: true }
+    ],
     place: 60,
     total: 142,
     rating: "",
@@ -958,6 +1002,13 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Cobra Challenge SYC/RCC/Y8",
     event: "Cadet Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "MERMEGAS Alexander", club: "", score: "15-14", win: true },
+      { round: "", opponent: "BALE ATMAN", club: "", score: "15-4", win: true },
+      { round: "", opponent: "BALE ATMAN", club: "", score: "15-8", win: true },
+      { round: "", opponent: "VISH Manyu", club: "", score: "15-3", win: true },
+      { round: "", opponent: "RINALDI Savio", club: "", score: "15-13", win: true }
+    ],
     place: 8,
     total: 104,
     rating: "",
@@ -988,6 +1039,9 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "November NAC",
     event: "Cadet Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "HU Chris", club: "", score: "15-9", win: true }
+    ],
     place: 149,
     total: 271,
     rating: "",
@@ -1018,6 +1072,13 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Summer Nationals",
     event: "Y-12 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "CHAMBERS Miles", club: "", score: "15-12", win: true },
+      { round: "", opponent: "KIM Eric", club: "", score: "15-10", win: true },
+      { round: "", opponent: "LIANG Preston", club: "", score: "15-8", win: true },
+      { round: "", opponent: "BRISENO Ethan", club: "", score: "15-7", win: true },
+      { round: "", opponent: "YUEN Caleb", club: "", score: "15-13", win: true }
+    ],
     place: 5,
     total: 230,
     rating: "",
@@ -1048,6 +1109,10 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Summer Nationals",
     event: "Y-14 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "HOLZ Lucas", club: "", score: "15-7", win: true },
+      { round: "", opponent: "PATEL Rayn", club: "", score: "15-8", win: true }
+    ],
     place: 40,
     total: 299,
     rating: "",
@@ -1078,6 +1143,11 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "March NAC",
     event: "Y-12 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "CHAMBERS Miles", club: "", score: "15-14", win: true },
+      { round: "", opponent: "SLOAN Ethan", club: "", score: "15-11", win: true },
+      { round: "", opponent: "LEE Brendan", club: "", score: "15-12", win: true }
+    ],
     place: 17,
     total: 192,
     rating: "",
@@ -1108,6 +1178,10 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "March NAC",
     event: "Y-14 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "STURGEON Cole", club: "", score: "15-6", win: true },
+      { round: "", opponent: "STURGEON Cole", club: "", score: "15-13", win: true }
+    ],
     place: 91,
     total: 248,
     rating: "",
@@ -1138,6 +1212,13 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Capitol Clash SYC/RCC",
     event: "Y-12 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "YU Ian", club: "", score: "15-12", win: true },
+      { round: "", opponent: "BIVIJI Adam", club: "", score: "15-4", win: true },
+      { round: "", opponent: "TANJGA Luka", club: "", score: "15-9", win: true },
+      { round: "", opponent: "LEE Aiden", club: "", score: "15-1", win: true },
+      { round: "", opponent: "YUEN Caleb", club: "", score: "15-9", win: true }
+    ],
     place: 3,
     total: 148,
     rating: "",
@@ -1168,6 +1249,11 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Capitol Clash SYC/RCC",
     event: "Y-14 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "TSAO Alister", club: "", score: "15-14", win: true },
+      { round: "", opponent: "BROOKS Isaac", club: "", score: "15-11", win: true },
+      { round: "", opponent: "YAO Zachary", club: "", score: "15-10", win: true }
+    ],
     place: 16,
     total: 185,
     rating: "E24",
@@ -1197,6 +1283,11 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Cobra Challenge SYC/RCC/Y8",
     event: "Y-12 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "BADMUS Joshua", club: "", score: "15-14", win: true },
+      { round: "", opponent: "LAU Kyrus", club: "", score: "15-13", win: true },
+      { round: "", opponent: "CHAN Ewan", club: "", score: "15-8", win: true }
+    ],
     place: 5,
     total: 119,
     rating: "",
@@ -1227,6 +1318,9 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Summer Nationals",
     event: "Y-12 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "BRIMMER Robert (Trey)", club: "", score: "15-12", win: true }
+    ],
     place: 53,
     total: 215,
     rating: "",
@@ -1257,6 +1351,9 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "March NAC",
     event: "Y-12 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "SIMS Elliot", club: "", score: "15-6", win: true }
+    ],
     place: 35,
     total: 172,
     rating: "",
@@ -1287,6 +1384,9 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Cobra Challenge SYC/RCC/Y8",
     event: "Y-12 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "KIM Daehwan(Benjamin)", club: "", score: "15-2", win: true }
+    ],
     place: 36,
     total: 118,
     rating: "",
@@ -1317,6 +1417,11 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Fairfax Challenge Fall RYC/RJCC",
     event: "Y-12 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "LIAO Sirui", club: "", score: "15-14", win: true },
+      { round: "", opponent: "BOYER Seth", club: "", score: "15-8", win: true },
+      { round: "", opponent: "BADMUS Joshua", club: "", score: "15-11", win: true }
+    ],
     place: 3,
     total: 21,
     rating: "",
@@ -1347,6 +1452,9 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Fairfax Challenge SYC/RJCC",
     event: "Y-12 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "MEHAN Nicholas", club: "", score: "15-4", win: true }
+    ],
     place: 46,
     total: 61,
     rating: "",
@@ -1377,6 +1485,10 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Fairfax Challenge SYC/RJCC",
     event: "Y-10 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "CHAMBERS Miles", club: "", score: "10-5", win: true },
+      { round: "", opponent: "CHAMBERS Miles", club: "", score: "10-3", win: true }
+    ],
     place: 30,
     total: 39,
     rating: "",
@@ -1406,6 +1518,10 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Capitol Clash SYC/RCC",
     event: "Y-8 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "DAI Zihou", club: "", score: "10-4", win: true },
+      { round: "", opponent: "KARAVAS Nicholas", club: "", score: "10-3", win: true }
+    ],
     place: 3,
     total: 18,
     rating: "",
@@ -1435,6 +1551,10 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Capitol Clash SYC/RCC",
     event: "Y-10 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "MEHAN Nicholas", club: "", score: "10-2", win: true },
+      { round: "", opponent: "MEHAN Nicholas", club: "", score: "10-3", win: true }
+    ],
     place: 57,
     total: 76,
     rating: "",
@@ -1464,6 +1584,10 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Cobra Challenge SYC/RCC/Y8",
     event: "Y-8 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "DAI Zihou", club: "", score: "10-6", win: true },
+      { round: "", opponent: "SHICK Cedric", club: "", score: "10-7", win: true }
+    ],
     place: 8,
     total: 22,
     rating: "",
@@ -1493,6 +1617,9 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Cobra Challenge SYC/RCC/Y8",
     event: "Y-10 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "BAI Evan", club: "", score: "10-3", win: true }
+    ],
     place: 44,
     total: 65,
     rating: "",
@@ -1523,6 +1650,9 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Cobra Challenge SYC/RCC/Y8",
     event: "Y-8 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "OH Aster", club: "", score: "10-3", win: true }
+    ],
     place: 14,
     total: 18,
     rating: "",
@@ -1552,6 +1682,9 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Summer Nationals",
     event: "Cadet Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "ZHAO Royce", club: "", score: "15-10", win: true }
+    ],
     place: 34,
     total: 266,
     rating: "",
@@ -1582,6 +1715,9 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "March SJCC",
     event: "Cadet Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "KATZ Ryan", club: "", score: "15-8", win: true }
+    ],
     place: 90,
     total: 117,
     rating: "",
@@ -1612,6 +1748,12 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Capital Czajkowski",
     event: "Senior Mixed Saber",
     location: "",
+    de: [
+      { round: "", opponent: "YUCEL Emine", club: "", score: "15-7", win: true },
+      { round: "", opponent: "MICHALSKI Brandon", club: "", score: "15-7", win: true },
+      { round: "", opponent: "RINALDI Savio", club: "", score: "15-7", win: true },
+      { round: "", opponent: "MILLS Matthew", club: "", score: "15-2", win: true }
+    ],
     place: 3,
     total: 27,
     rating: "",
@@ -1642,6 +1784,9 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "January NAC",
     event: "Cadet Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "GONZALEZ Jake", club: "", score: "15-10", win: true }
+    ],
     place: 93,
     total: 131,
     rating: "",
@@ -1672,6 +1817,10 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Ben Gutenberg",
     event: "Y-14 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "SRIVATS Vedh", club: "", score: "15-5", win: true },
+      { round: "", opponent: "ISAYENKO Daniel", club: "", score: "15-12", win: true }
+    ],
     place: 10,
     total: 93,
     rating: "",
@@ -1702,6 +1851,9 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "River City",
     event: "Cadet Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "HENRY Cadel", club: "", score: "15-13", win: true }
+    ],
     place: 17,
     total: 39,
     rating: "",
@@ -1732,6 +1884,13 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Mission SYC",
     event: "Y-12 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "GILBERT Ari", club: "", score: "15-3", win: true },
+      { round: "", opponent: "O\'KEEFE Brody", club: "", score: "15-2", win: true },
+      { round: "", opponent: "O\'KEEFE Brody", club: "", score: "15-12", win: true },
+      { round: "", opponent: "YAO John", club: "", score: "15-5", win: true },
+      { round: "", opponent: "SO Morgan", club: "", score: "15-12", win: true }
+    ],
     place: 3,
     total: 75,
     rating: "",
@@ -1762,6 +1921,11 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Mission SYC",
     event: "Y-14 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "LIEBOWITZ Carson", club: "", score: "15-10", win: true },
+      { round: "", opponent: "BROOKS Isaac", club: "", score: "15-14", win: true },
+      { round: "", opponent: "CLARK Aram", club: "", score: "15-10", win: true }
+    ],
     place: 8,
     total: 103,
     rating: "",
@@ -1791,6 +1955,11 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "NoVA Knights",
     event: "Cadet Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "RINALDI Savio", club: "", score: "15-13", win: true },
+      { round: "", opponent: "EYSTER Edison", club: "", score: "15-9", win: true },
+      { round: "", opponent: "YAO Zachary", club: "", score: "15-6", win: true }
+    ],
     place: 1,
     total: 23,
     rating: "",
@@ -1820,6 +1989,9 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "NoVA Knights",
     event: "Y-14 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "YANG Justin", club: "", score: "15-13", win: true }
+    ],
     place: 17,
     total: 41,
     rating: "",
@@ -1850,6 +2022,13 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "River City",
     event: "Y-14 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "BOLLU Viren", club: "", score: "15-9", win: true },
+      { round: "", opponent: "BREUER Daniel", club: "", score: "15-10", win: true },
+      { round: "", opponent: "BREUER Daniel", club: "", score: "15-8", win: true },
+      { round: "", opponent: "CHAWLA Abhishek", club: "", score: "15-12", win: true },
+      { round: "", opponent: "D\'AMELJ Edoardo", club: "", score: "15-13", win: true }
+    ],
     place: 2,
     total: 31,
     rating: "",
@@ -1880,6 +2059,9 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "River City",
     event: "Cadet Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "RINALDI Savio", club: "", score: "15-4", win: true }
+    ],
     place: 16,
     total: 33,
     rating: "",
@@ -1910,6 +2092,11 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "North Texas",
     event: "Y-14 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "LIU Guanyu", club: "", score: "15-12", win: true },
+      { round: "", opponent: "MILLER Joseph", club: "", score: "15-5", win: true },
+      { round: "", opponent: "LI AYDEN", club: "", score: "15-14", win: true }
+    ],
     place: 8,
     total: 67,
     rating: "",
@@ -1939,6 +2126,10 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "North Texas",
     event: "Y-12 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "LI Huangziyue", club: "", score: "15-8", win: true },
+      { round: "", opponent: "LIU Dylan", club: "", score: "15-7", win: true }
+    ],
     place: 11,
     total: 47,
     rating: "",
@@ -1968,6 +2159,9 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Fairfax",
     event: "Y-12 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "PAUL James", club: "", score: "15-6", win: true }
+    ],
     place: 10,
     total: 38,
     rating: "",
@@ -1998,6 +2192,9 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Ben Gutenberg",
     event: "Y-12 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "KUMAR Avinash", club: "", score: "15-5", win: true }
+    ],
     place: 10,
     total: 54,
     rating: "",
@@ -2028,6 +2225,11 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "River City",
     event: "Y-12 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "FENG Brendan", club: "", score: "15-10", win: true },
+      { round: "", opponent: "GRABOWSKI Stanley", club: "", score: "15-8", win: true },
+      { round: "", opponent: "PROSPER Nathaniel", club: "", score: "15-5", win: true }
+    ],
     place: 7,
     total: 28,
     rating: "",
@@ -2058,6 +2260,9 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Capitol Clash",
     event: "Y-12 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "LI AYDEN", club: "", score: "15-11", win: true }
+    ],
     place: 71,
     total: 122,
     rating: "",
@@ -2088,6 +2293,11 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "NoVA Knights",
     event: "Y-12 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "HARDRICK Noah", club: "", score: "15-12", win: true },
+      { round: "", opponent: "BONGIORNO Wesley", club: "", score: "15-8", win: true },
+      { round: "", opponent: "MUNOZ Jonas", club: "", score: "15-2", win: true }
+    ],
     place: 3,
     total: 30,
     rating: "",
@@ -2117,6 +2327,9 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "NoVA Knights",
     event: "Y-14 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "HU Andrew", club: "", score: "15-4", win: true }
+    ],
     place: 10,
     total: 17,
     rating: "",
@@ -2146,6 +2359,9 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "North Texas",
     event: "Y-12 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "HWANG Jayden", club: "", score: "15-8", win: true }
+    ],
     place: 37,
     total: 53,
     rating: "",
@@ -2176,6 +2392,10 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Summer Nationals",
     event: "Y-10 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "BOSITA Brennan", club: "", score: "10-2", win: true },
+      { round: "", opponent: "CIECIEREGA MATTHEW", club: "", score: "10-7", win: true }
+    ],
     place: 12,
     total: 96,
     rating: "",
@@ -2206,6 +2426,10 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "DCFC",
     event: "Y-10 Mixed Saber",
     location: "",
+    de: [
+      { round: "", opponent: "TAI Milton", club: "", score: "10-1", win: true },
+      { round: "", opponent: "TAI Milton", club: "", score: "10-9", win: true }
+    ],
     place: 1,
     total: 10,
     rating: "",
@@ -2239,6 +2463,10 @@ export const eventDetails: Record<string, EventDetail> = {
     tournament: "Fairfax",
     event: "Y-10 Men's Saber",
     location: "",
+    de: [
+      { round: "", opponent: "JOHNSON Leland", club: "", score: "10-8", win: true },
+      { round: "", opponent: "JOHNSON Leland", club: "", score: "10-5", win: true }
+    ],
     place: 6,
     total: 13,
     rating: "",
