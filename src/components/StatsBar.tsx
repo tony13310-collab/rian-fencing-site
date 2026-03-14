@@ -81,13 +81,13 @@ export default function StatsBar() {
     {
       label: "Pool Bouts",
       value: poolBouts.toString(),
-      sub: "All time",
+      sub: "STR 2279",
       color: "from-sky-400 to-blue-500",
     },
     {
       label: "DE Bouts",
       value: deBouts.toString(),
-      sub: "All time",
+      sub: "STR 2608",
       color: "from-teal-400 to-cyan-500",
     },
 
