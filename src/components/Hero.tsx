@@ -45,12 +45,12 @@ export default function Hero() {
 
       {/* Fencing saber silhouette decoration */}
       <motion.div
-        className="absolute right-10 top-1/2 -translate-y-1/2 text-[200px] opacity-[0.03] font-black select-none hidden lg:block"
+        className="absolute right-10 top-1/2 -translate-y-1/2 opacity-[0.03] select-none hidden lg:block"
         initial={{ x: 100, opacity: 0 }}
         animate={{ x: 0, opacity: 0.03 }}
         transition={{ duration: 1.5, delay: 0.5 }}
       >
-        🤺
+        <img src="/fencer-duel.png" alt="" style={{ height: 200, width: 'auto' }} />
       </motion.div>
 
       <div className="relative z-10 text-center px-4 sm:px-6 max-w-4xl w-full">
