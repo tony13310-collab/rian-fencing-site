@@ -93,7 +93,14 @@ export default function OpponentsPreview() {
         const batch = allDisplayed.slice(i, i + 3);
         await Promise.all(batch.map(async (name) => {
           try {
-            const res = await fetch(`${API}/api/ft/profile?q=${encodeURIComponent(name)}`);
+            // Clean name: remove suffixes (II/III/IV/V/Jr/Sr), parenthesized nicknames, middle initials
+            const cleanName = name
+              .replace(/\s+(I{2,3}|IV|V|Jr\.?|Sr\.?)\b/gi, "")
+              .replace(/\s*\([^)]*\)\s*/g, " ")
+              .replace(/\s+[A-Z]\.\s*/g, " ")
+              .replace(/\s+/g, " ")
+              .trim();
+            const res = await fetch(`${API}/api/ft/profile?q=${encodeURIComponent(cleanName)}`);
             if (res.ok) {
               const data = await res.json();
               results[name] = { de: data.deStrength ?? null, pool: data.poolStrength ?? null };
