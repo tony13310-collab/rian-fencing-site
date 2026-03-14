@@ -82,12 +82,12 @@ export default function OpponentsPreview() {
 
   // Fetch FT DE Strength for all displayed peers
   const allDisplayed = [...new Set([...topPeers, ...toughPeers].map(p => p.name))];
-  const [strMap, setStrMap] = useState<Record<string, number | null>>({});
+  const [strMap, setStrMap] = useState<Record<string, { de: number | null; pool: number | null }>>({});
 
   useEffect(() => {
     let cancelled = false;
     async function fetchStr() {
-      const results: Record<string, number | null> = {};
+      const results: Record<string, { de: number | null; pool: number | null }> = {};
       // Fetch 3 at a time
       for (let i = 0; i < allDisplayed.length; i += 3) {
         const batch = allDisplayed.slice(i, i + 3);
@@ -96,12 +96,12 @@ export default function OpponentsPreview() {
             const res = await fetch(`${API}/api/ft/profile?q=${encodeURIComponent(name)}`);
             if (res.ok) {
               const data = await res.json();
-              results[name] = data.deStrength ?? null;
+              results[name] = { de: data.deStrength ?? null, pool: data.poolStrength ?? null };
             } else {
-              results[name] = null;
+              results[name] = { de: null, pool: null };
             }
           } catch {
-            results[name] = null;
+            results[name] = { de: null, pool: null };
           }
         }));
         if (!cancelled) setStrMap({ ...results });
@@ -177,8 +177,12 @@ export default function OpponentsPreview() {
                       <span className={`text-xs font-bold ${yearColor[peer.birthYear] || "text-white/60"} shrink-0`}>
                         {yearLabel(peer.birthYear)}
                       </span>
-                      {strMap[peer.name] != null && (
-                        <span className="text-white/40 text-xs font-mono shrink-0">{strMap[peer.name]}</span>
+                      {strMap[peer.name] && (
+                        <span className="text-white/40 text-xs font-mono shrink-0">
+                          {strMap[peer.name].pool != null && <>P{strMap[peer.name].pool}</>}
+                          {strMap[peer.name].pool != null && strMap[peer.name].de != null && " "}
+                          {strMap[peer.name].de != null && <>D{strMap[peer.name].de}</>}
+                        </span>
                       )}
                     </div>
                     <div className="flex items-center gap-1.5 shrink-0">
@@ -228,8 +232,12 @@ export default function OpponentsPreview() {
                       <span className={`text-xs font-bold ${yearColor[peer.birthYear] || "text-white/60"} shrink-0`}>
                         {yearLabel(peer.birthYear)}
                       </span>
-                      {strMap[peer.name] != null && (
-                        <span className="text-white/40 text-xs font-mono shrink-0">{strMap[peer.name]}</span>
+                      {strMap[peer.name] && (
+                        <span className="text-white/40 text-xs font-mono shrink-0">
+                          {strMap[peer.name].pool != null && <>P{strMap[peer.name].pool}</>}
+                          {strMap[peer.name].pool != null && strMap[peer.name].de != null && " "}
+                          {strMap[peer.name].de != null && <>D{strMap[peer.name].de}</>}
+                        </span>
                       )}
                     </div>
                     <div className="flex items-center gap-1.5 shrink-0">
