@@ -66,7 +66,7 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
 
       <div className="relative z-10 max-w-sm w-full text-center">
         <div className="mb-6">
-          <img src="/fencer-duel.png" style={{ height: 72, width: 'auto', display: 'inline-block' }} alt="Fencing duel" />
+          <img src="/centaur-fencer.jpg" style={{ height: 120, width: 'auto', display: 'inline-block', borderRadius: 16 }} alt="Centaur fencer" />
         </div>
 
         <div className="mb-8">
