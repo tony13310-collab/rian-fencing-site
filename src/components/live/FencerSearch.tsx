@@ -1,10 +1,26 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import type { FTProfile } from "./EventDashboard";
 import { opponents } from "@/data/opponents";
 
 const API_BASE = "https://rian-fencing-api.tony13310.workers.dev";
+const HISTORY_KEY = "fencer-search-history";
+const MAX_HISTORY = 10;
+
+function getSearchHistory(): { name: string; usfa_id: number; club: string; ts: number }[] {
+  if (typeof window === "undefined") return [];
+  try {
+    return JSON.parse(localStorage.getItem(HISTORY_KEY) || "[]");
+  } catch { return []; }
+}
+
+function addToHistory(entry: { name: string; usfa_id: number; club: string }) {
+  const history = getSearchHistory().filter(h => h.usfa_id !== entry.usfa_id);
+  history.unshift({ ...entry, ts: Date.now() });
+  if (history.length > MAX_HISTORY) history.length = MAX_HISTORY;
+  localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
+}
 
 export default function FencerSearch() {
   const [query, setQuery] = useState("");
@@ -13,6 +29,11 @@ export default function FencerSearch() {
   const [selectedFencer, setSelectedFencer] = useState<FTProfile | null>(null);
   const [loadingProfile, setLoadingProfile] = useState(false);
   const [error, setError] = useState("");
+  const [history, setHistory] = useState<{ name: string; usfa_id: number; club: string; ts: number }[]>([]);
+
+  useEffect(() => {
+    setHistory(getSearchHistory());
+  }, []);
 
   async function handleSearch() {
     const words = query.trim().split(/\s+/);
@@ -57,6 +78,10 @@ export default function FencerSearch() {
   async function selectFencer(f: { usfa_id: number; name: string; club: string }) {
     setLoadingProfile(true);
     setSelectedFencer(null);
+
+    // Save to search history
+    addToHistory({ name: f.name, usfa_id: f.usfa_id, club: f.club });
+    setHistory(getSearchHistory());
 
     try {
       const resp = await fetch(`${API_BASE}/api/ft/profile/${f.usfa_id}`);
@@ -134,6 +159,22 @@ export default function FencerSearch() {
           {searching ? "..." : "Search"}
         </button>
       </div>
+
+      {/* Recent searches */}
+      {history.length > 0 && !selectedFencer && results.length === 0 && (
+        <div className="flex flex-wrap gap-2">
+          {history.map((h) => (
+            <button
+              key={h.usfa_id}
+              onClick={() => selectFencer({ usfa_id: h.usfa_id, name: h.name, club: h.club })}
+              className="px-3 py-1.5 bg-white/[0.06] hover:bg-white/[0.12] border border-white/10 rounded-lg text-sm text-white/70 hover:text-white transition-colors"
+            >
+              {h.name.replace(/-/g, " ")}
+              {h.club && <span className="text-white/40 ml-1.5 text-xs">{h.club}</span>}
+            </button>
+          ))}
+        </div>
+      )}
 
       {/* Search results dropdown */}
       {results.length > 0 && !selectedFencer && (
