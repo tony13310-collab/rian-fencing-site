@@ -50,7 +50,29 @@ export default function FencerSearch() {
       const resp = await fetch(`${API_BASE}/api/ft/search-saber?q=${encodeURIComponent(query)}`);
       const data = await resp.json();
       if (Array.isArray(data) && data.length > 0) {
-        setResults(data);
+        // Sort by relevance: exact name match first, then partial match
+        const qParts = query.trim().toLowerCase().split(/\s+/);
+        const qFirst = qParts[0];
+        const qLast = qParts.length > 1 ? qParts[qParts.length - 1] : "";
+        const sorted = [...data].sort((a: any, b: any) => {
+          const aName = (a.name || "").toLowerCase().replace(/-/g, " ");
+          const bName = (b.name || "").toLowerCase().replace(/-/g, " ");
+          const aParts = aName.split(" ");
+          const bParts = bName.split(" ");
+          // Exact last name match scores higher
+          const aLastExact = aParts.some((p: string) => p === qLast) ? 0 : 1;
+          const bLastExact = bParts.some((p: string) => p === qLast) ? 0 : 1;
+          if (aLastExact !== bLastExact) return aLastExact - bLastExact;
+          // Exact first name match
+          const aFirstExact = aParts.some((p: string) => p === qFirst) ? 0 : 1;
+          const bFirstExact = bParts.some((p: string) => p === qFirst) ? 0 : 1;
+          if (aFirstExact !== bFirstExact) return aFirstExact - bFirstExact;
+          // Has rating > no rating
+          const aRated = a.currentRating && a.currentRating !== "U" ? 0 : 1;
+          const bRated = b.currentRating && b.currentRating !== "U" ? 0 : 1;
+          return aRated - bRated;
+        });
+        setResults(sorted);
         // Check if any result has the query as actual surname
         const qLower = query.trim().toLowerCase();
         const hasSurnameMatch = data.some((f: any) => {
