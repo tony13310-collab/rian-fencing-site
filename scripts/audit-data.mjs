@@ -1,185 +1,231 @@
 #!/usr/bin/env node
-// Comprehensive data audit: check consistency across all data files
+/**
+ * Data Integrity Audit
+ * 
+ * Cross-checks events.ts, eventDetails.ts, and opponents.ts for:
+ * 1. Events missing pool data
+ * 2. Events missing DE data
+ * 3. Opponents referenced in eventDetails but missing from opponents.ts
+ * 4. Bout count mismatches in opponent records
+ * 5. H2H win/loss/total counts that don't match actual bouts
+ */
 
-import { readFileSync } from 'fs';
-import { dirname, join } from 'path';
-import { fileURLToPath } from 'url';
+import fs from 'fs';
 
-const __dirname = dirname(fileURLToPath(import.meta.url));
-const srcData = join(__dirname, '..', 'src', 'data');
+// ─── Load data ───
 
-const eventsContent = readFileSync(join(srcData, 'events.ts'), 'utf8');
-const profileContent = readFileSync(join(srcData, 'profile.ts'), 'utf8');
-const edContent = readFileSync(join(srcData, 'eventDetails.ts'), 'utf8');
+const eventsRaw = fs.readFileSync('src/data/events.ts', 'utf8');
+const detailsRaw = fs.readFileSync('src/data/eventDetails.ts', 'utf8');
+const opponentsRaw = fs.readFileSync('src/data/opponents.ts', 'utf8');
 
-const issues = [];
-const warnings = [];
+// ─── Parse events.ts ───
 
-// === 1. Parse events.ts ===
-const eventEntries = [];
-const eventRegex = /\{\s*date:\s*"([^"]+)",\s*tournament:\s*"([^"]+)",\s*event:\s*"([^"]+)",\s*category:\s*"([^"]+)",\s*level:\s*"([^"]+)",\s*place:\s*(\d+|null),\s*total:\s*(\d+|null),\s*rating:\s*"([^"]*)"/g;
-let m;
-while ((m = eventRegex.exec(eventsContent)) !== null) {
-  eventEntries.push({
-    date: m[1], tournament: m[2], event: m[3], category: m[4],
-    level: m[5], place: m[6] === 'null' ? null : parseInt(m[6]),
-    total: m[7] === 'null' ? null : parseInt(m[7]), rating: m[8]
-  });
-}
-console.log(`\n=== DATA AUDIT ===\n`);
-console.log(`Events in events.ts: ${eventEntries.length}`);
-
-// === 2. Check profile.ts hardcoded values ===
-console.log(`\n--- profile.ts checks ---`);
-
-// Check rating
-const ratingMatch = profileContent.match(/rating:\s*"([^"]+)"/);
-const profileRating = ratingMatch?.[1];
-// Find highest rating in events.ts
-const ratings = eventEntries.filter(e => e.rating).map(e => e.rating);
-const ratingOrder = ['A', 'B', 'C', 'D', 'E', 'U'];
-const highestRating = ratings.sort((a, b) => {
-  const ai = ratingOrder.indexOf(a[0]);
-  const bi = ratingOrder.indexOf(b[0]);
-  return ai - bi;
-})[0];
-console.log(`  Profile rating: ${profileRating}, Highest from events: ${highestRating || 'none'}`);
-if (profileRating !== highestRating && highestRating) {
-  warnings.push(`Profile rating "${profileRating}" may not match events highest "${highestRating}"`);
+function parseEvents() {
+  const events = [];
+  const eventRegex = /date:\s*"([^"]+)"[^}]*tournament:\s*"([^"]+)"[^}]*event:\s*"([^"]+)"[^}]*category:\s*"([^"]+)"[^}]*level:\s*"([^"]+)"[^}]*place:\s*(\d+)[^}]*total:\s*(\d+)/g;
+  let m;
+  while ((m = eventRegex.exec(eventsRaw)) !== null) {
+    events.push({
+      date: m[1],
+      tournament: m[2],
+      event: m[3],
+      category: m[4],
+      level: m[5],
+      place: parseInt(m[6]),
+      total: parseInt(m[7]),
+    });
+  }
+  return events;
 }
 
-// Check rankings are hardcoded
-const rankingsMatch = profileContent.match(/currentRankings:\s*\[([\s\S]*?)\]/);
-if (rankingsMatch) {
-  issues.push(`⚠️ profile.ts: currentRankings is HARDCODED - must manually update when rankings change`);
+// ─── Parse eventDetails keys ───
+
+function parseDetailKeys() {
+  const keys = new Set();
+  const keyRegex = /"([^"]+)":\s*\{[\s\S]*?id:\s*"/g;
+  let m;
+  while ((m = keyRegex.exec(detailsRaw)) !== null) {
+    keys.add(m[1]);
+  }
+  return keys;
 }
 
-// Check achievements are hardcoded
-const achievementsMatch = profileContent.match(/achievements:\s*\[([\s\S]*?)\],/);
-if (achievementsMatch) {
-  issues.push(`⚠️ profile.ts: achievements is HARDCODED - won't update when new achievements happen`);
-}
+// ─── Check event details for pool/DE ───
 
-// Check profile.seasons duplicates events.ts data
-if (profileContent.includes('seasons = [')) {
-  issues.push(`🔴 profile.ts: "seasons" array DUPLICATES events.ts data with DIFFERENT structure — data can get out of sync`);
+function checkDetails() {
+  const issues = [];
   
-  // Check for mismatches
-  const profileEventsRegex = /place:\s*(\d+|null),\s*total:\s*(\d+|null)/g;
-  let pm;
-  const profileResults = [];
-  while ((pm = profileEventsRegex.exec(profileContent)) !== null) {
-    profileResults.push({ place: pm[1], total: pm[2] });
+  // Find all event detail entries
+  const entryRegex = /"([^"]+)":\s*\{[^}]*id:\s*"[^"]*"/g;
+  let m;
+  while ((m = entryRegex.exec(detailsRaw)) !== null) {
+    const key = m[1];
+    // Find the full entry
+    const start = m.index;
+    let braceCount = 0;
+    let end = start;
+    let foundOpen = false;
+    for (let i = start; i < detailsRaw.length; i++) {
+      if (detailsRaw[i] === '{') { braceCount++; foundOpen = true; }
+      if (detailsRaw[i] === '}') { braceCount--; }
+      if (foundOpen && braceCount === 0) { end = i + 1; break; }
+    }
+    const entry = detailsRaw.substring(start, end);
+    
+    // Check for pool
+    const hasPool = entry.includes('pool:') && !entry.includes('pool: undefined');
+    const hasPoolBouts = entry.includes('bouts: [') && !entry.match(/bouts:\s*\[\s*\]/);
+    
+    // Check for DE
+    const hasDe = entry.includes('de: [');
+    const hasDeData = hasDe && !entry.match(/de:\s*\[\s*\]/);
+    
+    if (!hasPool || !hasPoolBouts) {
+      issues.push({ key, type: 'MISSING_POOL', detail: 'No pool data' });
+    }
+    if (!hasDeData) {
+      issues.push({ key, type: 'MISSING_DE', detail: 'No DE data' });
+    }
+    
+    // Extract opponents from pool bouts and DE bouts
+    const allOpps = [...entry.matchAll(/opponent:\s*"([^"]+)"/g)].map(m => m[1]);
+    for (const opp of allOpps) {
+      if (opp === 'Unknown' || opp === 'BYE') continue;
+      // Handle both escaped and unescaped quotes in opponent names
+      const oppClean = opp.replace(/\\'/g, "'");
+      if (!opponentsRaw.includes(`"${oppClean}"`)) {
+        issues.push({ key, type: 'MISSING_OPPONENT', detail: `Opponent "${oppClean}" not in opponents.ts` });
+      }
+    }
   }
-  console.log(`  Profile seasons has ${profileResults.length} event results`);
+  
+  return issues;
 }
 
-// === 3. Check seasonMeta hardcoded values ===
-console.log(`\n--- seasonMeta checks ---`);
-const seasonMetaMatch = eventsContent.match(/seasonMeta:\s*SeasonMeta\[\]\s*=\s*\[([\s\S]*?)\];/);
-if (seasonMetaMatch) {
-  issues.push(`⚠️ events.ts: seasonMeta (ratings, rankings) is HARDCODED - must manually update each season`);
-}
+// ─── Check opponent stats ───
 
-// === 4. Check events.ts comment header ===
-const headerMatch = eventsContent.match(/\/\/.*?(\d+) events/);
-if (headerMatch) {
-  const headerCount = parseInt(headerMatch[1]);
-  if (headerCount !== eventEntries.length) {
-    issues.push(`🔴 events.ts: Header says "${headerCount} events" but actually has ${eventEntries.length}`);
+function checkOpponentStats() {
+  const issues = [];
+  
+  // Parse each opponent
+  const oppRegex = /"([A-Z][^"]+)":\s*\{[^}]*"wins":\s*(\d+)[^}]*"losses":\s*(\d+)[^}]*"total":\s*(\d+)/g;
+  let m;
+  while ((m = oppRegex.exec(opponentsRaw)) !== null) {
+    const name = m[1];
+    const declaredWins = parseInt(m[2]);
+    const declaredLosses = parseInt(m[3]);
+    const declaredTotal = parseInt(m[4]);
+    
+    // Count actual bouts
+    const nameIdx = opponentsRaw.indexOf(`"${name}"`);
+    const boutsIdx = opponentsRaw.indexOf('"bouts":', nameIdx);
+    if (boutsIdx === -1) continue;
+    
+    // Find bouts array
+    const arrayStart = opponentsRaw.indexOf('[', boutsIdx);
+    let bracketCount = 0;
+    let arrayEnd = arrayStart;
+    for (let i = arrayStart; i < opponentsRaw.length; i++) {
+      if (opponentsRaw[i] === '[') bracketCount++;
+      if (opponentsRaw[i] === ']') bracketCount--;
+      if (bracketCount === 0) { arrayEnd = i + 1; break; }
+    }
+    const boutsStr = opponentsRaw.substring(arrayStart, arrayEnd);
+    
+    const actualWins = (boutsStr.match(/"win":\s*true/g) || []).length;
+    const actualLosses = (boutsStr.match(/"win":\s*false/g) || []).length;
+    const actualTotal = actualWins + actualLosses;
+    
+    if (declaredWins !== actualWins || declaredLosses !== actualLosses || declaredTotal !== actualTotal) {
+      issues.push({
+        name,
+        type: 'STATS_MISMATCH',
+        detail: `Declared: ${declaredWins}W-${declaredLosses}L (${declaredTotal}) / Actual: ${actualWins}W-${actualLosses}L (${actualTotal})`
+      });
+    }
   }
+  
+  return issues;
 }
 
-// === 5. Check eventDetails.ts coverage ===
-console.log(`\n--- eventDetails.ts checks ---`);
-const edIds = [];
-const edIdRegex = /id:\s*"([^"]+)"/g;
-while ((m = edIdRegex.exec(edContent)) !== null) {
-  edIds.push(m[1]);
-}
-console.log(`  Event details: ${edIds.length} entries`);
+// ─── Check events.ts vs eventDetails.ts ───
 
-// Check which events have details
-let missingDetails = 0;
-for (const ev of eventEntries) {
-  const expectedId = `${ev.date}_${ev.event.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase()}`;
-  if (!edIds.includes(expectedId)) {
-    missingDetails++;
+function checkEventsVsDetails() {
+  const events = parseEvents();
+  const detailKeys = parseDetailKeys();
+  const issues = [];
+  
+  for (const evt of events) {
+    const slug = evt.event.toLowerCase().replace(/[^a-z0-9]+/g, '-').replace(/-$/, '');
+    const key = `${evt.date}_${slug}`;
+    if (!detailKeys.has(key)) {
+      issues.push({ type: 'NO_DETAIL', detail: `${evt.date} ${evt.event} — no entry in eventDetails.ts (key: ${key})` });
+    }
   }
-}
-console.log(`  Events WITHOUT details: ${missingDetails}`);
-
-// === 6. Check pool data consistency ===
-console.log(`\n--- Pool data consistency ---`);
-// Count events with poolSeed in events.ts
-const poolSeedCount = (eventsContent.match(/poolSeed:/g) || []).length;
-console.log(`  Events with poolSeed in events.ts: ${poolSeedCount}`);
-
-// Count pool entries in eventDetails
-const poolCount = (edContent.match(/pool:\s*\{/g) || []).length;
-console.log(`  Events with pool in eventDetails: ${poolCount}`);
-
-// === 7. Check opponents.ts ===
-console.log(`\n--- opponents.ts checks ---`);
-const opContent = readFileSync(join(srcData, 'opponents.ts'), 'utf8');
-const opHeaderMatch = opContent.match(/(\d+) opponents, (\d+) bouts/);
-if (opHeaderMatch) {
-  console.log(`  Header: ${opHeaderMatch[1]} opponents, ${opHeaderMatch[2]} bouts`);
+  
+  return issues;
 }
 
-// Check for opponents with clubs as numbers (FencingTracker artifact)
-const numClubMatches = opContent.match(/"clubs":\s*\[\s*"(\d+)"/g);
-if (numClubMatches) {
-  warnings.push(`opponents.ts: ${numClubMatches.length} opponents have numeric club IDs (FencingTracker artifact) instead of club names`);
+// ─── Run ───
+
+console.log('🔍 Running data integrity audit...\n');
+
+const events = parseEvents();
+console.log(`📦 Events: ${events.length}`);
+
+// 1. Events vs Details
+const evtDetailIssues = checkEventsVsDetails();
+if (evtDetailIssues.length > 0) {
+  console.log(`\n❌ Events missing from eventDetails.ts: ${evtDetailIssues.length}`);
+  evtDetailIssues.forEach(i => console.log(`   ${i.detail}`));
+} else {
+  console.log('✅ All events have matching eventDetails entries');
 }
 
-// === 8. Check pool-bouts.ts vs eventDetails ===
-console.log(`\n--- pool-bouts.ts checks ---`);
-const pbContent = readFileSync(join(srcData, 'pool-bouts.ts'), 'utf8');
-const pbIds = (pbContent.match(/"[A-F0-9]{32}"/g) || []).map(s => s.replace(/"/g, ''));
-console.log(`  FTL event IDs in pool-bouts.ts: ${pbIds.length}`);
-issues.push(`⚠️ pool-bouts.ts: Separate file with FTL event IDs — REDUNDANT with eventDetails.ts pool data`);
+// 2. Pool/DE/Opponent checks
+const detailIssues = checkDetails();
+const poolIssues = detailIssues.filter(i => i.type === 'MISSING_POOL');
+const deIssues = detailIssues.filter(i => i.type === 'MISSING_DE');
+const oppIssues = detailIssues.filter(i => i.type === 'MISSING_OPPONENT');
 
-// === 9. Detect all hardcoded values that should be dynamic ===
-console.log(`\n\n=== HARDCODED vs DYNAMIC ANALYSIS ===\n`);
-
-const hardcoded = [
-  { file: 'profile.ts', field: 'rating', desc: 'Current rating "A26"', fix: 'Compute from events.ts (find latest non-empty rating)' },
-  { file: 'profile.ts', field: 'currentRankings', desc: 'Y-14 #2, Cadet #6, Junior #50', fix: 'Must be updated manually (rankings come from USA Fencing, not computable)' },
-  { file: 'profile.ts', field: 'achievements', desc: '6 hardcoded achievement cards', fix: 'Auto-generate from events (golds, top finishes, rating milestones)' },
-  { file: 'profile.ts', field: 'seasons', desc: 'Duplicate event list with different schema', fix: 'DELETE — use allEvents from events.ts instead' },
-  { file: 'profile.ts', field: 'bio', desc: 'Static bio text', fix: 'OK to keep static (subjective text)' },
-  { file: 'events.ts', field: 'seasonMeta.rating', desc: 'Hardcoded season highest rating', fix: 'Compute from events in that season' },
-  { file: 'events.ts', field: 'seasonMeta.rankings', desc: 'Hardcoded national rankings per season', fix: 'Must update manually (external data)' },
-  { file: 'events.ts', field: 'seasonOrder', desc: 'Hardcoded list of seasons', fix: 'Compute from unique seasons in allEvents' },
-  { file: 'events.ts', field: 'header comment', desc: '"71 events"', fix: 'Remove or auto-generate' },
-  { file: 'opponents.ts', field: 'header comment', desc: '"405 opponents, 944 bouts"', fix: 'Remove or auto-generate' },
-  { file: 'opponents.ts', field: 'clubs', desc: 'Many are numeric IDs from FencingTracker', fix: 'Map to club names' },
-];
-
-console.log('File              | Field              | Issue');
-console.log('------------------|--------------------|------');
-for (const h of hardcoded) {
-  console.log(`${h.file.padEnd(18)}| ${h.field.padEnd(19)}| ${h.desc}`);
-  console.log(`${''.padEnd(18)}| ${''.padEnd(19)}| → Fix: ${h.fix}`);
+if (poolIssues.length > 0) {
+  console.log(`\n⚠️  Events missing pool data: ${poolIssues.length}`);
+  poolIssues.forEach(i => console.log(`   ${i.key}`));
+} else {
+  console.log('✅ All events have pool data');
 }
 
-// === SUMMARY ===
-console.log(`\n\n=== ISSUES FOUND ===\n`);
-for (const issue of issues) {
-  console.log(issue);
-}
-console.log(`\n=== WARNINGS ===\n`);
-for (const w of warnings) {
-  console.log(`⚠️  ${w}`);
+if (deIssues.length > 0) {
+  console.log(`\n⚠️  Events missing DE data: ${deIssues.length}`);
+  deIssues.forEach(i => console.log(`   ${i.key}`));
+} else {
+  console.log('✅ All events have DE data');
 }
 
-console.log(`\n=== RECOMMENDATIONS ===\n`);
-console.log(`1. DELETE profile.ts "seasons" array — it duplicates events.ts and WILL get out of sync`);
-console.log(`2. Make profile.rating COMPUTED from events.ts`);
-console.log(`3. Make profile.achievements COMPUTED from events.ts (auto-detect golds, medals, rating milestones)`);
-console.log(`4. Make seasonOrder COMPUTED from allEvents unique seasons`);
-console.log(`5. Make seasonMeta.rating COMPUTED from events in that season`);
-console.log(`6. DELETE pool-bouts.ts — data already in eventDetails.ts`);
-console.log(`7. Fix numeric club IDs in opponents.ts`);
-console.log(`8. Rankings (seasonMeta.rankings, profile.currentRankings) MUST stay manual — external data source`);
+if (oppIssues.length > 0) {
+  console.log(`\n❌ Opponents in eventDetails but missing from opponents.ts: ${oppIssues.length}`);
+  const unique = [...new Set(oppIssues.map(i => i.detail))];
+  unique.forEach(d => console.log(`   ${d}`));
+} else {
+  console.log('✅ All opponents in eventDetails exist in opponents.ts');
+}
+
+// 3. Opponent stats
+const statsIssues = checkOpponentStats();
+if (statsIssues.length > 0) {
+  console.log(`\n⚠️  Opponent stats mismatches: ${statsIssues.length}`);
+  statsIssues.forEach(i => console.log(`   ${i.name}: ${i.detail}`));
+} else {
+  console.log('✅ All opponent win/loss/total stats match actual bouts');
+}
+
+// Summary
+const totalIssues = evtDetailIssues.length + detailIssues.length + statsIssues.length;
+console.log(`\n${'─'.repeat(50)}`);
+if (totalIssues === 0) {
+  console.log('🎉 All checks passed! Data is consistent.');
+} else {
+  console.log(`⚠️  Total issues found: ${totalIssues}`);
+}
+
+process.exit(totalIssues > 0 ? 1 : 0);

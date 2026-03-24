@@ -2082,12 +2082,13 @@ export const opponents: Record<string, OpponentData> = {
     "birthYear": 2010
   },
   "D'AMELJ Edoardo": {
-    "wins": 2,
+    "wins": 3,
     "losses": 2,
-    "total": 4,
-    "winRate": 0.5,
+    "total": 5,
+    "winRate": 60.5,
     "clubs": ["NAZLYMOVFF"],
     "bouts": [
+      { "tournament": "River City", "event": "Y-14 Men's Saber", "date": "September 24, 2023", "type": "DE", "win": true, "score": "15-13" },
       {
         "tournament": "Mission SYC",
         "event": "Y-12 Men's Saber",
@@ -7400,12 +7401,14 @@ export const opponents: Record<string, OpponentData> = {
     "birthYear": 2011
   },
   "O'KEEFE Brody": {
-    "wins": 5,
+    "wins": 7,
     "losses": 0,
-    "total": 5,
-    "winRate": 1,
+    "total": 7,
+    "winRate": 100,
     "clubs": ["NJFENCINGALL"],
     "bouts": [
+      { "tournament": "Mission SYC", "event": "Y-12 Men's Saber", "date": "May 5, 2024", "type": "DE", "win": true, "score": "15-2" },
+      { "tournament": "Mission SYC", "event": "Y-12 Men's Saber", "date": "May 5, 2024", "type": "DE", "win": true, "score": "15-12" },
       {
         "tournament": "Mission SYC",
         "event": "Y-12 Men's Saber",
@@ -11463,6 +11466,133 @@ export const opponents: Record<string, OpponentData> = {
     "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
     "bouts": [
       { "tournament": "Capital Czajkowski Cup #3", "event": "Senior Mixed Saber", "date": "March 21, 2026", "type": "T8", "win": true, "score": "15-3" }
+    ], "birthYear": 0
+  },
+  "LI Yiwei": {
+    "wins": 0, "losses": 1, "total": 1, "winRate": 0, "clubs": [],
+    "bouts": [
+      { "tournament": "February NAC", "event": "Div I Men's Saber", "date": "February 13, 2026", "type": "T128", "win": false, "score": "11-15" }
+    ], "birthYear": 0
+  },
+  "KUSHKOV Daniel": {
+    "wins": 0, "losses": 1, "total": 1, "winRate": 0, "clubs": [],
+    "bouts": [
+      { "tournament": "October NAC", "event": "Junior Men's Saber", "date": "October 3, 2025", "type": "T256", "win": false, "score": "5-15" }
+    ], "birthYear": 0
+  },
+  "BURKE Sam": {
+    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
+    "bouts": [
+      { "tournament": "October NAC", "event": "Cadet Men's Saber", "date": "October 4, 2025", "type": "T128", "win": true, "score": "15-9" }
+    ], "birthYear": 0
+  },
+  "NARAYAN Rishi": {
+    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
+    "bouts": [
+      { "tournament": "Capitol Clash SYC/RCC", "event": "Y-14 Men's Saber", "date": "January 18, 2025", "type": "DE", "win": true, "score": "15-8" }
+    ], "birthYear": 0
+  },
+  "BRISENO Ethan": {
+    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
+    "bouts": [
+      { "tournament": "Summer Nationals", "event": "Y-12 Men's Saber", "date": "July 5, 2024", "type": "DE", "win": true, "score": "15-7" }
+    ], "birthYear": 0
+  },
+  "YUEN Caleb": {
+    "wins": 2, "losses": 0, "total": 2, "winRate": 100, "clubs": [],
+    "bouts": [
+      { "tournament": "Summer Nationals", "event": "Y-12 Men's Saber", "date": "July 5, 2024", "type": "DE", "win": true, "score": "15-13" },
+      { "tournament": "Capitol Clash SYC/RCC", "event": "Y-12 Men's Saber", "date": "January 15, 2024", "type": "DE", "win": true, "score": "15-9" }
+    ], "birthYear": 0
+  },
+  "PATEL Rayn": {
+    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
+    "bouts": [
+      { "tournament": "Summer Nationals", "event": "Y-14 Men's Saber", "date": "July 4, 2024", "type": "DE", "win": true, "score": "15-8" }
+    ], "birthYear": 0
+  },
+  "SLOAN Ethan": {
+    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
+    "bouts": [
+      { "tournament": "March NAC", "event": "Y-12 Men's Saber", "date": "March 3, 2024", "type": "DE", "win": true, "score": "15-11" }
+    ], "birthYear": 0
+  },
+  "TSAO Alister": {
+    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
+    "bouts": [
+      { "tournament": "Capitol Clash SYC/RCC", "event": "Y-14 Men's Saber", "date": "January 13, 2024", "type": "DE", "win": true, "score": "15-14" }
+    ], "birthYear": 0
+  },
+  "LAU Kyrus": {
+    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
+    "bouts": [
+      { "tournament": "Cobra Challenge SYC/RCC/Y8", "event": "Y-12 Men's Saber", "date": "November 24, 2023", "type": "DE", "win": true, "score": "15-13" }
+    ], "birthYear": 0
+  },
+  "KIM Daehwan(Benjamin)": {
+    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
+    "bouts": [
+      { "tournament": "Cobra Challenge SYC/RCC/Y8", "event": "Y-12 Men's Saber", "date": "November 25, 2022", "type": "DE", "win": true, "score": "15-2" }
+    ], "birthYear": 0
+  },
+  "BOYER Seth": {
+    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
+    "bouts": [
+      { "tournament": "Fairfax Challenge Fall RYC/RJCC", "event": "Y-12 Men's Saber", "date": "September 11, 2022", "type": "DE", "win": true, "score": "15-8" }
+    ], "birthYear": 0
+  },
+  "KATZ Ryan": {
+    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
+    "bouts": [
+      { "tournament": "March SJCC", "event": "Cadet Men's Saber", "date": "March 16, 2024", "type": "DE", "win": true, "score": "15-8" }
+    ], "birthYear": 0
+  },
+  "MICHALSKI Brandon": {
+    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
+    "bouts": [
+      { "tournament": "Capital Czajkowski", "event": "Senior Mixed Saber", "date": "March 15, 2025", "type": "DE", "win": true, "score": "15-7" }
+    ], "birthYear": 0
+  },
+  "MILLS Matthew": {
+    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
+    "bouts": [
+      { "tournament": "Capital Czajkowski", "event": "Senior Mixed Saber", "date": "March 15, 2025", "type": "DE", "win": true, "score": "15-2" }
+    ], "birthYear": 0
+  },
+  "GILBERT Ari": {
+    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
+    "bouts": [
+      { "tournament": "Mission SYC", "event": "Y-12 Men's Saber", "date": "May 5, 2024", "type": "DE", "win": true, "score": "15-3" }
+    ], "birthYear": 0
+  },
+  "YAO John": {
+    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
+    "bouts": [
+      { "tournament": "Mission SYC", "event": "Y-12 Men's Saber", "date": "May 5, 2024", "type": "DE", "win": true, "score": "15-5" }
+    ], "birthYear": 0
+  },
+  "LIU Guanyu": {
+    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
+    "bouts": [
+      { "tournament": "North Texas", "event": "Y-14 Men's Saber", "date": "September 3, 2023", "type": "DE", "win": true, "score": "15-12" }
+    ], "birthYear": 0
+  },
+  "LI Huangziyue": {
+    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
+    "bouts": [
+      { "tournament": "North Texas", "event": "Y-12 Men's Saber", "date": "September 2, 2023", "type": "DE", "win": true, "score": "15-8" }
+    ], "birthYear": 0
+  },
+  "LIU Dylan": {
+    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
+    "bouts": [
+      { "tournament": "North Texas", "event": "Y-12 Men's Saber", "date": "September 2, 2023", "type": "DE", "win": true, "score": "15-7" }
+    ], "birthYear": 0
+  },
+  "HU Andrew": {
+    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
+    "bouts": [
+      { "tournament": "NoVA Knights", "event": "Y-14 Men's Saber", "date": "October 1, 2022", "type": "DE", "win": true, "score": "15-4" }
     ], "birthYear": 0
   },
 };
