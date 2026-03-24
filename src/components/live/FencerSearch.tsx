@@ -261,7 +261,7 @@ export default function FencerSearch() {
                     <div key={i} className="flex items-center gap-2 text-sm">
                       <span className="text-white/60 w-16">{r.date}</span>
                       <span className={`font-mono w-14 ${pctColor}`}>{r.place}/{r.total}</span>
-                      <span className="text-white/70 truncate flex-1">{r.event}</span>
+                      <span className="text-white/70 truncate flex-1">{r.tournament} — {r.event}</span>
                       {r.ratingEarned && r.ratingEarned !== "U" && (
                         <span className="text-white/50 text-xs">{r.ratingEarned}</span>
                       )}
