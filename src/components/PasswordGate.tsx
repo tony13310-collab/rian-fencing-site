@@ -1,6 +1,7 @@
 "use client";
 
 import { useState, useEffect } from "react";
+import pkg from "../../package.json";
 
 
 const PASS_HASH = "1cd683f8ec18781985cd2f9347ba8e1b6058ba3d7a15054c8d83bb8375b0559e"; // sha256 of password
@@ -152,6 +153,9 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
             </button>
           </form>
         </div>
+        <p className="mt-8 text-white/30 text-xs">
+          v{pkg.version} · Updated {new Date().toLocaleString("en-US", { timeZone: "America/New_York", year: "numeric", month: "2-digit", day: "2-digit", hour: "2-digit", minute: "2-digit", second: "2-digit", hour12: false }).replace(",", "")}
+        </p>
       </div>
     </div>
   );
