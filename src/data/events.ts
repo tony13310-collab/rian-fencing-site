@@ -35,6 +35,8 @@ function s(season: string, events: Omit<CompEvent, "season">[]): CompEvent[] {
 export const allEvents: CompEvent[] = [
   // === 2025-2026 Season ===
   ...s("2025-2026", [
+    { 
+    date: "2026-03-21", tournament: "Capital Czajkowski Cup #3", event: "Senior Mixed Saber", category: "Senior", level: "Local", place: 2, total: 35, rating: "" },
     { poolBouts: [
           { opponent: "LIU Ethan", club: "NELLYA", score: "D3", win: false },
           { opponent: "CAO Oliver", club: "WESTCOASTFA", score: "D4", win: false },

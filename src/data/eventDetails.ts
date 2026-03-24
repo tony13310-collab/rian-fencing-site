@@ -2491,4 +2491,16 @@ export const eventDetails: Record<string, EventDetail> = {
       deSeed: null,
     },
 },
+  "2026-03-21_senior-mixed-saber": {
+    id: "2026-03-21_senior-mixed-saber",
+    date: "2026-03-21",
+    tournament: "Capital Czajkowski Cup #3",
+    event: "Senior Mixed Saber",
+    location: "",
+    place: 2, total: 35,
+    rating: "",
+    pool: undefined,
+    de: [],
+    
+  },
 };
