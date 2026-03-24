@@ -67,7 +67,7 @@ export default function PasswordGate({ children }: { children: React.ReactNode }
 
       <div className="relative z-10 max-w-sm w-full text-center">
         <div className="mb-6">
-          <img src="/centaur-fencer.png" style={{ height: 120, width: 'auto', display: 'inline-block' }} alt="Centaur fencer" />
+          <video src="/centaur-fencer.mp4" autoPlay loop muted playsInline style={{ height: 150, width: 'auto', display: 'inline-block' }} />
         </div>
 
         <div className="mb-8">
