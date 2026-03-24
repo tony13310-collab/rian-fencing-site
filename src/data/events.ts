@@ -35,7 +35,14 @@ function s(season: string, events: Omit<CompEvent, "season">[]): CompEvent[] {
 export const allEvents: CompEvent[] = [
   // === 2025-2026 Season ===
   ...s("2025-2026", [
-    { 
+    { poolBouts: [
+          { opponent: "PAUL Jimmy", club: "", score: "V5-2", win: true },
+          { opponent: "AERY FALLICK Ozzie", club: "", score: "V5-0", win: true },
+          { opponent: "RINALDI Savio", club: "", score: "D3-5", win: false },
+          { opponent: "KUCZAJDA Matthew", club: "", score: "V5-1", win: true },
+          { opponent: "LU Charles", club: "", score: "V5-3", win: true },
+          { opponent: "RACHAPROLU Divyagnyaan Siddartha", club: "", score: "V5-3", win: true },
+        ],
     date: "2026-03-21", tournament: "Capital Czajkowski Cup #3", event: "Senior Mixed Saber", category: "Senior", level: "Local", place: 2, total: 35, rating: "" },
     { poolBouts: [
           { opponent: "LIU Ethan", club: "NELLYA", score: "D3", win: false },

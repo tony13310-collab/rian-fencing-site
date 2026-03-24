@@ -1537,12 +1537,13 @@ export const opponents: Record<string, OpponentData> = {
     "birthYear": 0
   },
   "CHAWLA Abhishek": {
-    "wins": 5,
+    "wins": 6,
     "losses": 0,
-    "total": 5,
-    "winRate": 1,
+    "total": 6,
+    "winRate": 100,
     "clubs": ["CAPITALFA"],
     "bouts": [
+      { "tournament": "Capital Czajkowski Cup #3", "event": "Senior Mixed Saber", "date": "March 21, 2026", "type": "T4", "win": true, "score": "15-9" },
       {
         "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
         "event": "Y-14 Men's Saber",
@@ -1624,11 +1625,19 @@ export const opponents: Record<string, OpponentData> = {
   },
   "CHEN Jonathan": {
     "wins": 0,
-    "losses": 2,
-    "total": 2,
+    "losses": 3,
+    "total": 3,
     "winRate": 0,
     "clubs": [],
     "bouts": [
+      {
+        "tournament": "Capital Czajkowski Cup #3",
+        "event": "Senior Mixed Saber",
+        "date": "March 21, 2026",
+        "type": "Final",
+        "win": false,
+        "score": "13-15"
+      },
       {
         "tournament": "Capital Czajkowski Cup #3",
         "event": "Senior Mixed Saber",
@@ -7731,12 +7740,13 @@ export const opponents: Record<string, OpponentData> = {
     "birthYear": 2012
   },
   "PAUL Jimmy": {
-    "wins": 2,
+    "wins": 3,
     "losses": 0,
-    "total": 2,
-    "winRate": 1,
+    "total": 3,
+    "winRate": 100,
     "clubs": ["CAPITALFA"],
     "bouts": [
+      { "tournament": "Capital Czajkowski Cup #3", "event": "Senior Mixed Saber", "date": "March 21, 2026", "type": "Pool", "win": true, "score": "5-2" },
       {
         "tournament": "Capital Czajkowski Cup #3",
         "event": "Senior Mixed Saber",
@@ -8156,11 +8166,12 @@ export const opponents: Record<string, OpponentData> = {
   },
   "RINALDI Savio": {
     "wins": 5,
-    "losses": 0,
-    "total": 5,
-    "winRate": 1,
+    "losses": 1,
+    "total": 6,
+    "winRate": 83,
     "clubs": ["CAPITALFA"],
     "bouts": [
+      { "tournament": "Capital Czajkowski Cup #3", "event": "Senior Mixed Saber", "date": "March 21, 2026", "type": "Pool", "win": false, "score": "3-5" },
       {
         "tournament": "Capital Czajkowski Cup #3",
         "event": "Senior Mixed Saber",
@@ -9693,12 +9704,13 @@ export const opponents: Record<string, OpponentData> = {
     "birthYear": 2013
   },
   "VALENCIA Jose": {
-    "wins": 0,
+    "wins": 1,
     "losses": 2,
-    "total": 2,
-    "winRate": 0,
+    "total": 3,
+    "winRate": 33,
     "clubs": ["CAPITALFA"],
     "bouts": [
+      { "tournament": "Capital Czajkowski Cup #3", "event": "Senior Mixed Saber", "date": "March 21, 2026", "type": "T2", "win": true, "score": "15-13" },
       {
         "tournament": "Fairfax Challenge Spring RYC/RJCC/ROC",
         "event": "Y-12 Men's Saber",
@@ -11421,5 +11433,36 @@ export const opponents: Record<string, OpponentData> = {
       }
     ],
     "birthYear": 2009
-  }
+  },
+  "AERY FALLICK Ozzie": {
+    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
+    "bouts": [
+      { "tournament": "Capital Czajkowski Cup #3", "event": "Senior Mixed Saber", "date": "March 21, 2026", "type": "Pool", "win": true, "score": "5-0" }
+    ], "birthYear": 0
+  },
+  "KUCZAJDA Matthew": {
+    "wins": 2, "losses": 0, "total": 2, "winRate": 100, "clubs": [],
+    "bouts": [
+      { "tournament": "Capital Czajkowski Cup #3", "event": "Senior Mixed Saber", "date": "March 21, 2026", "type": "Pool", "win": true, "score": "5-1" },
+      { "tournament": "Capital Czajkowski Cup #3", "event": "Senior Mixed Saber", "date": "March 21, 2026", "type": "T16", "win": true, "score": "15-4" }
+    ], "birthYear": 0
+  },
+  "LU Charles": {
+    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
+    "bouts": [
+      { "tournament": "Capital Czajkowski Cup #3", "event": "Senior Mixed Saber", "date": "March 21, 2026", "type": "Pool", "win": true, "score": "5-3" }
+    ], "birthYear": 0
+  },
+  "RACHAPROLU Divyagnyaan Siddartha": {
+    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
+    "bouts": [
+      { "tournament": "Capital Czajkowski Cup #3", "event": "Senior Mixed Saber", "date": "March 21, 2026", "type": "Pool", "win": true, "score": "5-3" }
+    ], "birthYear": 0
+  },
+  "MATT Chris": {
+    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
+    "bouts": [
+      { "tournament": "Capital Czajkowski Cup #3", "event": "Senior Mixed Saber", "date": "March 21, 2026", "type": "T8", "win": true, "score": "15-3" }
+    ], "birthYear": 0
+  },
 };

@@ -2496,11 +2496,28 @@ export const eventDetails: Record<string, EventDetail> = {
     date: "2026-03-21",
     tournament: "Capital Czajkowski Cup #3",
     event: "Senior Mixed Saber",
-    location: "",
+    location: "Bethesda, MD",
     place: 2, total: 35,
     rating: "",
-    pool: undefined,
-    de: [],
-    
+    pool: {
+      poolNumber: 0, seed: null,
+      bouts: [
+        { opponent: "PAUL Jimmy", club: "", score: "V5-2", win: true },
+        { opponent: "AERY FALLICK Ozzie", club: "", score: "V5-0", win: true },
+        { opponent: "RINALDI Savio", club: "", score: "D3-5", win: false },
+        { opponent: "KUCZAJDA Matthew", club: "", score: "V5-1", win: true },
+        { opponent: "LU Charles", club: "", score: "V5-3", win: true },
+        { opponent: "RACHAPROLU Divyagnyaan Siddartha", club: "", score: "V5-3", win: true },
+      ],
+      wins: 5, losses: 1, touchesScored: 28, touchesReceived: 14, indicator: 14,
+      poolRank: null, poolSize: null, deSeed: null,
+    },
+    de: [
+      { round: "T16", opponent: "KUCZAJDA Matthew", club: "", score: "15-4", win: true },
+      { round: "T8", opponent: "MATT Chris", club: "", score: "15-3", win: true },
+      { round: "T4", opponent: "CHAWLA Abhishek", club: "", score: "15-9", win: true },
+      { round: "T2", opponent: "VALENCIA Jose", club: "", score: "15-13", win: true },
+      { round: "Final", opponent: "CHEN Jonathan", club: "", score: "13-15", win: false },
+    ],
   },
 };
