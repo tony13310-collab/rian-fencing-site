@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import "./globals.css";
-import PasswordGate from "@/components/PasswordGate";
+import PasswordGate from "@/components/PasswordGateV2";
 import SwipeNavigator from "@/components/SwipeNavigator";
 
 export const metadata: Metadata = {
