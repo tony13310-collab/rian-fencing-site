@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import pkg from "../../package.json";
 
 
-const PASS_HASH = "1cd683f8ec18781985cd2f9347ba8e1b6058ba3d7a15054c8d83bb8375b0559e"; // sha256 of password
+const PASS_HASH = "5498b2826dae40737f36eb76bb80f2a711b3afee710fb7b80a89cbeaf88c569d"; // sha256 of password
 
 async function sha256(text: string): Promise<string> {
   const buf = await crypto.subtle.digest("SHA-256", new TextEncoder().encode(text));
