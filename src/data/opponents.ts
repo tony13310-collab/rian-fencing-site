@@ -1,6 +1,5 @@
-// Auto-generated H2H opponent database - 405 opponents, 918 bouts
-// Generated from FencingTracker history + FTL pool bouts
-// Last fixed: 2026-03-13
+// Auto-generated H2H opponent database - 410 opponents, 623 bouts
+// Generated from FencingTracker history data
 
 export interface OpponentBout {
   tournament: string;
@@ -18,48 +17,349 @@ export interface OpponentData {
   winRate: number;
   clubs: string[];
   bouts: OpponentBout[];
-  birthYear?: number | null;
-}
-
-export function getOpponentSlug(name: string): string {
-  return name
-    .toLowerCase()
-    .replace(/[^a-z0-9]+/g, "-")
-    .replace(/^-|-$/g, "");
-}
-
-export function findOpponentBySlug(slug: string): [string, OpponentData] | null {
-  for (const [name, data] of Object.entries(opponents)) {
-    if (getOpponentSlug(name) === slug) return [name, data];
-  }
-  return null;
 }
 
 export const opponents: Record<string, OpponentData> = {
-  "ADEBANKE Micah": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": ["PWESTBROOK"],
+  "PAUL Jimmy": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "30",
+      "19"
+    ],
     "bouts": [
       {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-8 Men's Saber",
-        "date": "November 24, 2018",
+        "tournament": "Capital Czajkowski Cup #3",
+        "event": "Senior Mixed Saber",
+        "date": "March 21, 2026",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      },
+      {
+        "tournament": "Capital Czajkowski Cup #3",
+        "event": "Senior Mixed Saber",
+        "date": "March 15, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "AERY FALLICK Ozzie": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "15"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capital Czajkowski Cup #3",
+        "event": "Senior Mixed Saber",
+        "date": "March 21, 2026",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "RINALDI Savio": {
+    "wins": 4,
+    "losses": 1,
+    "total": 5,
+    "winRate": 80,
+    "clubs": [
+      "10",
+      "13",
+      "22",
+      "12",
+      "8"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capital Czajkowski Cup #3",
+        "event": "Senior Mixed Saber",
+        "date": "March 21, 2026",
         "type": "Pool",
         "win": false,
-        "score": "2-5"
+        "score": "3-5"
+      },
+      {
+        "tournament": "Capital Czajkowski Cup #3",
+        "event": "Senior Mixed Saber",
+        "date": "March 15, 2025",
+        "type": "T16",
+        "win": true,
+        "score": "15-7"
+      },
+      {
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "January 18, 2025",
+        "type": "T32",
+        "win": true,
+        "score": "15-8"
+      },
+      {
+        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "September 24, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      },
+      {
+        "tournament": "Fairfax Challenge Fall RYC/RJCC & Y8 (Non-Regional)",
+        "event": "Y-12 Men's Saber",
+        "date": "September 11, 2022",
+        "type": "T8",
+        "win": true,
+        "score": "15-11"
       }
-    ],
-    "birthYear": 2011
+    ]
   },
-  "ALAVE Kyle": {
+  "KUCZAJDA Matthew": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "28"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capital Czajkowski Cup #3",
+        "event": "Senior Mixed Saber",
+        "date": "March 21, 2026",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      },
+      {
+        "tournament": "Capital Czajkowski Cup #3",
+        "event": "Senior Mixed Saber",
+        "date": "March 21, 2026",
+        "type": "T32",
+        "win": true,
+        "score": "15-4"
+      }
+    ]
+  },
+  "LU Charles": {
     "wins": 1,
-    "losses": 2,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "22"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capital Czajkowski Cup #3",
+        "event": "Senior Mixed Saber",
+        "date": "March 21, 2026",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "RACHAPROLU Divyagnyaan Siddartha": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "20"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capital Czajkowski Cup #3",
+        "event": "Senior Mixed Saber",
+        "date": "March 21, 2026",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "MATT Chris": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "13"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capital Czajkowski Cup #3",
+        "event": "Senior Mixed Saber",
+        "date": "March 21, 2026",
+        "type": "T16",
+        "win": true,
+        "score": "15-3"
+      }
+    ]
+  },
+  "CHAWLA Abhishek": {
+    "wins": 4,
+    "losses": 0,
+    "total": 4,
+    "winRate": 100,
+    "clubs": [
+      "6",
+      "3",
+      "23",
+      "15"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capital Czajkowski Cup #3",
+        "event": "Senior Mixed Saber",
+        "date": "March 21, 2026",
+        "type": "T8",
+        "win": true,
+        "score": "15-9"
+      },
+      {
+        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
+        "event": "Y-14 Men's Saber",
+        "date": "April 20, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      },
+      {
+        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "September 24, 2023",
+        "type": "T32",
+        "win": true,
+        "score": "15-12"
+      },
+      {
+        "tournament": "Fairfax Challenge Fall RYC/RJCC & Y8 (Non-Regional)",
+        "event": "Y-12 Men's Saber",
+        "date": "September 11, 2022",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "VALENCIA Jose": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "3"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capital Czajkowski Cup #3",
+        "event": "Senior Mixed Saber",
+        "date": "March 21, 2026",
+        "type": "T4",
+        "win": true,
+        "score": "15-13"
+      },
+      {
+        "tournament": "Fairfax Challenge Spring RYC/RJCC/ROC",
+        "event": "Y-12 Men's Saber",
+        "date": "April 16, 2023",
+        "type": "Pool",
+        "win": false,
+        "score": "4-5"
+      }
+    ]
+  },
+  "CHEN Jonathan": {
+    "wins": 0,
+    "losses": 3,
     "total": 3,
-    "winRate": 0.33,
-    "clubs": ["COBRAFC"],
+    "winRate": 0,
+    "clubs": [
+      "1",
+      "15"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capital Czajkowski Cup #3",
+        "event": "Senior Mixed Saber",
+        "date": "March 21, 2026",
+        "type": "T2",
+        "win": false,
+        "score": "13-15"
+      },
+      {
+        "tournament": "Capital Czajkowski Cup #3",
+        "event": "Senior Mixed Saber",
+        "date": "March 15, 2025",
+        "type": "T4",
+        "win": false,
+        "score": "13-15"
+      },
+      {
+        "tournament": "Junior Olympics & Div 1 NAC",
+        "event": "Cadet Men's Saber",
+        "date": "February 17, 2025",
+        "type": "T64",
+        "win": false,
+        "score": "9-15"
+      }
+    ]
+  },
+  "LIU Ethan": {
+    "wins": 2,
+    "losses": 1,
+    "total": 3,
+    "winRate": 67,
+    "clubs": [
+      "179",
+      "121",
+      "175"
+    ],
+    "bouts": [
+      {
+        "tournament": "February NAC",
+        "event": "Junior Men's Saber",
+        "date": "February 15, 2026",
+        "type": "Pool",
+        "win": false,
+        "score": "3-5"
+      },
+      {
+        "tournament": "November NAC",
+        "event": "Cadet Men's Saber",
+        "date": "November 16, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      },
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Cadet Men's Saber",
+        "date": "July 1, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "GHISLAIN-FERNANDEZ Alexandre": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "162"
+    ],
     "bouts": [
       {
         "tournament": "February NAC",
@@ -68,136 +368,18 @@ export const opponents: Record<string, OpponentData> = {
         "type": "Pool",
         "win": true,
         "score": "5-1"
-      },
-      {
-        "tournament": "Capitol Clash SYC, RCC, Veteran ROC & Y8",
-        "event": "Y-10 Men's Saber",
-        "date": "January 18, 2020",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-8 Men's Saber",
-        "date": "November 30, 2019",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
       }
-    ],
-    "birthYear": 2012
-  },
-  "ALUF Brendon": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["MANHATTANFC"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-12 Men's Saber",
-        "date": "July 5, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "Summer Nationals",
-        "event": "Y-14 Men's Saber",
-        "date": "July 4, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "ANDRES Michael": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "October NAC",
-        "event": "Cadet Men's Saber",
-        "date": "October 4, 2025",
-        "type": "T128",
-        "win": true,
-        "score": "15-14"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "ANTHONY Devyn V.": {
-    "wins": 2,
-    "losses": 2,
-    "total": 4,
-    "winRate": 0.5,
-    "clubs": ["COBRAFC", "PWESTBROOK"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-14 Men's Saber",
-        "date": "July 4, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "Summer Nationals",
-        "event": "Cadet Men's Saber",
-        "date": "July 1, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-10 Men's Saber",
-        "date": "November 29, 2019",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-8 Men's Saber",
-        "date": "November 24, 2018",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "ARCHIBALD Zachary": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Mission SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "May 5, 2024",
-        "type": "T32",
-        "win": true,
-        "score": "15-7"
-      }
-    ],
-    "birthYear": 2013
+    ]
   },
   "ATANASSOV Vasil V.": {
     "wins": 0,
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [],
+    "clubs": [
+      "9",
+      "43"
+    ],
     "bouts": [
       {
         "tournament": "February NAC",
@@ -215,544 +397,242 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "9-15"
       }
-    ],
-    "birthYear": 2007
+    ]
   },
-  "AVERY Marcus": {
-    "wins": 4,
-    "losses": 0,
-    "total": 4,
-    "winRate": 1,
-    "clubs": ["TIMMOREHOUSE"],
+  "ALAVE Kyle": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "106",
+      "17"
+    ],
     "bouts": [
       {
-        "tournament": "Ben Gutenberg Memorial SYC / RCC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 11, 2023",
+        "tournament": "February NAC",
+        "event": "Junior Men's Saber",
+        "date": "February 15, 2026",
         "type": "Pool",
         "win": true,
         "score": "5-1"
       },
       {
-        "tournament": "March NAC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 5, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "May 15, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "Fairfax Challenge SYC/RJCC",
+        "tournament": "Capitol Clash SYC, RCC, Veteran ROC & Y8",
         "event": "Y-10 Men's Saber",
-        "date": "May 14, 2022",
+        "date": "January 18, 2020",
         "type": "Pool",
-        "win": true,
-        "score": "5-3"
+        "win": false,
+        "score": "1-5"
       }
-    ],
-    "birthYear": 2012
+    ]
   },
-  "AYDOGDU Hakan": {
+  "CAO Oliver": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "29"
+    ],
+    "bouts": [
+      {
+        "tournament": "February NAC",
+        "event": "Junior Men's Saber",
+        "date": "February 15, 2026",
+        "type": "Pool",
+        "win": false,
+        "score": "4-5"
+      }
+    ]
+  },
+  "LAUB William": {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 1,
-    "clubs": ["DURKANFA"],
+    "winRate": 100,
+    "clubs": [
+      "147",
+      "61"
+    ],
     "bouts": [
       {
-        "tournament": "Junior Olympics & Div 1 NAC",
+        "tournament": "February NAC",
         "event": "Junior Men's Saber",
-        "date": "February 16, 2025",
+        "date": "February 15, 2026",
         "type": "Pool",
         "win": true,
         "score": "5-3"
       },
       {
-        "tournament": "Capitol Clash SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "January 18, 2025",
+        "tournament": "February NAC",
+        "event": "Div I Men's Saber",
+        "date": "February 13, 2026",
         "type": "Pool",
         "win": true,
         "score": "5-3"
       }
-    ],
-    "birthYear": 2012
+    ]
   },
-  "BADMUS Joshua": {
-    "wins": 4,
-    "losses": 0,
+  "LI Howard": {
+    "wins": 1,
+    "losses": 3,
     "total": 4,
-    "winRate": 1,
-    "clubs": ["CAPITALFA"],
-    "bouts": [
-      {
-        "tournament": "October NAC",
-        "event": "Cadet Men's Saber",
-        "date": "October 4, 2025",
-        "type": "T256",
-        "win": true,
-        "score": "15-9"
-      },
-      {
-        "tournament": "NoVA Knights RYC/RJCC",
-        "event": "Y-12 Men's Saber",
-        "date": "October 2, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-14 Men's Saber",
-        "date": "October 1, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Fairfax Challenge Fall RYC/RJCC & Y8 (Non-Regional)",
-        "event": "Y-12 Men's Saber",
-        "date": "September 11, 2022",
-        "type": "T16",
-        "win": true,
-        "score": "15-8"
-      }
+    "winRate": 25,
+    "clubs": [
+      "71",
+      "1",
+      "38",
+      "3"
     ],
-    "birthYear": 2011
-  },
-  "BAHK Caleb": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["SHERIDANFA"],
     "bouts": [
       {
-        "tournament": "March SJCC",
-        "event": "Cadet Men's Saber",
-        "date": "March 16, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 3, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "BAI Evan": {
-    "wins": 3,
-    "losses": 5,
-    "total": 8,
-    "winRate": 0.38,
-    "clubs": ["AURAFA", "PFA"],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC",
-        "event": "Y-14 Men's Saber",
-        "date": "November 29, 2025",
-        "type": "T4",
+        "tournament": "February NAC",
+        "event": "Junior Men's Saber",
+        "date": "February 15, 2026",
+        "type": "T128",
         "win": true,
         "score": "15-9"
       },
       {
         "tournament": "November NAC",
-        "event": "Cadet Men's Saber",
-        "date": "November 10, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "Cobra Challenge SYC",
         "event": "Y-14 Men's Saber",
-        "date": "October 12, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-12 Men's Saber",
-        "date": "July 5, 2024",
+        "date": "November 17, 2025",
         "type": "T8",
         "win": false,
-        "score": "9-15"
+        "score": "6-15"
       },
       {
-        "tournament": "Capitol Clash SYC/RCC",
-        "event": "Y-12 Men's Saber",
-        "date": "January 14, 2023",
+        "tournament": "January NAC",
+        "event": "Cadet Men's Saber",
+        "date": "January 5, 2025",
         "type": "Pool",
         "win": false,
-        "score": "0-5"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "November 25, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "0-5"
+        "score": "4-5"
       },
       {
         "tournament": "USA Fencing National Championships & July Challenge",
         "event": "Y-10 Men's Saber",
         "date": "July 11, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-10 Men's Saber",
-        "date": "June 19, 2021",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
+        "type": "T16",
+        "win": false,
+        "score": "4-10"
       }
-    ],
-    "birthYear": 2011
+    ]
   },
-  "BALAGOPAL Aditya": {
+  "MATTOO Deven": {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "November 17, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
+    "winRate": 100,
+    "clubs": [
+      "36"
     ],
-    "birthYear": 2012
-  },
-  "BALE ATMAN": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
     "bouts": [
       {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Cadet Men's Saber",
-        "date": "November 30, 2024",
+        "tournament": "February NAC",
+        "event": "Junior Men's Saber",
+        "date": "February 15, 2026",
         "type": "T64",
         "win": true,
-        "score": "15-8"
+        "score": "15-13"
       }
-    ],
-    "birthYear": 2008
+    ]
   },
-  "BARENBOYM Michael": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": ["SHERIDANFA"],
+  "WANG Daniel": {
+    "wins": 1,
+    "losses": 2,
+    "total": 3,
+    "winRate": 33,
+    "clubs": [
+      "6",
+      "3",
+      "27"
+    ],
     "bouts": [
       {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-14 Men's Saber",
-        "date": "July 3, 2025",
+        "tournament": "February NAC",
+        "event": "Junior Men's Saber",
+        "date": "February 15, 2026",
+        "type": "T32",
+        "win": false,
+        "score": "14-15"
+      },
+      {
+        "tournament": "December SJCC + Para NAC",
+        "event": "Junior Men's Saber",
+        "date": "December 7, 2024",
         "type": "Pool",
         "win": false,
-        "score": "4-5"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "BARRY Dave": {
-    "wins": 4,
-    "losses": 0,
-    "total": 4,
-    "winRate": 1,
-    "clubs": ["SFA"],
-    "bouts": [
+        "score": "3-5"
+      },
       {
         "tournament": "December SJCC + Para NAC",
         "event": "Cadet Men's Saber",
         "date": "December 6, 2024",
         "type": "Pool",
         "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "Cobra Challenge SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "December 1, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
-        "event": "Y-14 Men's Saber",
-        "date": "April 20, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Cadet Men's Saber",
-        "date": "March 16, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
+        "score": "5-2"
       }
-    ],
-    "birthYear": 2011
+    ]
   },
-  "BEKDJANOV Arthur": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
+  "YOOK Isaac": {
+    "wins": 4,
+    "losses": 3,
+    "total": 7,
+    "winRate": 57,
+    "clubs": [
+      "162",
+      "38",
+      "59",
+      "96",
+      "74",
+      "8",
+      "25"
+    ],
     "bouts": [
+      {
+        "tournament": "February NAC",
+        "event": "Div I Men's Saber",
+        "date": "February 13, 2026",
+        "type": "Pool",
+        "win": false,
+        "score": "3-5"
+      },
       {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
         "event": "Y-14 Men's Saber",
         "date": "July 3, 2025",
-        "type": "T32",
+        "type": "T64",
         "win": true,
         "score": "15-11"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "BELL III Alfred (Tripp) R.": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": [],
-    "bouts": [
+      },
       {
-        "tournament": "Junior Olympics",
+        "tournament": "May SJCC",
         "event": "Cadet Men's Saber",
-        "date": "January 10, 2026",
-        "type": "T64",
-        "win": false,
-        "score": "6-15"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "BENE Paul": {
-    "wins": 2,
-    "losses": 2,
-    "total": 4,
-    "winRate": 0.5,
-    "clubs": ["MIRACLEFC"],
-    "bouts": [
-      {
-        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
-        "event": "Cadet Men's Saber",
-        "date": "April 21, 2024",
+        "date": "May 18, 2025",
         "type": "Pool",
         "win": true,
         "score": "5-2"
       },
       {
-        "tournament": "RYC",
-        "event": "Y-14 Men's Saber",
-        "date": "April 20, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "September 24, 2023",
-        "type": "Pool",
-        "win": false,
-        "score": "2-5"
-      },
-      {
-        "tournament": "RYC",
+        "tournament": "March NAC",
         "event": "Cadet Men's Saber",
-        "date": "September 23, 2023",
-        "type": "Pool",
-        "win": false,
-        "score": "2-5"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "BENNETT Lachlan": {
-    "wins": 4,
-    "losses": 0,
-    "total": 4,
-    "winRate": 1,
-    "clubs": ["SHERIDANFA"],
-    "bouts": [
-      {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "January 18, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Junior Olympics",
-        "event": "Cadet Men's Saber",
-        "date": "January 5, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Mission SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "May 5, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "May 4, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "BHANDARE Niev": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["FAW"],
-    "bouts": [
-      {
-        "tournament": "Fairfax Challenge Fall RYC/RJCC & Y8 (Non-Regional)",
-        "event": "Y-12 Men's Saber",
-        "date": "September 11, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "September 3, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "BITKOWER Edward": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["DCFENCERS"],
-    "bouts": [
-      {
-        "tournament": "Capitol Clash SYC, RCC, Veteran ROC & Y8",
-        "event": "Y-8 Men's Saber",
-        "date": "January 19, 2020",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-10 Men's Saber",
-        "date": "January 18, 2020",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "BIVIJI Adam": {
-    "wins": 7,
-    "losses": 1,
-    "total": 8,
-    "winRate": 0.88,
-    "clubs": ["COBRAFC"],
-    "bouts": [
-      {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "January 18, 2025",
-        "type": "T16",
-        "win": true,
-        "score": "15-8"
-      },
-      {
-        "tournament": "Mission SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "May 4, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Cadet Men's Saber",
-        "date": "April 21, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-12 Men's Saber",
-        "date": "January 15, 2024",
-        "type": "T32",
+        "date": "March 7, 2025",
+        "type": "T128",
         "win": true,
         "score": "15-4"
       },
       {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-12 Men's Saber",
-        "date": "November 25, 2022",
+        "tournament": "March NAC",
+        "event": "Y-14 Men's Saber",
+        "date": "March 2, 2024",
         "type": "Pool",
         "win": true,
-        "score": "5-2"
+        "score": "5-4"
       },
       {
-        "tournament": "RYC",
-        "event": "Y-12 Men's Saber",
-        "date": "October 2, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "SYC",
+        "tournament": "Cobra Challenge SYC/RCC",
         "event": "Y-10 Men's Saber",
         "date": "May 31, 2021",
         "type": "Pool",
@@ -761,339 +641,221 @@ export const opponents: Record<string, OpponentData> = {
       },
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-8 Men's Saber",
-        "date": "November 30, 2019",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "BIVIJI Ali": {
-    "wins": 3,
-    "losses": 0,
-    "total": 3,
-    "winRate": 1,
-    "clubs": ["COBRAFC"],
-    "bouts": [
-      {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "January 18, 2025",
-        "type": "T4",
-        "win": true,
-        "score": "15-14"
-      },
-      {
-        "tournament": "March NAC and Parafencing National Championships",
-        "event": "Y-12 Men's Saber",
-        "date": "March 5, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-12 Men's Saber",
-        "date": "February 11, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "BLAIR Campbell": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["TIMMOREHOUSE"],
-    "bouts": [
-      {
-        "tournament": "Mission SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "May 5, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "May 4, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "BOLLU Viren": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "September 24, 2023",
-        "type": "T4",
-        "win": true,
-        "score": "15-9"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "BONGIORNO Wesley": {
-    "wins": 3,
-    "losses": 0,
-    "total": 3,
-    "winRate": 1,
-    "clubs": ["DCFENCERS"],
-    "bouts": [
-      {
-        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "September 24, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Cadet Men's Saber",
-        "date": "September 23, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "NoVA Knights RYC/RJCC",
-        "event": "Y-12 Men's Saber",
-        "date": "October 2, 2022",
-        "type": "T16",
-        "win": true,
-        "score": "15-8"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "BOSITA Brennan": {
-    "wins": 4,
-    "losses": 2,
-    "total": 6,
-    "winRate": 0.67,
-    "clubs": ["GFA"],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "November 17, 2025",
-        "type": "T32",
-        "win": true,
-        "score": "15-8"
-      },
-      {
-        "tournament": "North Texas Roundup SYC / RCC",
-        "event": "Y-14 Men's Saber",
-        "date": "September 3, 2023",
-        "type": "T32",
-        "win": true,
-        "score": "15-12"
-      },
-      {
-        "tournament": "USA Fencing National Championships & July Challenge",
         "event": "Y-10 Men's Saber",
-        "date": "July 11, 2022",
-        "type": "T32",
-        "win": true,
-        "score": "10-2"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "May 15, 2022",
+        "date": "November 29, 2019",
         "type": "Pool",
         "win": false,
-        "score": "3-5"
-      },
+        "score": "2-5"
+      }
+    ]
+  },
+  "WANG Theodore": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "132"
+    ],
+    "bouts": [
       {
-        "tournament": "Fairfax Challenge SYC/RJCC",
-        "event": "Y-10 Men's Saber",
-        "date": "May 14, 2022",
+        "tournament": "February NAC",
+        "event": "Div I Men's Saber",
+        "date": "February 13, 2026",
         "type": "Pool",
         "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "Capitol Clash SYC, RCC, Veteran ROC & Y8",
-        "event": "Y-10 Men's Saber",
-        "date": "January 18, 2020",
-        "type": "T128",
-        "win": true,
-        "score": "10-3"
+        "score": "4-5"
       }
-    ],
-    "birthYear": 2011
+    ]
   },
-  "BRAMLETT Myer": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["FORGE"],
-    "bouts": [
-      {
-        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
-        "event": "Cadet Men's Saber",
-        "date": "April 21, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-14 Men's Saber",
-        "date": "April 20, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "BREUER Daniel": {
+  "NG Jonathan": {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "September 24, 2023",
-        "type": "T16",
-        "win": true,
-        "score": "15-8"
-      }
+    "winRate": 100,
+    "clubs": [
+      "97"
     ],
-    "birthYear": 2010
-  },
-  "BRIMMER Robert (Trey)": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["LVFA"],
     "bouts": [
       {
-        "tournament": "May SJCC",
-        "event": "Junior Men's Saber",
-        "date": "May 16, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Capitol Clash SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 21, 2025",
+        "tournament": "February NAC",
+        "event": "Div I Men's Saber",
+        "date": "February 13, 2026",
         "type": "Pool",
         "win": true,
         "score": "5-2"
       }
-    ],
-    "birthYear": 2011
+    ]
   },
-  "BROOKS Isaac": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["NAZLYMOVFF"],
+  "LIM William J.": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "34"
+    ],
     "bouts": [
       {
-        "tournament": "DCFC Youth Challenge #4",
-        "event": "Y-10 Mixed Saber",
-        "date": "June 12, 2022",
+        "tournament": "February NAC",
+        "event": "Div I Men's Saber",
+        "date": "February 13, 2026",
         "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-10 Men's Saber",
-        "date": "May 14, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
+        "win": false,
+        "score": "0-5"
       }
-    ],
-    "birthYear": 2012
+    ]
   },
-  "BROOKS Theo": {
-    "wins": 3,
-    "losses": 0,
-    "total": 3,
-    "winRate": 1,
-    "clubs": ["NAZLYMOVFF"],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC",
-        "event": "Y-14 Men's Saber",
-        "date": "November 29, 2025",
-        "type": "T16",
-        "win": true,
-        "score": "15-9"
-      },
-      {
-        "tournament": "DCFC Youth Challenge #4",
-        "event": "Y-10 Mixed Saber",
-        "date": "June 12, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-10 Men's Saber",
-        "date": "May 14, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "BROWN Andrew": {
+  "ZEWDA Kebron": {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 1,
-    "clubs": [],
+    "winRate": 100,
+    "clubs": [
+      "186"
+    ],
     "bouts": [
       {
-        "tournament": "March NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 2, 2024",
+        "tournament": "February NAC",
+        "event": "Div I Men's Saber",
+        "date": "February 13, 2026",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "SADHU Neiyam": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "153"
+    ],
+    "bouts": [
+      {
+        "tournament": "February NAC",
+        "event": "Div I Men's Saber",
+        "date": "February 13, 2026",
         "type": "T256",
         "win": true,
-        "score": "15-13"
+        "score": "15-14"
       }
+    ]
+  },
+  "TSE Aiden J": {
+    "wins": 0,
+    "losses": 2,
+    "total": 2,
+    "winRate": 0,
+    "clubs": [
+      "19",
+      "9"
     ],
-    "birthYear": 2011
+    "bouts": [
+      {
+        "tournament": "February NAC",
+        "event": "Div I Men's Saber",
+        "date": "February 13, 2026",
+        "type": "T128",
+        "win": false,
+        "score": "13-15"
+      },
+      {
+        "tournament": "National Championships & July Challenge (Summer Nationals)",
+        "event": "Y-12 Men's Saber",
+        "date": "July 8, 2023",
+        "type": "Pool",
+        "win": false,
+        "score": "0-5"
+      }
+    ]
+  },
+  "GERSTMANN Max T.": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "54"
+    ],
+    "bouts": [
+      {
+        "tournament": "January SJCC",
+        "event": "Junior Men's Saber",
+        "date": "January 24, 2026",
+        "type": "Pool",
+        "win": false,
+        "score": "4-5"
+      }
+    ]
+  },
+  "LEE Brady": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "61"
+    ],
+    "bouts": [
+      {
+        "tournament": "January SJCC",
+        "event": "Junior Men's Saber",
+        "date": "January 24, 2026",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "KHOTLINE Daniel": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "25"
+    ],
+    "bouts": [
+      {
+        "tournament": "January SJCC",
+        "event": "Junior Men's Saber",
+        "date": "January 24, 2026",
+        "type": "Pool",
+        "win": false,
+        "score": "4-5"
+      }
+    ]
+  },
+  "RAJMOHAN Arya": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "72"
+    ],
+    "bouts": [
+      {
+        "tournament": "January SJCC",
+        "event": "Junior Men's Saber",
+        "date": "January 24, 2026",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
   },
   "BRUM Charles E.": {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 1,
-    "clubs": [],
+    "winRate": 100,
+    "clubs": [
+      "107"
+    ],
     "bouts": [
       {
         "tournament": "January SJCC",
@@ -1103,722 +865,365 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-1"
       }
-    ],
-    "birthYear": 2007
+    ]
   },
-  "BUCKLEY Owen": {
-    "wins": 2,
+  "LI Alex Y.\n    \n\n    \n        \n            \n                Missing ID": {
+    "wins": 1,
     "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["CFAFLLC"],
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "48"
+    ],
     "bouts": [
       {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-12 Men's Saber",
-        "date": "July 5, 2024",
+        "tournament": "January SJCC",
+        "event": "Junior Men's Saber",
+        "date": "January 24, 2026",
         "type": "Pool",
         "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "Summer Nationals",
-        "event": "Y-14 Men's Saber",
-        "date": "July 4, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
+        "score": "5-1"
       }
-    ],
-    "birthYear": 2013
+    ]
   },
-  "BURENKOV Matthew": {
-    "wins": 2,
+  "TASIKAS Peter": {
+    "wins": 1,
     "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["ZETAFENCING"],
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "103"
+    ],
     "bouts": [
       {
-        "tournament": "March NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 8, 2025",
-        "type": "Pool",
+        "tournament": "January SJCC",
+        "event": "Junior Men's Saber",
+        "date": "January 24, 2026",
+        "type": "T128",
         "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Cadet Men's Saber",
-        "date": "March 7, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
+        "score": "15-9"
       }
-    ],
-    "birthYear": 2012
+    ]
   },
-  "BUSQUETS Diego": {
-    "wins": 2,
+  "VO Blake": {
+    "wins": 1,
     "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["DCFENCERS"],
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "47"
+    ],
     "bouts": [
       {
-        "tournament": "DCFC Youth Challenge #4",
-        "event": "Y-10 Mixed Saber",
-        "date": "June 12, 2022",
-        "type": "Pool",
+        "tournament": "January SJCC",
+        "event": "Junior Men's Saber",
+        "date": "January 24, 2026",
+        "type": "T64",
         "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-10 Men's Saber",
-        "date": "May 14, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
+        "score": "15-9"
       }
-    ],
-    "birthYear": 2013
+    ]
   },
-  "BUYUCCAN Jonah": {
-    "wins": 3,
-    "losses": 0,
-    "total": 3,
-    "winRate": 1,
-    "clubs": ["UMBCFC"],
+  "YAN William": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "18",
+      "28"
+    ],
     "bouts": [
       {
-        "tournament": "Capital Czajkowski Cup #3",
-        "event": "Senior Mixed Saber",
-        "date": "March 15, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "Capital Czajkowski Cup #3",
-        "event": "Senior Mixed Saber",
-        "date": "March 15, 2025",
+        "tournament": "January SJCC",
+        "event": "Junior Men's Saber",
+        "date": "January 24, 2026",
         "type": "T32",
-        "win": true,
-        "score": "15-2"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 8, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "CAI fungyu": {
-    "wins": 3,
-    "losses": 0,
-    "total": 3,
-    "winRate": 1,
-    "clubs": ["CAPITALFA"],
-    "bouts": [
-      {
-        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "September 24, 2023",
-        "type": "T8",
         "win": true,
         "score": "15-13"
       },
       {
-        "tournament": "River City Regional Rumble RYC/RJCC",
-        "event": "Y-12 Men's Saber",
-        "date": "February 11, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "January 14, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "CAO Donald": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["LAGUNAFC"],
-    "bouts": [
-      {
-        "tournament": "North Texas Roundup SYC/RCC",
-        "event": "Y-12 Men's Saber",
-        "date": "September 3, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "Summer Nationals",
-        "event": "Y-10 Men's Saber",
-        "date": "July 11, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "CAO Oliver": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "February NAC",
-        "event": "Junior Men's Saber",
-        "date": "February 15, 2026",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "CARRINGTON IV William T.": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["COBRAFC"],
-    "bouts": [
-      {
-        "tournament": "October NAC",
+        "tournament": "March SJCC",
         "event": "Cadet Men's Saber",
-        "date": "October 4, 2025",
-        "type": "Pool",
+        "date": "March 16, 2024",
+        "type": "T128",
         "win": false,
-        "score": "4-5"
+        "score": "8-15"
+      }
+    ]
+  },
+  "CIEMINS Henry": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "14"
+    ],
+    "bouts": [
+      {
+        "tournament": "January SJCC",
+        "event": "Junior Men's Saber",
+        "date": "January 24, 2026",
+        "type": "T16",
+        "win": true,
+        "score": "15-11"
+      }
+    ]
+  },
+  "WANG ANDREW CHANG": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "5",
+      "45"
+    ],
+    "bouts": [
+      {
+        "tournament": "January SJCC",
+        "event": "Junior Men's Saber",
+        "date": "January 24, 2026",
+        "type": "T8",
+        "win": true,
+        "score": "15-10"
       },
       {
-        "tournament": "SYC",
-        "event": "Y-10 Men's Saber",
-        "date": "May 31, 2021",
-        "type": "Pool",
-        "win": false,
-        "score": "0-5"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "CHAMBERS Miles": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Fairfax Challenge SYC/RJCC",
-        "event": "Y-10 Men's Saber",
-        "date": "May 14, 2022",
-        "type": "T32",
-        "win": false,
-        "score": "5-10"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "CHAN Elliott": {
-    "wins": 3,
-    "losses": 0,
-    "total": 3,
-    "winRate": 1,
-    "clubs": ["PHX"],
-    "bouts": [
-      {
-        "tournament": "May SJCC",
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
         "event": "Junior Men's Saber",
-        "date": "May 16, 2025",
-        "type": "T64",
+        "date": "June 28, 2025",
+        "type": "T128",
+        "win": false,
+        "score": "9-15"
+      }
+    ]
+  },
+  "RADJABLI Maximillian": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "3",
+      "68"
+    ],
+    "bouts": [
+      {
+        "tournament": "January SJCC",
+        "event": "Junior Men's Saber",
+        "date": "January 24, 2026",
+        "type": "T4",
         "win": true,
         "score": "15-4"
       },
       {
         "tournament": "December SJCC + Para NAC",
-        "event": "Cadet Men's Saber",
-        "date": "December 6, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Cobra Challenge SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "December 1, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2008
-  },
-  "CHAN Ewan": {
-    "wins": 1,
-    "losses": 2,
-    "total": 3,
-    "winRate": 0.33,
-    "clubs": ["PFA"],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-12 Men's Saber",
-        "date": "November 24, 2023",
-        "type": "T64",
-        "win": true,
-        "score": "15-8"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "May 15, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      },
-      {
-        "tournament": "Fairfax Challenge SYC/RJCC",
-        "event": "Y-10 Men's Saber",
-        "date": "May 14, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "CHANG Ethan": {
-    "wins": 4,
-    "losses": 0,
-    "total": 4,
-    "winRate": 1,
-    "clubs": ["NAZLYMOVFF"],
-    "bouts": [
-      {
-        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
-        "event": "Y-14 Men's Saber",
-        "date": "April 20, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Cadet Men's Saber",
-        "date": "March 16, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "NoVA Knights RYC/RJCC",
-        "event": "Y-12 Men's Saber",
-        "date": "October 2, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-14 Men's Saber",
-        "date": "October 1, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "CHANG Timothy": {
-    "wins": 4,
-    "losses": 0,
-    "total": 4,
-    "winRate": 1,
-    "clubs": ["TIMMOREHOUSE"],
-    "bouts": [
-      {
-        "tournament": "Fairfax Challenge SYC/RJCC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 21, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "Local",
-        "event": "Senior Mixed Saber",
-        "date": "March 15, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Cadet Men's Saber",
-        "date": "November 30, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "November NAC",
-        "event": "Cadet Men's Saber",
-        "date": "November 10, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "CHATTABOINA Haveesh": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["FAODENVER"],
-    "bouts": [
-      {
-        "tournament": "Junior Olympics & Div 1 NAC",
-        "event": "Cadet Men's Saber",
-        "date": "February 17, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "February NAC",
         "event": "Junior Men's Saber",
-        "date": "February 16, 2025",
+        "date": "December 7, 2024",
+        "type": "T128",
+        "win": true,
+        "score": "15-11"
+      }
+    ]
+  },
+  "NARDINI Nathanael P.": {
+    "wins": 4,
+    "losses": 1,
+    "total": 5,
+    "winRate": 80,
+    "clubs": [
+      "80",
+      "48",
+      "10",
+      "24",
+      "19"
+    ],
+    "bouts": [
+      {
+        "tournament": "Junior Olympics",
+        "event": "Junior Men's Saber",
+        "date": "January 12, 2026",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      },
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Cadet Men's Saber",
+        "date": "June 30, 2025",
         "type": "Pool",
         "win": true,
         "score": "5-2"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "CHAVES Matthew J.": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
+      },
       {
-        "tournament": "October NAC",
-        "event": "Div I Men's Saber",
-        "date": "October 5, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      }
-    ],
-    "birthYear": 0
-  },
-  "CHAWLA Abhishek": {
-    "wins": 6,
-    "losses": 0,
-    "total": 6,
-    "winRate": 100,
-    "clubs": ["CAPITALFA"],
-    "bouts": [
-      { "tournament": "Capital Czajkowski Cup #3", "event": "Senior Mixed Saber", "date": "March 21, 2026", "type": "T4", "win": true, "score": "15-9" },
-      {
-        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
+        "tournament": "Mission SYC",
         "event": "Y-14 Men's Saber",
-        "date": "April 20, 2024",
-        "type": "Pool",
+        "date": "May 4, 2024",
+        "type": "T16",
         "win": true,
-        "score": "5-4"
+        "score": "15-10"
       },
-      {
-        "tournament": "March NAC",
-        "event": "Cadet Men's Saber",
-        "date": "March 16, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "September 24, 2023",
-        "type": "T32",
-        "win": true,
-        "score": "15-12"
-      },
-      {
-        "tournament": "Fairfax Challenge Fall RYC/RJCC & Y8 (Non-Regional)",
-        "event": "Y-12 Men's Saber",
-        "date": "September 11, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "September 3, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "CHEN Anson": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
         "event": "Y-14 Men's Saber",
-        "date": "January 18, 2025",
+        "date": "January 13, 2024",
+        "type": "T32",
+        "win": true,
+        "score": "15-14"
+      },
+      {
+        "tournament": "Fairfax Challenge SYC/RJCC",
+        "event": "Y-12 Men's Saber",
+        "date": "May 15, 2022",
+        "type": "T64",
+        "win": false,
+        "score": "4-15"
+      }
+    ]
+  },
+  "KHANNA Adamantis": {
+    "wins": 2,
+    "losses": 1,
+    "total": 3,
+    "winRate": 67,
+    "clubs": [
+      "109",
+      "10"
+    ],
+    "bouts": [
+      {
+        "tournament": "Junior Olympics",
+        "event": "Junior Men's Saber",
+        "date": "January 12, 2026",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      },
+      {
+        "tournament": "Junior Olympics",
+        "event": "Junior Men's Saber",
+        "date": "January 12, 2026",
         "type": "T128",
         "win": true,
-        "score": "15-1"
+        "score": "15-11"
+      },
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "December 1, 2024",
+        "type": "T64",
+        "win": false,
+        "score": "14-15"
       }
-    ],
-    "birthYear": 2012
+    ]
   },
-  "CHEN Jack": {
+  "DOLEV Ido": {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 1,
-    "clubs": [],
+    "winRate": 100,
+    "clubs": [
+      "259"
+    ],
     "bouts": [
       {
-        "tournament": "March NAC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 3, 2024",
+        "tournament": "Junior Olympics",
+        "event": "Junior Men's Saber",
+        "date": "January 12, 2026",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "REN James": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "8"
+    ],
+    "bouts": [
+      {
+        "tournament": "Junior Olympics",
+        "event": "Junior Men's Saber",
+        "date": "January 12, 2026",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "KAMAL Aidan": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "292"
+    ],
+    "bouts": [
+      {
+        "tournament": "Junior Olympics",
+        "event": "Junior Men's Saber",
+        "date": "January 12, 2026",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "KULKARNI Shreyas": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "229"
+    ],
+    "bouts": [
+      {
+        "tournament": "Junior Olympics",
+        "event": "Junior Men's Saber",
+        "date": "January 12, 2026",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "LIU Kevin": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "51"
+    ],
+    "bouts": [
+      {
+        "tournament": "Junior Olympics",
+        "event": "Junior Men's Saber",
+        "date": "January 12, 2026",
         "type": "T64",
         "win": true,
         "score": "15-12"
       }
-    ],
-    "birthYear": 2011
-  },
-  "CHEN Jonathan": {
-    "wins": 0,
-    "losses": 3,
-    "total": 3,
-    "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Capital Czajkowski Cup #3",
-        "event": "Senior Mixed Saber",
-        "date": "March 21, 2026",
-        "type": "Final",
-        "win": false,
-        "score": "13-15"
-      },
-      {
-        "tournament": "Capital Czajkowski Cup #3",
-        "event": "Senior Mixed Saber",
-        "date": "March 15, 2025",
-        "type": "T4",
-        "win": false,
-        "score": "13-15"
-      },
-      {
-        "tournament": "Junior Olympics & Div 1 NAC",
-        "event": "Cadet Men's Saber",
-        "date": "February 17, 2025",
-        "type": "T64",
-        "win": false,
-        "score": "9-15"
-      }
-    ],
-    "birthYear": 2008
-  },
-  "CHEN Shawn": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["OREGONFA"],
-    "bouts": [
-      {
-        "tournament": "March NAC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 3, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 2, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "CHEN Xing Ji": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["CHN"],
-    "bouts": [
-      {
-        "tournament": "March NAC and Parafencing National Championships",
-        "event": "Y-12 Men's Saber",
-        "date": "March 5, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-12 Men's Saber",
-        "date": "February 11, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "CHEONG Heonjun": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Div I Men's Saber",
-        "date": "November 14, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      }
-    ],
-    "birthYear": 2007
-  },
-  "CHERNAEV Antonio": {
-    "wins": 2,
-    "losses": 1,
-    "total": 3,
-    "winRate": 0.67,
-    "clubs": ["LILOVFA"],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-12 Men's Saber",
-        "date": "November 24, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "September 24, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-10 Men's Saber",
-        "date": "May 31, 2021",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "CHI Everett": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["WESTCOASTFA"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Junior Men's Saber",
-        "date": "June 28, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "May NAC",
-        "event": "Cadet Men's Saber",
-        "date": "May 18, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "CHOI Clayton": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["GFA"],
-    "bouts": [
-      {
-        "tournament": "Fairfax Challenge SYC/RJCC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 21, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "Local",
-        "event": "Senior Mixed Saber",
-        "date": "March 15, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2012
+    ]
   },
   "CHON Collin": {
-    "wins": 3,
+    "wins": 2,
     "losses": 2,
-    "total": 5,
-    "winRate": 0.6,
-    "clubs": ["GFA"],
+    "total": 4,
+    "winRate": 50,
+    "clubs": [
+      "22",
+      "12",
+      "65",
+      "2"
+    ],
     "bouts": [
       {
         "tournament": "Junior Olympics",
@@ -1832,14 +1237,6 @@ export const opponents: Record<string, OpponentData> = {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
         "event": "Cadet Men's Saber",
         "date": "July 1, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "May 5, 2024",
         "type": "Pool",
         "win": true,
         "score": "5-2"
@@ -1860,163 +1257,25 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-15"
       }
-    ],
-    "birthYear": 2009
+    ]
   },
-  "CHTERENTAL Alex": {
+  "SU Landon": {
     "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["DYNAMOFC"],
-    "bouts": [
-      {
-        "tournament": "Junior Olympics & Div 1 NAC",
-        "event": "Junior Men's Saber",
-        "date": "February 16, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      },
-      {
-        "tournament": "Capitol Clash SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "January 18, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      }
-    ],
-    "birthYear": 2007
-  },
-  "CIECIEREGA MATTHEW": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "USA Fencing National Championships & July Challenge",
-        "event": "Y-10 Men's Saber",
-        "date": "July 11, 2022",
-        "type": "T64",
-        "win": true,
-        "score": "10-7"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "CIEMINS Henry": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "January SJCC",
-        "event": "Junior Men's Saber",
-        "date": "January 24, 2026",
-        "type": "T16",
-        "win": true,
-        "score": "15-11"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "CLARK Aram": {
-    "wins": 1,
-    "losses": 2,
+    "losses": 3,
     "total": 3,
-    "winRate": 0.33,
-    "clubs": ["TIMMOREHOUSE"],
-    "bouts": [
-      {
-        "tournament": "Mission SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "May 4, 2024",
-        "type": "T64",
-        "win": true,
-        "score": "15-14"
-      },
-      {
-        "tournament": "North Texas Roundup SYC/RCC",
-        "event": "Y-12 Men's Saber",
-        "date": "September 3, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "Summer Nationals",
-        "event": "Y-10 Men's Saber",
-        "date": "July 11, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      }
+    "winRate": 0,
+    "clubs": [
+      "6",
+      "1"
     ],
-    "birthYear": 2010
-  },
-  "COBIAN Richard": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
     "bouts": [
       {
-        "tournament": "October NAC",
+        "tournament": "Junior Olympics",
         "event": "Junior Men's Saber",
-        "date": "October 3, 2025",
-        "type": "T256",
-        "win": true,
-        "score": "15-13"
-      }
-    ],
-    "birthYear": 2006
-  },
-  "COGLIANO Max": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-14 Men's Saber",
-        "date": "July 4, 2024",
-        "type": "T256",
-        "win": true,
-        "score": "15-8"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "CRAIN Bennett": {
-    "wins": 2,
-    "losses": 2,
-    "total": 4,
-    "winRate": 0.5,
-    "clubs": ["FORGE"],
-    "bouts": [
-      {
-        "tournament": "River City Regional Rumble - RYC/RJCC and Y8",
-        "event": "Cadet Men's Saber",
-        "date": "September 21, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Summer Nationals",
-        "event": "Y-12 Men's Saber",
-        "date": "July 5, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
+        "date": "January 12, 2026",
+        "type": "T16",
+        "win": false,
+        "score": "14-15"
       },
       {
         "tournament": "River City Regional Rumble RJCC / RYC & Y8",
@@ -2024,112 +1283,408 @@ export const opponents: Record<string, OpponentData> = {
         "date": "September 23, 2023",
         "type": "Pool",
         "win": false,
-        "score": "4-5"
+        "score": "3-5"
       },
       {
-        "tournament": "SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "September 3, 2023",
-        "type": "Pool",
+        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
+        "event": "Cadet Men's Saber",
+        "date": "September 23, 2023",
+        "type": "T16",
         "win": false,
-        "score": "4-5"
+        "score": "4-15"
       }
-    ],
-    "birthYear": 2013
+    ]
   },
-  "CRAWFORD William": {
-    "wins": 2,
+  "WANG Justin": {
+    "wins": 1,
     "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["ZETAFENCING"],
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "106"
+    ],
     "bouts": [
       {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "January 13, 2024",
+        "tournament": "Junior Olympics",
+        "event": "Cadet Men's Saber",
+        "date": "January 10, 2026",
         "type": "Pool",
         "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "November 24, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
+        "score": "5-1"
       }
-    ],
-    "birthYear": 2010
+    ]
   },
-  "CRICOL Damian": {
+  "KEMP Austin": {
     "wins": 0,
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [],
+    "clubs": [
+      "73"
+    ],
     "bouts": [
       {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-14 Men's Saber",
-        "date": "July 3, 2025",
-        "type": "T16",
+        "tournament": "Junior Olympics",
+        "event": "Cadet Men's Saber",
+        "date": "January 10, 2026",
+        "type": "Pool",
         "win": false,
-        "score": "9-15"
+        "score": "4-5"
       }
-    ],
-    "birthYear": 2010
+    ]
   },
-  "D'AMELJ Edoardo": {
-    "wins": 3,
-    "losses": 2,
-    "total": 5,
-    "winRate": 60.5,
-    "clubs": ["NAZLYMOVFF"],
-    "bouts": [
-      { "tournament": "River City", "event": "Y-14 Men's Saber", "date": "September 24, 2023", "type": "DE", "win": true, "score": "15-13" },
-      {
-        "tournament": "Mission SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "May 5, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "May 4, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "River City Regional Rumble RYC/RJCC",
-        "event": "Y-12 Men's Saber",
-        "date": "February 11, 2023",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "January 14, 2023",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      }
+  "VU Mark": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "224"
     ],
-    "birthYear": 2012
+    "bouts": [
+      {
+        "tournament": "Junior Olympics",
+        "event": "Cadet Men's Saber",
+        "date": "January 10, 2026",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "STAMPER Wyatt": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "260"
+    ],
+    "bouts": [
+      {
+        "tournament": "Junior Olympics",
+        "event": "Cadet Men's Saber",
+        "date": "January 10, 2026",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "GORDON Samuel": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "175",
+      "11"
+    ],
+    "bouts": [
+      {
+        "tournament": "Junior Olympics",
+        "event": "Cadet Men's Saber",
+        "date": "January 10, 2026",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      },
+      {
+        "tournament": "Ben Gutenberg SYC - RJCC",
+        "event": "Y-14 Men's Saber",
+        "date": "October 12, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "WANG Alex": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "98",
+      "25"
+    ],
+    "bouts": [
+      {
+        "tournament": "Junior Olympics",
+        "event": "Cadet Men's Saber",
+        "date": "January 10, 2026",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      },
+      {
+        "tournament": "Fairfax Challenge SYC/RJCC",
+        "event": "Y-14 Men's Saber",
+        "date": "March 21, 2025",
+        "type": "T32",
+        "win": true,
+        "score": "15-10"
+      }
+    ]
+  },
+  "MARCELLINO Robert": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "218"
+    ],
+    "bouts": [
+      {
+        "tournament": "Junior Olympics",
+        "event": "Cadet Men's Saber",
+        "date": "January 10, 2026",
+        "type": "T256",
+        "win": true,
+        "score": "15-8"
+      }
+    ]
+  },
+  "KWON Kenneth": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "93"
+    ],
+    "bouts": [
+      {
+        "tournament": "Junior Olympics",
+        "event": "Cadet Men's Saber",
+        "date": "January 10, 2026",
+        "type": "T128",
+        "win": true,
+        "score": "15-10"
+      }
+    ]
+  },
+  "BELL III Alfred (Tripp) R.": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "7"
+    ],
+    "bouts": [
+      {
+        "tournament": "Junior Olympics",
+        "event": "Cadet Men's Saber",
+        "date": "January 10, 2026",
+        "type": "T64",
+        "win": false,
+        "score": "6-15"
+      }
+    ]
+  },
+  "LIU Jeremy": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "92"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC",
+        "event": "Y-14 Men's Saber",
+        "date": "November 29, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "LEE Jeffrey": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "131"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC",
+        "event": "Y-14 Men's Saber",
+        "date": "November 29, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "MARTIRE Francis": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "129"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC",
+        "event": "Y-14 Men's Saber",
+        "date": "November 29, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "SHANKAR Rahm": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "54"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC",
+        "event": "Y-14 Men's Saber",
+        "date": "November 29, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "ROH Jaden": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "28"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC",
+        "event": "Y-14 Men's Saber",
+        "date": "November 29, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      },
+      {
+        "tournament": "Cobra Challenge SYC/RCC",
+        "event": "Y-14 Men's Saber",
+        "date": "November 29, 2025",
+        "type": "T32",
+        "win": true,
+        "score": "15-7"
+      }
+    ]
+  },
+  "KRISHNARASA Aiyann": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "139"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC",
+        "event": "Y-14 Men's Saber",
+        "date": "November 29, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "GAO Francis": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "123"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC",
+        "event": "Y-14 Men's Saber",
+        "date": "November 29, 2025",
+        "type": "T128",
+        "win": true,
+        "score": "15-5"
+      }
+    ]
+  },
+  "LLOYD Max": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "57"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC",
+        "event": "Y-14 Men's Saber",
+        "date": "November 29, 2025",
+        "type": "T64",
+        "win": true,
+        "score": "15-12"
+      }
+    ]
+  },
+  "BROOKS Theo": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "12",
+      "9"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC",
+        "event": "Y-14 Men's Saber",
+        "date": "November 29, 2025",
+        "type": "T16",
+        "win": true,
+        "score": "15-9"
+      },
+      {
+        "tournament": "DCFC Youth Challenge #4",
+        "event": "Y-10 Mixed Saber",
+        "date": "June 12, 2022",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
   },
   "DAI Zihou": {
     "wins": 2,
-    "losses": 6,
-    "total": 8,
-    "winRate": 0.25,
-    "clubs": ["TIMMOREHOUSE"],
+    "losses": 4,
+    "total": 6,
+    "winRate": 33,
+    "clubs": [
+      "6",
+      "83",
+      "69",
+      "34",
+      "21",
+      "8"
+    ],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC",
@@ -2148,25 +1703,9 @@ export const opponents: Record<string, OpponentData> = {
         "score": "3-5"
       },
       {
-        "tournament": "December NAC",
-        "event": "Junior Men's Saber",
-        "date": "December 7, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
         "tournament": "National Championships & July Challenge (Summer Nationals)",
         "event": "Y-12 Men's Saber",
         "date": "July 8, 2023",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-12 Men's Saber",
-        "date": "April 16, 2023",
         "type": "Pool",
         "win": false,
         "score": "4-5"
@@ -2195,83 +1734,27 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "10-4"
       }
-    ],
-    "birthYear": 2011
+    ]
   },
-  "DATTILIO Aidan": {
+  "BAI Evan": {
     "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["TIMMOREHOUSE"],
+    "losses": 3,
+    "total": 5,
+    "winRate": 40,
+    "clubs": [
+      "3",
+      "95",
+      "16",
+      "8"
+    ],
     "bouts": [
       {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-12 Men's Saber",
-        "date": "November 24, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "SYC",
+        "tournament": "Cobra Challenge SYC/RCC",
         "event": "Y-14 Men's Saber",
-        "date": "September 24, 2023",
-        "type": "Pool",
+        "date": "November 29, 2025",
+        "type": "T4",
         "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "DE PLANELL-LOTTI Pau": {
-    "wins": 3,
-    "losses": 0,
-    "total": 3,
-    "winRate": 1,
-    "clubs": ["TIMMOREHOUSE"],
-    "bouts": [
-      {
-        "tournament": "Capitol Clash SYC, RCC, Veteran ROC & Y8",
-        "event": "Y-8 Men's Saber",
-        "date": "January 19, 2020",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-10 Men's Saber",
-        "date": "January 18, 2020",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-8 Men's Saber",
-        "date": "November 30, 2019",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "DE SIENA Salvatore": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["ESCRIMEURFC"],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Cadet Men's Saber",
-        "date": "November 30, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
+        "score": "15-9"
       },
       {
         "tournament": "November NAC",
@@ -2279,191 +1762,709 @@ export const opponents: Record<string, OpponentData> = {
         "date": "November 10, 2024",
         "type": "Pool",
         "win": false,
-        "score": "4-5"
-      }
-    ],
-    "birthYear": 2008
-  },
-  "DEL VECCHIO Nicolas": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["CAPITALFA"],
-    "bouts": [
-      {
-        "tournament": "Capital Czajkowski Cup #3",
-        "event": "Senior Mixed Saber",
-        "date": "March 15, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
+        "score": "3-5"
       },
       {
-        "tournament": "March NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 8, 2025",
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Y-12 Men's Saber",
+        "date": "July 5, 2024",
+        "type": "T8",
+        "win": false,
+        "score": "9-15"
+      },
+      {
+        "tournament": "Capitol Clash SYC/RCC",
+        "event": "Y-12 Men's Saber",
+        "date": "January 14, 2023",
         "type": "Pool",
         "win": false,
-        "score": "1-5"
+        "score": "0-5"
+      },
+      {
+        "tournament": "USA Fencing National Championships & July Challenge",
+        "event": "Y-10 Men's Saber",
+        "date": "July 11, 2022",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
       }
-    ],
-    "birthYear": 2012
+    ]
   },
-  "DOLEV Ido": {
+  "URSU Marcel T.": {
+    "wins": 1,
+    "losses": 2,
+    "total": 3,
+    "winRate": 33,
+    "clubs": [
+      "2",
+      "1"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC",
+        "event": "Y-14 Men's Saber",
+        "date": "November 29, 2025",
+        "type": "T2",
+        "win": true,
+        "score": "15-8"
+      },
+      {
+        "tournament": "Mission SYC",
+        "event": "Y-12 Men's Saber",
+        "date": "May 5, 2024",
+        "type": "T4",
+        "win": false,
+        "score": "9-15"
+      },
+      {
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-12 Men's Saber",
+        "date": "January 15, 2024",
+        "type": "T4",
+        "win": false,
+        "score": "5-15"
+      }
+    ]
+  },
+  "BALAGOPAL Aditya": {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 1,
-    "clubs": [],
+    "winRate": 100,
+    "clubs": [
+      "151"
+    ],
     "bouts": [
       {
-        "tournament": "Junior Olympics",
-        "event": "Junior Men's Saber",
-        "date": "January 12, 2026",
+        "tournament": "November NAC",
+        "event": "Y-14 Men's Saber",
+        "date": "November 17, 2025",
         "type": "Pool",
         "win": true,
         "score": "5-2"
       }
-    ],
-    "birthYear": 2007
+    ]
   },
-  "DONNELL Cillian": {
+  "LEE Nathan Uju": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "22",
+      "7"
+    ],
+    "bouts": [
+      {
+        "tournament": "November NAC",
+        "event": "Y-14 Men's Saber",
+        "date": "November 17, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      },
+      {
+        "tournament": "March NAC",
+        "event": "Y-12 Men's Saber",
+        "date": "March 3, 2024",
+        "type": "T32",
+        "win": false,
+        "score": "11-15"
+      }
+    ]
+  },
+  "NGO Emerson": {
     "wins": 3,
     "losses": 0,
     "total": 3,
-    "winRate": 1,
-    "clubs": ["DCFENCERS"],
+    "winRate": 100,
+    "clubs": [
+      "45",
+      "240",
+      "102"
+    ],
     "bouts": [
       {
-        "tournament": "DCFC Youth Challenge #4",
-        "event": "Y-10 Mixed Saber",
-        "date": "June 12, 2022",
+        "tournament": "November NAC",
+        "event": "Y-14 Men's Saber",
+        "date": "November 17, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      },
+      {
+        "tournament": "November NAC",
+        "event": "Cadet Men's Saber",
+        "date": "November 16, 2025",
+        "type": "T256",
+        "win": true,
+        "score": "15-7"
+      },
+      {
+        "tournament": "December SJCC + Para NAC",
+        "event": "Cadet Men's Saber",
+        "date": "December 6, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "ROBINSON Ezra": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "60"
+    ],
+    "bouts": [
+      {
+        "tournament": "November NAC",
+        "event": "Y-14 Men's Saber",
+        "date": "November 17, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "WANG Ryan": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "119",
+      "188"
+    ],
+    "bouts": [
+      {
+        "tournament": "November NAC",
+        "event": "Y-14 Men's Saber",
+        "date": "November 17, 2025",
         "type": "Pool",
         "win": true,
         "score": "5-0"
       },
       {
-        "tournament": "DCFC Youth Challenge #4",
-        "event": "Y-10 Mixed Saber",
-        "date": "June 12, 2022",
-        "type": "T4",
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Y-12 Men's Saber",
+        "date": "July 5, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "KONG Ethan": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "163"
+    ],
+    "bouts": [
+      {
+        "tournament": "November NAC",
+        "event": "Y-14 Men's Saber",
+        "date": "November 17, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "SRA Nawab": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "124"
+    ],
+    "bouts": [
+      {
+        "tournament": "November NAC",
+        "event": "Y-14 Men's Saber",
+        "date": "November 17, 2025",
+        "type": "T128",
+        "win": true,
+        "score": "15-2"
+      }
+    ]
+  },
+  "KONDOGI Saivarun": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "52"
+    ],
+    "bouts": [
+      {
+        "tournament": "November NAC",
+        "event": "Y-14 Men's Saber",
+        "date": "November 17, 2025",
+        "type": "T64",
+        "win": true,
+        "score": "15-9"
+      }
+    ]
+  },
+  "BOSITA Brennan": {
+    "wins": 4,
+    "losses": 1,
+    "total": 5,
+    "winRate": 80,
+    "clubs": [
+      "26",
+      "19",
+      "31",
+      "12",
+      "73"
+    ],
+    "bouts": [
+      {
+        "tournament": "November NAC",
+        "event": "Y-14 Men's Saber",
+        "date": "November 17, 2025",
+        "type": "T32",
+        "win": true,
+        "score": "15-8"
+      },
+      {
+        "tournament": "North Texas Roundup SYC / RCC",
+        "event": "Y-14 Men's Saber",
+        "date": "September 3, 2023",
+        "type": "T32",
+        "win": true,
+        "score": "15-12"
+      },
+      {
+        "tournament": "USA Fencing National Championships & July Challenge",
+        "event": "Y-10 Men's Saber",
+        "date": "July 11, 2022",
+        "type": "T32",
         "win": true,
         "score": "10-2"
       },
       {
-        "tournament": "SYC",
+        "tournament": "Fairfax Challenge SYC/RJCC",
         "event": "Y-10 Men's Saber",
         "date": "May 14, 2022",
         "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "DUMOULIN Gabriel": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["CANDLEWOODFC"],
-    "bouts": [
-      {
-        "tournament": "Junior Olympics & Div 1 NAC",
-        "event": "Junior Men's Saber",
-        "date": "February 16, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
+        "win": false,
+        "score": "3-5"
       },
       {
-        "tournament": "Capitol Clash SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "January 18, 2025",
-        "type": "Pool",
+        "tournament": "Capitol Clash SYC, RCC, Veteran ROC & Y8",
+        "event": "Y-10 Men's Saber",
+        "date": "January 18, 2020",
+        "type": "T128",
         "win": true,
-        "score": "5-4"
+        "score": "10-3"
       }
-    ],
-    "birthYear": 2012
+    ]
   },
-  "EARLEY Jack": {
+  "KANG Matthew": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "10"
+    ],
+    "bouts": [
+      {
+        "tournament": "November NAC",
+        "event": "Y-14 Men's Saber",
+        "date": "November 17, 2025",
+        "type": "T16",
+        "win": true,
+        "score": "15-9"
+      }
+    ]
+  },
+  "LEVIN Jacob": {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 1,
-    "clubs": ["ZETAFENCING"],
+    "winRate": 100,
+    "clubs": [
+      "250",
+      "48"
+    ],
     "bouts": [
+      {
+        "tournament": "November NAC",
+        "event": "Cadet Men's Saber",
+        "date": "November 16, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      },
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
         "event": "Y-14 Men's Saber",
         "date": "January 18, 2025",
         "type": "Pool",
         "win": true,
-        "score": "5-1"
+        "score": "5-2"
+      }
+    ]
+  },
+  "KAMURA Kosei": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "204",
+      "53"
+    ],
+    "bouts": [
+      {
+        "tournament": "November NAC",
+        "event": "Cadet Men's Saber",
+        "date": "November 16, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
       },
       {
-        "tournament": "Junior Olympics",
-        "event": "Cadet Men's Saber",
-        "date": "January 5, 2025",
+        "tournament": "North Texas Roundup SYC / RCC",
+        "event": "Y-14 Men's Saber",
+        "date": "September 3, 2023",
         "type": "Pool",
         "win": true,
         "score": "5-1"
       }
-    ],
-    "birthYear": 2012
+    ]
   },
-  "EYBELMAN Ariel": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["DYNAMOFC"],
-    "bouts": [
-      {
-        "tournament": "January NAC",
-        "event": "Cadet Men's Saber",
-        "date": "January 5, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      },
-      {
-        "tournament": "December NAC",
-        "event": "Junior Men's Saber",
-        "date": "December 7, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      }
-    ],
-    "birthYear": 2008
-  },
-  "EYSTER Edison": {
+  "TANJGA Luka": {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 1,
-    "clubs": [],
+    "winRate": 100,
+    "clubs": [
+      "277"
+    ],
     "bouts": [
       {
-        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
+        "tournament": "November NAC",
         "event": "Cadet Men's Saber",
-        "date": "April 21, 2024",
+        "date": "November 16, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "MCDONALD Finn": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "159",
+      "23"
+    ],
+    "bouts": [
+      {
+        "tournament": "November NAC",
+        "event": "Cadet Men's Saber",
+        "date": "November 16, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      },
+      {
+        "tournament": "Cobra Challenge SYC/RCC",
+        "event": "Y-10 Men's Saber",
+        "date": "May 31, 2021",
+        "type": "Pool",
+        "win": false,
+        "score": "3-5"
+      }
+    ]
+  },
+  "TANI Tino": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "16"
+    ],
+    "bouts": [
+      {
+        "tournament": "November NAC",
+        "event": "Cadet Men's Saber",
+        "date": "November 16, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      }
+    ]
+  },
+  "PORTER Dupree": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "122",
+      "3"
+    ],
+    "bouts": [
+      {
+        "tournament": "November NAC",
+        "event": "Cadet Men's Saber",
+        "date": "November 16, 2025",
+        "type": "T128",
+        "win": true,
+        "score": "15-12"
+      },
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Cadet Men's Saber",
+        "date": "November 30, 2024",
         "type": "T8",
+        "win": false,
+        "score": "11-15"
+      }
+    ]
+  },
+  "WONG Max": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "53"
+    ],
+    "bouts": [
+      {
+        "tournament": "November NAC",
+        "event": "Cadet Men's Saber",
+        "date": "November 16, 2025",
+        "type": "T64",
+        "win": true,
+        "score": "15-13"
+      }
+    ]
+  },
+  "ZHAO Lucas": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "21",
+      "57"
+    ],
+    "bouts": [
+      {
+        "tournament": "November NAC",
+        "event": "Cadet Men's Saber",
+        "date": "November 16, 2025",
+        "type": "T32",
         "win": true,
         "score": "15-9"
+      },
+      {
+        "tournament": "Junior Olympics & Div 1 NAC",
+        "event": "Junior Men's Saber",
+        "date": "February 16, 2025",
+        "type": "T256",
+        "win": false,
+        "score": "14-15"
       }
+    ]
+  },
+  "KIM ELIJAH": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "8"
     ],
-    "birthYear": 2008
+    "bouts": [
+      {
+        "tournament": "November NAC",
+        "event": "Cadet Men's Saber",
+        "date": "November 16, 2025",
+        "type": "T16",
+        "win": false,
+        "score": "9-15"
+      }
+    ]
+  },
+  "GREMILLION Obadiah": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "81",
+      "8"
+    ],
+    "bouts": [
+      {
+        "tournament": "November NAC",
+        "event": "Div I Men's Saber",
+        "date": "November 14, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      },
+      {
+        "tournament": "May SJCC",
+        "event": "Junior Men's Saber",
+        "date": "May 16, 2025",
+        "type": "T16",
+        "win": false,
+        "score": "7-15"
+      }
+    ]
+  },
+  "CHEONG Heonjun": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "7"
+    ],
+    "bouts": [
+      {
+        "tournament": "November NAC",
+        "event": "Div I Men's Saber",
+        "date": "November 14, 2025",
+        "type": "Pool",
+        "win": false,
+        "score": "4-5"
+      }
+    ]
+  },
+  "MICLAUS Justin": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "23"
+    ],
+    "bouts": [
+      {
+        "tournament": "November NAC",
+        "event": "Div I Men's Saber",
+        "date": "November 14, 2025",
+        "type": "Pool",
+        "win": false,
+        "score": "4-5"
+      }
+    ]
+  },
+  "TIAGI George": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "104"
+    ],
+    "bouts": [
+      {
+        "tournament": "November NAC",
+        "event": "Div I Men's Saber",
+        "date": "November 14, 2025",
+        "type": "Pool",
+        "win": false,
+        "score": "0-5"
+      }
+    ]
+  },
+  "YANG Dylan": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "146"
+    ],
+    "bouts": [
+      {
+        "tournament": "November NAC",
+        "event": "Div I Men's Saber",
+        "date": "November 14, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "NAMBIAR Navin": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "200",
+      "220"
+    ],
+    "bouts": [
+      {
+        "tournament": "November NAC",
+        "event": "Div I Men's Saber",
+        "date": "November 14, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      },
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Cadet Men's Saber",
+        "date": "June 30, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "CHAVES Matthew J.": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "26"
+    ],
+    "bouts": [
+      {
+        "tournament": "October NAC",
+        "event": "Div I Men's Saber",
+        "date": "October 5, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      }
+    ]
   },
   "FANG Eason": {
     "wins": 2,
-    "losses": 2,
-    "total": 4,
-    "winRate": 0.5,
-    "clubs": ["SFA"],
+    "losses": 1,
+    "total": 3,
+    "winRate": 67,
+    "clubs": [
+      "172",
+      "102",
+      "117"
+    ],
     "bouts": [
       {
         "tournament": "October NAC",
@@ -2482,14 +2483,6 @@ export const opponents: Record<string, OpponentData> = {
         "score": "4-5"
       },
       {
-        "tournament": "December NAC",
-        "event": "Junior Men's Saber",
-        "date": "December 7, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      },
-      {
         "tournament": "National Championships and July Challenge (Summer Nationals)",
         "event": "Y-14 Men's Saber",
         "date": "July 4, 2024",
@@ -2497,65 +2490,695 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-4"
       }
-    ],
-    "birthYear": 2011
+    ]
   },
-  "FARBER Jake": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["ZETAFENCING"],
+  "JEFFORDS Alexander": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "83"
+    ],
     "bouts": [
       {
-        "tournament": "March SJCC",
-        "event": "Cadet Men's Saber",
-        "date": "March 16, 2024",
+        "tournament": "October NAC",
+        "event": "Div I Men's Saber",
+        "date": "October 5, 2025",
+        "type": "Pool",
+        "win": false,
+        "score": "3-5"
+      }
+    ]
+  },
+  "HONG Rubin": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "37"
+    ],
+    "bouts": [
+      {
+        "tournament": "October NAC",
+        "event": "Div I Men's Saber",
+        "date": "October 5, 2025",
+        "type": "Pool",
+        "win": false,
+        "score": "2-5"
+      }
+    ]
+  },
+  "ZHU Yuchen (Kevin)": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "157"
+    ],
+    "bouts": [
+      {
+        "tournament": "October NAC",
+        "event": "Div I Men's Saber",
+        "date": "October 5, 2025",
+        "type": "Pool",
+        "win": false,
+        "score": "0-5"
+      }
+    ]
+  },
+  "GHAYALOD ansh": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "185"
+    ],
+    "bouts": [
+      {
+        "tournament": "October NAC",
+        "event": "Div I Men's Saber",
+        "date": "October 5, 2025",
         "type": "Pool",
         "win": true,
-        "score": "5-3"
+        "score": "5-4"
+      }
+    ]
+  },
+  "SKARBONKIEWICZ Maksymilian A.": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "32"
+    ],
+    "bouts": [
+      {
+        "tournament": "October NAC",
+        "event": "Div I Men's Saber",
+        "date": "October 5, 2025",
+        "type": "T256",
+        "win": false,
+        "score": "5-15"
+      }
+    ]
+  },
+  "KANG Evan R.": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "3"
+    ],
+    "bouts": [
+      {
+        "tournament": "October NAC",
+        "event": "Cadet Men's Saber",
+        "date": "October 4, 2025",
+        "type": "Pool",
+        "win": false,
+        "score": "3-5"
+      }
+    ]
+  },
+  "TANG Morgan": {
+    "wins": 2,
+    "losses": 1,
+    "total": 3,
+    "winRate": 67,
+    "clubs": [
+      "177",
+      "3",
+      "39"
+    ],
+    "bouts": [
+      {
+        "tournament": "October NAC",
+        "event": "Cadet Men's Saber",
+        "date": "October 4, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
       },
       {
-        "tournament": "March NAC",
+        "tournament": "North Texas Roundup SYC / RCC",
         "event": "Y-12 Men's Saber",
-        "date": "March 3, 2024",
+        "date": "September 2, 2023",
+        "type": "Pool",
+        "win": false,
+        "score": "3-5"
+      },
+      {
+        "tournament": "USA Fencing National Championships & July Challenge",
+        "event": "Y-10 Men's Saber",
+        "date": "July 11, 2022",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "LIU Daniel": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "124"
+    ],
+    "bouts": [
+      {
+        "tournament": "October NAC",
+        "event": "Cadet Men's Saber",
+        "date": "October 4, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "LAMTAN Christoffer": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "125"
+    ],
+    "bouts": [
+      {
+        "tournament": "October NAC",
+        "event": "Cadet Men's Saber",
+        "date": "October 4, 2025",
+        "type": "Pool",
+        "win": false,
+        "score": "4-5"
+      }
+    ]
+  },
+  "GREENSTEIN Viktor": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "64"
+    ],
+    "bouts": [
+      {
+        "tournament": "October NAC",
+        "event": "Cadet Men's Saber",
+        "date": "October 4, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "CARRINGTON IV William T.": {
+    "wins": 0,
+    "losses": 2,
+    "total": 2,
+    "winRate": 0,
+    "clubs": [
+      "41",
+      "2"
+    ],
+    "bouts": [
+      {
+        "tournament": "October NAC",
+        "event": "Cadet Men's Saber",
+        "date": "October 4, 2025",
+        "type": "Pool",
+        "win": false,
+        "score": "4-5"
+      },
+      {
+        "tournament": "Cobra Challenge SYC/RCC",
+        "event": "Y-10 Men's Saber",
+        "date": "May 31, 2021",
+        "type": "Pool",
+        "win": false,
+        "score": "0-5"
+      }
+    ]
+  },
+  "BADMUS Joshua": {
+    "wins": 3,
+    "losses": 0,
+    "total": 3,
+    "winRate": 100,
+    "clubs": [
+      "166",
+      "21",
+      "12"
+    ],
+    "bouts": [
+      {
+        "tournament": "October NAC",
+        "event": "Cadet Men's Saber",
+        "date": "October 4, 2025",
+        "type": "T256",
+        "win": true,
+        "score": "15-9"
+      },
+      {
+        "tournament": "NoVA Knights RYC/RJCC",
+        "event": "Y-12 Men's Saber",
+        "date": "October 2, 2022",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      },
+      {
+        "tournament": "Fairfax Challenge Fall RYC/RJCC & Y8 (Non-Regional)",
+        "event": "Y-12 Men's Saber",
+        "date": "September 11, 2022",
+        "type": "T16",
+        "win": true,
+        "score": "15-8"
+      }
+    ]
+  },
+  "ANDRES Michael": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "71"
+    ],
+    "bouts": [
+      {
+        "tournament": "October NAC",
+        "event": "Cadet Men's Saber",
+        "date": "October 4, 2025",
+        "type": "T128",
+        "win": true,
+        "score": "15-14"
+      }
+    ]
+  },
+  "JIN Liangxuan": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "13"
+    ],
+    "bouts": [
+      {
+        "tournament": "October NAC",
+        "event": "Cadet Men's Saber",
+        "date": "October 4, 2025",
+        "type": "T64",
+        "win": false,
+        "score": "5-15"
+      }
+    ]
+  },
+  "ZHAO Zhiyu(Yogi)": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "130"
+    ],
+    "bouts": [
+      {
+        "tournament": "October NAC",
+        "event": "Junior Men's Saber",
+        "date": "October 3, 2025",
         "type": "Pool",
         "win": true,
         "score": "5-3"
       }
-    ],
-    "birthYear": 2013
+    ]
   },
-  "FEI Danny": {
-    "wins": 2,
-    "losses": 3,
-    "total": 5,
-    "winRate": 0.4,
-    "clubs": ["MIRACLEFC"],
+  "MATTOO Dhruv": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "187"
+    ],
     "bouts": [
       {
-        "tournament": "Fairfax Challenge Spring RYC/RJCC/ROC",
-        "event": "Y-12 Men's Saber",
-        "date": "April 16, 2023",
+        "tournament": "October NAC",
+        "event": "Junior Men's Saber",
+        "date": "October 3, 2025",
         "type": "Pool",
         "win": true,
-        "score": "5-0"
-      },
+        "score": "5-2"
+      }
+    ]
+  },
+  "LI Coby": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "265"
+    ],
+    "bouts": [
       {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 11, 2023",
+        "tournament": "October NAC",
+        "event": "Junior Men's Saber",
+        "date": "October 3, 2025",
         "type": "Pool",
         "win": true,
-        "score": "5-0"
+        "score": "5-4"
+      }
+    ]
+  },
+  "VO Landon": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "173"
+    ],
+    "bouts": [
+      {
+        "tournament": "October NAC",
+        "event": "Junior Men's Saber",
+        "date": "October 3, 2025",
+        "type": "Pool",
+        "win": false,
+        "score": "2-5"
+      }
+    ]
+  },
+  "ONG Dylan": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "278"
+    ],
+    "bouts": [
+      {
+        "tournament": "October NAC",
+        "event": "Junior Men's Saber",
+        "date": "October 3, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "WANG Nicolas": {
+    "wins": 0,
+    "losses": 2,
+    "total": 2,
+    "winRate": 0,
+    "clubs": [
+      "13"
+    ],
+    "bouts": [
+      {
+        "tournament": "October NAC",
+        "event": "Junior Men's Saber",
+        "date": "October 3, 2025",
+        "type": "Pool",
+        "win": false,
+        "score": "3-5"
       },
       {
-        "tournament": "Capitol Clash SYC/RCC",
-        "event": "Y-12 Men's Saber",
-        "date": "January 14, 2023",
+        "tournament": "October NAC",
+        "event": "Junior Men's Saber",
+        "date": "October 3, 2025",
         "type": "T128",
         "win": false,
-        "score": "11-15"
+        "score": "13-15"
+      }
+    ]
+  },
+  "COBIAN Richard": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "168"
+    ],
+    "bouts": [
+      {
+        "tournament": "October NAC",
+        "event": "Junior Men's Saber",
+        "date": "October 3, 2025",
+        "type": "T256",
+        "win": true,
+        "score": "15-13"
+      }
+    ]
+  },
+  "FERRIS JR. Michael": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "198",
+      "177"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Y-14 Men's Saber",
+        "date": "July 3, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      },
+      {
+        "tournament": "March NAC",
+        "event": "Y-14 Men's Saber",
+        "date": "March 2, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "KANIA Alexander": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "59"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Y-14 Men's Saber",
+        "date": "July 3, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "SINGH Swaran": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "219"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Y-14 Men's Saber",
+        "date": "July 3, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "WONG Ron": {
+    "wins": 3,
+    "losses": 0,
+    "total": 3,
+    "winRate": 100,
+    "clubs": [
+      "110",
+      "60",
+      "25"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Y-14 Men's Saber",
+        "date": "July 3, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      },
+      {
+        "tournament": "May SJCC",
+        "event": "Cadet Men's Saber",
+        "date": "May 18, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      },
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-12 Men's Saber",
+        "date": "November 24, 2023",
+        "type": "T32",
+        "win": true,
+        "score": "15-13"
+      }
+    ]
+  },
+  "PEI Kent": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "303"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Y-14 Men's Saber",
+        "date": "July 3, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "BARENBOYM Michael": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "44"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Y-14 Men's Saber",
+        "date": "July 3, 2025",
+        "type": "Pool",
+        "win": false,
+        "score": "4-5"
+      }
+    ]
+  },
+  "YANG Jake": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "223"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Y-14 Men's Saber",
+        "date": "July 3, 2025",
+        "type": "T256",
+        "win": true,
+        "score": "15-4"
+      }
+    ]
+  },
+  "LEVY Daniel": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "97"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Y-14 Men's Saber",
+        "date": "July 3, 2025",
+        "type": "T128",
+        "win": true,
+        "score": "15-5"
+      }
+    ]
+  },
+  "BEKDJANOV Arthur": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "30"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Y-14 Men's Saber",
+        "date": "July 3, 2025",
+        "type": "T32",
+        "win": true,
+        "score": "15-11"
+      }
+    ]
+  },
+  "CRICOL Damian": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "2"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Y-14 Men's Saber",
+        "date": "July 3, 2025",
+        "type": "T16",
+        "win": false,
+        "score": "9-15"
+      }
+    ]
+  },
+  "GUREVICH Benjamin": {
+    "wins": 0,
+    "losses": 3,
+    "total": 3,
+    "winRate": 0,
+    "clubs": [
+      "83",
+      "1",
+      "7"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Cadet Men's Saber",
+        "date": "June 30, 2025",
+        "type": "Pool",
+        "win": false,
+        "score": "3-5"
       },
       {
         "tournament": "Fairfax Challenge Summer ROC/RJCC/RYC/VET - Reg Re-Opens 12/28",
@@ -2563,25 +3186,1685 @@ export const opponents: Record<string, OpponentData> = {
         "date": "June 19, 2021",
         "type": "Pool",
         "win": false,
-        "score": "2-5"
+        "score": "0-5"
       },
       {
-        "tournament": "SYC",
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
         "event": "Y-8 Men's Saber",
-        "date": "January 19, 2020",
+        "date": "November 24, 2018",
+        "type": "Pool",
+        "win": false,
+        "score": "0-5"
+      }
+    ]
+  },
+  "VAN ROY Ray": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "220"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Cadet Men's Saber",
+        "date": "June 30, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      }
+    ]
+  },
+  "WINTERSET Mason": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "224"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Cadet Men's Saber",
+        "date": "June 30, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "SEELMAN Cole": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "198"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Cadet Men's Saber",
+        "date": "June 30, 2025",
+        "type": "T256",
+        "win": true,
+        "score": "15-7"
+      }
+    ]
+  },
+  "KIM Ethan": {
+    "wins": 0,
+    "losses": 3,
+    "total": 3,
+    "winRate": 0,
+    "clubs": [
+      "8",
+      "2",
+      "6"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Cadet Men's Saber",
+        "date": "June 30, 2025",
+        "type": "T128",
+        "win": false,
+        "score": "11-15"
+      },
+      {
+        "tournament": "December SJCC + Para NAC",
+        "event": "Junior Men's Saber",
+        "date": "December 7, 2024",
+        "type": "Pool",
+        "win": false,
+        "score": "3-5"
+      },
+      {
+        "tournament": "Fairfax Challenge SYC/RJCC",
+        "event": "Y-12 Men's Saber",
+        "date": "May 15, 2022",
+        "type": "Pool",
+        "win": false,
+        "score": "0-5"
+      }
+    ]
+  },
+  "HJERPE Wade H.": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "7"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Junior Men's Saber",
+        "date": "June 28, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "CHI Everett": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "278"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Junior Men's Saber",
+        "date": "June 28, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "MANESCU Miron": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "216"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Junior Men's Saber",
+        "date": "June 28, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "TIAGI Daniel": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "140"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Junior Men's Saber",
+        "date": "June 28, 2025",
+        "type": "Pool",
+        "win": false,
+        "score": "3-5"
+      }
+    ]
+  },
+  "ZENG Vito": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "269"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Junior Men's Saber",
+        "date": "June 28, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "WANG HongXi": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "199"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Junior Men's Saber",
+        "date": "June 28, 2025",
+        "type": "T256",
+        "win": true,
+        "score": "15-10"
+      }
+    ]
+  },
+  "KOVALEV Daniil N.": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "11"
+    ],
+    "bouts": [
+      {
+        "tournament": "May SJCC",
+        "event": "Cadet Men's Saber",
+        "date": "May 18, 2025",
+        "type": "Pool",
+        "win": false,
+        "score": "1-5"
+      }
+    ]
+  },
+  "GATTO Enzo P.": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "52"
+    ],
+    "bouts": [
+      {
+        "tournament": "May SJCC",
+        "event": "Cadet Men's Saber",
+        "date": "May 18, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "GRIGORIEV Roman": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "78"
+    ],
+    "bouts": [
+      {
+        "tournament": "May SJCC",
+        "event": "Cadet Men's Saber",
+        "date": "May 18, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "PEREIRA Beckham": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "60"
+    ],
+    "bouts": [
+      {
+        "tournament": "May SJCC",
+        "event": "Cadet Men's Saber",
+        "date": "May 18, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "LIU Yijin": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "53"
+    ],
+    "bouts": [
+      {
+        "tournament": "May SJCC",
+        "event": "Cadet Men's Saber",
+        "date": "May 18, 2025",
+        "type": "T64",
+        "win": true,
+        "score": "15-9"
+      }
+    ]
+  },
+  "MEHAN Nicholas": {
+    "wins": 0,
+    "losses": 4,
+    "total": 4,
+    "winRate": 0,
+    "clubs": [
+      "3",
+      "69",
+      "1",
+      "7"
+    ],
+    "bouts": [
+      {
+        "tournament": "May SJCC",
+        "event": "Cadet Men's Saber",
+        "date": "May 18, 2025",
+        "type": "T32",
+        "win": false,
+        "score": "9-15"
+      },
+      {
+        "tournament": "March NAC",
+        "event": "Cadet Men's Saber",
+        "date": "March 7, 2025",
+        "type": "Pool",
+        "win": false,
+        "score": "4-5"
+      },
+      {
+        "tournament": "Mission SYC",
+        "event": "Y-14 Men's Saber",
+        "date": "May 4, 2024",
+        "type": "T8",
+        "win": false,
+        "score": "2-15"
+      },
+      {
+        "tournament": "Capitol Clash SYC, RCC, Veteran ROC & Y8",
+        "event": "Y-10 Men's Saber",
+        "date": "January 18, 2020",
+        "type": "T64",
+        "win": false,
+        "score": "2-10"
+      }
+    ]
+  },
+  "KITSON Chase": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "81",
+      "2"
+    ],
+    "bouts": [
+      {
+        "tournament": "May SJCC",
+        "event": "Junior Men's Saber",
+        "date": "May 16, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      },
+      {
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "January 18, 2025",
+        "type": "T2",
+        "win": true,
+        "score": "15-9"
+      }
+    ]
+  },
+  "HOLZ Lucas": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "69"
+    ],
+    "bouts": [
+      {
+        "tournament": "May SJCC",
+        "event": "Junior Men's Saber",
+        "date": "May 16, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "HWANG Jayden": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "20"
+    ],
+    "bouts": [
+      {
+        "tournament": "May SJCC",
+        "event": "Junior Men's Saber",
+        "date": "May 16, 2025",
+        "type": "Pool",
+        "win": false,
+        "score": "3-5"
+      }
+    ]
+  },
+  "BRIMMER Robert (Trey)": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "109"
+    ],
+    "bouts": [
+      {
+        "tournament": "May SJCC",
+        "event": "Junior Men's Saber",
+        "date": "May 16, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "LIU Aaron": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "89",
+      "5"
+    ],
+    "bouts": [
+      {
+        "tournament": "May SJCC",
+        "event": "Junior Men's Saber",
+        "date": "May 16, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      },
+      {
+        "tournament": "Fairfax Challenge Summer ROC/RJCC/RYC/VET - Reg Re-Opens 12/28",
+        "event": "Y-10 Men's Saber",
+        "date": "June 19, 2021",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      }
+    ]
+  },
+  "SMITH Etienne": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "105"
+    ],
+    "bouts": [
+      {
+        "tournament": "May SJCC",
+        "event": "Junior Men's Saber",
+        "date": "May 16, 2025",
+        "type": "T128",
+        "win": true,
+        "score": "15-8"
+      }
+    ]
+  },
+  "CHAN Elliott": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "45",
+      "16"
+    ],
+    "bouts": [
+      {
+        "tournament": "May SJCC",
+        "event": "Junior Men's Saber",
+        "date": "May 16, 2025",
+        "type": "T64",
+        "win": true,
+        "score": "15-4"
+      },
+      {
+        "tournament": "December SJCC + Para NAC",
+        "event": "Cadet Men's Saber",
+        "date": "December 6, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "WONG David": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "29"
+    ],
+    "bouts": [
+      {
+        "tournament": "May SJCC",
+        "event": "Junior Men's Saber",
+        "date": "May 16, 2025",
+        "type": "T32",
+        "win": true,
+        "score": "15-10"
+      }
+    ]
+  },
+  "TAN Rui": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "12"
+    ],
+    "bouts": [
+      {
+        "tournament": "Fairfax Challenge SYC/RJCC",
+        "event": "Y-14 Men's Saber",
+        "date": "March 21, 2025",
+        "type": "Pool",
+        "win": false,
+        "score": "3-5"
+      }
+    ]
+  },
+  "CHOI Clayton": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "86"
+    ],
+    "bouts": [
+      {
+        "tournament": "Fairfax Challenge SYC/RJCC",
+        "event": "Y-14 Men's Saber",
+        "date": "March 21, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "XU Andrew": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "93"
+    ],
+    "bouts": [
+      {
+        "tournament": "Fairfax Challenge SYC/RJCC",
+        "event": "Y-14 Men's Saber",
+        "date": "March 21, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "CHANG Timothy": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "49",
+      "81"
+    ],
+    "bouts": [
+      {
+        "tournament": "Fairfax Challenge SYC/RJCC",
+        "event": "Y-14 Men's Saber",
+        "date": "March 21, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      },
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Cadet Men's Saber",
+        "date": "November 30, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "SCHWARTZMAN Jakub": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "74"
+    ],
+    "bouts": [
+      {
+        "tournament": "Fairfax Challenge SYC/RJCC",
+        "event": "Y-14 Men's Saber",
+        "date": "March 21, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "MIAO Heqi": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "21"
+    ],
+    "bouts": [
+      {
+        "tournament": "Fairfax Challenge SYC/RJCC",
+        "event": "Y-14 Men's Saber",
+        "date": "March 21, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "TAKEBE Ren": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "62"
+    ],
+    "bouts": [
+      {
+        "tournament": "Fairfax Challenge SYC/RJCC",
+        "event": "Y-14 Men's Saber",
+        "date": "March 21, 2025",
+        "type": "T64",
+        "win": true,
+        "score": "15-7"
+      }
+    ]
+  },
+  "HENRY Cadel": {
+    "wins": 3,
+    "losses": 1,
+    "total": 4,
+    "winRate": 75,
+    "clubs": [
+      "16",
+      "212",
+      "8",
+      "19"
+    ],
+    "bouts": [
+      {
+        "tournament": "Fairfax Challenge SYC/RJCC",
+        "event": "Y-14 Men's Saber",
+        "date": "March 21, 2025",
+        "type": "T16",
+        "win": true,
+        "score": "15-5"
+      },
+      {
+        "tournament": "Junior Olympics & Div 1 NAC",
+        "event": "Cadet Men's Saber",
+        "date": "February 17, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      },
+      {
+        "tournament": "River City Regional Rumble - RYC/RJCC and Y8",
+        "event": "Cadet Men's Saber",
+        "date": "September 21, 2024",
+        "type": "T32",
+        "win": false,
+        "score": "13-15"
+      },
+      {
+        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "September 24, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      }
+    ]
+  },
+  "JI Johnson": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "5",
+      "14"
+    ],
+    "bouts": [
+      {
+        "tournament": "Fairfax Challenge SYC/RJCC",
+        "event": "Y-14 Men's Saber",
+        "date": "March 21, 2025",
+        "type": "T8",
+        "win": true,
+        "score": "15-8"
+      },
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "December 1, 2024",
         "type": "Pool",
         "win": false,
         "score": "2-5"
       }
+    ]
+  },
+  "ZHANG Kaixuan": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "2"
     ],
-    "birthYear": 2013
+    "bouts": [
+      {
+        "tournament": "Fairfax Challenge SYC/RJCC",
+        "event": "Y-14 Men's Saber",
+        "date": "March 21, 2025",
+        "type": "T4",
+        "win": false,
+        "score": "14-15"
+      }
+    ]
+  },
+  "FERRARO Pietro": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "3"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capital Czajkowski Cup #3",
+        "event": "Senior Mixed Saber",
+        "date": "March 15, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "DEL VECCHIO Nicolas": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "2"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capital Czajkowski Cup #3",
+        "event": "Senior Mixed Saber",
+        "date": "March 15, 2025",
+        "type": "Pool",
+        "win": false,
+        "score": "1-5"
+      }
+    ]
+  },
+  "BUYUCCAN Jonah": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "27"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capital Czajkowski Cup #3",
+        "event": "Senior Mixed Saber",
+        "date": "March 15, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      },
+      {
+        "tournament": "Capital Czajkowski Cup #3",
+        "event": "Senior Mixed Saber",
+        "date": "March 15, 2025",
+        "type": "T32",
+        "win": true,
+        "score": "15-2"
+      }
+    ]
+  },
+  "JIN Adam": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "21"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capital Czajkowski Cup #3",
+        "event": "Senior Mixed Saber",
+        "date": "March 15, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "JOHNSON Waldron": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "14"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capital Czajkowski Cup #3",
+        "event": "Senior Mixed Saber",
+        "date": "March 15, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "YUCEL Emine": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "5"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capital Czajkowski Cup #3",
+        "event": "Senior Mixed Saber",
+        "date": "March 15, 2025",
+        "type": "T8",
+        "win": true,
+        "score": "15-12"
+      }
+    ]
+  },
+  "BURENKOV Matthew": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "250"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC",
+        "event": "Y-14 Men's Saber",
+        "date": "March 8, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "ZONG Shiyan": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "200"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC",
+        "event": "Y-14 Men's Saber",
+        "date": "March 8, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "O’LOUGHLIN Jacob": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "235",
+      "51"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC",
+        "event": "Y-14 Men's Saber",
+        "date": "March 8, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      },
+      {
+        "tournament": "Ben Gutenberg Memorial SYC / RCC",
+        "event": "Y-12 Men's Saber",
+        "date": "March 11, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "LI Michael": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "161",
+      "122"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC",
+        "event": "Y-14 Men's Saber",
+        "date": "March 8, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      },
+      {
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "January 18, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "GU Andrew": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "82"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC",
+        "event": "Y-14 Men's Saber",
+        "date": "March 8, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      }
+    ]
+  },
+  "OLSON Kai": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "132"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC",
+        "event": "Y-14 Men's Saber",
+        "date": "March 8, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "MAKLIN David": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "243"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC",
+        "event": "Y-14 Men's Saber",
+        "date": "March 8, 2025",
+        "type": "T256",
+        "win": true,
+        "score": "15-3"
+      }
+    ]
+  },
+  "KOVACHEV Martin": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "16",
+      "79"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC",
+        "event": "Y-14 Men's Saber",
+        "date": "March 8, 2025",
+        "type": "T128",
+        "win": false,
+        "score": "12-15"
+      },
+      {
+        "tournament": "National Championships & July Challenge (Summer Nationals)",
+        "event": "Y-12 Men's Saber",
+        "date": "July 8, 2023",
+        "type": "T128",
+        "win": true,
+        "score": "15-7"
+      }
+    ]
+  },
+  "LI Yidong A.": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "51"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC",
+        "event": "Cadet Men's Saber",
+        "date": "March 7, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "ZLATINSKI Jason": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "155"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC",
+        "event": "Cadet Men's Saber",
+        "date": "March 7, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      }
+    ]
+  },
+  "SUN Stephen": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "224",
+      "129"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC",
+        "event": "Cadet Men's Saber",
+        "date": "March 7, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      },
+      {
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "January 13, 2024",
+        "type": "Pool",
+        "win": false,
+        "score": "4-5"
+      }
+    ]
+  },
+  "FIROOZI Sam": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "160"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC",
+        "event": "Cadet Men's Saber",
+        "date": "March 7, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "ZWAKA Jonas": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "153"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC",
+        "event": "Cadet Men's Saber",
+        "date": "March 7, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "SANGSTER Arden": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "32"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC",
+        "event": "Cadet Men's Saber",
+        "date": "March 7, 2025",
+        "type": "T64",
+        "win": false,
+        "score": "12-15"
+      }
+    ]
+  },
+  "HAUSLER Jayden": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "215"
+    ],
+    "bouts": [
+      {
+        "tournament": "Junior Olympics & Div 1 NAC",
+        "event": "Cadet Men's Saber",
+        "date": "February 17, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "UEMOTO Ken": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "76"
+    ],
+    "bouts": [
+      {
+        "tournament": "Junior Olympics & Div 1 NAC",
+        "event": "Cadet Men's Saber",
+        "date": "February 17, 2025",
+        "type": "Pool",
+        "win": false,
+        "score": "2-5"
+      }
+    ]
+  },
+  "HENRY Ethan": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "198"
+    ],
+    "bouts": [
+      {
+        "tournament": "Junior Olympics & Div 1 NAC",
+        "event": "Cadet Men's Saber",
+        "date": "February 17, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "HU Chris": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "71"
+    ],
+    "bouts": [
+      {
+        "tournament": "Junior Olympics & Div 1 NAC",
+        "event": "Cadet Men's Saber",
+        "date": "February 17, 2025",
+        "type": "Pool",
+        "win": false,
+        "score": "4-5"
+      }
+    ]
+  },
+  "CHATTABOINA Haveesh": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "234"
+    ],
+    "bouts": [
+      {
+        "tournament": "Junior Olympics & Div 1 NAC",
+        "event": "Cadet Men's Saber",
+        "date": "February 17, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "KU Collin": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "173"
+    ],
+    "bouts": [
+      {
+        "tournament": "Junior Olympics & Div 1 NAC",
+        "event": "Cadet Men's Saber",
+        "date": "February 17, 2025",
+        "type": "T256",
+        "win": true,
+        "score": "15-10"
+      }
+    ]
+  },
+  "GONZALEZ Jake": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "70"
+    ],
+    "bouts": [
+      {
+        "tournament": "Junior Olympics & Div 1 NAC",
+        "event": "Cadet Men's Saber",
+        "date": "February 17, 2025",
+        "type": "T128",
+        "win": true,
+        "score": "15-14"
+      }
+    ]
+  },
+  "VOSPER James": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "309"
+    ],
+    "bouts": [
+      {
+        "tournament": "Junior Olympics & Div 1 NAC",
+        "event": "Junior Men's Saber",
+        "date": "February 16, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "DUMOULIN Gabriel": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "214"
+    ],
+    "bouts": [
+      {
+        "tournament": "Junior Olympics & Div 1 NAC",
+        "event": "Junior Men's Saber",
+        "date": "February 16, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      }
+    ]
+  },
+  "THOMAS Texas": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "218"
+    ],
+    "bouts": [
+      {
+        "tournament": "Junior Olympics & Div 1 NAC",
+        "event": "Junior Men's Saber",
+        "date": "February 16, 2025",
+        "type": "Pool",
+        "win": false,
+        "score": "2-5"
+      }
+    ]
+  },
+  "AYDOGDU Hakan": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "60"
+    ],
+    "bouts": [
+      {
+        "tournament": "Junior Olympics & Div 1 NAC",
+        "event": "Junior Men's Saber",
+        "date": "February 16, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "RAMANAN Jaisimh": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "165"
+    ],
+    "bouts": [
+      {
+        "tournament": "Junior Olympics & Div 1 NAC",
+        "event": "Junior Men's Saber",
+        "date": "February 16, 2025",
+        "type": "Pool",
+        "win": false,
+        "score": "2-5"
+      }
+    ]
+  },
+  "CHTERENTAL Alex": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "65"
+    ],
+    "bouts": [
+      {
+        "tournament": "Junior Olympics & Div 1 NAC",
+        "event": "Junior Men's Saber",
+        "date": "February 16, 2025",
+        "type": "Pool",
+        "win": false,
+        "score": "1-5"
+      }
+    ]
+  },
+  "HU Jayden": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "25"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "January 18, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "EARLEY Jack": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "147"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "January 18, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "TEPLESKY Sasha": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "176"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "January 18, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "BENNETT Lachlan": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "100",
+      "35"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "January 18, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      },
+      {
+        "tournament": "Mission SYC",
+        "event": "Y-12 Men's Saber",
+        "date": "May 5, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "CHEN Anson": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "114"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "January 18, 2025",
+        "type": "T128",
+        "win": true,
+        "score": "15-1"
+      }
+    ]
+  },
+  "JOHNSON Leland": {
+    "wins": 2,
+    "losses": 3,
+    "total": 5,
+    "winRate": 40,
+    "clubs": [
+      "58",
+      "5",
+      "2"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "January 18, 2025",
+        "type": "T64",
+        "win": true,
+        "score": "15-7"
+      },
+      {
+        "tournament": "NoVA Knights RYC/RJCC",
+        "event": "Y-12 Men's Saber",
+        "date": "October 2, 2022",
+        "type": "T8",
+        "win": true,
+        "score": "15-12"
+      },
+      {
+        "tournament": "Fairfax Challenge SYC/RJCC",
+        "event": "Y-10 Men's Saber",
+        "date": "May 14, 2022",
+        "type": "Pool",
+        "win": false,
+        "score": "4-5"
+      },
+      {
+        "tournament": "Fairfax Challenge Summer ROC/RJCC/RYC/VET - Reg Re-Opens 12/28",
+        "event": "Y-10 Men's Saber",
+        "date": "June 19, 2021",
+        "type": "Pool",
+        "win": false,
+        "score": "0-5"
+      },
+      {
+        "tournament": "Fairfax Challenge Summer ROC/RJCC/RYC/VET - Reg Re-Opens 12/28",
+        "event": "Y-10 Men's Saber",
+        "date": "June 19, 2021",
+        "type": "T8",
+        "win": false,
+        "score": "8-10"
+      }
+    ]
+  },
+  "BIVIJI Adam": {
+    "wins": 5,
+    "losses": 1,
+    "total": 6,
+    "winRate": 83,
+    "clubs": [
+      "16",
+      "70",
+      "29",
+      "97",
+      "24",
+      "21"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "January 18, 2025",
+        "type": "T16",
+        "win": true,
+        "score": "15-8"
+      },
+      {
+        "tournament": "Mission SYC",
+        "event": "Y-14 Men's Saber",
+        "date": "May 4, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      },
+      {
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-12 Men's Saber",
+        "date": "January 15, 2024",
+        "type": "T32",
+        "win": true,
+        "score": "15-4"
+      },
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-12 Men's Saber",
+        "date": "November 25, 2022",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      },
+      {
+        "tournament": "Cobra Challenge SYC/RCC",
+        "event": "Y-10 Men's Saber",
+        "date": "May 31, 2021",
+        "type": "Pool",
+        "win": false,
+        "score": "1-5"
+      },
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-8 Men's Saber",
+        "date": "November 30, 2019",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
   },
   "FENG Brendan": {
-    "wins": 6,
+    "wins": 4,
     "losses": 1,
-    "total": 7,
-    "winRate": 0.86,
-    "clubs": ["MIRACLEFC"],
+    "total": 5,
+    "winRate": 80,
+    "clubs": [
+      "8",
+      "46",
+      "25",
+      "3",
+      "7"
+    ],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
@@ -2608,14 +4891,6 @@ export const opponents: Record<string, OpponentData> = {
         "score": "5-3"
       },
       {
-        "tournament": "SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "September 3, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
         "tournament": "River City Regional Rumble RYC/RJCC",
         "event": "Y-12 Men's Saber",
         "date": "February 11, 2023",
@@ -2630,136 +4905,165 @@ export const opponents: Record<string, OpponentData> = {
         "type": "Pool",
         "win": true,
         "score": "5-4"
+      }
+    ]
+  },
+  "BIVIJI Ali": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "3",
+      "61"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "January 18, 2025",
+        "type": "T4",
+        "win": true,
+        "score": "15-14"
       },
       {
-        "tournament": "SYC",
+        "tournament": "March NAC and Parafencing National Championships",
         "event": "Y-12 Men's Saber",
-        "date": "September 3, 2022",
+        "date": "March 5, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "EYBELMAN Ariel": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "82"
+    ],
+    "bouts": [
+      {
+        "tournament": "January NAC",
+        "event": "Cadet Men's Saber",
+        "date": "January 5, 2025",
+        "type": "Pool",
+        "win": false,
+        "score": "4-5"
+      }
+    ]
+  },
+  "OH Aster": {
+    "wins": 2,
+    "losses": 4,
+    "total": 6,
+    "winRate": 33,
+    "clubs": [
+      "15",
+      "14",
+      "3",
+      "47",
+      "5"
+    ],
+    "bouts": [
+      {
+        "tournament": "January NAC",
+        "event": "Cadet Men's Saber",
+        "date": "January 5, 2025",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      },
+      {
+        "tournament": "December SJCC + Para NAC",
+        "event": "Junior Men's Saber",
+        "date": "December 7, 2024",
+        "type": "T64",
+        "win": false,
+        "score": "11-15"
+      },
+      {
+        "tournament": "Ben Gutenberg Memorial SYC / RCC",
+        "event": "Y-12 Men's Saber",
+        "date": "March 11, 2023",
+        "type": "T16",
+        "win": false,
+        "score": "9-15"
+      },
+      {
+        "tournament": "March NAC and Parafencing National Championships",
+        "event": "Y-12 Men's Saber",
+        "date": "March 5, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      },
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-8 Men's Saber",
+        "date": "November 24, 2018",
+        "type": "Pool",
+        "win": false,
+        "score": "0-5"
+      },
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-8 Men's Saber",
+        "date": "November 24, 2018",
+        "type": "T16",
+        "win": false,
+        "score": "3-10"
+      }
+    ]
+  },
+  "WANG Michael": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "80"
+    ],
+    "bouts": [
+      {
+        "tournament": "January NAC",
+        "event": "Cadet Men's Saber",
+        "date": "January 5, 2025",
         "type": "Pool",
         "win": true,
         "score": "5-4"
       }
-    ],
-    "birthYear": 2010
+    ]
   },
-  "FERRARO Pietro": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["CAPITALFA"],
+  "LIN Maxim": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "22"
+    ],
     "bouts": [
       {
-        "tournament": "Capital Czajkowski Cup #3",
-        "event": "Senior Mixed Saber",
-        "date": "March 15, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 8, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "FERRIS JR. Michael": {
-    "wins": 3,
-    "losses": 0,
-    "total": 3,
-    "winRate": 1,
-    "clubs": ["PDXFENCING"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-14 Men's Saber",
-        "date": "July 3, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 2, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "January 15, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "FIROOZI Alex": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["MANHATTANFC"],
-    "bouts": [
-      {
-        "tournament": "Mission SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "May 5, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "May 4, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "FIROOZI Sam": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["MANHATTANFC"],
-    "bouts": [
-      {
-        "tournament": "March NAC",
+        "tournament": "January NAC",
         "event": "Cadet Men's Saber",
-        "date": "March 7, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "February NAC",
-        "event": "Cadet Men's Saber",
-        "date": "February 17, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
+        "date": "January 5, 2025",
+        "type": "T128",
+        "win": false,
+        "score": "9-15"
       }
-    ],
-    "birthYear": 2009
+    ]
   },
   "FIRSTMAN William B.": {
     "wins": 0,
-    "losses": 2,
-    "total": 2,
+    "losses": 1,
+    "total": 1,
     "winRate": 0,
-    "clubs": ["NELLYA"],
+    "clubs": [
+      "111"
+    ],
     "bouts": [
       {
         "tournament": "December SJCC + Para NAC",
@@ -2768,50 +5072,205 @@ export const opponents: Record<string, OpponentData> = {
         "type": "Pool",
         "win": false,
         "score": "3-5"
-      },
+      }
+    ]
+  },
+  "GILSHTEYN Jacob": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "20"
+    ],
+    "bouts": [
       {
-        "tournament": "December NAC",
+        "tournament": "December SJCC + Para NAC",
+        "event": "Junior Men's Saber",
+        "date": "December 7, 2024",
+        "type": "Pool",
+        "win": false,
+        "score": "2-5"
+      }
+    ]
+  },
+  "YAP Kah Kai (Cayden)": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "64"
+    ],
+    "bouts": [
+      {
+        "tournament": "December SJCC + Para NAC",
+        "event": "Junior Men's Saber",
+        "date": "December 7, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "KOTVALI Aneesh": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "134"
+    ],
+    "bouts": [
+      {
+        "tournament": "December SJCC + Para NAC",
+        "event": "Junior Men's Saber",
+        "date": "December 7, 2024",
+        "type": "T256",
+        "win": true,
+        "score": "15-12"
+      }
+    ]
+  },
+  "IYER Neil": {
+    "wins": 3,
+    "losses": 0,
+    "total": 3,
+    "winRate": 100,
+    "clubs": [
+      "59",
+      "125",
+      "26"
+    ],
+    "bouts": [
+      {
+        "tournament": "December SJCC + Para NAC",
         "event": "Cadet Men's Saber",
         "date": "December 6, 2024",
         "type": "Pool",
-        "win": false,
-        "score": "3-5"
+        "win": true,
+        "score": "5-2"
+      },
+      {
+        "tournament": "November NAC",
+        "event": "Cadet Men's Saber",
+        "date": "November 10, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      },
+      {
+        "tournament": "North Texas Roundup SYC/RCC",
+        "event": "Y-12 Men's Saber",
+        "date": "September 3, 2022",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
       }
-    ],
-    "birthYear": 2008
+    ]
   },
-  "FORD Aaron": {
+  "BARRY Dave": {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 1,
-    "clubs": ["NATCAPITALFC"],
+    "winRate": 100,
+    "clubs": [
+      "170",
+      "20"
+    ],
     "bouts": [
       {
-        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
+        "tournament": "December SJCC + Para NAC",
         "event": "Cadet Men's Saber",
-        "date": "April 21, 2024",
+        "date": "December 6, 2024",
         "type": "Pool",
         "win": true,
         "score": "5-0"
       },
       {
-        "tournament": "RYC",
+        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
         "event": "Y-14 Men's Saber",
         "date": "April 20, 2024",
         "type": "Pool",
         "win": true,
         "score": "5-0"
       }
+    ]
+  },
+  "LIM Kai": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "118"
     ],
-    "birthYear": 2011
+    "bouts": [
+      {
+        "tournament": "December SJCC + Para NAC",
+        "event": "Cadet Men's Saber",
+        "date": "December 6, 2024",
+        "type": "T128",
+        "win": true,
+        "score": "15-8"
+      }
+    ]
+  },
+  "SOWERS Samuel": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "28"
+    ],
+    "bouts": [
+      {
+        "tournament": "December SJCC + Para NAC",
+        "event": "Cadet Men's Saber",
+        "date": "December 6, 2024",
+        "type": "T64",
+        "win": false,
+        "score": "7-15"
+      }
+    ]
+  },
+  "ISAYENKO Daniel": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "34",
+      "56"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "December 1, 2024",
+        "type": "Pool",
+        "win": false,
+        "score": "4-5"
+      },
+      {
+        "tournament": "Ben Gutenberg SYC - RJCC",
+        "event": "Y-14 Men's Saber",
+        "date": "October 12, 2024",
+        "type": "T64",
+        "win": true,
+        "score": "15-12"
+      }
+    ]
   },
   "FOUX Jonathan": {
-    "wins": 2,
+    "wins": 1,
     "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["COBRAFC"],
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "113"
+    ],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -2820,94 +5279,526 @@ export const opponents: Record<string, OpponentData> = {
         "type": "Pool",
         "win": true,
         "score": "5-3"
-      },
+      }
+    ]
+  },
+  "LIAO Sirui": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "115"
+    ],
+    "bouts": [
       {
-        "tournament": "Cobra Challenge SYC",
-        "event": "Cadet Men's Saber",
-        "date": "November 30, 2024",
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "December 1, 2024",
         "type": "Pool",
         "win": true,
         "score": "5-3"
       }
-    ],
-    "birthYear": 2011
+    ]
   },
-  "FOWLER Escher": {
-    "wins": 2,
+  "WAXLER Alex": {
+    "wins": 3,
     "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["NAZLYMOVFF"],
+    "total": 3,
+    "winRate": 100,
+    "clubs": [
+      "102",
+      "89",
+      "12"
+    ],
     "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "December 1, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      },
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Cadet Men's Saber",
+        "date": "November 30, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      },
       {
         "tournament": "Capitol Clash SYC, RCC, Veteran ROC & Y8",
         "event": "Y-8 Men's Saber",
         "date": "January 19, 2020",
         "type": "Pool",
         "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-10 Men's Saber",
-        "date": "January 18, 2020",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
+        "score": "5-3"
       }
-    ],
-    "birthYear": 2013
+    ]
   },
-  "FU BRANDEN": {
-    "wins": 2,
-    "losses": 0,
+  "SHAPIRO Simon": {
+    "wins": 0,
+    "losses": 2,
     "total": 2,
-    "winRate": 1,
-    "clubs": ["SBFA"],
+    "winRate": 0,
+    "clubs": [
+      "65",
+      "11"
+    ],
     "bouts": [
       {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-12 Men's Saber",
-        "date": "January 15, 2024",
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "December 1, 2024",
         "type": "Pool",
-        "win": true,
-        "score": "5-2"
+        "win": false,
+        "score": "3-5"
       },
       {
-        "tournament": "SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "January 13, 2024",
+        "tournament": "Ben Gutenberg Memorial SYC / RCC",
+        "event": "Y-12 Men's Saber",
+        "date": "March 11, 2023",
         "type": "Pool",
-        "win": true,
-        "score": "5-2"
+        "win": false,
+        "score": "3-5"
       }
-    ],
-    "birthYear": 2014
+    ]
   },
-  "GAO Francis": {
+  "LEE Shane Gunn": {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 1,
-    "clubs": [],
+    "winRate": 100,
+    "clubs": [
+      "71"
+    ],
     "bouts": [
       {
-        "tournament": "Cobra Challenge SYC/RCC",
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
         "event": "Y-14 Men's Saber",
-        "date": "November 29, 2025",
+        "date": "December 1, 2024",
         "type": "T128",
         "win": true,
-        "score": "15-5"
+        "score": "15-2"
       }
-    ],
-    "birthYear": 2012
+    ]
   },
-  "GARCIA RODRIGUEZ Juan Pablo": {
+  "DE SIENA Salvatore": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "35"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Cadet Men's Saber",
+        "date": "November 30, 2024",
+        "type": "Pool",
+        "win": false,
+        "score": "4-5"
+      }
+    ]
+  },
+  "KARAVAS Nicholas": {
     "wins": 4,
     "losses": 0,
     "total": 4,
-    "winRate": 1,
-    "clubs": ["ALLEFENCING"],
+    "winRate": 100,
+    "clubs": [
+      "60",
+      "243",
+      "38",
+      "15"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Cadet Men's Saber",
+        "date": "November 30, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      },
+      {
+        "tournament": "November NAC",
+        "event": "Cadet Men's Saber",
+        "date": "November 10, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      },
+      {
+        "tournament": "March NAC",
+        "event": "Y-12 Men's Saber",
+        "date": "March 3, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      },
+      {
+        "tournament": "Capitol Clash SYC, RCC, Veteran ROC & Y8",
+        "event": "Y-8 Men's Saber",
+        "date": "January 19, 2020",
+        "type": "T16",
+        "win": true,
+        "score": "10-3"
+      }
+    ]
+  },
+  "LIEBOWITZ Carson": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "34"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Cadet Men's Saber",
+        "date": "November 30, 2024",
+        "type": "Pool",
+        "win": false,
+        "score": "0-5"
+      }
+    ]
+  },
+  "JIANG Terence": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "73"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Cadet Men's Saber",
+        "date": "November 30, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      }
+    ]
+  },
+  "VISH Manyu": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "100"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Cadet Men's Saber",
+        "date": "November 30, 2024",
+        "type": "T128",
+        "win": true,
+        "score": "15-3"
+      }
+    ]
+  },
+  "BALE ATMAN": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "42"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Cadet Men's Saber",
+        "date": "November 30, 2024",
+        "type": "T64",
+        "win": true,
+        "score": "15-8"
+      }
+    ]
+  },
+  "KUMAR Arjun": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "17"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Cadet Men's Saber",
+        "date": "November 30, 2024",
+        "type": "T32",
+        "win": true,
+        "score": "15-14"
+      }
+    ]
+  },
+  "SCHIMEL Luke": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "16"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Cadet Men's Saber",
+        "date": "November 30, 2024",
+        "type": "T16",
+        "win": true,
+        "score": "15-13"
+      }
+    ]
+  },
+  "SONG Aidan": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "263",
+      "266"
+    ],
+    "bouts": [
+      {
+        "tournament": "November NAC",
+        "event": "Cadet Men's Saber",
+        "date": "November 10, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      },
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Y-14 Men's Saber",
+        "date": "July 4, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "PRIMUS Nazir": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "9"
+    ],
+    "bouts": [
+      {
+        "tournament": "November NAC",
+        "event": "Cadet Men's Saber",
+        "date": "November 10, 2024",
+        "type": "Pool",
+        "win": false,
+        "score": "1-5"
+      }
+    ]
+  },
+  "SUN Andrew": {
+    "wins": 0,
+    "losses": 2,
+    "total": 2,
+    "winRate": 0,
+    "clubs": [
+      "13",
+      "24"
+    ],
+    "bouts": [
+      {
+        "tournament": "November NAC",
+        "event": "Cadet Men's Saber",
+        "date": "November 10, 2024",
+        "type": "Pool",
+        "win": false,
+        "score": "3-5"
+      },
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-10 Men's Saber",
+        "date": "November 29, 2019",
+        "type": "T64",
+        "win": false,
+        "score": "3-10"
+      }
+    ]
+  },
+  "SHIPITSIN Alexander": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "110"
+    ],
+    "bouts": [
+      {
+        "tournament": "November NAC",
+        "event": "Cadet Men's Saber",
+        "date": "November 10, 2024",
+        "type": "T256",
+        "win": false,
+        "score": "10-15"
+      }
+    ]
+  },
+  "MELE Gianni": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "51"
+    ],
+    "bouts": [
+      {
+        "tournament": "Ben Gutenberg SYC - RJCC",
+        "event": "Y-14 Men's Saber",
+        "date": "October 12, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "HENDERSON Louis": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "60"
+    ],
+    "bouts": [
+      {
+        "tournament": "Ben Gutenberg SYC - RJCC",
+        "event": "Y-14 Men's Saber",
+        "date": "October 12, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "WANG Edward": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "53"
+    ],
+    "bouts": [
+      {
+        "tournament": "Ben Gutenberg SYC - RJCC",
+        "event": "Y-14 Men's Saber",
+        "date": "October 12, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "LOO Jason": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "57"
+    ],
+    "bouts": [
+      {
+        "tournament": "Ben Gutenberg SYC - RJCC",
+        "event": "Y-14 Men's Saber",
+        "date": "October 12, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      }
+    ]
+  },
+  "PARK Layne": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "90"
+    ],
+    "bouts": [
+      {
+        "tournament": "Ben Gutenberg SYC - RJCC",
+        "event": "Y-14 Men's Saber",
+        "date": "October 12, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "SRIVATS Vedh": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "30"
+    ],
+    "bouts": [
+      {
+        "tournament": "Ben Gutenberg SYC - RJCC",
+        "event": "Y-14 Men's Saber",
+        "date": "October 12, 2024",
+        "type": "T32",
+        "win": true,
+        "score": "15-11"
+      }
+    ]
+  },
+  "SLAVNOV Anton": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "8"
+    ],
+    "bouts": [
+      {
+        "tournament": "Ben Gutenberg SYC - RJCC",
+        "event": "Y-14 Men's Saber",
+        "date": "October 12, 2024",
+        "type": "T16",
+        "win": false,
+        "score": "5-15"
+      }
+    ]
+  },
+  "WANG Max": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "3"
+    ],
     "bouts": [
       {
         "tournament": "River City Regional Rumble - RYC/RJCC and Y8",
@@ -2915,12 +5806,62 @@ export const opponents: Record<string, OpponentData> = {
         "date": "September 21, 2024",
         "type": "Pool",
         "win": true,
-        "score": "5-0"
-      },
+        "score": "5-3"
+      }
+    ]
+  },
+  "QIN toby": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "18"
+    ],
+    "bouts": [
       {
-        "tournament": "Summer Nationals",
-        "event": "Y-12 Men's Saber",
-        "date": "July 5, 2024",
+        "tournament": "River City Regional Rumble - RYC/RJCC and Y8",
+        "event": "Cadet Men's Saber",
+        "date": "September 21, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      }
+    ]
+  },
+  "GOLART Dylan": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "34"
+    ],
+    "bouts": [
+      {
+        "tournament": "River City Regional Rumble - RYC/RJCC and Y8",
+        "event": "Cadet Men's Saber",
+        "date": "September 21, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "GARCIA RODRIGUEZ Juan Pablo": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "30",
+      "19"
+    ],
+    "bouts": [
+      {
+        "tournament": "River City Regional Rumble - RYC/RJCC and Y8",
+        "event": "Cadet Men's Saber",
+        "date": "September 21, 2024",
         "type": "Pool",
         "win": true,
         "score": "5-0"
@@ -2932,130 +5873,45 @@ export const opponents: Record<string, OpponentData> = {
         "type": "Pool",
         "win": true,
         "score": "5-2"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-14 Men's Saber",
-        "date": "April 20, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
       }
-    ],
-    "birthYear": 2013
+    ]
   },
-  "GATTO Enzo P.": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["SPARTAK"],
-    "bouts": [
-      {
-        "tournament": "May SJCC",
-        "event": "Cadet Men's Saber",
-        "date": "May 18, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "May NAC",
-        "event": "Junior Men's Saber",
-        "date": "May 16, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "GERSTMANN Max T.": {
-    "wins": 0,
+  "CRAIN Bennett": {
+    "wins": 1,
     "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": [],
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "19",
+      "10"
+    ],
     "bouts": [
       {
-        "tournament": "January SJCC",
-        "event": "Junior Men's Saber",
-        "date": "January 24, 2026",
+        "tournament": "River City Regional Rumble - RYC/RJCC and Y8",
+        "event": "Cadet Men's Saber",
+        "date": "September 21, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      },
+      {
+        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
+        "event": "Cadet Men's Saber",
+        "date": "September 23, 2023",
         "type": "Pool",
         "win": false,
         "score": "4-5"
       }
-    ],
-    "birthYear": 2007
+    ]
   },
-  "GHAYALOD ansh": {
+  "HOWERTON Beckett": {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "October NAC",
-        "event": "Div I Men's Saber",
-        "date": "October 5, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      }
+    "winRate": 100,
+    "clubs": [
+      "31"
     ],
-    "birthYear": 0
-  },
-  "GHISLAIN-FERNANDEZ Alexandre": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "February NAC",
-        "event": "Junior Men's Saber",
-        "date": "February 15, 2026",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2007
-  },
-  "GILSHTEYN Jacob": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["LAIFC"],
-    "bouts": [
-      {
-        "tournament": "December SJCC + Para NAC",
-        "event": "Junior Men's Saber",
-        "date": "December 7, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "2-5"
-      },
-      {
-        "tournament": "December NAC",
-        "event": "Cadet Men's Saber",
-        "date": "December 6, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "2-5"
-      }
-    ],
-    "birthYear": 2008
-  },
-  "GOLART Dylan": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["MIRACLEFC"],
     "bouts": [
       {
         "tournament": "River City Regional Rumble - RYC/RJCC and Y8",
@@ -3064,154 +5920,1520 @@ export const opponents: Record<string, OpponentData> = {
         "type": "Pool",
         "win": true,
         "score": "5-3"
-      },
+      }
+    ]
+  },
+  "LAM Austin": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "187"
+    ],
+    "bouts": [
       {
-        "tournament": "Summer Nationals",
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
         "event": "Y-12 Men's Saber",
         "date": "July 5, 2024",
         "type": "Pool",
         "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "LI Ryan": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "52",
+      "26"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Y-12 Men's Saber",
+        "date": "July 5, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      },
+      {
+        "tournament": "North Texas Roundup SYC / RCC",
+        "event": "Y-12 Men's Saber",
+        "date": "September 2, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      }
+    ]
+  },
+  "ALUF Brendon": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "84"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Y-12 Men's Saber",
+        "date": "July 5, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "LUC Linkin": {
+    "wins": 3,
+    "losses": 0,
+    "total": 3,
+    "winRate": 100,
+    "clubs": [
+      "57",
+      "111"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Y-12 Men's Saber",
+        "date": "July 5, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      },
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Y-12 Men's Saber",
+        "date": "July 5, 2024",
+        "type": "T64",
+        "win": true,
+        "score": "15-8"
+      },
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Y-14 Men's Saber",
+        "date": "July 4, 2024",
+        "type": "Pool",
+        "win": true,
         "score": "5-3"
       }
-    ],
-    "birthYear": 2013
+    ]
   },
-  "GONG zihao": {
-    "wins": 0,
-    "losses": 1,
+  "BUCKLEY Owen": {
+    "wins": 1,
+    "losses": 0,
     "total": 1,
-    "winRate": 0,
-    "clubs": [],
+    "winRate": 100,
+    "clubs": [
+      "200"
+    ],
     "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Y-12 Men's Saber",
+        "date": "July 5, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "LIANG Preston": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "110",
+      "263"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Y-12 Men's Saber",
+        "date": "July 5, 2024",
+        "type": "T128",
+        "win": true,
+        "score": "15-10"
+      },
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Y-14 Men's Saber",
+        "date": "July 4, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "YANG Justin": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "32",
+      "15"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Y-12 Men's Saber",
+        "date": "July 5, 2024",
+        "type": "T32",
+        "win": true,
+        "score": "15-7"
+      },
+      {
+        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
+        "event": "Y-14 Men's Saber",
+        "date": "April 20, 2024",
+        "type": "T32",
+        "win": false,
+        "score": "13-15"
+      }
+    ]
+  },
+  "YANG Phillip": {
+    "wins": 1,
+    "losses": 2,
+    "total": 3,
+    "winRate": 33,
+    "clubs": [
+      "14",
+      "16",
+      "29"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Y-12 Men's Saber",
+        "date": "July 5, 2024",
+        "type": "T16",
+        "win": true,
+        "score": "15-13"
+      },
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Y-14 Men's Saber",
+        "date": "July 4, 2024",
+        "type": "T64",
+        "win": false,
+        "score": "14-15"
+      },
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
         "event": "Y-14 Men's Saber",
         "date": "January 13, 2024",
-        "type": "T16",
+        "type": "Pool",
         "win": false,
-        "score": "6-15"
+        "score": "2-5"
       }
-    ],
-    "birthYear": 2011
+    ]
   },
-  "GONZALEZ Jake": {
+  "GU Kevin": {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Junior Olympics & Div 1 NAC",
-        "event": "Cadet Men's Saber",
-        "date": "February 17, 2025",
-        "type": "T128",
-        "win": true,
-        "score": "15-14"
-      }
+    "winRate": 100,
+    "clubs": [
+      "197"
     ],
-    "birthYear": 2009
-  },
-  "GONZALEZ Leo": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["NATCAPITALFC"],
     "bouts": [
       {
-        "tournament": "Fairfax Challenge Spring RYC/RJCC/ROC",
-        "event": "Y-12 Men's Saber",
-        "date": "April 16, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 11, 2023",
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Y-14 Men's Saber",
+        "date": "July 4, 2024",
         "type": "Pool",
         "win": true,
         "score": "5-3"
       }
-    ],
-    "birthYear": 2012
+    ]
   },
-  "GORDON Ezekiel": {
+  "ZHANG Ray": {
     "wins": 1,
-    "losses": 2,
-    "total": 3,
-    "winRate": 0.33,
-    "clubs": ["NELLYA"],
-    "bouts": [
-      {
-        "tournament": "Fairfax Challenge Spring RYC/RJCC/ROC",
-        "event": "Y-12 Men's Saber",
-        "date": "April 16, 2023",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 11, 2023",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      },
-      {
-        "tournament": "Fairfax Challenge SYC/RJCC",
-        "event": "Y-10 Men's Saber",
-        "date": "May 14, 2022",
-        "type": "T64",
-        "win": true,
-        "score": "10-3"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "GORDON Samuel": {
-    "wins": 3,
     "losses": 0,
-    "total": 3,
-    "winRate": 1,
-    "clubs": ["ZETAFENCING"],
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "170"
+    ],
     "bouts": [
       {
-        "tournament": "Junior Olympics",
-        "event": "Cadet Men's Saber",
-        "date": "January 10, 2026",
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Y-14 Men's Saber",
+        "date": "July 4, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "ANTHONY Devyn V.": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "3",
+      "1"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Y-14 Men's Saber",
+        "date": "July 4, 2024",
         "type": "Pool",
         "win": true,
         "score": "5-4"
       },
       {
-        "tournament": "Ben Gutenberg SYC - RJCC",
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-10 Men's Saber",
+        "date": "November 29, 2019",
+        "type": "Pool",
+        "win": false,
+        "score": "1-5"
+      }
+    ]
+  },
+  "COGLIANO Max": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "236"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
         "event": "Y-14 Men's Saber",
-        "date": "October 12, 2024",
+        "date": "July 4, 2024",
+        "type": "T256",
+        "win": true,
+        "score": "15-8"
+      }
+    ]
+  },
+  "SU Kingston": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "241"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Cadet Men's Saber",
+        "date": "July 1, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "WELSTEAD Nicholas": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "167"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Cadet Men's Saber",
+        "date": "July 1, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "ZHENG LEON": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "49"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Cadet Men's Saber",
+        "date": "July 1, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      }
+    ]
+  },
+  "RAVOOR Sahas": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "251"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Cadet Men's Saber",
+        "date": "July 1, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "ZHAO Royce": {
+    "wins": 4,
+    "losses": 1,
+    "total": 5,
+    "winRate": 80,
+    "clubs": [
+      "116",
+      "17",
+      "11",
+      "26",
+      "44"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Cadet Men's Saber",
+        "date": "July 1, 2024",
+        "type": "T128",
+        "win": true,
+        "score": "15-10"
+      },
+      {
+        "tournament": "Mission SYC",
+        "event": "Y-14 Men's Saber",
+        "date": "May 4, 2024",
+        "type": "T32",
+        "win": true,
+        "score": "15-10"
+      },
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-12 Men's Saber",
+        "date": "November 24, 2023",
+        "type": "T16",
+        "win": true,
+        "score": "15-14"
+      },
+      {
+        "tournament": "North Texas Roundup SYC / RCC",
+        "event": "Y-14 Men's Saber",
+        "date": "September 3, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      },
+      {
+        "tournament": "USA Fencing National Championships & July Challenge",
+        "event": "Y-10 Men's Saber",
+        "date": "July 11, 2022",
+        "type": "Pool",
+        "win": false,
+        "score": "1-5"
+      }
+    ]
+  },
+  "WONG Lucas": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "14"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships and July Challenge (Summer Nationals)",
+        "event": "Cadet Men's Saber",
+        "date": "July 1, 2024",
+        "type": "T64",
+        "win": false,
+        "score": "5-15"
+      }
+    ]
+  },
+  "D'AMELJ Edoardo": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "10",
+      "16"
+    ],
+    "bouts": [
+      {
+        "tournament": "Mission SYC",
+        "event": "Y-12 Men's Saber",
+        "date": "May 5, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      },
+      {
+        "tournament": "River City Regional Rumble RYC/RJCC",
+        "event": "Y-12 Men's Saber",
+        "date": "February 11, 2023",
+        "type": "Pool",
+        "win": false,
+        "score": "4-5"
+      }
+    ]
+  },
+  "MALEK Zak": {
+    "wins": 3,
+    "losses": 0,
+    "total": 3,
+    "winRate": 100,
+    "clubs": [
+      "65",
+      "105",
+      "88"
+    ],
+    "bouts": [
+      {
+        "tournament": "Mission SYC",
+        "event": "Y-12 Men's Saber",
+        "date": "May 5, 2024",
         "type": "Pool",
         "win": true,
         "score": "5-0"
       },
       {
-        "tournament": "RYC",
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-12 Men's Saber",
+        "date": "January 15, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      },
+      {
+        "tournament": "Capitol Clash SYC/RCC",
+        "event": "Y-12 Men's Saber",
+        "date": "January 14, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "FIROOZI Alex": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "63"
+    ],
+    "bouts": [
+      {
+        "tournament": "Mission SYC",
+        "event": "Y-12 Men's Saber",
+        "date": "May 5, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "LIUZHANG Ben": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "45"
+    ],
+    "bouts": [
+      {
+        "tournament": "Mission SYC",
+        "event": "Y-12 Men's Saber",
+        "date": "May 5, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "BLAIR Campbell": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "71"
+    ],
+    "bouts": [
+      {
+        "tournament": "Mission SYC",
+        "event": "Y-12 Men's Saber",
+        "date": "May 5, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "O'KEEFE Brody": {
+    "wins": 3,
+    "losses": 0,
+    "total": 3,
+    "winRate": 100,
+    "clubs": [
+      "60",
+      "176",
+      "104"
+    ],
+    "bouts": [
+      {
+        "tournament": "Mission SYC",
+        "event": "Y-12 Men's Saber",
+        "date": "May 5, 2024",
+        "type": "T64",
+        "win": true,
+        "score": "15-2"
+      },
+      {
+        "tournament": "March NAC",
+        "event": "Y-12 Men's Saber",
+        "date": "March 3, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      },
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-12 Men's Saber",
+        "date": "November 24, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "ARCHIBALD Zachary": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "28"
+    ],
+    "bouts": [
+      {
+        "tournament": "Mission SYC",
+        "event": "Y-12 Men's Saber",
+        "date": "May 5, 2024",
+        "type": "T32",
+        "win": true,
+        "score": "15-7"
+      }
+    ]
+  },
+  "SO Morgan": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "12",
+      "54"
+    ],
+    "bouts": [
+      {
+        "tournament": "Mission SYC",
+        "event": "Y-12 Men's Saber",
+        "date": "May 5, 2024",
+        "type": "T16",
+        "win": true,
+        "score": "15-5"
+      },
+      {
+        "tournament": "Mission SYC",
+        "event": "Y-14 Men's Saber",
+        "date": "May 4, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "KOZLOV Lucas": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "7",
+      "95"
+    ],
+    "bouts": [
+      {
+        "tournament": "Mission SYC",
+        "event": "Y-12 Men's Saber",
+        "date": "May 5, 2024",
+        "type": "T8",
+        "win": true,
+        "score": "15-12"
+      },
+      {
+        "tournament": "March NAC",
+        "event": "Y-14 Men's Saber",
+        "date": "March 2, 2024",
+        "type": "Pool",
+        "win": false,
+        "score": "0-5"
+      }
+    ]
+  },
+  "MERMEGAS Alexander": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "32",
+      "19"
+    ],
+    "bouts": [
+      {
+        "tournament": "Mission SYC",
+        "event": "Y-14 Men's Saber",
+        "date": "May 4, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      },
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-12 Men's Saber",
+        "date": "November 25, 2022",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "MHLEY Gavin": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "98"
+    ],
+    "bouts": [
+      {
+        "tournament": "Mission SYC",
+        "event": "Y-14 Men's Saber",
+        "date": "May 4, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "LIU ERIC": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "24"
+    ],
+    "bouts": [
+      {
+        "tournament": "Mission SYC",
+        "event": "Y-14 Men's Saber",
+        "date": "May 4, 2024",
+        "type": "Pool",
+        "win": false,
+        "score": "3-5"
+      }
+    ]
+  },
+  "CLARK Aram": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "41",
+      "3"
+    ],
+    "bouts": [
+      {
+        "tournament": "Mission SYC",
+        "event": "Y-14 Men's Saber",
+        "date": "May 4, 2024",
+        "type": "T64",
+        "win": true,
+        "score": "15-14"
+      },
+      {
+        "tournament": "North Texas Roundup SYC/RCC",
+        "event": "Y-12 Men's Saber",
+        "date": "September 3, 2022",
+        "type": "Pool",
+        "win": false,
+        "score": "3-5"
+      }
+    ]
+  },
+  "BENE Paul": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "17",
+      "22"
+    ],
+    "bouts": [
+      {
+        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
         "event": "Cadet Men's Saber",
-        "date": "September 21, 2024",
+        "date": "April 21, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      },
+      {
+        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "September 24, 2023",
+        "type": "Pool",
+        "win": false,
+        "score": "2-5"
+      }
+    ]
+  },
+  "FORD Aaron": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "14"
+    ],
+    "bouts": [
+      {
+        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
+        "event": "Cadet Men's Saber",
+        "date": "April 21, 2024",
         "type": "Pool",
         "win": true,
         "score": "5-0"
       }
+    ]
+  },
+  "HUCHWAJDA Alex": {
+    "wins": 2,
+    "losses": 2,
+    "total": 4,
+    "winRate": 50,
+    "clubs": [
+      "3",
+      "1",
+      "2"
     ],
-    "birthYear": 2011
+    "bouts": [
+      {
+        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
+        "event": "Cadet Men's Saber",
+        "date": "April 21, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      },
+      {
+        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
+        "event": "Cadet Men's Saber",
+        "date": "April 21, 2024",
+        "type": "T4",
+        "win": true,
+        "score": "15-13"
+      },
+      {
+        "tournament": "NoVA Knights RYC/RJCC",
+        "event": "Y-12 Men's Saber",
+        "date": "October 2, 2022",
+        "type": "T4",
+        "win": false,
+        "score": "10-15"
+      },
+      {
+        "tournament": "Fairfax Challenge Fall RYC/RJCC & Y8 (Non-Regional)",
+        "event": "Y-12 Men's Saber",
+        "date": "September 11, 2022",
+        "type": "Pool",
+        "win": false,
+        "score": "4-5"
+      }
+    ]
+  },
+  "BRAMLETT Myer": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "16"
+    ],
+    "bouts": [
+      {
+        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
+        "event": "Cadet Men's Saber",
+        "date": "April 21, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "YAO Zachary": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "13",
+      "146"
+    ],
+    "bouts": [
+      {
+        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
+        "event": "Cadet Men's Saber",
+        "date": "April 21, 2024",
+        "type": "T16",
+        "win": true,
+        "score": "15-6"
+      },
+      {
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "January 13, 2024",
+        "type": "T256",
+        "win": true,
+        "score": "15-10"
+      }
+    ]
+  },
+  "EYSTER Edison": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "7"
+    ],
+    "bouts": [
+      {
+        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
+        "event": "Cadet Men's Saber",
+        "date": "April 21, 2024",
+        "type": "T8",
+        "win": true,
+        "score": "15-9"
+      }
+    ]
+  },
+  "XIA Matthew": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "2"
+    ],
+    "bouts": [
+      {
+        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
+        "event": "Cadet Men's Saber",
+        "date": "April 21, 2024",
+        "type": "T2",
+        "win": true,
+        "score": "15-11"
+      }
+    ]
+  },
+  "MUNOZ Jonas": {
+    "wins": 3,
+    "losses": 0,
+    "total": 3,
+    "winRate": 100,
+    "clubs": [
+      "14",
+      "27",
+      "20"
+    ],
+    "bouts": [
+      {
+        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
+        "event": "Y-14 Men's Saber",
+        "date": "April 20, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      },
+      {
+        "tournament": "NoVA Knights RYC/RJCC",
+        "event": "Y-12 Men's Saber",
+        "date": "October 2, 2022",
+        "type": "T32",
+        "win": true,
+        "score": "15-2"
+      },
+      {
+        "tournament": "Fairfax Challenge Fall RYC/RJCC & Y8 (Non-Regional)",
+        "event": "Y-12 Men's Saber",
+        "date": "September 11, 2022",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "CHANG Ethan": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "33",
+      "17"
+    ],
+    "bouts": [
+      {
+        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
+        "event": "Y-14 Men's Saber",
+        "date": "April 20, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      },
+      {
+        "tournament": "NoVA Knights RYC/RJCC",
+        "event": "Y-12 Men's Saber",
+        "date": "October 2, 2022",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "OTT William": {
+    "wins": 3,
+    "losses": 0,
+    "total": 3,
+    "winRate": 100,
+    "clubs": [
+      "30",
+      "23",
+      "119"
+    ],
+    "bouts": [
+      {
+        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
+        "event": "Y-14 Men's Saber",
+        "date": "April 20, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      },
+      {
+        "tournament": "River City Regional Rumble RYC/RJCC",
+        "event": "Y-12 Men's Saber",
+        "date": "February 11, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      },
+      {
+        "tournament": "Capitol Clash SYC/RCC",
+        "event": "Y-12 Men's Saber",
+        "date": "January 14, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "VASQUEZ Matteo": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "41"
+    ],
+    "bouts": [
+      {
+        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
+        "event": "Y-14 Men's Saber",
+        "date": "April 20, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "LIN Philip T.": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "59",
+      "28"
+    ],
+    "bouts": [
+      {
+        "tournament": "March SJCC",
+        "event": "Cadet Men's Saber",
+        "date": "March 16, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      },
+      {
+        "tournament": "Capitol Clash SYC, RCC, Veteran ROC & Y8",
+        "event": "Y-10 Men's Saber",
+        "date": "January 18, 2020",
+        "type": "Pool",
+        "win": false,
+        "score": "2-5"
+      }
+    ]
+  },
+  "FARBER Jake": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "114"
+    ],
+    "bouts": [
+      {
+        "tournament": "March SJCC",
+        "event": "Cadet Men's Saber",
+        "date": "March 16, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "GUFFEY Christopher": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "3"
+    ],
+    "bouts": [
+      {
+        "tournament": "March SJCC",
+        "event": "Cadet Men's Saber",
+        "date": "March 16, 2024",
+        "type": "Pool",
+        "win": false,
+        "score": "0-5"
+      }
+    ]
+  },
+  "BAHK Caleb": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "74"
+    ],
+    "bouts": [
+      {
+        "tournament": "March SJCC",
+        "event": "Cadet Men's Saber",
+        "date": "March 16, 2024",
+        "type": "Pool",
+        "win": false,
+        "score": "1-5"
+      }
+    ]
+  },
+  "LEE Andrew": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "45"
+    ],
+    "bouts": [
+      {
+        "tournament": "March SJCC",
+        "event": "Cadet Men's Saber",
+        "date": "March 16, 2024",
+        "type": "Pool",
+        "win": false,
+        "score": "2-5"
+      }
+    ]
+  },
+  "WANG Will": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "36"
+    ],
+    "bouts": [
+      {
+        "tournament": "March SJCC",
+        "event": "Cadet Men's Saber",
+        "date": "March 16, 2024",
+        "type": "Pool",
+        "win": false,
+        "score": "4-5"
+      }
+    ]
+  },
+  "CHEN Shawn": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "147"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC",
+        "event": "Y-12 Men's Saber",
+        "date": "March 3, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "ZHANG Shaoxuan": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "112"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC",
+        "event": "Y-12 Men's Saber",
+        "date": "March 3, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      }
+    ]
+  },
+  "QI Zach": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "121"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC",
+        "event": "Y-12 Men's Saber",
+        "date": "March 3, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "HO Alden": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "59"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC",
+        "event": "Y-12 Men's Saber",
+        "date": "March 3, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "LEE Brendan": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "109"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC",
+        "event": "Y-12 Men's Saber",
+        "date": "March 3, 2024",
+        "type": "T128",
+        "win": true,
+        "score": "15-11"
+      }
+    ]
+  },
+  "CHEN Jack": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "62"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC",
+        "event": "Y-12 Men's Saber",
+        "date": "March 3, 2024",
+        "type": "T64",
+        "win": true,
+        "score": "15-12"
+      }
+    ]
+  },
+  "XU Ethan": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "206"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC",
+        "event": "Y-14 Men's Saber",
+        "date": "March 2, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "MARCISZ Maksym": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "239"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC",
+        "event": "Y-14 Men's Saber",
+        "date": "March 2, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "BROWN Andrew": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "170"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC",
+        "event": "Y-14 Men's Saber",
+        "date": "March 2, 2024",
+        "type": "T256",
+        "win": true,
+        "score": "15-13"
+      }
+    ]
+  },
+  "STURGEON Cole": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "46"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC",
+        "event": "Y-14 Men's Saber",
+        "date": "March 2, 2024",
+        "type": "T128",
+        "win": false,
+        "score": "6-15"
+      }
+    ]
+  },
+  "SHARMA Ayaan": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "141"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-12 Men's Saber",
+        "date": "January 15, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "JAVIER Xavier": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "82"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-12 Men's Saber",
+        "date": "January 15, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "FU BRANDEN": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "46"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-12 Men's Saber",
+        "date": "January 15, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "LIM JUWANA Maximilian": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "66"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-12 Men's Saber",
+        "date": "January 15, 2024",
+        "type": "Pool",
+        "win": false,
+        "score": "3-5"
+      }
+    ]
+  },
+  "LU Simon": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "107"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-12 Men's Saber",
+        "date": "January 15, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "LEE Aiden": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "128"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-12 Men's Saber",
+        "date": "January 15, 2024",
+        "type": "T128",
+        "win": true,
+        "score": "15-1"
+      }
+    ]
   },
   "GRABOWSKI Alexander": {
     "wins": 1,
-    "losses": 2,
-    "total": 3,
-    "winRate": 0.33,
-    "clubs": ["CAPITALFA"],
+    "losses": 1,
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "47",
+      "3"
+    ],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC & Y8",
@@ -3228,279 +7450,344 @@ export const opponents: Record<string, OpponentData> = {
         "type": "Pool",
         "win": false,
         "score": "1-5"
+      }
+    ]
+  },
+  "LIN Brendan": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "14",
+      "102"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-12 Men's Saber",
+        "date": "January 15, 2024",
+        "type": "T16",
+        "win": true,
+        "score": "15-9"
       },
       {
-        "tournament": "SYC",
+        "tournament": "National Championships & July Challenge (Summer Nationals)",
         "event": "Y-12 Men's Saber",
-        "date": "January 14, 2023",
+        "date": "July 8, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "YU Ian": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "5",
+      "24"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-12 Men's Saber",
+        "date": "January 15, 2024",
+        "type": "T8",
+        "win": true,
+        "score": "15-12"
+      },
+      {
+        "tournament": "North Texas Roundup SYC / RCC",
+        "event": "Y-12 Men's Saber",
+        "date": "September 2, 2023",
+        "type": "T32",
+        "win": true,
+        "score": "15-7"
+      }
+    ]
+  },
+  "CRAWFORD William": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "55"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "January 13, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "KIM Yusung": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "109"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "January 13, 2024",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      }
+    ]
+  },
+  "WONG Mac": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "149"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "January 13, 2024",
         "type": "Pool",
         "win": false,
         "score": "1-5"
       }
-    ],
-    "birthYear": 2013
+    ]
   },
-  "GRABOWSKI Stanley": {
-    "wins": 3,
+  "PARKILA Lukas": {
+    "wins": 1,
     "losses": 0,
-    "total": 3,
-    "winRate": 1,
-    "clubs": ["CAPITALFA"],
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "65"
+    ],
     "bouts": [
       {
-        "tournament": "River City Regional Rumble RYC/RJCC",
-        "event": "Y-12 Men's Saber",
-        "date": "February 11, 2023",
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "January 13, 2024",
+        "type": "T128",
+        "win": true,
+        "score": "15-10"
+      }
+    ]
+  },
+  "GONG zihao": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "6"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capitol Clash SYC/RCC & Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "January 13, 2024",
         "type": "T16",
+        "win": false,
+        "score": "6-15"
+      }
+    ]
+  },
+  "DATTILIO Aidan": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "73"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-12 Men's Saber",
+        "date": "November 24, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "MITHUN Prabal": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "109"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-12 Men's Saber",
+        "date": "November 24, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "ORIE Sohan": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "17"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-12 Men's Saber",
+        "date": "November 24, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "KIM Eric": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "32"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-12 Men's Saber",
+        "date": "November 24, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "CHERNAEV Antonio": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "66",
+      "38"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-12 Men's Saber",
+        "date": "November 24, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      },
+      {
+        "tournament": "Cobra Challenge SYC/RCC",
+        "event": "Y-10 Men's Saber",
+        "date": "May 31, 2021",
+        "type": "Pool",
+        "win": false,
+        "score": "4-5"
+      }
+    ]
+  },
+  "CHAN Ewan": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "60",
+      "25"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-12 Men's Saber",
+        "date": "November 24, 2023",
+        "type": "T64",
         "win": true,
         "score": "15-8"
       },
       {
-        "tournament": "NoVA Knights RYC/RJCC",
-        "event": "Y-14 Men's Saber",
-        "date": "October 1, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-12 Men's Saber",
-        "date": "September 11, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "GREENSTEIN Viktor": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "October NAC",
-        "event": "Cadet Men's Saber",
-        "date": "October 4, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "GREMILLION Obadiah": {
-    "wins": 1,
-    "losses": 1,
-    "total": 2,
-    "winRate": 0.5,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Div I Men's Saber",
-        "date": "November 14, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "May SJCC",
-        "event": "Junior Men's Saber",
-        "date": "May 16, 2025",
-        "type": "T16",
-        "win": false,
-        "score": "7-15"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "GRIGORIEV Roman": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["PREMIERFA"],
-    "bouts": [
-      {
-        "tournament": "May SJCC",
-        "event": "Cadet Men's Saber",
-        "date": "May 18, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "May NAC",
-        "event": "Junior Men's Saber",
-        "date": "May 16, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "GU Andrew": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["LAFAP"],
-    "bouts": [
-      {
-        "tournament": "March NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 8, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Cadet Men's Saber",
-        "date": "March 7, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "GU Kevin": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["SPARTAK"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-14 Men's Saber",
-        "date": "July 4, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "Summer Nationals",
-        "event": "Cadet Men's Saber",
-        "date": "July 1, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "GUFFEY Christopher": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["GFA"],
-    "bouts": [
-      {
-        "tournament": "March SJCC",
-        "event": "Cadet Men's Saber",
-        "date": "March 16, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "0-5"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 3, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "0-5"
-      }
-    ],
-    "birthYear": 2008
-  },
-  "GUREVICH Benjamin": {
-    "wins": 0,
-    "losses": 4,
-    "total": 4,
-    "winRate": 0,
-    "clubs": ["ALLEFENCING", "ALLE"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Cadet Men's Saber",
-        "date": "June 30, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "Fairfax Challenge Summer ROC/RJCC/RYC/VET - Reg Re-Opens 12/28",
+        "tournament": "Fairfax Challenge SYC/RJCC",
         "event": "Y-10 Men's Saber",
-        "date": "June 19, 2021",
+        "date": "May 14, 2022",
         "type": "Pool",
         "win": false,
-        "score": "0-5"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-8 Men's Saber",
-        "date": "January 19, 2020",
-        "type": "Pool",
-        "win": false,
-        "score": "0-5"
-      },
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-8 Men's Saber",
-        "date": "November 24, 2018",
-        "type": "Pool",
-        "win": false,
-        "score": "0-5"
+        "score": "1-5"
       }
-    ],
-    "birthYear": 2010
+    ]
   },
-  "HALL Noah": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": [],
+  "LEE Ezra": {
+    "wins": 3,
+    "losses": 0,
+    "total": 3,
+    "winRate": 100,
+    "clubs": [
+      "26",
+      "25",
+      "59"
+    ],
     "bouts": [
       {
         "tournament": "River City Regional Rumble RJCC / RYC & Y8",
         "event": "Y-14 Men's Saber",
         "date": "September 24, 2023",
-        "type": "T2",
-        "win": false,
-        "score": "10-15"
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      },
+      {
+        "tournament": "NoVA Knights RYC/RJCC",
+        "event": "Y-12 Men's Saber",
+        "date": "October 2, 2022",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      },
+      {
+        "tournament": "Fairfax Challenge SYC/RJCC",
+        "event": "Y-12 Men's Saber",
+        "date": "May 15, 2022",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
       }
-    ],
-    "birthYear": 2010
+    ]
   },
   "HARDRICK Noah": {
-    "wins": 2,
-    "losses": 3,
-    "total": 5,
-    "winRate": 0.4,
-    "clubs": ["NAZLYMOVFF"],
+    "wins": 1,
+    "losses": 2,
+    "total": 3,
+    "winRate": 33,
+    "clubs": [
+      "6",
+      "3",
+      "13"
+    ],
     "bouts": [
       {
         "tournament": "River City Regional Rumble RJCC / RYC & Y8",
         "event": "Y-14 Men's Saber",
         "date": "September 24, 2023",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Cadet Men's Saber",
-        "date": "September 23, 2023",
         "type": "Pool",
         "win": false,
         "score": "4-5"
@@ -3520,128 +7807,232 @@ export const opponents: Record<string, OpponentData> = {
         "type": "Pool",
         "win": true,
         "score": "5-3"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-12 Men's Saber",
-        "date": "September 11, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
       }
-    ],
-    "birthYear": 2012
+    ]
   },
-  "HAUSLER Jayden": {
+  "BONGIORNO Wesley": {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 1,
-    "clubs": ["H3"],
-    "bouts": [
-      {
-        "tournament": "Junior Olympics & Div 1 NAC",
-        "event": "Cadet Men's Saber",
-        "date": "February 17, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "February NAC",
-        "event": "Junior Men's Saber",
-        "date": "February 16, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
+    "winRate": 100,
+    "clubs": [
+      "27",
+      "16"
     ],
-    "birthYear": 2009
-  },
-  "HE Jason": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["PFA"],
     "bouts": [
       {
-        "tournament": "Ben Gutenberg Memorial SYC / RCC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 11, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 5, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "HEATH Isabella": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["DCFENCERS"],
-    "bouts": [
-      {
-        "tournament": "DCFC Youth Challenge #4",
-        "event": "Y-10 Mixed Saber",
-        "date": "June 12, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-10 Men's Saber",
-        "date": "May 14, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "HENDERSON Louis": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["Western New York"],
-    "bouts": [
-      {
-        "tournament": "Ben Gutenberg SYC - RJCC",
+        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
         "event": "Y-14 Men's Saber",
-        "date": "October 12, 2024",
+        "date": "September 24, 2023",
         "type": "Pool",
         "win": true,
-        "score": "5-3"
+        "score": "5-1"
       },
       {
-        "tournament": "RYC",
-        "event": "Cadet Men's Saber",
-        "date": "September 21, 2024",
+        "tournament": "NoVA Knights RYC/RJCC",
+        "event": "Y-12 Men's Saber",
+        "date": "October 2, 2022",
+        "type": "T16",
+        "win": true,
+        "score": "15-8"
+      }
+    ]
+  },
+  "BREUER Daniel": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "10"
+    ],
+    "bouts": [
+      {
+        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "September 24, 2023",
+        "type": "T16",
+        "win": true,
+        "score": "15-8"
+      }
+    ]
+  },
+  "CAI fungyu": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "5",
+      "8"
+    ],
+    "bouts": [
+      {
+        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "September 24, 2023",
+        "type": "T8",
+        "win": true,
+        "score": "15-13"
+      },
+      {
+        "tournament": "River City Regional Rumble RYC/RJCC",
+        "event": "Y-12 Men's Saber",
+        "date": "February 11, 2023",
         "type": "Pool",
         "win": true,
-        "score": "5-3"
+        "score": "5-1"
       }
-    ],
-    "birthYear": 2013
+    ]
   },
-  "HENDERSON Lucas": {
+  "BOLLU Viren": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "3"
+    ],
+    "bouts": [
+      {
+        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "September 24, 2023",
+        "type": "T4",
+        "win": true,
+        "score": "15-9"
+      }
+    ]
+  },
+  "HALL Noah": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "1"
+    ],
+    "bouts": [
+      {
+        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
+        "event": "Y-14 Men's Saber",
+        "date": "September 24, 2023",
+        "type": "T2",
+        "win": false,
+        "score": "10-15"
+      }
+    ]
+  },
+  "SZULIM Lucjan": {
+    "wins": 1,
+    "losses": 2,
+    "total": 3,
+    "winRate": 33,
+    "clubs": [
+      "17",
+      "7"
+    ],
+    "bouts": [
+      {
+        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
+        "event": "Cadet Men's Saber",
+        "date": "September 23, 2023",
+        "type": "Pool",
+        "win": false,
+        "score": "4-5"
+      },
+      {
+        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
+        "event": "Cadet Men's Saber",
+        "date": "September 23, 2023",
+        "type": "T32",
+        "win": true,
+        "score": "15-10"
+      },
+      {
+        "tournament": "NoVA Knights RYC/RJCC",
+        "event": "Y-14 Men's Saber",
+        "date": "October 1, 2022",
+        "type": "T16",
+        "win": false,
+        "score": "10-15"
+      }
+    ]
+  },
+  "SALMAN Hamzah": {
     "wins": 0,
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": ["AFC"],
+    "clubs": [
+      "18",
+      "16"
+    ],
+    "bouts": [
+      {
+        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
+        "event": "Cadet Men's Saber",
+        "date": "September 23, 2023",
+        "type": "Pool",
+        "win": false,
+        "score": "1-5"
+      },
+      {
+        "tournament": "North Texas Roundup SYC/RCC",
+        "event": "Y-12 Men's Saber",
+        "date": "September 3, 2022",
+        "type": "Pool",
+        "win": false,
+        "score": "4-5"
+      }
+    ]
+  },
+  "ROORDA Easton": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "32"
+    ],
+    "bouts": [
+      {
+        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
+        "event": "Cadet Men's Saber",
+        "date": "September 23, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "LIN Alex": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "42"
+    ],
+    "bouts": [
+      {
+        "tournament": "North Texas Roundup SYC / RCC",
+        "event": "Y-14 Men's Saber",
+        "date": "September 3, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "HENDERSON Lucas": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "5"
+    ],
     "bouts": [
       {
         "tournament": "North Texas Roundup SYC / RCC",
@@ -3650,269 +8041,700 @@ export const opponents: Record<string, OpponentData> = {
         "type": "Pool",
         "win": false,
         "score": "3-5"
+      }
+    ]
+  },
+  "SENTHIL Gatik": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "63"
+    ],
+    "bouts": [
+      {
+        "tournament": "North Texas Roundup SYC / RCC",
+        "event": "Y-14 Men's Saber",
+        "date": "September 3, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "MILLER Joseph": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "48"
+    ],
+    "bouts": [
+      {
+        "tournament": "North Texas Roundup SYC / RCC",
+        "event": "Y-14 Men's Saber",
+        "date": "September 3, 2023",
+        "type": "T64",
+        "win": true,
+        "score": "15-5"
+      }
+    ]
+  },
+  "LI AYDEN": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "16",
+      "28"
+    ],
+    "bouts": [
+      {
+        "tournament": "North Texas Roundup SYC / RCC",
+        "event": "Y-14 Men's Saber",
+        "date": "September 3, 2023",
+        "type": "T16",
+        "win": true,
+        "score": "15-14"
       },
       {
-        "tournament": "SYC",
+        "tournament": "North Texas Roundup SYC/RCC",
+        "event": "Y-12 Men's Saber",
+        "date": "September 3, 2022",
+        "type": "T64",
+        "win": false,
+        "score": "8-15"
+      }
+    ]
+  },
+  "SALMAN Ibrahim": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "43",
+      "91"
+    ],
+    "bouts": [
+      {
+        "tournament": "North Texas Roundup SYC / RCC",
         "event": "Y-12 Men's Saber",
         "date": "September 2, 2023",
         "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "HENRY Cadel": {
-    "wins": 5,
-    "losses": 1,
-    "total": 6,
-    "winRate": 0.83,
-    "clubs": ["FORGE"],
-    "bouts": [
-      {
-        "tournament": "Fairfax Challenge SYC/RJCC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 21, 2025",
-        "type": "T16",
-        "win": true,
-        "score": "15-5"
-      },
-      {
-        "tournament": "Junior Olympics & Div 1 NAC",
-        "event": "Cadet Men's Saber",
-        "date": "February 17, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "February NAC",
-        "event": "Junior Men's Saber",
-        "date": "February 16, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "River City Regional Rumble - RYC/RJCC and Y8",
-        "event": "Cadet Men's Saber",
-        "date": "September 21, 2024",
-        "type": "T32",
-        "win": false,
-        "score": "13-15"
-      },
-      {
-        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "September 24, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Cadet Men's Saber",
-        "date": "September 23, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "HENRY Ethan": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["SCFA"],
-    "bouts": [
-      {
-        "tournament": "Junior Olympics & Div 1 NAC",
-        "event": "Cadet Men's Saber",
-        "date": "February 17, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "February NAC",
-        "event": "Junior Men's Saber",
-        "date": "February 16, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "HJERPE Wade H.": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["PHX"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Junior Men's Saber",
-        "date": "June 28, 2025",
-        "type": "Pool",
         "win": true,
         "score": "5-1"
       },
       {
-        "tournament": "May NAC",
-        "event": "Cadet Men's Saber",
-        "date": "May 18, 2025",
+        "tournament": "USA Fencing National Championships & July Challenge",
+        "event": "Y-10 Men's Saber",
+        "date": "July 11, 2022",
         "type": "Pool",
         "win": true,
-        "score": "5-1"
+        "score": "5-0"
       }
-    ],
-    "birthYear": 2009
+    ]
   },
-  "HO Alden": {
+  "MAI Ryan": {
     "wins": 2,
     "losses": 0,
     "total": 2,
-    "winRate": 1,
-    "clubs": ["PREMIERFA"],
+    "winRate": 100,
+    "clubs": [
+      "20",
+      "51"
+    ],
     "bouts": [
       {
-        "tournament": "March NAC",
+        "tournament": "North Texas Roundup SYC / RCC",
         "event": "Y-12 Men's Saber",
-        "date": "March 3, 2024",
+        "date": "September 2, 2023",
         "type": "Pool",
         "win": true,
-        "score": "5-0"
+        "score": "5-1"
       },
       {
-        "tournament": "March NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 2, 2024",
+        "tournament": "North Texas Roundup SYC/RCC",
+        "event": "Y-12 Men's Saber",
+        "date": "September 3, 2022",
         "type": "Pool",
         "win": true,
-        "score": "5-0"
+        "score": "5-1"
       }
-    ],
-    "birthYear": 2013
+    ]
   },
-  "HOLZ Lucas": {
-    "wins": 2,
+  "STENSON Silas": {
+    "wins": 1,
     "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["PREMIERFA"],
-    "bouts": [
-      {
-        "tournament": "May SJCC",
-        "event": "Junior Men's Saber",
-        "date": "May 16, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "Capitol Clash SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 21, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "HONG Rubin": {
-    "wins": 0,
-    "losses": 1,
     "total": 1,
-    "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "October NAC",
-        "event": "Div I Men's Saber",
-        "date": "October 5, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "2-5"
-      }
+    "winRate": 100,
+    "clubs": [
+      "40"
     ],
-    "birthYear": 0
-  },
-  "HOWERTON Beckett": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["MIRACLEFC"],
     "bouts": [
       {
-        "tournament": "River City Regional Rumble - RYC/RJCC and Y8",
-        "event": "Cadet Men's Saber",
-        "date": "September 21, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "Summer Nationals",
+        "tournament": "North Texas Roundup SYC / RCC",
         "event": "Y-12 Men's Saber",
-        "date": "July 5, 2024",
+        "date": "September 2, 2023",
         "type": "Pool",
         "win": true,
-        "score": "5-3"
+        "score": "5-1"
       }
-    ],
-    "birthYear": 2013
+    ]
   },
-  "HU Chris": {
+  "KANG Jeremy": {
     "wins": 0,
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": ["AFFA"],
+    "clubs": [
+      "7",
+      "28"
+    ],
     "bouts": [
       {
-        "tournament": "Junior Olympics & Div 1 NAC",
-        "event": "Cadet Men's Saber",
-        "date": "February 17, 2025",
+        "tournament": "North Texas Roundup SYC / RCC",
+        "event": "Y-12 Men's Saber",
+        "date": "September 2, 2023",
+        "type": "T16",
+        "win": false,
+        "score": "12-15"
+      },
+      {
+        "tournament": "March NAC and Parafencing National Championships",
+        "event": "Y-12 Men's Saber",
+        "date": "March 5, 2023",
+        "type": "T64",
+        "win": false,
+        "score": "6-15"
+      }
+    ]
+  },
+  "SETH Khalen": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "163"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships & July Challenge (Summer Nationals)",
+        "event": "Y-12 Men's Saber",
+        "date": "July 8, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "LO Lei": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "177"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships & July Challenge (Summer Nationals)",
+        "event": "Y-12 Men's Saber",
+        "date": "July 8, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "KUMAR Avinash": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "209",
+      "25"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships & July Challenge (Summer Nationals)",
+        "event": "Y-12 Men's Saber",
+        "date": "July 8, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      },
+      {
+        "tournament": "Ben Gutenberg Memorial SYC / RCC",
+        "event": "Y-12 Men's Saber",
+        "date": "March 11, 2023",
+        "type": "T32",
+        "win": true,
+        "score": "15-5"
+      }
+    ]
+  },
+  "PINTO Marcus": {
+    "wins": 1,
+    "losses": 2,
+    "total": 3,
+    "winRate": 33,
+    "clubs": [
+      "3",
+      "22"
+    ],
+    "bouts": [
+      {
+        "tournament": "National Championships & July Challenge (Summer Nationals)",
+        "event": "Y-12 Men's Saber",
+        "date": "July 8, 2023",
+        "type": "T64",
+        "win": false,
+        "score": "4-15"
+      },
+      {
+        "tournament": "Ben Gutenberg Memorial SYC / RCC",
+        "event": "Y-12 Men's Saber",
+        "date": "March 11, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      },
+      {
+        "tournament": "Fairfax Challenge SYC/RJCC",
+        "event": "Y-12 Men's Saber",
+        "date": "May 15, 2022",
+        "type": "Pool",
+        "win": false,
+        "score": "0-5"
+      }
+    ]
+  },
+  "FEI Danny": {
+    "wins": 1,
+    "losses": 2,
+    "total": 3,
+    "winRate": 33,
+    "clubs": [
+      "33",
+      "58",
+      "8"
+    ],
+    "bouts": [
+      {
+        "tournament": "Fairfax Challenge Spring RYC/RJCC/ROC",
+        "event": "Y-12 Men's Saber",
+        "date": "April 16, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      },
+      {
+        "tournament": "Capitol Clash SYC/RCC",
+        "event": "Y-12 Men's Saber",
+        "date": "January 14, 2023",
+        "type": "T128",
+        "win": false,
+        "score": "11-15"
+      },
+      {
+        "tournament": "Fairfax Challenge Summer ROC/RJCC/RYC/VET - Reg Re-Opens 12/28",
+        "event": "Y-10 Men's Saber",
+        "date": "June 19, 2021",
+        "type": "Pool",
+        "win": false,
+        "score": "2-5"
+      }
+    ]
+  },
+  "PERRIN Leo": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "27"
+    ],
+    "bouts": [
+      {
+        "tournament": "Fairfax Challenge Spring RYC/RJCC/ROC",
+        "event": "Y-12 Men's Saber",
+        "date": "April 16, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "GONZALEZ Leo": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "34"
+    ],
+    "bouts": [
+      {
+        "tournament": "Fairfax Challenge Spring RYC/RJCC/ROC",
+        "event": "Y-12 Men's Saber",
+        "date": "April 16, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "KANE Kiran": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "17"
+    ],
+    "bouts": [
+      {
+        "tournament": "Fairfax Challenge Spring RYC/RJCC/ROC",
+        "event": "Y-12 Men's Saber",
+        "date": "April 16, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "GORDON Ezekiel": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "22",
+      "35"
+    ],
+    "bouts": [
+      {
+        "tournament": "Fairfax Challenge Spring RYC/RJCC/ROC",
+        "event": "Y-12 Men's Saber",
+        "date": "April 16, 2023",
         "type": "Pool",
         "win": false,
         "score": "4-5"
       },
       {
-        "tournament": "February NAC",
-        "event": "Junior Men's Saber",
-        "date": "February 16, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
+        "tournament": "Fairfax Challenge SYC/RJCC",
+        "event": "Y-10 Men's Saber",
+        "date": "May 14, 2022",
+        "type": "T64",
+        "win": true,
+        "score": "10-3"
       }
+    ]
+  },
+  "PAUL James": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "23"
     ],
-    "birthYear": 2009
+    "bouts": [
+      {
+        "tournament": "Fairfax Challenge Spring RYC/RJCC/ROC",
+        "event": "Y-12 Men's Saber",
+        "date": "April 16, 2023",
+        "type": "T32",
+        "win": true,
+        "score": "15-6"
+      }
+    ]
+  },
+  "AVERY Marcus": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "47",
+      "34"
+    ],
+    "bouts": [
+      {
+        "tournament": "Ben Gutenberg Memorial SYC / RCC",
+        "event": "Y-12 Men's Saber",
+        "date": "March 11, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      },
+      {
+        "tournament": "Fairfax Challenge SYC/RJCC",
+        "event": "Y-10 Men's Saber",
+        "date": "May 14, 2022",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "SAYAR Luke": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "33",
+      "32"
+    ],
+    "bouts": [
+      {
+        "tournament": "Ben Gutenberg Memorial SYC / RCC",
+        "event": "Y-12 Men's Saber",
+        "date": "March 11, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      },
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-10 Men's Saber",
+        "date": "November 29, 2019",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "HE Jason": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "44"
+    ],
+    "bouts": [
+      {
+        "tournament": "Ben Gutenberg Memorial SYC / RCC",
+        "event": "Y-12 Men's Saber",
+        "date": "March 11, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "KROON Landon": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "57"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC and Parafencing National Championships",
+        "event": "Y-12 Men's Saber",
+        "date": "March 5, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "ZHANG Aiden": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "168"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC and Parafencing National Championships",
+        "event": "Y-12 Men's Saber",
+        "date": "March 5, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "CHEN Xing Ji": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "121"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC and Parafencing National Championships",
+        "event": "Y-12 Men's Saber",
+        "date": "March 5, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "MAGITSKY Isaac": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "105"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC and Parafencing National Championships",
+        "event": "Y-12 Men's Saber",
+        "date": "March 5, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      }
+    ]
+  },
+  "SIMS Elliot": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "124"
+    ],
+    "bouts": [
+      {
+        "tournament": "March NAC and Parafencing National Championships",
+        "event": "Y-12 Men's Saber",
+        "date": "March 5, 2023",
+        "type": "T128",
+        "win": true,
+        "score": "15-6"
+      }
+    ]
+  },
+  "XU Princeton": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "22"
+    ],
+    "bouts": [
+      {
+        "tournament": "River City Regional Rumble RYC/RJCC",
+        "event": "Y-12 Men's Saber",
+        "date": "February 11, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "PIPKE Garrett": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "20",
+      "7"
+    ],
+    "bouts": [
+      {
+        "tournament": "River City Regional Rumble RYC/RJCC",
+        "event": "Y-12 Men's Saber",
+        "date": "February 11, 2023",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      },
+      {
+        "tournament": "DCFC Youth Challenge #4",
+        "event": "Y-10 Mixed Saber",
+        "date": "June 12, 2022",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
+  },
+  "PROSPER Nathaniel": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "24"
+    ],
+    "bouts": [
+      {
+        "tournament": "River City Regional Rumble RYC/RJCC",
+        "event": "Y-12 Men's Saber",
+        "date": "February 11, 2023",
+        "type": "T32",
+        "win": true,
+        "score": "15-5"
+      }
+    ]
+  },
+  "GRABOWSKI Stanley": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "10",
+      "15"
+    ],
+    "bouts": [
+      {
+        "tournament": "River City Regional Rumble RYC/RJCC",
+        "event": "Y-12 Men's Saber",
+        "date": "February 11, 2023",
+        "type": "T16",
+        "win": true,
+        "score": "15-8"
+      },
+      {
+        "tournament": "NoVA Knights RYC/RJCC",
+        "event": "Y-14 Men's Saber",
+        "date": "October 1, 2022",
+        "type": "Pool",
+        "win": true,
+        "score": "5-3"
+      }
+    ]
   },
   "HU Harry": {
-    "wins": 2,
-    "losses": 4,
-    "total": 6,
-    "winRate": 0.33,
-    "clubs": ["NELLYA"],
+    "wins": 1,
+    "losses": 3,
+    "total": 4,
+    "winRate": 25,
+    "clubs": [
+      "34",
+      "9",
+      "2"
+    ],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC",
         "event": "Y-12 Men's Saber",
         "date": "January 14, 2023",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "November 25, 2022",
         "type": "Pool",
         "win": false,
         "score": "3-5"
@@ -3940,50 +8762,17 @@ export const opponents: Record<string, OpponentData> = {
         "type": "T4",
         "win": false,
         "score": "9-10"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-10 Men's Saber",
-        "date": "January 18, 2020",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
       }
-    ],
-    "birthYear": 2011
-  },
-  "HU Jayden": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["MANHATTANFC"],
-    "bouts": [
-      {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "January 18, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "Junior Olympics",
-        "event": "Cadet Men's Saber",
-        "date": "January 5, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2011
+    ]
   },
   "HUANG Alex F.": {
     "wins": 0,
-    "losses": 2,
-    "total": 2,
+    "losses": 1,
+    "total": 1,
     "winRate": 0,
-    "clubs": ["LILOVFA"],
+    "clubs": [
+      "1"
+    ],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC",
@@ -3992,270 +8781,17 @@ export const opponents: Record<string, OpponentData> = {
         "type": "Pool",
         "win": false,
         "score": "1-5"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "November 25, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
       }
-    ],
-    "birthYear": 2012
-  },
-  "HUCHWAJDA Alex": {
-    "wins": 3,
-    "losses": 3,
-    "total": 6,
-    "winRate": 0.5,
-    "clubs": ["RESEARCHTRI"],
-    "bouts": [
-      {
-        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
-        "event": "Cadet Men's Saber",
-        "date": "April 21, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
-        "event": "Cadet Men's Saber",
-        "date": "April 21, 2024",
-        "type": "T4",
-        "win": true,
-        "score": "15-13"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-14 Men's Saber",
-        "date": "April 20, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "NoVA Knights RYC/RJCC",
-        "event": "Y-12 Men's Saber",
-        "date": "October 2, 2022",
-        "type": "T4",
-        "win": false,
-        "score": "10-15"
-      },
-      {
-        "tournament": "Fairfax Challenge Fall RYC/RJCC & Y8 (Non-Regional)",
-        "event": "Y-12 Men's Saber",
-        "date": "September 11, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "September 3, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "HWANG Jayden": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["LAFAP"],
-    "bouts": [
-      {
-        "tournament": "May SJCC",
-        "event": "Junior Men's Saber",
-        "date": "May 16, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "Capitol Clash SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 21, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "ISAYENKO Daniel": {
-    "wins": 1,
-    "losses": 2,
-    "total": 3,
-    "winRate": 0.33,
-    "clubs": ["MANHATTANFC"],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "December 1, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      },
-      {
-        "tournament": "Cobra Challenge SYC",
-        "event": "Cadet Men's Saber",
-        "date": "November 30, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      },
-      {
-        "tournament": "Ben Gutenberg SYC - RJCC",
-        "event": "Y-14 Men's Saber",
-        "date": "October 12, 2024",
-        "type": "T64",
-        "win": true,
-        "score": "15-12"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "IYER Neil": {
-    "wins": 5,
-    "losses": 0,
-    "total": 5,
-    "winRate": 1,
-    "clubs": ["HALBERSTADT", "BAFC"],
-    "bouts": [
-      {
-        "tournament": "December SJCC + Para NAC",
-        "event": "Cadet Men's Saber",
-        "date": "December 6, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Cobra Challenge SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "December 1, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "November NAC",
-        "event": "Cadet Men's Saber",
-        "date": "November 10, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "North Texas Roundup SYC/RCC",
-        "event": "Y-12 Men's Saber",
-        "date": "September 3, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Summer Nationals",
-        "event": "Y-10 Men's Saber",
-        "date": "July 11, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "JAVIER Xavier": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["NOVAFC"],
-    "bouts": [
-      {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-12 Men's Saber",
-        "date": "January 15, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "January 13, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "JEFFORDS Alexander": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "October NAC",
-        "event": "Div I Men's Saber",
-        "date": "October 5, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      }
-    ],
-    "birthYear": 0
-  },
-  "JI Johnson": {
-    "wins": 1,
-    "losses": 2,
-    "total": 3,
-    "winRate": 0.33,
-    "clubs": ["AIFENCING"],
-    "bouts": [
-      {
-        "tournament": "Fairfax Challenge SYC/RJCC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 21, 2025",
-        "type": "T8",
-        "win": true,
-        "score": "15-8"
-      },
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "December 1, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "2-5"
-      },
-      {
-        "tournament": "Cobra Challenge SYC",
-        "event": "Cadet Men's Saber",
-        "date": "November 30, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "2-5"
-      }
-    ],
-    "birthYear": 2010
+    ]
   },
   "JIA Charles": {
-    "wins": 2,
+    "wins": 1,
     "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["TIMMOREHOUSE"],
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "106"
+    ],
     "bouts": [
       {
         "tournament": "Capitol Clash SYC/RCC",
@@ -4264,94 +8800,74 @@ export const opponents: Record<string, OpponentData> = {
         "type": "Pool",
         "win": true,
         "score": "5-1"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "November 25, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
       }
-    ],
-    "birthYear": 2012
+    ]
   },
-  "JIANG Terence": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["AURAFA"],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Cadet Men's Saber",
-        "date": "November 30, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "November NAC",
-        "event": "Cadet Men's Saber",
-        "date": "November 10, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      }
-    ],
-    "birthYear": 2008
-  },
-  "JIN Adam": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["MD-TERRAPIN"],
-    "bouts": [
-      {
-        "tournament": "Capital Czajkowski Cup #3",
-        "event": "Senior Mixed Saber",
-        "date": "March 15, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 8, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "JIN Liangxuan": {
+  "LVOFF Leo": {
     "wins": 0,
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [],
+    "clubs": [
+      "102"
+    ],
     "bouts": [
       {
-        "tournament": "October NAC",
-        "event": "Cadet Men's Saber",
-        "date": "October 4, 2025",
-        "type": "T64",
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-12 Men's Saber",
+        "date": "November 25, 2022",
+        "type": "Pool",
         "win": false,
-        "score": "5-15"
+        "score": "4-5"
       }
+    ]
+  },
+  "STEVENS Flynn": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "49"
     ],
-    "birthYear": 2009
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-12 Men's Saber",
+        "date": "November 25, 2022",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "SONG Nicholas": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "82"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-12 Men's Saber",
+        "date": "November 25, 2022",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
   },
   "JIN Louis": {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 1,
-    "clubs": [],
+    "winRate": 100,
+    "clubs": [
+      "100"
+    ],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -4361,1115 +8877,46 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "15-10"
       }
-    ],
-    "birthYear": 2011
+    ]
   },
-  "JOHNSON Leland": {
-    "wins": 2,
-    "losses": 5,
-    "total": 7,
-    "winRate": 0.29,
-    "clubs": ["DCFENCERS"],
-    "bouts": [
-      {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "January 18, 2025",
-        "type": "T64",
-        "win": true,
-        "score": "15-7"
-      },
-      {
-        "tournament": "NoVA Knights RYC/RJCC",
-        "event": "Y-12 Men's Saber",
-        "date": "October 2, 2022",
-        "type": "T8",
-        "win": true,
-        "score": "15-12"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "May 15, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      },
-      {
-        "tournament": "Fairfax Challenge SYC/RJCC",
-        "event": "Y-10 Men's Saber",
-        "date": "May 14, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      },
-      {
-        "tournament": "Fairfax Challenge Summer ROC/RJCC/RYC/VET - Reg Re-Opens 12/28",
-        "event": "Y-10 Men's Saber",
-        "date": "June 19, 2021",
-        "type": "Pool",
-        "win": false,
-        "score": "0-5"
-      },
-      {
-        "tournament": "Fairfax Challenge Summer ROC/RJCC/RYC/VET - Reg Re-Opens 12/28",
-        "event": "Y-10 Men's Saber",
-        "date": "June 19, 2021",
-        "type": "T8",
-        "win": false,
-        "score": "8-10"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-8 Men's Saber",
-        "date": "January 19, 2020",
-        "type": "Pool",
-        "win": false,
-        "score": "0-5"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "JOHNSON Leyton": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["DCFENCERS"],
-    "bouts": [
-      {
-        "tournament": "DCFC Youth Challenge #4",
-        "event": "Y-10 Mixed Saber",
-        "date": "June 12, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-10 Men's Saber",
-        "date": "May 14, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "JOHNSON Waldron": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["NOVAFC"],
-    "bouts": [
-      {
-        "tournament": "Capital Czajkowski Cup #3",
-        "event": "Senior Mixed Saber",
-        "date": "March 15, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 8, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "KAMAL Aidan": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": ["NFFC"],
-    "bouts": [
-      {
-        "tournament": "Junior Olympics",
-        "event": "Junior Men's Saber",
-        "date": "January 12, 2026",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2007
-  },
-  "KAMURA Kosei": {
-    "wins": 3,
-    "losses": 0,
-    "total": 3,
-    "winRate": 1,
-    "clubs": ["GFA"],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Cadet Men's Saber",
-        "date": "November 16, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "North Texas Roundup SYC / RCC",
-        "event": "Y-14 Men's Saber",
-        "date": "September 3, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "September 2, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "KANE Kiran": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["NOVAFC"],
-    "bouts": [
-      {
-        "tournament": "Fairfax Challenge Spring RYC/RJCC/ROC",
-        "event": "Y-12 Men's Saber",
-        "date": "April 16, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 11, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "KANG Evan R.": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "October NAC",
-        "event": "Cadet Men's Saber",
-        "date": "October 4, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "KANG Jeremy": {
+  "LIU Ryan": {
     "wins": 0,
     "losses": 2,
     "total": 2,
     "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "North Texas Roundup SYC / RCC",
-        "event": "Y-12 Men's Saber",
-        "date": "September 2, 2023",
-        "type": "T16",
-        "win": false,
-        "score": "12-15"
-      },
-      {
-        "tournament": "March NAC and Parafencing National Championships",
-        "event": "Y-12 Men's Saber",
-        "date": "March 5, 2023",
-        "type": "T64",
-        "win": false,
-        "score": "6-15"
-      }
+    "clubs": [
+      "29",
+      "22"
     ],
-    "birthYear": 2012
-  },
-  "KANG Matthew": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "November 17, 2025",
-        "type": "T16",
-        "win": true,
-        "score": "15-9"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "KANIA Alexander": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": ["MIDWESTFC"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-14 Men's Saber",
-        "date": "July 3, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "KARAVAS Nicholas": {
-    "wins": 6,
-    "losses": 0,
-    "total": 6,
-    "winRate": 1,
-    "clubs": ["FAOBOSTON"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Cadet Men's Saber",
-        "date": "November 30, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "November NAC",
-        "event": "Cadet Men's Saber",
-        "date": "November 10, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "Cobra Challenge SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "October 12, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "March NAC",
         "event": "Y-12 Men's Saber",
-        "date": "March 3, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 2, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
+        "date": "November 25, 2022",
+        "type": "T64",
+        "win": false,
+        "score": "4-15"
       },
       {
         "tournament": "Capitol Clash SYC, RCC, Veteran ROC & Y8",
-        "event": "Y-8 Men's Saber",
-        "date": "January 19, 2020",
-        "type": "T16",
-        "win": true,
-        "score": "10-3"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "KEMP Austin": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Junior Olympics",
-        "event": "Cadet Men's Saber",
-        "date": "January 10, 2026",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "KHANNA Adamantis": {
-    "wins": 2,
-    "losses": 1,
-    "total": 3,
-    "winRate": 0.67,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Junior Olympics",
-        "event": "Junior Men's Saber",
-        "date": "January 12, 2026",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "Junior Olympics",
-        "event": "Junior Men's Saber",
-        "date": "January 12, 2026",
-        "type": "T128",
-        "win": true,
-        "score": "15-11"
-      },
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "December 1, 2024",
-        "type": "T64",
-        "win": false,
-        "score": "14-15"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "KHOTLINE Daniel": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "January SJCC",
-        "event": "Junior Men's Saber",
-        "date": "January 24, 2026",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "KIM ELIJAH": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Cadet Men's Saber",
-        "date": "November 16, 2025",
-        "type": "T16",
-        "win": false,
-        "score": "9-15"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "KIM Eric": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["HALBERSTADT"],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-12 Men's Saber",
-        "date": "November 24, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "September 24, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "KIM Ethan": {
-    "wins": 0,
-    "losses": 5,
-    "total": 5,
-    "winRate": 0,
-    "clubs": ["TIMMOREHOUSE"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Cadet Men's Saber",
-        "date": "June 30, 2025",
-        "type": "T128",
-        "win": false,
-        "score": "11-15"
-      },
-      {
-        "tournament": "December SJCC + Para NAC",
-        "event": "Junior Men's Saber",
-        "date": "December 7, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "December NAC",
-        "event": "Cadet Men's Saber",
-        "date": "December 6, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "Local",
-        "event": "Y-10 Mixed Saber",
-        "date": "June 12, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "0-5"
-      },
-      {
-        "tournament": "Fairfax Challenge SYC/RJCC",
-        "event": "Y-12 Men's Saber",
-        "date": "May 15, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "0-5"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "KIM Yusung": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["GFA"],
-    "bouts": [
-      {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "January 13, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "November 24, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "KIM seoha": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Fairfax Challenge Fall RYC/RJCC & Y8 (Non-Regional)",
-        "event": "Y-12 Men's Saber",
-        "date": "September 11, 2022",
-        "type": "T4",
-        "win": false,
-        "score": "14-15"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "KITSON Chase": {
-    "wins": 3,
-    "losses": 0,
-    "total": 3,
-    "winRate": 1,
-    "clubs": ["GFA"],
-    "bouts": [
-      {
-        "tournament": "May SJCC",
-        "event": "Junior Men's Saber",
-        "date": "May 16, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "Capitol Clash SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 21, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "January 18, 2025",
-        "type": "T2",
-        "win": true,
-        "score": "15-9"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "KONDOGI Saivarun": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "November 17, 2025",
-        "type": "T64",
-        "win": true,
-        "score": "15-9"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "KONG Ethan": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "November 17, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "KOTVALI Aneesh": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "December SJCC + Para NAC",
-        "event": "Junior Men's Saber",
-        "date": "December 7, 2024",
-        "type": "T256",
-        "win": true,
-        "score": "15-12"
-      }
-    ],
-    "birthYear": 2005
-  },
-  "KOVACHEV Martin": {
-    "wins": 1,
-    "losses": 1,
-    "total": 2,
-    "winRate": 0.5,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "March NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 8, 2025",
-        "type": "T128",
-        "win": false,
-        "score": "12-15"
-      },
-      {
-        "tournament": "National Championships & July Challenge (Summer Nationals)",
-        "event": "Y-12 Men's Saber",
-        "date": "July 8, 2023",
-        "type": "T128",
-        "win": true,
-        "score": "15-7"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "KOVALEV Daniil N.": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["WESTCOASTFA"],
-    "bouts": [
-      {
-        "tournament": "May SJCC",
-        "event": "Cadet Men's Saber",
-        "date": "May 18, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      },
-      {
-        "tournament": "May NAC",
-        "event": "Junior Men's Saber",
-        "date": "May 16, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "KOZLOV Lucas": {
-    "wins": 1,
-    "losses": 2,
-    "total": 3,
-    "winRate": 0.33,
-    "clubs": ["DURKANFA"],
-    "bouts": [
-      {
-        "tournament": "Mission SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "May 5, 2024",
-        "type": "T8",
-        "win": true,
-        "score": "15-12"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 2, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "0-5"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "January 15, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "0-5"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "KRISHNARASA Aiyann": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": ["INTEGRITY"],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC",
-        "event": "Y-14 Men's Saber",
-        "date": "November 29, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "KROON Landon": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["SBFA"],
-    "bouts": [
-      {
-        "tournament": "March NAC and Parafencing National Championships",
-        "event": "Y-12 Men's Saber",
-        "date": "March 5, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-12 Men's Saber",
-        "date": "February 11, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "KU Collin": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Junior Olympics & Div 1 NAC",
-        "event": "Cadet Men's Saber",
-        "date": "February 17, 2025",
-        "type": "T256",
-        "win": true,
-        "score": "15-10"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "KULKARNI Shreyas": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Junior Olympics",
-        "event": "Junior Men's Saber",
-        "date": "January 12, 2026",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2007
-  },
-  "KUMAR Arjun": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Cadet Men's Saber",
-        "date": "November 30, 2024",
-        "type": "T32",
-        "win": true,
-        "score": "15-14"
-      }
-    ],
-    "birthYear": 2008
-  },
-  "KUMAR Avinash": {
-    "wins": 3,
-    "losses": 0,
-    "total": 3,
-    "winRate": 1,
-    "clubs": ["DYNAMOFC"],
-    "bouts": [
-      {
-        "tournament": "National Championships & July Challenge (Summer Nationals)",
-        "event": "Y-12 Men's Saber",
-        "date": "July 8, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-12 Men's Saber",
-        "date": "April 16, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "Ben Gutenberg Memorial SYC / RCC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 11, 2023",
-        "type": "T32",
-        "win": true,
-        "score": "15-5"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "KUSHKOV Michael": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["DYNAMOFC"],
-    "bouts": [
-      {
-        "tournament": "USA Fencing National Championships & July Challenge",
         "event": "Y-10 Men's Saber",
-        "date": "July 11, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-10 Men's Saber",
-        "date": "June 19, 2021",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "KWON Kenneth": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Junior Olympics",
-        "event": "Cadet Men's Saber",
-        "date": "January 10, 2026",
-        "type": "T128",
-        "win": true,
-        "score": "15-10"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "LAM Austin": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["TTFA"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-12 Men's Saber",
-        "date": "July 5, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Summer Nationals",
-        "event": "Y-14 Men's Saber",
-        "date": "July 4, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "LAMTAN Christoffer": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "October NAC",
-        "event": "Cadet Men's Saber",
-        "date": "October 4, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "LAUB William": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "February NAC",
-        "event": "Junior Men's Saber",
-        "date": "February 15, 2026",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "February NAC",
-        "event": "Div I Men's Saber",
-        "date": "February 13, 2026",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2008
-  },
-  "LEE Aiden": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-12 Men's Saber",
-        "date": "January 15, 2024",
-        "type": "T128",
-        "win": true,
-        "score": "15-1"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "LEE Andrew": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["MANHATTANFC"],
-    "bouts": [
-      {
-        "tournament": "March SJCC",
-        "event": "Cadet Men's Saber",
-        "date": "March 16, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "2-5"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 3, 2024",
+        "date": "January 18, 2020",
         "type": "Pool",
         "win": false,
         "score": "2-5"
       }
-    ],
-    "birthYear": 2009
-  },
-  "LEE Brady": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "January SJCC",
-        "event": "Junior Men's Saber",
-        "date": "January 24, 2026",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "LEE Brendan": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "March NAC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 3, 2024",
-        "type": "T128",
-        "win": true,
-        "score": "15-11"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "LEE Ezra": {
-    "wins": 6,
-    "losses": 0,
-    "total": 6,
-    "winRate": 1,
-    "clubs": ["NOVAFC"],
-    "bouts": [
-      {
-        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "September 24, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Cadet Men's Saber",
-        "date": "September 23, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "NoVA Knights RYC/RJCC",
-        "event": "Y-12 Men's Saber",
-        "date": "October 2, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-14 Men's Saber",
-        "date": "October 1, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "Local",
-        "event": "Y-10 Mixed Saber",
-        "date": "June 12, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "Fairfax Challenge SYC/RJCC",
-        "event": "Y-12 Men's Saber",
-        "date": "May 15, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2013
+    ]
   },
   "LEE Gordon": {
-    "wins": 7,
+    "wins": 4,
     "losses": 0,
-    "total": 7,
-    "winRate": 1,
-    "clubs": ["CAPITALFA"],
+    "total": 4,
+    "winRate": 100,
+    "clubs": [
+      "14",
+      "17",
+      "12"
+    ],
     "bouts": [
       {
         "tournament": "NoVA Knights RYC/RJCC",
@@ -5480,25 +8927,9 @@ export const opponents: Record<string, OpponentData> = {
         "score": "5-2"
       },
       {
-        "tournament": "RYC",
-        "event": "Y-14 Men's Saber",
-        "date": "October 1, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
         "tournament": "Fairfax Challenge Fall RYC/RJCC & Y8 (Non-Regional)",
         "event": "Y-12 Men's Saber",
         "date": "September 11, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "September 3, 2022",
         "type": "Pool",
         "win": true,
         "score": "5-2"
@@ -5518,835 +8949,431 @@ export const opponents: Record<string, OpponentData> = {
         "type": "T16",
         "win": true,
         "score": "10-5"
-      },
+      }
+    ]
+  },
+  "MEHTA Yash": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "19"
+    ],
+    "bouts": [
       {
-        "tournament": "SYC",
-        "event": "Y-8 Men's Saber",
-        "date": "January 19, 2020",
+        "tournament": "NoVA Knights RYC/RJCC",
+        "event": "Y-12 Men's Saber",
+        "date": "October 2, 2022",
+        "type": "Pool",
+        "win": false,
+        "score": "4-5"
+      }
+    ]
+  },
+  "XIE Ethan": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "5"
+    ],
+    "bouts": [
+      {
+        "tournament": "NoVA Knights RYC/RJCC",
+        "event": "Y-14 Men's Saber",
+        "date": "October 1, 2022",
+        "type": "Pool",
+        "win": false,
+        "score": "2-5"
+      }
+    ]
+  },
+  "XU Ivan": {
+    "wins": 1,
+    "losses": 1,
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "8",
+      "58"
+    ],
+    "bouts": [
+      {
+        "tournament": "NoVA Knights RYC/RJCC",
+        "event": "Y-14 Men's Saber",
+        "date": "October 1, 2022",
         "type": "Pool",
         "win": true,
         "score": "5-4"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "LEE Jeffrey": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": ["TIMMOREHOUSE"],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC",
-        "event": "Y-14 Men's Saber",
-        "date": "November 29, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "LEE Nathan Uju": {
-    "wins": 1,
-    "losses": 1,
-    "total": 2,
-    "winRate": 0.5,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "November 17, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
       },
       {
-        "tournament": "March NAC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 3, 2024",
-        "type": "T32",
+        "tournament": "Capitol Clash SYC, RCC, Veteran ROC & Y8",
+        "event": "Y-10 Men's Saber",
+        "date": "January 18, 2020",
+        "type": "Pool",
         "win": false,
-        "score": "11-15"
+        "score": "4-5"
       }
-    ],
-    "birthYear": 2011
+    ]
   },
-  "LEE Shane Gunn": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "December 1, 2024",
-        "type": "T128",
-        "win": true,
-        "score": "15-2"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "LEVIN Jacob": {
-    "wins": 3,
-    "losses": 0,
-    "total": 3,
-    "winRate": 1,
-    "clubs": ["TIMMOREHOUSE"],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Cadet Men's Saber",
-        "date": "November 16, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "January 18, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Junior Olympics",
-        "event": "Cadet Men's Saber",
-        "date": "January 5, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "LEVY Daniel": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-14 Men's Saber",
-        "date": "July 3, 2025",
-        "type": "T128",
-        "win": true,
-        "score": "15-5"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "LI AYDEN": {
-    "wins": 1,
+  "YE Eric": {
+    "wins": 0,
     "losses": 1,
-    "total": 2,
-    "winRate": 0.5,
-    "clubs": [],
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "1"
+    ],
     "bouts": [
       {
-        "tournament": "North Texas Roundup SYC / RCC",
+        "tournament": "NoVA Knights RYC/RJCC",
         "event": "Y-14 Men's Saber",
-        "date": "September 3, 2023",
-        "type": "T16",
+        "date": "October 1, 2022",
+        "type": "Pool",
+        "win": false,
+        "score": "1-5"
+      }
+    ]
+  },
+  "BHANDARE Niev": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "12"
+    ],
+    "bouts": [
+      {
+        "tournament": "Fairfax Challenge Fall RYC/RJCC & Y8 (Non-Regional)",
+        "event": "Y-12 Men's Saber",
+        "date": "September 11, 2022",
+        "type": "Pool",
         "win": true,
-        "score": "15-14"
-      },
+        "score": "5-3"
+      }
+    ]
+  },
+  "KIM seoha": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "1"
+    ],
+    "bouts": [
+      {
+        "tournament": "Fairfax Challenge Fall RYC/RJCC & Y8 (Non-Regional)",
+        "event": "Y-12 Men's Saber",
+        "date": "September 11, 2022",
+        "type": "T4",
+        "win": false,
+        "score": "14-15"
+      }
+    ]
+  },
+  "CAO Donald": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "25"
+    ],
+    "bouts": [
       {
         "tournament": "North Texas Roundup SYC/RCC",
         "event": "Y-12 Men's Saber",
         "date": "September 3, 2022",
-        "type": "T64",
+        "type": "Pool",
         "win": false,
-        "score": "8-15"
+        "score": "3-5"
       }
-    ],
-    "birthYear": 2011
+    ]
   },
-  "LI Alex Y.": {
+  "WANG Tiger": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "27"
+    ],
+    "bouts": [
+      {
+        "tournament": "North Texas Roundup SYC/RCC",
+        "event": "Y-12 Men's Saber",
+        "date": "September 3, 2022",
+        "type": "Pool",
+        "win": false,
+        "score": "3-5"
+      }
+    ]
+  },
+  "KUSHKOV Michael": {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "January SJCC",
-        "event": "Junior Men's Saber",
-        "date": "January 24, 2026",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
+    "winRate": 100,
+    "clubs": [
+      "51"
     ],
-    "birthYear": 2007
-  },
-  "LI Coby": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
     "bouts": [
-      {
-        "tournament": "October NAC",
-        "event": "Junior Men's Saber",
-        "date": "October 3, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "LI Howard": {
-    "wins": 1,
-    "losses": 4,
-    "total": 5,
-    "winRate": 0.2,
-    "clubs": ["LAFAP"],
-    "bouts": [
-      {
-        "tournament": "February NAC",
-        "event": "Junior Men's Saber",
-        "date": "February 15, 2026",
-        "type": "T128",
-        "win": true,
-        "score": "15-9"
-      },
-      {
-        "tournament": "November NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "November 17, 2025",
-        "type": "T8",
-        "win": false,
-        "score": "6-15"
-      },
-      {
-        "tournament": "January NAC",
-        "event": "Cadet Men's Saber",
-        "date": "January 5, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      },
-      {
-        "tournament": "December NAC",
-        "event": "Junior Men's Saber",
-        "date": "December 7, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      },
       {
         "tournament": "USA Fencing National Championships & July Challenge",
         "event": "Y-10 Men's Saber",
         "date": "July 11, 2022",
-        "type": "T16",
-        "win": false,
-        "score": "4-10"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "LI Michael": {
-    "wins": 4,
-    "losses": 0,
-    "total": 4,
-    "winRate": 1,
-    "clubs": ["PFC"],
-    "bouts": [
-      {
-        "tournament": "March NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 8, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Cadet Men's Saber",
-        "date": "March 7, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "January 18, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Junior Olympics",
-        "event": "Cadet Men's Saber",
-        "date": "January 5, 2025",
         "type": "Pool",
         "win": true,
         "score": "5-2"
       }
-    ],
-    "birthYear": 2012
+    ]
   },
-  "LI Ryan": {
-    "wins": 4,
-    "losses": 0,
-    "total": 4,
-    "winRate": 1,
-    "clubs": ["LAGUNAFC"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-12 Men's Saber",
-        "date": "July 5, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "Summer Nationals",
-        "event": "Y-14 Men's Saber",
-        "date": "July 4, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "North Texas Roundup SYC / RCC",
-        "event": "Y-12 Men's Saber",
-        "date": "September 2, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "Summer Nationals",
-        "event": "Y-12 Men's Saber",
-        "date": "July 8, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "LI Yidong A.": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["LAGUNAFC"],
-    "bouts": [
-      {
-        "tournament": "March NAC",
-        "event": "Cadet Men's Saber",
-        "date": "March 7, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "February NAC",
-        "event": "Cadet Men's Saber",
-        "date": "February 17, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "LIANG Preston": {
-    "wins": 3,
-    "losses": 0,
-    "total": 3,
-    "winRate": 1,
-    "clubs": ["SBFA"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-12 Men's Saber",
-        "date": "July 5, 2024",
-        "type": "T128",
-        "win": true,
-        "score": "15-10"
-      },
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-14 Men's Saber",
-        "date": "July 4, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "Summer Nationals",
-        "event": "Cadet Men's Saber",
-        "date": "July 1, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "LIAO Sirui": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["MIRACLEFC"],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "December 1, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "Cobra Challenge SYC",
-        "event": "Cadet Men's Saber",
-        "date": "November 30, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "LIEBOWITZ Carson": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["MANHATTANFC"],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Cadet Men's Saber",
-        "date": "November 30, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "0-5"
-      },
-      {
-        "tournament": "November NAC",
-        "event": "Cadet Men's Saber",
-        "date": "November 10, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "0-5"
-      }
-    ],
-    "birthYear": 2008
-  },
-  "LIM JUWANA Maximilian": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["BERGENFC"],
-    "bouts": [
-      {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-12 Men's Saber",
-        "date": "January 15, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "January 13, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "LIM Kai": {
+  "WANG David": {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "December SJCC + Para NAC",
-        "event": "Cadet Men's Saber",
-        "date": "December 6, 2024",
-        "type": "T128",
-        "win": true,
-        "score": "15-8"
-      }
+    "winRate": 100,
+    "clubs": [
+      "72"
     ],
-    "birthYear": 2008
-  },
-  "LIM William J.": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": [],
     "bouts": [
       {
-        "tournament": "February NAC",
-        "event": "Div I Men's Saber",
-        "date": "February 13, 2026",
-        "type": "Pool",
-        "win": false,
-        "score": "0-5"
-      }
-    ],
-    "birthYear": 0
-  },
-  "LIN Alex": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["LONESTARFC"],
-    "bouts": [
-      {
-        "tournament": "North Texas Roundup SYC / RCC",
-        "event": "Y-14 Men's Saber",
-        "date": "September 3, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "September 2, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "LIN Brendan": {
-    "wins": 3,
-    "losses": 0,
-    "total": 3,
-    "winRate": 1,
-    "clubs": ["COBRAFC"],
-    "bouts": [
-      {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-12 Men's Saber",
-        "date": "January 15, 2024",
-        "type": "T16",
-        "win": true,
-        "score": "15-9"
-      },
-      {
-        "tournament": "National Championships & July Challenge (Summer Nationals)",
-        "event": "Y-12 Men's Saber",
-        "date": "July 8, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-12 Men's Saber",
-        "date": "April 16, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "LIN Maxim": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "January NAC",
-        "event": "Cadet Men's Saber",
-        "date": "January 5, 2025",
-        "type": "T128",
-        "win": false,
-        "score": "9-15"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "LIN Philip T.": {
-    "wins": 2,
-    "losses": 2,
-    "total": 4,
-    "winRate": 0.5,
-    "clubs": ["STAMFORDFC", "SFC"],
-    "bouts": [
-      {
-        "tournament": "March SJCC",
-        "event": "Cadet Men's Saber",
-        "date": "March 16, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 3, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Capitol Clash SYC, RCC, Veteran ROC & Y8",
+        "tournament": "USA Fencing National Championships & July Challenge",
         "event": "Y-10 Men's Saber",
-        "date": "January 18, 2020",
-        "type": "Pool",
-        "win": false,
-        "score": "2-5"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-8 Men's Saber",
-        "date": "November 30, 2019",
-        "type": "Pool",
-        "win": false,
-        "score": "2-5"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "LIU Aaron": {
-    "wins": 4,
-    "losses": 0,
-    "total": 4,
-    "winRate": 1,
-    "clubs": ["NELLYA"],
-    "bouts": [
-      {
-        "tournament": "May SJCC",
-        "event": "Junior Men's Saber",
-        "date": "May 16, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "Capitol Clash SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 21, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "Fairfax Challenge Summer ROC/RJCC/RYC/VET - Reg Re-Opens 12/28",
-        "event": "Y-10 Men's Saber",
-        "date": "June 19, 2021",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-8 Men's Saber",
-        "date": "January 19, 2020",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "LIU Daniel": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "October NAC",
-        "event": "Cadet Men's Saber",
-        "date": "October 4, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "LIU ERIC": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["BOSTONFC"],
-    "bouts": [
-      {
-        "tournament": "Mission SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "May 4, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Cadet Men's Saber",
-        "date": "April 21, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "LIU Ethan": {
-    "wins": 3,
-    "losses": 1,
-    "total": 4,
-    "winRate": 0.75,
-    "clubs": ["NELLYA"],
-    "bouts": [
-      {
-        "tournament": "February NAC",
-        "event": "Junior Men's Saber",
-        "date": "February 15, 2026",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "November NAC",
-        "event": "Cadet Men's Saber",
-        "date": "November 16, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Cadet Men's Saber",
-        "date": "July 1, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "May 5, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "LIU Jeremy": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": ["AFC"],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC",
-        "event": "Y-14 Men's Saber",
-        "date": "November 29, 2025",
+        "date": "July 11, 2022",
         "type": "Pool",
         "win": true,
         "score": "5-1"
       }
-    ],
-    "birthYear": 2012
+    ]
   },
-  "LIU Kevin": {
+  "CIECIEREGA MATTHEW": {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 1,
-    "clubs": [],
+    "winRate": 100,
+    "clubs": [
+      "63"
+    ],
     "bouts": [
       {
-        "tournament": "Junior Olympics",
-        "event": "Junior Men's Saber",
-        "date": "January 12, 2026",
+        "tournament": "USA Fencing National Championships & July Challenge",
+        "event": "Y-10 Men's Saber",
+        "date": "July 11, 2022",
         "type": "T64",
         "win": true,
-        "score": "15-12"
+        "score": "10-7"
       }
-    ],
-    "birthYear": 2009
+    ]
   },
-  "LIU Ryan": {
-    "wins": 0,
-    "losses": 3,
-    "total": 3,
-    "winRate": 0,
-    "clubs": ["NELLYA"],
+  "BROOKS Isaac": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "6"
+    ],
     "bouts": [
       {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-12 Men's Saber",
-        "date": "November 25, 2022",
-        "type": "T64",
-        "win": false,
-        "score": "4-15"
-      },
-      {
-        "tournament": "Capitol Clash SYC, RCC, Veteran ROC & Y8",
-        "event": "Y-10 Men's Saber",
-        "date": "January 18, 2020",
-        "type": "Pool",
-        "win": false,
-        "score": "2-5"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-8 Men's Saber",
-        "date": "November 30, 2019",
-        "type": "Pool",
-        "win": false,
-        "score": "2-5"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "LIU Victor": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["SFA"],
-    "bouts": [
-      {
-        "tournament": "Local",
+        "tournament": "DCFC Youth Challenge #4",
         "event": "Y-10 Mixed Saber",
         "date": "June 12, 2022",
         "type": "Pool",
-        "win": false,
-        "score": "0-5"
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "TA-ZHOU Sophia": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "2"
+    ],
+    "bouts": [
+      {
+        "tournament": "DCFC Youth Challenge #4",
+        "event": "Y-10 Mixed Saber",
+        "date": "June 12, 2022",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
       },
+      {
+        "tournament": "DCFC Youth Challenge #4",
+        "event": "Y-10 Mixed Saber",
+        "date": "June 12, 2022",
+        "type": "T2",
+        "win": true,
+        "score": "10-2"
+      }
+    ]
+  },
+  "JOHNSON Leyton": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "10"
+    ],
+    "bouts": [
+      {
+        "tournament": "DCFC Youth Challenge #4",
+        "event": "Y-10 Mixed Saber",
+        "date": "June 12, 2022",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      }
+    ]
+  },
+  "TAI Milton": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "8"
+    ],
+    "bouts": [
+      {
+        "tournament": "DCFC Youth Challenge #4",
+        "event": "Y-10 Mixed Saber",
+        "date": "June 12, 2022",
+        "type": "Pool",
+        "win": true,
+        "score": "5-1"
+      },
+      {
+        "tournament": "DCFC Youth Challenge #4",
+        "event": "Y-10 Mixed Saber",
+        "date": "June 12, 2022",
+        "type": "T8",
+        "win": true,
+        "score": "10-1"
+      }
+    ]
+  },
+  "BUSQUETS Diego": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "5"
+    ],
+    "bouts": [
+      {
+        "tournament": "DCFC Youth Challenge #4",
+        "event": "Y-10 Mixed Saber",
+        "date": "June 12, 2022",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "DONNELL Cillian": {
+    "wins": 2,
+    "losses": 0,
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "3"
+    ],
+    "bouts": [
+      {
+        "tournament": "DCFC Youth Challenge #4",
+        "event": "Y-10 Mixed Saber",
+        "date": "June 12, 2022",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      },
+      {
+        "tournament": "DCFC Youth Challenge #4",
+        "event": "Y-10 Mixed Saber",
+        "date": "June 12, 2022",
+        "type": "T4",
+        "win": true,
+        "score": "10-2"
+      }
+    ]
+  },
+  "HEATH Isabella": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "3"
+    ],
+    "bouts": [
+      {
+        "tournament": "DCFC Youth Challenge #4",
+        "event": "Y-10 Mixed Saber",
+        "date": "June 12, 2022",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      }
+    ]
+  },
+  "WAGNER Joseph": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "26"
+    ],
+    "bouts": [
+      {
+        "tournament": "Fairfax Challenge SYC/RJCC",
+        "event": "Y-12 Men's Saber",
+        "date": "May 15, 2022",
+        "type": "Pool",
+        "win": false,
+        "score": "1-5"
+      }
+    ]
+  },
+  "THEUNISSE Oliver": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "53"
+    ],
+    "bouts": [
+      {
+        "tournament": "Fairfax Challenge SYC/RJCC",
+        "event": "Y-12 Men's Saber",
+        "date": "May 15, 2022",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "LIU Victor": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "3"
+    ],
+    "bouts": [
       {
         "tournament": "Fairfax Challenge SYC/RJCC",
         "event": "Y-12 Men's Saber",
@@ -6355,501 +9382,158 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "0-5"
       }
-    ],
-    "birthYear": 2011
+    ]
   },
-  "LIU Yijin": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "May SJCC",
-        "event": "Cadet Men's Saber",
-        "date": "May 18, 2025",
-        "type": "T64",
-        "win": true,
-        "score": "15-9"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "LIUZHANG Ben": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["COBRAFC"],
-    "bouts": [
-      {
-        "tournament": "Mission SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "May 5, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "May 4, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "LLOYD Max": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC",
-        "event": "Y-14 Men's Saber",
-        "date": "November 29, 2025",
-        "type": "T64",
-        "win": true,
-        "score": "15-12"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "LO Lei": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["LAFAP"],
-    "bouts": [
-      {
-        "tournament": "National Championships & July Challenge (Summer Nationals)",
-        "event": "Y-12 Men's Saber",
-        "date": "July 8, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-12 Men's Saber",
-        "date": "April 16, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "LOO Jason": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["MANHATTANFC"],
-    "bouts": [
-      {
-        "tournament": "Ben Gutenberg SYC - RJCC",
-        "event": "Y-14 Men's Saber",
-        "date": "October 12, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Cadet Men's Saber",
-        "date": "September 21, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "LU Simon": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["LONESTARFC"],
-    "bouts": [
-      {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-12 Men's Saber",
-        "date": "January 15, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "January 13, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "LUC Linkin": {
-    "wins": 4,
-    "losses": 0,
-    "total": 4,
-    "winRate": 1,
-    "clubs": ["PREMIERFA"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-12 Men's Saber",
-        "date": "July 5, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-12 Men's Saber",
-        "date": "July 5, 2024",
-        "type": "T64",
-        "win": true,
-        "score": "15-8"
-      },
-      {
-        "tournament": "Summer Nationals",
-        "event": "Y-14 Men's Saber",
-        "date": "July 4, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "Summer Nationals",
-        "event": "Cadet Men's Saber",
-        "date": "July 1, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "LVOFF Leo": {
+  "CHAMBERS Miles": {
     "wins": 0,
-    "losses": 2,
-    "total": 2,
+    "losses": 1,
+    "total": 1,
     "winRate": 0,
-    "clubs": ["INTEGRITY"],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-12 Men's Saber",
-        "date": "November 25, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-12 Men's Saber",
-        "date": "October 2, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      }
+    "clubs": [
+      "5"
     ],
-    "birthYear": 2011
-  },
-  "MAGITSKY Isaac": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["DYNAMOFC"],
     "bouts": [
       {
-        "tournament": "March NAC and Parafencing National Championships",
-        "event": "Y-12 Men's Saber",
-        "date": "March 5, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-12 Men's Saber",
-        "date": "February 11, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "MAI Ryan": {
-    "wins": 4,
-    "losses": 0,
-    "total": 4,
-    "winRate": 1,
-    "clubs": ["LONESTARFC"],
-    "bouts": [
-      {
-        "tournament": "North Texas Roundup SYC / RCC",
-        "event": "Y-12 Men's Saber",
-        "date": "September 2, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "Summer Nationals",
-        "event": "Y-12 Men's Saber",
-        "date": "July 8, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "North Texas Roundup SYC/RCC",
-        "event": "Y-12 Men's Saber",
-        "date": "September 3, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "Summer Nationals",
+        "tournament": "Fairfax Challenge SYC/RJCC",
         "event": "Y-10 Men's Saber",
-        "date": "July 11, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
+        "date": "May 14, 2022",
+        "type": "T32",
+        "win": false,
+        "score": "5-10"
       }
-    ],
-    "birthYear": 2013
+    ]
   },
-  "MAKLIN David": {
+  "ZHAO David": {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "March NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 8, 2025",
-        "type": "T256",
-        "win": true,
-        "score": "15-3"
-      }
+    "winRate": 100,
+    "clubs": [
+      "3"
     ],
-    "birthYear": 2012
-  },
-  "MALEK Zak": {
-    "wins": 5,
-    "losses": 0,
-    "total": 5,
-    "winRate": 1,
-    "clubs": ["BOSTONFC"],
     "bouts": [
       {
-        "tournament": "Mission SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "May 5, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "May 4, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-12 Men's Saber",
-        "date": "January 15, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "Capitol Clash SYC/RCC",
-        "event": "Y-12 Men's Saber",
-        "date": "January 14, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "November 25, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "MANESCU Miron": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["MANHATTANFC"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Junior Men's Saber",
-        "date": "June 28, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "May NAC",
-        "event": "Cadet Men's Saber",
-        "date": "May 18, 2025",
+        "tournament": "Fairfax Challenge Summer ROC/RJCC/RYC/VET - Reg Re-Opens 12/28",
+        "event": "Y-10 Men's Saber",
+        "date": "June 19, 2021",
         "type": "Pool",
         "win": true,
         "score": "5-2"
       }
-    ],
-    "birthYear": 2009
-  },
-  "MARCELLINO Robert": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Junior Olympics",
-        "event": "Cadet Men's Saber",
-        "date": "January 10, 2026",
-        "type": "T256",
-        "win": true,
-        "score": "15-8"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "MARCISZ Maksym": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["MIDWESTFC"],
-    "bouts": [
-      {
-        "tournament": "March NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 2, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "January 15, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2013
+    ]
   },
   "MARTINSON Torm": {
     "wins": 0,
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": ["MANHATTANFC"],
+    "clubs": [
+      "13"
+    ],
     "bouts": [
       {
-        "tournament": "SYC",
+        "tournament": "Cobra Challenge SYC/RCC",
         "event": "Y-10 Men's Saber",
         "date": "May 31, 2021",
         "type": "Pool",
         "win": false,
         "score": "1-5"
       }
-    ],
-    "birthYear": 2012
+    ]
   },
-  "MARTIRE Francis": {
-    "wins": 1,
+  "DE PLANELL-LOTTI Pau": {
+    "wins": 2,
     "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": ["MANHATTANFC"],
+    "total": 2,
+    "winRate": 100,
+    "clubs": [
+      "9",
+      "3"
+    ],
     "bouts": [
       {
-        "tournament": "Cobra Challenge SYC/RCC",
-        "event": "Y-14 Men's Saber",
-        "date": "November 29, 2025",
+        "tournament": "Capitol Clash SYC, RCC, Veteran ROC & Y8",
+        "event": "Y-8 Men's Saber",
+        "date": "January 19, 2020",
         "type": "Pool",
         "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "MATTOO Deven": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
+        "score": "5-2"
+      },
       {
-        "tournament": "February NAC",
-        "event": "Junior Men's Saber",
-        "date": "February 15, 2026",
-        "type": "T64",
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-8 Men's Saber",
+        "date": "November 30, 2019",
+        "type": "Pool",
         "win": true,
-        "score": "15-13"
+        "score": "5-3"
       }
-    ],
-    "birthYear": 2009
+    ]
   },
-  "MATTOO Dhruv": {
+  "BITKOWER Edward": {
     "wins": 1,
     "losses": 0,
     "total": 1,
-    "winRate": 1,
-    "clubs": [],
+    "winRate": 100,
+    "clubs": [
+      "14"
+    ],
     "bouts": [
       {
-        "tournament": "October NAC",
-        "event": "Junior Men's Saber",
-        "date": "October 3, 2025",
+        "tournament": "Capitol Clash SYC, RCC, Veteran ROC & Y8",
+        "event": "Y-8 Men's Saber",
+        "date": "January 19, 2020",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "FOWLER Escher": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "17"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capitol Clash SYC, RCC, Veteran ROC & Y8",
+        "event": "Y-8 Men's Saber",
+        "date": "January 19, 2020",
+        "type": "Pool",
+        "win": true,
+        "score": "5-0"
+      }
+    ]
+  },
+  "MELUL Jonathan": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "56"
+    ],
+    "bouts": [
+      {
+        "tournament": "Capitol Clash SYC, RCC, Veteran ROC & Y8",
+        "event": "Y-10 Men's Saber",
+        "date": "January 18, 2020",
         "type": "Pool",
         "win": true,
         "score": "5-2"
       }
-    ],
-    "birthYear": 2011
+    ]
   },
   "MAWLER malcolm": {
     "wins": 1,
-    "losses": 2,
-    "total": 3,
-    "winRate": 0.33,
-    "clubs": ["DCFENCERS"],
+    "losses": 1,
+    "total": 2,
+    "winRate": 50,
+    "clubs": [
+      "10"
+    ],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -6866,1822 +9550,18 @@ export const opponents: Record<string, OpponentData> = {
         "type": "T16",
         "win": true,
         "score": "10-7"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-10 Men's Saber",
-        "date": "November 29, 2019",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
       }
-    ],
-    "birthYear": 2012
-  },
-  "MCDONALD Finn": {
-    "wins": 1,
-    "losses": 1,
-    "total": 2,
-    "winRate": 0.5,
-    "clubs": ["DEVLYFC-PA"],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Cadet Men's Saber",
-        "date": "November 16, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-10 Men's Saber",
-        "date": "May 31, 2021",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "MCDONALD Ryan": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["TIMMOREHOUSE"],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-10 Men's Saber",
-        "date": "November 29, 2019",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-8 Men's Saber",
-        "date": "November 24, 2018",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "MEHAN Nicholas": {
-    "wins": 0,
-    "losses": 5,
-    "total": 5,
-    "winRate": 0,
-    "clubs": ["STAMFORDFC"],
-    "bouts": [
-      {
-        "tournament": "May SJCC",
-        "event": "Cadet Men's Saber",
-        "date": "May 18, 2025",
-        "type": "T32",
-        "win": false,
-        "score": "9-15"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Cadet Men's Saber",
-        "date": "March 7, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      },
-      {
-        "tournament": "February NAC",
-        "event": "Cadet Men's Saber",
-        "date": "February 17, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      },
-      {
-        "tournament": "Mission SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "May 4, 2024",
-        "type": "T8",
-        "win": false,
-        "score": "2-15"
-      },
-      {
-        "tournament": "Capitol Clash SYC, RCC, Veteran ROC & Y8",
-        "event": "Y-10 Men's Saber",
-        "date": "January 18, 2020",
-        "type": "T64",
-        "win": false,
-        "score": "2-10"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "MEHTA Yash": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["RESEARCHTRI"],
-    "bouts": [
-      {
-        "tournament": "NoVA Knights RYC/RJCC",
-        "event": "Y-12 Men's Saber",
-        "date": "October 2, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-14 Men's Saber",
-        "date": "October 1, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "MELE Gianni": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["TIMMOREHOUSE"],
-    "bouts": [
-      {
-        "tournament": "Ben Gutenberg SYC - RJCC",
-        "event": "Y-14 Men's Saber",
-        "date": "October 12, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Cadet Men's Saber",
-        "date": "September 21, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "MELUL Jonathan": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["ALLEFENCING"],
-    "bouts": [
-      {
-        "tournament": "Capitol Clash SYC, RCC, Veteran ROC & Y8",
-        "event": "Y-10 Men's Saber",
-        "date": "January 18, 2020",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-8 Men's Saber",
-        "date": "November 30, 2019",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "MERMEGAS Alexander": {
-    "wins": 4,
-    "losses": 0,
-    "total": 4,
-    "winRate": 1,
-    "clubs": ["TIMMOREHOUSE"],
-    "bouts": [
-      {
-        "tournament": "Mission SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "May 4, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Cadet Men's Saber",
-        "date": "April 21, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-12 Men's Saber",
-        "date": "November 25, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-12 Men's Saber",
-        "date": "October 2, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "MHLEY Gavin": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["STAMFORDFC"],
-    "bouts": [
-      {
-        "tournament": "Mission SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "May 4, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Cadet Men's Saber",
-        "date": "April 21, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "MIAO Heqi": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["AFFA"],
-    "bouts": [
-      {
-        "tournament": "Fairfax Challenge SYC/RJCC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 21, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "Local",
-        "event": "Senior Mixed Saber",
-        "date": "March 15, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "MICLAUS Justin": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Div I Men's Saber",
-        "date": "November 14, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      }
-    ],
-    "birthYear": 2007
-  },
-  "MILLER Joseph": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "North Texas Roundup SYC / RCC",
-        "event": "Y-14 Men's Saber",
-        "date": "September 3, 2023",
-        "type": "T64",
-        "win": true,
-        "score": "15-5"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "MITHUN Prabal": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["EXCELFA"],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-12 Men's Saber",
-        "date": "November 24, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "September 24, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "MUNOZ Jonas": {
-    "wins": 5,
-    "losses": 0,
-    "total": 5,
-    "winRate": 1,
-    "clubs": ["CAPITALFA"],
-    "bouts": [
-      {
-        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
-        "event": "Y-14 Men's Saber",
-        "date": "April 20, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Cadet Men's Saber",
-        "date": "March 16, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "NoVA Knights RYC/RJCC",
-        "event": "Y-12 Men's Saber",
-        "date": "October 2, 2022",
-        "type": "T32",
-        "win": true,
-        "score": "15-2"
-      },
-      {
-        "tournament": "Fairfax Challenge Fall RYC/RJCC & Y8 (Non-Regional)",
-        "event": "Y-12 Men's Saber",
-        "date": "September 11, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "September 3, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "NAMBIAR Navin": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["GFA"],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Div I Men's Saber",
-        "date": "November 14, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Cadet Men's Saber",
-        "date": "June 30, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "NARDINI Nathanael P.": {
-    "wins": 4,
-    "losses": 1,
-    "total": 5,
-    "winRate": 0.8,
-    "clubs": ["COBRAFC"],
-    "bouts": [
-      {
-        "tournament": "Junior Olympics",
-        "event": "Junior Men's Saber",
-        "date": "January 12, 2026",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Cadet Men's Saber",
-        "date": "June 30, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Mission SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "May 4, 2024",
-        "type": "T16",
-        "win": true,
-        "score": "15-10"
-      },
-      {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "January 13, 2024",
-        "type": "T32",
-        "win": true,
-        "score": "15-14"
-      },
-      {
-        "tournament": "Fairfax Challenge SYC/RJCC",
-        "event": "Y-12 Men's Saber",
-        "date": "May 15, 2022",
-        "type": "T64",
-        "win": false,
-        "score": "4-15"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "NG Jonathan": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "February NAC",
-        "event": "Div I Men's Saber",
-        "date": "February 13, 2026",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "NGO Emerson": {
-    "wins": 4,
-    "losses": 0,
-    "total": 4,
-    "winRate": 1,
-    "clubs": ["LAFAP"],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "November 17, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "November NAC",
-        "event": "Cadet Men's Saber",
-        "date": "November 16, 2025",
-        "type": "T256",
-        "win": true,
-        "score": "15-7"
-      },
-      {
-        "tournament": "December SJCC + Para NAC",
-        "event": "Cadet Men's Saber",
-        "date": "December 6, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "Cobra Challenge SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "December 1, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "O'KEEFE Brody": {
-    "wins": 7,
-    "losses": 0,
-    "total": 7,
-    "winRate": 100,
-    "clubs": ["NJFENCINGALL"],
-    "bouts": [
-      { "tournament": "Mission SYC", "event": "Y-12 Men's Saber", "date": "May 5, 2024", "type": "DE", "win": true, "score": "15-2" },
-      { "tournament": "Mission SYC", "event": "Y-12 Men's Saber", "date": "May 5, 2024", "type": "DE", "win": true, "score": "15-12" },
-      {
-        "tournament": "Mission SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "May 5, 2024",
-        "type": "T64",
-        "win": true,
-        "score": "15-2"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 3, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 2, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-12 Men's Saber",
-        "date": "November 24, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "September 24, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "OH Aster": {
-    "wins": 4,
-    "losses": 4,
-    "total": 8,
-    "winRate": 0.5,
-    "clubs": ["TIMMOREHOUSE", "SFC"],
-    "bouts": [
-      {
-        "tournament": "January NAC",
-        "event": "Cadet Men's Saber",
-        "date": "January 5, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "December SJCC + Para NAC",
-        "event": "Junior Men's Saber",
-        "date": "December 7, 2024",
-        "type": "T64",
-        "win": false,
-        "score": "11-15"
-      },
-      {
-        "tournament": "December NAC",
-        "event": "Junior Men's Saber",
-        "date": "December 7, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Ben Gutenberg Memorial SYC / RCC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 11, 2023",
-        "type": "T16",
-        "win": false,
-        "score": "9-15"
-      },
-      {
-        "tournament": "March NAC and Parafencing National Championships",
-        "event": "Y-12 Men's Saber",
-        "date": "March 5, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-12 Men's Saber",
-        "date": "February 11, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-8 Men's Saber",
-        "date": "November 24, 2018",
-        "type": "Pool",
-        "win": false,
-        "score": "0-5"
-      },
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-8 Men's Saber",
-        "date": "November 24, 2018",
-        "type": "T16",
-        "win": false,
-        "score": "3-10"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "OLSON Kai": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["OREGONFA"],
-    "bouts": [
-      {
-        "tournament": "March NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 8, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Cadet Men's Saber",
-        "date": "March 7, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "ONG Dylan": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "October NAC",
-        "event": "Junior Men's Saber",
-        "date": "October 3, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2006
-  },
-  "ORIE Sohan": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["SHERIDANFA"],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-12 Men's Saber",
-        "date": "November 24, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "September 24, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "OTT William": {
-    "wins": 4,
-    "losses": 0,
-    "total": 4,
-    "winRate": 1,
-    "clubs": ["MIRACLEFC"],
-    "bouts": [
-      {
-        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
-        "event": "Y-14 Men's Saber",
-        "date": "April 20, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Cadet Men's Saber",
-        "date": "March 16, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "River City Regional Rumble RYC/RJCC",
-        "event": "Y-12 Men's Saber",
-        "date": "February 11, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "January 14, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "O'LOUGHLIN Jacob": {
-    "wins": 4,
-    "losses": 0,
-    "total": 4,
-    "winRate": 1,
-    "clubs": ["ROCHESTERFC"],
-    "bouts": [
-      {
-        "tournament": "March NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 8, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Cadet Men's Saber",
-        "date": "March 7, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "Ben Gutenberg Memorial SYC / RCC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 11, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 5, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "PARK Layne": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["AURAFA"],
-    "bouts": [
-      {
-        "tournament": "Ben Gutenberg SYC - RJCC",
-        "event": "Y-14 Men's Saber",
-        "date": "October 12, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Cadet Men's Saber",
-        "date": "September 21, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "PARKILA Lukas": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "January 13, 2024",
-        "type": "T128",
-        "win": true,
-        "score": "15-10"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "PAUL James": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Fairfax Challenge Spring RYC/RJCC/ROC",
-        "event": "Y-12 Men's Saber",
-        "date": "April 16, 2023",
-        "type": "T32",
-        "win": true,
-        "score": "15-6"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "PAUL Jimmy": {
-    "wins": 3,
-    "losses": 0,
-    "total": 3,
-    "winRate": 100,
-    "clubs": ["CAPITALFA"],
-    "bouts": [
-      { "tournament": "Capital Czajkowski Cup #3", "event": "Senior Mixed Saber", "date": "March 21, 2026", "type": "Pool", "win": true, "score": "5-2" },
-      {
-        "tournament": "Capital Czajkowski Cup #3",
-        "event": "Senior Mixed Saber",
-        "date": "March 15, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 8, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "PEI Kent": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": ["Northern California"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-14 Men's Saber",
-        "date": "July 3, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "PEREIRA Beckham": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["INTLFENCECLB"],
-    "bouts": [
-      {
-        "tournament": "May SJCC",
-        "event": "Cadet Men's Saber",
-        "date": "May 18, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "May NAC",
-        "event": "Junior Men's Saber",
-        "date": "May 16, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "PERRIN Leo": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["NAZLYMOVFF"],
-    "bouts": [
-      {
-        "tournament": "Fairfax Challenge Spring RYC/RJCC/ROC",
-        "event": "Y-12 Men's Saber",
-        "date": "April 16, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 11, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "PINTO Marcus": {
-    "wins": 2,
-    "losses": 3,
-    "total": 5,
-    "winRate": 0.4,
-    "clubs": ["TIMMOREHOUSE"],
-    "bouts": [
-      {
-        "tournament": "National Championships & July Challenge (Summer Nationals)",
-        "event": "Y-12 Men's Saber",
-        "date": "July 8, 2023",
-        "type": "T64",
-        "win": false,
-        "score": "4-15"
-      },
-      {
-        "tournament": "Ben Gutenberg Memorial SYC / RCC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 11, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 5, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "Local",
-        "event": "Y-10 Mixed Saber",
-        "date": "June 12, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "0-5"
-      },
-      {
-        "tournament": "Fairfax Challenge SYC/RJCC",
-        "event": "Y-12 Men's Saber",
-        "date": "May 15, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "0-5"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "PIPKE Garrett": {
-    "wins": 4,
-    "losses": 0,
-    "total": 4,
-    "winRate": 1,
-    "clubs": ["NOVAFC"],
-    "bouts": [
-      {
-        "tournament": "River City Regional Rumble RYC/RJCC",
-        "event": "Y-12 Men's Saber",
-        "date": "February 11, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "January 14, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "DCFC Youth Challenge #4",
-        "event": "Y-10 Mixed Saber",
-        "date": "June 12, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-10 Men's Saber",
-        "date": "May 14, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "PORTER Dupree": {
-    "wins": 1,
-    "losses": 1,
-    "total": 2,
-    "winRate": 0.5,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Cadet Men's Saber",
-        "date": "November 16, 2025",
-        "type": "T128",
-        "win": true,
-        "score": "15-12"
-      },
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Cadet Men's Saber",
-        "date": "November 30, 2024",
-        "type": "T8",
-        "win": false,
-        "score": "11-15"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "PRIMUS Nazir": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["PWESTBROOK"],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Cadet Men's Saber",
-        "date": "November 10, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      },
-      {
-        "tournament": "Cobra Challenge SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "October 12, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      }
-    ],
-    "birthYear": 2008
-  },
-  "PROSPER Nathaniel": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "River City Regional Rumble RYC/RJCC",
-        "event": "Y-12 Men's Saber",
-        "date": "February 11, 2023",
-        "type": "T32",
-        "win": true,
-        "score": "15-5"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "QI Zach": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["WESTCOASTFA"],
-    "bouts": [
-      {
-        "tournament": "March NAC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 3, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 2, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "QIN toby": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["RESEARCHTRI"],
-    "bouts": [
-      {
-        "tournament": "River City Regional Rumble - RYC/RJCC and Y8",
-        "event": "Cadet Men's Saber",
-        "date": "September 21, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "Summer Nationals",
-        "event": "Y-12 Men's Saber",
-        "date": "July 5, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "RADJABLI Maximillian": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "January SJCC",
-        "event": "Junior Men's Saber",
-        "date": "January 24, 2026",
-        "type": "T4",
-        "win": true,
-        "score": "15-4"
-      },
-      {
-        "tournament": "December SJCC + Para NAC",
-        "event": "Junior Men's Saber",
-        "date": "December 7, 2024",
-        "type": "T128",
-        "win": true,
-        "score": "15-11"
-      }
-    ],
-    "birthYear": 2008
-  },
-  "RAJMOHAN Arya": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "January SJCC",
-        "event": "Junior Men's Saber",
-        "date": "January 24, 2026",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2007
-  },
-  "RAMANAN Jaisimh": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["SFSS"],
-    "bouts": [
-      {
-        "tournament": "Junior Olympics & Div 1 NAC",
-        "event": "Junior Men's Saber",
-        "date": "February 16, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "2-5"
-      },
-      {
-        "tournament": "Capitol Clash SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "January 18, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "2-5"
-      }
-    ],
-    "birthYear": 2008
-  },
-  "RAVOOR Sahas": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["RENAISSANCE"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Cadet Men's Saber",
-        "date": "July 1, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "May 5, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "REN James": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Junior Olympics",
-        "event": "Junior Men's Saber",
-        "date": "January 12, 2026",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2007
-  },
-  "RINALDI Savio": {
-    "wins": 5,
-    "losses": 1,
-    "total": 6,
-    "winRate": 83,
-    "clubs": ["CAPITALFA"],
-    "bouts": [
-      { "tournament": "Capital Czajkowski Cup #3", "event": "Senior Mixed Saber", "date": "March 21, 2026", "type": "Pool", "win": false, "score": "3-5" },
-      {
-        "tournament": "Capital Czajkowski Cup #3",
-        "event": "Senior Mixed Saber",
-        "date": "March 15, 2025",
-        "type": "T16",
-        "win": true,
-        "score": "15-7"
-      },
-      {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "January 18, 2025",
-        "type": "T32",
-        "win": true,
-        "score": "15-8"
-      },
-      {
-        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "September 24, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Cadet Men's Saber",
-        "date": "September 23, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "Fairfax Challenge Fall RYC/RJCC & Y8 (Non-Regional)",
-        "event": "Y-12 Men's Saber",
-        "date": "September 11, 2022",
-        "type": "T8",
-        "win": true,
-        "score": "15-11"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "ROBINSON Ezra": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "November 17, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "ROH Jaden": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["GFA"],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC",
-        "event": "Y-14 Men's Saber",
-        "date": "November 29, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Cobra Challenge SYC/RCC",
-        "event": "Y-14 Men's Saber",
-        "date": "November 29, 2025",
-        "type": "T32",
-        "win": true,
-        "score": "15-7"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "ROORDA Easton": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["NOVAFC"],
-    "bouts": [
-      {
-        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
-        "event": "Cadet Men's Saber",
-        "date": "September 23, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "September 3, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "SADHU Neiyam": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "February NAC",
-        "event": "Div I Men's Saber",
-        "date": "February 13, 2026",
-        "type": "T256",
-        "win": true,
-        "score": "15-14"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "SALMAN Hamzah": {
-    "wins": 0,
-    "losses": 4,
-    "total": 4,
-    "winRate": 0,
-    "clubs": ["GFA", "North Texas"],
-    "bouts": [
-      {
-        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
-        "event": "Cadet Men's Saber",
-        "date": "September 23, 2023",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "September 3, 2023",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      },
-      {
-        "tournament": "North Texas Roundup SYC/RCC",
-        "event": "Y-12 Men's Saber",
-        "date": "September 3, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      },
-      {
-        "tournament": "Summer Nationals",
-        "event": "Y-10 Men's Saber",
-        "date": "July 11, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "SALMAN Ibrahim": {
-    "wins": 4,
-    "losses": 0,
-    "total": 4,
-    "winRate": 1,
-    "clubs": ["GFA"],
-    "bouts": [
-      {
-        "tournament": "North Texas Roundup SYC / RCC",
-        "event": "Y-12 Men's Saber",
-        "date": "September 2, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "Summer Nationals",
-        "event": "Y-12 Men's Saber",
-        "date": "July 8, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "USA Fencing National Championships & July Challenge",
-        "event": "Y-10 Men's Saber",
-        "date": "July 11, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-10 Men's Saber",
-        "date": "June 19, 2021",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "SANGSTER Arden": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "March NAC",
-        "event": "Cadet Men's Saber",
-        "date": "March 7, 2025",
-        "type": "T64",
-        "win": false,
-        "score": "12-15"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "SANTOS Theodore": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["COBRAFC"],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-10 Men's Saber",
-        "date": "November 29, 2019",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-8 Men's Saber",
-        "date": "November 24, 2018",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "SAYAR Luke": {
-    "wins": 4,
-    "losses": 0,
-    "total": 4,
-    "winRate": 1,
-    "clubs": ["AIFENCING"],
-    "bouts": [
-      {
-        "tournament": "Ben Gutenberg Memorial SYC / RCC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 11, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 5, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-10 Men's Saber",
-        "date": "November 29, 2019",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-8 Men's Saber",
-        "date": "November 24, 2018",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "SCHIMEL Luke": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Cadet Men's Saber",
-        "date": "November 30, 2024",
-        "type": "T16",
-        "win": true,
-        "score": "15-13"
-      }
-    ],
-    "birthYear": 2008
-  },
-  "SCHWARTZMAN Jakub": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["NAZLYMOVFF"],
-    "bouts": [
-      {
-        "tournament": "Fairfax Challenge SYC/RJCC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 21, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "Local",
-        "event": "Senior Mixed Saber",
-        "date": "March 15, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "SEELMAN Cole": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Cadet Men's Saber",
-        "date": "June 30, 2025",
-        "type": "T256",
-        "win": true,
-        "score": "15-7"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "SENTHIL Gatik": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["FIT"],
-    "bouts": [
-      {
-        "tournament": "North Texas Roundup SYC / RCC",
-        "event": "Y-14 Men's Saber",
-        "date": "September 3, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "September 2, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "SETH Khalen": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["MIDWESTFC"],
-    "bouts": [
-      {
-        "tournament": "National Championships & July Challenge (Summer Nationals)",
-        "event": "Y-12 Men's Saber",
-        "date": "July 8, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-12 Men's Saber",
-        "date": "April 16, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "SHANKAR Rahm": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": ["SABIO"],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC",
-        "event": "Y-14 Men's Saber",
-        "date": "November 29, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "SHAPIRO Simon": {
-    "wins": 0,
-    "losses": 4,
-    "total": 4,
-    "winRate": 0,
-    "clubs": ["DYNAMOFC"],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "December 1, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "Cobra Challenge SYC",
-        "event": "Cadet Men's Saber",
-        "date": "November 30, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "Ben Gutenberg Memorial SYC / RCC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 11, 2023",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 5, 2023",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "SHARMA Ayaan": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["REDSTARCHICG"],
-    "bouts": [
-      {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-12 Men's Saber",
-        "date": "January 15, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "January 13, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2013
+    ]
   },
   "SHICK Cedric": {
     "wins": 1,
-    "losses": 3,
-    "total": 4,
-    "winRate": 0.25,
-    "clubs": ["INTEGRITY"],
+    "losses": 2,
+    "total": 3,
+    "winRate": 33,
+    "clubs": [
+      "2",
+      "16"
+    ],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -8700,14 +9580,6 @@ export const opponents: Record<string, OpponentData> = {
         "score": "6-10"
       },
       {
-        "tournament": "SYC",
-        "event": "Y-10 Men's Saber",
-        "date": "November 29, 2019",
-        "type": "Pool",
-        "win": false,
-        "score": "2-5"
-      },
-      {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
         "event": "Y-8 Men's Saber",
         "date": "November 24, 2018",
@@ -8715,15 +9587,92 @@ export const opponents: Record<string, OpponentData> = {
         "win": true,
         "score": "5-3"
       }
+    ]
+  },
+  "YAN Luke": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "14"
     ],
-    "birthYear": 2012
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-8 Men's Saber",
+        "date": "November 30, 2019",
+        "type": "Pool",
+        "win": true,
+        "score": "5-4"
+      }
+    ]
+  },
+  "MCDONALD Ryan": {
+    "wins": 1,
+    "losses": 0,
+    "total": 1,
+    "winRate": 100,
+    "clubs": [
+      "54"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-10 Men's Saber",
+        "date": "November 29, 2019",
+        "type": "Pool",
+        "win": true,
+        "score": "5-2"
+      }
+    ]
+  },
+  "WANG Andrew": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "11"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-10 Men's Saber",
+        "date": "November 29, 2019",
+        "type": "Pool",
+        "win": false,
+        "score": "1-5"
+      }
+    ]
+  },
+  "SANTOS Theodore": {
+    "wins": 0,
+    "losses": 1,
+    "total": 1,
+    "winRate": 0,
+    "clubs": [
+      "43"
+    ],
+    "bouts": [
+      {
+        "tournament": "Cobra Challenge SYC/RCC/Y8",
+        "event": "Y-10 Men's Saber",
+        "date": "November 29, 2019",
+        "type": "Pool",
+        "win": false,
+        "score": "3-5"
+      }
+    ]
   },
   "SHINCHUK Jacob": {
     "wins": 0,
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": ["DYNAMO"],
+    "clubs": [
+      "12"
+    ],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
@@ -8733,2866 +9682,36 @@ export const opponents: Record<string, OpponentData> = {
         "win": false,
         "score": "4-5"
       }
-    ],
-    "birthYear": 2011
+    ]
   },
-  "SHIPITSIN Alexander": {
+  "ADEBANKE Micah": {
     "wins": 0,
     "losses": 1,
     "total": 1,
     "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Cadet Men's Saber",
-        "date": "November 10, 2024",
-        "type": "T256",
-        "win": false,
-        "score": "10-15"
-      }
+    "clubs": [
+      "2"
     ],
-    "birthYear": 2008
-  },
-  "SIMS Elliot": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "March NAC and Parafencing National Championships",
-        "event": "Y-12 Men's Saber",
-        "date": "March 5, 2023",
-        "type": "T128",
-        "win": true,
-        "score": "15-6"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "SINGH Swaran": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": ["PHX"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-14 Men's Saber",
-        "date": "July 3, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "SKARBONKIEWICZ Maksymilian A.": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "October NAC",
-        "event": "Div I Men's Saber",
-        "date": "October 5, 2025",
-        "type": "T256",
-        "win": false,
-        "score": "5-15"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "SLAVNOV Anton": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Ben Gutenberg SYC - RJCC",
-        "event": "Y-14 Men's Saber",
-        "date": "October 12, 2024",
-        "type": "T16",
-        "win": false,
-        "score": "5-15"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "SMITH Etienne": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "May SJCC",
-        "event": "Junior Men's Saber",
-        "date": "May 16, 2025",
-        "type": "T128",
-        "win": true,
-        "score": "15-8"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "SO Morgan": {
-    "wins": 3,
-    "losses": 0,
-    "total": 3,
-    "winRate": 1,
-    "clubs": ["TIMMOREHOUSE"],
-    "bouts": [
-      {
-        "tournament": "Mission SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "May 5, 2024",
-        "type": "T16",
-        "win": true,
-        "score": "15-5"
-      },
-      {
-        "tournament": "Mission SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "May 4, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Cadet Men's Saber",
-        "date": "April 21, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "SONG Aidan": {
-    "wins": 4,
-    "losses": 0,
-    "total": 4,
-    "winRate": 1,
-    "clubs": ["TIMMOREHOUSE"],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Cadet Men's Saber",
-        "date": "November 10, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Cobra Challenge SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "October 12, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-14 Men's Saber",
-        "date": "July 4, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Summer Nationals",
-        "event": "Cadet Men's Saber",
-        "date": "July 1, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "SONG Nicholas": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["BOSTONFC"],
     "bouts": [
       {
         "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-12 Men's Saber",
-        "date": "November 25, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-12 Men's Saber",
-        "date": "October 2, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "SOWERS Samuel": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "December SJCC + Para NAC",
-        "event": "Cadet Men's Saber",
-        "date": "December 6, 2024",
-        "type": "T64",
-        "win": false,
-        "score": "7-15"
-      }
-    ],
-    "birthYear": 2008
-  },
-  "SRA Nawab": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "November 17, 2025",
-        "type": "T128",
-        "win": true,
-        "score": "15-2"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "SRIVATS Vedh": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Ben Gutenberg SYC - RJCC",
-        "event": "Y-14 Men's Saber",
-        "date": "October 12, 2024",
-        "type": "T32",
-        "win": true,
-        "score": "15-11"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "STAMPER Wyatt": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Junior Olympics",
-        "event": "Cadet Men's Saber",
-        "date": "January 10, 2026",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "STENSON Silas": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["FIT"],
-    "bouts": [
-      {
-        "tournament": "North Texas Roundup SYC / RCC",
-        "event": "Y-12 Men's Saber",
-        "date": "September 2, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "Summer Nationals",
-        "event": "Y-12 Men's Saber",
-        "date": "July 8, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "STEVENS Flynn": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["CAN"],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-12 Men's Saber",
-        "date": "November 25, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-12 Men's Saber",
-        "date": "October 2, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "STURGEON Cole": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "March NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 2, 2024",
-        "type": "T128",
-        "win": false,
-        "score": "6-15"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "SU Kingston": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["LAFAP"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Cadet Men's Saber",
-        "date": "July 1, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "May 5, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "SU Landon": {
-    "wins": 0,
-    "losses": 4,
-    "total": 4,
-    "winRate": 0,
-    "clubs": ["MIRACLEFC"],
-    "bouts": [
-      {
-        "tournament": "Junior Olympics",
-        "event": "Junior Men's Saber",
-        "date": "January 12, 2026",
-        "type": "T16",
-        "win": false,
-        "score": "14-15"
-      },
-      {
-        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
-        "event": "Cadet Men's Saber",
-        "date": "September 23, 2023",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
-        "event": "Cadet Men's Saber",
-        "date": "September 23, 2023",
-        "type": "T16",
-        "win": false,
-        "score": "4-15"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "September 3, 2023",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      }
-    ],
-    "birthYear": 2008
-  },
-  "SUN Andrew": {
-    "wins": 0,
-    "losses": 3,
-    "total": 3,
-    "winRate": 0,
-    "clubs": ["MANHATTANFC"],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Cadet Men's Saber",
-        "date": "November 10, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "Cobra Challenge SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "October 12, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-10 Men's Saber",
-        "date": "November 29, 2019",
-        "type": "T64",
-        "win": false,
-        "score": "3-10"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "SUN Stephen": {
-    "wins": 2,
-    "losses": 2,
-    "total": 4,
-    "winRate": 0.5,
-    "clubs": ["MASTERSFA-NJ"],
-    "bouts": [
-      {
-        "tournament": "March NAC",
-        "event": "Cadet Men's Saber",
-        "date": "March 7, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "February NAC",
-        "event": "Cadet Men's Saber",
-        "date": "February 17, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "January 13, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "November 24, 2023",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "SZULIM Lucjan": {
-    "wins": 1,
-    "losses": 3,
-    "total": 4,
-    "winRate": 0.25,
-    "clubs": ["CAPITALFA"],
-    "bouts": [
-      {
-        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
-        "event": "Cadet Men's Saber",
-        "date": "September 23, 2023",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      },
-      {
-        "tournament": "River City Regional Rumble RJCC / RYC & Y8",
-        "event": "Cadet Men's Saber",
-        "date": "September 23, 2023",
-        "type": "T32",
-        "win": true,
-        "score": "15-10"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "September 3, 2023",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      },
-      {
-        "tournament": "NoVA Knights RYC/RJCC",
-        "event": "Y-14 Men's Saber",
-        "date": "October 1, 2022",
-        "type": "T16",
-        "win": false,
-        "score": "10-15"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "TA-ZHOU Sophia": {
-    "wins": 3,
-    "losses": 0,
-    "total": 3,
-    "winRate": 1,
-    "clubs": ["NAZLYMOVFF"],
-    "bouts": [
-      {
-        "tournament": "DCFC Youth Challenge #4",
-        "event": "Y-10 Mixed Saber",
-        "date": "June 12, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "DCFC Youth Challenge #4",
-        "event": "Y-10 Mixed Saber",
-        "date": "June 12, 2022",
-        "type": "T2",
-        "win": true,
-        "score": "10-2"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-10 Men's Saber",
-        "date": "May 14, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "TAI Milton": {
-    "wins": 3,
-    "losses": 0,
-    "total": 3,
-    "winRate": 1,
-    "clubs": ["DCFENCERS"],
-    "bouts": [
-      {
-        "tournament": "DCFC Youth Challenge #4",
-        "event": "Y-10 Mixed Saber",
-        "date": "June 12, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "DCFC Youth Challenge #4",
-        "event": "Y-10 Mixed Saber",
-        "date": "June 12, 2022",
-        "type": "T8",
-        "win": true,
-        "score": "10-1"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-10 Men's Saber",
-        "date": "May 14, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "TAKEBE Ren": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Fairfax Challenge SYC/RJCC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 21, 2025",
-        "type": "T64",
-        "win": true,
-        "score": "15-7"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "TAN Rui": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["CHN"],
-    "bouts": [
-      {
-        "tournament": "Fairfax Challenge SYC/RJCC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 21, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "Local",
-        "event": "Senior Mixed Saber",
-        "date": "March 15, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "TANG Morgan": {
-    "wins": 3,
-    "losses": 2,
-    "total": 5,
-    "winRate": 0.6,
-    "clubs": ["HALBERSTADT"],
-    "bouts": [
-      {
-        "tournament": "October NAC",
-        "event": "Cadet Men's Saber",
-        "date": "October 4, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "North Texas Roundup SYC / RCC",
-        "event": "Y-12 Men's Saber",
-        "date": "September 2, 2023",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "Summer Nationals",
-        "event": "Y-12 Men's Saber",
-        "date": "July 8, 2023",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "USA Fencing National Championships & July Challenge",
-        "event": "Y-10 Men's Saber",
-        "date": "July 11, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-10 Men's Saber",
-        "date": "June 19, 2021",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "TANI Tino": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Cadet Men's Saber",
-        "date": "November 16, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "TANJGA Luka": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Cadet Men's Saber",
-        "date": "November 16, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "TASIKAS Peter": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "January SJCC",
-        "event": "Junior Men's Saber",
-        "date": "January 24, 2026",
-        "type": "T128",
-        "win": true,
-        "score": "15-9"
-      }
-    ],
-    "birthYear": 2007
-  },
-  "TEPLESKY Sasha": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["NOVAFC"],
-    "bouts": [
-      {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "January 18, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "Junior Olympics",
-        "event": "Cadet Men's Saber",
-        "date": "January 5, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "THEUNISSE Oliver": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["TTFA"],
-    "bouts": [
-      {
-        "tournament": "Local",
-        "event": "Y-10 Mixed Saber",
-        "date": "June 12, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Fairfax Challenge SYC/RJCC",
-        "event": "Y-12 Men's Saber",
-        "date": "May 15, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "THOMAS Texas": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["FAODENVER"],
-    "bouts": [
-      {
-        "tournament": "Junior Olympics & Div 1 NAC",
-        "event": "Junior Men's Saber",
-        "date": "February 16, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "2-5"
-      },
-      {
-        "tournament": "Capitol Clash SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "January 18, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "2-5"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "TIAGI Daniel": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["ALLEFENCING"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Junior Men's Saber",
-        "date": "June 28, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "May NAC",
-        "event": "Cadet Men's Saber",
-        "date": "May 18, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "TIAGI George": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Div I Men's Saber",
-        "date": "November 14, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "0-5"
-      }
-    ],
-    "birthYear": 0
-  },
-  "TSE Aiden J": {
-    "wins": 0,
-    "losses": 3,
-    "total": 3,
-    "winRate": 0,
-    "clubs": ["HALBERSTADT"],
-    "bouts": [
-      {
-        "tournament": "February NAC",
-        "event": "Div I Men's Saber",
-        "date": "February 13, 2026",
-        "type": "T128",
-        "win": false,
-        "score": "13-15"
-      },
-      {
-        "tournament": "National Championships & July Challenge (Summer Nationals)",
-        "event": "Y-12 Men's Saber",
-        "date": "July 8, 2023",
-        "type": "Pool",
-        "win": false,
-        "score": "0-5"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-12 Men's Saber",
-        "date": "April 16, 2023",
-        "type": "Pool",
-        "win": false,
-        "score": "0-5"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "UEMOTO Ken": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["DURKANFA"],
-    "bouts": [
-      {
-        "tournament": "Junior Olympics & Div 1 NAC",
-        "event": "Cadet Men's Saber",
-        "date": "February 17, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "2-5"
-      },
-      {
-        "tournament": "February NAC",
-        "event": "Junior Men's Saber",
-        "date": "February 16, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "2-5"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "URSU Marcel T.": {
-    "wins": 1,
-    "losses": 2,
-    "total": 3,
-    "winRate": 0.33,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC",
-        "event": "Y-14 Men's Saber",
-        "date": "November 29, 2025",
-        "type": "T2",
-        "win": true,
-        "score": "15-8"
-      },
-      {
-        "tournament": "Mission SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "May 5, 2024",
-        "type": "T4",
-        "win": false,
-        "score": "9-15"
-      },
-      {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-12 Men's Saber",
-        "date": "January 15, 2024",
-        "type": "T4",
-        "win": false,
-        "score": "5-15"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "VALENCIA Jose": {
-    "wins": 1,
-    "losses": 2,
-    "total": 3,
-    "winRate": 33,
-    "clubs": ["CAPITALFA"],
-    "bouts": [
-      { "tournament": "Capital Czajkowski Cup #3", "event": "Senior Mixed Saber", "date": "March 21, 2026", "type": "T2", "win": true, "score": "15-13" },
-      {
-        "tournament": "Fairfax Challenge Spring RYC/RJCC/ROC",
-        "event": "Y-12 Men's Saber",
-        "date": "April 16, 2023",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 11, 2023",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "VAN ROY Ray": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": ["HALBERSTADT"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Cadet Men's Saber",
-        "date": "June 30, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "VASQUEZ Matteo": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["FSA INC"],
-    "bouts": [
-      {
-        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
-        "event": "Y-14 Men's Saber",
-        "date": "April 20, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Cadet Men's Saber",
-        "date": "March 16, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "VISH Manyu": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Cadet Men's Saber",
-        "date": "November 30, 2024",
-        "type": "T128",
-        "win": true,
-        "score": "15-3"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "VO Blake": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "January SJCC",
-        "event": "Junior Men's Saber",
-        "date": "January 24, 2026",
-        "type": "T64",
-        "win": true,
-        "score": "15-9"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "VO Landon": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "October NAC",
-        "event": "Junior Men's Saber",
-        "date": "October 3, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "2-5"
-      }
-    ],
-    "birthYear": 2006
-  },
-  "VOSPER James": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["SANDIEGOFC"],
-    "bouts": [
-      {
-        "tournament": "Junior Olympics & Div 1 NAC",
-        "event": "Junior Men's Saber",
-        "date": "February 16, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Capitol Clash SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "January 18, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "VU Mark": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Junior Olympics",
-        "event": "Cadet Men's Saber",
-        "date": "January 10, 2026",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "WAGNER Joseph": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["TRIWEAPONFC"],
-    "bouts": [
-      {
-        "tournament": "Local",
-        "event": "Y-10 Mixed Saber",
-        "date": "June 12, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      },
-      {
-        "tournament": "Fairfax Challenge SYC/RJCC",
-        "event": "Y-12 Men's Saber",
-        "date": "May 15, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "WANG ANDREW CHANG": {
-    "wins": 1,
-    "losses": 1,
-    "total": 2,
-    "winRate": 0.5,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "January SJCC",
-        "event": "Junior Men's Saber",
-        "date": "January 24, 2026",
-        "type": "T8",
-        "win": true,
-        "score": "15-10"
-      },
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Junior Men's Saber",
-        "date": "June 28, 2025",
-        "type": "T128",
-        "win": false,
-        "score": "9-15"
-      }
-    ],
-    "birthYear": 2007
-  },
-  "WANG Alex": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Junior Olympics",
-        "event": "Cadet Men's Saber",
-        "date": "January 10, 2026",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "Fairfax Challenge SYC/RJCC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 21, 2025",
-        "type": "T32",
-        "win": true,
-        "score": "15-10"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "WANG Andrew": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["AFC"],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-10 Men's Saber",
-        "date": "November 29, 2019",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-8 Men's Saber",
-        "date": "November 24, 2018",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "WANG Daniel": {
-    "wins": 2,
-    "losses": 2,
-    "total": 4,
-    "winRate": 0.5,
-    "clubs": ["DYNAMOFC"],
-    "bouts": [
-      {
-        "tournament": "February NAC",
-        "event": "Junior Men's Saber",
-        "date": "February 15, 2026",
-        "type": "T32",
-        "win": false,
-        "score": "14-15"
-      },
-      {
-        "tournament": "December SJCC + Para NAC",
-        "event": "Junior Men's Saber",
-        "date": "December 7, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "December SJCC + Para NAC",
-        "event": "Cadet Men's Saber",
-        "date": "December 6, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "Cobra Challenge SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "December 1, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "WANG David": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["AGFC (CA)"],
-    "bouts": [
-      {
-        "tournament": "USA Fencing National Championships & July Challenge",
-        "event": "Y-10 Men's Saber",
-        "date": "July 11, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-10 Men's Saber",
-        "date": "June 19, 2021",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "WANG Edward": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["DYNAMOFC"],
-    "bouts": [
-      {
-        "tournament": "Ben Gutenberg SYC - RJCC",
-        "event": "Y-14 Men's Saber",
-        "date": "October 12, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Cadet Men's Saber",
-        "date": "September 21, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "WANG HongXi": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Junior Men's Saber",
-        "date": "June 28, 2025",
-        "type": "T256",
-        "win": true,
-        "score": "15-10"
-      }
-    ],
-    "birthYear": 2006
-  },
-  "WANG Justin": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Junior Olympics",
-        "event": "Cadet Men's Saber",
-        "date": "January 10, 2026",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "WANG Max": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["CAPITALFA"],
-    "bouts": [
-      {
-        "tournament": "River City Regional Rumble - RYC/RJCC and Y8",
-        "event": "Cadet Men's Saber",
-        "date": "September 21, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "Summer Nationals",
-        "event": "Y-12 Men's Saber",
-        "date": "July 5, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "WANG Michael": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["MANHATTANFC"],
-    "bouts": [
-      {
-        "tournament": "January NAC",
-        "event": "Cadet Men's Saber",
-        "date": "January 5, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "December NAC",
-        "event": "Junior Men's Saber",
-        "date": "December 7, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "WANG Nicolas": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "October NAC",
-        "event": "Junior Men's Saber",
-        "date": "October 3, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "October NAC",
-        "event": "Junior Men's Saber",
-        "date": "October 3, 2025",
-        "type": "T128",
-        "win": false,
-        "score": "13-15"
-      }
-    ],
-    "birthYear": 2007
-  },
-  "WANG Ryan": {
-    "wins": 3,
-    "losses": 0,
-    "total": 3,
-    "winRate": 1,
-    "clubs": ["AGFC (CA)"],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "November 17, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-12 Men's Saber",
-        "date": "July 5, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "Summer Nationals",
-        "event": "Y-14 Men's Saber",
-        "date": "July 4, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "WANG Theodore": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "February NAC",
-        "event": "Div I Men's Saber",
-        "date": "February 13, 2026",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "WANG Tiger": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["LAFAP"],
-    "bouts": [
-      {
-        "tournament": "North Texas Roundup SYC/RCC",
-        "event": "Y-12 Men's Saber",
-        "date": "September 3, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "Summer Nationals",
-        "event": "Y-10 Men's Saber",
-        "date": "July 11, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "WANG Will": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["BERGENFC"],
-    "bouts": [
-      {
-        "tournament": "March SJCC",
-        "event": "Cadet Men's Saber",
-        "date": "March 16, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 3, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "WAXLER Alex": {
-    "wins": 5,
-    "losses": 0,
-    "total": 5,
-    "winRate": 1,
-    "clubs": ["TIMMOREHOUSE"],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "December 1, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "Cobra Challenge SYC",
-        "event": "Cadet Men's Saber",
-        "date": "November 30, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "November NAC",
-        "event": "Cadet Men's Saber",
-        "date": "November 10, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "Capitol Clash SYC, RCC, Veteran ROC & Y8",
-        "event": "Y-8 Men's Saber",
-        "date": "January 19, 2020",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-10 Men's Saber",
-        "date": "January 18, 2020",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "WELSTEAD Nicholas": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["DYNAMOFC"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Cadet Men's Saber",
-        "date": "July 1, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "May 5, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "WINTERSET Mason": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": ["SBFA"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Cadet Men's Saber",
-        "date": "June 30, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "WONG David": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "May SJCC",
-        "event": "Junior Men's Saber",
-        "date": "May 16, 2025",
-        "type": "T32",
-        "win": true,
-        "score": "15-10"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "WONG Lucas": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Cadet Men's Saber",
-        "date": "July 1, 2024",
-        "type": "T64",
-        "win": false,
-        "score": "5-15"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "WONG Mac": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["MANHATTANFC"],
-    "bouts": [
-      {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "January 13, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "November 24, 2023",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "WONG Max": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Cadet Men's Saber",
-        "date": "November 16, 2025",
-        "type": "T64",
-        "win": true,
-        "score": "15-13"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "WONG Ron": {
-    "wins": 4,
-    "losses": 0,
-    "total": 4,
-    "winRate": 1,
-    "clubs": ["LAFAP"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-14 Men's Saber",
-        "date": "July 3, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "May SJCC",
-        "event": "Cadet Men's Saber",
-        "date": "May 18, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "May NAC",
-        "event": "Junior Men's Saber",
-        "date": "May 16, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-12 Men's Saber",
-        "date": "November 24, 2023",
-        "type": "T32",
-        "win": true,
-        "score": "15-13"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "XIA Matthew": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
-        "event": "Cadet Men's Saber",
-        "date": "April 21, 2024",
-        "type": "T2",
-        "win": true,
-        "score": "15-11"
-      }
-    ],
-    "birthYear": 2008
-  },
-  "XIE Ethan": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["Maryland"],
-    "bouts": [
-      {
-        "tournament": "NoVA Knights RYC/RJCC",
-        "event": "Y-14 Men's Saber",
-        "date": "October 1, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "2-5"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-12 Men's Saber",
-        "date": "September 11, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "2-5"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "XU Andrew": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["MIRACLEFC"],
-    "bouts": [
-      {
-        "tournament": "Fairfax Challenge SYC/RJCC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 21, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "Local",
-        "event": "Senior Mixed Saber",
-        "date": "March 15, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "XU Ethan": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["BAFC"],
-    "bouts": [
-      {
-        "tournament": "March NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 2, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "January 15, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "XU Ivan": {
-    "wins": 2,
-    "losses": 2,
-    "total": 4,
-    "winRate": 0.5,
-    "clubs": ["MIRACLEFC"],
-    "bouts": [
-      {
-        "tournament": "NoVA Knights RYC/RJCC",
-        "event": "Y-14 Men's Saber",
-        "date": "October 1, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-12 Men's Saber",
-        "date": "September 11, 2022",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "Capitol Clash SYC, RCC, Veteran ROC & Y8",
-        "event": "Y-10 Men's Saber",
-        "date": "January 18, 2020",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-8 Men's Saber",
-        "date": "November 30, 2019",
-        "type": "Pool",
-        "win": false,
-        "score": "4-5"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "XU Princeton": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["TTFA"],
-    "bouts": [
-      {
-        "tournament": "River City Regional Rumble RYC/RJCC",
-        "event": "Y-12 Men's Saber",
-        "date": "February 11, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "January 14, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "YAN Luke": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["PREMIERFC"],
-    "bouts": [
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-8 Men's Saber",
-        "date": "November 30, 2019",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-10 Men's Saber",
-        "date": "November 29, 2019",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "YAN William": {
-    "wins": 1,
-    "losses": 1,
-    "total": 2,
-    "winRate": 0.5,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "January SJCC",
-        "event": "Junior Men's Saber",
-        "date": "January 24, 2026",
-        "type": "T32",
-        "win": true,
-        "score": "15-13"
-      },
-      {
-        "tournament": "March SJCC",
-        "event": "Cadet Men's Saber",
-        "date": "March 16, 2024",
-        "type": "T128",
-        "win": false,
-        "score": "8-15"
-      }
-    ],
-    "birthYear": 2008
-  },
-  "YANG Dylan": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Div I Men's Saber",
-        "date": "November 14, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2008
-  },
-  "YANG Jake": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-14 Men's Saber",
-        "date": "July 3, 2025",
-        "type": "T256",
-        "win": true,
-        "score": "15-4"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "YANG Justin": {
-    "wins": 1,
-    "losses": 1,
-    "total": 2,
-    "winRate": 0.5,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-12 Men's Saber",
-        "date": "July 5, 2024",
-        "type": "T32",
-        "win": true,
-        "score": "15-7"
-      },
-      {
-        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
-        "event": "Y-14 Men's Saber",
-        "date": "April 20, 2024",
-        "type": "T32",
-        "win": false,
-        "score": "13-15"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "YANG Phillip": {
-    "wins": 1,
-    "losses": 3,
-    "total": 4,
-    "winRate": 0.25,
-    "clubs": ["SBFA"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-12 Men's Saber",
-        "date": "July 5, 2024",
-        "type": "T16",
-        "win": true,
-        "score": "15-13"
-      },
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-14 Men's Saber",
-        "date": "July 4, 2024",
-        "type": "T64",
-        "win": false,
-        "score": "14-15"
-      },
-      {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "January 13, 2024",
-        "type": "Pool",
-        "win": false,
-        "score": "2-5"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "November 24, 2023",
-        "type": "Pool",
-        "win": false,
-        "score": "2-5"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "YAO Zachary": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "NoVA Knights RYC/RJCC& NON-REGIONAL VET",
-        "event": "Cadet Men's Saber",
-        "date": "April 21, 2024",
-        "type": "T16",
-        "win": true,
-        "score": "15-6"
-      },
-      {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-14 Men's Saber",
-        "date": "January 13, 2024",
-        "type": "T256",
-        "win": true,
-        "score": "15-10"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "YAP Kah Kai (Cayden)": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["HALBERSTADT"],
-    "bouts": [
-      {
-        "tournament": "December SJCC + Para NAC",
-        "event": "Junior Men's Saber",
-        "date": "December 7, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "December NAC",
-        "event": "Cadet Men's Saber",
-        "date": "December 6, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2008
-  },
-  "YE Eric": {
-    "wins": 0,
-    "losses": 2,
-    "total": 2,
-    "winRate": 0,
-    "clubs": ["EFA"],
-    "bouts": [
-      {
-        "tournament": "NoVA Knights RYC/RJCC",
-        "event": "Y-14 Men's Saber",
-        "date": "October 1, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-12 Men's Saber",
-        "date": "September 11, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      }
-    ],
-    "birthYear": 2008
-  },
-  "YOOK Isaac": {
-    "wins": 6,
-    "losses": 4,
-    "total": 10,
-    "winRate": 0.6,
-    "clubs": ["TIMMOREHOUSE", "MANHATTANFC"],
-    "bouts": [
-      {
-        "tournament": "February NAC",
-        "event": "Div I Men's Saber",
-        "date": "February 13, 2026",
-        "type": "Pool",
-        "win": false,
-        "score": "3-5"
-      },
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-14 Men's Saber",
-        "date": "July 3, 2025",
-        "type": "T64",
-        "win": true,
-        "score": "15-11"
-      },
-      {
-        "tournament": "May SJCC",
-        "event": "Cadet Men's Saber",
-        "date": "May 18, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "May NAC",
-        "event": "Junior Men's Saber",
-        "date": "May 16, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Cadet Men's Saber",
-        "date": "March 7, 2025",
-        "type": "T128",
-        "win": true,
-        "score": "15-4"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 2, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "January 15, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-10 Men's Saber",
-        "date": "May 31, 2021",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      },
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-10 Men's Saber",
-        "date": "November 29, 2019",
-        "type": "Pool",
-        "win": false,
-        "score": "2-5"
-      },
-      {
-        "tournament": "SYC",
         "event": "Y-8 Men's Saber",
         "date": "November 24, 2018",
         "type": "Pool",
         "win": false,
         "score": "2-5"
       }
-    ],
-    "birthYear": 2010
-  },
-  "YU Ian": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Capitol Clash SYC/RCC & Y8",
-        "event": "Y-12 Men's Saber",
-        "date": "January 15, 2024",
-        "type": "T8",
-        "win": true,
-        "score": "15-12"
-      },
-      {
-        "tournament": "North Texas Roundup SYC / RCC",
-        "event": "Y-12 Men's Saber",
-        "date": "September 2, 2023",
-        "type": "T32",
-        "win": true,
-        "score": "15-7"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "YUCEL Emine": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Capital Czajkowski Cup #3",
-        "event": "Senior Mixed Saber",
-        "date": "March 15, 2025",
-        "type": "T8",
-        "win": true,
-        "score": "15-12"
-      }
-    ],
-    "birthYear": 0
-  },
-  "ZENG Vito": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["SPARTAK"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Junior Men's Saber",
-        "date": "June 28, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "May NAC",
-        "event": "Cadet Men's Saber",
-        "date": "May 18, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "ZEWDA Kebron": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "February NAC",
-        "event": "Div I Men's Saber",
-        "date": "February 13, 2026",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 0
-  },
-  "ZHANG Aiden": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["SFA"],
-    "bouts": [
-      {
-        "tournament": "March NAC and Parafencing National Championships",
-        "event": "Y-12 Men's Saber",
-        "date": "March 5, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-12 Men's Saber",
-        "date": "February 11, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "ZHANG Kaixuan": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "Fairfax Challenge SYC/RJCC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 21, 2025",
-        "type": "T4",
-        "win": false,
-        "score": "14-15"
-      }
-    ],
-    "birthYear": 2010
-  },
-  "ZHANG Ray": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["MANHATTANFC"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Y-14 Men's Saber",
-        "date": "July 4, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      },
-      {
-        "tournament": "Summer Nationals",
-        "event": "Cadet Men's Saber",
-        "date": "July 1, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-0"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "ZHANG Shaoxuan": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["CAN"],
-    "bouts": [
-      {
-        "tournament": "March NAC",
-        "event": "Y-12 Men's Saber",
-        "date": "March 3, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 2, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "ZHAO David": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["MIRACLEFC"],
-    "bouts": [
-      {
-        "tournament": "Fairfax Challenge Summer ROC/RJCC/RYC/VET - Reg Re-Opens 12/28",
-        "event": "Y-10 Men's Saber",
-        "date": "June 19, 2021",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-8 Men's Saber",
-        "date": "January 19, 2020",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "ZHAO Lucas": {
-    "wins": 1,
-    "losses": 1,
-    "total": 2,
-    "winRate": 0.5,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "November NAC",
-        "event": "Cadet Men's Saber",
-        "date": "November 16, 2025",
-        "type": "T32",
-        "win": true,
-        "score": "15-9"
-      },
-      {
-        "tournament": "Junior Olympics & Div 1 NAC",
-        "event": "Junior Men's Saber",
-        "date": "February 16, 2025",
-        "type": "T256",
-        "win": false,
-        "score": "14-15"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "ZHAO Royce": {
-    "wins": 5,
-    "losses": 2,
-    "total": 7,
-    "winRate": 0.71,
-    "clubs": ["TIMMOREHOUSE"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Cadet Men's Saber",
-        "date": "July 1, 2024",
-        "type": "T128",
-        "win": true,
-        "score": "15-10"
-      },
-      {
-        "tournament": "Mission SYC",
-        "event": "Y-14 Men's Saber",
-        "date": "May 4, 2024",
-        "type": "T32",
-        "win": true,
-        "score": "15-10"
-      },
-      {
-        "tournament": "Cobra Challenge SYC/RCC/Y8",
-        "event": "Y-12 Men's Saber",
-        "date": "November 24, 2023",
-        "type": "T16",
-        "win": true,
-        "score": "15-14"
-      },
-      {
-        "tournament": "North Texas Roundup SYC / RCC",
-        "event": "Y-14 Men's Saber",
-        "date": "September 3, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "September 2, 2023",
-        "type": "Pool",
-        "win": true,
-        "score": "5-2"
-      },
-      {
-        "tournament": "USA Fencing National Championships & July Challenge",
-        "event": "Y-10 Men's Saber",
-        "date": "July 11, 2022",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      },
-      {
-        "tournament": "RYC",
-        "event": "Y-10 Men's Saber",
-        "date": "June 19, 2021",
-        "type": "Pool",
-        "win": false,
-        "score": "1-5"
-      }
-    ],
-    "birthYear": 2011
-  },
-  "ZHAO Zhiyu(Yogi)": {
-    "wins": 1,
-    "losses": 0,
-    "total": 1,
-    "winRate": 1,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "October NAC",
-        "event": "Junior Men's Saber",
-        "date": "October 3, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2006
-  },
-  "ZHENG LEON": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["BERGENFC"],
-    "bouts": [
-      {
-        "tournament": "National Championships and July Challenge (Summer Nationals)",
-        "event": "Cadet Men's Saber",
-        "date": "July 1, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "SYC",
-        "event": "Y-12 Men's Saber",
-        "date": "May 5, 2024",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      }
-    ],
-    "birthYear": 2013
-  },
-  "ZHU Yuchen (Kevin)": {
-    "wins": 0,
-    "losses": 1,
-    "total": 1,
-    "winRate": 0,
-    "clubs": [],
-    "bouts": [
-      {
-        "tournament": "October NAC",
-        "event": "Div I Men's Saber",
-        "date": "October 5, 2025",
-        "type": "Pool",
-        "win": false,
-        "score": "0-5"
-      }
-    ],
-    "birthYear": 0
-  },
-  "ZLATINSKI Jason": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["GFA"],
-    "bouts": [
-      {
-        "tournament": "March NAC",
-        "event": "Cadet Men's Saber",
-        "date": "March 7, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      },
-      {
-        "tournament": "February NAC",
-        "event": "Cadet Men's Saber",
-        "date": "February 17, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-4"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "ZONG Shiyan": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["CHN"],
-    "bouts": [
-      {
-        "tournament": "March NAC",
-        "event": "Y-14 Men's Saber",
-        "date": "March 8, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      },
-      {
-        "tournament": "March NAC",
-        "event": "Cadet Men's Saber",
-        "date": "March 7, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-1"
-      }
-    ],
-    "birthYear": 2012
-  },
-  "ZWAKA Jonas": {
-    "wins": 2,
-    "losses": 0,
-    "total": 2,
-    "winRate": 1,
-    "clubs": ["SHERIDANFA"],
-    "bouts": [
-      {
-        "tournament": "March NAC",
-        "event": "Cadet Men's Saber",
-        "date": "March 7, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      },
-      {
-        "tournament": "February NAC",
-        "event": "Cadet Men's Saber",
-        "date": "February 17, 2025",
-        "type": "Pool",
-        "win": true,
-        "score": "5-3"
-      }
-    ],
-    "birthYear": 2009
-  },
-  "AERY FALLICK Ozzie": {
-    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
-    "bouts": [
-      { "tournament": "Capital Czajkowski Cup #3", "event": "Senior Mixed Saber", "date": "March 21, 2026", "type": "Pool", "win": true, "score": "5-0" }
-    ], "birthYear": 0
-  },
-  "KUCZAJDA Matthew": {
-    "wins": 2, "losses": 0, "total": 2, "winRate": 100, "clubs": [],
-    "bouts": [
-      { "tournament": "Capital Czajkowski Cup #3", "event": "Senior Mixed Saber", "date": "March 21, 2026", "type": "Pool", "win": true, "score": "5-1" },
-      { "tournament": "Capital Czajkowski Cup #3", "event": "Senior Mixed Saber", "date": "March 21, 2026", "type": "T16", "win": true, "score": "15-4" }
-    ], "birthYear": 0
-  },
-  "LU Charles": {
-    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
-    "bouts": [
-      { "tournament": "Capital Czajkowski Cup #3", "event": "Senior Mixed Saber", "date": "March 21, 2026", "type": "Pool", "win": true, "score": "5-3" }
-    ], "birthYear": 0
-  },
-  "RACHAPROLU Divyagnyaan Siddartha": {
-    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
-    "bouts": [
-      { "tournament": "Capital Czajkowski Cup #3", "event": "Senior Mixed Saber", "date": "March 21, 2026", "type": "Pool", "win": true, "score": "5-3" }
-    ], "birthYear": 0
-  },
-  "MATT Chris": {
-    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
-    "bouts": [
-      { "tournament": "Capital Czajkowski Cup #3", "event": "Senior Mixed Saber", "date": "March 21, 2026", "type": "T8", "win": true, "score": "15-3" }
-    ], "birthYear": 0
-  },
-  "LI Yiwei": {
-    "wins": 0, "losses": 1, "total": 1, "winRate": 0, "clubs": [],
-    "bouts": [
-      { "tournament": "February NAC", "event": "Div I Men's Saber", "date": "February 13, 2026", "type": "T128", "win": false, "score": "11-15" }
-    ], "birthYear": 0
-  },
-  "KUSHKOV Daniel": {
-    "wins": 0, "losses": 1, "total": 1, "winRate": 0, "clubs": [],
-    "bouts": [
-      { "tournament": "October NAC", "event": "Junior Men's Saber", "date": "October 3, 2025", "type": "T256", "win": false, "score": "5-15" }
-    ], "birthYear": 0
-  },
-  "BURKE Sam": {
-    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
-    "bouts": [
-      { "tournament": "October NAC", "event": "Cadet Men's Saber", "date": "October 4, 2025", "type": "T128", "win": true, "score": "15-9" }
-    ], "birthYear": 0
-  },
-  "NARAYAN Rishi": {
-    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
-    "bouts": [
-      { "tournament": "Capitol Clash SYC/RCC", "event": "Y-14 Men's Saber", "date": "January 18, 2025", "type": "DE", "win": true, "score": "15-8" }
-    ], "birthYear": 0
-  },
-  "BRISENO Ethan": {
-    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
-    "bouts": [
-      { "tournament": "Summer Nationals", "event": "Y-12 Men's Saber", "date": "July 5, 2024", "type": "DE", "win": true, "score": "15-7" }
-    ], "birthYear": 0
-  },
-  "YUEN Caleb": {
-    "wins": 2, "losses": 0, "total": 2, "winRate": 100, "clubs": [],
-    "bouts": [
-      { "tournament": "Summer Nationals", "event": "Y-12 Men's Saber", "date": "July 5, 2024", "type": "DE", "win": true, "score": "15-13" },
-      { "tournament": "Capitol Clash SYC/RCC", "event": "Y-12 Men's Saber", "date": "January 15, 2024", "type": "DE", "win": true, "score": "15-9" }
-    ], "birthYear": 0
-  },
-  "PATEL Rayn": {
-    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
-    "bouts": [
-      { "tournament": "Summer Nationals", "event": "Y-14 Men's Saber", "date": "July 4, 2024", "type": "DE", "win": true, "score": "15-8" }
-    ], "birthYear": 0
-  },
-  "SLOAN Ethan": {
-    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
-    "bouts": [
-      { "tournament": "March NAC", "event": "Y-12 Men's Saber", "date": "March 3, 2024", "type": "DE", "win": true, "score": "15-11" }
-    ], "birthYear": 0
-  },
-  "TSAO Alister": {
-    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
-    "bouts": [
-      { "tournament": "Capitol Clash SYC/RCC", "event": "Y-14 Men's Saber", "date": "January 13, 2024", "type": "DE", "win": true, "score": "15-14" }
-    ], "birthYear": 0
-  },
-  "LAU Kyrus": {
-    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
-    "bouts": [
-      { "tournament": "Cobra Challenge SYC/RCC/Y8", "event": "Y-12 Men's Saber", "date": "November 24, 2023", "type": "DE", "win": true, "score": "15-13" }
-    ], "birthYear": 0
-  },
-  "KIM Daehwan(Benjamin)": {
-    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
-    "bouts": [
-      { "tournament": "Cobra Challenge SYC/RCC/Y8", "event": "Y-12 Men's Saber", "date": "November 25, 2022", "type": "DE", "win": true, "score": "15-2" }
-    ], "birthYear": 0
-  },
-  "BOYER Seth": {
-    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
-    "bouts": [
-      { "tournament": "Fairfax Challenge Fall RYC/RJCC", "event": "Y-12 Men's Saber", "date": "September 11, 2022", "type": "DE", "win": true, "score": "15-8" }
-    ], "birthYear": 0
-  },
-  "KATZ Ryan": {
-    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
-    "bouts": [
-      { "tournament": "March SJCC", "event": "Cadet Men's Saber", "date": "March 16, 2024", "type": "DE", "win": true, "score": "15-8" }
-    ], "birthYear": 0
-  },
-  "MICHALSKI Brandon": {
-    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
-    "bouts": [
-      { "tournament": "Capital Czajkowski", "event": "Senior Mixed Saber", "date": "March 15, 2025", "type": "DE", "win": true, "score": "15-7" }
-    ], "birthYear": 0
-  },
-  "MILLS Matthew": {
-    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
-    "bouts": [
-      { "tournament": "Capital Czajkowski", "event": "Senior Mixed Saber", "date": "March 15, 2025", "type": "DE", "win": true, "score": "15-2" }
-    ], "birthYear": 0
-  },
-  "GILBERT Ari": {
-    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
-    "bouts": [
-      { "tournament": "Mission SYC", "event": "Y-12 Men's Saber", "date": "May 5, 2024", "type": "DE", "win": true, "score": "15-3" }
-    ], "birthYear": 0
-  },
-  "YAO John": {
-    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
-    "bouts": [
-      { "tournament": "Mission SYC", "event": "Y-12 Men's Saber", "date": "May 5, 2024", "type": "DE", "win": true, "score": "15-5" }
-    ], "birthYear": 0
-  },
-  "LIU Guanyu": {
-    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
-    "bouts": [
-      { "tournament": "North Texas", "event": "Y-14 Men's Saber", "date": "September 3, 2023", "type": "DE", "win": true, "score": "15-12" }
-    ], "birthYear": 0
-  },
-  "LI Huangziyue": {
-    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
-    "bouts": [
-      { "tournament": "North Texas", "event": "Y-12 Men's Saber", "date": "September 2, 2023", "type": "DE", "win": true, "score": "15-8" }
-    ], "birthYear": 0
-  },
-  "LIU Dylan": {
-    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
-    "bouts": [
-      { "tournament": "North Texas", "event": "Y-12 Men's Saber", "date": "September 2, 2023", "type": "DE", "win": true, "score": "15-7" }
-    ], "birthYear": 0
-  },
-  "HU Andrew": {
-    "wins": 1, "losses": 0, "total": 1, "winRate": 100, "clubs": [],
-    "bouts": [
-      { "tournament": "NoVA Knights", "event": "Y-14 Men's Saber", "date": "October 1, 2022", "type": "DE", "win": true, "score": "15-4" }
-    ], "birthYear": 0
-  },
+    ]
+  }
 };
+
+export function getOpponentSlug(name: string): string {
+  return name.replace(/[^a-zA-Z0-9]/g, '-').toLowerCase().replace(/-+/g, '-').replace(/^-|-$/g, '');
+}
+
+export function findOpponentBySlug(slug: string): [string, OpponentData] | null {
+  for (const [name, data] of Object.entries(opponents)) {
+    if (getOpponentSlug(name) === slug) return [name, data];
+  }
+  return null;
+}
