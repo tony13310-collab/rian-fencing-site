@@ -2520,4 +2520,28 @@ export const eventDetails: Record<string, EventDetail> = {
       { round: "Final", opponent: "CHEN Jonathan", club: "", score: "13-15", win: false },
     ],
   },
+  "2026-04-27_junior-men-s-saber": {
+    id: "2026-04-27_junior-men-s-saber",
+    date: "2026-04-27",
+    tournament: "Division 1 & Para Championships / April NAC",
+    event: "Junior Men's Saber",
+    location: "",
+    place: 32, total: 187,
+    rating: "",
+    pool: undefined,
+    de: [],
+    
+  },
+  "2026-04-25_div-i-men-s-saber": {
+    id: "2026-04-25_div-i-men-s-saber",
+    date: "2026-04-25",
+    tournament: "Division 1 & Para Championships / April NAC",
+    event: "Div I Men's Saber",
+    location: "",
+    place: 103, total: 137,
+    rating: "",
+    pool: undefined,
+    de: [],
+    
+  },
 };

@@ -1,8 +1,18 @@
 // Fetch H2H data from FencingTracker and build opponents.ts
-// Usage: node scripts/fetch-h2h.mjs
+// Usage: node scripts/fetch-h2h.mjs --force-rebuild
+//
+// ⚠️ DESTRUCTIVE: Regenerates opponents.ts from scratch. Wipes birthYear data
+// and any FTL pool bouts that aren't in FT history. Do NOT use in weekly cron.
+// Use auto-update.mjs instead, which appends new opponents incrementally.
 
 import { writeFileSync } from 'fs';
 import { JSDOM } from 'jsdom';
+
+if (!process.argv.includes('--force-rebuild')) {
+  console.error('❌ fetch-h2h.mjs is destructive. Pass --force-rebuild to confirm.');
+  console.error('   For weekly updates, use auto-update.mjs instead.');
+  process.exit(1);
+}
 
 const URL = 'https://fencingtracker.com/p/100259666/Rian-Wei/history';
 

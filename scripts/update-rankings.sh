@@ -13,19 +13,19 @@ echo "Date: $(date)"
 echo "📊 Scraping rankings..."
 node scripts/scrape-rankings.mjs
 
-# 2. Update H2H opponent database
-echo "⚔️ Updating H2H opponent database..."
-node scripts/fetch-h2h.mjs
+# NOTE: Do NOT call fetch-h2h.mjs here. It regenerates opponents.ts from scratch
+# and wipes manually-curated birthYear data + FTL pool bouts. Use auto-update.mjs
+# which adds new opponents incrementally without destroying existing entries.
 
 # Check if anything changed
-if git diff --quiet src/data/profile.ts src/data/opponents.ts; then
+if git diff --quiet src/data/profile.ts; then
   echo "✅ No changes detected."
   exit 0
 fi
 
 # Commit and push
-git add src/data/profile.ts src/data/opponents.ts
-git commit -m "Auto-update rankings + H2H $(date +%Y-%m-%d)"
+git add src/data/profile.ts
+git commit -m "Auto-update rankings $(date +%Y-%m-%d)"
 git push
 
 echo "🚀 Data updated and deployed!"
