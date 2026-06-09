@@ -1,6 +1,9 @@
 // Cloudflare Worker — FTL/FIE proxy for Live Competition Dashboard
 
-export interface Env {}
+export interface Env {
+  FTL_EMAIL: string;
+  FTL_PASSWORD: string;
+}
 
 const CORS_HEADERS = {
   "Access-Control-Allow-Origin": "*",
@@ -20,36 +23,36 @@ export default {
     try {
       // /api/ftl/upcoming — auto-fetch in-progress + next 7 days national/SYC tournaments
       if (path === "/api/ftl/upcoming") {
-        return await handleFTLUpcoming();
+        return await handleFTLUpcoming(env);
       }
 
       // /api/ftl/search?q=sjcc&from=2026-01-01&to=2026-12-31
       if (path === "/api/ftl/search") {
-        return await handleFTLSearch(url);
+        return await handleFTLSearch(url, env);
       }
 
       // /api/ftl/event/:eventId — get event results page
       if (path.startsWith("/api/ftl/event/")) {
         const eventId = path.replace("/api/ftl/event/", "");
-        return await handleFTLEvent(eventId);
+        return await handleFTLEvent(eventId, env);
       }
 
       // /api/ftl/pools/:eventId — get pool assignments
       if (path.startsWith("/api/ftl/pools/")) {
         const eventId = path.replace("/api/ftl/pools/", "");
-        return await handleFTLPools(eventId);
+        return await handleFTLPools(eventId, env);
       }
 
       // /api/ftl/de/:eventId — get DE tableau data
       if (path.startsWith("/api/ftl/de/")) {
         const eventId = path.replace("/api/ftl/de/", "");
-        return await handleFTLDE(eventId);
+        return await handleFTLDE(eventId, env);
       }
 
       // /api/ftl/results/:eventId — get results data
       if (path.startsWith("/api/ftl/results/")) {
         const eventId = path.replace("/api/ftl/results/", "");
-        return await handleFTLResults(eventId);
+        return await handleFTLResults(eventId, env);
       }
 
       // /api/ft/search?q=GERSTMANN — search FencingTracker (all weapons)
@@ -87,6 +90,121 @@ export default {
   },
 };
 
+// ========== FTL Auth ==========
+// FTL now requires login. We login once, cache the auth cookie in CF cache for 1 hour.
+
+const FTL_LOGIN_CACHE_KEY = "https://ftl-auth.internal/session-cookie";
+const FTL_COOKIE_TTL = 3600; // 1 hour
+
+async function getFTLAuthCookie(env: Env): Promise<string> {
+  const cache = caches.default;
+  const cached = await cache.match(FTL_LOGIN_CACHE_KEY);
+  if (cached) {
+    const cookie = await cached.text();
+    if (cookie) return cookie;
+  }
+
+  // Step 1: GET the login page to get CSRF token + initial cookies
+  const loginUrl = "https://www.fencingtimelive.com/account/login";
+  const getResp = await fetch(loginUrl, {
+    headers: { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" },
+    redirect: "manual",
+  });
+  const getHtml = await getResp.text();
+
+  // Extract CSRF token from meta tag
+  const csrfMatch = getHtml.match(/name="csrf_token"\s+content="([^"]+)"/);
+  const csrfToken = csrfMatch ? csrfMatch[1] : "";
+
+  // Collect initial cookies from GET response
+  const setCookieHeaders: string[] = [];
+  getResp.headers.forEach((v, k) => {
+    if (k.toLowerCase() === "set-cookie") setCookieHeaders.push(v);
+  });
+  const initialCookies = setCookieHeaders.map((c: string) => c.split(";")[0]).filter((c: string) => c).join("; ");
+
+  // Step 2: POST to /login with email/password + CSRF token
+  const loginResp = await fetch("https://www.fencingtimelive.com/login", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+      "x-csrf-token": csrfToken,
+      "Cookie": initialCookies,
+      "X-Requested-With": "XMLHttpRequest",
+    },
+    body: `username=${encodeURIComponent(env.FTL_EMAIL || "")}&password=${encodeURIComponent(env.FTL_PASSWORD || "")}`,
+    redirect: "manual",
+  });
+
+  // Collect cookies from POST response
+  const loginSetCookieHeaders: string[] = [];
+  loginResp.headers.forEach((v, k) => {
+    if (k.toLowerCase() === "set-cookie") loginSetCookieHeaders.push(v);
+  });
+  const allCookies = [
+    ...initialCookies.split("; ").filter(c => c),
+    ...loginSetCookieHeaders.map((c: string) => c.split(";")[0]),
+  ];
+  const cookieString = allCookies.join("; ");
+
+  // Login succeeded if we got new auth cookies
+  if (cookieString.length > initialCookies.length) {
+    const toCache = new Response(cookieString, {
+      headers: { "Content-Type": "text/plain", "Cache-Control": `public, max-age=${FTL_COOKIE_TTL}` },
+    });
+    await cache.put(FTL_LOGIN_CACHE_KEY, toCache);
+    return cookieString;
+  }
+
+  // If cookies didn't grow, try checking response body for redirect URL
+  if (loginResp.status === 200) {
+    // Successful login returns a URL string like "/"
+    // Even if no new Set-Cookie, the initial session cookie should now be authenticated
+    const toCache = new Response(cookieString, {
+      headers: { "Content-Type": "text/plain", "Cache-Control": `public, max-age=${FTL_COOKIE_TTL}` },
+    });
+    await cache.put(FTL_LOGIN_CACHE_KEY, toCache);
+  }
+
+  return cookieString;
+}
+
+async function ftlFetch(url: string, env: Env, extraHeaders: Record<string, string> = {}): Promise<Response> {
+  const cookie = await getFTLAuthCookie(env);
+  
+  // If the search API returns a redirect, try following it with cookies
+  const resp = await fetch(url, {
+    headers: {
+      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+      "Cookie": cookie,
+      ...extraHeaders,
+    },
+    redirect: "manual",
+  });
+  
+  // If we get a redirect to login, login failed — clear cache and retry once
+  if (resp.status === 302 || resp.status === 301) {
+    const loc = resp.headers.get("location") || "";
+    if (loc.includes("/account/login")) {
+      // Clear cached cookie and re-login
+      const cache = caches.default;
+      await cache.delete(FTL_LOGIN_CACHE_KEY);
+      const newCookie = await getFTLAuthCookie(env);
+      return fetch(url, {
+        headers: {
+          "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
+          "Cookie": newCookie,
+          ...extraHeaders,
+        },
+        redirect: "follow",
+      });
+    }
+  }
+  
+  return resp;
+}
+
 // National-level and SYC tournament name patterns
 const NATIONAL_PATTERNS = [
   /\bNAC\b/i,
@@ -104,18 +222,79 @@ function isNationalOrSYC(name: string): boolean {
   return NATIONAL_PATTERNS.some(p => p.test(name));
 }
 
-async function handleFTLUpcoming(): Promise<Response> {
+async function handleFTLDebug(env: Env): Promise<Response> {
+  try {
+    // Step 1: GET login page
+    const loginUrl = "https://www.fencingtimelive.com/account/login";
+    const getResp = await fetch(loginUrl, {
+      headers: { "User-Agent": "Mozilla/5.0" },
+      redirect: "manual",
+    });
+    const getHtml = await getResp.text();
+    
+    // CSRF token
+    const csrfMatch = getHtml.match(/name="csrf_token"\s+content="([^"]+)"/);
+    const csrfToken = csrfMatch ? csrfMatch[1] : "NOT_FOUND";
+    
+    // Initial cookies
+    const setCookieHeaders: string[] = [];
+    getResp.headers.forEach((v, k) => {
+      if (k.toLowerCase() === "set-cookie") setCookieHeaders.push(v);
+    });
+    const initialCookies = setCookieHeaders.map(c => c.split(";")[0]).join("; ");
+    
+    // Step 2: POST /login
+    const loginResp = await fetch("https://www.fencingtimelive.com/login", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "User-Agent": "Mozilla/5.0",
+        "x-csrf-token": csrfToken,
+        "Cookie": initialCookies,
+        "X-Requested-With": "XMLHttpRequest",
+      },
+      body: `username=${encodeURIComponent(env.FTL_EMAIL || "")}&password=${encodeURIComponent(env.FTL_PASSWORD || "")}`,
+      redirect: "manual",
+    });
+    
+    const loginBody = await loginResp.text();
+    const loginSetCookieHeaders: string[] = [];
+    loginResp.headers.forEach((v, k) => {
+      if (k.toLowerCase() === "set-cookie") loginSetCookieHeaders.push(v);
+    });
+    const loginCookies = loginSetCookieHeaders.map(c => c.split(";")[0]).join("; ");
+    
+    // Step 3: Try fetching search API with cookies
+    const allCookies = [...initialCookies.split("; ").filter(c => c), ...loginCookies.split("; ").filter(c => c)].join("; ");
+    const testResp = await fetch("https://www.fencingtimelive.com/tournaments/search/data/advanced?from=2026-04-20&to=2026-04-30&country=USA", {
+      headers: { "User-Agent": "Mozilla/5.0", "Cookie": allCookies, "Accept": "application/json" },
+      redirect: "manual",
+    });
+    const testStatus = testResp.status;
+    const testLocation = testResp.headers.get("location") || "";
+    const testBody = testStatus === 200 ? await testResp.text() : "";
+    
+    return jsonResponse({
+      step1_getLogin: { status: getResp.status, csrfToken: csrfToken.substring(0, 10) + "...", initialCookies: initialCookies.substring(0, 50) + "..." },
+      step2_postLogin: { status: loginResp.status, body: loginBody.substring(0, 200), loginCookies: loginCookies.substring(0, 80) + "..." },
+      step3_testApi: { status: testStatus, location: testLocation, bodyPreview: testBody.substring(0, 200) },
+      allCookiesPreview: allCookies.substring(0, 100) + "...",
+    });
+  } catch (err: any) {
+    return jsonResponse({ error: err.message, stack: err.stack?.substring(0, 500) }, 500);
+  }
+}
+
+async function handleFTLUpcoming(env: Env): Promise<Response> {
   const now = new Date();
   // Search from 7 days ago (to catch in-progress multi-day events) to 7 days ahead
   const from = new Date(now.getTime() - 7 * 24 * 60 * 60 * 1000).toISOString().split("T")[0];
   const to = new Date(now.getTime() + 7 * 24 * 60 * 60 * 1000).toISOString().split("T")[0];
 
   const ftlUrl = `https://www.fencingtimelive.com/tournaments/search/data/advanced?from=${from}&to=${to}&country=USA`;
-  const resp = await fetch(ftlUrl, {
-    headers: { "User-Agent": "Mozilla/5.0", "Accept": "application/json" },
-  });
+  const resp = await ftlFetch(ftlUrl, env, { "Accept": "application/json" });
 
-  if (!resp.ok) return jsonResponse({ error: "FTL search failed" }, 502);
+  if (!resp.ok) return jsonResponse({ error: "FTL search failed", status: resp.status }, 502);
   const data: any = await resp.json();
   const rows = data.rows || data || [];
 
@@ -162,9 +341,7 @@ async function handleFTLUpcoming(): Promise<Response> {
   async function hasRelevantSaberEvents(tournamentId: string): Promise<boolean> {
     try {
       const scheduleUrl = `https://www.fencingtimelive.com/tournaments/eventSchedule/${tournamentId}`;
-      const schedResp = await fetch(scheduleUrl, {
-        headers: { "User-Agent": "Mozilla/5.0", "Accept": "text/html" },
-      });
+      const schedResp = await ftlFetch(scheduleUrl, env, { "Accept": "text/html" });
       if (!schedResp.ok) return true; // On error, include by default
       const html = await schedResp.text();
       return RELEVANT_EVENT_PATTERNS.some(p => p.test(html));
@@ -197,7 +374,7 @@ async function handleFTLUpcoming(): Promise<Response> {
   return jsonResponse({ inProgress: verifiedInProgress, upcoming: verifiedUpcoming, total: rows.length });
 }
 
-async function handleFTLSearch(url: URL): Promise<Response> {
+async function handleFTLSearch(url: URL, env: Env): Promise<Response> {
   const query = (url.searchParams.get("q") || "").toLowerCase();
   const from = url.searchParams.get("from") || "2024-01-01";
   const to = url.searchParams.get("to") || "2027-01-01";
@@ -205,12 +382,7 @@ async function handleFTLSearch(url: URL): Promise<Response> {
 
   // Fetch FTL advanced search API
   const ftlUrl = `https://www.fencingtimelive.com/tournaments/search/data/advanced?from=${from}&to=${to}&country=${country}`;
-  const resp = await fetch(ftlUrl, {
-    headers: {
-      "User-Agent": "Mozilla/5.0",
-      "Accept": "application/json",
-    },
-  });
+  const resp = await ftlFetch(ftlUrl, env, { "Accept": "application/json" });
 
   if (!resp.ok) {
     return jsonResponse({ error: "FTL search failed", status: resp.status }, 502);
@@ -254,13 +426,10 @@ async function handleFTLSearch(url: URL): Promise<Response> {
   return jsonResponse({ tournaments, total: tournaments.length });
 }
 
-async function handleFTLEvent(tournamentId: string): Promise<Response> {
+async function handleFTLEvent(tournamentId: string, env: Env): Promise<Response> {
   const ftlUrl = `https://www.fencingtimelive.com/tournaments/eventSchedule/${tournamentId}`;
-  const resp = await fetch(ftlUrl, {
-    headers: {
-      "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36",
-      "Accept": "text/html,application/xhtml+xml",
-    },
+  const resp = await ftlFetch(ftlUrl, env, {
+    "Accept": "text/html,application/xhtml+xml",
   });
 
   const html = await resp.text();
@@ -345,12 +514,10 @@ async function handleFTLEvent(tournamentId: string): Promise<Response> {
   });
 }
 
-async function handleFTLPools(eventId: string): Promise<Response> {
-  const headers = { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" };
-
+async function handleFTLPools(eventId: string, env: Env): Promise<Response> {
   // Step 1: Get pool round ID from event results page
   const resultsUrl = `https://www.fencingtimelive.com/events/results/${eventId}`;
-  const resultsResp = await fetch(resultsUrl, { headers });
+  const resultsResp = await ftlFetch(resultsUrl, env);
   const resultsHtml = await resultsResp.text();
 
   const poolLinkMatch = resultsHtml.match(/\/pools\/scores\/([A-F0-9]{32})\/([A-F0-9]{32})/);
@@ -362,7 +529,7 @@ async function handleFTLPools(eventId: string): Promise<Response> {
 
   // Step 2: Fetch pool scores main page to get individual pool IDs
   const poolsMainUrl = `https://www.fencingtimelive.com/pools/scores/${eventId}/${poolRoundId}`;
-  const poolsResp = await fetch(poolsMainUrl, { headers });
+  const poolsResp = await ftlFetch(poolsMainUrl, env);
   const poolsHtml = await poolsResp.text();
 
   // Extract pool AJAX URLs from the JS on the page
@@ -399,7 +566,7 @@ async function handleFTLPools(eventId: string): Promise<Response> {
   const poolIdArray = Array.from(poolIds);
   const poolFetches = poolIdArray.map(async (poolId) => {
     const poolUrl = `https://www.fencingtimelive.com/pools/scores/${eventId}/${poolRoundId}/${poolId}?dbut=true`;
-    const resp = await fetch(poolUrl, { headers });
+    const resp = await ftlFetch(poolUrl, env);
     const html = await resp.text();
 
     return parsePoolHtml(html, poolId);
@@ -856,9 +1023,8 @@ async function handleFTProfile(usfaId: string): Promise<Response> {
 
 // ========== FTL Results/DE API ==========
 
-async function handleFTLResults(eventId: string): Promise<Response> {
-  const headers = { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" };
-  const resp = await fetch(`https://www.fencingtimelive.com/events/results/data/${eventId}`, { headers });
+async function handleFTLResults(eventId: string, env: Env): Promise<Response> {
+  const resp = await ftlFetch(`https://www.fencingtimelive.com/events/results/data/${eventId}`, env, { "Accept": "application/json" });
   
   if (!resp.ok) {
     return jsonResponse({ eventId, error: "Failed to fetch results" }, 502);
@@ -874,11 +1040,10 @@ async function handleFTLResults(eventId: string): Promise<Response> {
   });
 }
 
-async function handleFTLDE(eventId: string): Promise<Response> {
-  const headers = { "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36" };
+async function handleFTLDE(eventId: string, env: Env): Promise<Response> {
 
   // Step 1: Get tableau link from results page
-  const resultsResp = await fetch(`https://www.fencingtimelive.com/events/results/${eventId}`, { headers });
+  const resultsResp = await ftlFetch(`https://www.fencingtimelive.com/events/results/${eventId}`, env);
   const resultsHtml = await resultsResp.text();
 
   const tableauMatch = resultsHtml.match(/\/tableaus\/scores\/([A-F0-9]{32})\/([A-F0-9]{32})/);
@@ -889,7 +1054,7 @@ async function handleFTLDE(eventId: string): Promise<Response> {
   const tableauId = tableauMatch[2];
 
   // Step 2: Get tree info
-  const treesResp = await fetch(`https://www.fencingtimelive.com/tableaus/scores/${eventId}/${tableauId}/trees`, { headers });
+  const treesResp = await ftlFetch(`https://www.fencingtimelive.com/tableaus/scores/${eventId}/${tableauId}/trees`, env, { "Accept": "application/json" });
   const trees: any = await treesResp.json();
   
   if (!trees || trees.length === 0) {
@@ -901,9 +1066,9 @@ async function handleFTLDE(eventId: string): Promise<Response> {
   const numTables = tree.numTables;
 
   // Step 3: Fetch the full tableau HTML (table 0 has all data)
-  const tableResp = await fetch(
+  const tableResp = await ftlFetch(
     `https://www.fencingtimelive.com/tableaus/scores/${eventId}/${tableauId}/trees/${treeGuid}/tables/0/${numTables}`,
-    { headers }
+    env
   );
   const tableHtml = await tableResp.text();
 

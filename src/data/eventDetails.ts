@@ -2544,4 +2544,16 @@ export const eventDetails: Record<string, EventDetail> = {
     de: [],
     
   },
+  "2026-06-05_junior-men-s-saber": {
+    id: "2026-06-05_junior-men-s-saber",
+    date: "2026-06-05",
+    tournament: "June SJCC",
+    event: "Junior Men's Saber",
+    location: "",
+    place: 18, total: 198,
+    rating: "",
+    pool: undefined,
+    de: [],
+    
+  },
 };
